@@ -1,0 +1,43 @@
+{
+    "id": 4773111,
+    "title": "Mvidi_River.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://www.worldanvil.com/uploads/images/79778fe437dbd17bf2677f4e944d7796.jpg",
+    "subscribergroups": [],
+    "folderId": "6448e42a-d679-4195-b822-fcf8c2bffeef",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:19:19.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "79778fe437dbd17bf2677f4e944d7796.jpg",
+    "path": "/uploads/images",
+    "size": 939060,
+    "width": 1170,
+    "height": 658,
+    "extension": "jpg",
+    "description": "@[Река Мвиди](location:b8dcc1c1-48a2-4422-94aa-a0e6fda9a776)",
+    "alt": null,
+    "creditArtistName": null,
+    "creditArtistWebsite": null,
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2023-08-10 07:35:47.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": null,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": null,
+    "pageUrl": "https://www.worldanvil.com/i/4773111",
+    "isEditable": true,
+    "success": true
+}

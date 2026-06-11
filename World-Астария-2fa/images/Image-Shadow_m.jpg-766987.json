@@ -1,0 +1,43 @@
+{
+    "id": 766987,
+    "title": "Shadow_m.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://www.worldanvil.com/uploads/images/c67043cd9e6901954ef4f02a58e67a3c.jpg",
+    "subscribergroups": [],
+    "folderId": "8ae73052-249e-465d-a4df-fec121e1f7bd",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:25:28.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "c67043cd9e6901954ef4f02a58e67a3c.jpg",
+    "path": "/uploads/images",
+    "size": 649479,
+    "width": 770,
+    "height": 1305,
+    "extension": "jpg",
+    "description": "@[Тень](profession:aaa70f96-4664-4a5e-a095-9f8d5c7d2c2b) мужчина",
+    "alt": null,
+    "creditArtistName": "AKQA",
+    "creditArtistWebsite": "https://www.akqa.com/",
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2020-01-14 13:13:57.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": 187,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": "",
+    "pageUrl": "https://www.worldanvil.com/i/766987",
+    "isEditable": true,
+    "success": true
+}

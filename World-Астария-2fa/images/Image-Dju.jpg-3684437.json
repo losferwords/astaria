@@ -1,0 +1,43 @@
+{
+    "id": 3684437,
+    "title": "Dju.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://www.worldanvil.com/uploads/images/a839bdec1b8dc2dc703b11c0134bd505.jpg",
+    "subscribergroups": [],
+    "folderId": "69000ae7-f1b9-4373-b3b5-edb4b6cd6a10",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:20:10.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "a839bdec1b8dc2dc703b11c0134bd505.jpg",
+    "path": "/uploads/images",
+    "size": 1070902,
+    "width": 1170,
+    "height": 658,
+    "extension": "jpg",
+    "description": "@[Джу](ethnicity:cee5a147-2796-4fa3-8e9e-1b4eacc27cec)",
+    "alt": null,
+    "creditArtistName": null,
+    "creditArtistWebsite": null,
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2022-09-01 19:15:07.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": null,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": null,
+    "pageUrl": "https://www.worldanvil.com/i/3684437",
+    "isEditable": true,
+    "success": true
+}

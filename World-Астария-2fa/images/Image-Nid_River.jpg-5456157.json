@@ -1,0 +1,43 @@
+{
+    "id": 5456157,
+    "title": "Nid_River.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://www.worldanvil.com/uploads/images/4083ab3dcec5b51805b03ff8b269dfbf.jpg",
+    "subscribergroups": [],
+    "folderId": "8fd95d4d-995d-4cda-84db-68be314742c2",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:19:12.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "4083ab3dcec5b51805b03ff8b269dfbf.jpg",
+    "path": "/uploads/images",
+    "size": 754479,
+    "width": 1170,
+    "height": 658,
+    "extension": "jpg",
+    "description": "@[Река Нид](location:17ce0d41-3775-4225-8f29-f2201e35c87c)",
+    "alt": null,
+    "creditArtistName": null,
+    "creditArtistWebsite": null,
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2024-03-21 22:45:26.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": null,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": null,
+    "pageUrl": "https://www.worldanvil.com/i/5456157",
+    "isEditable": true,
+    "success": true
+}

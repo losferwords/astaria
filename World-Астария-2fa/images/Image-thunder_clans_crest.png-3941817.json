@@ -1,0 +1,43 @@
+{
+    "id": 3941817,
+    "title": "thunder_clans_crest.png",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://www.worldanvil.com/uploads/images/8f6c65ff14398966d679a93ef40a17e2.png",
+    "subscribergroups": [],
+    "folderId": "1819ef1b-0d4a-46f0-9ad9-79d85c03f39f",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:19:29.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "8f6c65ff14398966d679a93ef40a17e2.png",
+    "path": "/uploads/images",
+    "size": 55817,
+    "width": 353,
+    "height": 353,
+    "extension": "png",
+    "description": "Герб @[Громовых Кланов](organization:d8df41de-5e86-40ca-a3c2-5454267baa2c)",
+    "alt": "thunder_clans_crest.png",
+    "creditArtistName": null,
+    "creditArtistWebsite": null,
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2022-11-24 22:08:42.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": null,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": "",
+    "pageUrl": "https://www.worldanvil.com/i/3941817",
+    "isEditable": true,
+    "success": true
+}

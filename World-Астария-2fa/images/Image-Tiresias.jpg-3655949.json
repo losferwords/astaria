@@ -1,0 +1,43 @@
+{
+    "id": 3655949,
+    "title": "Tiresias.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://www.worldanvil.com/uploads/images/2d8396517228b997ea3a7cc383ed4305.jpg",
+    "subscribergroups": [],
+    "folderId": "14757588-2a69-4676-b878-c979049ff412",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:19:08.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "2d8396517228b997ea3a7cc383ed4305.jpg",
+    "path": "/uploads/images",
+    "size": 364146,
+    "width": 508,
+    "height": 901,
+    "extension": "jpg",
+    "description": "@[Тиресий](person:ce9f10c9-7bd8-4deb-b033-2737d270b1a6)",
+    "alt": null,
+    "creditArtistName": "Hall Hsu",
+    "creditArtistWebsite": "https://www.artstation.com/hall",
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2022-08-24 07:43:07.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": 1,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": null,
+    "pageUrl": "https://www.worldanvil.com/i/3655949",
+    "isEditable": true,
+    "success": true
+}

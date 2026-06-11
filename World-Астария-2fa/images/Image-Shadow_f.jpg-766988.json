@@ -1,0 +1,43 @@
+{
+    "id": 766988,
+    "title": "Shadow_f.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://www.worldanvil.com/uploads/images/f6469828212c59939a88219f0b00d138.jpg",
+    "subscribergroups": [],
+    "folderId": "8ae73052-249e-465d-a4df-fec121e1f7bd",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:25:27.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "f6469828212c59939a88219f0b00d138.jpg",
+    "path": "/uploads/images",
+    "size": 648424,
+    "width": 767,
+    "height": 1305,
+    "extension": "jpg",
+    "description": "@[Тень](profession:aaa70f96-4664-4a5e-a095-9f8d5c7d2c2b) женщина",
+    "alt": null,
+    "creditArtistName": "JuYoung Ha",
+    "creditArtistWebsite": "https://un_1028.artstation.com/",
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2020-01-14 13:14:51.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": 130,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": "",
+    "pageUrl": "https://www.worldanvil.com/i/766988",
+    "isEditable": true,
+    "success": true
+}

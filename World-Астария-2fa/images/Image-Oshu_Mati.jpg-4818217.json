@@ -1,0 +1,43 @@
+{
+    "id": 4818217,
+    "title": "Oshu_Mati.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://www.worldanvil.com/uploads/images/277b5a2bc0c8cb94e181e3833f394ef1.jpg",
+    "subscribergroups": [],
+    "folderId": "8627009f-ffbf-4163-9eff-4e41b4e59ef8",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:23:52.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "277b5a2bc0c8cb94e181e3833f394ef1.jpg",
+    "path": "/uploads/images",
+    "size": 357115,
+    "width": 508,
+    "height": 901,
+    "extension": "jpg",
+    "description": "@[Ошу Мати](person:748a68cf-3963-4d33-b0ae-d9ffc5ad0474)",
+    "alt": null,
+    "creditArtistName": null,
+    "creditArtistWebsite": null,
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2023-08-25 18:48:18.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": null,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": null,
+    "pageUrl": "https://www.worldanvil.com/i/4818217",
+    "isEditable": true,
+    "success": true
+}

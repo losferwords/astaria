@@ -1,0 +1,43 @@
+{
+    "id": 725331,
+    "title": "Atafet_from_desert.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://www.worldanvil.com/uploads/images/c03c28ea403f2390794cba172a7f9b86.jpg",
+    "subscribergroups": [],
+    "folderId": "e47abef4-b5e4-4431-9e35-fcb19e9fef3b",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:18:45.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "c03c28ea403f2390794cba172a7f9b86.jpg",
+    "path": "/uploads/images",
+    "size": 683628,
+    "width": 1170,
+    "height": 658,
+    "extension": "jpg",
+    "description": "Вид на @[гору Атафет](location:6d07347b-ca7f-424d-849b-0489d98d7dcd) из @[пустыни Сехет](location:4bea7e7b-a5f8-4715-b051-abe374f1f754)",
+    "alt": null,
+    "creditArtistName": null,
+    "creditArtistWebsite": null,
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2020-01-14 12:23:15.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": 136,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": null,
+    "pageUrl": "https://www.worldanvil.com/i/725331",
+    "isEditable": true,
+    "success": true
+}

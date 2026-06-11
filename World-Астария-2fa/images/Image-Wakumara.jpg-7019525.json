@@ -1,0 +1,43 @@
+{
+    "id": 7019525,
+    "title": "Wakumara.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://wa-cdn.nyc3.cdn.digitaloceanspaces.com/user-data/production/ae978bc7-ef5e-47d8-8585-f7fae49590a5/uploads/images/1cde6a1b60ce126cee7ec860cb874efe.jpeg",
+    "subscribergroups": [],
+    "folderId": "6448e42a-d679-4195-b822-fcf8c2bffeef",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:19:23.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "1cde6a1b60ce126cee7ec860cb874efe.jpeg",
+    "path": "https://wa-cdn.nyc3.cdn.digitaloceanspaces.com/user-data/production/ae978bc7-ef5e-47d8-8585-f7fae49590a5/uploads/images",
+    "size": 1097489,
+    "width": 1170,
+    "height": 660,
+    "extension": "jpeg",
+    "description": "@[Вакумара](organization:d586baf5-cde9-4477-af80-5bb6e87fe085)",
+    "alt": null,
+    "creditArtistName": null,
+    "creditArtistWebsite": null,
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2025-09-26 11:22:12.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": null,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": null,
+    "pageUrl": "https://www.worldanvil.com/i/7019525",
+    "isEditable": true,
+    "success": true
+}

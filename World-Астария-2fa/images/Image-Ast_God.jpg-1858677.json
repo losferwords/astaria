@@ -1,0 +1,43 @@
+{
+    "id": 1858677,
+    "title": "Ast_God.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://www.worldanvil.com/uploads/images/aec7309c834e42c7805cc7bce98cc73c.jpg",
+    "subscribergroups": [],
+    "folderId": "14757588-2a69-4676-b878-c979049ff412",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:18:56.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "aec7309c834e42c7805cc7bce98cc73c.jpg",
+    "path": "/uploads/images",
+    "size": 325205,
+    "width": 508,
+    "height": 901,
+    "extension": "jpg",
+    "description": "@[Бог света Аст](person:a35ab623-79eb-4687-8da1-543547a02a59)",
+    "alt": null,
+    "creditArtistName": "TheFearMaster",
+    "creditArtistWebsite": "https://www.deviantart.com/thefearmaster",
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2021-01-14 21:42:04.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": 1,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": null,
+    "pageUrl": "https://www.worldanvil.com/i/1858677",
+    "isEditable": true,
+    "success": true
+}

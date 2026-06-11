@@ -1,0 +1,43 @@
+{
+    "id": 1081487,
+    "title": "Katachthonos_Colony.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://www.worldanvil.com/uploads/images/f5f9833c5b2bfa11f8091ab65e0f0335.jpg",
+    "subscribergroups": [],
+    "folderId": "fb9398b7-fc0f-4acf-8d9a-9ad55a5474a3",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:21:04.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "f5f9833c5b2bfa11f8091ab65e0f0335.jpg",
+    "path": "/uploads/images",
+    "size": 1057879,
+    "width": 1170,
+    "height": 658,
+    "extension": "jpg",
+    "description": "Завоевание @[Катахтоноса](organization:2b27399d-9426-4e78-94e9-f292904c7146) @[Талассийцами](ethnicity:51fa8712-64d3-4c13-9cc4-b079122b3188).",
+    "alt": null,
+    "creditArtistName": null,
+    "creditArtistWebsite": null,
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2020-05-04 23:24:43.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": 90,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": null,
+    "pageUrl": "https://www.worldanvil.com/i/1081487",
+    "isEditable": true,
+    "success": true
+}

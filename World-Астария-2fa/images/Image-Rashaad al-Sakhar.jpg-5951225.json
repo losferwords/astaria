@@ -1,0 +1,43 @@
+{
+    "id": 5951225,
+    "title": "Rashaad al-Sakhar.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://wa-cdn.nyc3.cdn.digitaloceanspaces.com/user-data/production/ae978bc7-ef5e-47d8-8585-f7fae49590a5/uploads/images/d3ca0c87db7ad41b8cf39d079bf756dc.jpeg",
+    "subscribergroups": [],
+    "folderId": "8627009f-ffbf-4163-9eff-4e41b4e59ef8",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:23:59.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "d3ca0c87db7ad41b8cf39d079bf756dc.jpeg",
+    "path": "https://wa-cdn.nyc3.cdn.digitaloceanspaces.com/user-data/production/ae978bc7-ef5e-47d8-8585-f7fae49590a5/uploads/images",
+    "size": 396310,
+    "width": 508,
+    "height": 901,
+    "extension": "jpeg",
+    "description": "@[Рашаад аль-Сакхар](person:29ae798d-d6a7-4dad-9a8c-5f2b55c09624)",
+    "alt": null,
+    "creditArtistName": null,
+    "creditArtistWebsite": null,
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2024-09-23 19:22:57.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": null,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": null,
+    "pageUrl": "https://www.worldanvil.com/i/5951225",
+    "isEditable": true,
+    "success": true
+}

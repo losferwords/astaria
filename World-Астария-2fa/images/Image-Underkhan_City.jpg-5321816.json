@@ -1,0 +1,43 @@
+{
+    "id": 5321816,
+    "title": "Underkhan_City.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://www.worldanvil.com/uploads/images/d123ab7bcd7b14697569fc7b7567659f.jpg",
+    "subscribergroups": [],
+    "folderId": "ff5fa73d-915b-4e04-9f6c-2c27bac4ff6c",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:19:54.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "d123ab7bcd7b14697569fc7b7567659f.jpg",
+    "path": "/uploads/images",
+    "size": 1133400,
+    "width": 1506,
+    "height": 848,
+    "extension": "jpg",
+    "description": "@[Город Андерхан](settlement:f1a9d246-8347-40c7-9dc2-872843e24d64)",
+    "alt": null,
+    "creditArtistName": null,
+    "creditArtistWebsite": null,
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2024-02-07 10:27:23.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": null,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": null,
+    "pageUrl": "https://www.worldanvil.com/i/5321816",
+    "isEditable": true,
+    "success": true
+}

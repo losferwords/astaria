@@ -1,0 +1,43 @@
+{
+    "id": 6784288,
+    "title": "Suradj_Ka_Ghar.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://wa-cdn.nyc3.cdn.digitaloceanspaces.com/user-data/production/ae978bc7-ef5e-47d8-8585-f7fae49590a5/uploads/images/17446e2dd0acaaddc8a5e435800d0633.jpeg",
+    "subscribergroups": [],
+    "folderId": "2bc94521-2e5c-4c10-91ba-f6c03660d11c",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:24:52.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "17446e2dd0acaaddc8a5e435800d0633.jpeg",
+    "path": "https://wa-cdn.nyc3.cdn.digitaloceanspaces.com/user-data/production/ae978bc7-ef5e-47d8-8585-f7fae49590a5/uploads/images",
+    "size": 1047814,
+    "width": 1170,
+    "height": 658,
+    "extension": "jpeg",
+    "description": "@[Сурадж Ка Гхар](organization:55085070-4944-4e53-9cd3-8d3706cfd6db)",
+    "alt": "Suradj_Ka_Ghar.jpg",
+    "creditArtistName": null,
+    "creditArtistWebsite": null,
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2025-09-19 11:57:07.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": null,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": "",
+    "pageUrl": "https://www.worldanvil.com/i/6784288",
+    "isEditable": true,
+    "success": true
+}

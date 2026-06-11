@@ -1,0 +1,43 @@
+{
+    "id": 766980,
+    "title": "Avenger_m.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://www.worldanvil.com/uploads/images/9c063967dc7d5995dfe084e58a42841b.jpg",
+    "subscribergroups": [],
+    "folderId": "f521a260-6ed7-4a1f-8c4a-6a2e358c5a30",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:21:50.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "9c063967dc7d5995dfe084e58a42841b.jpg",
+    "path": "/uploads/images",
+    "size": 698545,
+    "width": 768,
+    "height": 1305,
+    "extension": "jpg",
+    "description": "@[Мститель](profession:c9c26517-8087-4e89-8902-fa1581efe186) мужчина",
+    "alt": null,
+    "creditArtistName": "Mikel Labat",
+    "creditArtistWebsite": "https://ca.linkedin.com/mickael-labat-2a588b1",
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2020-01-14 13:08:38.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": 145,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": "",
+    "pageUrl": "https://www.worldanvil.com/i/766980",
+    "isEditable": true,
+    "success": true
+}

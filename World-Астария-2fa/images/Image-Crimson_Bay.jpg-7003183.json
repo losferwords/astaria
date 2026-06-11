@@ -1,0 +1,43 @@
+{
+    "id": 7003183,
+    "title": "Crimson_Bay.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://wa-cdn.nyc3.cdn.digitaloceanspaces.com/user-data/production/ae978bc7-ef5e-47d8-8585-f7fae49590a5/uploads/images/ff3e8b09eabb2e3db84632a7b6eb08a0.jpeg",
+    "subscribergroups": [],
+    "folderId": "2bc94521-2e5c-4c10-91ba-f6c03660d11c",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:24:46.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "ff3e8b09eabb2e3db84632a7b6eb08a0.jpeg",
+    "path": "https://wa-cdn.nyc3.cdn.digitaloceanspaces.com/user-data/production/ae978bc7-ef5e-47d8-8585-f7fae49590a5/uploads/images",
+    "size": 991667,
+    "width": 1170,
+    "height": 658,
+    "extension": "jpeg",
+    "description": "@[Багровый залив](location:ffcfe479-3aee-4592-b477-d88ebd842670)",
+    "alt": null,
+    "creditArtistName": null,
+    "creditArtistWebsite": null,
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2025-09-20 07:14:17.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": null,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": null,
+    "pageUrl": "https://www.worldanvil.com/i/7003183",
+    "isEditable": true,
+    "success": true
+}

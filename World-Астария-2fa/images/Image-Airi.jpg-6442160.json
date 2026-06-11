@@ -1,0 +1,43 @@
+{
+    "id": 6442160,
+    "title": "Airi.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://wa-cdn.nyc3.cdn.digitaloceanspaces.com/user-data/production/ae978bc7-ef5e-47d8-8585-f7fae49590a5/uploads/images/f505f10f170536a16bde49cc3a60b00c.jpeg",
+    "subscribergroups": [],
+    "folderId": "6dcb34fa-c0c0-4545-83ad-99f473c8f16e",
+    "tags": null,
+    "updateDate": {
+        "date": "2025-10-15 07:18:28.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "f505f10f170536a16bde49cc3a60b00c.jpeg",
+    "path": "https://wa-cdn.nyc3.cdn.digitaloceanspaces.com/user-data/production/ae978bc7-ef5e-47d8-8585-f7fae49590a5/uploads/images",
+    "size": 807620,
+    "width": 1024,
+    "height": 1024,
+    "extension": "jpeg",
+    "description": null,
+    "alt": null,
+    "creditArtistName": null,
+    "creditArtistWebsite": null,
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2025-03-07 09:28:14.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": null,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": "",
+    "pageUrl": "https://www.worldanvil.com/i/6442160",
+    "isEditable": true,
+    "success": true
+}

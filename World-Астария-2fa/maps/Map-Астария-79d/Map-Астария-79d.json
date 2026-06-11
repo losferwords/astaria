@@ -1,0 +1,52 @@
+{
+    "id": "fee8d79d-9e58-4d32-aa8a-2365a4acbaad",
+    "title": "Астария",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Map",
+    "icon": "fa-solid fa-compass",
+    "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/map/fee8d79d-9e58-4d32-aa8a-2365a4acbaad",
+    "subscribergroups": [],
+    "folderId": "-1",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-12-10 13:28:27.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "author": {
+        "id": "ae978bc7-ef5e-47d8-8585-f7fae49590a5",
+        "title": "losfer",
+        "slug": null,
+        "state": null,
+        "isWip": null,
+        "isDraft": null,
+        "entityClass": "User",
+        "icon": "fa-solid fa-user",
+        "url": "https://www.worldanvil.com/author/losfer",
+        "subscribergroups": [],
+        "folderId": null,
+        "tags": null,
+        "updateDate": null
+    },
+    "description": null,
+    "legend": null,
+    "creationDate": {
+        "date": "2019-12-24 16:03:03.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "isDeleted": null,
+    "displayOnHomepage": true,
+    "views": null,
+    "position": null,
+    "zoomOriginal": -2,
+    "zoomMin": -3,
+    "zoomMax": 0,
+    "centerX": null,
+    "centerY": null,
+    "isEditable": true,
+    "success": true
+}

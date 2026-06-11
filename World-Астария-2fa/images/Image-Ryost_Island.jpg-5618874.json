@@ -1,0 +1,43 @@
+{
+    "id": 5618874,
+    "title": "Ryost_Island.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://wa-cdn.nyc3.cdn.digitaloceanspaces.com/user-data/production/ae978bc7-ef5e-47d8-8585-f7fae49590a5/uploads/images/819e84bfd5e0aff2c82d8203c0497114.jpeg",
+    "subscribergroups": [],
+    "folderId": "a74ef588-038d-4c5a-b686-11ded02955eb",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:26:36.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "819e84bfd5e0aff2c82d8203c0497114.jpeg",
+    "path": "https://wa-cdn.nyc3.cdn.digitaloceanspaces.com/user-data/production/ae978bc7-ef5e-47d8-8585-f7fae49590a5/uploads/images",
+    "size": 723651,
+    "width": 1170,
+    "height": 659,
+    "extension": "jpeg",
+    "description": "@[Остров Рёст](location:aca53f04-30fc-411f-a9bc-3ea0720539bf)",
+    "alt": null,
+    "creditArtistName": null,
+    "creditArtistWebsite": null,
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2024-05-21 10:57:13.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": 41,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": null,
+    "pageUrl": "https://www.worldanvil.com/i/5618874",
+    "isEditable": true,
+    "success": true
+}

@@ -1,0 +1,43 @@
+{
+    "id": 773867,
+    "title": "Myst_Island.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://www.worldanvil.com/uploads/images/7d22de39c7fe0385070dc9c503dfbfde.jpg",
+    "subscribergroups": [],
+    "folderId": "23c3c9d1-08fd-4978-82c2-432408226d1d",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:24:26.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "7d22de39c7fe0385070dc9c503dfbfde.jpg",
+    "path": "/uploads/images",
+    "size": 890684,
+    "width": 1170,
+    "height": 658,
+    "extension": "jpg",
+    "description": "Южная часть @[Туманного острова](location:4c2b950a-4a6a-48aa-9647-b196631d1418)",
+    "alt": null,
+    "creditArtistName": "Rudi Imbrechts",
+    "creditArtistWebsite": "https://www.flickr.com/photos/kartix/",
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2020-01-17 12:16:21.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": 18,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": "",
+    "pageUrl": "https://www.worldanvil.com/i/773867",
+    "isEditable": true,
+    "success": true
+}

@@ -1,0 +1,43 @@
+{
+    "id": 3326724,
+    "title": "Loch_Lindell_Lake.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://www.worldanvil.com/uploads/images/0c7663e7e6a9e723130a2468e4485efc.jpg",
+    "subscribergroups": [],
+    "folderId": "9bcfc8dc-ebbb-41a9-8ce9-e1d9f04cbe49",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:20:24.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "0c7663e7e6a9e723130a2468e4485efc.jpg",
+    "path": "/uploads/images",
+    "size": 1126638,
+    "width": 1170,
+    "height": 658,
+    "extension": "jpg",
+    "description": "@[Озеро Лок Линделл](location:6bf7ad2b-085e-4571-9c2a-2f6a5273c143)",
+    "alt": null,
+    "creditArtistName": null,
+    "creditArtistWebsite": null,
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2022-05-08 20:49:28.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": 91,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": null,
+    "pageUrl": "https://www.worldanvil.com/i/3326724",
+    "isEditable": true,
+    "success": true
+}

@@ -1,0 +1,43 @@
+{
+    "id": 5303801,
+    "title": "wildlands_crest.png",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://www.worldanvil.com/uploads/images/3b0df051ffffd55c07c436766125fac2.png",
+    "subscribergroups": [],
+    "folderId": "1819ef1b-0d4a-46f0-9ad9-79d85c03f39f",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:19:30.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "3b0df051ffffd55c07c436766125fac2.png",
+    "path": "/uploads/images",
+    "size": 65314,
+    "width": 353,
+    "height": 353,
+    "extension": "png",
+    "description": "Герб @[Дикоземья](organization:2aa7eff0-357b-4366-a4a7-12b489c96acb)",
+    "alt": null,
+    "creditArtistName": null,
+    "creditArtistWebsite": null,
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2024-02-01 22:43:56.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": null,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": null,
+    "pageUrl": "https://www.worldanvil.com/i/5303801",
+    "isEditable": true,
+    "success": true
+}

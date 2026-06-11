@@ -1,0 +1,43 @@
+{
+    "id": 3944453,
+    "title": "Larudan_Tree.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://www.worldanvil.com/uploads/images/2841103871e0920ac1915451942a81ef.jpg",
+    "subscribergroups": [],
+    "folderId": "983c4255-09c0-4eb9-ba3a-1ba26ff26efc",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:25:44.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "2841103871e0920ac1915451942a81ef.jpg",
+    "path": "/uploads/images",
+    "size": 1227420,
+    "width": 1170,
+    "height": 658,
+    "extension": "jpg",
+    "description": "@[Дерево Ларудан](species:855e91b2-4343-46b4-a7ae-63ffce5ef037)",
+    "alt": null,
+    "creditArtistName": null,
+    "creditArtistWebsite": null,
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2022-11-25 11:45:06.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": null,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": null,
+    "pageUrl": "https://www.worldanvil.com/i/3944453",
+    "isEditable": true,
+    "success": true
+}

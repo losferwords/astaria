@@ -1,0 +1,43 @@
+{
+    "id": 3681249,
+    "title": "Chang_Lake.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://www.worldanvil.com/uploads/images/aff78d2aa419a0adc60797dcf0cdf273.jpg",
+    "subscribergroups": [],
+    "folderId": "e47abef4-b5e4-4431-9e35-fcb19e9fef3b",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:18:46.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "aff78d2aa419a0adc60797dcf0cdf273.jpg",
+    "path": "/uploads/images",
+    "size": 1006665,
+    "width": 1170,
+    "height": 658,
+    "extension": "jpg",
+    "description": "@[Озеро Чанг](location:8929a54c-f04a-4698-978e-77d8460ca023)",
+    "alt": null,
+    "creditArtistName": null,
+    "creditArtistWebsite": null,
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2022-08-31 20:22:34.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": 86,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": null,
+    "pageUrl": "https://www.worldanvil.com/i/3681249",
+    "isEditable": true,
+    "success": true
+}

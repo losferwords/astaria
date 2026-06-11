@@ -1,0 +1,43 @@
+{
+    "id": 5303546,
+    "title": "Wildlands.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://www.worldanvil.com/uploads/images/dd183fc44f1cd45b0e92ba16f21ae7f9.jpg",
+    "subscribergroups": [],
+    "folderId": "ff5fa73d-915b-4e04-9f6c-2c27bac4ff6c",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:19:55.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "dd183fc44f1cd45b0e92ba16f21ae7f9.jpg",
+    "path": "/uploads/images",
+    "size": 666005,
+    "width": 1170,
+    "height": 658,
+    "extension": "jpg",
+    "description": "@[Дикоземье](organization:2aa7eff0-357b-4366-a4a7-12b489c96acb)",
+    "alt": null,
+    "creditArtistName": null,
+    "creditArtistWebsite": null,
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2024-02-01 21:37:14.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": null,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": null,
+    "pageUrl": "https://www.worldanvil.com/i/5303546",
+    "isEditable": true,
+    "success": true
+}

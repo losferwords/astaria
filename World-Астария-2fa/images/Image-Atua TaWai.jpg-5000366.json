@@ -1,0 +1,43 @@
+{
+    "id": 5000366,
+    "title": "Atua Ta'Wai.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://www.worldanvil.com/uploads/images/8b13a9123ecf6703da86257a2f28a102.jpg",
+    "subscribergroups": [],
+    "folderId": "8627009f-ffbf-4163-9eff-4e41b4e59ef8",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:23:18.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "8b13a9123ecf6703da86257a2f28a102.jpg",
+    "path": "/uploads/images",
+    "size": 510378,
+    "width": 508,
+    "height": 901,
+    "extension": "jpg",
+    "description": "@[Атуа Та'Вай](person:82222a0f-0bf7-487b-8a87-f277eec782c0)",
+    "alt": null,
+    "creditArtistName": null,
+    "creditArtistWebsite": null,
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2023-10-25 20:43:08.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": null,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": null,
+    "pageUrl": "https://www.worldanvil.com/i/5000366",
+    "isEditable": true,
+    "success": true
+}

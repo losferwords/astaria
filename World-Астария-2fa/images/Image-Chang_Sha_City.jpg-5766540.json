@@ -1,0 +1,43 @@
+{
+    "id": 5766540,
+    "title": "Chang_Sha_City.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://wa-cdn.nyc3.cdn.digitaloceanspaces.com/user-data/production/ae978bc7-ef5e-47d8-8585-f7fae49590a5/uploads/images/3c339119725380127518e1604fadb6af.jpeg",
+    "subscribergroups": [],
+    "folderId": "69000ae7-f1b9-4373-b3b5-edb4b6cd6a10",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:20:09.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "3c339119725380127518e1604fadb6af.jpeg",
+    "path": "https://wa-cdn.nyc3.cdn.digitaloceanspaces.com/user-data/production/ae978bc7-ef5e-47d8-8585-f7fae49590a5/uploads/images",
+    "size": 723150,
+    "width": 1170,
+    "height": 658,
+    "extension": "jpeg",
+    "description": "@[Город Чанг-Ша](settlement:a695bc30-f26e-4821-8618-8b00ee86bd6f)",
+    "alt": null,
+    "creditArtistName": null,
+    "creditArtistWebsite": null,
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2024-07-14 21:23:45.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": null,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": null,
+    "pageUrl": "https://www.worldanvil.com/i/5766540",
+    "isEditable": true,
+    "success": true
+}

@@ -1,0 +1,43 @@
+{
+    "id": 6980195,
+    "title": "Lao_Shen.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://wa-cdn.nyc3.cdn.digitaloceanspaces.com/user-data/production/ae978bc7-ef5e-47d8-8585-f7fae49590a5/uploads/images/9b8ec9728c51cabd3a6203e94f4b3af9.jpeg",
+    "subscribergroups": [],
+    "folderId": "8627009f-ffbf-4163-9eff-4e41b4e59ef8",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:23:41.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "9b8ec9728c51cabd3a6203e94f4b3af9.jpeg",
+    "path": "https://wa-cdn.nyc3.cdn.digitaloceanspaces.com/user-data/production/ae978bc7-ef5e-47d8-8585-f7fae49590a5/uploads/images",
+    "size": 490996,
+    "width": 508,
+    "height": 901,
+    "extension": "jpeg",
+    "description": "@[Ляо Шень](person:f5aceb83-d69a-49f3-b69c-a578d4bf2869)",
+    "alt": null,
+    "creditArtistName": null,
+    "creditArtistWebsite": null,
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2025-09-10 15:53:38.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": null,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": null,
+    "pageUrl": "https://www.worldanvil.com/i/6980195",
+    "isEditable": true,
+    "success": true
+}

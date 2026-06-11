@@ -1,0 +1,43 @@
+{
+    "id": 3663585,
+    "title": "Telemachus II.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://www.worldanvil.com/uploads/images/efaff838844a11e1290875d3f5414585.jpg",
+    "subscribergroups": [],
+    "folderId": "8627009f-ffbf-4163-9eff-4e41b4e59ef8",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:24:11.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "efaff838844a11e1290875d3f5414585.jpg",
+    "path": "/uploads/images",
+    "size": 514208,
+    "width": 508,
+    "height": 901,
+    "extension": "jpg",
+    "description": "@[Телемах II](person:de5eee0d-1c82-4eb7-942b-fc0ad0e515d4)",
+    "alt": "Telemachus II.jpg",
+    "creditArtistName": null,
+    "creditArtistWebsite": null,
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2023-08-17 21:12:25.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": 1,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": "",
+    "pageUrl": "https://www.worldanvil.com/i/3663585",
+    "isEditable": true,
+    "success": true
+}

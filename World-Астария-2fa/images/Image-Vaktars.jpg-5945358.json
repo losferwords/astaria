@@ -1,0 +1,43 @@
+{
+    "id": 5945358,
+    "title": "Vaktars.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://wa-cdn.nyc3.cdn.digitaloceanspaces.com/user-data/production/ae978bc7-ef5e-47d8-8585-f7fae49590a5/uploads/images/2d713b121e4993e03717c82ded101335.jpeg",
+    "subscribergroups": [],
+    "folderId": "8fd95d4d-995d-4cda-84db-68be314742c2",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:19:16.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "2d713b121e4993e03717c82ded101335.jpeg",
+    "path": "https://wa-cdn.nyc3.cdn.digitaloceanspaces.com/user-data/production/ae978bc7-ef5e-47d8-8585-f7fae49590a5/uploads/images",
+    "size": 657058,
+    "width": 1170,
+    "height": 658,
+    "extension": "jpeg",
+    "description": "@[Вактары](ethnicity:1bd5ce6b-bf55-45fc-84db-27f7470d32e5)",
+    "alt": null,
+    "creditArtistName": null,
+    "creditArtistWebsite": null,
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2024-09-21 10:26:42.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": null,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": null,
+    "pageUrl": "https://www.worldanvil.com/i/5945358",
+    "isEditable": true,
+    "success": true
+}

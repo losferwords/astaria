@@ -1,0 +1,43 @@
+{
+    "id": 3890103,
+    "title": "Sharadi_Lake.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://www.worldanvil.com/uploads/images/272ff2cf996c77f1a7a7f28c8f55b096.jpg",
+    "subscribergroups": [],
+    "folderId": "864387c6-7a5a-4ea2-95cd-6bbb56f57296",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:20:43.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "272ff2cf996c77f1a7a7f28c8f55b096.jpg",
+    "path": "/uploads/images",
+    "size": 657153,
+    "width": 1170,
+    "height": 658,
+    "extension": "jpg",
+    "description": "@[Озеро Шаради](location:3dcb79aa-11b4-403e-b13b-735fff1188cb)",
+    "alt": null,
+    "creditArtistName": null,
+    "creditArtistWebsite": null,
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2022-11-06 22:14:57.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": null,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": null,
+    "pageUrl": "https://www.worldanvil.com/i/3890103",
+    "isEditable": true,
+    "success": true
+}

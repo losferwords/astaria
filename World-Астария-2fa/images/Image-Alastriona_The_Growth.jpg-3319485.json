@@ -1,0 +1,43 @@
+{
+    "id": 3319485,
+    "title": "Alastriona_The_Growth.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://www.worldanvil.com/uploads/images/25abf139cd6d356ea1d10c75081af4dd.jpg",
+    "subscribergroups": [],
+    "folderId": "8627009f-ffbf-4163-9eff-4e41b4e59ef8",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:23:07.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "25abf139cd6d356ea1d10c75081af4dd.jpg",
+    "path": "/uploads/images",
+    "size": 445420,
+    "width": 508,
+    "height": 901,
+    "extension": "jpg",
+    "description": "@[Аластриона Растущая](person:5230f138-c733-4960-913b-932402bb47cd)",
+    "alt": null,
+    "creditArtistName": "Jelena Pjevic",
+    "creditArtistWebsite": "https://www.artstation.com/jelenapjevic",
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2022-05-06 04:43:33.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": null,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": null,
+    "pageUrl": "https://www.worldanvil.com/i/3319485",
+    "isEditable": true,
+    "success": true
+}

@@ -1,0 +1,43 @@
+{
+    "id": 3899540,
+    "title": "Rashah_Lake.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://www.worldanvil.com/uploads/images/a8c14e9b18a6097e7f5efa2e85e87fee.jpg",
+    "subscribergroups": [],
+    "folderId": "864387c6-7a5a-4ea2-95cd-6bbb56f57296",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:20:40.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "a8c14e9b18a6097e7f5efa2e85e87fee.jpg",
+    "path": "/uploads/images",
+    "size": 1012291,
+    "width": 1170,
+    "height": 658,
+    "extension": "jpg",
+    "description": "@[Озеро Рашах](location:4d7c4c8d-7a8a-4b43-a5aa-cd101c3057e8)",
+    "alt": null,
+    "creditArtistName": null,
+    "creditArtistWebsite": null,
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2022-11-10 06:04:15.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": null,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": null,
+    "pageUrl": "https://www.worldanvil.com/i/3899540",
+    "isEditable": true,
+    "success": true
+}

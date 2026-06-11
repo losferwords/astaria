@@ -1,0 +1,43 @@
+{
+    "id": 2437742,
+    "title": "Akhetaston_City.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://www.worldanvil.com/uploads/images/1c37c2327396f1d582933291fa33b085.jpg",
+    "subscribergroups": [],
+    "folderId": "c7491703-3774-4cf0-b989-2fc12673b821",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:18:38.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "1c37c2327396f1d582933291fa33b085.jpg",
+    "path": "/uploads/images",
+    "size": 1047935,
+    "width": 1170,
+    "height": 658,
+    "extension": "jpg",
+    "description": "@[Город Акхетастон](settlement:ae12b353-6f71-498e-9b75-fb2f53c89342)",
+    "alt": null,
+    "creditArtistName": "Ubisoft",
+    "creditArtistWebsite": "https://www.ubisoft.com/",
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2021-07-07 20:36:54.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": 120,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": null,
+    "pageUrl": "https://www.worldanvil.com/i/2437742",
+    "isEditable": true,
+    "success": true
+}

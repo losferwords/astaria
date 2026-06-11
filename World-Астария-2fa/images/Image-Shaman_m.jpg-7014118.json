@@ -1,0 +1,43 @@
+{
+    "id": 7014118,
+    "title": "Shaman_m.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://wa-cdn.nyc3.cdn.digitaloceanspaces.com/user-data/production/ae978bc7-ef5e-47d8-8585-f7fae49590a5/uploads/images/b842870a812fb5d18e2dca3a7acb3c88.jpeg",
+    "subscribergroups": [],
+    "folderId": "81c36b49-6098-4c0b-8df0-a94f056356fa",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:26:49.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "b842870a812fb5d18e2dca3a7acb3c88.jpeg",
+    "path": "https://wa-cdn.nyc3.cdn.digitaloceanspaces.com/user-data/production/ae978bc7-ef5e-47d8-8585-f7fae49590a5/uploads/images",
+    "size": 468363,
+    "width": 508,
+    "height": 901,
+    "extension": "jpeg",
+    "description": "@[Шаман-мужчина](profession:66e4ec9d-5c14-423b-a8ea-19c2315c229d)",
+    "alt": null,
+    "creditArtistName": null,
+    "creditArtistWebsite": null,
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2025-09-24 11:57:14.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": 10,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": null,
+    "pageUrl": "https://www.worldanvil.com/i/7014118",
+    "isEditable": true,
+    "success": true
+}

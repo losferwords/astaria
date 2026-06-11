@@ -1,0 +1,43 @@
+{
+    "id": 6543084,
+    "title": "Navchin_Urt.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://wa-cdn.nyc3.cdn.digitaloceanspaces.com/user-data/production/ae978bc7-ef5e-47d8-8585-f7fae49590a5/uploads/images/1bbb85482c938e5268e61c620c31dfb4.jpeg",
+    "subscribergroups": [],
+    "folderId": "8627009f-ffbf-4163-9eff-4e41b4e59ef8",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:23:47.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "1bbb85482c938e5268e61c620c31dfb4.jpeg",
+    "path": "https://wa-cdn.nyc3.cdn.digitaloceanspaces.com/user-data/production/ae978bc7-ef5e-47d8-8585-f7fae49590a5/uploads/images",
+    "size": 457823,
+    "width": 508,
+    "height": 901,
+    "extension": "jpeg",
+    "description": "@[Навчин Урт](person:681ed4c5-5cc3-4c49-80e1-1713d28e46d1)",
+    "alt": null,
+    "creditArtistName": null,
+    "creditArtistWebsite": null,
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2025-04-09 07:59:59.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": null,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": null,
+    "pageUrl": "https://www.worldanvil.com/i/6543084",
+    "isEditable": true,
+    "success": true
+}

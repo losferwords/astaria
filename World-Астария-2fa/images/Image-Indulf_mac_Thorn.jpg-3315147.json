@@ -1,0 +1,43 @@
+{
+    "id": 3315147,
+    "title": "Indulf_mac_Thorn.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://www.worldanvil.com/uploads/images/730224ea71ceacdd58e44fa1b7721095.jpg",
+    "subscribergroups": [],
+    "folderId": "8627009f-ffbf-4163-9eff-4e41b4e59ef8",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:23:36.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "730224ea71ceacdd58e44fa1b7721095.jpg",
+    "path": "/uploads/images",
+    "size": 268311,
+    "width": 508,
+    "height": 901,
+    "extension": "jpg",
+    "description": "@[Индульф мак Торн](person:43b1377c-9b6b-4c3b-bfd9-29fe86e2fe0c)",
+    "alt": null,
+    "creditArtistName": "Victor Costa",
+    "creditArtistWebsite": "https://www.artstation.com/exordine",
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2022-05-04 12:17:05.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": 9,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": null,
+    "pageUrl": "https://www.worldanvil.com/i/3315147",
+    "isEditable": true,
+    "success": true
+}

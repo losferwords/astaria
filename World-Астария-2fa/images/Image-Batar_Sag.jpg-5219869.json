@@ -1,0 +1,43 @@
+{
+    "id": 5219869,
+    "title": "Batar_Sag.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://www.worldanvil.com/uploads/images/745ce155220126cb74dcf2b96d5dc271.jpg",
+    "subscribergroups": [],
+    "folderId": "8627009f-ffbf-4163-9eff-4e41b4e59ef8",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:23:23.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "745ce155220126cb74dcf2b96d5dc271.jpg",
+    "path": "/uploads/images",
+    "size": 414205,
+    "width": 508,
+    "height": 901,
+    "extension": "jpg",
+    "description": "@[Батар Саг](person:2ebc74fd-a60b-481c-84ce-3e35d48c8b6f)",
+    "alt": null,
+    "creditArtistName": null,
+    "creditArtistWebsite": null,
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2024-01-06 08:59:11.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": null,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": null,
+    "pageUrl": "https://www.worldanvil.com/i/5219869",
+    "isEditable": true,
+    "success": true
+}

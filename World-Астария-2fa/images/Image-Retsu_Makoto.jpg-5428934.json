@@ -1,0 +1,43 @@
+{
+    "id": 5428934,
+    "title": "Retsu_Makoto.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://www.worldanvil.com/uploads/images/eb12e1133c9e65b20096db079de86a6a.jpg",
+    "subscribergroups": [],
+    "folderId": "8627009f-ffbf-4163-9eff-4e41b4e59ef8",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:24:00.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "eb12e1133c9e65b20096db079de86a6a.jpg",
+    "path": "/uploads/images",
+    "size": 403752,
+    "width": 508,
+    "height": 901,
+    "extension": "jpg",
+    "description": "@[Рецу Макото](person:168d04e3-2297-4df1-9699-4117a4d566ef)",
+    "alt": null,
+    "creditArtistName": null,
+    "creditArtistWebsite": null,
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2024-03-12 21:37:20.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": null,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": null,
+    "pageUrl": "https://www.worldanvil.com/i/5428934",
+    "isEditable": true,
+    "success": true
+}

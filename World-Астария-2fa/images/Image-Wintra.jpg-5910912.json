@@ -1,0 +1,43 @@
+{
+    "id": 5910912,
+    "title": "Wintra.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://wa-cdn.nyc3.cdn.digitaloceanspaces.com/user-data/production/ae978bc7-ef5e-47d8-8585-f7fae49590a5/uploads/images/46dc72eaf91a227246cc7041745ed36e.jpeg",
+    "subscribergroups": [],
+    "folderId": "14757588-2a69-4676-b878-c979049ff412",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:19:10.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "46dc72eaf91a227246cc7041745ed36e.jpeg",
+    "path": "https://wa-cdn.nyc3.cdn.digitaloceanspaces.com/user-data/production/ae978bc7-ef5e-47d8-8585-f7fae49590a5/uploads/images",
+    "size": 437506,
+    "width": 508,
+    "height": 901,
+    "extension": "jpeg",
+    "description": "@[Винтра](person:2228f97a-6967-4157-a11c-da812016336a)",
+    "alt": null,
+    "creditArtistName": null,
+    "creditArtistWebsite": null,
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2024-09-07 07:49:41.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": null,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": null,
+    "pageUrl": "https://www.worldanvil.com/i/5910912",
+    "isEditable": true,
+    "success": true
+}

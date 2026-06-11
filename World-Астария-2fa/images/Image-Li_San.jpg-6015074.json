@@ -1,0 +1,43 @@
+{
+    "id": 6015074,
+    "title": "Li_San.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://wa-cdn.nyc3.cdn.digitaloceanspaces.com/user-data/production/ae978bc7-ef5e-47d8-8585-f7fae49590a5/uploads/images/bd35b94bf261acdb824c08da69517d50.jpeg",
+    "subscribergroups": [],
+    "folderId": "8627009f-ffbf-4163-9eff-4e41b4e59ef8",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:23:42.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "bd35b94bf261acdb824c08da69517d50.jpeg",
+    "path": "https://wa-cdn.nyc3.cdn.digitaloceanspaces.com/user-data/production/ae978bc7-ef5e-47d8-8585-f7fae49590a5/uploads/images",
+    "size": 410537,
+    "width": 508,
+    "height": 901,
+    "extension": "jpeg",
+    "description": "@[Ли Сан](person:3717c2d8-4525-449c-84c8-c781a1483c30)",
+    "alt": null,
+    "creditArtistName": null,
+    "creditArtistWebsite": null,
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2024-10-17 22:18:50.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": 19,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": null,
+    "pageUrl": "https://www.worldanvil.com/i/6015074",
+    "isEditable": true,
+    "success": true
+}

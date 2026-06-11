@@ -1,0 +1,43 @@
+{
+    "id": 3694218,
+    "title": "Sun_Lianshi.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://www.worldanvil.com/uploads/images/f992c16aab296f0b7a1e7c2920fbaa07.jpg",
+    "subscribergroups": [],
+    "folderId": "8627009f-ffbf-4163-9eff-4e41b4e59ef8",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:24:10.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "f992c16aab296f0b7a1e7c2920fbaa07.jpg",
+    "path": "/uploads/images",
+    "size": 825548,
+    "width": 508,
+    "height": 901,
+    "extension": "jpg",
+    "description": "@[Сунь Ляньши](person:1ee5c512-06c5-47d6-ad32-6becceb350dc)",
+    "alt": null,
+    "creditArtistName": "7thorange",
+    "creditArtistWebsite": "https://www.zcool.com.cn/u/256971",
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2022-09-04 20:51:13.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": null,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": null,
+    "pageUrl": "https://www.worldanvil.com/i/3694218",
+    "isEditable": true,
+    "success": true
+}

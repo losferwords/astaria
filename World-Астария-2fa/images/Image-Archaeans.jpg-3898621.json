@@ -1,0 +1,43 @@
+{
+    "id": 3898621,
+    "title": "Archaeans.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://www.worldanvil.com/uploads/images/32373a143fdcbd9803adb985e70fd122.jpg",
+    "subscribergroups": [],
+    "folderId": "35d948e7-3a6c-45a1-ba76-4c38e5103728",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:22:32.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "32373a143fdcbd9803adb985e70fd122.jpg",
+    "path": "/uploads/images",
+    "size": 642212,
+    "width": 1170,
+    "height": 658,
+    "extension": "jpg",
+    "description": "@[Археи](ethnicity:1e550095-ecb7-4ba2-9ab2-502900a29379)",
+    "alt": null,
+    "creditArtistName": null,
+    "creditArtistWebsite": null,
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2022-11-09 21:07:22.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": 87,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": null,
+    "pageUrl": "https://www.worldanvil.com/i/3898621",
+    "isEditable": true,
+    "success": true
+}

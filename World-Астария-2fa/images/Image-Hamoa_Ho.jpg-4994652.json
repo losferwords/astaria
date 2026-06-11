@@ -1,0 +1,43 @@
+{
+    "id": 4994652,
+    "title": "Hamoa_Ho.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://www.worldanvil.com/uploads/images/084b45c52ff794d020c21a69d00010dd.jpg",
+    "subscribergroups": [],
+    "folderId": "96dbd7c1-218d-4af8-a5e2-305d90d0c2bb",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:25:58.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "084b45c52ff794d020c21a69d00010dd.jpg",
+    "path": "/uploads/images",
+    "size": 902808,
+    "width": 1170,
+    "height": 658,
+    "extension": "jpg",
+    "description": "@[Деревня Хамоа Хо](settlement:57f202d6-a98d-4544-bc59-e5043704fdd4)",
+    "alt": null,
+    "creditArtistName": null,
+    "creditArtistWebsite": null,
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2023-10-23 21:46:03.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": null,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": null,
+    "pageUrl": "https://www.worldanvil.com/i/4994652",
+    "isEditable": true,
+    "success": true
+}

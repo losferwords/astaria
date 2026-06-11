@@ -1,0 +1,43 @@
+{
+    "id": 5737609,
+    "title": "Dragon_Gates.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://wa-cdn.nyc3.cdn.digitaloceanspaces.com/user-data/production/ae978bc7-ef5e-47d8-8585-f7fae49590a5/uploads/images/9b5c366c39fdb4847c045ed10e1665ac.jpeg",
+    "subscribergroups": [],
+    "folderId": "69000ae7-f1b9-4373-b3b5-edb4b6cd6a10",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:20:11.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "9b5c366c39fdb4847c045ed10e1665ac.jpeg",
+    "path": "https://wa-cdn.nyc3.cdn.digitaloceanspaces.com/user-data/production/ae978bc7-ef5e-47d8-8585-f7fae49590a5/uploads/images",
+    "size": 713824,
+    "width": 1170,
+    "height": 658,
+    "extension": "jpeg",
+    "description": "@[Врата Дракона](landmark:68654893-e3d4-48a7-8598-56211befaaf4)",
+    "alt": null,
+    "creditArtistName": null,
+    "creditArtistWebsite": null,
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2024-07-04 22:57:49.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": null,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": null,
+    "pageUrl": "https://www.worldanvil.com/i/5737609",
+    "isEditable": true,
+    "success": true
+}

@@ -1,0 +1,43 @@
+{
+    "id": 4868163,
+    "title": "Mangaia_River.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://www.worldanvil.com/uploads/images/7b1b1d0a58da1e8e9b50979a51fff711.jpg",
+    "subscribergroups": [],
+    "folderId": "96dbd7c1-218d-4af8-a5e2-305d90d0c2bb",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:26:01.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "7b1b1d0a58da1e8e9b50979a51fff711.jpg",
+    "path": "/uploads/images",
+    "size": 488855,
+    "width": 1170,
+    "height": 658,
+    "extension": "jpg",
+    "description": "@[Река Мангайа](location:5b911d8f-8d05-4300-8c37-feff3541d960)",
+    "alt": null,
+    "creditArtistName": null,
+    "creditArtistWebsite": null,
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2023-09-11 20:43:01.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": null,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": null,
+    "pageUrl": "https://www.worldanvil.com/i/4868163",
+    "isEditable": true,
+    "success": true
+}

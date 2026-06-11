@@ -1,0 +1,43 @@
+{
+    "id": 3318069,
+    "title": "Nadair.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://www.worldanvil.com/uploads/images/751851464a8607a3b6fc61925d4db224.jpg",
+    "subscribergroups": [],
+    "folderId": "9bcfc8dc-ebbb-41a9-8ce9-e1d9f04cbe49",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:20:27.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "751851464a8607a3b6fc61925d4db224.jpg",
+    "path": "/uploads/images",
+    "size": 540037,
+    "width": 1170,
+    "height": 658,
+    "extension": "jpg",
+    "description": "Женщина народа @[Надаир](ethnicity:5a0cc665-3aa2-470e-85bc-513907eb471b)",
+    "alt": null,
+    "creditArtistName": "Bob Kehl",
+    "creditArtistWebsite": "https://www.behance.net/BobKehl/projects",
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2022-05-05 17:14:55.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": null,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": null,
+    "pageUrl": "https://www.worldanvil.com/i/3318069",
+    "isEditable": true,
+    "success": true
+}

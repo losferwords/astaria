@@ -1,0 +1,43 @@
+{
+    "id": 755314,
+    "title": "Oracle_f.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://www.worldanvil.com/uploads/images/e61d6662f7315c5e6ee067d93d02d0ba.jpg",
+    "subscribergroups": [],
+    "folderId": "41bd2811-d9b2-4f77-8aa3-f0e1268d1d28",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:22:53.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "e61d6662f7315c5e6ee067d93d02d0ba.jpg",
+    "path": "/uploads/images",
+    "size": 599731,
+    "width": 765,
+    "height": 1305,
+    "extension": "jpg",
+    "description": "@[Оракул](profession:48920ae5-f9f2-4ec0-94ca-97437da4089b) женщина",
+    "alt": null,
+    "creditArtistName": "Thedurrrrian",
+    "creditArtistWebsite": "https://thedurrrrian.tumblr.com/",
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2020-01-14 13:04:48.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": 152,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": "",
+    "pageUrl": "https://www.worldanvil.com/i/755314",
+    "isEditable": true,
+    "success": true
+}

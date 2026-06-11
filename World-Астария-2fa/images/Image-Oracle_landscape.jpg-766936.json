@@ -1,0 +1,43 @@
+{
+    "id": 766936,
+    "title": "Oracle_landscape.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://www.worldanvil.com/uploads/images/ad7e8bd55b62fe7da7a59a4780c2b5a7.jpg",
+    "subscribergroups": [],
+    "folderId": "35d948e7-3a6c-45a1-ba76-4c38e5103728",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:22:43.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "ad7e8bd55b62fe7da7a59a4780c2b5a7.jpg",
+    "path": "/uploads/images",
+    "size": 391586,
+    "width": 1170,
+    "height": 658,
+    "extension": "jpg",
+    "description": null,
+    "alt": null,
+    "creditArtistName": "Wesley Tippetts",
+    "creditArtistWebsite": "https://westippetts.artstation.com/",
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2020-01-14 12:29:12.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": 157,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": "",
+    "pageUrl": "https://www.worldanvil.com/i/766936",
+    "isEditable": true,
+    "success": true
+}

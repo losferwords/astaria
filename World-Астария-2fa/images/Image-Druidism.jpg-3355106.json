@@ -1,0 +1,43 @@
+{
+    "id": 3355106,
+    "title": "Druidism.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://www.worldanvil.com/uploads/images/7a7c969abb3596bef994ac129669b253.jpg",
+    "subscribergroups": [],
+    "folderId": "9bcfc8dc-ebbb-41a9-8ce9-e1d9f04cbe49",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:20:21.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "7a7c969abb3596bef994ac129669b253.jpg",
+    "path": "/uploads/images",
+    "size": 681930,
+    "width": 1170,
+    "height": 658,
+    "extension": "jpg",
+    "description": "@[Друидизм](ritual:f3f7603c-a26b-4d40-a6a2-b41c246557a2)",
+    "alt": null,
+    "creditArtistName": "Raphael Lacoste",
+    "creditArtistWebsite": "https://www.artstation.com/raphael-lacoste",
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2022-05-18 20:58:18.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": null,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": null,
+    "pageUrl": "https://www.worldanvil.com/i/3355106",
+    "isEditable": true,
+    "success": true
+}

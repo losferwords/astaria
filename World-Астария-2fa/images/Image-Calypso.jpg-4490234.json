@@ -1,0 +1,43 @@
+{
+    "id": 4490234,
+    "title": "Calypso.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://www.worldanvil.com/uploads/images/e7175de6b768ba54c6718bd5a7b5bb51.jpg",
+    "subscribergroups": [],
+    "folderId": "14757588-2a69-4676-b878-c979049ff412",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:18:57.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "e7175de6b768ba54c6718bd5a7b5bb51.jpg",
+    "path": "/uploads/images",
+    "size": 211674,
+    "width": 508,
+    "height": 901,
+    "extension": "jpg",
+    "description": "@[Калипсо](person:ff681dc4-1fbd-4b36-b387-f836e46fbccd)",
+    "alt": null,
+    "creditArtistName": null,
+    "creditArtistWebsite": null,
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2023-05-08 06:50:18.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": null,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": null,
+    "pageUrl": "https://www.worldanvil.com/i/4490234",
+    "isEditable": true,
+    "success": true
+}

@@ -1,0 +1,43 @@
+{
+    "id": 4741512,
+    "title": "navarch_male.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://www.worldanvil.com/uploads/images/beb12e2e0e54d057deb710524fae7f64.jpg",
+    "subscribergroups": [],
+    "folderId": "564f6e86-c1b1-4dee-a5ef-7963cc0a06d2",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:22:12.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "beb12e2e0e54d057deb710524fae7f64.jpg",
+    "path": "/uploads/images",
+    "size": 201094,
+    "width": 508,
+    "height": 901,
+    "extension": "jpg",
+    "description": "@[Наварх](profession:8ecf9fb9-ead9-40cc-9a38-c666c584f38d) мужчина",
+    "alt": null,
+    "creditArtistName": "Edikt Art",
+    "creditArtistWebsite": "https://www.artstation.com/ediktart",
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2023-07-29 21:41:01.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": 69,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": null,
+    "pageUrl": "https://www.worldanvil.com/i/4741512",
+    "isEditable": true,
+    "success": true
+}

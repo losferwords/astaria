@@ -1,0 +1,43 @@
+{
+    "id": 7008755,
+    "title": "Астария  Base Map Image (Replaced: 2025-10-30 09:10:11 WA Time)",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://wa-cdn.nyc3.cdn.digitaloceanspaces.com/user-data/production/ae978bc7-ef5e-47d8-8585-f7fae49590a5/uploads/images/73769e2bd23961fcaeb7eaf5aeb32c68.png",
+    "subscribergroups": [],
+    "folderId": "-1",
+    "tags": "Removed Map Base Image",
+    "updateDate": {
+        "date": "2025-09-22 12:57:35.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "73769e2bd23961fcaeb7eaf5aeb32c68.png",
+    "path": "https://wa-cdn.nyc3.cdn.digitaloceanspaces.com/user-data/production/ae978bc7-ef5e-47d8-8585-f7fae49590a5/uploads/images",
+    "size": 36860501,
+    "width": 7680,
+    "height": 4320,
+    "extension": "png",
+    "description": "Map",
+    "alt": "Астария  Base Map Image",
+    "creditArtistName": null,
+    "creditArtistWebsite": null,
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2025-09-22 12:57:35.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": null,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": "",
+    "pageUrl": "https://www.worldanvil.com/i/7008755",
+    "isEditable": true,
+    "success": true
+}

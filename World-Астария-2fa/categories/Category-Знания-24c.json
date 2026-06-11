@@ -1,0 +1,267 @@
+{
+    "id": "751fa24c-a3bf-4bfc-a2e7-f2d9aa908766",
+    "title": "Знания",
+    "slug": "D097D0BDD0B0D0BDD0B8D18F-category",
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Category",
+    "icon": null,
+    "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/c/D097D0BDD0B0D0BDD0B8D18F-category",
+    "subscribergroups": [],
+    "folderId": null,
+    "tags": null,
+    "updateDate": {
+        "date": "2025-06-24 08:59:19.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "description": null,
+    "excerpt": null,
+    "isBook": false,
+    "displayBookTitle": true,
+    "isCollapsed": false,
+    "position": 930,
+    "creationDate": {
+        "date": "2020-09-10 19:29:18.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": 205,
+    "editor": null,
+    "custom1": null,
+    "custom2": null,
+    "custom3": null,
+    "custom4": null,
+    "custom5": null,
+    "cssClasses": null,
+    "systemMeta": "{\"order\":\"manual\",\"catCol1\":[\"custom1\"],\"catCol2\":[\"custom2\",\"toc\"],\"catCol3\":[\"custom3\",\"articleBlocks\",\"featuresArticles\"],\"catCol4\":[\"custom4\",\"maps\",\"timelines\"],\"catCol5\":[\"custom5\"]}",
+    "pagecover": null,
+    "bookcover": null,
+    "defaultarticlecover": null,
+    "parent": null,
+    "world": {
+        "id": "2be362fa-ad81-4128-92e8-a40c5ec3b5db",
+        "title": "Астария",
+        "slug": "D090D181D182D0B0D180D0B8D18F-losfer",
+        "state": "public",
+        "isWip": null,
+        "isDraft": null,
+        "entityClass": "World",
+        "icon": "fa-solid fa-globe-stand",
+        "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer",
+        "subscribergroups": [
+            {
+                "id": "390d8ece-7d4e-4620-8cc5-f47128ab77cf",
+                "title": "Adventurers of Тест Party",
+                "slug": null,
+                "state": null,
+                "entityClass": "SubscriberGroup",
+                "icon": null,
+                "url": null,
+                "subscribergroups": []
+            },
+            {
+                "id": "457339f6-bfe1-42af-aabb-ba5de3a39cbc",
+                "title": "fearendilele",
+                "slug": null,
+                "state": null,
+                "entityClass": "SubscriberGroup",
+                "icon": null,
+                "url": null,
+                "subscribergroups": []
+            },
+            {
+                "id": "0ec582ed-fd84-4ea6-88f4-258802ce2f52",
+                "title": "Ветер Перемен Party",
+                "slug": null,
+                "state": null,
+                "entityClass": "SubscriberGroup",
+                "icon": null,
+                "url": null,
+                "subscribergroups": []
+            },
+            {
+                "id": "2d31de8f-33c2-497f-ba8d-536c37551858",
+                "title": "Искатель",
+                "slug": null,
+                "state": null,
+                "entityClass": "SubscriberGroup",
+                "icon": null,
+                "url": null,
+                "subscribergroups": []
+            },
+            {
+                "id": "bb3f6d67-81ae-4f8a-a5e1-b40faca7682d",
+                "title": "Тест Players",
+                "slug": null,
+                "state": null,
+                "entityClass": "SubscriberGroup",
+                "icon": null,
+                "url": null,
+                "subscribergroups": []
+            },
+            {
+                "id": "71f04d15-9660-4f42-b8c6-7fa0c94c7f76",
+                "title": "Хранитель мудрости",
+                "slug": null,
+                "state": null,
+                "entityClass": "SubscriberGroup",
+                "icon": null,
+                "url": null,
+                "subscribergroups": []
+            }
+        ],
+        "folderId": "-1",
+        "tags": "",
+        "updateDate": {
+            "date": "2026-06-10 12:32:50.000000",
+            "timezone_type": 3,
+            "timezone": "Europe/London"
+        }
+    },
+    "articleRedirect": {
+        "id": "93f10330-18ca-4ee4-a3a4-01ce776ff136",
+        "title": "Знания",
+        "slug": "D097D0BDD0B0D0BDD0B8D18F-article",
+        "state": "public",
+        "isWip": true,
+        "isDraft": false,
+        "entityClass": "Article",
+        "icon": null,
+        "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D097D0BDD0B0D0BDD0B8D18F-article",
+        "subscribergroups": [],
+        "folderId": "751fa24c-a3bf-4bfc-a2e7-f2d9aa908766",
+        "tags": "",
+        "updateDate": {
+            "date": "2022-11-24 17:15:24.000000",
+            "timezone_type": 3,
+            "timezone": "Europe/London"
+        }
+    },
+    "articles": [
+        {
+            "id": "79e9757e-d13a-4a00-a5f1-5a55f4405d78",
+            "title": "Рунштоирм",
+            "slug": "D0A0D183D0BDD188D182D0BED0B8D180D0BC-article",
+            "state": "public",
+            "isWip": true,
+            "isDraft": false,
+            "entityClass": "Ritual",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D0A0D183D0BDD188D182D0BED0B8D180D0BC-article",
+            "subscribergroups": [],
+            "folderId": "751fa24c-a3bf-4bfc-a2e7-f2d9aa908766",
+            "tags": "",
+            "updateDate": {
+                "date": "2020-09-14 23:06:32.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "72c2445e-21c9-498f-b548-6962842efcf2",
+            "title": "Имитей",
+            "slug": "D098D0BCD0B8D182D0B5D0B9-condition",
+            "state": "public",
+            "isWip": true,
+            "isDraft": false,
+            "entityClass": "Condition",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D098D0BCD0B8D182D0B5D0B9-condition",
+            "subscribergroups": [],
+            "folderId": "751fa24c-a3bf-4bfc-a2e7-f2d9aa908766",
+            "tags": null,
+            "updateDate": {
+                "date": "2024-08-26 22:40:06.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "c14b26f0-83d4-4416-a6b5-9f72ca3b3a9a",
+            "title": "Танатомахия",
+            "slug": "D0A2D0B0D0BDD0B0D182D0BED0BCD0B0D185D0B8D18F-ritual-1",
+            "state": "public",
+            "isWip": true,
+            "isDraft": false,
+            "entityClass": "Ritual",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D0A2D0B0D0BDD0B0D182D0BED0BCD0B0D185D0B8D18F-ritual-1",
+            "subscribergroups": [],
+            "folderId": "751fa24c-a3bf-4bfc-a2e7-f2d9aa908766",
+            "tags": null,
+            "updateDate": {
+                "date": "2022-11-17 06:39:40.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "f047a4c1-8787-4326-ae3a-ce039493f152",
+            "title": "Хтонотема",
+            "slug": "D0A5D182D0BED0BDD0BED182D0B5D0BCD0B0-condition",
+            "state": "public",
+            "isWip": true,
+            "isDraft": false,
+            "entityClass": "Condition",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D0A5D182D0BED0BDD0BED182D0B5D0BCD0B0-condition",
+            "subscribergroups": [],
+            "folderId": "751fa24c-a3bf-4bfc-a2e7-f2d9aa908766",
+            "tags": null,
+            "updateDate": {
+                "date": "2025-09-29 15:48:52.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "d8e51fca-9886-48f3-b290-bae9fd74cde0",
+            "title": "Вневременье",
+            "slug": "D092D0BDD0B5D0B2D180D0B5D0BCD0B5D0BDD18CD0B5-ritual",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Ritual",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D092D0BDD0B5D0B2D180D0B5D0BCD0B5D0BDD18CD0B5-ritual",
+            "subscribergroups": [],
+            "folderId": "751fa24c-a3bf-4bfc-a2e7-f2d9aa908766",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-04-09 07:44:43.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "93f10330-18ca-4ee4-a3a4-01ce776ff136",
+            "title": "Знания",
+            "slug": "D097D0BDD0B0D0BDD0B8D18F-article",
+            "state": "public",
+            "isWip": true,
+            "isDraft": false,
+            "entityClass": "Article",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D097D0BDD0B0D0BDD0B8D18F-article",
+            "subscribergroups": [],
+            "folderId": "751fa24c-a3bf-4bfc-a2e7-f2d9aa908766",
+            "tags": "",
+            "updateDate": {
+                "date": "2022-11-24 17:15:24.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        }
+    ],
+    "editURL": "https://www.worldanvil.com/world/category/751fa24c-a3bf-4bfc-a2e7-f2d9aa908766/edit",
+    "parsedDescription": "",
+    "parsedCustom1": "",
+    "parsedCustom2": "",
+    "parsedCustom3": "",
+    "parsedCustom4": "",
+    "parsedCustom5": "",
+    "isEditable": true,
+    "success": true
+}

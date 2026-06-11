@@ -1,0 +1,43 @@
+{
+    "id": 1461322,
+    "title": "Chthonotema.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://www.worldanvil.com/uploads/images/bfad36f18f9750ebae0763a3bde6897c.jpg",
+    "subscribergroups": [],
+    "folderId": "fb9398b7-fc0f-4acf-8d9a-9ad55a5474a3",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:21:02.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "bfad36f18f9750ebae0763a3bde6897c.jpg",
+    "path": "/uploads/images",
+    "size": 595159,
+    "width": 1170,
+    "height": 658,
+    "extension": "jpg",
+    "description": "Глаза больного @[Хтонотемой](condition:f047a4c1-8787-4326-ae3a-ce039493f152) @[Оракула](profession:48920ae5-f9f2-4ec0-94ca-97437da4089b).",
+    "alt": null,
+    "creditArtistName": "1Enary1",
+    "creditArtistWebsite": "https://www.deviantart.com/1enary1",
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2020-09-10 19:01:43.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": 34,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": null,
+    "pageUrl": "https://www.worldanvil.com/i/1461322",
+    "isEditable": true,
+    "success": true
+}

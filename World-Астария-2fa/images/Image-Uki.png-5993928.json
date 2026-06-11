@@ -1,0 +1,43 @@
+{
+    "id": 5993928,
+    "title": "Uki.png",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://wa-cdn.nyc3.cdn.digitaloceanspaces.com/user-data/production/ae978bc7-ef5e-47d8-8585-f7fae49590a5/uploads/images/941833f151e3654c195c2394d3f66bb2.jpeg",
+    "subscribergroups": [],
+    "folderId": "c2c7f3cc-6e9c-4bd9-869f-915b6e5b91e3",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:18:27.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "941833f151e3654c195c2394d3f66bb2.jpeg",
+    "path": "https://wa-cdn.nyc3.cdn.digitaloceanspaces.com/user-data/production/ae978bc7-ef5e-47d8-8585-f7fae49590a5/uploads/images",
+    "size": 601650,
+    "width": 848,
+    "height": 1536,
+    "extension": "jpeg",
+    "description": null,
+    "alt": "Uki.png",
+    "creditArtistName": null,
+    "creditArtistWebsite": null,
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2024-10-14 18:37:55.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": null,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": "",
+    "pageUrl": "https://www.worldanvil.com/i/5993928",
+    "isEditable": true,
+    "success": true
+}

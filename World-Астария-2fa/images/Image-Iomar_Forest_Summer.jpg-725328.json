@@ -1,0 +1,43 @@
+{
+    "id": 725328,
+    "title": "Iomar_Forest_Summer.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://www.worldanvil.com/uploads/images/4704c9fafccce98a6e4eedbd6691b8a3.jpg",
+    "subscribergroups": [],
+    "folderId": "2b3b75ad-d5d1-4c9f-8f58-41af0b37b555",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:21:20.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "4704c9fafccce98a6e4eedbd6691b8a3.jpg",
+    "path": "/uploads/images",
+    "size": 1113691,
+    "width": 1170,
+    "height": 658,
+    "extension": "jpg",
+    "description": "@[Лес Иомар](location:c6185189-f0c0-4f0b-9b90-32dc0470109e) летом",
+    "alt": "Iomar_Forest_Summer.jpg",
+    "creditArtistName": null,
+    "creditArtistWebsite": null,
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2020-01-14 12:17:01.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": 139,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": "",
+    "pageUrl": "https://www.worldanvil.com/i/725328",
+    "isEditable": true,
+    "success": true
+}

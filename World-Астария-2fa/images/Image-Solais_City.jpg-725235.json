@@ -1,0 +1,43 @@
+{
+    "id": 725235,
+    "title": "Solais_City.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://www.worldanvil.com/uploads/images/03bc978395e84757977a5f5c99c84f85.jpg",
+    "subscribergroups": [],
+    "folderId": "7c29d1a7-4253-4fb3-80ae-8dd1d5e59f57",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:19:43.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "03bc978395e84757977a5f5c99c84f85.jpg",
+    "path": "/uploads/images",
+    "size": 832298,
+    "width": 1170,
+    "height": 658,
+    "extension": "jpg",
+    "description": "Город @[Солаис](settlement:2c68057e-5afe-49a5-8edc-ac06cabdddf6)",
+    "alt": null,
+    "creditArtistName": "Lukasz Wiktorzak",
+    "creditArtistWebsite": "https://wiktorzak.com.pl/",
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2020-01-14 12:16:06.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": 93,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": null,
+    "pageUrl": "https://www.worldanvil.com/i/725235",
+    "isEditable": true,
+    "success": true
+}

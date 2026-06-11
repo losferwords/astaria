@@ -1,0 +1,43 @@
+{
+    "id": 6398193,
+    "title": "Kurama.png",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://wa-cdn.nyc3.cdn.digitaloceanspaces.com/user-data/production/ae978bc7-ef5e-47d8-8585-f7fae49590a5/uploads/images/591e7b8d16b2840ca8cbbf83e23059b9.png",
+    "subscribergroups": [],
+    "folderId": "6dcb34fa-c0c0-4545-83ad-99f473c8f16e",
+    "tags": null,
+    "updateDate": {
+        "date": "2025-10-15 07:18:31.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "591e7b8d16b2840ca8cbbf83e23059b9.png",
+    "path": "https://wa-cdn.nyc3.cdn.digitaloceanspaces.com/user-data/production/ae978bc7-ef5e-47d8-8585-f7fae49590a5/uploads/images",
+    "size": 2070068,
+    "width": 1024,
+    "height": 1024,
+    "extension": "png",
+    "description": null,
+    "alt": null,
+    "creditArtistName": null,
+    "creditArtistWebsite": null,
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2025-02-21 10:52:12.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": null,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": "",
+    "pageUrl": "https://www.worldanvil.com/i/6398193",
+    "isEditable": true,
+    "success": true
+}

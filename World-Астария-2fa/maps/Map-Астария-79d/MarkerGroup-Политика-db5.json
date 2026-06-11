@@ -1,0 +1,19 @@
+{
+    "id": "94adcdb5-27ca-47c3-bb77-837e0390929b",
+    "title": "Политика",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "MarkerGroup",
+    "icon": "fa-solid fa-map-location-dot",
+    "url": null,
+    "subscribergroups": [],
+    "folderId": null,
+    "tags": null,
+    "updateDate": null,
+    "activeOnLoad": true,
+    "position": null,
+    "isEditable": true,
+    "success": true
+}

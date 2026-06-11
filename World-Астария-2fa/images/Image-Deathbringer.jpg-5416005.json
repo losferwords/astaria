@@ -1,0 +1,43 @@
+{
+    "id": 5416005,
+    "title": "Deathbringer.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://www.worldanvil.com/uploads/images/5ebbca95df823fde2bad8d578a5cf274.jpg",
+    "subscribergroups": [],
+    "folderId": "84808d2f-97b5-455d-a70e-50f2e0d502d0",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:24:19.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "5ebbca95df823fde2bad8d578a5cf274.jpg",
+    "path": "/uploads/images",
+    "size": 612276,
+    "width": 1170,
+    "height": 658,
+    "extension": "jpg",
+    "description": "@[Смертоносец](item:238ff265-0883-4a5b-a26d-504fb8c21c4d)",
+    "alt": null,
+    "creditArtistName": null,
+    "creditArtistWebsite": null,
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2024-03-08 12:21:27.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": null,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": null,
+    "pageUrl": "https://www.worldanvil.com/i/5416005",
+    "isEditable": true,
+    "success": true
+}

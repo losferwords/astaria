@@ -1,0 +1,43 @@
+{
+    "id": 1386401,
+    "title": "Mitra_Lake.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://www.worldanvil.com/uploads/images/1c1fdda1f543ca8962d0f8d4f6c956bd.jpg",
+    "subscribergroups": [],
+    "folderId": "e47abef4-b5e4-4431-9e35-fcb19e9fef3b",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:18:48.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "1c1fdda1f543ca8962d0f8d4f6c956bd.jpg",
+    "path": "/uploads/images",
+    "size": 607025,
+    "width": 1170,
+    "height": 658,
+    "extension": "jpg",
+    "description": "@[Озеро Митра](location:5a697aa3-eff7-44c0-a7e2-808fc058a03d)",
+    "alt": null,
+    "creditArtistName": "Yuri Makarov",
+    "creditArtistWebsite": "http://fotokto.ru/id7911",
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2020-08-15 23:33:02.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": 143,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": null,
+    "pageUrl": "https://www.worldanvil.com/i/1386401",
+    "isEditable": true,
+    "success": true
+}

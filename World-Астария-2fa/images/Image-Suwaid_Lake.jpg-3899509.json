@@ -1,0 +1,43 @@
+{
+    "id": 3899509,
+    "title": "Suwaid_Lake.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://www.worldanvil.com/uploads/images/544b35571b13e6954d439b019871941c.jpg",
+    "subscribergroups": [],
+    "folderId": "864387c6-7a5a-4ea2-95cd-6bbb56f57296",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:20:44.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "544b35571b13e6954d439b019871941c.jpg",
+    "path": "/uploads/images",
+    "size": 703249,
+    "width": 1170,
+    "height": 658,
+    "extension": "jpg",
+    "description": "@[Озеро Суэйд](location:89a95259-958a-4c65-b2a1-7ed9e26c3115)",
+    "alt": null,
+    "creditArtistName": null,
+    "creditArtistWebsite": null,
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2022-11-10 05:45:25.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": null,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": null,
+    "pageUrl": "https://www.worldanvil.com/i/3899509",
+    "isEditable": true,
+    "success": true
+}

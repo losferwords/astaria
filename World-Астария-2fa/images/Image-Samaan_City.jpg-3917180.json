@@ -1,0 +1,43 @@
+{
+    "id": 3917180,
+    "title": "Samaan_City.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://www.worldanvil.com/uploads/images/940042bdcce3e7b14dcd70a0f8288296.jpg",
+    "subscribergroups": [],
+    "folderId": "864387c6-7a5a-4ea2-95cd-6bbb56f57296",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:20:41.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "940042bdcce3e7b14dcd70a0f8288296.jpg",
+    "path": "/uploads/images",
+    "size": 738910,
+    "width": 1170,
+    "height": 658,
+    "extension": "jpg",
+    "description": "@[Город Самаан](settlement:17827411-a2bb-4c82-88bd-d6986f3a1ac3)",
+    "alt": null,
+    "creditArtistName": "Ubisoft",
+    "creditArtistWebsite": "https://www.ubisoft.com",
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2022-11-15 21:16:22.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": null,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": null,
+    "pageUrl": "https://www.worldanvil.com/i/3917180",
+    "isEditable": true,
+    "success": true
+}

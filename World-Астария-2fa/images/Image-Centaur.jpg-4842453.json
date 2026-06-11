@@ -1,0 +1,43 @@
+{
+    "id": 4842453,
+    "title": "Centaur.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://www.worldanvil.com/uploads/images/6e9a22ae84d25c7e116b3e3f78e419b0.jpg",
+    "subscribergroups": [],
+    "folderId": "cb0e80bd-d761-4a06-81cf-2e51e46d3f7a",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:18:52.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "6e9a22ae84d25c7e116b3e3f78e419b0.jpg",
+    "path": "/uploads/images",
+    "size": 454051,
+    "width": 1170,
+    "height": 658,
+    "extension": "jpg",
+    "description": "@[Кентавр](species:0d9da8f3-d145-4567-940b-170fab82e256)",
+    "alt": null,
+    "creditArtistName": "Michelle Tolo",
+    "creditArtistWebsite": "https://www.deviantart.com/manweri/gallery",
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2023-09-02 22:08:11.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": null,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": null,
+    "pageUrl": "https://www.worldanvil.com/i/4842453",
+    "isEditable": true,
+    "success": true
+}

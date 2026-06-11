@@ -1,0 +1,43 @@
+{
+    "id": 2850847,
+    "title": "Hyperion I.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://www.worldanvil.com/uploads/images/dd307f0bdc06e7bca440f5ea5bf6dd79.jpg",
+    "subscribergroups": [],
+    "folderId": "14757588-2a69-4676-b878-c979049ff412",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:18:59.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "dd307f0bdc06e7bca440f5ea5bf6dd79.jpg",
+    "path": "/uploads/images",
+    "size": 255565,
+    "width": 508,
+    "height": 901,
+    "extension": "jpg",
+    "description": "@[Гиперион I](person:d9095550-fc51-41b7-b88b-3b6bdccf6b6e) - царь @[Гиласа](organization:f18a827a-9a8a-4444-9c0a-dd5c25f77a4f)",
+    "alt": "Hyperion I.jpg",
+    "creditArtistName": "Joan Francesc Oliveras Pallerols",
+    "creditArtistWebsite": "https://www.artstation.com/jfoliveras",
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2022-05-03 21:15:48.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": 44,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": "",
+    "pageUrl": "https://www.worldanvil.com/i/2850847",
+    "isEditable": true,
+    "success": true
+}

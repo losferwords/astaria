@@ -1,0 +1,43 @@
+{
+    "id": 1081227,
+    "title": "Storm_Bay.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://www.worldanvil.com/uploads/images/722b2b3863a40d6c7523c1305ebdb9fa.jpg",
+    "subscribergroups": [],
+    "folderId": "a74ef588-038d-4c5a-b686-11ded02955eb",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:26:37.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "722b2b3863a40d6c7523c1305ebdb9fa.jpg",
+    "path": "/uploads/images",
+    "size": 698732,
+    "width": 1170,
+    "height": 658,
+    "extension": "jpg",
+    "description": "@[Штормовой залив](article:0dbf8613-ca3b-4d3b-adfb-1d7a6888db77)",
+    "alt": null,
+    "creditArtistName": null,
+    "creditArtistWebsite": null,
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2020-05-04 21:57:09.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": 129,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": null,
+    "pageUrl": "https://www.worldanvil.com/i/1081227",
+    "isEditable": true,
+    "success": true
+}

@@ -1,0 +1,514 @@
+{
+    "id": "e3a19958-34e1-482a-97a2-7855b367d30f",
+    "title": "Боги",
+    "slug": "D091D0BED0B3D0B8-category",
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Category",
+    "icon": null,
+    "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/c/D091D0BED0B3D0B8-category",
+    "subscribergroups": [],
+    "folderId": null,
+    "tags": null,
+    "updateDate": {
+        "date": "2025-06-24 08:59:19.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "description": null,
+    "excerpt": null,
+    "isBook": false,
+    "displayBookTitle": true,
+    "isCollapsed": false,
+    "position": 970,
+    "creationDate": {
+        "date": "2019-12-25 20:48:49.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": 309,
+    "editor": null,
+    "custom1": null,
+    "custom2": null,
+    "custom3": null,
+    "custom4": null,
+    "custom5": null,
+    "cssClasses": null,
+    "systemMeta": "{\"order\":\"manual\",\"catCol1\":[\"custom1\"],\"catCol2\":[\"custom2\",\"toc\"],\"catCol3\":[\"custom3\",\"articleBlocks\",\"featuresArticles\"],\"catCol4\":[\"custom4\",\"maps\",\"timelines\"],\"catCol5\":[\"custom5\"]}",
+    "pagecover": null,
+    "bookcover": null,
+    "defaultarticlecover": null,
+    "parent": null,
+    "world": {
+        "id": "2be362fa-ad81-4128-92e8-a40c5ec3b5db",
+        "title": "Астария",
+        "slug": "D090D181D182D0B0D180D0B8D18F-losfer",
+        "state": "public",
+        "isWip": null,
+        "isDraft": null,
+        "entityClass": "World",
+        "icon": "fa-solid fa-globe-stand",
+        "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer",
+        "subscribergroups": [
+            {
+                "id": "390d8ece-7d4e-4620-8cc5-f47128ab77cf",
+                "title": "Adventurers of Тест Party",
+                "slug": null,
+                "state": null,
+                "entityClass": "SubscriberGroup",
+                "icon": null,
+                "url": null,
+                "subscribergroups": []
+            },
+            {
+                "id": "457339f6-bfe1-42af-aabb-ba5de3a39cbc",
+                "title": "fearendilele",
+                "slug": null,
+                "state": null,
+                "entityClass": "SubscriberGroup",
+                "icon": null,
+                "url": null,
+                "subscribergroups": []
+            },
+            {
+                "id": "0ec582ed-fd84-4ea6-88f4-258802ce2f52",
+                "title": "Ветер Перемен Party",
+                "slug": null,
+                "state": null,
+                "entityClass": "SubscriberGroup",
+                "icon": null,
+                "url": null,
+                "subscribergroups": []
+            },
+            {
+                "id": "2d31de8f-33c2-497f-ba8d-536c37551858",
+                "title": "Искатель",
+                "slug": null,
+                "state": null,
+                "entityClass": "SubscriberGroup",
+                "icon": null,
+                "url": null,
+                "subscribergroups": []
+            },
+            {
+                "id": "bb3f6d67-81ae-4f8a-a5e1-b40faca7682d",
+                "title": "Тест Players",
+                "slug": null,
+                "state": null,
+                "entityClass": "SubscriberGroup",
+                "icon": null,
+                "url": null,
+                "subscribergroups": []
+            },
+            {
+                "id": "71f04d15-9660-4f42-b8c6-7fa0c94c7f76",
+                "title": "Хранитель мудрости",
+                "slug": null,
+                "state": null,
+                "entityClass": "SubscriberGroup",
+                "icon": null,
+                "url": null,
+                "subscribergroups": []
+            }
+        ],
+        "folderId": "-1",
+        "tags": "",
+        "updateDate": {
+            "date": "2026-06-10 12:32:50.000000",
+            "timezone_type": 3,
+            "timezone": "Europe/London"
+        }
+    },
+    "articleRedirect": {
+        "id": "55a9b9f3-3137-4713-ab4d-590856ffd786",
+        "title": "Боги",
+        "slug": "D091D0BED0B3D0B8-article",
+        "state": "public",
+        "isWip": true,
+        "isDraft": false,
+        "entityClass": "Article",
+        "icon": null,
+        "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D091D0BED0B3D0B8-article",
+        "subscribergroups": [],
+        "folderId": "e3a19958-34e1-482a-97a2-7855b367d30f",
+        "tags": "",
+        "updateDate": {
+            "date": "2025-09-29 13:26:30.000000",
+            "timezone_type": 3,
+            "timezone": "Europe/London"
+        }
+    },
+    "articles": [
+        {
+            "id": "d9095550-fc51-41b7-b88b-3b6bdccf6b6e",
+            "title": "Гиперион I",
+            "slug": "D093D0B8D0BFD0B5D180D0B8D0BED0BD-i-person",
+            "state": "public",
+            "isWip": true,
+            "isDraft": false,
+            "entityClass": "Person",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D093D0B8D0BFD0B5D180D0B8D0BED0BD-i-person",
+            "subscribergroups": [],
+            "folderId": "e3a19958-34e1-482a-97a2-7855b367d30f",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-09-29 15:42:51.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "87aa556f-bece-4b6d-bddd-1f4efa6d2bca",
+            "title": "Тарун",
+            "slug": "D0A2D0B0D180D183D0BD-person",
+            "state": "public",
+            "isWip": true,
+            "isDraft": false,
+            "entityClass": "Person",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D0A2D0B0D180D183D0BD-person",
+            "subscribergroups": [],
+            "folderId": "e3a19958-34e1-482a-97a2-7855b367d30f",
+            "tags": "",
+            "updateDate": {
+                "date": "2024-01-24 21:39:07.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "19b90f28-12ec-4681-99d0-1a6eef547ff1",
+            "title": "Церунна",
+            "slug": "D0A6D0B5D180D183D0BDD0BDD0B0-person",
+            "state": "public",
+            "isWip": true,
+            "isDraft": false,
+            "entityClass": "Person",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D0A6D0B5D180D183D0BDD0BDD0B0-person",
+            "subscribergroups": [],
+            "folderId": "e3a19958-34e1-482a-97a2-7855b367d30f",
+            "tags": null,
+            "updateDate": {
+                "date": "2024-01-24 21:42:12.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "ce9f10c9-7bd8-4deb-b033-2737d270b1a6",
+            "title": "Тиресий",
+            "slug": "D0A2D0B8D180D0B5D181D0B8D0B9-person",
+            "state": "public",
+            "isWip": true,
+            "isDraft": false,
+            "entityClass": "Person",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D0A2D0B8D180D0B5D181D0B8D0B9-person",
+            "subscribergroups": [],
+            "folderId": "e3a19958-34e1-482a-97a2-7855b367d30f",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-09-29 15:44:41.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "0d14863a-39f4-48e0-9a0b-a68a2c62bc16",
+            "title": "Дракон Ланг-Ан",
+            "slug": "D094D180D0B0D0BAD0BED0BD-D09BD0B0D0BDD0B3-D090D0BD-person",
+            "state": "public",
+            "isWip": true,
+            "isDraft": false,
+            "entityClass": "Person",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D094D180D0B0D0BAD0BED0BD-D09BD0B0D0BDD0B3-D090D0BD-person",
+            "subscribergroups": [],
+            "folderId": "e3a19958-34e1-482a-97a2-7855b367d30f",
+            "tags": null,
+            "updateDate": {
+                "date": "2024-01-24 21:45:16.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "af9c39e8-c8e0-4237-8185-4ed7594de262",
+            "title": "Мерката",
+            "slug": "D09CD0B5D180D0BAD0B0D182D0B0-person",
+            "state": "public",
+            "isWip": true,
+            "isDraft": false,
+            "entityClass": "Person",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D09CD0B5D180D0BAD0B0D182D0B0-person",
+            "subscribergroups": [],
+            "folderId": "e3a19958-34e1-482a-97a2-7855b367d30f",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-02-19 07:04:14.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "a35ab623-79eb-4687-8da1-543547a02a59",
+            "title": "Аст",
+            "slug": "D090D181D182-person",
+            "state": "public",
+            "isWip": true,
+            "isDraft": false,
+            "entityClass": "Person",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D090D181D182-person",
+            "subscribergroups": [],
+            "folderId": "e3a19958-34e1-482a-97a2-7855b367d30f",
+            "tags": null,
+            "updateDate": {
+                "date": "2025-09-29 15:19:59.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "40b6ec38-8384-4218-a0e8-54402f27a594",
+            "title": "Альзаман",
+            "slug": "D090D0BBD18CD0B7D0B0D0BCD0B0D0BD-person",
+            "state": "public",
+            "isWip": true,
+            "isDraft": false,
+            "entityClass": "Person",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D090D0BBD18CD0B7D0B0D0BCD0B0D0BD-person",
+            "subscribergroups": [],
+            "folderId": "e3a19958-34e1-482a-97a2-7855b367d30f",
+            "tags": "",
+            "updateDate": {
+                "date": "2024-01-24 21:49:33.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "ff681dc4-1fbd-4b36-b387-f836e46fbccd",
+            "title": "Калипсо",
+            "slug": "D09AD0B0D0BBD0B8D0BFD181D0BE-person",
+            "state": "public",
+            "isWip": true,
+            "isDraft": false,
+            "entityClass": "Person",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D09AD0B0D0BBD0B8D0BFD181D0BE-person",
+            "subscribergroups": [],
+            "folderId": "e3a19958-34e1-482a-97a2-7855b367d30f",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-09-29 15:20:17.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "082efbff-a383-4bc1-9fa1-30d4586d22f0",
+            "title": "Икатерра",
+            "slug": "D098D0BAD0B0D182D0B5D180D180D0B0-person",
+            "state": "public",
+            "isWip": true,
+            "isDraft": false,
+            "entityClass": "Person",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D098D0BAD0B0D182D0B5D180D180D0B0-person",
+            "subscribergroups": [],
+            "folderId": "e3a19958-34e1-482a-97a2-7855b367d30f",
+            "tags": "",
+            "updateDate": {
+                "date": "2024-09-21 12:54:46.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "5e9a68b0-d9a2-4fdb-a284-3b8bbb5b8bbe",
+            "title": "Хангор",
+            "slug": "D0A5D0B0D0BDD0B3D0BED180-person",
+            "state": "public",
+            "isWip": true,
+            "isDraft": false,
+            "entityClass": "Person",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D0A5D0B0D0BDD0B3D0BED180-person",
+            "subscribergroups": [],
+            "folderId": "e3a19958-34e1-482a-97a2-7855b367d30f",
+            "tags": "",
+            "updateDate": {
+                "date": "2024-05-09 20:46:58.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "2228f97a-6967-4157-a11c-da812016336a",
+            "title": "Винтра",
+            "slug": "D092D0B8D0BDD182D180D0B0-person",
+            "state": "public",
+            "isWip": true,
+            "isDraft": false,
+            "entityClass": "Person",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D092D0B8D0BDD182D180D0B0-person",
+            "subscribergroups": [],
+            "folderId": "e3a19958-34e1-482a-97a2-7855b367d30f",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-02-08 06:06:34.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "63e0f006-b732-42c8-a28e-2b5f64867166",
+            "title": "Руфу",
+            "slug": "D0A0D183D184D183-person",
+            "state": "public",
+            "isWip": true,
+            "isDraft": false,
+            "entityClass": "Person",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D0A0D183D184D183-person",
+            "subscribergroups": [],
+            "folderId": "e3a19958-34e1-482a-97a2-7855b367d30f",
+            "tags": "",
+            "updateDate": {
+                "date": "2024-05-09 21:01:04.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "068811f0-3cab-4648-9074-5a17b1293874",
+            "title": "Шубханкари",
+            "slug": "D0A8D183D0B1D185D0B0D0BDD0BAD0B0D180D0B8-person",
+            "state": "public",
+            "isWip": true,
+            "isDraft": false,
+            "entityClass": "Person",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D0A8D183D0B1D185D0B0D0BDD0BAD0B0D180D0B8-person",
+            "subscribergroups": [],
+            "folderId": "e3a19958-34e1-482a-97a2-7855b367d30f",
+            "tags": "",
+            "updateDate": {
+                "date": "2024-03-27 21:21:33.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "3c089bdc-ccad-47bc-a459-75838156c8bf",
+            "title": "Ицунэ",
+            "slug": "D098D186D183D0BDD18D-person",
+            "state": "public",
+            "isWip": true,
+            "isDraft": false,
+            "entityClass": "Person",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D098D186D183D0BDD18D-person",
+            "subscribergroups": [],
+            "folderId": "e3a19958-34e1-482a-97a2-7855b367d30f",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-10-15 10:32:37.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "e60e07c8-7f52-4d92-8490-f72b89fa66f9",
+            "title": "Велисса",
+            "slug": "D092D0B5D0BBD0B8D181D181D0B0-person",
+            "state": "public",
+            "isWip": true,
+            "isDraft": false,
+            "entityClass": "Person",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D092D0B5D0BBD0B8D181D181D0B0-person",
+            "subscribergroups": [],
+            "folderId": "e3a19958-34e1-482a-97a2-7855b367d30f",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-09-29 18:30:24.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "8cbdf43c-4b33-4450-869b-4bc5a0ba1ceb",
+            "title": "Ата",
+            "slug": "D090D182D0B0-person",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Person",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D090D182D0B0-person",
+            "subscribergroups": [],
+            "folderId": "e3a19958-34e1-482a-97a2-7855b367d30f",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-02-19 07:04:49.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "05a64990-14ff-46e5-9e9f-bff4e65bd1f0",
+            "title": "Интлан",
+            "slug": "D098D0BDD182D0BBD0B0D0BD-person",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Person",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D098D0BDD182D0BBD0B0D0BD-person",
+            "subscribergroups": [],
+            "folderId": "e3a19958-34e1-482a-97a2-7855b367d30f",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-12-28 06:15:06.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "55a9b9f3-3137-4713-ab4d-590856ffd786",
+            "title": "Боги",
+            "slug": "D091D0BED0B3D0B8-article",
+            "state": "public",
+            "isWip": true,
+            "isDraft": false,
+            "entityClass": "Article",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D091D0BED0B3D0B8-article",
+            "subscribergroups": [],
+            "folderId": "e3a19958-34e1-482a-97a2-7855b367d30f",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-09-29 13:26:30.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        }
+    ],
+    "editURL": "https://www.worldanvil.com/world/category/e3a19958-34e1-482a-97a2-7855b367d30f/edit",
+    "parsedDescription": "",
+    "parsedCustom1": "",
+    "parsedCustom2": "",
+    "parsedCustom3": "",
+    "parsedCustom4": "",
+    "parsedCustom5": "",
+    "isEditable": true,
+    "success": true
+}

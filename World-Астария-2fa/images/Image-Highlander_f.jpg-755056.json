@@ -1,0 +1,43 @@
+{
+    "id": 755056,
+    "title": "Highlander_f.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://www.worldanvil.com/uploads/images/d872526a1c283734eea5fcf901d1c9ca.jpg",
+    "subscribergroups": [],
+    "folderId": "db763f65-0f7c-4ab9-afc8-d0d3be8beef7",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:19:35.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "d872526a1c283734eea5fcf901d1c9ca.jpg",
+    "path": "/uploads/images",
+    "size": 450055,
+    "width": 768,
+    "height": 1305,
+    "extension": "jpg",
+    "description": "@[Горец](profession:4ceb45d0-eb99-4a70-bce7-471183a64854) женщина",
+    "alt": null,
+    "creditArtistName": "Lulumingchao",
+    "creditArtistWebsite": "https://www.deviantart.com/lulumingchao",
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2020-01-14 13:06:09.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": 132,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": "",
+    "pageUrl": "https://www.worldanvil.com/i/755056",
+    "isEditable": true,
+    "success": true
+}

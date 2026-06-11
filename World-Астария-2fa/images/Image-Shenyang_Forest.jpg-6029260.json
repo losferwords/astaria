@@ -1,0 +1,43 @@
+{
+    "id": 6029260,
+    "title": "Shenyang_Forest.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://wa-cdn.nyc3.cdn.digitaloceanspaces.com/user-data/production/ae978bc7-ef5e-47d8-8585-f7fae49590a5/uploads/images/950b97edcd0c0b3112dd6d42d8065c7d.jpeg",
+    "subscribergroups": [],
+    "folderId": "69000ae7-f1b9-4373-b3b5-edb4b6cd6a10",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:20:16.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "950b97edcd0c0b3112dd6d42d8065c7d.jpeg",
+    "path": "https://wa-cdn.nyc3.cdn.digitaloceanspaces.com/user-data/production/ae978bc7-ef5e-47d8-8585-f7fae49590a5/uploads/images",
+    "size": 747345,
+    "width": 1170,
+    "height": 658,
+    "extension": "jpeg",
+    "description": "@[Лес Шеньянь](location:6d3fc437-7cce-4b02-94ba-37b93f2212df)",
+    "alt": null,
+    "creditArtistName": null,
+    "creditArtistWebsite": null,
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2024-10-22 20:32:31.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": null,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": null,
+    "pageUrl": "https://www.worldanvil.com/i/6029260",
+    "isEditable": true,
+    "success": true
+}

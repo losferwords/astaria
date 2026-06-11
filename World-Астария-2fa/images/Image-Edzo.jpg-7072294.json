@@ -1,0 +1,43 @@
+{
+    "id": 7072294,
+    "title": "Edzo.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://wa-cdn.nyc3.cdn.digitaloceanspaces.com/user-data/production/ae978bc7-ef5e-47d8-8585-f7fae49590a5/uploads/images/cbbd457d033a4501cc1efeac4bea4703.jpeg",
+    "subscribergroups": [],
+    "folderId": "cc630a13-0e7b-413a-b077-04b696655421",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-29 11:22:28.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "cbbd457d033a4501cc1efeac4bea4703.jpeg",
+    "path": "https://wa-cdn.nyc3.cdn.digitaloceanspaces.com/user-data/production/ae978bc7-ef5e-47d8-8585-f7fae49590a5/uploads/images",
+    "size": 798540,
+    "width": 1170,
+    "height": 658,
+    "extension": "jpeg",
+    "description": "@[Эдзо](ethnicity:e3f42216-607d-4e21-a3fd-1b4fc4502e4a)",
+    "alt": "",
+    "creditArtistName": "",
+    "creditArtistWebsite": "",
+    "creditArtTitle": "",
+    "creditArtUrl": "",
+    "creationDate": {
+        "date": "2025-10-16 08:33:20.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": null,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": "",
+    "pageUrl": "https://www.worldanvil.com/i/7072294",
+    "isEditable": true,
+    "success": true
+}

@@ -1,0 +1,43 @@
+{
+    "id": 5471991,
+    "title": "Shubhankari.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://www.worldanvil.com/uploads/images/9090aba03154bf5d055d41a0c6dc74fd.jpg",
+    "subscribergroups": [],
+    "folderId": "14757588-2a69-4676-b878-c979049ff412",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:19:06.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "9090aba03154bf5d055d41a0c6dc74fd.jpg",
+    "path": "/uploads/images",
+    "size": 438220,
+    "width": 508,
+    "height": 901,
+    "extension": "jpg",
+    "description": "@[Шубханкари](person:068811f0-3cab-4648-9074-5a17b1293874)",
+    "alt": null,
+    "creditArtistName": null,
+    "creditArtistWebsite": null,
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2024-03-26 20:35:05.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": null,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": null,
+    "pageUrl": "https://www.worldanvil.com/i/5471991",
+    "isEditable": true,
+    "success": true
+}

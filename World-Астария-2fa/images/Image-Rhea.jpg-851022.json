@@ -1,0 +1,43 @@
+{
+    "id": 851022,
+    "title": "Rhea.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://www.worldanvil.com/uploads/images/3661accd36603d36971ee25d13724498.jpg",
+    "subscribergroups": [],
+    "folderId": "8627009f-ffbf-4163-9eff-4e41b4e59ef8",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:24:01.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "3661accd36603d36971ee25d13724498.jpg",
+    "path": "/uploads/images",
+    "size": 449360,
+    "width": 508,
+    "height": 901,
+    "extension": "jpg",
+    "description": "@[Рея Мелит](person:d0a5b75a-4eff-434a-b30d-806d7d076b09)",
+    "alt": "Rhea.jpg",
+    "creditArtistName": "Kerem Beyit",
+    "creditArtistWebsite": "https://www.artstation.com/kerembeyit",
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2023-08-19 09:57:18.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": 12,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": "",
+    "pageUrl": "https://www.worldanvil.com/i/851022",
+    "isEditable": true,
+    "success": true
+}

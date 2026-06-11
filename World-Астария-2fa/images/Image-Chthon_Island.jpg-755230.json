@@ -1,0 +1,43 @@
+{
+    "id": 755230,
+    "title": "Chthon_Island.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://www.worldanvil.com/uploads/images/557fd8869fd11e272d51094449daee84.jpg",
+    "subscribergroups": [],
+    "folderId": "a74ef588-038d-4c5a-b686-11ded02955eb",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:26:34.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "557fd8869fd11e272d51094449daee84.jpg",
+    "path": "/uploads/images",
+    "size": 728433,
+    "width": 1170,
+    "height": 658,
+    "extension": "jpg",
+    "description": "@[Остров Хтон](location:bc2bfabc-6457-448e-8f7f-f568baa649f4)",
+    "alt": null,
+    "creditArtistName": "AlynSpiller",
+    "creditArtistWebsite": "https://www.deviantart.com/alynspiller",
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2020-01-14 12:15:18.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": 127,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": "",
+    "pageUrl": "https://www.worldanvil.com/i/755230",
+    "isEditable": true,
+    "success": true
+}

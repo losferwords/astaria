@@ -1,0 +1,43 @@
+{
+    "id": 725250,
+    "title": "Thunder_Clans.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://www.worldanvil.com/uploads/images/d99502f84c6d4fb21104a59bf02910fd.jpg",
+    "subscribergroups": [],
+    "folderId": "7c29d1a7-4253-4fb3-80ae-8dd1d5e59f57",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:19:44.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "d99502f84c6d4fb21104a59bf02910fd.jpg",
+    "path": "/uploads/images",
+    "size": 871095,
+    "width": 1170,
+    "height": 658,
+    "extension": "jpg",
+    "description": "Объединённые @[Громовые Кланы](organization:d8df41de-5e86-40ca-a3c2-5454267baa2c) перед битвой",
+    "alt": "Thunder_Clans.jpg",
+    "creditArtistName": "20th Century Fox",
+    "creditArtistWebsite": "https://www.foxmovies.com/",
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2022-11-23 18:31:54.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": 174,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": "",
+    "pageUrl": "https://www.worldanvil.com/i/725250",
+    "isEditable": true,
+    "success": true
+}

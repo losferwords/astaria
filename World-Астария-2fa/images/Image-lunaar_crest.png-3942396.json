@@ -1,0 +1,43 @@
+{
+    "id": 3942396,
+    "title": "lunaar_crest.png",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://www.worldanvil.com/uploads/images/73a91bca4fdaa55b8501e469b4dea171.png",
+    "subscribergroups": [],
+    "folderId": "1819ef1b-0d4a-46f0-9ad9-79d85c03f39f",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:19:28.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "73a91bca4fdaa55b8501e469b4dea171.png",
+    "path": "/uploads/images",
+    "size": 38383,
+    "width": 353,
+    "height": 353,
+    "extension": "png",
+    "description": "Герб @[Лунаара](organization:0d1acb99-9b18-410f-9f9e-09aed4978fe2)",
+    "alt": "lunaar_crest.png",
+    "creditArtistName": null,
+    "creditArtistWebsite": null,
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2022-11-24 22:09:53.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": null,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": "",
+    "pageUrl": "https://www.worldanvil.com/i/3942396",
+    "isEditable": true,
+    "success": true
+}

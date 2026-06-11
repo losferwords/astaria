@@ -1,0 +1,43 @@
+{
+    "id": 4769105,
+    "title": "Diomed_Achaean.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://www.worldanvil.com/uploads/images/e4e23bd2e49d72b9533ed9ac0d2317c9.jpg",
+    "subscribergroups": [],
+    "folderId": "8627009f-ffbf-4163-9eff-4e41b4e59ef8",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:23:31.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "e4e23bd2e49d72b9533ed9ac0d2317c9.jpg",
+    "path": "/uploads/images",
+    "size": 420320,
+    "width": 508,
+    "height": 901,
+    "extension": "jpg",
+    "description": "@[Диомед Ахейский](person:af24ac5f-d436-4dcb-82e0-4e7bf5e961ca)",
+    "alt": null,
+    "creditArtistName": "Ubisoft",
+    "creditArtistWebsite": "https://www.ubisoft.com/",
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2023-08-08 22:24:47.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": null,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": null,
+    "pageUrl": "https://www.worldanvil.com/i/4769105",
+    "isEditable": true,
+    "success": true
+}

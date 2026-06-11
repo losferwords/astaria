@@ -1,0 +1,362 @@
+{
+    "id": "26693f2c-44d1-4a96-9b1e-154c3646a37a",
+    "title": "Предметы",
+    "slug": "D09FD180D0B5D0B4D0BCD0B5D182D18B-category",
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Category",
+    "icon": null,
+    "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/c/D09FD180D0B5D0B4D0BCD0B5D182D18B-category",
+    "subscribergroups": [],
+    "folderId": null,
+    "tags": null,
+    "updateDate": {
+        "date": "2025-06-24 08:59:19.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "description": "Артефакты и просто полезные предметы, когда-либо существовашие в Астарии.",
+    "excerpt": null,
+    "isBook": false,
+    "displayBookTitle": true,
+    "isCollapsed": false,
+    "position": 910,
+    "creationDate": {
+        "date": "2020-01-10 15:10:27.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": 238,
+    "editor": null,
+    "custom1": null,
+    "custom2": null,
+    "custom3": null,
+    "custom4": null,
+    "custom5": null,
+    "cssClasses": null,
+    "systemMeta": "{\"order\":\"manual\",\"catCol1\":[\"custom1\"],\"catCol2\":[\"custom2\",\"toc\"],\"catCol3\":[\"custom3\",\"articleBlocks\",\"featuresArticles\"],\"catCol4\":[\"custom4\",\"maps\",\"timelines\"],\"catCol5\":[\"custom5\"]}",
+    "pagecover": null,
+    "bookcover": null,
+    "defaultarticlecover": null,
+    "parent": null,
+    "world": {
+        "id": "2be362fa-ad81-4128-92e8-a40c5ec3b5db",
+        "title": "Астария",
+        "slug": "D090D181D182D0B0D180D0B8D18F-losfer",
+        "state": "public",
+        "isWip": null,
+        "isDraft": null,
+        "entityClass": "World",
+        "icon": "fa-solid fa-globe-stand",
+        "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer",
+        "subscribergroups": [
+            {
+                "id": "390d8ece-7d4e-4620-8cc5-f47128ab77cf",
+                "title": "Adventurers of Тест Party",
+                "slug": null,
+                "state": null,
+                "entityClass": "SubscriberGroup",
+                "icon": null,
+                "url": null,
+                "subscribergroups": []
+            },
+            {
+                "id": "457339f6-bfe1-42af-aabb-ba5de3a39cbc",
+                "title": "fearendilele",
+                "slug": null,
+                "state": null,
+                "entityClass": "SubscriberGroup",
+                "icon": null,
+                "url": null,
+                "subscribergroups": []
+            },
+            {
+                "id": "0ec582ed-fd84-4ea6-88f4-258802ce2f52",
+                "title": "Ветер Перемен Party",
+                "slug": null,
+                "state": null,
+                "entityClass": "SubscriberGroup",
+                "icon": null,
+                "url": null,
+                "subscribergroups": []
+            },
+            {
+                "id": "2d31de8f-33c2-497f-ba8d-536c37551858",
+                "title": "Искатель",
+                "slug": null,
+                "state": null,
+                "entityClass": "SubscriberGroup",
+                "icon": null,
+                "url": null,
+                "subscribergroups": []
+            },
+            {
+                "id": "bb3f6d67-81ae-4f8a-a5e1-b40faca7682d",
+                "title": "Тест Players",
+                "slug": null,
+                "state": null,
+                "entityClass": "SubscriberGroup",
+                "icon": null,
+                "url": null,
+                "subscribergroups": []
+            },
+            {
+                "id": "71f04d15-9660-4f42-b8c6-7fa0c94c7f76",
+                "title": "Хранитель мудрости",
+                "slug": null,
+                "state": null,
+                "entityClass": "SubscriberGroup",
+                "icon": null,
+                "url": null,
+                "subscribergroups": []
+            }
+        ],
+        "folderId": "-1",
+        "tags": "",
+        "updateDate": {
+            "date": "2026-06-10 12:32:50.000000",
+            "timezone_type": 3,
+            "timezone": "Europe/London"
+        }
+    },
+    "articleRedirect": {
+        "id": "3f3be71a-263e-433c-b85e-920218ef3eef",
+        "title": "Предметы",
+        "slug": "D09FD180D0B5D0B4D0BCD0B5D182D18B-article",
+        "state": "public",
+        "isWip": true,
+        "isDraft": false,
+        "entityClass": "Article",
+        "icon": null,
+        "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D09FD180D0B5D0B4D0BCD0B5D182D18B-article",
+        "subscribergroups": [],
+        "folderId": "26693f2c-44d1-4a96-9b1e-154c3646a37a",
+        "tags": "",
+        "updateDate": {
+            "date": "2024-05-12 21:11:12.000000",
+            "timezone_type": 3,
+            "timezone": "Europe/London"
+        }
+    },
+    "articles": [
+        {
+            "id": "3b5dbcfb-6710-4cb4-9d75-dfbb4a06f21a",
+            "title": "Кристалл Души",
+            "slug": "D09AD180D0B8D181D182D0B0D0BBD0BB-D094D183D188D0B8-item",
+            "state": "public",
+            "isWip": true,
+            "isDraft": false,
+            "entityClass": "Item",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D09AD180D0B8D181D182D0B0D0BBD0BB-D094D183D188D0B8-item",
+            "subscribergroups": [],
+            "folderId": "26693f2c-44d1-4a96-9b1e-154c3646a37a",
+            "tags": null,
+            "updateDate": {
+                "date": "2025-09-29 15:19:53.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "9eb2c369-cfa3-43c3-a0b6-8c283c390cab",
+            "title": "Книга Анарабет",
+            "slug": "D09AD0BDD0B8D0B3D0B0-D090D0BDD0B0D180D0B0D0B1D0B5D182-item",
+            "state": "public",
+            "isWip": true,
+            "isDraft": false,
+            "entityClass": "Item",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D09AD0BDD0B8D0B3D0B0-D090D0BDD0B0D180D0B0D0B1D0B5D182-item",
+            "subscribergroups": [],
+            "folderId": "26693f2c-44d1-4a96-9b1e-154c3646a37a",
+            "tags": null,
+            "updateDate": {
+                "date": "2024-03-12 20:35:05.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "04a1636e-351c-43b5-a86a-2aef1af814e6",
+            "title": "Меч Де'лаим",
+            "slug": "D09CD0B5D187-D094D0B5D0BBD0B0D0B8D0BC-item",
+            "state": "public",
+            "isWip": true,
+            "isDraft": false,
+            "entityClass": "Item",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D09CD0B5D187-D094D0B5D0BBD0B0D0B8D0BC-item",
+            "subscribergroups": [],
+            "folderId": "26693f2c-44d1-4a96-9b1e-154c3646a37a",
+            "tags": null,
+            "updateDate": {
+                "date": "2021-06-28 20:42:16.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "2e8e60a1-fe6e-4963-a5e7-1b05ce429b82",
+            "title": "Молот Са-Тар",
+            "slug": "D09CD0BED0BBD0BED182-D0A1D0B0-D0A2D0B0D180-article",
+            "state": "public",
+            "isWip": true,
+            "isDraft": false,
+            "entityClass": "Item",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D09CD0BED0BBD0BED182-D0A1D0B0-D0A2D0B0D180-article",
+            "subscribergroups": [],
+            "folderId": "26693f2c-44d1-4a96-9b1e-154c3646a37a",
+            "tags": "",
+            "updateDate": {
+                "date": "2021-06-28 20:41:08.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "238ff265-0883-4a5b-a26d-504fb8c21c4d",
+            "title": "Топор Смертоносец",
+            "slug": "D0A2D0BED0BFD0BED180-D0A1D0BCD0B5D180D182D0BED0BDD0BED181D0B5D186-item",
+            "state": "public",
+            "isWip": true,
+            "isDraft": false,
+            "entityClass": "Item",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D0A2D0BED0BFD0BED180-D0A1D0BCD0B5D180D182D0BED0BDD0BED181D0B5D186-item",
+            "subscribergroups": [],
+            "folderId": "26693f2c-44d1-4a96-9b1e-154c3646a37a",
+            "tags": "",
+            "updateDate": {
+                "date": "2024-03-12 17:28:49.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "0794d03b-60c3-4ae2-970f-5004ea638986",
+            "title": "Наручи Иджи",
+            "slug": "D09DD0B0D180D183D187D0B8-D098D0B4D0B6D0B8-item",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Item",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D09DD0B0D180D183D187D0B8-D098D0B4D0B6D0B8-item",
+            "subscribergroups": [],
+            "folderId": "26693f2c-44d1-4a96-9b1e-154c3646a37a",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-10-16 11:45:31.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "c9e4c112-ec26-40a1-bab9-12ea02266b33",
+            "title": "Сердце Огня",
+            "slug": "D0A1D0B5D180D0B4D186D0B5-D09ED0B3D0BDD18F-item",
+            "state": "public",
+            "isWip": true,
+            "isDraft": false,
+            "entityClass": "Item",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D0A1D0B5D180D0B4D186D0B5-D09ED0B3D0BDD18F-item",
+            "subscribergroups": [],
+            "folderId": "26693f2c-44d1-4a96-9b1e-154c3646a37a",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-09-29 15:19:03.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "d2698703-746d-4add-89a9-77026f6304e4",
+            "title": "Чёрный Вестник",
+            "slug": "D0A7D191D180D0BDD18BD0B9-D092D0B5D181D182D0BDD0B8D0BA-item",
+            "state": "public",
+            "isWip": true,
+            "isDraft": false,
+            "entityClass": "Item",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D0A7D191D180D0BDD18BD0B9-D092D0B5D181D182D0BDD0B8D0BA-item",
+            "subscribergroups": [],
+            "folderId": "26693f2c-44d1-4a96-9b1e-154c3646a37a",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-09-29 15:19:31.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "35264f0d-81d5-4499-906a-96a5429a1234",
+            "title": "Корона Душ",
+            "slug": "D09AD0BED180D0BED0BDD0B0-D094D183D188-item",
+            "state": "public",
+            "isWip": true,
+            "isDraft": false,
+            "entityClass": "Item",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D09AD0BED180D0BED0BDD0B0-D094D183D188-item",
+            "subscribergroups": [],
+            "folderId": "26693f2c-44d1-4a96-9b1e-154c3646a37a",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-09-29 15:19:36.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "14ea8be0-efc5-4c85-a65b-edf9ca268b8f",
+            "title": "Глаз Калипсо",
+            "slug": "D093D0BBD0B0D0B7-D09AD0B0D0BBD0B8D0BFD181D0BE-item",
+            "state": "public",
+            "isWip": true,
+            "isDraft": false,
+            "entityClass": "Item",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D093D0BBD0B0D0B7-D09AD0B0D0BBD0B8D0BFD181D0BE-item",
+            "subscribergroups": [],
+            "folderId": "26693f2c-44d1-4a96-9b1e-154c3646a37a",
+            "tags": "",
+            "updateDate": {
+                "date": "2024-04-19 22:36:08.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "3f3be71a-263e-433c-b85e-920218ef3eef",
+            "title": "Предметы",
+            "slug": "D09FD180D0B5D0B4D0BCD0B5D182D18B-article",
+            "state": "public",
+            "isWip": true,
+            "isDraft": false,
+            "entityClass": "Article",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D09FD180D0B5D0B4D0BCD0B5D182D18B-article",
+            "subscribergroups": [],
+            "folderId": "26693f2c-44d1-4a96-9b1e-154c3646a37a",
+            "tags": "",
+            "updateDate": {
+                "date": "2024-05-12 21:11:12.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        }
+    ],
+    "editURL": "https://www.worldanvil.com/world/category/26693f2c-44d1-4a96-9b1e-154c3646a37a/edit",
+    "parsedDescription": "Артефакты и просто полезные предметы, когда-либо существовашие в Астарии.",
+    "parsedCustom1": "",
+    "parsedCustom2": "",
+    "parsedCustom3": "",
+    "parsedCustom4": "",
+    "parsedCustom5": "",
+    "isEditable": true,
+    "success": true
+}

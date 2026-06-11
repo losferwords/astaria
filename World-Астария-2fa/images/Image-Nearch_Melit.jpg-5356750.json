@@ -1,0 +1,43 @@
+{
+    "id": 5356750,
+    "title": "Nearch_Melit.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://www.worldanvil.com/uploads/images/7eb523d41005372785829d6b3609799e.jpg",
+    "subscribergroups": [],
+    "folderId": "8627009f-ffbf-4163-9eff-4e41b4e59ef8",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:23:48.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "7eb523d41005372785829d6b3609799e.jpg",
+    "path": "/uploads/images",
+    "size": 427511,
+    "width": 508,
+    "height": 901,
+    "extension": "jpg",
+    "description": "@[Неарх Мелит](person:2555296a-f81e-45d1-a438-211a4dafdb57)",
+    "alt": null,
+    "creditArtistName": null,
+    "creditArtistWebsite": null,
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2024-02-18 09:59:31.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": null,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": null,
+    "pageUrl": "https://www.worldanvil.com/i/5356750",
+    "isEditable": true,
+    "success": true
+}

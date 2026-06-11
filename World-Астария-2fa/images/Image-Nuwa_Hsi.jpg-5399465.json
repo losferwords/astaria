@@ -1,0 +1,43 @@
+{
+    "id": 5399465,
+    "title": "Nuwa_Hsi.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://www.worldanvil.com/uploads/images/07c7e8e51ffdf87b7b027643500b67e3.jpg",
+    "subscribergroups": [],
+    "folderId": "8627009f-ffbf-4163-9eff-4e41b4e59ef8",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:23:51.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "07c7e8e51ffdf87b7b027643500b67e3.jpg",
+    "path": "/uploads/images",
+    "size": 452764,
+    "width": 508,
+    "height": 901,
+    "extension": "jpg",
+    "description": "@[Нуа Си](person:c1a9f94b-e82c-473f-9624-18a45403e5c1)",
+    "alt": null,
+    "creditArtistName": null,
+    "creditArtistWebsite": null,
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2024-03-02 21:04:03.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": null,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": null,
+    "pageUrl": "https://www.worldanvil.com/i/5399465",
+    "isEditable": true,
+    "success": true
+}

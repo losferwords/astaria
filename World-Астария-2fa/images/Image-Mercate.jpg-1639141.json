@@ -1,0 +1,43 @@
+{
+    "id": 1639141,
+    "title": "Mercate.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://www.worldanvil.com/uploads/images/f5627b467c41e753652847e2fd691730.jpg",
+    "subscribergroups": [],
+    "folderId": "14757588-2a69-4676-b878-c979049ff412",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:19:04.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "f5627b467c41e753652847e2fd691730.jpg",
+    "path": "/uploads/images",
+    "size": 441215,
+    "width": 508,
+    "height": 901,
+    "extension": "jpg",
+    "description": "Художественное представление Богини Ночи - @[Меркаты](person:af9c39e8-c8e0-4237-8185-4ed7594de262).",
+    "alt": null,
+    "creditArtistName": "Anna Helme",
+    "creditArtistWebsite": "an-helme.artstation.com",
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2020-11-09 13:37:43.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": null,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": null,
+    "pageUrl": "https://www.worldanvil.com/i/1639141",
+    "isEditable": true,
+    "success": true
+}

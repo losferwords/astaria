@@ -1,0 +1,43 @@
+{
+    "id": 2427975,
+    "title": "Fibas.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://www.worldanvil.com/uploads/images/c34a19b48f50a4627f3d90ceeb984263.jpg",
+    "subscribergroups": [],
+    "folderId": "c7491703-3774-4cf0-b989-2fc12673b821",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:18:40.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "c34a19b48f50a4627f3d90ceeb984263.jpg",
+    "path": "/uploads/images",
+    "size": 967890,
+    "width": 1170,
+    "height": 658,
+    "extension": "jpg",
+    "description": "@[Город Фибас](settlement:2a81ce68-811a-4cd4-b92f-2cf2c7b67c82)",
+    "alt": null,
+    "creditArtistName": "Ubisoft",
+    "creditArtistWebsite": "https://www.ubisoft.com",
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2021-07-04 17:08:32.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": 106,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": null,
+    "pageUrl": "https://www.worldanvil.com/i/2427975",
+    "isEditable": true,
+    "success": true
+}

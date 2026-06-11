@@ -1,0 +1,43 @@
+{
+    "id": 5772499,
+    "title": "Vermin.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://wa-cdn.nyc3.cdn.digitaloceanspaces.com/user-data/production/ae978bc7-ef5e-47d8-8585-f7fae49590a5/uploads/images/111c026360212a4218d862ebcf81a209.jpeg",
+    "subscribergroups": [],
+    "folderId": "cb0e80bd-d761-4a06-81cf-2e51e46d3f7a",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:18:54.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "111c026360212a4218d862ebcf81a209.jpeg",
+    "path": "https://wa-cdn.nyc3.cdn.digitaloceanspaces.com/user-data/production/ae978bc7-ef5e-47d8-8585-f7fae49590a5/uploads/images",
+    "size": 523419,
+    "width": 1170,
+    "height": 658,
+    "extension": "jpeg",
+    "description": "@[Вермин](species:96c1e311-73f5-4c5b-90b9-dab379f784af)",
+    "alt": null,
+    "creditArtistName": "Clark Ocleasa",
+    "creditArtistWebsite": "https://www.artstation.com/clarkocleasa",
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2024-07-16 22:22:10.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": null,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": null,
+    "pageUrl": "https://www.worldanvil.com/i/5772499",
+    "isEditable": true,
+    "success": true
+}

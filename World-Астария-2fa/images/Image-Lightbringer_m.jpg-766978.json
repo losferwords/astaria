@@ -1,0 +1,43 @@
+{
+    "id": 766978,
+    "title": "Lightbringer_m.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://www.worldanvil.com/uploads/images/cc8e7bb422e83961267be8149b176172.jpg",
+    "subscribergroups": [],
+    "folderId": "ef8cc884-14f1-4cfe-b485-00dec670d33d",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:24:30.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "cc8e7bb422e83961267be8149b176172.jpg",
+    "path": "/uploads/images",
+    "size": 860904,
+    "width": 767,
+    "height": 1305,
+    "extension": "jpg",
+    "description": "@[Светоносный](profession:660e00da-23c6-4ea1-bcd8-0a8cb34ce0dd) мужчина",
+    "alt": null,
+    "creditArtistName": "yy6242",
+    "creditArtistWebsite": "https://www.deviantart.com/yy6242",
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2020-01-14 13:06:44.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": 143,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": "",
+    "pageUrl": "https://www.worldanvil.com/i/766978",
+    "isEditable": true,
+    "success": true
+}

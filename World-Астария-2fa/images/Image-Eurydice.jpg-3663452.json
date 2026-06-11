@@ -1,0 +1,43 @@
+{
+    "id": 3663452,
+    "title": "Eurydice.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://www.worldanvil.com/uploads/images/af46419d227ef483ab9a6dd27f4e779f.jpg",
+    "subscribergroups": [],
+    "folderId": "8627009f-ffbf-4163-9eff-4e41b4e59ef8",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:23:33.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "af46419d227ef483ab9a6dd27f4e779f.jpg",
+    "path": "/uploads/images",
+    "size": 379967,
+    "width": 508,
+    "height": 901,
+    "extension": "jpg",
+    "description": "@[Эвридика Лефийская](person:4f3884bf-fb8c-475b-b909-05ae5d2ac3bc)",
+    "alt": null,
+    "creditArtistName": "Baphomet-2021",
+    "creditArtistWebsite": "https://www.deviantart.com/baphomet-2021",
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2022-08-26 19:24:18.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": 1,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": null,
+    "pageUrl": "https://www.worldanvil.com/i/3663452",
+    "isEditable": true,
+    "success": true
+}

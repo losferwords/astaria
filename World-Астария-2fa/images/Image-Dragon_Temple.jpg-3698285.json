@@ -1,0 +1,43 @@
+{
+    "id": 3698285,
+    "title": "Dragon_Temple.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://www.worldanvil.com/uploads/images/e0ca63fab135d246e0f6f09a571fe1f0.jpg",
+    "subscribergroups": [],
+    "folderId": "69000ae7-f1b9-4373-b3b5-edb4b6cd6a10",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:20:12.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "e0ca63fab135d246e0f6f09a571fe1f0.jpg",
+    "path": "/uploads/images",
+    "size": 876712,
+    "width": 1170,
+    "height": 658,
+    "extension": "jpg",
+    "description": "@[Храм Дракона](landmark:5127cde5-08e4-4be7-9c35-9561bf6eb957)",
+    "alt": "Dragon_Temple.jpg",
+    "creditArtistName": "Shusei Sasaya",
+    "creditArtistWebsite": "https://www.artstation.com/shujp",
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2022-09-05 20:41:38.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": null,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": "",
+    "pageUrl": "https://www.worldanvil.com/i/3698285",
+    "isEditable": true,
+    "success": true
+}

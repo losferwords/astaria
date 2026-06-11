@@ -1,0 +1,43 @@
+{
+    "id": 3690612,
+    "title": "Lang-An_Dragon.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://www.worldanvil.com/uploads/images/f4d8f1233c0395f5a73611e939474cda.jpg",
+    "subscribergroups": [],
+    "folderId": "14757588-2a69-4676-b878-c979049ff412",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:19:03.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "f4d8f1233c0395f5a73611e939474cda.jpg",
+    "path": "/uploads/images",
+    "size": 411021,
+    "width": 508,
+    "height": 901,
+    "extension": "jpg",
+    "description": "@[Дракон Ланг-Ан](person:0d14863a-39f4-48e0-9a0b-a68a2c62bc16)",
+    "alt": "Lang-An_Dragon.jpg",
+    "creditArtistName": null,
+    "creditArtistWebsite": null,
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2022-09-03 20:34:11.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": null,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": null,
+    "pageUrl": "https://www.worldanvil.com/i/3690612",
+    "isEditable": true,
+    "success": true
+}

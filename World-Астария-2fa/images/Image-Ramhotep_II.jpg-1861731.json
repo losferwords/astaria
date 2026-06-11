@@ -1,0 +1,43 @@
+{
+    "id": 1861731,
+    "title": "Ramhotep_II.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://www.worldanvil.com/uploads/images/847d4098d28981baaaea2501d782f965.jpg",
+    "subscribergroups": [],
+    "folderId": "8627009f-ffbf-4163-9eff-4e41b4e59ef8",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:23:58.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "847d4098d28981baaaea2501d782f965.jpg",
+    "path": "/uploads/images",
+    "size": 577630,
+    "width": 508,
+    "height": 901,
+    "extension": "jpg",
+    "description": "@[Рамхотеп II](person:0866dd46-f120-4f5e-8f21-4401c9501126)",
+    "alt": null,
+    "creditArtistName": "Wenmo Zhang",
+    "creditArtistWebsite": "https://www.artstation.com/zhangwenmo123",
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2021-01-15 20:16:42.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": null,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": null,
+    "pageUrl": "https://www.worldanvil.com/i/1861731",
+    "isEditable": true,
+    "success": true
+}

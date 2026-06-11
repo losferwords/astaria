@@ -1,0 +1,43 @@
+{
+    "id": 1861632,
+    "title": "Hiesus_City.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://www.worldanvil.com/uploads/images/92be625add98b9526fc67c99bf7f4726.jpg",
+    "subscribergroups": [],
+    "folderId": "c7491703-3774-4cf0-b989-2fc12673b821",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:18:41.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "92be625add98b9526fc67c99bf7f4726.jpg",
+    "path": "/uploads/images",
+    "size": 888955,
+    "width": 1170,
+    "height": 658,
+    "extension": "jpg",
+    "description": "@[Город Хесус](settlement:33348811-0b95-4c9f-8739-3e2cbcbf08f6)",
+    "alt": null,
+    "creditArtistName": "Andrew Bosley",
+    "creditArtistWebsite": "https://www.artstation.com/andybosley",
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2021-01-15 19:51:06.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": 107,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": null,
+    "pageUrl": "https://www.worldanvil.com/i/1861632",
+    "isEditable": true,
+    "success": true
+}

@@ -1,0 +1,43 @@
+{
+    "id": 6522967,
+    "title": "Ao_Wu.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://wa-cdn.nyc3.cdn.digitaloceanspaces.com/user-data/production/ae978bc7-ef5e-47d8-8585-f7fae49590a5/uploads/images/7619d04740933df117be19c637896570.jpeg",
+    "subscribergroups": [],
+    "folderId": "8627009f-ffbf-4163-9eff-4e41b4e59ef8",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:23:10.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "7619d04740933df117be19c637896570.jpeg",
+    "path": "https://wa-cdn.nyc3.cdn.digitaloceanspaces.com/user-data/production/ae978bc7-ef5e-47d8-8585-f7fae49590a5/uploads/images",
+    "size": 541558,
+    "width": 508,
+    "height": 901,
+    "extension": "jpeg",
+    "description": "@[Ао Ву](person:b6950441-97e5-40fd-8e7c-2924c376df40)",
+    "alt": null,
+    "creditArtistName": null,
+    "creditArtistWebsite": null,
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2025-04-02 08:14:57.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": null,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": null,
+    "pageUrl": "https://www.worldanvil.com/i/6522967",
+    "isEditable": true,
+    "success": true
+}

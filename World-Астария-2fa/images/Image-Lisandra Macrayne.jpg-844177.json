@@ -1,0 +1,43 @@
+{
+    "id": 844177,
+    "title": "Lisandra Macrayne.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://www.worldanvil.com/uploads/images/6e7a909340ae5628f5d5e6280b68a48e.jpg",
+    "subscribergroups": [],
+    "folderId": "8627009f-ffbf-4163-9eff-4e41b4e59ef8",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:23:43.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "6e7a909340ae5628f5d5e6280b68a48e.jpg",
+    "path": "/uploads/images",
+    "size": 152679,
+    "width": 351,
+    "height": 624,
+    "extension": "jpg",
+    "description": "@[Лисандра мак Рейн](person:3e90ef26-3a3b-4ad5-8790-2ee9c9f2792c)",
+    "alt": null,
+    "creditArtistName": "Magali Villeneuve",
+    "creditArtistWebsite": "http://www.magali-villeneuve.com/",
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2020-02-14 12:14:36.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": 16,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": null,
+    "pageUrl": "https://www.worldanvil.com/i/844177",
+    "isEditable": true,
+    "success": true
+}

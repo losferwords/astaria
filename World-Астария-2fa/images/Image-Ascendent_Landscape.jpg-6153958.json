@@ -1,0 +1,43 @@
+{
+    "id": 6153958,
+    "title": "Ascendent_Landscape.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://wa-cdn.nyc3.cdn.digitaloceanspaces.com/user-data/production/ae978bc7-ef5e-47d8-8585-f7fae49590a5/uploads/images/9b957b1d8047527ac052da64c1b93414.jpeg",
+    "subscribergroups": [],
+    "folderId": "35d948e7-3a6c-45a1-ba76-4c38e5103728",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:22:34.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "9b957b1d8047527ac052da64c1b93414.jpeg",
+    "path": "https://wa-cdn.nyc3.cdn.digitaloceanspaces.com/user-data/production/ae978bc7-ef5e-47d8-8585-f7fae49590a5/uploads/images",
+    "size": 541649,
+    "width": 1170,
+    "height": 658,
+    "extension": "jpeg",
+    "description": "@[Вознесённый](profession:01d44e4d-9b45-4c15-8f81-c3d18c9c1887)",
+    "alt": null,
+    "creditArtistName": null,
+    "creditArtistWebsite": null,
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2024-12-05 18:08:55.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": 25,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": null,
+    "pageUrl": "https://www.worldanvil.com/i/6153958",
+    "isEditable": true,
+    "success": true
+}

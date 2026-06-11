@@ -1,0 +1,43 @@
+{
+    "id": 725310,
+    "title": "Amon-Astat_Desert_2.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://www.worldanvil.com/uploads/images/69f5f2ab967adf2d27a31c8bbb65018c.jpg",
+    "subscribergroups": [],
+    "folderId": "c7491703-3774-4cf0-b989-2fc12673b821",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:18:39.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "69f5f2ab967adf2d27a31c8bbb65018c.jpg",
+    "path": "/uploads/images",
+    "size": 726294,
+    "width": 1170,
+    "height": 658,
+    "extension": "jpg",
+    "description": "Великая @[пустыня Сехет](location:4bea7e7b-a5f8-4715-b051-abe374f1f754)",
+    "alt": null,
+    "creditArtistName": null,
+    "creditArtistWebsite": null,
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2020-01-14 12:21:31.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": 172,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": null,
+    "pageUrl": "https://www.worldanvil.com/i/725310",
+    "isEditable": true,
+    "success": true
+}

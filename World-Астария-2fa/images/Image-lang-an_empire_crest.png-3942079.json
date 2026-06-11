@@ -1,0 +1,43 @@
+{
+    "id": 3942079,
+    "title": "lang-an_empire_crest.png",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://www.worldanvil.com/uploads/images/6ffcb6bd33229b6575bd655aace50ce4.png",
+    "subscribergroups": [],
+    "folderId": "1819ef1b-0d4a-46f0-9ad9-79d85c03f39f",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:19:28.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "6ffcb6bd33229b6575bd655aace50ce4.png",
+    "path": "/uploads/images",
+    "size": 60961,
+    "width": 353,
+    "height": 353,
+    "extension": "png",
+    "description": "Герб @[Империи Ланг-Ан](organization:f8e607a8-0c3d-4da4-82fc-bfc19ae14719)",
+    "alt": "lang-an_empire_crest.png",
+    "creditArtistName": null,
+    "creditArtistWebsite": null,
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2022-11-24 22:09:35.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": null,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": "",
+    "pageUrl": "https://www.worldanvil.com/i/3942079",
+    "isEditable": true,
+    "success": true
+}

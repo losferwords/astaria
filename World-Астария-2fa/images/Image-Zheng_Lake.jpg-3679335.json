@@ -1,0 +1,43 @@
+{
+    "id": 3679335,
+    "title": "Zheng_Lake.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://www.worldanvil.com/uploads/images/f52c6a6accc27b52b58c172bd50aca1a.jpg",
+    "subscribergroups": [],
+    "folderId": "e47abef4-b5e4-4431-9e35-fcb19e9fef3b",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:18:50.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "f52c6a6accc27b52b58c172bd50aca1a.jpg",
+    "path": "/uploads/images",
+    "size": 1005546,
+    "width": 1170,
+    "height": 658,
+    "extension": "jpg",
+    "description": "@[Озеро Женг](location:cbf9e84e-8fe0-4179-a083-e0952aae6369)",
+    "alt": null,
+    "creditArtistName": null,
+    "creditArtistWebsite": null,
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2022-08-31 07:19:41.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": 83,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": null,
+    "pageUrl": "https://www.worldanvil.com/i/3679335",
+    "isEditable": true,
+    "success": true
+}

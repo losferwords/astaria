@@ -1,0 +1,43 @@
+{
+    "id": 1054776,
+    "title": "Tallas_Peninsula.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://www.worldanvil.com/uploads/images/cf5c037a6e03a9df43bd70ee19b87d64.jpg",
+    "subscribergroups": [],
+    "folderId": "2b3b75ad-d5d1-4c9f-8f58-41af0b37b555",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:21:24.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "cf5c037a6e03a9df43bd70ee19b87d64.jpg",
+    "path": "/uploads/images",
+    "size": 1314608,
+    "width": 1170,
+    "height": 658,
+    "extension": "jpg",
+    "description": "@[Полуостров Таллас](location:54e331ca-ca8e-41bb-b76f-76fe8f087f14)",
+    "alt": null,
+    "creditArtistName": null,
+    "creditArtistWebsite": null,
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2020-04-26 21:21:18.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": 132,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": null,
+    "pageUrl": "https://www.worldanvil.com/i/1054776",
+    "isEditable": true,
+    "success": true
+}

@@ -1,0 +1,43 @@
+{
+    "id": 4527196,
+    "title": "Urist_Kitin.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://www.worldanvil.com/uploads/images/bddda5df1c0eab0556f6bd469948686c.jpg",
+    "subscribergroups": [],
+    "folderId": "8627009f-ffbf-4163-9eff-4e41b4e59ef8",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:24:14.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "bddda5df1c0eab0556f6bd469948686c.jpg",
+    "path": "/uploads/images",
+    "size": 221159,
+    "width": 508,
+    "height": 901,
+    "extension": "jpg",
+    "description": "@[Урист Китин](person:30d3251d-e5d2-4918-ab49-46ee79c54ead)",
+    "alt": null,
+    "creditArtistName": null,
+    "creditArtistWebsite": null,
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2023-05-20 16:45:37.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": null,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": null,
+    "pageUrl": "https://www.worldanvil.com/i/4527196",
+    "isEditable": true,
+    "success": true
+}

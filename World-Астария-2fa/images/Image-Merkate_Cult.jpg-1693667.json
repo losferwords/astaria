@@ -1,0 +1,43 @@
+{
+    "id": 1693667,
+    "title": "Merkate_Cult.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://www.worldanvil.com/uploads/images/c3c9f8a7b6cccf83379a9d006bf7af32.jpg",
+    "subscribergroups": [],
+    "folderId": "c8fe8712-4699-43bf-9631-bbc8d5f5b36b",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:21:40.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "c3c9f8a7b6cccf83379a9d006bf7af32.jpg",
+    "path": "/uploads/images",
+    "size": 256241,
+    "width": 1170,
+    "height": 658,
+    "extension": "jpg",
+    "description": "@[Тень](profession:aaa70f96-4664-4a5e-a095-9f8d5c7d2c2b) из @[Культа Меркаты](organization:4212c0f1-4e0f-4007-9a39-f070dc431c15)",
+    "alt": null,
+    "creditArtistName": "KejaBlank",
+    "creditArtistWebsite": "https://www.deviantart.com/kejablank",
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2020-11-26 21:14:48.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": 15,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": null,
+    "pageUrl": "https://www.worldanvil.com/i/1693667",
+    "isEditable": true,
+    "success": true
+}

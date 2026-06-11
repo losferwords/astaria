@@ -1,0 +1,43 @@
+{
+    "id": 5611271,
+    "title": "Itsune.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://wa-cdn.nyc3.cdn.digitaloceanspaces.com/user-data/production/ae978bc7-ef5e-47d8-8585-f7fae49590a5/uploads/images/371096274bd78d4ed744b034d4394d28.jpeg",
+    "subscribergroups": [],
+    "folderId": "14757588-2a69-4676-b878-c979049ff412",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:19:01.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "371096274bd78d4ed744b034d4394d28.jpeg",
+    "path": "https://wa-cdn.nyc3.cdn.digitaloceanspaces.com/user-data/production/ae978bc7-ef5e-47d8-8585-f7fae49590a5/uploads/images",
+    "size": 392358,
+    "width": 508,
+    "height": 901,
+    "extension": "jpeg",
+    "description": "@[Исунэ](person:3c089bdc-ccad-47bc-a459-75838156c8bf)",
+    "alt": null,
+    "creditArtistName": null,
+    "creditArtistWebsite": null,
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2024-05-18 20:50:19.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": null,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": null,
+    "pageUrl": "https://www.worldanvil.com/i/5611271",
+    "isEditable": true,
+    "success": true
+}

@@ -1,0 +1,43 @@
+{
+    "id": 3681216,
+    "title": "Shuan_Lake.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://www.worldanvil.com/uploads/images/5e011adf4623098e7fb2ba333fb827b3.jpg",
+    "subscribergroups": [],
+    "folderId": "e47abef4-b5e4-4431-9e35-fcb19e9fef3b",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:18:49.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "5e011adf4623098e7fb2ba333fb827b3.jpg",
+    "path": "/uploads/images",
+    "size": 877441,
+    "width": 1170,
+    "height": 658,
+    "extension": "jpg",
+    "description": "@[Озеро Шуан](location:0c3d1bc0-fa98-41fa-8b2d-52b3e1f226d1)",
+    "alt": null,
+    "creditArtistName": null,
+    "creditArtistWebsite": null,
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2022-08-31 20:06:06.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": 85,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": null,
+    "pageUrl": "https://www.worldanvil.com/i/3681216",
+    "isEditable": true,
+    "success": true
+}

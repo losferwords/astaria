@@ -1,0 +1,43 @@
+{
+    "id": 3356701,
+    "title": "Ishnalaar_Temple.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://www.worldanvil.com/uploads/images/92793ccae5b46555da10da32b8a33633.jpg",
+    "subscribergroups": [],
+    "folderId": "9bcfc8dc-ebbb-41a9-8ce9-e1d9f04cbe49",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:20:23.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "92793ccae5b46555da10da32b8a33633.jpg",
+    "path": "/uploads/images",
+    "size": 965576,
+    "width": 1170,
+    "height": 658,
+    "extension": "jpg",
+    "description": "@[Храм Ишнаалар](settlement:63a5e4db-5b42-4f8c-83bd-888facf29d92)",
+    "alt": null,
+    "creditArtistName": "Raphael Lacoste",
+    "creditArtistWebsite": "https://www.artstation.com/raphael-lacoste",
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2022-05-19 14:10:01.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": null,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": null,
+    "pageUrl": "https://www.worldanvil.com/i/3356701",
+    "isEditable": true,
+    "success": true
+}

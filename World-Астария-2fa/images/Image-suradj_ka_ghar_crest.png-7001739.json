@@ -1,0 +1,43 @@
+{
+    "id": 7001739,
+    "title": "suradj_ka_ghar_crest.png",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://wa-cdn.nyc3.cdn.digitaloceanspaces.com/user-data/production/ae978bc7-ef5e-47d8-8585-f7fae49590a5/uploads/images/d010a45341990946ac76ab73b92b6e85.png",
+    "subscribergroups": [],
+    "folderId": "1819ef1b-0d4a-46f0-9ad9-79d85c03f39f",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:19:28.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "d010a45341990946ac76ab73b92b6e85.png",
+    "path": "https://wa-cdn.nyc3.cdn.digitaloceanspaces.com/user-data/production/ae978bc7-ef5e-47d8-8585-f7fae49590a5/uploads/images",
+    "size": 79094,
+    "width": 353,
+    "height": 353,
+    "extension": "png",
+    "description": "Герб @[Сурадж Ка Гхара](organization:55085070-4944-4e53-9cd3-8d3706cfd6db)",
+    "alt": null,
+    "creditArtistName": null,
+    "creditArtistWebsite": null,
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2025-09-19 19:40:24.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": null,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": null,
+    "pageUrl": "https://www.worldanvil.com/i/7001739",
+    "isEditable": true,
+    "success": true
+}

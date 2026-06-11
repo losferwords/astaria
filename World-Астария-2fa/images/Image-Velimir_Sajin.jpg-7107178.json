@@ -1,0 +1,43 @@
+{
+    "id": 7107178,
+    "title": "Velimir_Sajin.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://wa-cdn.nyc3.cdn.digitaloceanspaces.com/user-data/production/ae978bc7-ef5e-47d8-8585-f7fae49590a5/uploads/images/41ca27ccf8620a3f6eba7c0427770bda.jpeg",
+    "subscribergroups": [],
+    "folderId": "8627009f-ffbf-4163-9eff-4e41b4e59ef8",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-29 10:22:38.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "41ca27ccf8620a3f6eba7c0427770bda.jpeg",
+    "path": "https://wa-cdn.nyc3.cdn.digitaloceanspaces.com/user-data/production/ae978bc7-ef5e-47d8-8585-f7fae49590a5/uploads/images",
+    "size": 529219,
+    "width": 508,
+    "height": 901,
+    "extension": "jpeg",
+    "description": "@[Велимир Сажин](person:4154a196-93a2-4479-a4a7-188ed82c3438)",
+    "alt": "",
+    "creditArtistName": "",
+    "creditArtistWebsite": "",
+    "creditArtTitle": "",
+    "creditArtUrl": "",
+    "creationDate": {
+        "date": "2025-10-29 09:09:12.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": null,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": "",
+    "pageUrl": "https://www.worldanvil.com/i/7107178",
+    "isEditable": true,
+    "success": true
+}

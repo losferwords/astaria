@@ -1,0 +1,43 @@
+{
+    "id": 7113255,
+    "title": "Ron_Elliot.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://wa-cdn.nyc3.cdn.digitaloceanspaces.com/user-data/production/ae978bc7-ef5e-47d8-8585-f7fae49590a5/uploads/images/f798d9d0624457daebaf3e24cebce421.jpeg",
+    "subscribergroups": [],
+    "folderId": "-1",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-31 18:29:42.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "f798d9d0624457daebaf3e24cebce421.jpeg",
+    "path": "https://wa-cdn.nyc3.cdn.digitaloceanspaces.com/user-data/production/ae978bc7-ef5e-47d8-8585-f7fae49590a5/uploads/images",
+    "size": 507076,
+    "width": 508,
+    "height": 901,
+    "extension": "jpeg",
+    "description": "@[Рон Эллиот](person:778e6c7d-733f-4eaa-8bd6-01cedbefcafb)",
+    "alt": null,
+    "creditArtistName": null,
+    "creditArtistWebsite": null,
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2025-10-31 18:29:08.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": null,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": null,
+    "pageUrl": "https://www.worldanvil.com/i/7113255",
+    "isEditable": true,
+    "success": true
+}

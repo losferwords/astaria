@@ -1,0 +1,43 @@
+{
+    "id": 5567470,
+    "title": "Rufu.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://wa-cdn.nyc3.cdn.digitaloceanspaces.com/user-data/production/ae978bc7-ef5e-47d8-8585-f7fae49590a5/uploads/images/27d982dbe20fa39ca5972ad773f99083.jpeg",
+    "subscribergroups": [],
+    "folderId": "14757588-2a69-4676-b878-c979049ff412",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:19:05.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "27d982dbe20fa39ca5972ad773f99083.jpeg",
+    "path": "https://wa-cdn.nyc3.cdn.digitaloceanspaces.com/user-data/production/ae978bc7-ef5e-47d8-8585-f7fae49590a5/uploads/images",
+    "size": 562122,
+    "width": 508,
+    "height": 901,
+    "extension": "jpeg",
+    "description": "@[Руфу](person:63e0f006-b732-42c8-a28e-2b5f64867166)",
+    "alt": "Rufu.jpg",
+    "creditArtistName": "Yefim Kligerman",
+    "creditArtistWebsite": "https://www.artstation.com/yefim_kligerman",
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2024-05-05 21:39:34.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": null,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": null,
+    "pageUrl": "https://www.worldanvil.com/i/5567470",
+    "isEditable": true,
+    "success": true
+}

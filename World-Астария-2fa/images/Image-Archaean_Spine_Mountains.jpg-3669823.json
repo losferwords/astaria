@@ -1,0 +1,43 @@
+{
+    "id": 3669823,
+    "title": "Archaean_Spine_Mountains.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://www.worldanvil.com/uploads/images/0693ea19019ff8ffe50cf5672a3e7a64.jpg",
+    "subscribergroups": [],
+    "folderId": "e47abef4-b5e4-4431-9e35-fcb19e9fef3b",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:18:45.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "0693ea19019ff8ffe50cf5672a3e7a64.jpg",
+    "path": "/uploads/images",
+    "size": 880660,
+    "width": 1170,
+    "height": 658,
+    "extension": "jpg",
+    "description": "@[Горный хребет Спина Археи](location:454883f6-1ede-4600-92d6-34bdc0f12336)",
+    "alt": null,
+    "creditArtistName": null,
+    "creditArtistWebsite": null,
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2022-08-28 15:04:53.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": 95,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": null,
+    "pageUrl": "https://www.worldanvil.com/i/3669823",
+    "isEditable": true,
+    "success": true
+}

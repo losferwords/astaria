@@ -1,0 +1,43 @@
+{
+    "id": 5589319,
+    "title": "Shaman_Hut.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://wa-cdn.nyc3.cdn.digitaloceanspaces.com/user-data/production/ae978bc7-ef5e-47d8-8585-f7fae49590a5/uploads/images/757325a74f011a077aa51091a458950b.jpeg",
+    "subscribergroups": [],
+    "folderId": "6448e42a-d679-4195-b822-fcf8c2bffeef",
+    "tags": null,
+    "updateDate": {
+        "date": "2025-10-15 07:19:21.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "757325a74f011a077aa51091a458950b.jpeg",
+    "path": "https://wa-cdn.nyc3.cdn.digitaloceanspaces.com/user-data/production/ae978bc7-ef5e-47d8-8585-f7fae49590a5/uploads/images",
+    "size": 672235,
+    "width": 1170,
+    "height": 658,
+    "extension": "jpeg",
+    "description": null,
+    "alt": null,
+    "creditArtistName": null,
+    "creditArtistWebsite": null,
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2024-05-11 10:50:27.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": 1,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": "",
+    "pageUrl": "https://www.worldanvil.com/i/5589319",
+    "isEditable": true,
+    "success": true
+}

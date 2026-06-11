@@ -1,0 +1,43 @@
+{
+    "id": 5353508,
+    "title": "Nereid.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://www.worldanvil.com/uploads/images/dad050a79f461d28aeb183defcdc8224.jpg",
+    "subscribergroups": [],
+    "folderId": "cb0e80bd-d761-4a06-81cf-2e51e46d3f7a",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:18:53.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "dad050a79f461d28aeb183defcdc8224.jpg",
+    "path": "/uploads/images",
+    "size": 568165,
+    "width": 1170,
+    "height": 658,
+    "extension": "jpg",
+    "description": "@[Нереида](species:1ffbfb9a-2174-40f2-97b7-9f62590d1bf2)",
+    "alt": "Nereid.jpg",
+    "creditArtistName": null,
+    "creditArtistWebsite": null,
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2024-02-19 21:17:25.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": null,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": "",
+    "pageUrl": "https://www.worldanvil.com/i/5353508",
+    "isEditable": true,
+    "success": true
+}

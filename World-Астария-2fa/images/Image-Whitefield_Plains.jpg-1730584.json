@@ -1,0 +1,43 @@
+{
+    "id": 1730584,
+    "title": "Whitefield_Plains.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://www.worldanvil.com/uploads/images/8b0fa54617a4d932ec6796b678837365.jpg",
+    "subscribergroups": [],
+    "folderId": "2b3b75ad-d5d1-4c9f-8f58-41af0b37b555",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:21:25.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "8b0fa54617a4d932ec6796b678837365.jpg",
+    "path": "/uploads/images",
+    "size": 899754,
+    "width": 1170,
+    "height": 658,
+    "extension": "jpg",
+    "description": "@[Равнина Вайтфилд](location:bc669eb1-b42d-4f9a-89a1-baf476a62d2b)",
+    "alt": null,
+    "creditArtistName": "Patrick J Endres",
+    "creditArtistWebsite": "https://www.alaskaphotographics.com/",
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2020-12-07 21:17:21.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": 126,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": null,
+    "pageUrl": "https://www.worldanvil.com/i/1730584",
+    "isEditable": true,
+    "success": true
+}

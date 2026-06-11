@@ -1,0 +1,43 @@
+{
+    "id": 3876328,
+    "title": "Астария  Base Map Image (Replaced: 2023-11-16 21:08:12 WA Time)",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://www.worldanvil.com/uploads/maps/f489378f8ee57c89a0128f81c60931e4.png",
+    "subscribergroups": [],
+    "folderId": "a1e21a03-bf88-4de1-a801-b667fedf24fc",
+    "tags": "Removed Map Base Image",
+    "updateDate": {
+        "date": "2025-10-15 07:20:47.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "f489378f8ee57c89a0128f81c60931e4.png",
+    "path": "/uploads/maps",
+    "size": 15900218,
+    "width": 7680,
+    "height": 4320,
+    "extension": "png",
+    "description": "Map",
+    "alt": "Астария  Base Map Image",
+    "creditArtistName": null,
+    "creditArtistWebsite": null,
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2022-11-02 22:24:25.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": null,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": "",
+    "pageUrl": "https://www.worldanvil.com/i/3876328",
+    "isEditable": true,
+    "success": true
+}

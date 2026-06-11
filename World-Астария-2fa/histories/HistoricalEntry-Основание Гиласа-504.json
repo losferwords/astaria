@@ -1,0 +1,140 @@
+{
+    "id": "83aa4504-c23e-4ee8-8aec-3d9d33191b4e",
+    "title": "Основание Гиласа",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "HistoricalEntry",
+    "icon": "fa-solid fa-calendar-lines-pen",
+    "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/h/83aa4504-c23e-4ee8-8aec-3d9d33191b4e",
+    "subscribergroups": [],
+    "folderId": "-1",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-09-26 11:41:00.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "significance": 2,
+    "year": "-854",
+    "month": null,
+    "day": null,
+    "hour": null,
+    "minute": null,
+    "endingYear": null,
+    "endingMonth": null,
+    "endingDay": null,
+    "endingHour": null,
+    "endingMinute": null,
+    "lane": null,
+    "backgroundColor": null,
+    "category": {
+        "id": "d5b35573-8e2c-4685-ae7d-6ec69f7212b6",
+        "title": "Founding",
+        "slug": null,
+        "state": null,
+        "isWip": null,
+        "isDraft": null,
+        "entityClass": "HistoricalEntryCategory",
+        "icon": "ra ra-3x ra-capitol",
+        "url": null,
+        "subscribergroups": [],
+        "folderId": null,
+        "tags": null,
+        "updateDate": null
+    },
+    "content": "Основание республики @[Гилас](organization:f18a827a-9a8a-4444-9c0a-dd5c25f77a4f) и строительство города @[Аргос](settlement:5df674d0-bbe9-473f-9c93-df165fc95051) генералом @[хтонидов](ethnicity:ed0dfa34-ccfc-4b38-a18e-92e3626549f4) - @[Гиперионом](person:d9095550-fc51-41b7-b88b-3b6bdccf6b6e).",
+    "fullcontent": null,
+    "displayDateName": null,
+    "creationDate": {
+        "date": "2020-08-19 16:03:55.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "meta": null,
+    "likes": null,
+    "world": {
+        "id": "2be362fa-ad81-4128-92e8-a40c5ec3b5db",
+        "title": "Астария",
+        "slug": "D090D181D182D0B0D180D0B8D18F-losfer",
+        "state": "public",
+        "isWip": null,
+        "isDraft": null,
+        "entityClass": "World",
+        "icon": "fa-solid fa-globe-stand",
+        "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer",
+        "subscribergroups": [
+            {
+                "id": "390d8ece-7d4e-4620-8cc5-f47128ab77cf",
+                "title": "Adventurers of Тест Party",
+                "slug": null,
+                "state": null,
+                "entityClass": "SubscriberGroup",
+                "icon": null,
+                "url": null,
+                "subscribergroups": []
+            },
+            {
+                "id": "457339f6-bfe1-42af-aabb-ba5de3a39cbc",
+                "title": "fearendilele",
+                "slug": null,
+                "state": null,
+                "entityClass": "SubscriberGroup",
+                "icon": null,
+                "url": null,
+                "subscribergroups": []
+            },
+            {
+                "id": "0ec582ed-fd84-4ea6-88f4-258802ce2f52",
+                "title": "Ветер Перемен Party",
+                "slug": null,
+                "state": null,
+                "entityClass": "SubscriberGroup",
+                "icon": null,
+                "url": null,
+                "subscribergroups": []
+            },
+            {
+                "id": "2d31de8f-33c2-497f-ba8d-536c37551858",
+                "title": "Искатель",
+                "slug": null,
+                "state": null,
+                "entityClass": "SubscriberGroup",
+                "icon": null,
+                "url": null,
+                "subscribergroups": []
+            },
+            {
+                "id": "bb3f6d67-81ae-4f8a-a5e1-b40faca7682d",
+                "title": "Тест Players",
+                "slug": null,
+                "state": null,
+                "entityClass": "SubscriberGroup",
+                "icon": null,
+                "url": null,
+                "subscribergroups": []
+            },
+            {
+                "id": "71f04d15-9660-4f42-b8c6-7fa0c94c7f76",
+                "title": "Хранитель мудрости",
+                "slug": null,
+                "state": null,
+                "entityClass": "SubscriberGroup",
+                "icon": null,
+                "url": null,
+                "subscribergroups": []
+            }
+        ],
+        "folderId": "-1",
+        "tags": "",
+        "updateDate": {
+            "date": "2026-06-10 12:32:50.000000",
+            "timezone_type": 3,
+            "timezone": "Europe/London"
+        }
+    },
+    "displayRange": true,
+    "isEditable": true,
+    "success": true
+}

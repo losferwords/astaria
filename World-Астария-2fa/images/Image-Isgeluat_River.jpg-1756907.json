@@ -1,0 +1,43 @@
+{
+    "id": 1756907,
+    "title": "Isgeluat_River.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://www.worldanvil.com/uploads/images/c6fea767196934f99b5246b9c35879e0.jpg",
+    "subscribergroups": [],
+    "folderId": "2b3b75ad-d5d1-4c9f-8f58-41af0b37b555",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:21:21.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "c6fea767196934f99b5246b9c35879e0.jpg",
+    "path": "/uploads/images",
+    "size": 1043620,
+    "width": 1170,
+    "height": 658,
+    "extension": "jpg",
+    "description": "@[Река Изгелуат](location:ed36f163-9ab5-4900-877e-05f0f82009e5)",
+    "alt": null,
+    "creditArtistName": "David B. Soete",
+    "creditArtistWebsite": "https://upperdelawarecouncil.org/",
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2020-12-15 21:24:26.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": 134,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": null,
+    "pageUrl": "https://www.worldanvil.com/i/1756907",
+    "isEditable": true,
+    "success": true
+}

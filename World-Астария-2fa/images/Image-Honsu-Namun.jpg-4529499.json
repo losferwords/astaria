@@ -1,0 +1,43 @@
+{
+    "id": 4529499,
+    "title": "Honsu-Namun.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://www.worldanvil.com/uploads/images/d1112c0db9a3575d4b97330ca6c3bf91.jpg",
+    "subscribergroups": [],
+    "folderId": "8627009f-ffbf-4163-9eff-4e41b4e59ef8",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:23:34.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "d1112c0db9a3575d4b97330ca6c3bf91.jpg",
+    "path": "/uploads/images",
+    "size": 201210,
+    "width": 508,
+    "height": 901,
+    "extension": "jpg",
+    "description": "@[Хонсу-Намун](person:b569f194-6645-47b9-91b6-b91a04f305d9)",
+    "alt": null,
+    "creditArtistName": null,
+    "creditArtistWebsite": null,
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2023-05-21 10:28:35.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": 1,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": null,
+    "pageUrl": "https://www.worldanvil.com/i/4529499",
+    "isEditable": true,
+    "success": true
+}

@@ -1,0 +1,2723 @@
+{
+    "id": "f8e607a8-0c3d-4da4-82fc-bfc19ae14719",
+    "title": "Империя Ланг-Ан",
+    "slug": "D098D0BCD0BFD0B5D180D0B8D18F-D09BD0B0D0BDD0B3-D090D0BD-organization",
+    "state": "public",
+    "isWip": true,
+    "isDraft": false,
+    "entityClass": "Organization",
+    "icon": null,
+    "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D098D0BCD0BFD0B5D180D0B8D18F-D09BD0B0D0BDD0B3-D090D0BD-organization",
+    "subscribergroups": [],
+    "folderId": "-1",
+    "tags": "state",
+    "updateDate": {
+        "date": "2025-11-06 06:45:45.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "position": 960,
+    "excerpt": null,
+    "wordcount": 181,
+    "creationDate": {
+        "date": "2020-01-14 14:11:45.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "publicationDate": {
+        "date": "2020-01-14 14:11:45.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "notificationDate": null,
+    "likes": null,
+    "views": 286,
+    "userMetadata": null,
+    "articleMetadata": null,
+    "cssClasses": null,
+    "displayCss": null,
+    "templateType": "organization",
+    "customArticleTemplate": null,
+    "flag": {
+        "id": 3942079,
+        "title": "lang-an_empire_crest.png",
+        "slug": null,
+        "state": "public",
+        "isWip": null,
+        "isDraft": null,
+        "entityClass": "Image",
+        "icon": "fa-solid fa-image",
+        "url": "https://www.worldanvil.com/uploads/images/6ffcb6bd33229b6575bd655aace50ce4.png",
+        "subscribergroups": [],
+        "folderId": "1819ef1b-0d4a-46f0-9ad9-79d85c03f39f",
+        "tags": "",
+        "updateDate": {
+            "date": "2025-10-15 07:19:28.000000",
+            "timezone_type": 3,
+            "timezone": "Europe/London"
+        }
+    },
+    "editor": "legacy",
+    "content": "Огненная Империя Дракона Ланг-Ана - очень древнее и могущественное государство, основанное народом @[Джу](ethnicity:cee5a147-2796-4fa3-8e9e-1b4eacc27cec) на востоке @[Археи](location:12052fa0-3e57-4442-8d2a-23c80c3f1be5).\r\n\r\nПо легенде @[Бог-Дракон Ланг-Ан](person:0d14863a-39f4-48e0-9a0b-a68a2c62bc16) спас человечество от вымирания в пустынях западной @[Археи](location:12052fa0-3e57-4442-8d2a-23c80c3f1be5) и увёл самых достойных в @[долину Гармонии](location:06971f2f-9be6-45b9-a931-fa264739e1b3), чтобы основать новое государство, для которого будет чужда война, рабство и власть старого мира.\r\n\r\nКогда-то Империя Огня простиралась от гор @[Шафар](location:34dc6cf4-3e32-4ed0-84cb-274337561685) до @[Рассветного моря](location:d8359497-30a6-4277-abee-fc67ad69dae9), однако варварам из @[Дикоземья](organization:2aa7eff0-357b-4366-a4a7-12b489c96acb) удалось отобрать @[Хангорскую долину](location:9da3f66a-d49a-4080-91ad-321e686aa318) и горы @[Шафар](location:34dc6cf4-3e32-4ed0-84cb-274337561685) себе.\r\n\r\nБлагодаря мягкому климату и большому количеству водных ресурсов Империя Дракона является самым населённым уголком @[Астарии](location:d993bea5-aeff-4ea7-b30e-b761269a54d0) и может похвастаться широким ассортиментом товаров для торговли.\r\n\r\nПравят Империей исключительно женщины, так как традиция предполагает, что @[Ланг-Ан](person:0d14863a-39f4-48e0-9a0b-a68a2c62bc16) берёт себе в жёны самую достойную девушку и вместе они управляют государством в гармонии и балансе. Как только одна Императрица погибает по какой-либо причине, @[Дракон](person:0d14863a-39f4-48e0-9a0b-a68a2c62bc16) выбирает себе новую Императрицу. А так как само @[божество](person:0d14863a-39f4-48e0-9a0b-a68a2c62bc16) не являет себя миру, то именно его жена и становится голосом его воли, законов и решений. В данный момент Империей Огня правит молодая императрица @[Сунь Ляньши](person:1ee5c512-06c5-47d6-ad32-6becceb350dc).\r\n\r\n[map:fee8d79d-9e58-4d32-aa8a-2365a4acbaad|5331|1298|-2]",
+    "author": {
+        "id": "ae978bc7-ef5e-47d8-8585-f7fae49590a5",
+        "title": "losfer",
+        "slug": null,
+        "state": null,
+        "isWip": null,
+        "isDraft": null,
+        "entityClass": "User",
+        "icon": "fa-solid fa-user",
+        "url": "https://www.worldanvil.com/author/losfer",
+        "subscribergroups": [],
+        "folderId": null,
+        "tags": null,
+        "updateDate": null
+    },
+    "category": {
+        "id": "0dc84288-ba54-49d6-87f5-d02e35ce6994",
+        "title": "Страны",
+        "slug": "D0A1D182D180D0B0D0BDD18B-category",
+        "state": "public",
+        "isWip": null,
+        "isDraft": null,
+        "entityClass": "Category",
+        "icon": null,
+        "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/c/D0A1D182D180D0B0D0BDD18B-category",
+        "subscribergroups": [],
+        "folderId": null,
+        "tags": null,
+        "updateDate": {
+            "date": "2025-06-24 08:59:19.000000",
+            "timezone_type": 3,
+            "timezone": "Europe/London"
+        }
+    },
+    "world": {
+        "id": "2be362fa-ad81-4128-92e8-a40c5ec3b5db",
+        "title": "Астария",
+        "slug": "D090D181D182D0B0D180D0B8D18F-losfer",
+        "state": "public",
+        "isWip": null,
+        "isDraft": null,
+        "entityClass": "World",
+        "icon": "fa-solid fa-globe-stand",
+        "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer",
+        "subscribergroups": [
+            {
+                "id": "390d8ece-7d4e-4620-8cc5-f47128ab77cf",
+                "title": "Adventurers of Тест Party",
+                "slug": null,
+                "state": null,
+                "entityClass": "SubscriberGroup",
+                "icon": null,
+                "url": null,
+                "subscribergroups": []
+            },
+            {
+                "id": "457339f6-bfe1-42af-aabb-ba5de3a39cbc",
+                "title": "fearendilele",
+                "slug": null,
+                "state": null,
+                "entityClass": "SubscriberGroup",
+                "icon": null,
+                "url": null,
+                "subscribergroups": []
+            },
+            {
+                "id": "0ec582ed-fd84-4ea6-88f4-258802ce2f52",
+                "title": "Ветер Перемен Party",
+                "slug": null,
+                "state": null,
+                "entityClass": "SubscriberGroup",
+                "icon": null,
+                "url": null,
+                "subscribergroups": []
+            },
+            {
+                "id": "2d31de8f-33c2-497f-ba8d-536c37551858",
+                "title": "Искатель",
+                "slug": null,
+                "state": null,
+                "entityClass": "SubscriberGroup",
+                "icon": null,
+                "url": null,
+                "subscribergroups": []
+            },
+            {
+                "id": "bb3f6d67-81ae-4f8a-a5e1-b40faca7682d",
+                "title": "Тест Players",
+                "slug": null,
+                "state": null,
+                "entityClass": "SubscriberGroup",
+                "icon": null,
+                "url": null,
+                "subscribergroups": []
+            },
+            {
+                "id": "71f04d15-9660-4f42-b8c6-7fa0c94c7f76",
+                "title": "Хранитель мудрости",
+                "slug": null,
+                "state": null,
+                "entityClass": "SubscriberGroup",
+                "icon": null,
+                "url": null,
+                "subscribergroups": []
+            }
+        ],
+        "folderId": "-1",
+        "tags": "",
+        "updateDate": {
+            "date": "2026-06-10 12:32:50.000000",
+            "timezone_type": 3,
+            "timezone": "Europe/London"
+        }
+    },
+    "articleParent": null,
+    "cover": {
+        "id": 3698413,
+        "title": "Lang-An_Empire.jpg",
+        "slug": null,
+        "state": "public",
+        "isWip": null,
+        "isDraft": null,
+        "entityClass": "Image",
+        "icon": "fa-solid fa-image",
+        "url": "https://www.worldanvil.com/uploads/images/755c4628b4392e067f77b761126d44f5.jpg",
+        "subscribergroups": [],
+        "folderId": "69000ae7-f1b9-4373-b3b5-edb4b6cd6a10",
+        "tags": "",
+        "updateDate": {
+            "date": "2025-10-15 07:20:13.000000",
+            "timezone_type": 3,
+            "timezone": "Europe/London"
+        }
+    },
+    "coverSource": "Organization",
+    "pronunciation": null,
+    "snippet": null,
+    "seeded": null,
+    "sidebarcontent": null,
+    "sidepanelcontenttop": null,
+    "sidepanelcontent": null,
+    "sidebarcontentbottom": null,
+    "footnotes": null,
+    "fullfooter": null,
+    "authornotes": null,
+    "scrapbook": null,
+    "credits": null,
+    "displaySidebar": true,
+    "articleNext": null,
+    "articlePrevious": null,
+    "timeline": null,
+    "prompt": null,
+    "gallery": null,
+    "block": null,
+    "orgchart": null,
+    "showSeeded": false,
+    "webhookUpdate": false,
+    "communityUpdate": false,
+    "commentPlaceholder": null,
+    "passcodecta": null,
+    "metaTitle": null,
+    "metaDescription": null,
+    "subheading": null,
+    "coverIsMap": false,
+    "isFeaturedArticle": false,
+    "isAdultContent": false,
+    "isLocked": false,
+    "allowComments": true,
+    "allowContentCopy": false,
+    "showInToc": true,
+    "isEmphasized": false,
+    "displayAuthor": false,
+    "displayChildrenUnder": true,
+    "displayTitle": true,
+    "displaySheet": false,
+    "badge": null,
+    "childrenArticles": [
+        {
+            "id": "5127cde5-08e4-4be7-9c35-9561bf6eb957",
+            "title": "Храм Дракона",
+            "slug": "D0A5D180D0B0D0BC-D094D180D0B0D0BAD0BED0BDD0B0-landmark",
+            "state": "public",
+            "isWip": true,
+            "isDraft": false,
+            "entityClass": "Landmark",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D0A5D180D0B0D0BC-D094D180D0B0D0BAD0BED0BDD0B0-landmark",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": null,
+            "updateDate": {
+                "date": "2024-08-20 07:39:58.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "ff83ded4-c63b-44ac-ae84-a0cb499e1627",
+            "title": "Город Бао-Хай",
+            "slug": "D093D0BED180D0BED0B4-D091D0B0D0BE-D0A5D0B0D0B9-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D093D0BED180D0BED0B4-D091D0B0D0BE-D0A5D0B0D0B9-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-04-09 07:34:20.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "e74419b6-5459-429e-993c-b2d22f3c5f31",
+            "title": "Город Джу-Суо",
+            "slug": "D093D0BED180D0BED0B4-D094D0B6D183-D0A1D183D0BE-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": false,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D093D0BED180D0BED0B4-D094D0B6D183-D0A1D183D0BE-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-06 06:46:50.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "942ecec5-976d-489c-acef-b796d5ec2d22",
+            "title": "Город Лан-Цзы",
+            "slug": "D093D0BED180D0BED0B4-D09BD0B0D0BD-D0A6D0B7D18B-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D093D0BED180D0BED0B4-D09BD0B0D0BD-D0A6D0B7D18B-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-10 10:16:07.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "dd12b790-e492-4f00-adab-7ebfa53b00b2",
+            "title": "Город Лань-Ша",
+            "slug": "D093D0BED180D0BED0B4-D09BD0B0D0BDD18C-D0A8D0B0-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D093D0BED180D0BED0B4-D09BD0B0D0BDD18C-D0A8D0B0-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-10-07 13:27:52.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "00af60a5-9d13-40c1-8f69-09063faaaad0",
+            "title": "Город Линфу",
+            "slug": "D093D0BED180D0BED0B4-D09BD0B8D0BDD184D183-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D093D0BED180D0BED0B4-D09BD0B8D0BDD184D183-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-10-07 13:34:14.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "f4339997-fec5-4f50-8ea8-20950473b622",
+            "title": "Город Лунь-Хай",
+            "slug": "D093D0BED180D0BED0B4-D09BD183D0BDD18C-D0A5D0B0D0B9-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D093D0BED180D0BED0B4-D09BD183D0BDD18C-D0A5D0B0D0B9-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-08 17:54:21.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "74a808a1-42f0-4f46-b558-edf4f82d28e5",
+            "title": "Город Лэй-Си",
+            "slug": "D093D0BED180D0BED0B4-D09BD18DD0B9-D0A1D0B8-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D093D0BED180D0BED0B4-D09BD18DD0B9-D0A1D0B8-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-10 10:30:12.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "35485a1e-8ae6-4b64-95a0-93d1fc3e2390",
+            "title": "Город Лэй-Хао",
+            "slug": "D093D0BED180D0BED0B4-D09BD18DD0B9-D0A5D0B0D0BE-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D093D0BED180D0BED0B4-D09BD18DD0B9-D0A5D0B0D0BE-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-08 17:49:49.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "363ee8ab-1c4b-49fd-9b41-55077a4adfe5",
+            "title": "Город Найян",
+            "slug": "D093D0BED180D0BED0B4-D09DD0B0D0B9D18FD0BD-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": false,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D093D0BED180D0BED0B4-D09DD0B0D0B9D18FD0BD-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-06 06:54:23.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "fd1ca38e-097f-4fad-81df-a61538866138",
+            "title": "Город Син-Юнь",
+            "slug": "D093D0BED180D0BED0B4-D0A1D0B8D0BD-D0AED0BDD18C-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D093D0BED180D0BED0B4-D0A1D0B8D0BD-D0AED0BDD18C-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-09 11:20:18.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "9f0aad73-5e61-43e8-8465-95f8cf2b129c",
+            "title": "Город Синьфан",
+            "slug": "D093D0BED180D0BED0B4-D0A1D0B8D0BDD18CD184D0B0D0BD-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D093D0BED180D0BED0B4-D0A1D0B8D0BDD18CD184D0B0D0BD-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-09 11:28:18.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "510e4356-823d-4be0-ad40-459481790428",
+            "title": "Город Сян-Чен",
+            "slug": "D093D0BED180D0BED0B4-D0A1D18FD0BD-D0A7D0B5D0BD-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D093D0BED180D0BED0B4-D0A1D18FD0BD-D0A7D0B5D0BD-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-09 07:53:31.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "f6570462-02f0-4c81-80f8-8401d79f85f3",
+            "title": "Город Сяолань",
+            "slug": "D093D0BED180D0BED0B4-D0A1D18FD0BED0BBD0B0D0BDD18C-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D093D0BED180D0BED0B4-D0A1D18FD0BED0BBD0B0D0BDD18C-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-10-07 13:18:15.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "a552f7f0-67a4-407a-9438-8f0eb5941508",
+            "title": "Город Цин-Ха",
+            "slug": "D093D0BED180D0BED0B4-D0A6D0B8D0BD-D0A5D0B0-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D093D0BED180D0BED0B4-D0A6D0B8D0BD-D0A5D0B0-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-09 18:14:27.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "80a0067a-62b7-479e-b297-7624ff9a353d",
+            "title": "Город Цинь-Фан",
+            "slug": "D093D0BED180D0BED0B4-D0A6D0B8D0BDD18C-D0A4D0B0D0BD-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D093D0BED180D0BED0B4-D0A6D0B8D0BDD18C-D0A4D0B0D0BD-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-09 07:28:06.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "0e54cf1b-eb4d-47b9-a3f8-bdcb8ad70de7",
+            "title": "Город Цинь-Яо",
+            "slug": "D093D0BED180D0BED0B4-D0A6D0B8D0BDD18C-D0AFD0BE-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D093D0BED180D0BED0B4-D0A6D0B8D0BDD18C-D0AFD0BE-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-12 06:33:41.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "a695bc30-f26e-4821-8618-8b00ee86bd6f",
+            "title": "Город Чанг-Ша",
+            "slug": "D093D0BED180D0BED0B4-D0A7D0B0D0BDD0B3-D0A8D0B0-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": false,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D093D0BED180D0BED0B4-D0A7D0B0D0BDD0B3-D0A8D0B0-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-06 06:52:49.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "7cd5518d-30cd-4812-8f84-74c4312af171",
+            "title": "Город Шань-Лу",
+            "slug": "D093D0BED180D0BED0B4-D0A8D0B0D0BDD18C-D09BD183-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D093D0BED180D0BED0B4-D0A8D0B0D0BDD18C-D09BD183-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-12 09:18:12.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "36c6ac80-6acd-4e36-ae48-33ac869f93d5",
+            "title": "Город Шиюй",
+            "slug": "D093D0BED180D0BED0B4-D0A8D0B8D18ED0B9-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D093D0BED180D0BED0B4-D0A8D0B8D18ED0B9-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-10 10:11:29.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "4baa0989-63b6-4671-bbfc-f688a52eaae2",
+            "title": "Город Юйфу",
+            "slug": "D093D0BED180D0BED0B4-D0AED0B9D184D183-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D093D0BED180D0BED0B4-D0AED0B9D184D183-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-09 17:43:31.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "d89646bb-c9b6-4f71-8caf-e7e6d371cac7",
+            "title": "Город Юйцзин",
+            "slug": "D093D0BED180D0BED0B4-D0AED0B9D186D0B7D0B8D0BD-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D093D0BED180D0BED0B4-D0AED0B9D186D0B7D0B8D0BD-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-09 07:55:55.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "856f5438-287e-49ab-a397-ef30b9a50c3f",
+            "title": "Город Яо-Шень",
+            "slug": "D093D0BED180D0BED0B4-D0AFD0BE-D0A8D0B5D0BDD18C-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D093D0BED180D0BED0B4-D0AFD0BE-D0A8D0B5D0BDD18C-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-09 18:03:19.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "c2fd71ee-3cd6-4d94-9a9e-e772d1eecdaf",
+            "title": "Деревня Байли",
+            "slug": "D094D0B5D180D0B5D0B2D0BDD18F-D091D0B0D0B9D0BBD0B8-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D094D0B5D180D0B5D0B2D0BDD18F-D091D0B0D0B9D0BBD0B8-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-09 17:35:04.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "925fe392-61e7-42b2-99c6-cb76240a7033",
+            "title": "Деревня Байтан",
+            "slug": "D094D0B5D180D0B5D0B2D0BDD18F-D091D0B0D0B9D182D0B0D0BD-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D094D0B5D180D0B5D0B2D0BDD18F-D091D0B0D0B9D182D0B0D0BD-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-09 07:41:23.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "390d81e2-30ae-4074-bccc-1673259bf7cb",
+            "title": "Деревня Вэй-Нин",
+            "slug": "D094D0B5D180D0B5D0B2D0BDD18F-D092D18DD0B9-D09DD0B8D0BD-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D094D0B5D180D0B5D0B2D0BDD18F-D092D18DD0B9-D09DD0B8D0BD-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-12 07:00:19.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "02c2bc7e-194f-4099-9381-48798635b0d6",
+            "title": "Деревня Вэйган",
+            "slug": "D094D0B5D180D0B5D0B2D0BDD18F-D092D18DD0B9D0B3D0B0D0BD-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": false,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D094D0B5D180D0B5D0B2D0BDD18F-D092D18DD0B9D0B3D0B0D0BD-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-10 10:38:37.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "f023d31b-ed33-4112-ac66-5f2aee3f2676",
+            "title": "Деревня Дань-Ся",
+            "slug": "D094D0B5D180D0B5D0B2D0BDD18F-D094D0B0D0BDD18C-D0A1D18F-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D094D0B5D180D0B5D0B2D0BDD18F-D094D0B0D0BDD18C-D0A1D18F-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-12 10:23:02.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "ff319834-3a39-4150-ad2b-ad9b05b0750b",
+            "title": "Деревня Дзинь-Сяо",
+            "slug": "D094D0B5D180D0B5D0B2D0BDD18F-D094D0B7D0B8D0BDD18C-D0A1D18FD0BE-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D094D0B5D180D0B5D0B2D0BDD18F-D094D0B7D0B8D0BDD18C-D0A1D18FD0BE-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-12 11:16:19.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "59296e60-7716-44f7-9da8-fe2c09c527b4",
+            "title": "Деревня Минчуань",
+            "slug": "D094D0B5D180D0B5D0B2D0BDD18F-D09CD0B8D0BDD187D183D0B0D0BDD18C-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D094D0B5D180D0B5D0B2D0BDD18F-D09CD0B8D0BDD187D183D0B0D0BDD18C-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-12 10:19:17.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "ce303002-9565-46f2-af92-d3cc94e6c9f8",
+            "title": "Деревня Мохуа",
+            "slug": "D094D0B5D180D0B5D0B2D0BDD18F-D09CD0BED185D183D0B0-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D094D0B5D180D0B5D0B2D0BDD18F-D09CD0BED185D183D0B0-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-09 07:36:33.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "1dd24989-2cf0-402e-8b42-fd8d8d2b2f7c",
+            "title": "Деревня Мэй-Инь",
+            "slug": "D094D0B5D180D0B5D0B2D0BDD18F-D09CD18DD0B9-D098D0BDD18C-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D094D0B5D180D0B5D0B2D0BDD18F-D09CD18DD0B9-D098D0BDD18C-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-09 07:44:09.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "f067f09b-5673-4098-8c94-21414e69c2cf",
+            "title": "Деревня Мэйсу",
+            "slug": "D094D0B5D180D0B5D0B2D0BDD18F-D09CD18DD0B9D181D183-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D094D0B5D180D0B5D0B2D0BDD18F-D09CD18DD0B9D181D183-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-10 10:18:42.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "4cfc3c3e-3b30-4ac5-be88-d6b82273eac7",
+            "title": "Деревня Сян-Че",
+            "slug": "D094D0B5D180D0B5D0B2D0BDD18F-D0A1D18FD0BD-D0A7D0B5-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D094D0B5D180D0B5D0B2D0BDD18F-D0A1D18FD0BD-D0A7D0B5-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-12 10:16:00.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "23f8fcfc-51bf-4f54-8bf3-e05d486044b8",
+            "title": "Деревня Тай-Линь",
+            "slug": "D093D0BED180D0BED0B4-D0A2D0B0D0B9-D09BD0B8D0BDD18C-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": false,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D093D0BED180D0BED0B4-D0A2D0B0D0B9-D09BD0B8D0BDD18C-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-10 10:37:39.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "8273c3b1-b803-4879-837a-3d7d68cbb983",
+            "title": "Деревня Фэй-Лю",
+            "slug": "D094D0B5D180D0B5D0B2D0BDD18F-D0A4D18DD0B9-D09BD18E-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D094D0B5D180D0B5D0B2D0BDD18F-D0A4D18DD0B9-D09BD18E-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-11 08:01:22.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "f6f26bca-6c8b-4cdf-9901-f164d7b2af6d",
+            "title": "Деревня Хао-Ши",
+            "slug": "D094D0B5D180D0B5D0B2D0BDD18F-D0A5D0B0D0BE-D0A8D0B8-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D094D0B5D180D0B5D0B2D0BDD18F-D0A5D0B0D0BE-D0A8D0B8-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-12 07:02:04.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "ed8e2035-b587-4ab5-b495-34151184f4f3",
+            "title": "Деревня Хуан-До",
+            "slug": "D094D0B5D180D0B5D0B2D0BDD18F-D0A5D183D0B0D0BD-D094D0BE-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D094D0B5D180D0B5D0B2D0BDD18F-D0A5D183D0B0D0BD-D094D0BE-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-12 10:13:12.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "56ea5dbb-c504-4ab4-af94-bf3e9752025b",
+            "title": "Деревня Чень-Ю",
+            "slug": "D094D0B5D180D0B5D0B2D0BDD18F-D0A7D0B5D0BDD18C-D0AE-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D094D0B5D180D0B5D0B2D0BDD18F-D0A7D0B5D0BDD18C-D0AE-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-09 17:58:55.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "5666d156-795a-4eb1-86f4-de1365bb84b7",
+            "title": "Деревня Юньтао",
+            "slug": "D094D0B5D180D0B5D0B2D0BDD18F-D0AED0BDD18CD182D0B0D0BE-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D094D0B5D180D0B5D0B2D0BDD18F-D0AED0BDD18CD182D0B0D0BE-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-10-07 13:22:34.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "9d9de49a-751f-4571-9b94-569ee0f1ea5b",
+            "title": "Деревня Ян-Чунь",
+            "slug": "D094D0B5D180D0B5D0B2D0BDD18F-D0AFD0BD-D0A7D183D0BDD18C-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D094D0B5D180D0B5D0B2D0BDD18F-D0AFD0BD-D0A7D183D0BDD18C-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-10 10:44:30.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        }
+    ],
+    "editURL": "https://www.worldanvil.com/world/organization/f8e607a8-0c3d-4da4-82fc-bfc19ae14719/edit",
+    "motto": null,
+    "publicAgenda": null,
+    "alternativeNames": "Империя Дракона, Империя Огня, Огненная Империя, 龍安帝國",
+    "demonym": null,
+    "assets": null,
+    "structure": null,
+    "history": null,
+    "disbandment": null,
+    "demographics": null,
+    "veterancy": null,
+    "trainingLevel": null,
+    "governmentsystem": null,
+    "powerstructure": null,
+    "economicsystem": null,
+    "legislative": null,
+    "judicial": null,
+    "executive": null,
+    "gazetteer": null,
+    "currency": null,
+    "territory": null,
+    "military": null,
+    "religion": null,
+    "technology": null,
+    "foreignrelations": null,
+    "laws": null,
+    "culture": null,
+    "imports": null,
+    "exports": null,
+    "agricultureAndIndustry": null,
+    "tradeAndTransport": null,
+    "education": null,
+    "infrastructure": null,
+    "mythos": null,
+    "origins": null,
+    "cosmology": null,
+    "tenets": null,
+    "priesthood": null,
+    "ethics": null,
+    "divinepowers": null,
+    "intrigue": null,
+    "worship": null,
+    "sects": null,
+    "foundingDate": "-2980 ХЭ",
+    "dissolutionDate": null,
+    "showDiplomacy": false,
+    "capital": {
+        "id": "e74419b6-5459-429e-993c-b2d22f3c5f31",
+        "title": "Город Джу-Суо",
+        "slug": "D093D0BED180D0BED0B4-D094D0B6D183-D0A1D183D0BE-settlement",
+        "state": "public",
+        "isWip": true,
+        "isDraft": false,
+        "entityClass": "Settlement",
+        "icon": null,
+        "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D093D0BED180D0BED0B4-D094D0B6D183-D0A1D183D0BE-settlement",
+        "subscribergroups": [],
+        "folderId": "-1",
+        "tags": "",
+        "updateDate": {
+            "date": "2025-11-06 06:46:50.000000",
+            "timezone_type": 3,
+            "timezone": "Europe/London"
+        }
+    },
+    "geographicLocation": null,
+    "parent": null,
+    "statereligion": null,
+    "type": null,
+    "formation": null,
+    "leader": null,
+    "familyleader": null,
+    "headofstate": {
+        "id": "1ee5c512-06c5-47d6-ad32-6becceb350dc",
+        "title": "Сунь Ляньши",
+        "slug": "D0A1D183D0BDD18C-D09BD18FD0BDD18CD188D0B8-person",
+        "state": "public",
+        "isWip": true,
+        "isDraft": false,
+        "entityClass": "Person",
+        "icon": null,
+        "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D0A1D183D0BDD18C-D09BD18FD0BDD18CD188D0B8-person",
+        "subscribergroups": [],
+        "folderId": "-1",
+        "tags": "",
+        "updateDate": {
+            "date": "2025-11-06 07:15:08.000000",
+            "timezone_type": 3,
+            "timezone": "Europe/London"
+        }
+    },
+    "leadertitle": null,
+    "headofgovernment": null,
+    "rulingorganization": null,
+    "locations": [
+        {
+            "id": "5d154b1a-9434-4eca-a26e-bdd9ce87bd64",
+            "title": "Бордель Уй-Джан",
+            "slug": "D091D0BED180D0B4D0B5D0BBD18C-D0A3D0B9-D094D0B6D0B0D0BD-landmark",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Landmark",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D091D0BED180D0B4D0B5D0BBD18C-D0A3D0B9-D094D0B6D0B0D0BD-landmark",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-10-15 08:19:36.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "ff83ded4-c63b-44ac-ae84-a0cb499e1627",
+            "title": "Город Бао-Хай",
+            "slug": "D093D0BED180D0BED0B4-D091D0B0D0BE-D0A5D0B0D0B9-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D093D0BED180D0BED0B4-D091D0B0D0BE-D0A5D0B0D0B9-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-04-09 07:34:20.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "e74419b6-5459-429e-993c-b2d22f3c5f31",
+            "title": "Город Джу-Суо",
+            "slug": "D093D0BED180D0BED0B4-D094D0B6D183-D0A1D183D0BE-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": false,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D093D0BED180D0BED0B4-D094D0B6D183-D0A1D183D0BE-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-06 06:46:50.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "942ecec5-976d-489c-acef-b796d5ec2d22",
+            "title": "Город Лан-Цзы",
+            "slug": "D093D0BED180D0BED0B4-D09BD0B0D0BD-D0A6D0B7D18B-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D093D0BED180D0BED0B4-D09BD0B0D0BD-D0A6D0B7D18B-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-10 10:16:07.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "dd12b790-e492-4f00-adab-7ebfa53b00b2",
+            "title": "Город Лань-Ша",
+            "slug": "D093D0BED180D0BED0B4-D09BD0B0D0BDD18C-D0A8D0B0-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D093D0BED180D0BED0B4-D09BD0B0D0BDD18C-D0A8D0B0-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-10-07 13:27:52.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "00af60a5-9d13-40c1-8f69-09063faaaad0",
+            "title": "Город Линфу",
+            "slug": "D093D0BED180D0BED0B4-D09BD0B8D0BDD184D183-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D093D0BED180D0BED0B4-D09BD0B8D0BDD184D183-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-10-07 13:34:14.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "f4339997-fec5-4f50-8ea8-20950473b622",
+            "title": "Город Лунь-Хай",
+            "slug": "D093D0BED180D0BED0B4-D09BD183D0BDD18C-D0A5D0B0D0B9-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D093D0BED180D0BED0B4-D09BD183D0BDD18C-D0A5D0B0D0B9-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-08 17:54:21.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "74a808a1-42f0-4f46-b558-edf4f82d28e5",
+            "title": "Город Лэй-Си",
+            "slug": "D093D0BED180D0BED0B4-D09BD18DD0B9-D0A1D0B8-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D093D0BED180D0BED0B4-D09BD18DD0B9-D0A1D0B8-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-10 10:30:12.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "35485a1e-8ae6-4b64-95a0-93d1fc3e2390",
+            "title": "Город Лэй-Хао",
+            "slug": "D093D0BED180D0BED0B4-D09BD18DD0B9-D0A5D0B0D0BE-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D093D0BED180D0BED0B4-D09BD18DD0B9-D0A5D0B0D0BE-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-08 17:49:49.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "363ee8ab-1c4b-49fd-9b41-55077a4adfe5",
+            "title": "Город Найян",
+            "slug": "D093D0BED180D0BED0B4-D09DD0B0D0B9D18FD0BD-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": false,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D093D0BED180D0BED0B4-D09DD0B0D0B9D18FD0BD-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-06 06:54:23.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "fd1ca38e-097f-4fad-81df-a61538866138",
+            "title": "Город Син-Юнь",
+            "slug": "D093D0BED180D0BED0B4-D0A1D0B8D0BD-D0AED0BDD18C-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D093D0BED180D0BED0B4-D0A1D0B8D0BD-D0AED0BDD18C-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-09 11:20:18.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "9f0aad73-5e61-43e8-8465-95f8cf2b129c",
+            "title": "Город Синьфан",
+            "slug": "D093D0BED180D0BED0B4-D0A1D0B8D0BDD18CD184D0B0D0BD-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D093D0BED180D0BED0B4-D0A1D0B8D0BDD18CD184D0B0D0BD-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-09 11:28:18.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "510e4356-823d-4be0-ad40-459481790428",
+            "title": "Город Сян-Чен",
+            "slug": "D093D0BED180D0BED0B4-D0A1D18FD0BD-D0A7D0B5D0BD-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D093D0BED180D0BED0B4-D0A1D18FD0BD-D0A7D0B5D0BD-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-09 07:53:31.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "f6570462-02f0-4c81-80f8-8401d79f85f3",
+            "title": "Город Сяолань",
+            "slug": "D093D0BED180D0BED0B4-D0A1D18FD0BED0BBD0B0D0BDD18C-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D093D0BED180D0BED0B4-D0A1D18FD0BED0BBD0B0D0BDD18C-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-10-07 13:18:15.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "a552f7f0-67a4-407a-9438-8f0eb5941508",
+            "title": "Город Цин-Ха",
+            "slug": "D093D0BED180D0BED0B4-D0A6D0B8D0BD-D0A5D0B0-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D093D0BED180D0BED0B4-D0A6D0B8D0BD-D0A5D0B0-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-09 18:14:27.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "80a0067a-62b7-479e-b297-7624ff9a353d",
+            "title": "Город Цинь-Фан",
+            "slug": "D093D0BED180D0BED0B4-D0A6D0B8D0BDD18C-D0A4D0B0D0BD-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D093D0BED180D0BED0B4-D0A6D0B8D0BDD18C-D0A4D0B0D0BD-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-09 07:28:06.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "0e54cf1b-eb4d-47b9-a3f8-bdcb8ad70de7",
+            "title": "Город Цинь-Яо",
+            "slug": "D093D0BED180D0BED0B4-D0A6D0B8D0BDD18C-D0AFD0BE-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D093D0BED180D0BED0B4-D0A6D0B8D0BDD18C-D0AFD0BE-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-12 06:33:41.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "a695bc30-f26e-4821-8618-8b00ee86bd6f",
+            "title": "Город Чанг-Ша",
+            "slug": "D093D0BED180D0BED0B4-D0A7D0B0D0BDD0B3-D0A8D0B0-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": false,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D093D0BED180D0BED0B4-D0A7D0B0D0BDD0B3-D0A8D0B0-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-06 06:52:49.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "7cd5518d-30cd-4812-8f84-74c4312af171",
+            "title": "Город Шань-Лу",
+            "slug": "D093D0BED180D0BED0B4-D0A8D0B0D0BDD18C-D09BD183-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D093D0BED180D0BED0B4-D0A8D0B0D0BDD18C-D09BD183-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-12 09:18:12.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "36c6ac80-6acd-4e36-ae48-33ac869f93d5",
+            "title": "Город Шиюй",
+            "slug": "D093D0BED180D0BED0B4-D0A8D0B8D18ED0B9-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D093D0BED180D0BED0B4-D0A8D0B8D18ED0B9-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-10 10:11:29.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "4baa0989-63b6-4671-bbfc-f688a52eaae2",
+            "title": "Город Юйфу",
+            "slug": "D093D0BED180D0BED0B4-D0AED0B9D184D183-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D093D0BED180D0BED0B4-D0AED0B9D184D183-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-09 17:43:31.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "d89646bb-c9b6-4f71-8caf-e7e6d371cac7",
+            "title": "Город Юйцзин",
+            "slug": "D093D0BED180D0BED0B4-D0AED0B9D186D0B7D0B8D0BD-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D093D0BED180D0BED0B4-D0AED0B9D186D0B7D0B8D0BD-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-09 07:55:55.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "856f5438-287e-49ab-a397-ef30b9a50c3f",
+            "title": "Город Яо-Шень",
+            "slug": "D093D0BED180D0BED0B4-D0AFD0BE-D0A8D0B5D0BDD18C-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D093D0BED180D0BED0B4-D0AFD0BE-D0A8D0B5D0BDD18C-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-09 18:03:19.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "c2fd71ee-3cd6-4d94-9a9e-e772d1eecdaf",
+            "title": "Деревня Байли",
+            "slug": "D094D0B5D180D0B5D0B2D0BDD18F-D091D0B0D0B9D0BBD0B8-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D094D0B5D180D0B5D0B2D0BDD18F-D091D0B0D0B9D0BBD0B8-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-09 17:35:04.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "925fe392-61e7-42b2-99c6-cb76240a7033",
+            "title": "Деревня Байтан",
+            "slug": "D094D0B5D180D0B5D0B2D0BDD18F-D091D0B0D0B9D182D0B0D0BD-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D094D0B5D180D0B5D0B2D0BDD18F-D091D0B0D0B9D182D0B0D0BD-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-09 07:41:23.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "390d81e2-30ae-4074-bccc-1673259bf7cb",
+            "title": "Деревня Вэй-Нин",
+            "slug": "D094D0B5D180D0B5D0B2D0BDD18F-D092D18DD0B9-D09DD0B8D0BD-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D094D0B5D180D0B5D0B2D0BDD18F-D092D18DD0B9-D09DD0B8D0BD-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-12 07:00:19.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "02c2bc7e-194f-4099-9381-48798635b0d6",
+            "title": "Деревня Вэйган",
+            "slug": "D094D0B5D180D0B5D0B2D0BDD18F-D092D18DD0B9D0B3D0B0D0BD-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": false,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D094D0B5D180D0B5D0B2D0BDD18F-D092D18DD0B9D0B3D0B0D0BD-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-10 10:38:37.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "f023d31b-ed33-4112-ac66-5f2aee3f2676",
+            "title": "Деревня Дань-Ся",
+            "slug": "D094D0B5D180D0B5D0B2D0BDD18F-D094D0B0D0BDD18C-D0A1D18F-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D094D0B5D180D0B5D0B2D0BDD18F-D094D0B0D0BDD18C-D0A1D18F-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-12 10:23:02.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "ff319834-3a39-4150-ad2b-ad9b05b0750b",
+            "title": "Деревня Дзинь-Сяо",
+            "slug": "D094D0B5D180D0B5D0B2D0BDD18F-D094D0B7D0B8D0BDD18C-D0A1D18FD0BE-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D094D0B5D180D0B5D0B2D0BDD18F-D094D0B7D0B8D0BDD18C-D0A1D18FD0BE-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-12 11:16:19.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "59296e60-7716-44f7-9da8-fe2c09c527b4",
+            "title": "Деревня Минчуань",
+            "slug": "D094D0B5D180D0B5D0B2D0BDD18F-D09CD0B8D0BDD187D183D0B0D0BDD18C-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D094D0B5D180D0B5D0B2D0BDD18F-D09CD0B8D0BDD187D183D0B0D0BDD18C-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-12 10:19:17.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "ce303002-9565-46f2-af92-d3cc94e6c9f8",
+            "title": "Деревня Мохуа",
+            "slug": "D094D0B5D180D0B5D0B2D0BDD18F-D09CD0BED185D183D0B0-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D094D0B5D180D0B5D0B2D0BDD18F-D09CD0BED185D183D0B0-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-09 07:36:33.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "1dd24989-2cf0-402e-8b42-fd8d8d2b2f7c",
+            "title": "Деревня Мэй-Инь",
+            "slug": "D094D0B5D180D0B5D0B2D0BDD18F-D09CD18DD0B9-D098D0BDD18C-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D094D0B5D180D0B5D0B2D0BDD18F-D09CD18DD0B9-D098D0BDD18C-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-09 07:44:09.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "f067f09b-5673-4098-8c94-21414e69c2cf",
+            "title": "Деревня Мэйсу",
+            "slug": "D094D0B5D180D0B5D0B2D0BDD18F-D09CD18DD0B9D181D183-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D094D0B5D180D0B5D0B2D0BDD18F-D09CD18DD0B9D181D183-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-10 10:18:42.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "4cfc3c3e-3b30-4ac5-be88-d6b82273eac7",
+            "title": "Деревня Сян-Че",
+            "slug": "D094D0B5D180D0B5D0B2D0BDD18F-D0A1D18FD0BD-D0A7D0B5-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D094D0B5D180D0B5D0B2D0BDD18F-D0A1D18FD0BD-D0A7D0B5-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-12 10:16:00.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "23f8fcfc-51bf-4f54-8bf3-e05d486044b8",
+            "title": "Деревня Тай-Линь",
+            "slug": "D093D0BED180D0BED0B4-D0A2D0B0D0B9-D09BD0B8D0BDD18C-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": false,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D093D0BED180D0BED0B4-D0A2D0B0D0B9-D09BD0B8D0BDD18C-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-10 10:37:39.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "8273c3b1-b803-4879-837a-3d7d68cbb983",
+            "title": "Деревня Фэй-Лю",
+            "slug": "D094D0B5D180D0B5D0B2D0BDD18F-D0A4D18DD0B9-D09BD18E-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D094D0B5D180D0B5D0B2D0BDD18F-D0A4D18DD0B9-D09BD18E-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-11 08:01:22.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "f6f26bca-6c8b-4cdf-9901-f164d7b2af6d",
+            "title": "Деревня Хао-Ши",
+            "slug": "D094D0B5D180D0B5D0B2D0BDD18F-D0A5D0B0D0BE-D0A8D0B8-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D094D0B5D180D0B5D0B2D0BDD18F-D0A5D0B0D0BE-D0A8D0B8-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-12 07:02:04.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "ed8e2035-b587-4ab5-b495-34151184f4f3",
+            "title": "Деревня Хуан-До",
+            "slug": "D094D0B5D180D0B5D0B2D0BDD18F-D0A5D183D0B0D0BD-D094D0BE-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D094D0B5D180D0B5D0B2D0BDD18F-D0A5D183D0B0D0BD-D094D0BE-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-12 10:13:12.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "56ea5dbb-c504-4ab4-af94-bf3e9752025b",
+            "title": "Деревня Чень-Ю",
+            "slug": "D094D0B5D180D0B5D0B2D0BDD18F-D0A7D0B5D0BDD18C-D0AE-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D094D0B5D180D0B5D0B2D0BDD18F-D0A7D0B5D0BDD18C-D0AE-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-09 17:58:55.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "5666d156-795a-4eb1-86f4-de1365bb84b7",
+            "title": "Деревня Юньтао",
+            "slug": "D094D0B5D180D0B5D0B2D0BDD18F-D0AED0BDD18CD182D0B0D0BE-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D094D0B5D180D0B5D0B2D0BDD18F-D0AED0BDD18CD182D0B0D0BE-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-10-07 13:22:34.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "9d9de49a-751f-4571-9b94-569ee0f1ea5b",
+            "title": "Деревня Ян-Чунь",
+            "slug": "D094D0B5D180D0B5D0B2D0BDD18F-D0AFD0BD-D0A7D183D0BDD18C-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D094D0B5D180D0B5D0B2D0BDD18F-D0AFD0BD-D0A7D183D0BDD18C-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-10 10:44:30.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "6726ae88-704d-4f5a-90e4-fa88c4de3ba8",
+            "title": "Джунгли Минь-Тао",
+            "slug": "D094D0B6D183D0BDD0B3D0BBD0B8-D09CD0B8D0BDD18C-D0A2D0B0D0BE-location",
+            "state": "public",
+            "isWip": true,
+            "isDraft": false,
+            "entityClass": "Location",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D094D0B6D183D0BDD0B3D0BBD0B8-D09CD0B8D0BDD18C-D0A2D0B0D0BE-location",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-09-21 13:50:43.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "06971f2f-9be6-45b9-a931-fa264739e1b3",
+            "title": "Долина Гармонии",
+            "slug": "D094D0BED0BBD0B8D0BDD0B0-D093D0B0D180D0BCD0BED0BDD0B8D0B8-location",
+            "state": "public",
+            "isWip": true,
+            "isDraft": false,
+            "entityClass": "Location",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D094D0BED0BBD0B8D0BDD0B0-D093D0B0D180D0BCD0BED0BDD0B8D0B8-location",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-05 07:00:39.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "61541aa4-85f8-451c-b698-d2811bb235ec",
+            "title": "Дом Белых Парусов",
+            "slug": "D094D0BED0BC-D091D0B5D0BBD18BD185-D09FD0B0D180D183D181D0BED0B2-landmark",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Landmark",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D094D0BED0BC-D091D0B5D0BBD18BD185-D09FD0B0D180D183D181D0BED0B2-landmark",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-10-15 08:20:27.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "41a878a0-1001-42e1-9c8f-c84485eba2be",
+            "title": "Лес Синьшу",
+            "slug": "D09BD0B5D181-D0A1D0B8D0BDD18CD188D183-location",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Location",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D09BD0B5D181-D0A1D0B8D0BDD18CD188D183-location",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-10-07 13:09:55.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "2ef6fee2-c4fd-426a-af3d-ee579a8eb8b5",
+            "title": "Лес Фэнлинь",
+            "slug": "D09BD0B5D181-D0A4D18DD0BDD0BBD0B8D0BDD18C-location",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Location",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D09BD0B5D181-D0A4D18DD0BDD0BBD0B8D0BDD18C-location",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-09 06:53:07.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "6d3fc437-7cce-4b02-94ba-37b93f2212df",
+            "title": "Лес Шеньянь",
+            "slug": "D09BD0B5D181-D0A8D0B5D0BDD18CD18FD0BDD18C-location",
+            "state": "public",
+            "isWip": true,
+            "isDraft": false,
+            "entityClass": "Location",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D09BD0B5D181-D0A8D0B5D0BDD18CD18FD0BDD18C-location",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-06 07:03:48.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "7603f9bf-72e7-4b85-966f-8f48802bc78e",
+            "title": "Нефритовый лес",
+            "slug": "D09DD0B5D184D180D0B8D182D0BED0B2D18BD0B9-D0BBD0B5D181-location",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Location",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D09DD0B5D184D180D0B8D182D0BED0B2D18BD0B9-D0BBD0B5D181-location",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-09 07:23:56.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "cbf9e84e-8fe0-4179-a083-e0952aae6369",
+            "title": "Озеро Жень",
+            "slug": "D09ED0B7D0B5D180D0BE-D096D0B5D0BDD18C-location",
+            "state": "public",
+            "isWip": true,
+            "isDraft": false,
+            "entityClass": "Location",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D09ED0B7D0B5D180D0BE-D096D0B5D0BDD18C-location",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-12 11:05:02.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "d4f5c2d1-61e9-454a-9fa1-db09691a9a84",
+            "title": "Озеро Сю Ху",
+            "slug": "D09ED0B7D0B5D180D0BE-D0A1D18E-D0A5D183-location",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Location",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D09ED0B7D0B5D180D0BE-D0A1D18E-D0A5D183-location",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-09 06:55:54.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "8929a54c-f04a-4698-978e-77d8460ca023",
+            "title": "Озеро Чанг",
+            "slug": "D09ED0B7D0B5D180D0BE-D0A7D0B0D0BDD0B3-location",
+            "state": "public",
+            "isWip": true,
+            "isDraft": false,
+            "entityClass": "Location",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D09ED0B7D0B5D180D0BE-D0A7D0B0D0BDD0B3-location",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-06 06:57:39.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "0c3d1bc0-fa98-41fa-8b2d-52b3e1f226d1",
+            "title": "Озеро Шуан",
+            "slug": "D09ED0B7D0B5D180D0BE-D0A8D183D0B0D0BD-location",
+            "state": "public",
+            "isWip": true,
+            "isDraft": false,
+            "entityClass": "Location",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D09ED0B7D0B5D180D0BE-D0A8D183D0B0D0BD-location",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-06 06:55:13.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "c40f4d65-9860-4cac-8326-31fef40afacf",
+            "title": "Полуостров Хайконг",
+            "slug": "D09FD0BED0BBD183D0BED181D182D180D0BED0B2-D0A5D0B0D0B9D0BAD0BED0BDD0B3-location",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Location",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D09FD0BED0BBD183D0BED181D182D180D0BED0B2-D0A5D0B0D0B9D0BAD0BED0BDD0B3-location",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-10-01 10:13:39.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "22a400d8-a8f4-4d8d-80b7-27a29f1db981",
+            "title": "Равнина Аксай-Джин",
+            "slug": "D0A0D0B0D0B2D0BDD0B8D0BDD0B0-D090D0BAD181D0B0D0B9-D094D0B6D0B8D0BD-location",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Location",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D0A0D0B0D0B2D0BDD0B8D0BDD0B0-D090D0BAD181D0B0D0B9-D094D0B6D0B8D0BD-location",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-06 07:04:28.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "84ef3fed-25aa-4aac-b38c-ced9ed11f775",
+            "title": "Река Бай Хэ",
+            "slug": "D0A0D0B5D0BAD0B0-D091D0B0D0B9-D0A5D18D-location",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Location",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D0A0D0B5D0BAD0B0-D091D0B0D0B9-D0A5D18D-location",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-09 06:54:44.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "ca0ccdb3-9d5f-40a3-b0fd-3b995579f2bc",
+            "title": "Река Тяо Хэ",
+            "slug": "D0A0D0B5D0BAD0B0-D0A2D18FD0BE-D0A5D18D-location",
+            "state": "public",
+            "isWip": true,
+            "isDraft": false,
+            "entityClass": "Location",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D0A0D0B5D0BAD0B0-D0A2D18FD0BE-D0A5D18D-location",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-06 07:02:46.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "d8a06c3b-b08f-4056-9fcc-7f2a0e739a31",
+            "title": "Река Юйлин",
+            "slug": "D0A0D0B5D0BAD0B0-D0AED0B9D0BBD0B8D0BD-location",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Location",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D0A0D0B5D0BAD0B0-D0AED0B9D0BBD0B8D0BD-location",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-08 17:53:54.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "fa43b8a7-fc4e-4075-b9ef-2e0733691e6c",
+            "title": "Таверна Красный Журавль",
+            "slug": "D0A2D0B0D0B2D0B5D180D0BDD0B0-D09AD180D0B0D181D0BDD18BD0B9-D096D183D180D0B0D0B2D0BBD18C-landmark",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Landmark",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D0A2D0B0D0B2D0B5D180D0BDD0B0-D09AD180D0B0D181D0BDD18BD0B9-D096D183D180D0B0D0B2D0BBD18C-landmark",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-10-15 08:21:16.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "5127cde5-08e4-4be7-9c35-9561bf6eb957",
+            "title": "Храм Дракона",
+            "slug": "D0A5D180D0B0D0BC-D094D180D0B0D0BAD0BED0BDD0B0-landmark",
+            "state": "public",
+            "isWip": true,
+            "isDraft": false,
+            "entityClass": "Landmark",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D0A5D180D0B0D0BC-D094D180D0B0D0BAD0BED0BDD0B0-landmark",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": null,
+            "updateDate": {
+                "date": "2024-08-20 07:39:58.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        }
+    ],
+    "people": [
+        {
+            "id": "b6950441-97e5-40fd-8e7c-2924c376df40",
+            "title": "Ао Ву",
+            "slug": "D090D0BE-D092D183-person",
+            "state": "public",
+            "isWip": true,
+            "isDraft": false,
+            "entityClass": "Person",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D090D0BE-D092D183-person",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-07 07:14:12.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "4894907f-5e50-40bc-ad4d-59de91a4744e",
+            "title": "Бао Си",
+            "slug": "D091D0B0D0BE-D0A1D0B8-person",
+            "state": "public",
+            "isWip": true,
+            "isDraft": false,
+            "entityClass": "Person",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D091D0B0D0BE-D0A1D0B8-person",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-07 09:17:26.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "cd08ad9f-407b-4ffd-85bd-8ed91783266b",
+            "title": "Ван Сан",
+            "slug": "D092D0B0D0BD-D0A1D0B0D0BD-person",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Person",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D092D0B0D0BD-D0A1D0B0D0BD-person",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-07 09:16:18.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "14688bb0-9288-40b7-b63c-26e54269190c",
+            "title": "Дзин Сан",
+            "slug": "D094D0B7D0B8D0BD-D0A1D0B0D0BD-person",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Person",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D094D0B7D0B8D0BD-D0A1D0B0D0BD-person",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-07 09:16:44.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "0d14863a-39f4-48e0-9a0b-a68a2c62bc16",
+            "title": "Дракон Ланг-Ан",
+            "slug": "D094D180D0B0D0BAD0BED0BD-D09BD0B0D0BDD0B3-D090D0BD-person",
+            "state": "public",
+            "isWip": true,
+            "isDraft": false,
+            "entityClass": "Person",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D094D180D0B0D0BAD0BED0BD-D09BD0B0D0BDD0B3-D090D0BD-person",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": null,
+            "updateDate": {
+                "date": "2024-01-24 21:45:16.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "f01f5cdc-25b3-4974-88fd-a858da8c8f7e",
+            "title": "Ксан Ляньши",
+            "slug": "D09AD181D0B0D0BD-D09BD18FD0BDD18CD188D0B8-person",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Person",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D09AD181D0B0D0BD-D09BD18FD0BDD18CD188D0B8-person",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-06 07:16:03.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "3717c2d8-4525-449c-84c8-c781a1483c30",
+            "title": "Ли Сан",
+            "slug": "D09BD0B8-D0A1D0B0D0BD-person",
+            "state": "public",
+            "isWip": true,
+            "isDraft": false,
+            "entityClass": "Person",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D09BD0B8-D0A1D0B0D0BD-person",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-07 09:14:26.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "2464d404-c24d-494a-82c8-81db2c0039cc",
+            "title": "Лин Си",
+            "slug": "D09BD0B8D0BD-D0A1D0B8-person",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Person",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D09BD0B8D0BD-D0A1D0B8-person",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-07 09:17:30.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "f5aceb83-d69a-49f3-b69c-a578d4bf2869",
+            "title": "Ляо Шень",
+            "slug": "D09BD18FD0BE-D0A8D0B5D0BDD18C-person",
+            "state": "public",
+            "isWip": true,
+            "isDraft": false,
+            "entityClass": "Person",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D09BD18FD0BE-D0A8D0B5D0BDD18C-person",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-07 09:18:17.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "5ef522f4-449b-409a-a567-a582fcad57f5",
+            "title": "Мэй Ву",
+            "slug": "D09CD18DD0B9-D092D183-person",
+            "state": "public",
+            "isWip": true,
+            "isDraft": false,
+            "entityClass": "Person",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D09CD18DD0B9-D092D183-person",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-07 09:03:08.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "c1a9f94b-e82c-473f-9624-18a45403e5c1",
+            "title": "Нуа Си",
+            "slug": "D09DD183D0B0-D0A1D0B8-person",
+            "state": "public",
+            "isWip": true,
+            "isDraft": false,
+            "entityClass": "Person",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D09DD183D0B0-D0A1D0B8-person",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-07 09:08:41.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "0981ef5b-667d-440a-9cef-9312b8647702",
+            "title": "Сао Ву",
+            "slug": "D0A1D0B0D0BE-D092D183-person",
+            "state": "public",
+            "isWip": true,
+            "isDraft": false,
+            "entityClass": "Person",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D0A1D0B0D0BE-D092D183-person",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-07 07:15:25.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "1ee5c512-06c5-47d6-ad32-6becceb350dc",
+            "title": "Сунь Ляньши",
+            "slug": "D0A1D183D0BDD18C-D09BD18FD0BDD18CD188D0B8-person",
+            "state": "public",
+            "isWip": true,
+            "isDraft": false,
+            "entityClass": "Person",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D0A1D183D0BDD18C-D09BD18FD0BDD18CD188D0B8-person",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-06 07:15:08.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "a7912614-4c07-4238-b7f0-47129012f568",
+            "title": "Сяо Ша",
+            "slug": "D0A1D18FD0BE-D0A8D0B0-person",
+            "state": "public",
+            "isWip": true,
+            "isDraft": false,
+            "entityClass": "Person",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D0A1D18FD0BE-D0A8D0B0-person",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-06 07:17:09.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "55482c50-f167-480f-8ca2-c4893ebb7afe",
+            "title": "Цинь Ша",
+            "slug": "D0A6D0B8D0BDD18C-D0A8D0B0-person",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Person",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D0A6D0B8D0BDD18C-D0A8D0B0-person",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-06 07:18:15.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "b55c645c-f74b-482e-9d1f-31ec6119b358",
+            "title": "Чани Сан",
+            "slug": "D0A7D0B0D0BDD0B8-D0A1D0B0D0BD-person",
+            "state": "public",
+            "isWip": true,
+            "isDraft": false,
+            "entityClass": "Person",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D0A7D0B0D0BDD0B8-D0A1D0B0D0BD-person",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-07 09:16:41.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "195174e0-bdaf-4a2f-b3d1-4891e5f6ee76",
+            "title": "Чень Ляньши",
+            "slug": "D0A7D0B5D0BDD18C-D09BD18FD0BDD18CD188D0B8-person",
+            "state": "public",
+            "isWip": true,
+            "isDraft": false,
+            "entityClass": "Person",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D0A7D0B5D0BDD18C-D09BD18FD0BDD18CD188D0B8-person",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-07 07:04:27.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "70c1d0c8-486b-4516-a4dd-6c518a2791a2",
+            "title": "Чинь Си",
+            "slug": "D0A7D0B8D0BDD18C-D0A1D0B8-person",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Person",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D0A7D0B8D0BDD18C-D0A1D0B8-person",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-07 09:12:16.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "7aad3bbe-f82d-4897-8490-7e25d75d42af",
+            "title": "Шень Ву",
+            "slug": "D0A8D0B5D0BDD18C-D092D183-person",
+            "state": "public",
+            "isWip": true,
+            "isDraft": false,
+            "entityClass": "Person",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D0A8D0B5D0BDD18C-D092D183-person",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-07 07:11:45.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        }
+    ],
+    "professions": [
+        {
+            "id": "d978a204-385f-4842-aa65-cd0cad575864",
+            "title": "Аватар",
+            "slug": "D090D0B2D0B0D182D0B0D180-article",
+            "state": "public",
+            "isWip": true,
+            "isDraft": false,
+            "entityClass": "Profession",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D090D0B2D0B0D182D0B0D180-article",
+            "subscribergroups": [],
+            "folderId": "755c442f-ad0d-4e32-b18c-c841b4d2cb58",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-10-16 11:51:24.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        }
+    ],
+    "contestedlocations": [
+        {
+            "id": "68654893-e3d4-48a7-8598-56211befaaf4",
+            "title": "Гарнизон Пасть Дракона",
+            "slug": "D093D0B0D180D0BDD0B8D0B7D0BED0BD-D09FD0B0D181D182D18C-D094D180D0B0D0BAD0BED0BDD0B0-landmark",
+            "state": "public",
+            "isWip": true,
+            "isDraft": false,
+            "entityClass": "Landmark",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D093D0B0D180D0BDD0B8D0B7D0BED0BD-D09FD0B0D181D182D18C-D094D180D0B0D0BAD0BED0BDD0B0-landmark",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-05 10:23:01.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "f1335a6f-d7cb-4ef2-bc3c-db2ec1643c4c",
+            "title": "Долина Кровавого Цветения",
+            "slug": "D094D0BED0BBD0B8D0BDD0B0-D09AD180D0BED0B2D0B0D0B2D0BED0B3D0BE-D0A6D0B2D0B5D182D0B5D0BDD0B8D18F-location",
+            "state": "public",
+            "isWip": true,
+            "isDraft": false,
+            "entityClass": "Location",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D094D0BED0BBD0B8D0BDD0B0-D09AD180D0BED0B2D0B0D0B2D0BED0B3D0BE-D0A6D0B2D0B5D182D0B5D0BDD0B8D18F-location",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-05 06:57:52.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "e50ab1e2-b726-4058-aa1a-22f77fe4130d",
+            "title": "Река Улын-Гол",
+            "slug": "D0A0D0B5D0BAD0B0-D0A3D0BBD18BD0BD-D093D0BED0BB-location",
+            "state": "public",
+            "isWip": true,
+            "isDraft": false,
+            "entityClass": "Location",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D0A0D0B5D0BAD0B0-D0A3D0BBD18BD0BD-D093D0BED0BB-location",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-05 06:57:41.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        }
+    ],
+    "ethnicities": [
+        {
+            "id": "cee5a147-2796-4fa3-8e9e-1b4eacc27cec",
+            "title": "Джу",
+            "slug": "D094D0B6D183-ethnicity",
+            "state": "public",
+            "isWip": true,
+            "isDraft": false,
+            "entityClass": "Ethnicity",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D094D0B6D183-ethnicity",
+            "subscribergroups": [],
+            "folderId": "6cc88eb6-6e33-48e8-a8f0-1f71f61d524f",
+            "tags": null,
+            "updateDate": {
+                "date": "2025-11-06 06:50:48.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        }
+    ],
+    "deities": [
+        {
+            "id": "0d14863a-39f4-48e0-9a0b-a68a2c62bc16",
+            "title": "Дракон Ланг-Ан",
+            "slug": "D094D180D0B0D0BAD0BED0BD-D09BD0B0D0BDD0B3-D090D0BD-person",
+            "state": "public",
+            "isWip": true,
+            "isDraft": false,
+            "entityClass": "Person",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D094D180D0B0D0BAD0BED0BD-D09BD0B0D0BDD0B3-D090D0BD-person",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": null,
+            "updateDate": {
+                "date": "2024-01-24 21:45:16.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        }
+    ],
+    "isEditable": true,
+    "success": true
+}

@@ -1,0 +1,43 @@
+{
+    "id": 2836565,
+    "title": "Kafer_Lake.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://www.worldanvil.com/uploads/images/f02f317738d48ac96288465384dff542.jpg",
+    "subscribergroups": [],
+    "folderId": "c7491703-3774-4cf0-b989-2fc12673b821",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:18:42.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "f02f317738d48ac96288465384dff542.jpg",
+    "path": "/uploads/images",
+    "size": 595574,
+    "width": 1170,
+    "height": 658,
+    "extension": "jpg",
+    "description": "@[Озеро Кафер](location:2e7166ec-97e8-4bfe-8b03-58402c445dc7)",
+    "alt": null,
+    "creditArtistName": "Aysa",
+    "creditArtistWebsite": "https://nat-geo.ru/community/user/47208/",
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2021-11-24 06:09:37.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": 111,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": null,
+    "pageUrl": "https://www.worldanvil.com/i/2836565",
+    "isEditable": true,
+    "success": true
+}

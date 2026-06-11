@@ -1,0 +1,43 @@
+{
+    "id": 1602090,
+    "title": "Strongest.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://www.worldanvil.com/uploads/images/903928dd5a4f266c79949445fa2a00bd.jpg",
+    "subscribergroups": [],
+    "folderId": "35d948e7-3a6c-45a1-ba76-4c38e5103728",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:22:48.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "903928dd5a4f266c79949445fa2a00bd.jpg",
+    "path": "/uploads/images",
+    "size": 926511,
+    "width": 1170,
+    "height": 658,
+    "extension": "jpg",
+    "description": "Один из @[Сильнейших](condition:72c2445e-21c9-498f-b548-6962842efcf2) воинов @[Астарии](location:d993bea5-aeff-4ea7-b30e-b761269a54d0)",
+    "alt": null,
+    "creditArtistName": "Fictionchick",
+    "creditArtistWebsite": "https://art.alphacoders.com/authors/view/3508",
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2020-10-27 14:17:02.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": 11,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": null,
+    "pageUrl": "https://www.worldanvil.com/i/1602090",
+    "isEditable": true,
+    "success": true
+}

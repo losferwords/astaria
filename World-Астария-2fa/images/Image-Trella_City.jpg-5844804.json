@@ -1,0 +1,43 @@
+{
+    "id": 5844804,
+    "title": "Trella_City.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://wa-cdn.nyc3.cdn.digitaloceanspaces.com/user-data/production/ae978bc7-ef5e-47d8-8585-f7fae49590a5/uploads/images/c5619310893bb2907d2ebe0a5f525094.jpeg",
+    "subscribergroups": [],
+    "folderId": "8fd95d4d-995d-4cda-84db-68be314742c2",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:19:14.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "c5619310893bb2907d2ebe0a5f525094.jpeg",
+    "path": "https://wa-cdn.nyc3.cdn.digitaloceanspaces.com/user-data/production/ae978bc7-ef5e-47d8-8585-f7fae49590a5/uploads/images",
+    "size": 694073,
+    "width": 1170,
+    "height": 658,
+    "extension": "jpeg",
+    "description": "@[Город Трелла](settlement:e0b33ff4-a40c-48cc-a20b-7c5b0bf0623d)",
+    "alt": null,
+    "creditArtistName": null,
+    "creditArtistWebsite": null,
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2024-08-13 06:35:56.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": null,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": null,
+    "pageUrl": "https://www.worldanvil.com/i/5844804",
+    "isEditable": true,
+    "success": true
+}

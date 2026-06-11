@@ -1,0 +1,533 @@
+{
+    "id": "a8ea8af0-99b3-4f72-a1fb-93ff2678288e",
+    "title": "Бестиарий",
+    "slug": "D091D0B5D181D182D0B8D0B0D180D0B8D0B9-category",
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Category",
+    "icon": null,
+    "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/c/D091D0B5D181D182D0B8D0B0D180D0B8D0B9-category",
+    "subscribergroups": [],
+    "folderId": null,
+    "tags": null,
+    "updateDate": {
+        "date": "2025-06-24 08:59:19.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "description": null,
+    "excerpt": null,
+    "isBook": false,
+    "displayBookTitle": true,
+    "isCollapsed": false,
+    "position": null,
+    "creationDate": {
+        "date": "2023-06-06 22:05:05.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": 167,
+    "editor": null,
+    "custom1": null,
+    "custom2": null,
+    "custom3": null,
+    "custom4": null,
+    "custom5": null,
+    "cssClasses": null,
+    "systemMeta": "{\"order\":\"manual\",\"catCol1\":[\"custom1\"],\"catCol2\":[\"custom2\",\"toc\"],\"catCol3\":[\"custom3\",\"articleBlocks\"],\"catCol4\":[\"custom4\",\"maps\",\"timelines\"],\"catCol5\":[\"custom5\"]}",
+    "pagecover": null,
+    "bookcover": null,
+    "defaultarticlecover": null,
+    "parent": null,
+    "world": {
+        "id": "2be362fa-ad81-4128-92e8-a40c5ec3b5db",
+        "title": "Астария",
+        "slug": "D090D181D182D0B0D180D0B8D18F-losfer",
+        "state": "public",
+        "isWip": null,
+        "isDraft": null,
+        "entityClass": "World",
+        "icon": "fa-solid fa-globe-stand",
+        "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer",
+        "subscribergroups": [
+            {
+                "id": "390d8ece-7d4e-4620-8cc5-f47128ab77cf",
+                "title": "Adventurers of Тест Party",
+                "slug": null,
+                "state": null,
+                "entityClass": "SubscriberGroup",
+                "icon": null,
+                "url": null,
+                "subscribergroups": []
+            },
+            {
+                "id": "457339f6-bfe1-42af-aabb-ba5de3a39cbc",
+                "title": "fearendilele",
+                "slug": null,
+                "state": null,
+                "entityClass": "SubscriberGroup",
+                "icon": null,
+                "url": null,
+                "subscribergroups": []
+            },
+            {
+                "id": "0ec582ed-fd84-4ea6-88f4-258802ce2f52",
+                "title": "Ветер Перемен Party",
+                "slug": null,
+                "state": null,
+                "entityClass": "SubscriberGroup",
+                "icon": null,
+                "url": null,
+                "subscribergroups": []
+            },
+            {
+                "id": "2d31de8f-33c2-497f-ba8d-536c37551858",
+                "title": "Искатель",
+                "slug": null,
+                "state": null,
+                "entityClass": "SubscriberGroup",
+                "icon": null,
+                "url": null,
+                "subscribergroups": []
+            },
+            {
+                "id": "bb3f6d67-81ae-4f8a-a5e1-b40faca7682d",
+                "title": "Тест Players",
+                "slug": null,
+                "state": null,
+                "entityClass": "SubscriberGroup",
+                "icon": null,
+                "url": null,
+                "subscribergroups": []
+            },
+            {
+                "id": "71f04d15-9660-4f42-b8c6-7fa0c94c7f76",
+                "title": "Хранитель мудрости",
+                "slug": null,
+                "state": null,
+                "entityClass": "SubscriberGroup",
+                "icon": null,
+                "url": null,
+                "subscribergroups": []
+            }
+        ],
+        "folderId": "-1",
+        "tags": "",
+        "updateDate": {
+            "date": "2026-06-10 12:32:50.000000",
+            "timezone_type": 3,
+            "timezone": "Europe/London"
+        }
+    },
+    "articleRedirect": {
+        "id": "13e311b8-b753-468e-b917-270fa641c5b1",
+        "title": "Бестиарий",
+        "slug": "D091D0B5D181D182D0B8D0B0D180D0B8D0B9-article",
+        "state": "public",
+        "isWip": true,
+        "isDraft": false,
+        "entityClass": "Article",
+        "icon": null,
+        "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D091D0B5D181D182D0B8D0B0D180D0B8D0B9-article",
+        "subscribergroups": [],
+        "folderId": "a8ea8af0-99b3-4f72-a1fb-93ff2678288e",
+        "tags": "",
+        "updateDate": {
+            "date": "2025-10-31 09:22:46.000000",
+            "timezone_type": 3,
+            "timezone": "Europe/London"
+        }
+    },
+    "articles": [
+        {
+            "id": "0d9da8f3-d145-4567-940b-170fab82e256",
+            "title": "Кентавр",
+            "slug": "D09AD0B5D0BDD182D0B0D0B2D180-species",
+            "state": "public",
+            "isWip": true,
+            "isDraft": false,
+            "entityClass": "Species",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D09AD0B5D0BDD182D0B0D0B2D180-species",
+            "subscribergroups": [],
+            "folderId": "a8ea8af0-99b3-4f72-a1fb-93ff2678288e",
+            "tags": "",
+            "updateDate": {
+                "date": "2023-09-02 22:11:34.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "02d78407-c74e-4c42-96ad-4707a182a5a2",
+            "title": "Гнолл",
+            "slug": "D093D0BDD0BED0BBD0BB-species",
+            "state": "public",
+            "isWip": true,
+            "isDraft": false,
+            "entityClass": "Species",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D093D0BDD0BED0BBD0BB-species",
+            "subscribergroups": [],
+            "folderId": "a8ea8af0-99b3-4f72-a1fb-93ff2678288e",
+            "tags": "",
+            "updateDate": {
+                "date": "2024-07-21 21:23:59.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "1e3941a6-4066-4433-a375-bcb980062b35",
+            "title": "Вепречеловек",
+            "slug": "D092D0B5D0BFD180D0B5D187D0B5D0BBD0BED0B2D0B5D0BA-species",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Species",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D092D0B5D0BFD180D0B5D187D0B5D0BBD0BED0B2D0B5D0BA-species",
+            "subscribergroups": [],
+            "folderId": "a8ea8af0-99b3-4f72-a1fb-93ff2678288e",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-04-09 07:46:03.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "20f368c0-f5a2-4a5f-b6ee-4f96852a34e5",
+            "title": "Менада",
+            "slug": "D09CD0B5D0BDD0B0D0B4D0B0-species",
+            "state": "public",
+            "isWip": true,
+            "isDraft": false,
+            "entityClass": "Species",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D09CD0B5D0BDD0B0D0B4D0B0-species",
+            "subscribergroups": [],
+            "folderId": "a8ea8af0-99b3-4f72-a1fb-93ff2678288e",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-02-12 07:53:26.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "49b6e9a3-cf9b-4a01-a015-03545600031d",
+            "title": "Дриада",
+            "slug": "D094D180D0B8D0B0D0B4D0B0-species",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Species",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D094D180D0B8D0B0D0B4D0B0-species",
+            "subscribergroups": [],
+            "folderId": "a8ea8af0-99b3-4f72-a1fb-93ff2678288e",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-04-09 07:47:10.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "1ffbfb9a-2174-40f2-97b7-9f62590d1bf2",
+            "title": "Нереида",
+            "slug": "D09DD0B5D180D0B5D0B8D0B4D0B0-species",
+            "state": "public",
+            "isWip": true,
+            "isDraft": false,
+            "entityClass": "Species",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D09DD0B5D180D0B5D0B8D0B4D0B0-species",
+            "subscribergroups": [],
+            "folderId": "a8ea8af0-99b3-4f72-a1fb-93ff2678288e",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-09-29 15:20:11.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "57e2c0d5-2ae2-4bc6-a11c-26254ed553e4",
+            "title": "Гарпия",
+            "slug": "D093D0B0D180D0BFD0B8D18F-species",
+            "state": "public",
+            "isWip": true,
+            "isDraft": false,
+            "entityClass": "Species",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D093D0B0D180D0BFD0B8D18F-species",
+            "subscribergroups": [],
+            "folderId": "a8ea8af0-99b3-4f72-a1fb-93ff2678288e",
+            "tags": "",
+            "updateDate": {
+                "date": "2024-04-06 09:16:21.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "bd50e107-b2c7-4b13-a47d-59fa9f246a59",
+            "title": "Сатир",
+            "slug": "D0A1D0B0D182D0B8D180-species",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Species",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D0A1D0B0D182D0B8D180-species",
+            "subscribergroups": [],
+            "folderId": "a8ea8af0-99b3-4f72-a1fb-93ff2678288e",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-04-09 07:47:45.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "96c1e311-73f5-4c5b-90b9-dab379f784af",
+            "title": "Вермин",
+            "slug": "D092D0B5D180D0BCD0B8D0BD-species",
+            "state": "public",
+            "isWip": true,
+            "isDraft": false,
+            "entityClass": "Species",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D092D0B5D180D0BCD0B8D0BD-species",
+            "subscribergroups": [],
+            "folderId": "a8ea8af0-99b3-4f72-a1fb-93ff2678288e",
+            "tags": "",
+            "updateDate": {
+                "date": "2024-07-21 21:30:15.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "6d97cc1c-d362-4dea-8e7a-cd2e33a1dd72",
+            "title": "Небесный дракон",
+            "slug": "D09DD0B5D0B1D0B5D181D0BDD18BD0B9-D0B4D180D0B0D0BAD0BED0BD-species",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Species",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D09DD0B5D0B1D0B5D181D0BDD18BD0B9-D0B4D180D0B0D0BAD0BED0BD-species",
+            "subscribergroups": [],
+            "folderId": "a8ea8af0-99b3-4f72-a1fb-93ff2678288e",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-04-09 07:48:34.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "b6123d79-2c23-4475-a202-4cc6b005e755",
+            "title": "Морской дракон",
+            "slug": "D09CD0BED180D181D0BAD0BED0B9-D0B4D180D0B0D0BAD0BED0BD-species",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Species",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D09CD0BED180D181D0BAD0BED0B9-D0B4D180D0B0D0BAD0BED0BD-species",
+            "subscribergroups": [],
+            "folderId": "a8ea8af0-99b3-4f72-a1fb-93ff2678288e",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-04-09 07:49:22.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "f1cf5416-8128-4ffd-a121-4a1a14bc376d",
+            "title": "Аль-Тахим",
+            "slug": "D090D0BBD18C-D0A2D0B0D185D0B8D0BC-species",
+            "state": "public",
+            "isWip": true,
+            "isDraft": false,
+            "entityClass": "Species",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D090D0BBD18C-D0A2D0B0D185D0B8D0BC-species",
+            "subscribergroups": [],
+            "folderId": "a8ea8af0-99b3-4f72-a1fb-93ff2678288e",
+            "tags": "",
+            "updateDate": {
+                "date": "2024-07-14 22:16:28.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "d886267e-cc2e-46bb-a6c6-78e351e35fa7",
+            "title": "Сирена",
+            "slug": "D0A1D0B8D180D0B5D0BDD0B0-species",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Species",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D0A1D0B8D180D0B5D0BDD0B0-species",
+            "subscribergroups": [],
+            "folderId": "a8ea8af0-99b3-4f72-a1fb-93ff2678288e",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-04-09 07:50:23.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "1c3bce0f-7026-4cdc-8e97-83fd13a90ba3",
+            "title": "Тангарот",
+            "slug": "D0A2D0B0D0BDD0B3D0B0D180D0BED182-species",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Species",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D0A2D0B0D0BDD0B3D0B0D180D0BED182-species",
+            "subscribergroups": [],
+            "folderId": "a8ea8af0-99b3-4f72-a1fb-93ff2678288e",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-04-09 07:51:52.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "20eda2df-894a-4602-a29a-90eaf609240d",
+            "title": "Рух",
+            "slug": "D0A0D183D185-species",
+            "state": "public",
+            "isWip": true,
+            "isDraft": false,
+            "entityClass": "Species",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D0A0D183D185-species",
+            "subscribergroups": [],
+            "folderId": "a8ea8af0-99b3-4f72-a1fb-93ff2678288e",
+            "tags": "",
+            "updateDate": {
+                "date": "2024-08-19 23:30:34.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "b384d6d2-6650-477e-8025-527029f8458c",
+            "title": "Нага",
+            "slug": "D09DD0B0D0B3D0B0-species",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Species",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D09DD0B0D0B3D0B0-species",
+            "subscribergroups": [],
+            "folderId": "a8ea8af0-99b3-4f72-a1fb-93ff2678288e",
+            "tags": "",
+            "updateDate": {
+                "date": "2026-05-20 09:12:09.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "3c38638e-821e-4f45-ab4f-8fd584d4e1e4",
+            "title": "Ветал",
+            "slug": "D092D0B5D182D0B0D0BB-species",
+            "state": "public",
+            "isWip": true,
+            "isDraft": false,
+            "entityClass": "Species",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D092D0B5D182D0B0D0BB-species",
+            "subscribergroups": [],
+            "folderId": "a8ea8af0-99b3-4f72-a1fb-93ff2678288e",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-10-31 08:31:49.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "c822f6ac-77d5-4c29-8a79-7aab06c6a6e4",
+            "title": "Они",
+            "slug": "D09ED0BDD0B8-species",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Species",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D09ED0BDD0B8-species",
+            "subscribergroups": [],
+            "folderId": "a8ea8af0-99b3-4f72-a1fb-93ff2678288e",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-10-15 14:53:03.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "82c51f7d-dc60-4777-8f76-07498ca1d575",
+            "title": "Ракапс",
+            "slug": "D0A0D0B0D0BAD0B0D0BFD181-species",
+            "state": "public",
+            "isWip": true,
+            "isDraft": false,
+            "entityClass": "Species",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D0A0D0B0D0BAD0B0D0BFD181-species",
+            "subscribergroups": [],
+            "folderId": "a8ea8af0-99b3-4f72-a1fb-93ff2678288e",
+            "tags": "",
+            "updateDate": {
+                "date": "2024-08-19 23:29:37.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "13e311b8-b753-468e-b917-270fa641c5b1",
+            "title": "Бестиарий",
+            "slug": "D091D0B5D181D182D0B8D0B0D180D0B8D0B9-article",
+            "state": "public",
+            "isWip": true,
+            "isDraft": false,
+            "entityClass": "Article",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D091D0B5D181D182D0B8D0B0D180D0B8D0B9-article",
+            "subscribergroups": [],
+            "folderId": "a8ea8af0-99b3-4f72-a1fb-93ff2678288e",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-10-31 09:22:46.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        }
+    ],
+    "editURL": "https://www.worldanvil.com/world/category/a8ea8af0-99b3-4f72-a1fb-93ff2678288e/edit",
+    "parsedDescription": "",
+    "parsedCustom1": "",
+    "parsedCustom2": "",
+    "parsedCustom3": "",
+    "parsedCustom4": "",
+    "parsedCustom5": "",
+    "isEditable": true,
+    "success": true
+}

@@ -1,0 +1,43 @@
+{
+    "id": 773765,
+    "title": "Sunset_Sea.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://www.worldanvil.com/uploads/images/c16989c72ffe87f5b0a41d9f5399c793.jpg",
+    "subscribergroups": [],
+    "folderId": "2ccdbe33-757d-4176-bb62-20cdcc35f90b",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:20:03.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "c16989c72ffe87f5b0a41d9f5399c793.jpg",
+    "path": "/uploads/images",
+    "size": 739279,
+    "width": 1170,
+    "height": 658,
+    "extension": "jpg",
+    "description": "Вид на @[Закатное море](location:cab1965d-ebf8-4517-bf33-3fad6a9b0069)",
+    "alt": "Sunset_Sea.jpg",
+    "creditArtistName": "Gabriel Tichy",
+    "creditArtistWebsite": "http://www.gabrieltichy.com/",
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2020-01-17 10:54:31.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": 111,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": "",
+    "pageUrl": "https://www.worldanvil.com/i/773765",
+    "isEditable": true,
+    "success": true
+}

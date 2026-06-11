@@ -1,0 +1,43 @@
+{
+    "id": 1834678,
+    "title": "Uaset_City.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://www.worldanvil.com/uploads/images/9c7294838f50190387c7a0c4b5d05c43.jpg",
+    "subscribergroups": [],
+    "folderId": "c7491703-3774-4cf0-b989-2fc12673b821",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:18:44.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "9c7294838f50190387c7a0c4b5d05c43.jpg",
+    "path": "/uploads/images",
+    "size": 1048139,
+    "width": 1170,
+    "height": 658,
+    "extension": "jpg",
+    "description": "Порт @[города Уасет](settlement:28dcdf3a-b189-4cd5-8c94-b576c604fdd7)",
+    "alt": null,
+    "creditArtistName": "Gilles Beloeil",
+    "creditArtistWebsite": "https://www.artstation.com/gillesbeloeil",
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2021-01-07 21:07:36.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": 156,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": null,
+    "pageUrl": "https://www.worldanvil.com/i/1834678",
+    "isEditable": true,
+    "success": true
+}

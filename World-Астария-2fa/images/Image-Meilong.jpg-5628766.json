@@ -1,0 +1,43 @@
+{
+    "id": 5628766,
+    "title": "Meilong.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://wa-cdn.nyc3.cdn.digitaloceanspaces.com/user-data/production/ae978bc7-ef5e-47d8-8585-f7fae49590a5/uploads/images/bc69c1d94300095f04e152c937991e16.jpeg",
+    "subscribergroups": [],
+    "folderId": "8627009f-ffbf-4163-9eff-4e41b4e59ef8",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-12-10 15:17:41.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "bc69c1d94300095f04e152c937991e16.jpeg",
+    "path": "https://wa-cdn.nyc3.cdn.digitaloceanspaces.com/user-data/production/ae978bc7-ef5e-47d8-8585-f7fae49590a5/uploads/images",
+    "size": 504850,
+    "width": 508,
+    "height": 901,
+    "extension": "jpeg",
+    "description": "@[Мэйлун](person:5aa90b45-cd36-4492-87be-7b1cb1db32d2)",
+    "alt": "Meilong.jpg",
+    "creditArtistName": null,
+    "creditArtistWebsite": null,
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2025-12-10 15:17:37.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": null,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": null,
+    "pageUrl": "https://www.worldanvil.com/i/5628766",
+    "isEditable": true,
+    "success": true
+}

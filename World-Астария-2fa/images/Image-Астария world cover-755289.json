@@ -1,0 +1,43 @@
+{
+    "id": 755289,
+    "title": "Астария world cover",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://www.worldanvil.com/uploads/images/eea066ca938316f176447801ede6a674.jpg",
+    "subscribergroups": [],
+    "folderId": "-1",
+    "tags": "",
+    "updateDate": {
+        "date": "2020-11-09 14:31:14.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "eea066ca938316f176447801ede6a674.jpg",
+    "path": "/uploads/images",
+    "size": 991909,
+    "width": 1170,
+    "height": 658,
+    "extension": "jpg",
+    "description": null,
+    "alt": null,
+    "creditArtistName": "Bryan Marvin P Sola",
+    "creditArtistWebsite": "https://bryansola.com/",
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2020-01-14 12:11:13.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": 15,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": "",
+    "pageUrl": "https://www.worldanvil.com/i/755289",
+    "isEditable": true,
+    "success": true
+}

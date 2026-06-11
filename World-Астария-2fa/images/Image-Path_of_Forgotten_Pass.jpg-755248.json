@@ -1,0 +1,43 @@
+{
+    "id": 755248,
+    "title": "Path_of_Forgotten_Pass.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://www.worldanvil.com/uploads/images/b8ddef59c060e5148cf940a008b970df.jpg",
+    "subscribergroups": [],
+    "folderId": "2b3b75ad-d5d1-4c9f-8f58-41af0b37b555",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:21:22.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "b8ddef59c060e5148cf940a008b970df.jpg",
+    "path": "/uploads/images",
+    "size": 590817,
+    "width": 1170,
+    "height": 658,
+    "extension": "jpg",
+    "description": "Горный перевал @[Путь Забытых](location:dbdd3970-f88a-46af-88fa-8cdadcee3c8e)",
+    "alt": null,
+    "creditArtistName": "Piotr Dura",
+    "creditArtistWebsite": "https://www.artstation.com/threedee",
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2020-01-14 12:18:01.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": 141,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": "",
+    "pageUrl": "https://www.worldanvil.com/i/755248",
+    "isEditable": true,
+    "success": true
+}

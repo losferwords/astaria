@@ -1,0 +1,43 @@
+{
+    "id": 5472095,
+    "title": "Hornindal_Lake.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://www.worldanvil.com/uploads/images/44b69983319e1e6431f9d7770ef879c3.jpg",
+    "subscribergroups": [],
+    "folderId": "2b3b75ad-d5d1-4c9f-8f58-41af0b37b555",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:21:19.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "44b69983319e1e6431f9d7770ef879c3.jpg",
+    "path": "/uploads/images",
+    "size": 680112,
+    "width": 1170,
+    "height": 658,
+    "extension": "jpg",
+    "description": "@[Озеро Хорниндаль](location:2e2e97fd-a8b8-48f1-b726-9c32417a8827)",
+    "alt": null,
+    "creditArtistName": null,
+    "creditArtistWebsite": null,
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2024-03-26 21:09:36.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": 46,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": null,
+    "pageUrl": "https://www.worldanvil.com/i/5472095",
+    "isEditable": true,
+    "success": true
+}

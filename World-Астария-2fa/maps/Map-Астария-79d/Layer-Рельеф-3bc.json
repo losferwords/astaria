@@ -1,0 +1,19 @@
+{
+    "id": "2a23d3bc-162f-4786-b3f6-51802a8b76b5",
+    "title": "Рельеф",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Layer",
+    "icon": "fa-solid fa-layer-group",
+    "url": null,
+    "subscribergroups": [],
+    "folderId": null,
+    "tags": null,
+    "updateDate": null,
+    "description": null,
+    "position": null,
+    "isEditable": true,
+    "success": true
+}

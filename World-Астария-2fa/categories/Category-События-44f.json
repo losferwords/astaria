@@ -1,0 +1,267 @@
+{
+    "id": "c934844f-cb17-4750-87a3-aa64adf70876",
+    "title": "События",
+    "slug": "D0A1D0BED0B1D18BD182D0B8D18F-category",
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Category",
+    "icon": null,
+    "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/c/D0A1D0BED0B1D18BD182D0B8D18F-category",
+    "subscribergroups": [],
+    "folderId": null,
+    "tags": null,
+    "updateDate": {
+        "date": "2025-06-24 08:59:19.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "description": null,
+    "excerpt": null,
+    "isBook": false,
+    "displayBookTitle": true,
+    "isCollapsed": false,
+    "position": 940,
+    "creationDate": {
+        "date": "2022-11-18 07:56:17.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": 169,
+    "editor": null,
+    "custom1": null,
+    "custom2": null,
+    "custom3": null,
+    "custom4": null,
+    "custom5": null,
+    "cssClasses": null,
+    "systemMeta": "{\"order\":\"manual\",\"catCol1\":[\"custom1\"],\"catCol2\":[\"custom2\",\"toc\"],\"catCol3\":[\"custom3\",\"articleBlocks\",\"featuresArticles\"],\"catCol4\":[\"custom4\",\"maps\",\"timelines\"],\"catCol5\":[\"custom5\"]}",
+    "pagecover": null,
+    "bookcover": null,
+    "defaultarticlecover": null,
+    "parent": null,
+    "world": {
+        "id": "2be362fa-ad81-4128-92e8-a40c5ec3b5db",
+        "title": "Астария",
+        "slug": "D090D181D182D0B0D180D0B8D18F-losfer",
+        "state": "public",
+        "isWip": null,
+        "isDraft": null,
+        "entityClass": "World",
+        "icon": "fa-solid fa-globe-stand",
+        "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer",
+        "subscribergroups": [
+            {
+                "id": "390d8ece-7d4e-4620-8cc5-f47128ab77cf",
+                "title": "Adventurers of Тест Party",
+                "slug": null,
+                "state": null,
+                "entityClass": "SubscriberGroup",
+                "icon": null,
+                "url": null,
+                "subscribergroups": []
+            },
+            {
+                "id": "457339f6-bfe1-42af-aabb-ba5de3a39cbc",
+                "title": "fearendilele",
+                "slug": null,
+                "state": null,
+                "entityClass": "SubscriberGroup",
+                "icon": null,
+                "url": null,
+                "subscribergroups": []
+            },
+            {
+                "id": "0ec582ed-fd84-4ea6-88f4-258802ce2f52",
+                "title": "Ветер Перемен Party",
+                "slug": null,
+                "state": null,
+                "entityClass": "SubscriberGroup",
+                "icon": null,
+                "url": null,
+                "subscribergroups": []
+            },
+            {
+                "id": "2d31de8f-33c2-497f-ba8d-536c37551858",
+                "title": "Искатель",
+                "slug": null,
+                "state": null,
+                "entityClass": "SubscriberGroup",
+                "icon": null,
+                "url": null,
+                "subscribergroups": []
+            },
+            {
+                "id": "bb3f6d67-81ae-4f8a-a5e1-b40faca7682d",
+                "title": "Тест Players",
+                "slug": null,
+                "state": null,
+                "entityClass": "SubscriberGroup",
+                "icon": null,
+                "url": null,
+                "subscribergroups": []
+            },
+            {
+                "id": "71f04d15-9660-4f42-b8c6-7fa0c94c7f76",
+                "title": "Хранитель мудрости",
+                "slug": null,
+                "state": null,
+                "entityClass": "SubscriberGroup",
+                "icon": null,
+                "url": null,
+                "subscribergroups": []
+            }
+        ],
+        "folderId": "-1",
+        "tags": "",
+        "updateDate": {
+            "date": "2026-06-10 12:32:50.000000",
+            "timezone_type": 3,
+            "timezone": "Europe/London"
+        }
+    },
+    "articleRedirect": {
+        "id": "3dda506a-ca7a-4e7c-807d-a1deae715c8d",
+        "title": "События",
+        "slug": "D0A1D0BED0B1D18BD182D0B8D18F-article",
+        "state": "public",
+        "isWip": true,
+        "isDraft": false,
+        "entityClass": "Article",
+        "icon": null,
+        "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D0A1D0BED0B1D18BD182D0B8D18F-article",
+        "subscribergroups": [],
+        "folderId": "c934844f-cb17-4750-87a3-aa64adf70876",
+        "tags": "",
+        "updateDate": {
+            "date": "2022-11-24 11:10:35.000000",
+            "timezone_type": 3,
+            "timezone": "Europe/London"
+        }
+    },
+    "articles": [
+        {
+            "id": "3f3a77d3-75ba-46a2-ba0f-8ee51cd33bde",
+            "title": "Раскол Кадира",
+            "slug": "D0A0D0B0D181D0BAD0BED0BB-D09AD0B0D0B4D0B8D180D0B0-militaryConflict",
+            "state": "public",
+            "isWip": true,
+            "isDraft": false,
+            "entityClass": "MilitaryConflict",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D0A0D0B0D181D0BAD0BED0BB-D09AD0B0D0B4D0B8D180D0B0-militaryConflict",
+            "subscribergroups": [],
+            "folderId": "c934844f-cb17-4750-87a3-aa64adf70876",
+            "tags": null,
+            "updateDate": {
+                "date": "2024-01-31 22:39:02.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "9eb3d4f3-0e5c-43b7-8b40-04b543dc7788",
+            "title": "Падение Хтона",
+            "slug": "D09FD0B0D0B4D0B5D0BDD0B8D0B5-D0A5D182D0BED0BDD0B0-myth",
+            "state": "public",
+            "isWip": true,
+            "isDraft": false,
+            "entityClass": "Myth",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D09FD0B0D0B4D0B5D0BDD0B8D0B5-D0A5D182D0BED0BDD0B0-myth",
+            "subscribergroups": [],
+            "folderId": "c934844f-cb17-4750-87a3-aa64adf70876",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-04-09 09:28:33.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "2cfa6e5d-aaed-47d1-8e9e-0c1cd85a7c64",
+            "title": "Кризис веры в Амон-Астате",
+            "slug": "D09AD180D0B8D0B7D0B8D181-D0B2D0B5D180D18B-D0B2-D090D0BCD0BED0BD-D090D181D182D0B0D182D0B5-militaryConflict",
+            "state": "public",
+            "isWip": true,
+            "isDraft": false,
+            "entityClass": "MilitaryConflict",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D09AD180D0B8D0B7D0B8D181-D0B2D0B5D180D18B-D0B2-D090D0BCD0BED0BD-D090D181D182D0B0D182D0B5-militaryConflict",
+            "subscribergroups": [],
+            "folderId": "c934844f-cb17-4750-87a3-aa64adf70876",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-04-09 09:28:51.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "489ee7d1-42a0-4059-884b-15479cfcf4de",
+            "title": "Вторжение Амон-Астата в город Ахей",
+            "slug": "D092D182D0BED180D0B6D0B5D0BDD0B8D0B5-D090D0BCD0BED0BD-D090D181D182D0B0D182D0B0-D0B2-D0B3D0BED180D0BED0B4-D090D185D0B5D0B9-militaryConflict",
+            "state": "public",
+            "isWip": true,
+            "isDraft": false,
+            "entityClass": "MilitaryConflict",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D092D182D0BED180D0B6D0B5D0BDD0B8D0B5-D090D0BCD0BED0BD-D090D181D182D0B0D182D0B0-D0B2-D0B3D0BED180D0BED0B4-D090D185D0B5D0B9-militaryConflict",
+            "subscribergroups": [],
+            "folderId": "c934844f-cb17-4750-87a3-aa64adf70876",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-04-09 09:29:15.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "dfa69e04-f1eb-4459-8e9a-8ff572dce188",
+            "title": "Война Жаждущих",
+            "slug": "D092D0BED0B9D0BDD0B0-D096D0B0D0B6D0B4D183D189D0B8D185-militaryConflict",
+            "state": "public",
+            "isWip": true,
+            "isDraft": false,
+            "entityClass": "MilitaryConflict",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D092D0BED0B9D0BDD0B0-D096D0B0D0B6D0B4D183D189D0B8D185-militaryConflict",
+            "subscribergroups": [],
+            "folderId": "c934844f-cb17-4750-87a3-aa64adf70876",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-04-09 09:27:47.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "3dda506a-ca7a-4e7c-807d-a1deae715c8d",
+            "title": "События",
+            "slug": "D0A1D0BED0B1D18BD182D0B8D18F-article",
+            "state": "public",
+            "isWip": true,
+            "isDraft": false,
+            "entityClass": "Article",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D0A1D0BED0B1D18BD182D0B8D18F-article",
+            "subscribergroups": [],
+            "folderId": "c934844f-cb17-4750-87a3-aa64adf70876",
+            "tags": "",
+            "updateDate": {
+                "date": "2022-11-24 11:10:35.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        }
+    ],
+    "editURL": "https://www.worldanvil.com/world/category/c934844f-cb17-4750-87a3-aa64adf70876/edit",
+    "parsedDescription": "",
+    "parsedCustom1": "",
+    "parsedCustom2": "",
+    "parsedCustom3": "",
+    "parsedCustom4": "",
+    "parsedCustom5": "",
+    "isEditable": true,
+    "success": true
+}

@@ -1,0 +1,43 @@
+{
+    "id": 6369013,
+    "title": "Quiong-Qi.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://wa-cdn.nyc3.cdn.digitaloceanspaces.com/user-data/production/ae978bc7-ef5e-47d8-8585-f7fae49590a5/uploads/images/cdc555e6eab4084b472a0be80aa64875.jpeg",
+    "subscribergroups": [],
+    "folderId": "8627009f-ffbf-4163-9eff-4e41b4e59ef8",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:23:56.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "cdc555e6eab4084b472a0be80aa64875.jpeg",
+    "path": "https://wa-cdn.nyc3.cdn.digitaloceanspaces.com/user-data/production/ae978bc7-ef5e-47d8-8585-f7fae49590a5/uploads/images",
+    "size": 436681,
+    "width": 508,
+    "height": 901,
+    "extension": "jpeg",
+    "description": "@[Кион-Чи](person:6f1e5775-fc03-4e10-b1a0-186c94d5a29f)",
+    "alt": null,
+    "creditArtistName": null,
+    "creditArtistWebsite": null,
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2025-02-12 14:50:36.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": null,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": null,
+    "pageUrl": "https://www.worldanvil.com/i/6369013",
+    "isEditable": true,
+    "success": true
+}

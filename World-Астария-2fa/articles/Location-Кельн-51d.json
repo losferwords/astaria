@@ -1,0 +1,1803 @@
+{
+    "id": "9be9351d-d56f-4094-8b35-97b8e8bc3afb",
+    "title": "Кельн",
+    "slug": "D09AD0B5D0BBD18CD0BD-article",
+    "state": "public",
+    "isWip": true,
+    "isDraft": false,
+    "entityClass": "Location",
+    "icon": null,
+    "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D09AD0B5D0BBD18CD0BD-article",
+    "subscribergroups": [],
+    "folderId": "-1",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-11-12 10:43:55.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "position": 990,
+    "excerpt": null,
+    "wordcount": 37,
+    "creationDate": {
+        "date": "2019-12-20 22:31:14.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "publicationDate": {
+        "date": "2020-04-04 12:13:02.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "notificationDate": null,
+    "likes": null,
+    "views": 706,
+    "userMetadata": null,
+    "articleMetadata": null,
+    "cssClasses": null,
+    "displayCss": null,
+    "templateType": "location",
+    "customArticleTemplate": null,
+    "editor": "legacy",
+    "content": "Северный континент @[Астарии](location:d993bea5-aeff-4ea7-b30e-b761269a54d0).\r\n\r\nРельеф Кельна пологий и представлен равнинами и каньонами. Однако присутствует старая горная цепь небольшой высоты под названием @[Грань Тьмы](location:74018fd9-90c5-4db5-ba99-7c16464ee6da). Большую северную часть континента занимает ледяная пустыня @[Антра](location:9ad88cc3-07f9-48e0-be83-67bfcffa5419).\r\n\r\nКаньоны выточены большими полноводными реками. На равнинах также встречаются небольшие реки и озёра. Также есть крупный заболоченный участок под названием @[Болота Забвения](location:45195831-a168-4070-a165-672168c58861). Всё это приводит к обилию источников пресной воды. В Кельне гораздо больше месторождений полезных ископаемых и ресурсов.",
+    "author": {
+        "id": "ae978bc7-ef5e-47d8-8585-f7fae49590a5",
+        "title": "losfer",
+        "slug": null,
+        "state": null,
+        "isWip": null,
+        "isDraft": null,
+        "entityClass": "User",
+        "icon": "fa-solid fa-user",
+        "url": "https://www.worldanvil.com/author/losfer",
+        "subscribergroups": [],
+        "folderId": null,
+        "tags": null,
+        "updateDate": null
+    },
+    "category": null,
+    "world": {
+        "id": "2be362fa-ad81-4128-92e8-a40c5ec3b5db",
+        "title": "Астария",
+        "slug": "D090D181D182D0B0D180D0B8D18F-losfer",
+        "state": "public",
+        "isWip": null,
+        "isDraft": null,
+        "entityClass": "World",
+        "icon": "fa-solid fa-globe-stand",
+        "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer",
+        "subscribergroups": [
+            {
+                "id": "390d8ece-7d4e-4620-8cc5-f47128ab77cf",
+                "title": "Adventurers of Тест Party",
+                "slug": null,
+                "state": null,
+                "entityClass": "SubscriberGroup",
+                "icon": null,
+                "url": null,
+                "subscribergroups": []
+            },
+            {
+                "id": "457339f6-bfe1-42af-aabb-ba5de3a39cbc",
+                "title": "fearendilele",
+                "slug": null,
+                "state": null,
+                "entityClass": "SubscriberGroup",
+                "icon": null,
+                "url": null,
+                "subscribergroups": []
+            },
+            {
+                "id": "0ec582ed-fd84-4ea6-88f4-258802ce2f52",
+                "title": "Ветер Перемен Party",
+                "slug": null,
+                "state": null,
+                "entityClass": "SubscriberGroup",
+                "icon": null,
+                "url": null,
+                "subscribergroups": []
+            },
+            {
+                "id": "2d31de8f-33c2-497f-ba8d-536c37551858",
+                "title": "Искатель",
+                "slug": null,
+                "state": null,
+                "entityClass": "SubscriberGroup",
+                "icon": null,
+                "url": null,
+                "subscribergroups": []
+            },
+            {
+                "id": "bb3f6d67-81ae-4f8a-a5e1-b40faca7682d",
+                "title": "Тест Players",
+                "slug": null,
+                "state": null,
+                "entityClass": "SubscriberGroup",
+                "icon": null,
+                "url": null,
+                "subscribergroups": []
+            },
+            {
+                "id": "71f04d15-9660-4f42-b8c6-7fa0c94c7f76",
+                "title": "Хранитель мудрости",
+                "slug": null,
+                "state": null,
+                "entityClass": "SubscriberGroup",
+                "icon": null,
+                "url": null,
+                "subscribergroups": []
+            }
+        ],
+        "folderId": "-1",
+        "tags": "",
+        "updateDate": {
+            "date": "2026-06-10 12:32:50.000000",
+            "timezone_type": 3,
+            "timezone": "Europe/London"
+        }
+    },
+    "portrait": null,
+    "articleParent": {
+        "id": "d993bea5-aeff-4ea7-b30e-b761269a54d0",
+        "title": "Астария",
+        "slug": "D090D181D182D0B0D180D0B8D18F-article",
+        "state": "public",
+        "isWip": true,
+        "isDraft": false,
+        "entityClass": "Location",
+        "icon": null,
+        "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D090D181D182D0B0D180D0B8D18F-article",
+        "subscribergroups": [],
+        "folderId": "0ad2fbb9-ed01-4bea-8ac3-ef66498a2755",
+        "tags": "",
+        "updateDate": {
+            "date": "2025-01-22 07:38:03.000000",
+            "timezone_type": 3,
+            "timezone": "Europe/London"
+        }
+    },
+    "cover": {
+        "id": 725312,
+        "title": "Edge_of_Darkness_Mountains.jpg",
+        "slug": null,
+        "state": "public",
+        "isWip": null,
+        "isDraft": null,
+        "entityClass": "Image",
+        "icon": "fa-solid fa-image",
+        "url": "https://www.worldanvil.com/uploads/images/2ec788c6034182f4c5743a9abcbeee47.jpg",
+        "subscribergroups": [],
+        "folderId": "2b3b75ad-d5d1-4c9f-8f58-41af0b37b555",
+        "tags": "",
+        "updateDate": {
+            "date": "2025-10-15 07:21:16.000000",
+            "timezone_type": 3,
+            "timezone": "Europe/London"
+        }
+    },
+    "coverSource": "Location",
+    "pronunciation": null,
+    "snippet": null,
+    "seeded": null,
+    "sidebarcontent": null,
+    "sidepanelcontenttop": null,
+    "sidepanelcontent": null,
+    "sidebarcontentbottom": null,
+    "footnotes": null,
+    "fullfooter": null,
+    "authornotes": null,
+    "scrapbook": null,
+    "credits": null,
+    "displaySidebar": true,
+    "articleNext": null,
+    "articlePrevious": null,
+    "timeline": null,
+    "prompt": null,
+    "gallery": {
+        "id": 18449,
+        "title": "Кельн",
+        "slug": null,
+        "state": null,
+        "isWip": null,
+        "isDraft": null,
+        "entityClass": "Gallery",
+        "icon": null,
+        "url": null,
+        "subscribergroups": [],
+        "folderId": null,
+        "tags": null,
+        "updateDate": null
+    },
+    "block": null,
+    "orgchart": null,
+    "showSeeded": false,
+    "webhookUpdate": false,
+    "communityUpdate": false,
+    "commentPlaceholder": null,
+    "passcodecta": null,
+    "metaTitle": null,
+    "metaDescription": null,
+    "subheading": null,
+    "coverIsMap": false,
+    "isFeaturedArticle": false,
+    "isAdultContent": false,
+    "isLocked": false,
+    "allowComments": true,
+    "allowContentCopy": false,
+    "showInToc": true,
+    "isEmphasized": false,
+    "displayAuthor": false,
+    "displayChildrenUnder": true,
+    "displayTitle": true,
+    "displaySheet": false,
+    "badge": null,
+    "childrenArticles": [
+        {
+            "id": "45195831-a168-4070-a165-672168c58861",
+            "title": "Болота Забвения",
+            "slug": "D091D0BED0BBD0BED182D0B0-D097D0B0D0B1D0B2D0B5D0BDD0B8D18F-article",
+            "state": "public",
+            "isWip": true,
+            "isDraft": false,
+            "entityClass": "Location",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D091D0BED0BBD0BED182D0B0-D097D0B0D0B1D0B2D0B5D0BDD0B8D18F-article",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2020-01-10 14:21:17.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "74018fd9-90c5-4db5-ba99-7c16464ee6da",
+            "title": "Горный хребет Грань Тьмы",
+            "slug": "D093D0BED180D0BDD18BD0B9-D185D180D0B5D0B1D0B5D182-D093D180D0B0D0BDD18C-D0A2D18CD0BCD18B-article",
+            "state": "public",
+            "isWip": true,
+            "isDraft": false,
+            "entityClass": "Location",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D093D0BED180D0BDD18BD0B9-D185D180D0B5D0B1D0B5D182-D093D180D0B0D0BDD18C-D0A2D18CD0BCD18B-article",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2022-05-03 21:28:52.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "c6185189-f0c0-4f0b-9b90-32dc0470109e",
+            "title": "Лес Иомар",
+            "slug": "D09BD0B5D181-D098D0BED0BCD0B0D180-article",
+            "state": "public",
+            "isWip": true,
+            "isDraft": false,
+            "entityClass": "Location",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D09BD0B5D181-D098D0BED0BCD0B0D180-article",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2019-12-26 13:28:11.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "9ad88cc3-07f9-48e0-be83-67bfcffa5419",
+            "title": "Антра",
+            "slug": "D090D0BDD182D180D0B0-article",
+            "state": "public",
+            "isWip": true,
+            "isDraft": false,
+            "entityClass": "Location",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D090D0BDD182D180D0B0-article",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2019-12-26 13:26:26.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "54e331ca-ca8e-41bb-b76f-76fe8f087f14",
+            "title": "Полуостров Таллас",
+            "slug": "D09FD0BED0BBD183D0BED181D182D180D0BED0B2-D0A2D0B0D0BBD0BBD0B0D181-article",
+            "state": "public",
+            "isWip": true,
+            "isDraft": false,
+            "entityClass": "Location",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D09FD0BED0BBD183D0BED181D182D180D0BED0B2-D0A2D0B0D0BBD0BBD0B0D181-article",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2020-05-04 23:18:50.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "07c790cb-644f-48fd-9b1a-1758e52c42e9",
+            "title": "Арвудский лес",
+            "slug": "D090D180D0B2D183D0B4D181D0BAD0B8D0B9-D0BBD0B5D181-location",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Location",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D090D180D0B2D183D0B4D181D0BAD0B8D0B9-D0BBD0B5D181-location",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-10-23 07:58:12.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "200ddbf9-1f92-496c-9fd5-4ffb7bcb1d95",
+            "title": "Безмолвная падь",
+            "slug": "D091D0B5D0B7D0BCD0BED0BBD0B2D0BDD0B0D18F-D0BFD0B0D0B4D18C-location",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Location",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D091D0B5D0B7D0BCD0BED0BBD0B2D0BDD0B0D18F-D0BFD0B0D0B4D18C-location",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-10-13 14:58:01.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "51d77899-fb5a-43e6-8122-953d8db8e881",
+            "title": "Веданский лес",
+            "slug": "D092D0B5D0B4D0B0D0BDD181D0BAD0B8D0B9-D0BBD0B5D181-location",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Location",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D092D0B5D0B4D0B0D0BDD181D0BAD0B8D0B9-D0BBD0B5D181-location",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-10-01 09:57:56.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "be466c26-0cf4-49de-a657-31c61cd7b52a",
+            "title": "Вельдранская тайга",
+            "slug": "D092D0B5D0BBD18CD0B4D180D0B0D0BDD181D0BAD0B0D18F-D182D0B0D0B9D0B3D0B0-location",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Location",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D092D0B5D0BBD18CD0B4D180D0B0D0BDD181D0BAD0B0D18F-D182D0B0D0B9D0B3D0B0-location",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-10-25 07:57:23.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "67c62a8d-16e7-4742-b5ad-2a3bfe38017c",
+            "title": "Горный хребет Северный Венец",
+            "slug": "D093D0BED180D0BDD18BD0B9-D185D180D0B5D0B1D0B5D182-D0A1D0B5D0B2D0B5D180D0BDD18BD0B9-D092D0B5D0BDD0B5D186-location",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Location",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D093D0BED180D0BDD18BD0B9-D185D180D0B5D0B1D0B5D182-D0A1D0B5D0B2D0B5D180D0BDD18BD0B9-D092D0B5D0BDD0B5D186-location",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-10-01 09:58:29.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "a448bf56-c28c-495e-8556-b94f512d6a38",
+            "title": "Даирские луга",
+            "slug": "D094D0B0D0B8D180D181D0BAD0B8D0B5-D0BBD183D0B3D0B0--location",
+            "state": "public",
+            "isWip": true,
+            "isDraft": false,
+            "entityClass": "Location",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D094D0B0D0B8D180D181D0BAD0B8D0B5-D0BBD183D0B3D0B0--location",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2022-05-10 20:59:06.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "d6327226-6469-4a30-a1be-4448296392e3",
+            "title": "Девичьи Холмы",
+            "slug": "D094D0B5D0B2D0B8D187D18CD0B8-D0A5D0BED0BBD0BCD18B-location",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Location",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D094D0B5D0B2D0B8D187D18CD0B8-D0A5D0BED0BBD0BCD18B-location",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-10-17 10:11:18.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "dfe5ae24-35db-4d9a-8d03-fdad23edf047",
+            "title": "Иллиорская тайга",
+            "slug": "D098D0BBD0BBD0B8D0BED180D181D0BAD0B0D18F-D182D0B0D0B9D0B3D0B0-location",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Location",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D098D0BBD0BBD0B8D0BED180D181D0BAD0B0D18F-D182D0B0D0B9D0B3D0B0-location",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-10-23 16:04:30.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "28814f70-d722-48e4-971a-adb012382a0e",
+            "title": "Йотунские холмы",
+            "slug": "D099D0BED182D183D0BDD181D0BAD0B8D0B5-D185D0BED0BBD0BCD18B-location",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Location",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D099D0BED182D183D0BDD181D0BAD0B8D0B5-D185D0BED0BBD0BCD18B-location",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-10-17 18:06:39.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "dd128fe3-6252-400b-89e1-2d6797bd8b7e",
+            "title": "Ледяная Пустошь Винтры",
+            "slug": "D09BD0B5D0B4D18FD0BDD0B0D18F-D09FD183D181D182D0BED188D18C-D092D0B8D0BDD182D180D18B-location",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Location",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D09BD0B5D0B4D18FD0BDD0B0D18F-D09FD183D181D182D0BED188D18C-D092D0B8D0BDD182D180D18B-location",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-10-17 17:33:36.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "1a7a0476-bcd8-49e5-8e00-8c29675d1672",
+            "title": "Лес Грейсвуд",
+            "slug": "D09BD0B5D181-D093D180D0B5D0B9D181D0B2D183D0B4-location",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Location",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D09BD0B5D181-D093D180D0B5D0B9D181D0B2D183D0B4-location",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-10-31 17:57:57.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "f7821fd0-117f-460a-b76e-b28fae9d480d",
+            "title": "Лес Рунмарк",
+            "slug": "D09BD0B5D181-D0A0D183D0BDD0BCD0B0D180D0BA-location",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Location",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D09BD0B5D181-D0A0D183D0BDD0BCD0B0D180D0BA-location",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-10-17 18:05:35.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "6606d32b-3c6f-496e-afba-43de39937d4c",
+            "title": "Лес Сольвид",
+            "slug": "D09BD0B5D181-D0A1D0BED0BBD18CD0B2D0B8D0B4-location",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Location",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D09BD0B5D181-D0A1D0BED0BBD18CD0B2D0B8D0B4-location",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": null,
+            "updateDate": {
+                "date": "2024-03-28 21:26:19.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "109bda16-1af9-48f1-b41d-1ab6afa2c464",
+            "title": "Лес Штормвуд",
+            "slug": "D09BD0B5D181-D0A8D182D0BED180D0BCD0B2D183D0B4-location",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Location",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D09BD0B5D181-D0A8D182D0BED180D0BCD0B2D183D0B4-location",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-10-25 07:23:59.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "7cd507b9-7ed1-4517-9399-b037f20680fe",
+            "title": "Морозные холмы",
+            "slug": "D09CD0BED180D0BED0B7D0BDD18BD0B5-D185D0BED0BBD0BCD18B-location",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Location",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D09CD0BED180D0BED0B7D0BDD18BD0B5-D185D0BED0BBD0BCD18B-location",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-10-01 09:59:58.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "26e9ea27-4026-44fe-84cb-d337fa03f07a",
+            "title": "Морозный предел Кайланы",
+            "slug": "D09CD0BED180D0BED0B7D0BDD18BD0B9-D0BFD180D0B5D0B4D0B5D0BB-D09AD0B0D0B9D0BBD0B0D0BDD18B-location",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Location",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D09CD0BED180D0BED0B7D0BDD18BD0B9-D0BFD180D0B5D0B4D0B5D0BB-D09AD0B0D0B9D0BBD0B0D0BDD18B-location",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-10-01 10:00:16.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "a135d13d-638c-4f24-ac4b-9ab81aa2db69",
+            "title": "Озеро Альсваннет",
+            "slug": "D09ED0B7D0B5D180D0BE-D090D0BBD18CD181D0B2D0B0D0BDD0BDD0B5D182-location",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Location",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D09ED0B7D0B5D180D0BE-D090D0BBD18CD181D0B2D0B0D0BDD0BDD0B5D182-location",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-10-01 10:00:58.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "2a22f5bc-0fed-4741-83bc-a15fd4ff275b",
+            "title": "Озеро Валарен",
+            "slug": "D09ED0B7D0B5D180D0BE-D092D0B0D0BBD0B0D180D0B5D0BD-location",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Location",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D09ED0B7D0B5D180D0BE-D092D0B0D0BBD0B0D180D0B5D0BD-location",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-10-01 10:01:09.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "d1805c58-bac3-4cd9-8a82-c02ff50b21a8",
+            "title": "Озеро Нордавеллир",
+            "slug": "D09ED0B7D0B5D180D0BE-D09DD0BED180D0B4D0B0D0B2D0B5D0BBD0BBD0B8D180-location",
+            "state": "public",
+            "isWip": true,
+            "isDraft": false,
+            "entityClass": "Location",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D09ED0B7D0B5D180D0BE-D09DD0BED180D0B4D0B0D0B2D0B5D0BBD0BBD0B8D180-location",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2024-03-20 07:36:34.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "a592c012-1347-41fa-8a6b-5a72ca54eb90",
+            "title": "Озеро Тисфьёрд",
+            "slug": "D09ED0B7D0B5D180D0BE-D0A2D0B8D181D184D18CD191D180D0B4-location",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Location",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D09ED0B7D0B5D180D0BE-D0A2D0B8D181D184D18CD191D180D0B4-location",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-10-01 10:03:44.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "282e4255-8935-4947-be8d-b048122991dd",
+            "title": "Предгорья Битхорн",
+            "slug": "D09FD180D0B5D0B4D0B3D0BED180D18CD18F-D091D0B8D182D185D0BED180D0BD-location",
+            "state": "public",
+            "isWip": true,
+            "isDraft": false,
+            "entityClass": "Location",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D09FD180D0B5D0B4D0B3D0BED180D18CD18F-D091D0B8D182D185D0BED180D0BD-location",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": null,
+            "updateDate": {
+                "date": "2020-12-22 20:53:08.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "bc669eb1-b42d-4f9a-89a1-baf476a62d2b",
+            "title": "Равнина Вайтфилд",
+            "slug": "D0A0D0B0D0B2D0BDD0B8D0BDD0B0-D092D0B0D0B9D182D184D0B8D0BBD0B4-location",
+            "state": "public",
+            "isWip": true,
+            "isDraft": false,
+            "entityClass": "Location",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D0A0D0B0D0B2D0BDD0B8D0BDD0B0-D092D0B0D0B9D182D184D0B8D0BBD0B4-location",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": null,
+            "updateDate": {
+                "date": "2020-12-07 21:24:42.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "14962408-5100-4ce7-b9ee-8a2a89788d77",
+            "title": "Регион Аркенхель",
+            "slug": "D0A0D0B5D0B3D0B8D0BED0BD-D090D180D0BAD0B5D0BDD185D0B5D0BBD18C-location",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Location",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D0A0D0B5D0B3D0B8D0BED0BD-D090D180D0BAD0B5D0BDD185D0B5D0BBD18C-location",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-10-23 07:25:45.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "e6d01503-f22a-46c9-993d-020d691dc992",
+            "title": "Река Арвиннель",
+            "slug": "D0A0D0B5D0BAD0B0-D090D180D0B2D0B8D0BDD0BDD0B5D0BBD18C-location",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Location",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D0A0D0B5D0BAD0B0-D090D180D0B2D0B8D0BDD0BDD0B5D0BBD18C-location",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-10-24 08:10:36.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "abec62a1-e110-4491-a224-5c9b22201295",
+            "title": "Река Йоки",
+            "slug": "D0A0D0B5D0BAD0B0-D099D0BED0BAD0B8-location",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Location",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D0A0D0B5D0BAD0B0-D099D0BED0BAD0B8-location",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-10-17 12:45:53.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "63043646-cd6d-4457-9d42-8a089fe65c4b",
+            "title": "Река Красивая",
+            "slug": "D0A0D0B5D0BAD0B0-D09AD180D0B0D181D0B8D0B2D0B0D18F-location",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Location",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D0A0D0B5D0BAD0B0-D09AD180D0B0D181D0B8D0B2D0B0D18F-location",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-10-01 10:15:30.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "4bdd0746-6c4e-4983-ab1f-ad325f35336d",
+            "title": "Река Найтли",
+            "slug": "D0A0D0B5D0BAD0B0-D09DD0B0D0B9D182D0BBD0B8-location",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Location",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D0A0D0B5D0BAD0B0-D09DD0B0D0B9D182D0BBD0B8-location",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-10-31 16:21:58.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "e0bcef8c-a334-48a3-b566-d9233e09b203",
+            "title": "Река Сигна",
+            "slug": "D0A0D0B5D0BAD0B0-D0A1D0B8D0B3D0BDD0B0-location",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Location",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D0A0D0B5D0BAD0B0-D0A1D0B8D0B3D0BDD0B0-location",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-10-17 18:51:20.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "2d0c089a-f863-4584-b2e7-b0ed68613630",
+            "title": "Река Ульвия",
+            "slug": "D0A0D0B5D0BAD0B0-D0A3D0BBD18CD0B2D0B8D18F-location",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Location",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D0A0D0B5D0BAD0B0-D0A3D0BBD18CD0B2D0B8D18F-location",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-10-17 18:54:46.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "a12c86da-bebd-4145-b496-262074bdc50c",
+            "title": "Сайлорский лес",
+            "slug": "D0A1D0B0D0B9D0BBD0BED180D181D0BAD0B8D0B9-D0BBD0B5D181-location",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Location",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D0A1D0B0D0B9D0BBD0BED180D181D0BAD0B8D0B9-D0BBD0B5D181-location",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-10-23 16:10:44.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "bf87a2fd-42d8-4fdc-a4d1-106caeeaed19",
+            "title": "Солёный берег",
+            "slug": "D0A1D0BED0BBD191D0BDD18BD0B9-D0B1D0B5D180D0B5D0B3-location",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Location",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D0A1D0BED0BBD191D0BDD18BD0B9-D0B1D0B5D180D0B5D0B3-location",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-10-17 18:42:20.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "503b29d4-7a81-4ac8-865d-1b3d6809b876",
+            "title": "Сребролесье",
+            "slug": "D0A1D180D0B5D0B1D180D0BED0BBD0B5D181D18CD0B5-location",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Location",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D0A1D180D0B5D0B1D180D0BED0BBD0B5D181D18CD0B5-location",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-10-13 11:05:27.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "8fc6181c-53b4-4bb1-8f44-f83a4554bdc9",
+            "title": "Триглавское озеро",
+            "slug": "D0A2D180D0B8D0B3D0BBD0B0D0B2D181D0BAD0BED0B5-D0BED0B7D0B5D180D0BE-location",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Location",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D0A2D180D0B8D0B3D0BBD0B0D0B2D181D0BAD0BED0B5-D0BED0B7D0B5D180D0BE-location",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-10-01 10:16:43.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "74450c72-0322-4e1a-a0bf-d4a4087d07e6",
+            "title": "Хвойничье предгорье",
+            "slug": "D0A5D0B2D0BED0B9D0BDD0B8D187D18CD0B5-D0BFD180D0B5D0B4D0B3D0BED180D18CD0B5-location",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Location",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D0A5D0B2D0BED0B9D0BDD0B8D187D18CD0B5-D0BFD180D0B5D0B4D0B3D0BED180D18CD0B5-location",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-10-13 11:01:20.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        }
+    ],
+    "editURL": "https://www.worldanvil.com/world/location/9be9351d-d56f-4094-8b35-97b8e8bc3afb/edit",
+    "alternativename": null,
+    "geography": null,
+    "naturalresources": null,
+    "population": null,
+    "areaSize": null,
+    "demographics": null,
+    "demonym": null,
+    "defences": null,
+    "infrastructure": null,
+    "guilds": null,
+    "history": null,
+    "tourism": null,
+    "industry": null,
+    "architecture": null,
+    "government": null,
+    "assets": null,
+    "locationTemplateType": null,
+    "constructed": null,
+    "ruined": null,
+    "florafauna": null,
+    "ecosystem": null,
+    "ecosystemCycles": null,
+    "localizedPhenomena": null,
+    "climate": null,
+    "alterations": null,
+    "purpose": null,
+    "design": null,
+    "entries": null,
+    "denizens": null,
+    "valuables": null,
+    "hazards": null,
+    "effects": null,
+    "sensory": null,
+    "properties": null,
+    "contents": null,
+    "pointOfInterest": null,
+    "district": null,
+    "children": [
+        {
+            "id": "9ad88cc3-07f9-48e0-be83-67bfcffa5419",
+            "title": "Антра",
+            "slug": "D090D0BDD182D180D0B0-article",
+            "state": "public",
+            "isWip": true,
+            "isDraft": false,
+            "entityClass": "Location",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D090D0BDD182D180D0B0-article",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2019-12-26 13:26:26.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "07c790cb-644f-48fd-9b1a-1758e52c42e9",
+            "title": "Арвудский лес",
+            "slug": "D090D180D0B2D183D0B4D181D0BAD0B8D0B9-D0BBD0B5D181-location",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Location",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D090D180D0B2D183D0B4D181D0BAD0B8D0B9-D0BBD0B5D181-location",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-10-23 07:58:12.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "200ddbf9-1f92-496c-9fd5-4ffb7bcb1d95",
+            "title": "Безмолвная падь",
+            "slug": "D091D0B5D0B7D0BCD0BED0BBD0B2D0BDD0B0D18F-D0BFD0B0D0B4D18C-location",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Location",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D091D0B5D0B7D0BCD0BED0BBD0B2D0BDD0B0D18F-D0BFD0B0D0B4D18C-location",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-10-13 14:58:01.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "45195831-a168-4070-a165-672168c58861",
+            "title": "Болота Забвения",
+            "slug": "D091D0BED0BBD0BED182D0B0-D097D0B0D0B1D0B2D0B5D0BDD0B8D18F-article",
+            "state": "public",
+            "isWip": true,
+            "isDraft": false,
+            "entityClass": "Location",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D091D0BED0BBD0BED182D0B0-D097D0B0D0B1D0B2D0B5D0BDD0B8D18F-article",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2020-01-10 14:21:17.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "51d77899-fb5a-43e6-8122-953d8db8e881",
+            "title": "Веданский лес",
+            "slug": "D092D0B5D0B4D0B0D0BDD181D0BAD0B8D0B9-D0BBD0B5D181-location",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Location",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D092D0B5D0B4D0B0D0BDD181D0BAD0B8D0B9-D0BBD0B5D181-location",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-10-01 09:57:56.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "be466c26-0cf4-49de-a657-31c61cd7b52a",
+            "title": "Вельдранская тайга",
+            "slug": "D092D0B5D0BBD18CD0B4D180D0B0D0BDD181D0BAD0B0D18F-D182D0B0D0B9D0B3D0B0-location",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Location",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D092D0B5D0BBD18CD0B4D180D0B0D0BDD181D0BAD0B0D18F-D182D0B0D0B9D0B3D0B0-location",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-10-25 07:57:23.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "74018fd9-90c5-4db5-ba99-7c16464ee6da",
+            "title": "Горный хребет Грань Тьмы",
+            "slug": "D093D0BED180D0BDD18BD0B9-D185D180D0B5D0B1D0B5D182-D093D180D0B0D0BDD18C-D0A2D18CD0BCD18B-article",
+            "state": "public",
+            "isWip": true,
+            "isDraft": false,
+            "entityClass": "Location",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D093D0BED180D0BDD18BD0B9-D185D180D0B5D0B1D0B5D182-D093D180D0B0D0BDD18C-D0A2D18CD0BCD18B-article",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2022-05-03 21:28:52.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "a448bf56-c28c-495e-8556-b94f512d6a38",
+            "title": "Даирские луга",
+            "slug": "D094D0B0D0B8D180D181D0BAD0B8D0B5-D0BBD183D0B3D0B0--location",
+            "state": "public",
+            "isWip": true,
+            "isDraft": false,
+            "entityClass": "Location",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D094D0B0D0B8D180D181D0BAD0B8D0B5-D0BBD183D0B3D0B0--location",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2022-05-10 20:59:06.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "d6327226-6469-4a30-a1be-4448296392e3",
+            "title": "Девичьи Холмы",
+            "slug": "D094D0B5D0B2D0B8D187D18CD0B8-D0A5D0BED0BBD0BCD18B-location",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Location",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D094D0B5D0B2D0B8D187D18CD0B8-D0A5D0BED0BBD0BCD18B-location",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-10-17 10:11:18.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "dfe5ae24-35db-4d9a-8d03-fdad23edf047",
+            "title": "Иллиорская тайга",
+            "slug": "D098D0BBD0BBD0B8D0BED180D181D0BAD0B0D18F-D182D0B0D0B9D0B3D0B0-location",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Location",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D098D0BBD0BBD0B8D0BED180D181D0BAD0B0D18F-D182D0B0D0B9D0B3D0B0-location",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-10-23 16:04:30.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "28814f70-d722-48e4-971a-adb012382a0e",
+            "title": "Йотунские холмы",
+            "slug": "D099D0BED182D183D0BDD181D0BAD0B8D0B5-D185D0BED0BBD0BCD18B-location",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Location",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D099D0BED182D183D0BDD181D0BAD0B8D0B5-D185D0BED0BBD0BCD18B-location",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-10-17 18:06:39.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "dd128fe3-6252-400b-89e1-2d6797bd8b7e",
+            "title": "Ледяная Пустошь Винтры",
+            "slug": "D09BD0B5D0B4D18FD0BDD0B0D18F-D09FD183D181D182D0BED188D18C-D092D0B8D0BDD182D180D18B-location",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Location",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D09BD0B5D0B4D18FD0BDD0B0D18F-D09FD183D181D182D0BED188D18C-D092D0B8D0BDD182D180D18B-location",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-10-17 17:33:36.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "1a7a0476-bcd8-49e5-8e00-8c29675d1672",
+            "title": "Лес Грейсвуд",
+            "slug": "D09BD0B5D181-D093D180D0B5D0B9D181D0B2D183D0B4-location",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Location",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D09BD0B5D181-D093D180D0B5D0B9D181D0B2D183D0B4-location",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-10-31 17:57:57.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "c6185189-f0c0-4f0b-9b90-32dc0470109e",
+            "title": "Лес Иомар",
+            "slug": "D09BD0B5D181-D098D0BED0BCD0B0D180-article",
+            "state": "public",
+            "isWip": true,
+            "isDraft": false,
+            "entityClass": "Location",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D09BD0B5D181-D098D0BED0BCD0B0D180-article",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2019-12-26 13:28:11.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "f7821fd0-117f-460a-b76e-b28fae9d480d",
+            "title": "Лес Рунмарк",
+            "slug": "D09BD0B5D181-D0A0D183D0BDD0BCD0B0D180D0BA-location",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Location",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D09BD0B5D181-D0A0D183D0BDD0BCD0B0D180D0BA-location",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-10-17 18:05:35.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "6606d32b-3c6f-496e-afba-43de39937d4c",
+            "title": "Лес Сольвид",
+            "slug": "D09BD0B5D181-D0A1D0BED0BBD18CD0B2D0B8D0B4-location",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Location",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D09BD0B5D181-D0A1D0BED0BBD18CD0B2D0B8D0B4-location",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": null,
+            "updateDate": {
+                "date": "2024-03-28 21:26:19.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "109bda16-1af9-48f1-b41d-1ab6afa2c464",
+            "title": "Лес Штормвуд",
+            "slug": "D09BD0B5D181-D0A8D182D0BED180D0BCD0B2D183D0B4-location",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Location",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D09BD0B5D181-D0A8D182D0BED180D0BCD0B2D183D0B4-location",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-10-25 07:23:59.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "7cd507b9-7ed1-4517-9399-b037f20680fe",
+            "title": "Морозные холмы",
+            "slug": "D09CD0BED180D0BED0B7D0BDD18BD0B5-D185D0BED0BBD0BCD18B-location",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Location",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D09CD0BED180D0BED0B7D0BDD18BD0B5-D185D0BED0BBD0BCD18B-location",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-10-01 09:59:58.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "26e9ea27-4026-44fe-84cb-d337fa03f07a",
+            "title": "Морозный предел Кайланы",
+            "slug": "D09CD0BED180D0BED0B7D0BDD18BD0B9-D0BFD180D0B5D0B4D0B5D0BB-D09AD0B0D0B9D0BBD0B0D0BDD18B-location",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Location",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D09CD0BED180D0BED0B7D0BDD18BD0B9-D0BFD180D0B5D0B4D0B5D0BB-D09AD0B0D0B9D0BBD0B0D0BDD18B-location",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-10-01 10:00:16.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "a135d13d-638c-4f24-ac4b-9ab81aa2db69",
+            "title": "Озеро Альсваннет",
+            "slug": "D09ED0B7D0B5D180D0BE-D090D0BBD18CD181D0B2D0B0D0BDD0BDD0B5D182-location",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Location",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D09ED0B7D0B5D180D0BE-D090D0BBD18CD181D0B2D0B0D0BDD0BDD0B5D182-location",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-10-01 10:00:58.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "2a22f5bc-0fed-4741-83bc-a15fd4ff275b",
+            "title": "Озеро Валарен",
+            "slug": "D09ED0B7D0B5D180D0BE-D092D0B0D0BBD0B0D180D0B5D0BD-location",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Location",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D09ED0B7D0B5D180D0BE-D092D0B0D0BBD0B0D180D0B5D0BD-location",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-10-01 10:01:09.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "d1805c58-bac3-4cd9-8a82-c02ff50b21a8",
+            "title": "Озеро Нордавеллир",
+            "slug": "D09ED0B7D0B5D180D0BE-D09DD0BED180D0B4D0B0D0B2D0B5D0BBD0BBD0B8D180-location",
+            "state": "public",
+            "isWip": true,
+            "isDraft": false,
+            "entityClass": "Location",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D09ED0B7D0B5D180D0BE-D09DD0BED180D0B4D0B0D0B2D0B5D0BBD0BBD0B8D180-location",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2024-03-20 07:36:34.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "a592c012-1347-41fa-8a6b-5a72ca54eb90",
+            "title": "Озеро Тисфьёрд",
+            "slug": "D09ED0B7D0B5D180D0BE-D0A2D0B8D181D184D18CD191D180D0B4-location",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Location",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D09ED0B7D0B5D180D0BE-D0A2D0B8D181D184D18CD191D180D0B4-location",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-10-01 10:03:44.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "54e331ca-ca8e-41bb-b76f-76fe8f087f14",
+            "title": "Полуостров Таллас",
+            "slug": "D09FD0BED0BBD183D0BED181D182D180D0BED0B2-D0A2D0B0D0BBD0BBD0B0D181-article",
+            "state": "public",
+            "isWip": true,
+            "isDraft": false,
+            "entityClass": "Location",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D09FD0BED0BBD183D0BED181D182D180D0BED0B2-D0A2D0B0D0BBD0BBD0B0D181-article",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2020-05-04 23:18:50.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "282e4255-8935-4947-be8d-b048122991dd",
+            "title": "Предгорья Битхорн",
+            "slug": "D09FD180D0B5D0B4D0B3D0BED180D18CD18F-D091D0B8D182D185D0BED180D0BD-location",
+            "state": "public",
+            "isWip": true,
+            "isDraft": false,
+            "entityClass": "Location",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D09FD180D0B5D0B4D0B3D0BED180D18CD18F-D091D0B8D182D185D0BED180D0BD-location",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": null,
+            "updateDate": {
+                "date": "2020-12-22 20:53:08.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "bc669eb1-b42d-4f9a-89a1-baf476a62d2b",
+            "title": "Равнина Вайтфилд",
+            "slug": "D0A0D0B0D0B2D0BDD0B8D0BDD0B0-D092D0B0D0B9D182D184D0B8D0BBD0B4-location",
+            "state": "public",
+            "isWip": true,
+            "isDraft": false,
+            "entityClass": "Location",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D0A0D0B0D0B2D0BDD0B8D0BDD0B0-D092D0B0D0B9D182D184D0B8D0BBD0B4-location",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": null,
+            "updateDate": {
+                "date": "2020-12-07 21:24:42.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "9ec1ae62-d7c0-469b-9685-ee27884599b9",
+            "title": "Регион Ардфрост",
+            "slug": "D0A0D0B5D0B3D0B8D0BED0BD-D090D180D0B4D184D180D0BED181D182-location",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Location",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D0A0D0B5D0B3D0B8D0BED0BD-D090D180D0B4D184D180D0BED181D182-location",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-10-25 11:14:12.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "14962408-5100-4ce7-b9ee-8a2a89788d77",
+            "title": "Регион Аркенхель",
+            "slug": "D0A0D0B5D0B3D0B8D0BED0BD-D090D180D0BAD0B5D0BDD185D0B5D0BBD18C-location",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Location",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D0A0D0B5D0B3D0B8D0BED0BD-D090D180D0BAD0B5D0BDD185D0B5D0BBD18C-location",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-10-23 07:25:45.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "e6d01503-f22a-46c9-993d-020d691dc992",
+            "title": "Река Арвиннель",
+            "slug": "D0A0D0B5D0BAD0B0-D090D180D0B2D0B8D0BDD0BDD0B5D0BBD18C-location",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Location",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D0A0D0B5D0BAD0B0-D090D180D0B2D0B8D0BDD0BDD0B5D0BBD18C-location",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-10-24 08:10:36.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "abec62a1-e110-4491-a224-5c9b22201295",
+            "title": "Река Йоки",
+            "slug": "D0A0D0B5D0BAD0B0-D099D0BED0BAD0B8-location",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Location",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D0A0D0B5D0BAD0B0-D099D0BED0BAD0B8-location",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-10-17 12:45:53.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "63043646-cd6d-4457-9d42-8a089fe65c4b",
+            "title": "Река Красивая",
+            "slug": "D0A0D0B5D0BAD0B0-D09AD180D0B0D181D0B8D0B2D0B0D18F-location",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Location",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D0A0D0B5D0BAD0B0-D09AD180D0B0D181D0B8D0B2D0B0D18F-location",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-10-01 10:15:30.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "df2c82be-a04c-4592-a01d-da030ba8ba4f",
+            "title": "Река Мураин",
+            "slug": "D0A0D0B5D0BAD0B0-D09CD183D180D0B0D0B8D0BD-location",
+            "state": "public",
+            "isWip": true,
+            "isDraft": false,
+            "entityClass": "Location",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D0A0D0B5D0BAD0B0-D09CD183D180D0B0D0B8D0BD-location",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2022-05-08 07:49:30.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "4bdd0746-6c4e-4983-ab1f-ad325f35336d",
+            "title": "Река Найтли",
+            "slug": "D0A0D0B5D0BAD0B0-D09DD0B0D0B9D182D0BBD0B8-location",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Location",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D0A0D0B5D0BAD0B0-D09DD0B0D0B9D182D0BBD0B8-location",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-10-31 16:21:58.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "e0bcef8c-a334-48a3-b566-d9233e09b203",
+            "title": "Река Сигна",
+            "slug": "D0A0D0B5D0BAD0B0-D0A1D0B8D0B3D0BDD0B0-location",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Location",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D0A0D0B5D0BAD0B0-D0A1D0B8D0B3D0BDD0B0-location",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-10-17 18:51:20.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "2d0c089a-f863-4584-b2e7-b0ed68613630",
+            "title": "Река Ульвия",
+            "slug": "D0A0D0B5D0BAD0B0-D0A3D0BBD18CD0B2D0B8D18F-location",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Location",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D0A0D0B5D0BAD0B0-D0A3D0BBD18CD0B2D0B8D18F-location",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-10-17 18:54:46.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "a12c86da-bebd-4145-b496-262074bdc50c",
+            "title": "Сайлорский лес",
+            "slug": "D0A1D0B0D0B9D0BBD0BED180D181D0BAD0B8D0B9-D0BBD0B5D181-location",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Location",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D0A1D0B0D0B9D0BBD0BED180D181D0BAD0B8D0B9-D0BBD0B5D181-location",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-10-23 16:10:44.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "bf87a2fd-42d8-4fdc-a4d1-106caeeaed19",
+            "title": "Солёный берег",
+            "slug": "D0A1D0BED0BBD191D0BDD18BD0B9-D0B1D0B5D180D0B5D0B3-location",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Location",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D0A1D0BED0BBD191D0BDD18BD0B9-D0B1D0B5D180D0B5D0B3-location",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-10-17 18:42:20.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "503b29d4-7a81-4ac8-865d-1b3d6809b876",
+            "title": "Сребролесье",
+            "slug": "D0A1D180D0B5D0B1D180D0BED0BBD0B5D181D18CD0B5-location",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Location",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D0A1D180D0B5D0B1D180D0BED0BBD0B5D181D18CD0B5-location",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-10-13 11:05:27.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "8fc6181c-53b4-4bb1-8f44-f83a4554bdc9",
+            "title": "Триглавское озеро",
+            "slug": "D0A2D180D0B8D0B3D0BBD0B0D0B2D181D0BAD0BED0B5-D0BED0B7D0B5D180D0BE-location",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Location",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D0A2D180D0B8D0B3D0BBD0B0D0B2D181D0BAD0BED0B5-D0BED0B7D0B5D180D0BE-location",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-10-01 10:16:43.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "74450c72-0322-4e1a-a0bf-d4a4087d07e6",
+            "title": "Хвойничье предгорье",
+            "slug": "D0A5D0B2D0BED0B9D0BDD0B8D187D18CD0B5-D0BFD180D0B5D0B4D0B3D0BED180D18CD0B5-location",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Location",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D0A5D0B2D0BED0B9D0BDD0B8D187D18CD0B5-D0BFD180D0B5D0B4D0B3D0BED180D18CD0B5-location",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-10-13 11:01:20.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        }
+    ],
+    "parent": {
+        "id": "d993bea5-aeff-4ea7-b30e-b761269a54d0",
+        "title": "Астария",
+        "slug": "D090D181D182D0B0D180D0B8D18F-article",
+        "state": "public",
+        "isWip": true,
+        "isDraft": false,
+        "entityClass": "Location",
+        "icon": null,
+        "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D090D181D182D0B0D180D0B8D18F-article",
+        "subscribergroups": [],
+        "folderId": "0ad2fbb9-ed01-4bea-8ac3-ef66498a2755",
+        "tags": "",
+        "updateDate": {
+            "date": "2025-01-22 07:38:03.000000",
+            "timezone_type": 3,
+            "timezone": "Europe/London"
+        }
+    },
+    "type": null,
+    "person": null,
+    "vehicle": null,
+    "rank": null,
+    "organization": null,
+    "isEditable": true,
+    "success": true
+}

@@ -1,0 +1,43 @@
+{
+    "id": 5218264,
+    "title": "Avgars.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://www.worldanvil.com/uploads/images/37424dea6664356554aa193c37680288.jpg",
+    "subscribergroups": [],
+    "folderId": "ff5fa73d-915b-4e04-9f6c-2c27bac4ff6c",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:19:47.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "37424dea6664356554aa193c37680288.jpg",
+    "path": "/uploads/images",
+    "size": 642404,
+    "width": 1170,
+    "height": 658,
+    "extension": "jpg",
+    "description": "@[Авгарцы](ethnicity:64b530f6-da96-4817-9774-a113689d1116)",
+    "alt": null,
+    "creditArtistName": null,
+    "creditArtistWebsite": null,
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2024-01-05 21:55:15.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": null,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": null,
+    "pageUrl": "https://www.worldanvil.com/i/5218264",
+    "isEditable": true,
+    "success": true
+}

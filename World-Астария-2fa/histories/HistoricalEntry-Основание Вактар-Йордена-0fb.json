@@ -1,0 +1,140 @@
+{
+    "id": "28c910fb-ba66-4256-ab08-e75c06fe7823",
+    "title": "Основание Вактар-Йордена",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "HistoricalEntry",
+    "icon": "fa-solid fa-calendar-lines-pen",
+    "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/h/28c910fb-ba66-4256-ab08-e75c06fe7823",
+    "subscribergroups": [],
+    "folderId": "-1",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-09-26 11:39:28.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "significance": 2,
+    "year": "-1635",
+    "month": null,
+    "day": null,
+    "hour": null,
+    "minute": null,
+    "endingYear": null,
+    "endingMonth": null,
+    "endingDay": null,
+    "endingHour": null,
+    "endingMinute": null,
+    "lane": null,
+    "backgroundColor": null,
+    "category": {
+        "id": "d5b35573-8e2c-4685-ae7d-6ec69f7212b6",
+        "title": "Founding",
+        "slug": null,
+        "state": null,
+        "isWip": null,
+        "isDraft": null,
+        "entityClass": "HistoricalEntryCategory",
+        "icon": "ra ra-3x ra-capitol",
+        "url": null,
+        "subscribergroups": [],
+        "folderId": null,
+        "tags": null,
+        "updateDate": null
+    },
+    "content": "Экспедиция @[Церунны](person:19b90f28-12ec-4681-99d0-1a6eef547ff1) достигает озера @[Нордавеллир](location:d1805c58-bac3-4cd9-8a82-c02ff50b21a8) и освобождает @[Винтру](person:2228f97a-6967-4157-a11c-da812016336a) из ледяного плена. Та в благодарность создаёт первых @[Вознесённых](profession:01d44e4d-9b45-4c15-8f81-c3d18c9c1887) и нарекает их @[вактарами](ethnicity:1bd5ce6b-bf55-45fc-84db-27f7470d32e5). Они создают новое государство - @[Вактар-Йорден](organization:016108d8-db6c-4900-963f-6be1c7c21b73).",
+    "fullcontent": null,
+    "displayDateName": null,
+    "creationDate": {
+        "date": "2025-02-08 07:24:06.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "meta": null,
+    "likes": null,
+    "world": {
+        "id": "2be362fa-ad81-4128-92e8-a40c5ec3b5db",
+        "title": "Астария",
+        "slug": "D090D181D182D0B0D180D0B8D18F-losfer",
+        "state": "public",
+        "isWip": null,
+        "isDraft": null,
+        "entityClass": "World",
+        "icon": "fa-solid fa-globe-stand",
+        "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer",
+        "subscribergroups": [
+            {
+                "id": "390d8ece-7d4e-4620-8cc5-f47128ab77cf",
+                "title": "Adventurers of Тест Party",
+                "slug": null,
+                "state": null,
+                "entityClass": "SubscriberGroup",
+                "icon": null,
+                "url": null,
+                "subscribergroups": []
+            },
+            {
+                "id": "457339f6-bfe1-42af-aabb-ba5de3a39cbc",
+                "title": "fearendilele",
+                "slug": null,
+                "state": null,
+                "entityClass": "SubscriberGroup",
+                "icon": null,
+                "url": null,
+                "subscribergroups": []
+            },
+            {
+                "id": "0ec582ed-fd84-4ea6-88f4-258802ce2f52",
+                "title": "Ветер Перемен Party",
+                "slug": null,
+                "state": null,
+                "entityClass": "SubscriberGroup",
+                "icon": null,
+                "url": null,
+                "subscribergroups": []
+            },
+            {
+                "id": "2d31de8f-33c2-497f-ba8d-536c37551858",
+                "title": "Искатель",
+                "slug": null,
+                "state": null,
+                "entityClass": "SubscriberGroup",
+                "icon": null,
+                "url": null,
+                "subscribergroups": []
+            },
+            {
+                "id": "bb3f6d67-81ae-4f8a-a5e1-b40faca7682d",
+                "title": "Тест Players",
+                "slug": null,
+                "state": null,
+                "entityClass": "SubscriberGroup",
+                "icon": null,
+                "url": null,
+                "subscribergroups": []
+            },
+            {
+                "id": "71f04d15-9660-4f42-b8c6-7fa0c94c7f76",
+                "title": "Хранитель мудрости",
+                "slug": null,
+                "state": null,
+                "entityClass": "SubscriberGroup",
+                "icon": null,
+                "url": null,
+                "subscribergroups": []
+            }
+        ],
+        "folderId": "-1",
+        "tags": "",
+        "updateDate": {
+            "date": "2026-06-10 12:32:50.000000",
+            "timezone_type": 3,
+            "timezone": "Europe/London"
+        }
+    },
+    "displayRange": true,
+    "isEditable": true,
+    "success": true
+}

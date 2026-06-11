@@ -1,0 +1,43 @@
+{
+    "id": 3698413,
+    "title": "Lang-An_Empire.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://www.worldanvil.com/uploads/images/755c4628b4392e067f77b761126d44f5.jpg",
+    "subscribergroups": [],
+    "folderId": "69000ae7-f1b9-4373-b3b5-edb4b6cd6a10",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:20:13.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "755c4628b4392e067f77b761126d44f5.jpg",
+    "path": "/uploads/images",
+    "size": 1106657,
+    "width": 1170,
+    "height": 658,
+    "extension": "jpg",
+    "description": "@[Империя Ланг-Ан](organization:f8e607a8-0c3d-4da4-82fc-bfc19ae14719)",
+    "alt": null,
+    "creditArtistName": "Shusei Sasaya",
+    "creditArtistWebsite": "https://www.artstation.com/shujp",
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2022-09-05 20:42:26.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": null,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": null,
+    "pageUrl": "https://www.worldanvil.com/i/3698413",
+    "isEditable": true,
+    "success": true
+}

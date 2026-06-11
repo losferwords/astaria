@@ -1,0 +1,43 @@
+{
+    "id": 1067824,
+    "title": "Gunpowder.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://www.worldanvil.com/uploads/images/42151d9ebec7613f8566a1d4a3bf3f80.jpg",
+    "subscribergroups": [],
+    "folderId": "9283027e-7916-4a1a-8c33-2dfe46c49842",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:25:11.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "42151d9ebec7613f8566a1d4a3bf3f80.jpg",
+    "path": "/uploads/images",
+    "size": 551949,
+    "width": 1170,
+    "height": 658,
+    "extension": "jpg",
+    "description": "@[Талассийский](organization:292c0665-8603-4fb5-9390-564f323a2615) порох",
+    "alt": null,
+    "creditArtistName": null,
+    "creditArtistWebsite": null,
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2020-04-30 22:07:50.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": 60,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": null,
+    "pageUrl": "https://www.worldanvil.com/i/1067824",
+    "isEditable": true,
+    "success": true
+}

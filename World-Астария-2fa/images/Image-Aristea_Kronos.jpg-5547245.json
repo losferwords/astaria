@@ -1,0 +1,43 @@
+{
+    "id": 5547245,
+    "title": "Aristea_Kronos.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://wa-cdn.nyc3.cdn.digitaloceanspaces.com/user-data/production/ae978bc7-ef5e-47d8-8585-f7fae49590a5/uploads/images/e79c1e63817ad8e224ab66cb483b5f2a.jpeg",
+    "subscribergroups": [],
+    "folderId": "8627009f-ffbf-4163-9eff-4e41b4e59ef8",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:23:13.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "e79c1e63817ad8e224ab66cb483b5f2a.jpeg",
+    "path": "https://wa-cdn.nyc3.cdn.digitaloceanspaces.com/user-data/production/ae978bc7-ef5e-47d8-8585-f7fae49590a5/uploads/images",
+    "size": 448424,
+    "width": 508,
+    "height": 901,
+    "extension": "jpeg",
+    "description": "@[Аристея Кронос](person:36a75140-fcc9-4cec-81e1-79021bd10778)",
+    "alt": null,
+    "creditArtistName": null,
+    "creditArtistWebsite": null,
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2024-04-23 22:13:22.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": 1,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": null,
+    "pageUrl": "https://www.worldanvil.com/i/5547245",
+    "isEditable": true,
+    "success": true
+}

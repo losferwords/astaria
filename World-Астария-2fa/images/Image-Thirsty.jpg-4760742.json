@@ -1,0 +1,43 @@
+{
+    "id": 4760742,
+    "title": "Thirsty.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://www.worldanvil.com/uploads/images/f8ae159996f6efecc87b639176b3eb2d.jpg",
+    "subscribergroups": [],
+    "folderId": "c7491703-3774-4cf0-b989-2fc12673b821",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:18:43.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "f8ae159996f6efecc87b639176b3eb2d.jpg",
+    "path": "/uploads/images",
+    "size": 647058,
+    "width": 1170,
+    "height": 658,
+    "extension": "jpg",
+    "description": "@[Жаждущие](organization:5df9f31e-7993-4ae6-9bf6-a57e3c9a2b29)",
+    "alt": null,
+    "creditArtistName": null,
+    "creditArtistWebsite": null,
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2023-08-05 19:52:11.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": 57,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": null,
+    "pageUrl": "https://www.worldanvil.com/i/4760742",
+    "isEditable": true,
+    "success": true
+}

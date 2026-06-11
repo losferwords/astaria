@@ -1,0 +1,43 @@
+{
+    "id": 5231182,
+    "title": "Axel_Khan.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://www.worldanvil.com/uploads/images/1a490588d1c3960cf8aa5cde9bdf06a0.jpg",
+    "subscribergroups": [],
+    "folderId": "8627009f-ffbf-4163-9eff-4e41b4e59ef8",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:23:20.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "1a490588d1c3960cf8aa5cde9bdf06a0.jpg",
+    "path": "/uploads/images",
+    "size": 437237,
+    "width": 508,
+    "height": 901,
+    "extension": "jpg",
+    "description": "@[Аксель Хан](person:31220696-42c9-45af-b6cc-c7fb11a49838)",
+    "alt": null,
+    "creditArtistName": null,
+    "creditArtistWebsite": null,
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2024-01-09 21:28:04.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": null,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": null,
+    "pageUrl": "https://www.worldanvil.com/i/5231182",
+    "isEditable": true,
+    "success": true
+}

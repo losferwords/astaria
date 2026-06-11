@@ -1,0 +1,43 @@
+{
+    "id": 5180495,
+    "title": "Darkhan_City.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://www.worldanvil.com/uploads/images/c5bdc9236901e760b4fb01333d09fc2c.jpg",
+    "subscribergroups": [],
+    "folderId": "ff5fa73d-915b-4e04-9f6c-2c27bac4ff6c",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:19:49.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "c5bdc9236901e760b4fb01333d09fc2c.jpg",
+    "path": "/uploads/images",
+    "size": 772974,
+    "width": 1170,
+    "height": 658,
+    "extension": "jpg",
+    "description": "@[Город Даркхан](settlement:b27912ff-6e38-4648-8c73-451432cb90a9)",
+    "alt": null,
+    "creditArtistName": null,
+    "creditArtistWebsite": null,
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2023-12-24 12:26:37.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": null,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": null,
+    "pageUrl": "https://www.worldanvil.com/i/5180495",
+    "isEditable": true,
+    "success": true
+}

@@ -1,0 +1,43 @@
+{
+    "id": 725327,
+    "title": "Ashlands.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://www.worldanvil.com/uploads/images/ec5764e1bc5271a8415c49bbc437d282.jpg",
+    "subscribergroups": [],
+    "folderId": "e47abef4-b5e4-4431-9e35-fcb19e9fef3b",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:18:45.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "ec5764e1bc5271a8415c49bbc437d282.jpg",
+    "path": "/uploads/images",
+    "size": 870792,
+    "width": 1170,
+    "height": 658,
+    "extension": "jpg",
+    "description": "Выжженые поля @[Пепельных земель](location:6952e01d-7164-4763-b3ef-f1d58d729e06)",
+    "alt": "Ashlands.jpg",
+    "creditArtistName": "WojtekFus",
+    "creditArtistWebsite": "https://www.deviantart.com/wojtekfus",
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2022-11-25 12:11:58.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": 178,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": "",
+    "pageUrl": "https://www.worldanvil.com/i/725327",
+    "isEditable": true,
+    "success": true
+}

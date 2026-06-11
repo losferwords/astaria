@@ -1,0 +1,43 @@
+{
+    "id": 1858306,
+    "title": "Ramat-Hat-Su.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://www.worldanvil.com/uploads/images/df502821e332f61b642d866fd1c6f2da.jpg",
+    "subscribergroups": [],
+    "folderId": "8627009f-ffbf-4163-9eff-4e41b4e59ef8",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:23:57.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "df502821e332f61b642d866fd1c6f2da.jpg",
+    "path": "/uploads/images",
+    "size": 223967,
+    "width": 356,
+    "height": 632,
+    "extension": "jpg",
+    "description": "@[Рамат-Хат-Су](person:9e02fe72-3a11-4836-a682-4cdd18c669bf)",
+    "alt": null,
+    "creditArtistName": "Zhong Yang",
+    "creditArtistWebsite": "https://www.artstation.com/omo0709",
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2021-01-14 19:17:13.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": null,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": null,
+    "pageUrl": "https://www.worldanvil.com/i/1858306",
+    "isEditable": true,
+    "success": true
+}

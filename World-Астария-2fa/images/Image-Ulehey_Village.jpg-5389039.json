@@ -1,0 +1,43 @@
+{
+    "id": 5389039,
+    "title": "Ulehey_Village.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://www.worldanvil.com/uploads/images/02307b1af1780291caa6ddb96a5cac4f.jpg",
+    "subscribergroups": [],
+    "folderId": "ff5fa73d-915b-4e04-9f6c-2c27bac4ff6c",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:19:52.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "02307b1af1780291caa6ddb96a5cac4f.jpg",
+    "path": "/uploads/images",
+    "size": 693580,
+    "width": 1170,
+    "height": 658,
+    "extension": "jpg",
+    "description": "@[Деревня Улехей](settlement:70dd1bfc-0cc9-4e00-bedb-a9cb9ebed951)",
+    "alt": null,
+    "creditArtistName": null,
+    "creditArtistWebsite": null,
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2024-02-28 13:11:34.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": null,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": null,
+    "pageUrl": "https://www.worldanvil.com/i/5389039",
+    "isEditable": true,
+    "success": true
+}

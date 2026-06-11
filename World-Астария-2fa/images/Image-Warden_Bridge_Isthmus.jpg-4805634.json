@@ -1,0 +1,43 @@
+{
+    "id": 4805634,
+    "title": "Warden_Bridge_Isthmus.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://www.worldanvil.com/uploads/images/93ae46d450f3ce83e9685f2a9bedb00a.jpg",
+    "subscribergroups": [],
+    "folderId": "e47abef4-b5e4-4431-9e35-fcb19e9fef3b",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:18:50.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "93ae46d450f3ce83e9685f2a9bedb00a.jpg",
+    "path": "/uploads/images",
+    "size": 767160,
+    "width": 1170,
+    "height": 658,
+    "extension": "jpg",
+    "description": "@[Перешеек Мост Хранителей](location:79a68bb2-803b-4e10-81c6-78e5a02fec1a)",
+    "alt": null,
+    "creditArtistName": null,
+    "creditArtistWebsite": null,
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2023-08-21 22:13:38.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": 73,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": null,
+    "pageUrl": "https://www.worldanvil.com/i/4805634",
+    "isEditable": true,
+    "success": true
+}

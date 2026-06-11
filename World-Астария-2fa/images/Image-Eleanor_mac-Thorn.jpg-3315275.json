@@ -1,0 +1,43 @@
+{
+    "id": 3315275,
+    "title": "Eleanor_mac-Thorn.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://www.worldanvil.com/uploads/images/be164dbf3f2d390613f1ee1b2e713eb9.jpg",
+    "subscribergroups": [],
+    "folderId": "8627009f-ffbf-4163-9eff-4e41b4e59ef8",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:23:32.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "be164dbf3f2d390613f1ee1b2e713eb9.jpg",
+    "path": "/uploads/images",
+    "size": 187195,
+    "width": 508,
+    "height": 901,
+    "extension": "jpg",
+    "description": "@[Элеонора мак Торн](person:8a9c5513-5d4a-406a-9b32-ce77e7f5d439)",
+    "alt": null,
+    "creditArtistName": "Chris Cole",
+    "creditArtistWebsite": "https://www.chriscoleart.com/",
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2022-05-04 13:51:48.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": 12,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": null,
+    "pageUrl": "https://www.worldanvil.com/i/3315275",
+    "isEditable": true,
+    "success": true
+}

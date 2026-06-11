@@ -1,0 +1,19 @@
+{
+    "id": "9b50b461-86d7-43e2-aba1-cf357e2f0834",
+    "title": "География",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "MarkerGroup",
+    "icon": "fa-solid fa-map-location-dot",
+    "url": null,
+    "subscribergroups": [],
+    "folderId": null,
+    "tags": null,
+    "updateDate": null,
+    "activeOnLoad": true,
+    "position": null,
+    "isEditable": true,
+    "success": true
+}

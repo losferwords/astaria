@@ -1,0 +1,43 @@
+{
+    "id": 766923,
+    "title": "Lightbringer_landscape.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://www.worldanvil.com/uploads/images/578de8ad1a006fa9eac5dc56664e0a52.jpg",
+    "subscribergroups": [],
+    "folderId": "35d948e7-3a6c-45a1-ba76-4c38e5103728",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:22:41.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "578de8ad1a006fa9eac5dc56664e0a52.jpg",
+    "path": "/uploads/images",
+    "size": 853761,
+    "width": 1170,
+    "height": 658,
+    "extension": "jpg",
+    "description": null,
+    "alt": null,
+    "creditArtistName": "yy6242",
+    "creditArtistWebsite": "https://www.deviantart.com/yy6242",
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2020-01-14 12:27:31.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": 132,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": "",
+    "pageUrl": "https://www.worldanvil.com/i/766923",
+    "isEditable": true,
+    "success": true
+}

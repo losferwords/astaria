@@ -1,0 +1,43 @@
+{
+    "id": 5275118,
+    "title": "Khangor.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://www.worldanvil.com/uploads/images/4b9cf6a9622e5eec21cccc891257854d.jpg",
+    "subscribergroups": [],
+    "folderId": "14757588-2a69-4676-b878-c979049ff412",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:19:02.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "4b9cf6a9622e5eec21cccc891257854d.jpg",
+    "path": "/uploads/images",
+    "size": 479090,
+    "width": 508,
+    "height": 901,
+    "extension": "jpg",
+    "description": "@[Хангор](person:5e9a68b0-d9a2-4fdb-a284-3b8bbb5b8bbe)",
+    "alt": null,
+    "creditArtistName": null,
+    "creditArtistWebsite": null,
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2024-01-23 18:12:33.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": null,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": null,
+    "pageUrl": "https://www.worldanvil.com/i/5275118",
+    "isEditable": true,
+    "success": true
+}

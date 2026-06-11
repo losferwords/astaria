@@ -1,0 +1,43 @@
+{
+    "id": 1382746,
+    "title": "Gilas.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://www.worldanvil.com/uploads/images/cddf3ef73aa5bdea00e2b4b983895921.jpg",
+    "subscribergroups": [],
+    "folderId": "f03f3f01-783e-438f-834c-b8b59613ec5d",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:19:31.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "cddf3ef73aa5bdea00e2b4b983895921.jpg",
+    "path": "/uploads/images",
+    "size": 979100,
+    "width": 1170,
+    "height": 658,
+    "extension": "jpg",
+    "description": "@[Гилас](organization:f18a827a-9a8a-4444-9c0a-dd5c25f77a4f)",
+    "alt": null,
+    "creditArtistName": "Ubisoft",
+    "creditArtistWebsite": "https://www.ubisoft.com/",
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2020-08-14 22:51:34.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": 70,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": null,
+    "pageUrl": "https://www.worldanvil.com/i/1382746",
+    "isEditable": true,
+    "success": true
+}

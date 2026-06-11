@@ -1,0 +1,43 @@
+{
+    "id": 5015066,
+    "title": "Warden_landscape.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://www.worldanvil.com/uploads/images/04b478b55971eb57386a343f4d5432f4.jpg",
+    "subscribergroups": [],
+    "folderId": "35d948e7-3a6c-45a1-ba76-4c38e5103728",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:22:50.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "04b478b55971eb57386a343f4d5432f4.jpg",
+    "path": "/uploads/images",
+    "size": 749334,
+    "width": 1170,
+    "height": 658,
+    "extension": "jpg",
+    "description": null,
+    "alt": null,
+    "creditArtistName": null,
+    "creditArtistWebsite": null,
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2023-10-30 21:34:11.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": 57,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": null,
+    "pageUrl": "https://www.worldanvil.com/i/5015066",
+    "isEditable": true,
+    "success": true
+}

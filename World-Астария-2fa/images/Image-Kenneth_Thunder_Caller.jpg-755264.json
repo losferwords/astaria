@@ -1,0 +1,43 @@
+{
+    "id": 755264,
+    "title": "Kenneth_Thunder_Caller.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://www.worldanvil.com/uploads/images/da82be6db4051e5e82469436cbb347f0.jpg",
+    "subscribergroups": [],
+    "folderId": "8627009f-ffbf-4163-9eff-4e41b4e59ef8",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:23:38.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "da82be6db4051e5e82469436cbb347f0.jpg",
+    "path": "/uploads/images",
+    "size": 277860,
+    "width": 508,
+    "height": 901,
+    "extension": "jpg",
+    "description": "@[Кеннет Призыватель Бурь](person:b1910c1c-19d3-4500-8bbf-477e1ff3861d)",
+    "alt": "Kenneth_Thunder_Caller.jpg",
+    "creditArtistName": "Captivated2",
+    "creditArtistWebsite": "https://www.deviantart.com/captivated2",
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2022-05-03 21:43:02.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": 14,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": "",
+    "pageUrl": "https://www.worldanvil.com/i/755264",
+    "isEditable": true,
+    "success": true
+}

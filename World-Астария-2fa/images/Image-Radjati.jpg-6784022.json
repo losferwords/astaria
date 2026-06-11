@@ -1,0 +1,43 @@
+{
+    "id": 6784022,
+    "title": "Radjati.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://wa-cdn.nyc3.cdn.digitaloceanspaces.com/user-data/production/ae978bc7-ef5e-47d8-8585-f7fae49590a5/uploads/images/3176289583d1cde807e9304976c31a37.jpeg",
+    "subscribergroups": [],
+    "folderId": "2bc94521-2e5c-4c10-91ba-f6c03660d11c",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:24:48.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "3176289583d1cde807e9304976c31a37.jpeg",
+    "path": "https://wa-cdn.nyc3.cdn.digitaloceanspaces.com/user-data/production/ae978bc7-ef5e-47d8-8585-f7fae49590a5/uploads/images",
+    "size": 943519,
+    "width": 1170,
+    "height": 658,
+    "extension": "jpeg",
+    "description": "@[Раджати](ethnicity:4593f1ed-4413-42d1-8548-2d6fe9fc38fa)",
+    "alt": "Radjati.jpg",
+    "creditArtistName": null,
+    "creditArtistWebsite": null,
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2025-07-02 08:04:22.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": null,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": "",
+    "pageUrl": "https://www.worldanvil.com/i/6784022",
+    "isEditable": true,
+    "success": true
+}

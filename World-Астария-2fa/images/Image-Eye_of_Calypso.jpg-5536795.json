@@ -1,0 +1,43 @@
+{
+    "id": 5536795,
+    "title": "Eye_of_Calypso.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://wa-cdn.nyc3.cdn.digitaloceanspaces.com/user-data/production/ae978bc7-ef5e-47d8-8585-f7fae49590a5/uploads/images/70e833aaf3bff7a18553ebfcacd5b3a4.jpeg",
+    "subscribergroups": [],
+    "folderId": "84808d2f-97b5-455d-a70e-50f2e0d502d0",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:24:20.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "70e833aaf3bff7a18553ebfcacd5b3a4.jpeg",
+    "path": "https://wa-cdn.nyc3.cdn.digitaloceanspaces.com/user-data/production/ae978bc7-ef5e-47d8-8585-f7fae49590a5/uploads/images",
+    "size": 682972,
+    "width": 1170,
+    "height": 658,
+    "extension": "jpeg",
+    "description": "@[Глаз Калипсо](item:14ea8be0-efc5-4c85-a65b-edf9ca268b8f)",
+    "alt": null,
+    "creditArtistName": null,
+    "creditArtistWebsite": null,
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2024-04-19 22:27:18.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": null,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": null,
+    "pageUrl": "https://www.worldanvil.com/i/5536795",
+    "isEditable": true,
+    "success": true
+}

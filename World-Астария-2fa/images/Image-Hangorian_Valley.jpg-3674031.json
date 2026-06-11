@@ -1,0 +1,43 @@
+{
+    "id": 3674031,
+    "title": "Hangorian_Valley.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://www.worldanvil.com/uploads/images/9ff49c2d26f3bace5b9924c93f6b0479.jpg",
+    "subscribergroups": [],
+    "folderId": "e47abef4-b5e4-4431-9e35-fcb19e9fef3b",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:18:47.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "9ff49c2d26f3bace5b9924c93f6b0479.jpg",
+    "path": "/uploads/images",
+    "size": 1110631,
+    "width": 1170,
+    "height": 658,
+    "extension": "jpg",
+    "description": "@[Хангорская долина](location:9da3f66a-d49a-4080-91ad-321e686aa318)",
+    "alt": null,
+    "creditArtistName": "Trabantos",
+    "creditArtistWebsite": "https://www.shutterstock.com/g/pavel+dudek",
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2022-08-29 20:42:42.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": 84,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": null,
+    "pageUrl": "https://www.worldanvil.com/i/3674031",
+    "isEditable": true,
+    "success": true
+}

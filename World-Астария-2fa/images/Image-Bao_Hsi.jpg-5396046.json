@@ -1,0 +1,43 @@
+{
+    "id": 5396046,
+    "title": "Bao_Hsi.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://www.worldanvil.com/uploads/images/a4f25873374a710330bc26a3f5b8a36f.jpg",
+    "subscribergroups": [],
+    "folderId": "8627009f-ffbf-4163-9eff-4e41b4e59ef8",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:23:22.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "a4f25873374a710330bc26a3f5b8a36f.jpg",
+    "path": "/uploads/images",
+    "size": 437633,
+    "width": 508,
+    "height": 901,
+    "extension": "jpg",
+    "description": "@[Бао Си](person:4894907f-5e50-40bc-ad4d-59de91a4744e)",
+    "alt": null,
+    "creditArtistName": null,
+    "creditArtistWebsite": null,
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2024-03-01 20:51:27.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": null,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": null,
+    "pageUrl": "https://www.worldanvil.com/i/5396046",
+    "isEditable": true,
+    "success": true
+}

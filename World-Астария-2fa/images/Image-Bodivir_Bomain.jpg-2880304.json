@@ -1,0 +1,43 @@
+{
+    "id": 2880304,
+    "title": "Bodivir_Bomain.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://www.worldanvil.com/uploads/images/6921e854f4d00473dccd5a3e702a7fb7.jpg",
+    "subscribergroups": [],
+    "folderId": "8627009f-ffbf-4163-9eff-4e41b4e59ef8",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:23:25.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "6921e854f4d00473dccd5a3e702a7fb7.jpg",
+    "path": "/uploads/images",
+    "size": 363474,
+    "width": 508,
+    "height": 901,
+    "extension": "jpg",
+    "description": "@[Бодивир Бомейн](person:c93b5cad-f15c-47e1-8288-564d7d5bc431)",
+    "alt": null,
+    "creditArtistName": "Kate Voynova",
+    "creditArtistWebsite": "https://www.deviantart.com/katevoynova",
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2021-12-09 07:49:29.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": null,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": null,
+    "pageUrl": "https://www.worldanvil.com/i/2880304",
+    "isEditable": true,
+    "success": true
+}

@@ -1,0 +1,43 @@
+{
+    "id": 5003179,
+    "title": "Manai.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://www.worldanvil.com/uploads/images/f5021707f2825015179e90a5a84d2b32.jpg",
+    "subscribergroups": [],
+    "folderId": "96dbd7c1-218d-4af8-a5e2-305d90d0c2bb",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:26:00.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "f5021707f2825015179e90a5a84d2b32.jpg",
+    "path": "/uploads/images",
+    "size": 842973,
+    "width": 1170,
+    "height": 658,
+    "extension": "jpg",
+    "description": "@[Манаи](ethnicity:f9ce2e88-7599-4a26-9dac-cd7a5de7fcae)",
+    "alt": null,
+    "creditArtistName": null,
+    "creditArtistWebsite": null,
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2023-10-26 21:07:29.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": null,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": null,
+    "pageUrl": "https://www.worldanvil.com/i/5003179",
+    "isEditable": true,
+    "success": true
+}

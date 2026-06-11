@@ -1,0 +1,43 @@
+{
+    "id": 3323875,
+    "title": "Murain_River.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://www.worldanvil.com/uploads/images/11ea1767e0db30771f2f7c4195eb18ff.jpg",
+    "subscribergroups": [],
+    "folderId": "9bcfc8dc-ebbb-41a9-8ce9-e1d9f04cbe49",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:20:26.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "11ea1767e0db30771f2f7c4195eb18ff.jpg",
+    "path": "/uploads/images",
+    "size": 903283,
+    "width": 1170,
+    "height": 658,
+    "extension": "jpg",
+    "description": "@[Река Мураин](location:df2c82be-a04c-4592-a01d-da030ba8ba4f)",
+    "alt": "Murain_River.jpg",
+    "creditArtistName": null,
+    "creditArtistWebsite": null,
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2022-05-07 21:02:46.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": 94,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": "",
+    "pageUrl": "https://www.worldanvil.com/i/3323875",
+    "isEditable": true,
+    "success": true
+}

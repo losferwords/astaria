@@ -1,0 +1,43 @@
+{
+    "id": 6523450,
+    "title": "Sao_Wu.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://wa-cdn.nyc3.cdn.digitaloceanspaces.com/user-data/production/ae978bc7-ef5e-47d8-8585-f7fae49590a5/uploads/images/5c648389840fbb1040f9bb55bdcc2699.jpeg",
+    "subscribergroups": [],
+    "folderId": "8627009f-ffbf-4163-9eff-4e41b4e59ef8",
+    "tags": null,
+    "updateDate": {
+        "date": "2025-10-15 07:24:04.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "5c648389840fbb1040f9bb55bdcc2699.jpeg",
+    "path": "https://wa-cdn.nyc3.cdn.digitaloceanspaces.com/user-data/production/ae978bc7-ef5e-47d8-8585-f7fae49590a5/uploads/images",
+    "size": 470194,
+    "width": 508,
+    "height": 901,
+    "extension": "jpeg",
+    "description": null,
+    "alt": null,
+    "creditArtistName": null,
+    "creditArtistWebsite": null,
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2025-04-02 14:33:10.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": null,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": "",
+    "pageUrl": "https://www.worldanvil.com/i/6523450",
+    "isEditable": true,
+    "success": true
+}

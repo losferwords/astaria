@@ -1,0 +1,43 @@
+{
+    "id": 766925,
+    "title": "Avatar_landscape.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://www.worldanvil.com/uploads/images/1cd75a3423f2a64a06cc04dd0dba8886.jpg",
+    "subscribergroups": [],
+    "folderId": "35d948e7-3a6c-45a1-ba76-4c38e5103728",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:22:36.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "1cd75a3423f2a64a06cc04dd0dba8886.jpg",
+    "path": "/uploads/images",
+    "size": 689509,
+    "width": 1170,
+    "height": 658,
+    "extension": "jpg",
+    "description": null,
+    "alt": null,
+    "creditArtistName": "Infinite Worlds",
+    "creditArtistWebsite": "https://lennis.tumblr.com/",
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2020-01-14 12:27:56.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": 151,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": "",
+    "pageUrl": "https://www.worldanvil.com/i/766925",
+    "isEditable": true,
+    "success": true
+}

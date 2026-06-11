@@ -1,0 +1,43 @@
+{
+    "id": 5688879,
+    "title": "Pelemei_Nikos.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://wa-cdn.nyc3.cdn.digitaloceanspaces.com/user-data/production/ae978bc7-ef5e-47d8-8585-f7fae49590a5/uploads/images/ee53418e3a66a7dac6966a12416c6518.jpeg",
+    "subscribergroups": [],
+    "folderId": "8627009f-ffbf-4163-9eff-4e41b4e59ef8",
+    "tags": null,
+    "updateDate": {
+        "date": "2025-10-15 07:23:53.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "ee53418e3a66a7dac6966a12416c6518.jpeg",
+    "path": "https://wa-cdn.nyc3.cdn.digitaloceanspaces.com/user-data/production/ae978bc7-ef5e-47d8-8585-f7fae49590a5/uploads/images",
+    "size": 447043,
+    "width": 508,
+    "height": 901,
+    "extension": "jpeg",
+    "description": null,
+    "alt": null,
+    "creditArtistName": null,
+    "creditArtistWebsite": null,
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2024-06-16 10:13:27.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": null,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": "",
+    "pageUrl": "https://www.worldanvil.com/i/5688879",
+    "isEditable": true,
+    "success": true
+}

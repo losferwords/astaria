@@ -1,0 +1,43 @@
+{
+    "id": 771292,
+    "title": "Goidair.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://www.worldanvil.com/uploads/images/cfd4e9c1f02270e7bc87a438b7af4947.jpg",
+    "subscribergroups": [],
+    "folderId": "7c29d1a7-4253-4fb3-80ae-8dd1d5e59f57",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:19:41.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "cfd4e9c1f02270e7bc87a438b7af4947.jpg",
+    "path": "/uploads/images",
+    "size": 473989,
+    "width": 1170,
+    "height": 658,
+    "extension": "jpg",
+    "description": "Мужчина народа @[Гойдаир](ethnicity:9fc3051b-beeb-4198-96a1-1b86e90e49fe)",
+    "alt": null,
+    "creditArtistName": "McLure",
+    "creditArtistWebsite": "https://www.deviantart.com/mclure",
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2020-01-16 10:29:57.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": 79,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": "",
+    "pageUrl": "https://www.worldanvil.com/i/771292",
+    "isEditable": true,
+    "success": true
+}

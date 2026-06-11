@@ -1,0 +1,21 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Obsidian local workspace state
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/cache/
+.obsidian/.trash/
+.trash/
+
+# Local editor and temporary files
+*.swp
+*.swo
+*~
+*.tmp
+*.temp
+
+# Service-only raw import already preserved in .ai/context/astaria-meta-and-fate.md
+/meta.json

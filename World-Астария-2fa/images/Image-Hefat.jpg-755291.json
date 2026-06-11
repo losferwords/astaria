@@ -1,0 +1,43 @@
+{
+    "id": 755291,
+    "title": "Hefat.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://www.worldanvil.com/uploads/images/0d4b0516283c34575a09f1caa3327457.jpg",
+    "subscribergroups": [],
+    "folderId": "c7491703-3774-4cf0-b989-2fc12673b821",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:18:41.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "0d4b0516283c34575a09f1caa3327457.jpg",
+    "path": "/uploads/images",
+    "size": 813834,
+    "width": 1170,
+    "height": 658,
+    "extension": "jpg",
+    "description": "Быт народа @[Хефат](ethnicity:b379503f-7dfb-488a-ba34-3195a3963125)",
+    "alt": "Hefat.jpg",
+    "creditArtistName": "Martin Deschambault",
+    "creditArtistWebsite": "https://dechambo.artstation.com/",
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2021-01-14 20:35:09.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": 164,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": "",
+    "pageUrl": "https://www.worldanvil.com/i/755291",
+    "isEditable": true,
+    "success": true
+}

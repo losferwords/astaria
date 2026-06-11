@@ -1,0 +1,43 @@
+{
+    "id": 5655145,
+    "title": "Styx.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://wa-cdn.nyc3.cdn.digitaloceanspaces.com/user-data/production/ae978bc7-ef5e-47d8-8585-f7fae49590a5/uploads/images/586ac40dae9ccb8bafe748fad2bd5a8c.jpeg",
+    "subscribergroups": [],
+    "folderId": "8627009f-ffbf-4163-9eff-4e41b4e59ef8",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:24:09.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "586ac40dae9ccb8bafe748fad2bd5a8c.jpeg",
+    "path": "https://wa-cdn.nyc3.cdn.digitaloceanspaces.com/user-data/production/ae978bc7-ef5e-47d8-8585-f7fae49590a5/uploads/images",
+    "size": 460179,
+    "width": 508,
+    "height": 901,
+    "extension": "jpeg",
+    "description": "@[Стикс](person:d7e5d9bf-aa5e-40ec-b6c2-34cebdb384aa)",
+    "alt": null,
+    "creditArtistName": null,
+    "creditArtistWebsite": null,
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2024-06-04 07:30:48.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": 1,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": null,
+    "pageUrl": "https://www.worldanvil.com/i/5655145",
+    "isEditable": true,
+    "success": true
+}

@@ -1,0 +1,43 @@
+{
+    "id": 3687567,
+    "title": "Dju-Suo.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://www.worldanvil.com/uploads/images/44b8a7402fd51b95175335d91548b762.jpg",
+    "subscribergroups": [],
+    "folderId": "69000ae7-f1b9-4373-b3b5-edb4b6cd6a10",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:20:09.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "44b8a7402fd51b95175335d91548b762.jpg",
+    "path": "/uploads/images",
+    "size": 835870,
+    "width": 1170,
+    "height": 658,
+    "extension": "jpg",
+    "description": "@[Город Джу-Суо](settlement:e74419b6-5459-429e-993c-b2d22f3c5f31)",
+    "alt": null,
+    "creditArtistName": "Yujiang J",
+    "creditArtistWebsite": "https://www.artstation.com/yjriv",
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2022-09-02 20:54:30.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": null,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": null,
+    "pageUrl": "https://www.worldanvil.com/i/3687567",
+    "isEditable": true,
+    "success": true
+}

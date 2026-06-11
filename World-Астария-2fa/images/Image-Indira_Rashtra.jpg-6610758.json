@@ -1,0 +1,43 @@
+{
+    "id": 6610758,
+    "title": "Indira_Rashtra.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://wa-cdn.nyc3.cdn.digitaloceanspaces.com/user-data/production/ae978bc7-ef5e-47d8-8585-f7fae49590a5/uploads/images/eab31b5201eb3a98179ffa0ea213eaa1.jpeg",
+    "subscribergroups": [],
+    "folderId": "8627009f-ffbf-4163-9eff-4e41b4e59ef8",
+    "tags": null,
+    "updateDate": {
+        "date": "2025-10-15 07:23:35.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "eab31b5201eb3a98179ffa0ea213eaa1.jpeg",
+    "path": "https://wa-cdn.nyc3.cdn.digitaloceanspaces.com/user-data/production/ae978bc7-ef5e-47d8-8585-f7fae49590a5/uploads/images",
+    "size": 553440,
+    "width": 508,
+    "height": 901,
+    "extension": "jpeg",
+    "description": "@[Индира Раштра](person:b4e0a488-03dc-4f61-bb9a-b5b980063fbe)",
+    "alt": null,
+    "creditArtistName": null,
+    "creditArtistWebsite": null,
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2025-05-03 19:38:14.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": null,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": "",
+    "pageUrl": "https://www.worldanvil.com/i/6610758",
+    "isEditable": true,
+    "success": true
+}

@@ -1,0 +1,1733 @@
+{
+    "id": "f18a827a-9a8a-4444-9c0a-dd5c25f77a4f",
+    "title": "Гилас",
+    "slug": "D093D0B8D0BBD0B0D181-organization",
+    "state": "public",
+    "isWip": true,
+    "isDraft": false,
+    "entityClass": "Organization",
+    "icon": null,
+    "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D093D0B8D0BBD0B0D181-organization",
+    "subscribergroups": [],
+    "folderId": "-1",
+    "tags": "state",
+    "updateDate": {
+        "date": "2025-04-09 06:16:04.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "position": 1000,
+    "excerpt": null,
+    "wordcount": 153,
+    "creationDate": {
+        "date": "2020-01-14 13:36:08.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "publicationDate": {
+        "date": "2020-01-14 13:36:08.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "notificationDate": null,
+    "likes": null,
+    "views": 447,
+    "userMetadata": null,
+    "articleMetadata": null,
+    "cssClasses": null,
+    "displayCss": null,
+    "templateType": "organization",
+    "customArticleTemplate": null,
+    "flag": {
+        "id": 3941795,
+        "title": "gilas_crest.png",
+        "slug": null,
+        "state": "public",
+        "isWip": null,
+        "isDraft": null,
+        "entityClass": "Image",
+        "icon": "fa-solid fa-image",
+        "url": "https://www.worldanvil.com/uploads/images/92de66fdfecc8a84b0d2c52fba71c822.png",
+        "subscribergroups": [],
+        "folderId": "1819ef1b-0d4a-46f0-9ad9-79d85c03f39f",
+        "tags": "",
+        "updateDate": {
+            "date": "2025-10-15 07:19:26.000000",
+            "timezone_type": 3,
+            "timezone": "Europe/London"
+        }
+    },
+    "editor": "legacy",
+    "content": "Республика Гилас - одно из сильнейших государств во всей @[Астарии](location:d993bea5-aeff-4ea7-b30e-b761269a54d0).\r\n\r\nДолгое время Гиласом называли захваченные @[хтонидами](ethnicity:ed0dfa34-ccfc-4b38-a18e-92e3626549f4) земли на западе @[Археи](location:12052fa0-3e57-4442-8d2a-23c80c3f1be5). Но после @[падения Хтона](myth:9eb3d4f3-0e5c-43b7-8b40-04b543dc7788) генерал @[Гиперион I](person:d9095550-fc51-41b7-b88b-3b6bdccf6b6e) объявляет о независимости республики от империи @[хтонидов](ethnicity:ed0dfa34-ccfc-4b38-a18e-92e3626549f4) и становится первым и на данный момент единственным царём Гиласа.\r\n\r\nПосле катастрофических действий @[Профитисов](profession:48920ae5-f9f2-4ec0-94ca-97437da4089b), изучение магии было строжайше запрещено на территории республики. Хотя в последующие годы среди народа @[эллийцев](ethnicity:f3438708-a75b-43cb-8cbb-2ba289d9207a) продолжали появляться дети с @[хтонотемой](condition:f047a4c1-8787-4326-ae3a-ce039493f152), постепенно эта болезнь исчезла совсем.\r\n\r\nГосударство Гилас располагает самой организованной и подготовленной армией, руководят которой лучшие командующие, показавшие себя в многочисленных боях - @[Идеалы](profession:92688e20-8b16-4e7e-8bae-0729f41e5fc5).\r\n\r\nВо многих крупных городах Гиласа проводятся официальные спортивные поединки между солдатами с призовыми фондами и наградами от городских властей. Правила поединков запрещают убивать соперника, за это грозит строгое наказание в соответствии с @[эллийским](ethnicity:f3438708-a75b-43cb-8cbb-2ba289d9207a) кодексом законов. Исключением из этого правила является бой @[Танатомахия](ritual:c14b26f0-83d4-4416-a6b5-9f72ca3b3a9a) за право называться @[Идеалом](profession:92688e20-8b16-4e7e-8bae-0729f41e5fc5).\r\n\r\n[map:fee8d79d-9e58-4d32-aa8a-2365a4acbaad|912|1568|-2]",
+    "author": {
+        "id": "ae978bc7-ef5e-47d8-8585-f7fae49590a5",
+        "title": "losfer",
+        "slug": null,
+        "state": null,
+        "isWip": null,
+        "isDraft": null,
+        "entityClass": "User",
+        "icon": "fa-solid fa-user",
+        "url": "https://www.worldanvil.com/author/losfer",
+        "subscribergroups": [],
+        "folderId": null,
+        "tags": null,
+        "updateDate": null
+    },
+    "category": {
+        "id": "0dc84288-ba54-49d6-87f5-d02e35ce6994",
+        "title": "Страны",
+        "slug": "D0A1D182D180D0B0D0BDD18B-category",
+        "state": "public",
+        "isWip": null,
+        "isDraft": null,
+        "entityClass": "Category",
+        "icon": null,
+        "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/c/D0A1D182D180D0B0D0BDD18B-category",
+        "subscribergroups": [],
+        "folderId": null,
+        "tags": null,
+        "updateDate": {
+            "date": "2025-06-24 08:59:19.000000",
+            "timezone_type": 3,
+            "timezone": "Europe/London"
+        }
+    },
+    "world": {
+        "id": "2be362fa-ad81-4128-92e8-a40c5ec3b5db",
+        "title": "Астария",
+        "slug": "D090D181D182D0B0D180D0B8D18F-losfer",
+        "state": "public",
+        "isWip": null,
+        "isDraft": null,
+        "entityClass": "World",
+        "icon": "fa-solid fa-globe-stand",
+        "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer",
+        "subscribergroups": [
+            {
+                "id": "390d8ece-7d4e-4620-8cc5-f47128ab77cf",
+                "title": "Adventurers of Тест Party",
+                "slug": null,
+                "state": null,
+                "entityClass": "SubscriberGroup",
+                "icon": null,
+                "url": null,
+                "subscribergroups": []
+            },
+            {
+                "id": "457339f6-bfe1-42af-aabb-ba5de3a39cbc",
+                "title": "fearendilele",
+                "slug": null,
+                "state": null,
+                "entityClass": "SubscriberGroup",
+                "icon": null,
+                "url": null,
+                "subscribergroups": []
+            },
+            {
+                "id": "0ec582ed-fd84-4ea6-88f4-258802ce2f52",
+                "title": "Ветер Перемен Party",
+                "slug": null,
+                "state": null,
+                "entityClass": "SubscriberGroup",
+                "icon": null,
+                "url": null,
+                "subscribergroups": []
+            },
+            {
+                "id": "2d31de8f-33c2-497f-ba8d-536c37551858",
+                "title": "Искатель",
+                "slug": null,
+                "state": null,
+                "entityClass": "SubscriberGroup",
+                "icon": null,
+                "url": null,
+                "subscribergroups": []
+            },
+            {
+                "id": "bb3f6d67-81ae-4f8a-a5e1-b40faca7682d",
+                "title": "Тест Players",
+                "slug": null,
+                "state": null,
+                "entityClass": "SubscriberGroup",
+                "icon": null,
+                "url": null,
+                "subscribergroups": []
+            },
+            {
+                "id": "71f04d15-9660-4f42-b8c6-7fa0c94c7f76",
+                "title": "Хранитель мудрости",
+                "slug": null,
+                "state": null,
+                "entityClass": "SubscriberGroup",
+                "icon": null,
+                "url": null,
+                "subscribergroups": []
+            }
+        ],
+        "folderId": "-1",
+        "tags": "",
+        "updateDate": {
+            "date": "2026-06-10 12:32:50.000000",
+            "timezone_type": 3,
+            "timezone": "Europe/London"
+        }
+    },
+    "articleParent": null,
+    "cover": {
+        "id": 1382746,
+        "title": "Gilas.jpg",
+        "slug": null,
+        "state": "public",
+        "isWip": null,
+        "isDraft": null,
+        "entityClass": "Image",
+        "icon": "fa-solid fa-image",
+        "url": "https://www.worldanvil.com/uploads/images/cddf3ef73aa5bdea00e2b4b983895921.jpg",
+        "subscribergroups": [],
+        "folderId": "f03f3f01-783e-438f-834c-b8b59613ec5d",
+        "tags": "",
+        "updateDate": {
+            "date": "2025-10-15 07:19:31.000000",
+            "timezone_type": 3,
+            "timezone": "Europe/London"
+        }
+    },
+    "coverSource": "Organization",
+    "pronunciation": null,
+    "snippet": null,
+    "seeded": null,
+    "sidebarcontent": null,
+    "sidepanelcontenttop": null,
+    "sidepanelcontent": null,
+    "sidebarcontentbottom": null,
+    "footnotes": null,
+    "fullfooter": null,
+    "authornotes": null,
+    "scrapbook": null,
+    "credits": null,
+    "displaySidebar": true,
+    "articleNext": null,
+    "articlePrevious": null,
+    "timeline": null,
+    "prompt": null,
+    "gallery": null,
+    "block": null,
+    "orgchart": null,
+    "showSeeded": false,
+    "webhookUpdate": false,
+    "communityUpdate": false,
+    "commentPlaceholder": null,
+    "passcodecta": null,
+    "metaTitle": null,
+    "metaDescription": null,
+    "subheading": null,
+    "coverIsMap": false,
+    "isFeaturedArticle": false,
+    "isAdultContent": false,
+    "isLocked": false,
+    "allowComments": true,
+    "allowContentCopy": false,
+    "showInToc": true,
+    "isEmphasized": false,
+    "displayAuthor": false,
+    "displayChildrenUnder": true,
+    "displayTitle": true,
+    "displaySheet": false,
+    "badge": null,
+    "childrenArticles": [
+        {
+            "id": "5df674d0-bbe9-473f-9c93-df165fc95051",
+            "title": "Город Аргос",
+            "slug": "D093D0BED180D0BED0B4-D090D180D0B3D0BED181-article",
+            "state": "public",
+            "isWip": true,
+            "isDraft": false,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D093D0BED180D0BED0B4-D090D180D0B3D0BED181-article",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": null,
+            "updateDate": {
+                "date": "2025-04-08 12:20:42.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "95602467-34cd-47a8-bc55-085c98ebe352",
+            "title": "Город Аркадос",
+            "slug": "D093D0BED180D0BED0B4-D090D180D0BAD0B0D0B4D0BED181-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D093D0BED180D0BED0B4-D090D180D0BAD0B0D0B4D0BED181-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-12 10:40:03.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "0306eef7-2445-4ea1-a724-4c3c55cebdc5",
+            "title": "Город Армонион",
+            "slug": "D093D0BED180D0BED0B4-D090D180D0BCD0BED0BDD0B8D0BED0BD-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D093D0BED180D0BED0B4-D090D180D0BCD0BED0BDD0B8D0BED0BD-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-03 16:34:55.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "a846ee40-e622-4fa6-a3ac-07bea94cd01c",
+            "title": "Город Ахей",
+            "slug": "D093D0BED180D0BED0B4-D090D185D0B5D0B9-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": false,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D093D0BED180D0BED0B4-D090D185D0B5D0B9-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": null,
+            "updateDate": {
+                "date": "2023-05-09 11:22:26.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "997bebf3-f6aa-42aa-85d2-ed16365213ab",
+            "title": "Город Гелион",
+            "slug": "D093D0BED180D0BED0B4-D093D0B5D0BBD0B8D0BED0BD-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D093D0BED180D0BED0B4-D093D0B5D0BBD0B8D0BED0BD-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-03 16:44:42.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "2e90d20e-34c7-481c-95da-dfe8870ad4ce",
+            "title": "Город Геспий",
+            "slug": "D093D0BED180D0BED0B4-D093D0B5D181D0BFD0B8D0B9-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D093D0BED180D0BED0B4-D093D0B5D181D0BFD0B8D0B9-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-03 16:48:50.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "f3972c54-cd21-4740-975b-87a5d17de3a2",
+            "title": "Город Лакон",
+            "slug": "D093D0BED180D0BED0B4-D09BD0B0D0BAD0BED0BD-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D093D0BED180D0BED0B4-D09BD0B0D0BAD0BED0BD-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-10-04 11:03:55.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "9ba1605a-422d-41f2-ab1f-b031e45bf659",
+            "title": "Город Ликос",
+            "slug": "D093D0BED180D0BED0B4-D09BD0B8D0BAD0BED181-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D093D0BED180D0BED0B4-D09BD0B8D0BAD0BED181-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-03 16:35:15.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "cfdc08ca-9d83-4a70-8c25-62ec91a1c7fc",
+            "title": "Город Месфал",
+            "slug": "D093D0BED180D0BED0B4-D09CD0B5D181D184D0B0D0BB-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D093D0BED180D0BED0B4-D09CD0B5D181D184D0B0D0BB-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-03 17:16:05.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "0e82b770-1edf-4301-b674-730007e3fe49",
+            "title": "Город Мистрас",
+            "slug": "D093D0BED180D0BED0B4-D09CD0B8D181D182D180D0B0D181-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": false,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D093D0BED180D0BED0B4-D09CD0B8D181D182D180D0B0D181-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2023-05-09 11:30:24.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "3ddecfe8-0ec7-4a00-ac8e-e11b886b0948",
+            "title": "Город Навкратион",
+            "slug": "D093D0BED180D0BED0B4-D09DD0B0D0B2D0BAD180D0B0D182D0B8D0BED0BD-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D093D0BED180D0BED0B4-D09DD0B0D0B2D0BAD180D0B0D182D0B8D0BED0BD-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-10-04 12:10:43.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "a2db13b6-c69d-4918-818a-475fc4987e10",
+            "title": "Город Спарфей",
+            "slug": "D093D0BED180D0BED0B4-D0A1D0BFD0B0D180D184D0B5D0B9-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D093D0BED180D0BED0B4-D0A1D0BFD0B0D180D184D0B5D0B9-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-03 17:00:35.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "e133f1ae-b495-4638-baa0-529ff05def16",
+            "title": "Город Сцион",
+            "slug": "D093D0BED180D0BED0B4-D0A1D186D0B8D0BED0BD-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D093D0BED180D0BED0B4-D0A1D186D0B8D0BED0BD-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-03 16:35:40.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "63b07dcf-9b82-4faf-aedc-d36c0aeb8b64",
+            "title": "Город Тарфилос",
+            "slug": "D093D0BED180D0BED0B4-D0A2D0B0D180D184D0B8D0BBD0BED181-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D093D0BED180D0BED0B4-D0A2D0B0D180D184D0B8D0BBD0BED181-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-10-04 12:08:44.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "d2334d60-7b0b-4867-9f99-444fe3293dec",
+            "title": "Город Фалькон",
+            "slug": "D093D0BED180D0BED0B4-D0A4D0B0D0BBD18CD0BAD0BED0BD-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D093D0BED180D0BED0B4-D0A4D0B0D0BBD18CD0BAD0BED0BD-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-03 16:40:52.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "619b00f3-1ec0-40da-b668-a7b586aaeff8",
+            "title": "Деревня Арвида",
+            "slug": "D094D0B5D180D0B5D0B2D0BDD18F-D090D180D0B2D0B8D0B4D0B0-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D094D0B5D180D0B5D0B2D0BDD18F-D090D180D0B2D0B8D0B4D0B0-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-03 17:12:44.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "e8916a47-3af8-46c6-bc66-c76fa4dff67f",
+            "title": "Деревня Арфена",
+            "slug": "D094D0B5D180D0B5D0B2D0BDD18F-D090D180D184D0B5D0BDD0B0-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D094D0B5D180D0B5D0B2D0BDD18F-D090D180D184D0B5D0BDD0B0-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-03 17:05:01.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "2c72e834-6fa2-4d3f-91d0-3a4fcbe579ce",
+            "title": "Деревня Брасида",
+            "slug": "D094D0B5D180D0B5D0B2D0BDD18F-D091D180D0B0D181D0B8D0B4D0B0-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D094D0B5D180D0B5D0B2D0BDD18F-D091D180D0B0D181D0B8D0B4D0B0-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-03 16:51:12.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "5f173524-2d87-4e6d-bfea-f2bfab610ee3",
+            "title": "Деревня Кария",
+            "slug": "D094D0B5D180D0B5D0B2D0BDD18F-D09AD0B0D180D0B8D18F-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D094D0B5D180D0B5D0B2D0BDD18F-D09AD0B0D180D0B8D18F-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-10-02 10:26:58.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "26ae8ee2-268b-48c1-a095-0cfa7a7ca3cf",
+            "title": "Деревня Ксандрия",
+            "slug": "D094D0B5D180D0B5D0B2D0BDD18F-D09AD181D0B0D0BDD0B4D180D0B8D18F-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D094D0B5D180D0B5D0B2D0BDD18F-D09AD181D0B0D0BDD0B4D180D0B8D18F-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-03 17:09:01.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "1ca459cd-45f9-4cea-aa0e-4ed34e4a6660",
+            "title": "Деревня Ликсия",
+            "slug": "D094D0B5D180D0B5D0B2D0BDD18F-D09BD0B8D0BAD181D0B8D18F-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D094D0B5D180D0B5D0B2D0BDD18F-D09BD0B8D0BAD181D0B8D18F-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-03 16:56:44.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "ba045b4c-c994-434a-ac7c-8eb488475fc2",
+            "title": "Деревня Орфея",
+            "slug": "D094D0B5D180D0B5D0B2D0BDD18F-D09ED180D184D0B5D18F-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D094D0B5D180D0B5D0B2D0BDD18F-D09ED180D184D0B5D18F-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-03 17:18:53.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "028f8704-f1d7-428c-9461-ef736d56b3f2",
+            "title": "Деревня Проксидия",
+            "slug": "D094D0B5D180D0B5D0B2D0BDD18F-D09FD180D0BED0BAD181D0B8D0B4D0B8D18F-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D094D0B5D180D0B5D0B2D0BDD18F-D09FD180D0BED0BAD181D0B8D0B4D0B8D18F-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-10-02 10:35:14.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "f9a89090-702c-4f89-a3eb-52aa523b91e3",
+            "title": "Деревня Страфалия",
+            "slug": "D094D0B5D180D0B5D0B2D0BDD18F-D0A1D182D180D0B0D184D0B0D0BBD0B8D18F-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D094D0B5D180D0B5D0B2D0BDD18F-D0A1D182D180D0B0D184D0B0D0BBD0B8D18F-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-03 17:03:04.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "b5e6a205-add2-41d3-b88a-727b1c8c2fc6",
+            "title": "Деревня Талмирия",
+            "slug": "D094D0B5D180D0B5D0B2D0BDD18F-D0A2D0B0D0BBD0BCD0B8D180D0B8D18F-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D094D0B5D180D0B5D0B2D0BDD18F-D0A2D0B0D0BBD0BCD0B8D180D0B8D18F-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-10-04 12:07:03.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "01a221e4-04a2-4443-973e-0e24a1c30ac3",
+            "title": "Деревня Теония",
+            "slug": "D094D0B5D180D0B5D0B2D0BDD18F-D0A2D0B5D0BED0BDD0B8D18F-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": false,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D094D0B5D180D0B5D0B2D0BDD18F-D0A2D0B5D0BED0BDD0B8D18F-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-03 17:20:47.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "490e47a9-9744-4f23-aa80-9ff0d67b1d8d",
+            "title": "Деревня Элеста",
+            "slug": "D094D0B5D180D0B5D0B2D0BDD18F-D0ADD0BBD0B5D181D182D0B0-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D094D0B5D180D0B5D0B2D0BDD18F-D0ADD0BBD0B5D181D182D0B0-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-03 07:06:02.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "08d03f53-a73e-432b-8653-554eb776552c",
+            "title": "Деревня Эфалия",
+            "slug": "D094D0B5D180D0B5D0B2D0BDD18F-D0ADD184D0B0D0BBD0B8D18F-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D094D0B5D180D0B5D0B2D0BDD18F-D0ADD184D0B0D0BBD0B8D18F-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-10-04 10:59:10.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        }
+    ],
+    "editURL": "https://www.worldanvil.com/world/organization/f18a827a-9a8a-4444-9c0a-dd5c25f77a4f/edit",
+    "motto": null,
+    "publicAgenda": null,
+    "alternativeNames": null,
+    "demonym": null,
+    "assets": null,
+    "structure": null,
+    "history": null,
+    "disbandment": null,
+    "demographics": null,
+    "veterancy": null,
+    "trainingLevel": null,
+    "governmentsystem": null,
+    "powerstructure": null,
+    "economicsystem": null,
+    "legislative": null,
+    "judicial": null,
+    "executive": null,
+    "gazetteer": null,
+    "currency": null,
+    "territory": null,
+    "military": null,
+    "religion": null,
+    "technology": null,
+    "foreignrelations": null,
+    "laws": null,
+    "culture": null,
+    "imports": null,
+    "exports": null,
+    "agricultureAndIndustry": null,
+    "tradeAndTransport": null,
+    "education": null,
+    "infrastructure": null,
+    "mythos": null,
+    "origins": null,
+    "cosmology": null,
+    "tenets": null,
+    "priesthood": null,
+    "ethics": null,
+    "divinepowers": null,
+    "intrigue": null,
+    "worship": null,
+    "sects": null,
+    "foundingDate": "-854 ХЭ",
+    "dissolutionDate": null,
+    "showDiplomacy": false,
+    "capital": {
+        "id": "5df674d0-bbe9-473f-9c93-df165fc95051",
+        "title": "Город Аргос",
+        "slug": "D093D0BED180D0BED0B4-D090D180D0B3D0BED181-article",
+        "state": "public",
+        "isWip": true,
+        "isDraft": false,
+        "entityClass": "Settlement",
+        "icon": null,
+        "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D093D0BED180D0BED0B4-D090D180D0B3D0BED181-article",
+        "subscribergroups": [],
+        "folderId": "-1",
+        "tags": null,
+        "updateDate": {
+            "date": "2025-04-08 12:20:42.000000",
+            "timezone_type": 3,
+            "timezone": "Europe/London"
+        }
+    },
+    "geographicLocation": null,
+    "parent": null,
+    "statereligion": null,
+    "type": null,
+    "formation": null,
+    "leader": null,
+    "familyleader": null,
+    "headofstate": {
+        "id": "d9095550-fc51-41b7-b88b-3b6bdccf6b6e",
+        "title": "Гиперион I",
+        "slug": "D093D0B8D0BFD0B5D180D0B8D0BED0BD-i-person",
+        "state": "public",
+        "isWip": true,
+        "isDraft": false,
+        "entityClass": "Person",
+        "icon": null,
+        "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D093D0B8D0BFD0B5D180D0B8D0BED0BD-i-person",
+        "subscribergroups": [],
+        "folderId": "-1",
+        "tags": "",
+        "updateDate": {
+            "date": "2025-09-29 15:42:51.000000",
+            "timezone_type": 3,
+            "timezone": "Europe/London"
+        }
+    },
+    "leadertitle": null,
+    "headofgovernment": null,
+    "rulingorganization": null,
+    "locations": [
+        {
+            "id": "5df674d0-bbe9-473f-9c93-df165fc95051",
+            "title": "Город Аргос",
+            "slug": "D093D0BED180D0BED0B4-D090D180D0B3D0BED181-article",
+            "state": "public",
+            "isWip": true,
+            "isDraft": false,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D093D0BED180D0BED0B4-D090D180D0B3D0BED181-article",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": null,
+            "updateDate": {
+                "date": "2025-04-08 12:20:42.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "95602467-34cd-47a8-bc55-085c98ebe352",
+            "title": "Город Аркадос",
+            "slug": "D093D0BED180D0BED0B4-D090D180D0BAD0B0D0B4D0BED181-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D093D0BED180D0BED0B4-D090D180D0BAD0B0D0B4D0BED181-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-12 10:40:03.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "0306eef7-2445-4ea1-a724-4c3c55cebdc5",
+            "title": "Город Армонион",
+            "slug": "D093D0BED180D0BED0B4-D090D180D0BCD0BED0BDD0B8D0BED0BD-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D093D0BED180D0BED0B4-D090D180D0BCD0BED0BDD0B8D0BED0BD-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-03 16:34:55.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "a846ee40-e622-4fa6-a3ac-07bea94cd01c",
+            "title": "Город Ахей",
+            "slug": "D093D0BED180D0BED0B4-D090D185D0B5D0B9-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": false,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D093D0BED180D0BED0B4-D090D185D0B5D0B9-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": null,
+            "updateDate": {
+                "date": "2023-05-09 11:22:26.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "997bebf3-f6aa-42aa-85d2-ed16365213ab",
+            "title": "Город Гелион",
+            "slug": "D093D0BED180D0BED0B4-D093D0B5D0BBD0B8D0BED0BD-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D093D0BED180D0BED0B4-D093D0B5D0BBD0B8D0BED0BD-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-03 16:44:42.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "2e90d20e-34c7-481c-95da-dfe8870ad4ce",
+            "title": "Город Геспий",
+            "slug": "D093D0BED180D0BED0B4-D093D0B5D181D0BFD0B8D0B9-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D093D0BED180D0BED0B4-D093D0B5D181D0BFD0B8D0B9-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-03 16:48:50.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "f3972c54-cd21-4740-975b-87a5d17de3a2",
+            "title": "Город Лакон",
+            "slug": "D093D0BED180D0BED0B4-D09BD0B0D0BAD0BED0BD-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D093D0BED180D0BED0B4-D09BD0B0D0BAD0BED0BD-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-10-04 11:03:55.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "9ba1605a-422d-41f2-ab1f-b031e45bf659",
+            "title": "Город Ликос",
+            "slug": "D093D0BED180D0BED0B4-D09BD0B8D0BAD0BED181-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D093D0BED180D0BED0B4-D09BD0B8D0BAD0BED181-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-03 16:35:15.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "cfdc08ca-9d83-4a70-8c25-62ec91a1c7fc",
+            "title": "Город Месфал",
+            "slug": "D093D0BED180D0BED0B4-D09CD0B5D181D184D0B0D0BB-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D093D0BED180D0BED0B4-D09CD0B5D181D184D0B0D0BB-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-03 17:16:05.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "0e82b770-1edf-4301-b674-730007e3fe49",
+            "title": "Город Мистрас",
+            "slug": "D093D0BED180D0BED0B4-D09CD0B8D181D182D180D0B0D181-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": false,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D093D0BED180D0BED0B4-D09CD0B8D181D182D180D0B0D181-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2023-05-09 11:30:24.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "3ddecfe8-0ec7-4a00-ac8e-e11b886b0948",
+            "title": "Город Навкратион",
+            "slug": "D093D0BED180D0BED0B4-D09DD0B0D0B2D0BAD180D0B0D182D0B8D0BED0BD-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D093D0BED180D0BED0B4-D09DD0B0D0B2D0BAD180D0B0D182D0B8D0BED0BD-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-10-04 12:10:43.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "a2db13b6-c69d-4918-818a-475fc4987e10",
+            "title": "Город Спарфей",
+            "slug": "D093D0BED180D0BED0B4-D0A1D0BFD0B0D180D184D0B5D0B9-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D093D0BED180D0BED0B4-D0A1D0BFD0B0D180D184D0B5D0B9-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-03 17:00:35.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "e133f1ae-b495-4638-baa0-529ff05def16",
+            "title": "Город Сцион",
+            "slug": "D093D0BED180D0BED0B4-D0A1D186D0B8D0BED0BD-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D093D0BED180D0BED0B4-D0A1D186D0B8D0BED0BD-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-03 16:35:40.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "63b07dcf-9b82-4faf-aedc-d36c0aeb8b64",
+            "title": "Город Тарфилос",
+            "slug": "D093D0BED180D0BED0B4-D0A2D0B0D180D184D0B8D0BBD0BED181-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D093D0BED180D0BED0B4-D0A2D0B0D180D184D0B8D0BBD0BED181-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-10-04 12:08:44.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "d2334d60-7b0b-4867-9f99-444fe3293dec",
+            "title": "Город Фалькон",
+            "slug": "D093D0BED180D0BED0B4-D0A4D0B0D0BBD18CD0BAD0BED0BD-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D093D0BED180D0BED0B4-D0A4D0B0D0BBD18CD0BAD0BED0BD-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-03 16:40:52.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "619b00f3-1ec0-40da-b668-a7b586aaeff8",
+            "title": "Деревня Арвида",
+            "slug": "D094D0B5D180D0B5D0B2D0BDD18F-D090D180D0B2D0B8D0B4D0B0-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D094D0B5D180D0B5D0B2D0BDD18F-D090D180D0B2D0B8D0B4D0B0-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-03 17:12:44.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "e8916a47-3af8-46c6-bc66-c76fa4dff67f",
+            "title": "Деревня Арфена",
+            "slug": "D094D0B5D180D0B5D0B2D0BDD18F-D090D180D184D0B5D0BDD0B0-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D094D0B5D180D0B5D0B2D0BDD18F-D090D180D184D0B5D0BDD0B0-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-03 17:05:01.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "2c72e834-6fa2-4d3f-91d0-3a4fcbe579ce",
+            "title": "Деревня Брасида",
+            "slug": "D094D0B5D180D0B5D0B2D0BDD18F-D091D180D0B0D181D0B8D0B4D0B0-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D094D0B5D180D0B5D0B2D0BDD18F-D091D180D0B0D181D0B8D0B4D0B0-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-03 16:51:12.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "5f173524-2d87-4e6d-bfea-f2bfab610ee3",
+            "title": "Деревня Кария",
+            "slug": "D094D0B5D180D0B5D0B2D0BDD18F-D09AD0B0D180D0B8D18F-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D094D0B5D180D0B5D0B2D0BDD18F-D09AD0B0D180D0B8D18F-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-10-02 10:26:58.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "26ae8ee2-268b-48c1-a095-0cfa7a7ca3cf",
+            "title": "Деревня Ксандрия",
+            "slug": "D094D0B5D180D0B5D0B2D0BDD18F-D09AD181D0B0D0BDD0B4D180D0B8D18F-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D094D0B5D180D0B5D0B2D0BDD18F-D09AD181D0B0D0BDD0B4D180D0B8D18F-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-03 17:09:01.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "1ca459cd-45f9-4cea-aa0e-4ed34e4a6660",
+            "title": "Деревня Ликсия",
+            "slug": "D094D0B5D180D0B5D0B2D0BDD18F-D09BD0B8D0BAD181D0B8D18F-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D094D0B5D180D0B5D0B2D0BDD18F-D09BD0B8D0BAD181D0B8D18F-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-03 16:56:44.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "ba045b4c-c994-434a-ac7c-8eb488475fc2",
+            "title": "Деревня Орфея",
+            "slug": "D094D0B5D180D0B5D0B2D0BDD18F-D09ED180D184D0B5D18F-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D094D0B5D180D0B5D0B2D0BDD18F-D09ED180D184D0B5D18F-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-03 17:18:53.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "028f8704-f1d7-428c-9461-ef736d56b3f2",
+            "title": "Деревня Проксидия",
+            "slug": "D094D0B5D180D0B5D0B2D0BDD18F-D09FD180D0BED0BAD181D0B8D0B4D0B8D18F-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D094D0B5D180D0B5D0B2D0BDD18F-D09FD180D0BED0BAD181D0B8D0B4D0B8D18F-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-10-02 10:35:14.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "f9a89090-702c-4f89-a3eb-52aa523b91e3",
+            "title": "Деревня Страфалия",
+            "slug": "D094D0B5D180D0B5D0B2D0BDD18F-D0A1D182D180D0B0D184D0B0D0BBD0B8D18F-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D094D0B5D180D0B5D0B2D0BDD18F-D0A1D182D180D0B0D184D0B0D0BBD0B8D18F-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-03 17:03:04.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "b5e6a205-add2-41d3-b88a-727b1c8c2fc6",
+            "title": "Деревня Талмирия",
+            "slug": "D094D0B5D180D0B5D0B2D0BDD18F-D0A2D0B0D0BBD0BCD0B8D180D0B8D18F-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D094D0B5D180D0B5D0B2D0BDD18F-D0A2D0B0D0BBD0BCD0B8D180D0B8D18F-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-10-04 12:07:03.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "01a221e4-04a2-4443-973e-0e24a1c30ac3",
+            "title": "Деревня Теония",
+            "slug": "D094D0B5D180D0B5D0B2D0BDD18F-D0A2D0B5D0BED0BDD0B8D18F-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": false,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D094D0B5D180D0B5D0B2D0BDD18F-D0A2D0B5D0BED0BDD0B8D18F-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-03 17:20:47.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "490e47a9-9744-4f23-aa80-9ff0d67b1d8d",
+            "title": "Деревня Элеста",
+            "slug": "D094D0B5D180D0B5D0B2D0BDD18F-D0ADD0BBD0B5D181D182D0B0-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D094D0B5D180D0B5D0B2D0BDD18F-D0ADD0BBD0B5D181D182D0B0-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-03 07:06:02.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "08d03f53-a73e-432b-8653-554eb776552c",
+            "title": "Деревня Эфалия",
+            "slug": "D094D0B5D180D0B5D0B2D0BDD18F-D0ADD184D0B0D0BBD0B8D18F-settlement",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Settlement",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D094D0B5D180D0B5D0B2D0BDD18F-D0ADD184D0B0D0BBD0B8D18F-settlement",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-10-04 10:59:10.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "3f68bf25-86bb-49ed-95ad-37afd11a7423",
+            "title": "Золотые холмы",
+            "slug": "D097D0BED0BBD0BED182D18BD0B5-D185D0BED0BBD0BCD18B-location",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Location",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D097D0BED0BBD0BED182D18BD0B5-D185D0BED0BBD0BCD18B-location",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-10-01 09:59:34.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "fb9487e2-d19a-4de0-801b-8ce7276c7a3b",
+            "title": "Лакедонский лес",
+            "slug": "D09BD0B0D0BAD0B5D0B4D0BED0BDD181D0BAD0B8D0B9-D0BBD0B5D181-location",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Location",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D09BD0B0D0BAD0B5D0B4D0BED0BDD181D0BAD0B8D0B9-D0BBD0B5D181-location",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-03 16:34:07.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "f864ec72-a34e-4451-ba71-8f11f8d95bc6",
+            "title": "Регион Мериссия",
+            "slug": "D0A0D0B5D0B3D0B8D0BED0BD-D09CD0B5D180D0B8D181D181D0B8D18F-location",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Location",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D0A0D0B5D0B3D0B8D0BED0BD-D09CD0B5D180D0B8D181D181D0B8D18F-location",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-11-03 16:55:37.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "da8921fe-485e-4b96-879a-b0e8288d2ca3",
+            "title": "Регион Элессия",
+            "slug": "D0A0D0B5D0B3D0B8D0BED0BD-D0ADD0BBD0B5D181D181D0B8D18F-location",
+            "state": "public",
+            "isWip": true,
+            "isDraft": false,
+            "entityClass": "Location",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D0A0D0B5D0B3D0B8D0BED0BD-D0ADD0BBD0B5D181D181D0B8D18F-location",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": null,
+            "updateDate": {
+                "date": "2020-12-01 21:38:17.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "a0228c9a-c25f-4bb2-afe7-d26a24103e5c",
+            "title": "Река Неда",
+            "slug": "D0A0D0B5D0BAD0B0-D09DD0B5D0B4D0B0-location",
+            "state": "public",
+            "isWip": true,
+            "isDraft": false,
+            "entityClass": "Location",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D0A0D0B5D0BAD0B0-D09DD0B5D0B4D0B0-location",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": null,
+            "updateDate": {
+                "date": "2020-11-30 21:39:56.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "cc33a544-25c8-431b-a2ab-093e6bd7626a",
+            "title": "Река Тавропос",
+            "slug": "D0A0D0B5D0BAD0B0-D0A2D0B0D0B2D180D0BED0BFD0BED181-article",
+            "state": "public",
+            "isWip": true,
+            "isDraft": false,
+            "entityClass": "Location",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D0A0D0B5D0BAD0B0-D0A2D0B0D0B2D180D0BED0BFD0BED181-article",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": null,
+            "updateDate": {
+                "date": "2020-11-30 21:40:59.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "e9f02ec3-eb73-43c3-9dc1-cbc4a2d39709",
+            "title": "Сфагийские поля",
+            "slug": "D0A1D184D0B0D0B3D0B8D0B9D181D0BAD0B8D0B5-D0BFD0BED0BBD18F-location",
+            "state": "public",
+            "isWip": true,
+            "isDraft": true,
+            "entityClass": "Location",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D0A1D184D0B0D0B3D0B8D0B9D181D0BAD0B8D0B5-D0BFD0BED0BBD18F-location",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-10-01 10:16:21.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        }
+    ],
+    "people": [
+        {
+            "id": "d9095550-fc51-41b7-b88b-3b6bdccf6b6e",
+            "title": "Гиперион I",
+            "slug": "D093D0B8D0BFD0B5D180D0B8D0BED0BD-i-person",
+            "state": "public",
+            "isWip": true,
+            "isDraft": false,
+            "entityClass": "Person",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D093D0B8D0BFD0B5D180D0B8D0BED0BD-i-person",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-09-29 15:42:51.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "af24ac5f-d436-4dcb-82e0-4e7bf5e961ca",
+            "title": "Диомед Ахейский",
+            "slug": "D094D0B8D0BED0BCD0B5D0B4-D090D185D0B5D0B9D181D0BAD0B8D0B9-person",
+            "state": "public",
+            "isWip": true,
+            "isDraft": false,
+            "entityClass": "Person",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D094D0B8D0BED0BCD0B5D0B4-D090D185D0B5D0B9D181D0BAD0B8D0B9-person",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2023-08-08 22:40:22.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "01c4c56f-792d-4bf1-aebc-4164de1fbcbf",
+            "title": "Персефона Раптис",
+            "slug": "D09FD0B5D180D181D0B5D184D0BED0BDD0B0-D0A0D0B0D0BFD182D0B8D181-person",
+            "state": "public",
+            "isWip": true,
+            "isDraft": false,
+            "entityClass": "Person",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D09FD0B5D180D181D0B5D184D0BED0BDD0B0-D0A0D0B0D0BFD182D0B8D181-person",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": null,
+            "updateDate": {
+                "date": "2025-09-29 15:48:16.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        }
+    ],
+    "belligerents": [
+        {
+            "id": 29513,
+            "title": "Гилас",
+            "slug": null,
+            "state": null,
+            "isWip": null,
+            "isDraft": null,
+            "entityClass": "Belligerent",
+            "icon": null,
+            "url": null,
+            "subscribergroups": [],
+            "folderId": null,
+            "tags": null,
+            "updateDate": null
+        }
+    ],
+    "professions": [
+        {
+            "id": "92688e20-8b16-4e7e-8bae-0729f41e5fc5",
+            "title": "Идеал",
+            "slug": "D098D0B4D0B5D0B0D0BB-article",
+            "state": "public",
+            "isWip": true,
+            "isDraft": false,
+            "entityClass": "Profession",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D098D0B4D0B5D0B0D0BB-article",
+            "subscribergroups": [],
+            "folderId": "755c442f-ad0d-4e32-b18c-c841b4d2cb58",
+            "tags": "",
+            "updateDate": {
+                "date": "2024-08-11 23:45:20.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        }
+    ],
+    "contestedlocations": [
+        {
+            "id": "5a697aa3-eff7-44c0-a7e2-808fc058a03d",
+            "title": "Озеро Митра",
+            "slug": "D09ED0B7D0B5D180D0BE-D09CD0B8D182D180D0B0-location",
+            "state": "public",
+            "isWip": true,
+            "isDraft": false,
+            "entityClass": "Location",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D09ED0B7D0B5D180D0BE-D09CD0B8D182D180D0B0-location",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": null,
+            "updateDate": {
+                "date": "2020-12-24 19:08:20.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "54e331ca-ca8e-41bb-b76f-76fe8f087f14",
+            "title": "Полуостров Таллас",
+            "slug": "D09FD0BED0BBD183D0BED181D182D180D0BED0B2-D0A2D0B0D0BBD0BBD0B0D181-article",
+            "state": "public",
+            "isWip": true,
+            "isDraft": false,
+            "entityClass": "Location",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D09FD0BED0BBD183D0BED181D182D180D0BED0B2-D0A2D0B0D0BBD0BBD0B0D181-article",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2020-05-04 23:18:50.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        },
+        {
+            "id": "827a1458-8a74-4c45-932f-3246f548dc4a",
+            "title": "Сумеречный пролив",
+            "slug": "D0A1D183D0BCD0B5D180D0B5D187D0BDD18BD0B9-D0BFD180D0BED0BBD0B8D0B2-article",
+            "state": "public",
+            "isWip": true,
+            "isDraft": false,
+            "entityClass": "Location",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D0A1D183D0BCD0B5D180D0B5D187D0BDD18BD0B9-D0BFD180D0BED0BBD0B8D0B2-article",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2020-04-26 22:02:57.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        }
+    ],
+    "ethnicities": [
+        {
+            "id": "f3438708-a75b-43cb-8cbb-2ba289d9207a",
+            "title": "Эллийцы",
+            "slug": "D0ADD0BBD0BBD0B8D0B9D186D18B-ethnicity",
+            "state": "public",
+            "isWip": true,
+            "isDraft": false,
+            "entityClass": "Ethnicity",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D0ADD0BBD0BBD0B8D0B9D186D18B-ethnicity",
+            "subscribergroups": [],
+            "folderId": "6cc88eb6-6e33-48e8-a8f0-1f71f61d524f",
+            "tags": null,
+            "updateDate": {
+                "date": "2023-08-21 22:35:53.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        }
+    ],
+    "deities": [
+        {
+            "id": "d9095550-fc51-41b7-b88b-3b6bdccf6b6e",
+            "title": "Гиперион I",
+            "slug": "D093D0B8D0BFD0B5D180D0B8D0BED0BD-i-person",
+            "state": "public",
+            "isWip": true,
+            "isDraft": false,
+            "entityClass": "Person",
+            "icon": null,
+            "url": "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D093D0B8D0BFD0B5D180D0B8D0BED0BD-i-person",
+            "subscribergroups": [],
+            "folderId": "-1",
+            "tags": "",
+            "updateDate": {
+                "date": "2025-09-29 15:42:51.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/London"
+            }
+        }
+    ],
+    "isEditable": true,
+    "success": true
+}

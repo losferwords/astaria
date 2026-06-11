@@ -1,0 +1,43 @@
+{
+    "id": 5364642,
+    "title": "Aysan_Bayat.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://www.worldanvil.com/uploads/images/777a371dd0019ff14f47dddc63c9cee7.jpg",
+    "subscribergroups": [],
+    "folderId": "8627009f-ffbf-4163-9eff-4e41b4e59ef8",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:23:21.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "777a371dd0019ff14f47dddc63c9cee7.jpg",
+    "path": "/uploads/images",
+    "size": 449947,
+    "width": 508,
+    "height": 901,
+    "extension": "jpg",
+    "description": "@[Айсан Баят](person:3233237e-ebba-4f36-8bfb-156073f12acf)",
+    "alt": null,
+    "creditArtistName": null,
+    "creditArtistWebsite": null,
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2024-02-20 22:27:14.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": null,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": null,
+    "pageUrl": "https://www.worldanvil.com/i/5364642",
+    "isEditable": true,
+    "success": true
+}

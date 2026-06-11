@@ -1,0 +1,43 @@
+{
+    "id": 727183,
+    "title": "Highlander_m.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://www.worldanvil.com/uploads/images/825a86ef9831d9b2adf1f39c641caddd.jpg",
+    "subscribergroups": [],
+    "folderId": "db763f65-0f7c-4ab9-afc8-d0d3be8beef7",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:19:36.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "825a86ef9831d9b2adf1f39c641caddd.jpg",
+    "path": "/uploads/images",
+    "size": 447889,
+    "width": 768,
+    "height": 1305,
+    "extension": "jpg",
+    "description": "@[Горец](profession:4ceb45d0-eb99-4a70-bce7-471183a64854) мужчина",
+    "alt": "Highlander_m.jpg",
+    "creditArtistName": null,
+    "creditArtistWebsite": null,
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2020-01-14 13:05:52.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": 148,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": "",
+    "pageUrl": "https://www.worldanvil.com/i/727183",
+    "isEditable": true,
+    "success": true
+}

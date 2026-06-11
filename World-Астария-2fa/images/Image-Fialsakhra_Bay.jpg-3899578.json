@@ -1,0 +1,43 @@
+{
+    "id": 3899578,
+    "title": "Fialsakhra_Bay.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://www.worldanvil.com/uploads/images/da4258794d78edc7c7d79804fee665c4.jpg",
+    "subscribergroups": [],
+    "folderId": "864387c6-7a5a-4ea2-95cd-6bbb56f57296",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:20:32.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "da4258794d78edc7c7d79804fee665c4.jpg",
+    "path": "/uploads/images",
+    "size": 678828,
+    "width": 1170,
+    "height": 658,
+    "extension": "jpg",
+    "description": "@[Залив Фиальсахра](location:de45b5f7-a3aa-4962-a2e0-faa8dd7b8aa4)",
+    "alt": null,
+    "creditArtistName": null,
+    "creditArtistWebsite": null,
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2022-11-10 06:32:14.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": null,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": null,
+    "pageUrl": "https://www.worldanvil.com/i/3899578",
+    "isEditable": true,
+    "success": true
+}

@@ -1,0 +1,43 @@
+{
+    "id": 4805537,
+    "title": "Tuanuku_Peninsula.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://www.worldanvil.com/uploads/images/75b8646c344bc718315cd449225fb45d.jpg",
+    "subscribergroups": [],
+    "folderId": "e47abef4-b5e4-4431-9e35-fcb19e9fef3b",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:18:50.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "75b8646c344bc718315cd449225fb45d.jpg",
+    "path": "/uploads/images",
+    "size": 909977,
+    "width": 1170,
+    "height": 658,
+    "extension": "jpg",
+    "description": "@[Полуостров Туануку](location:265ba97e-3d22-43a2-8c0c-91f646be3a2f)",
+    "alt": null,
+    "creditArtistName": "Andrew Shoemaker",
+    "creditArtistWebsite": "https://www.andrewshoemaker.com/",
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2023-08-21 21:34:07.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": 60,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": null,
+    "pageUrl": "https://www.worldanvil.com/i/4805537",
+    "isEditable": true,
+    "success": true
+}

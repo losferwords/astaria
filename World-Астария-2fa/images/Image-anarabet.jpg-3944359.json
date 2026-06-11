@@ -1,0 +1,43 @@
+{
+    "id": 3944359,
+    "title": "anarabet.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://www.worldanvil.com/uploads/images/0056eaa1c1f023bb88a28b38bb7050a1.jpg",
+    "subscribergroups": [],
+    "folderId": "84808d2f-97b5-455d-a70e-50f2e0d502d0",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-15 07:24:17.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "0056eaa1c1f023bb88a28b38bb7050a1.jpg",
+    "path": "/uploads/images",
+    "size": 1424414,
+    "width": 1170,
+    "height": 658,
+    "extension": "jpg",
+    "description": "@[Анарабет](item:9eb2c369-cfa3-43c3-a0b6-8c283c390cab)",
+    "alt": null,
+    "creditArtistName": "MagicnaAnavi",
+    "creditArtistWebsite": "https://www.deviantart.com/magicnaanavi",
+    "creditArtTitle": null,
+    "creditArtUrl": null,
+    "creationDate": {
+        "date": "2022-11-25 10:25:44.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": null,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": null,
+    "pageUrl": "https://www.worldanvil.com/i/3944359",
+    "isEditable": true,
+    "success": true
+}

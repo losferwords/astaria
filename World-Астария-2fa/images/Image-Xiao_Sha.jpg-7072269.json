@@ -1,0 +1,43 @@
+{
+    "id": 7072269,
+    "title": "Xiao_Sha.jpg",
+    "slug": null,
+    "state": "public",
+    "isWip": null,
+    "isDraft": null,
+    "entityClass": "Image",
+    "icon": "fa-solid fa-image",
+    "url": "https://wa-cdn.nyc3.cdn.digitaloceanspaces.com/user-data/production/ae978bc7-ef5e-47d8-8585-f7fae49590a5/uploads/images/bdaabb41620e72bf92485367bd1cda7c.jpeg",
+    "subscribergroups": [],
+    "folderId": "8627009f-ffbf-4163-9eff-4e41b4e59ef8",
+    "tags": "",
+    "updateDate": {
+        "date": "2025-10-29 12:33:46.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "filename": "bdaabb41620e72bf92485367bd1cda7c.jpeg",
+    "path": "https://wa-cdn.nyc3.cdn.digitaloceanspaces.com/user-data/production/ae978bc7-ef5e-47d8-8585-f7fae49590a5/uploads/images",
+    "size": 515643,
+    "width": 508,
+    "height": 901,
+    "extension": "jpeg",
+    "description": "@[Сяо Ша](person:a7912614-4c07-4238-b7f0-47129012f568)",
+    "alt": "",
+    "creditArtistName": "",
+    "creditArtistWebsite": "",
+    "creditArtTitle": "",
+    "creditArtUrl": "",
+    "creationDate": {
+        "date": "2025-10-16 08:08:58.000000",
+        "timezone_type": 3,
+        "timezone": "Europe/London"
+    },
+    "views": null,
+    "likes": null,
+    "isFeatured": false,
+    "linkUrl": "",
+    "pageUrl": "https://www.worldanvil.com/i/7072269",
+    "isEditable": true,
+    "success": true
+}

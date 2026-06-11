@@ -133,7 +133,7 @@ Supporting files:
 - `03 Кампании/Ветер Перемен/Главы/Главы Ветра Перемен.md`
 - `_templates/Глава Ветер Перемен.md` (currently prepared for chapter 90)
 
-Player character notes are kept under `03 Кампании/Ветер Перемен/Персонажи/Игроки/`. Broader lore stays in `02 Энциклопедия/`.
+Character articles, including characters currently played by players, should live together under `02 Энциклопедия/Персонажи/` and use the same neutral lore-article style. Do not separate player characters into a visible `Игроки`/`NPC` article taxonomy by default; campaign chapter frontmatter and campaign indexes can identify which characters are players in a specific saga.
 
 Do not link encyclopedia/lore articles to specific saga chapter notes unless the user explicitly asks. Campaign-specific references should usually live in chapter files, campaign indexes, or private notes, because there may be multiple sagas using the same lore.
 

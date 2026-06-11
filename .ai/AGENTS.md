@@ -50,3 +50,4 @@ Important boundary: `06 Черновики/Идеи/` is the user's private idea
 - Do not treat `06 Черновики/Идеи/` as source material unless explicitly instructed.
 - Prefer Markdown, YAML properties, Obsidian wikilinks, and scripts for repeatable conversion.
 - Do not link encyclopedia/lore articles to specific saga chapter notes unless the user explicitly asks. Campaign-specific references should usually live in chapter files, campaign indexes, or private notes, because there may be multiple sagas using the same lore.
+- Keep all ordinary character articles together in `02 Энциклопедия/Персонажи/`, including characters currently played by players. Do not make the article body or visible taxonomy distinguish player characters from NPCs unless the user explicitly asks.

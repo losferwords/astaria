@@ -17,5 +17,12 @@
 *.tmp
 *.temp
 
+# Quartz publishing output
+_quartz/.quartz/
+_quartz/quartz/.quartz-cache/
+_quartz/content/
+_quartz/node_modules/
+_quartz/public/
+
 # Service-only raw import already preserved in .ai/context/astaria-meta-and-fate.md
 /meta.json

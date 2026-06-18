@@ -67,6 +67,14 @@ The user does not want to buy an Obsidian subscription yet, because they first w
 5. Beautiful chronology of events.
 6. Interactive high-resolution fantasy maps with clickable markers leading to articles.
 
+## Local Art And Maps
+
+The user has uploaded local art into `Assets/Images/` and map layers into `Assets/Maps/`. Future WorldAnvil-to-Obsidian imports should search these local folders first and render local Obsidian embeds instead of external WorldAnvil CDN images. External WorldAnvil image URLs may remain as source/trace metadata, but local assets should be the primary article images.
+
+Imitei/profession art often uses English file names with `_m`, `_f`, and `_Landscape`/`_landscape` variants, for example `Raksha_m`, `Raksha_f`, and `Raksha_Landscape`. Use landscape variants for covers when appropriate; if only male/female vertical art exists, show both in the article rather than forcing a cover crop.
+
+Astaria maps may have three local layers in `Assets/Maps/`: `states` for the political map, `heightmap` for the physical map, and `biomes` for biome view. Use `states` as the default interactive map layer unless multi-layer Leaflet setup is straightforward.
+
 ## Preferred Direction
 
 Use Obsidian as the editor and local knowledge base. Avoid paid Obsidian Publish/Sync for the first test. Prefer:
@@ -78,6 +86,23 @@ Use Obsidian as the editor and local knowledge base. Avoid paid Obsidian Publish
 - Obsidian Leaflet for image-based fantasy maps;
 - Quartz or a similar static-site generator for public hosting;
 - Git for portability and history.
+
+## Quartz Publishing Setup
+
+The repo now contains a Quartz 5 publishing setup under `_quartz/`.
+
+Public content is not edited directly in `_quartz/content/`; it is generated from the vault by `_scripts/sync_quartz_content.rb`. The script only copies Markdown notes with `publish: true` from:
+
+- `01 Мир/`
+- `02 Энциклопедия/`
+- `04 Хронология/`
+- `05 Карты/`
+
+It excludes private/service material by default, including `.ai/`, `06 Черновики/`, `World-Астария-2fa/`, campaign notes, templates, and raw imports. Keep GM notes, FATE mechanics, idea drafts, and spoilers out of published notes unless the user explicitly approves them.
+
+GitHub Pages deployment is configured in `.github/workflows/deploy-quartz.yml`. The expected public URL is `https://losferwords.github.io/astaria/` after GitHub Pages is set to use `GitHub Actions`.
+
+Large source maps remain in `Assets/Maps/`. Lightweight publication copies live in `Assets/Maps/Web/`, and the sync script rewrites map paths only in the generated Quartz content.
 
 ## Recommended Pilot
 

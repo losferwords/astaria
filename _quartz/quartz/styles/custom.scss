@@ -215,6 +215,15 @@ a:hover {
   margin: 0 0 1.35rem;
 }
 
+.astaria-crest-image {
+  display: block;
+  width: min(14.5rem, 78%);
+  aspect-ratio: 1 / 1;
+  margin: 0 auto 1.4rem;
+  object-fit: contain;
+  filter: drop-shadow(0 8px 14px rgba(42, 25, 17, 0.18));
+}
+
 .astaria-infobox {
   width: auto;
   padding: 1rem 1.15rem;
@@ -356,5 +365,9 @@ body[data-slug="index"] .markdown-rendered > p:first-of-type img {
 
   .astaria-sidebar-image {
     max-height: none;
+  }
+
+  .astaria-crest-image {
+    width: min(13rem, 70vw);
   }
 }

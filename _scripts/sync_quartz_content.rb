@@ -227,8 +227,15 @@ end
 def sidebar_image(data)
   return nil if data["public_slug"].to_s.strip == "index"
 
-  raw = data["portrait_image"] || data["flag_image"] || data["crest_image"]
+  raw = data["portrait_image"] || data["flag_image"]
   path = extract_asset_path(raw)
+  path && ASSET_REWRITES.fetch(path, path)
+end
+
+def crest_image(data)
+  return nil if data["public_slug"].to_s.strip == "index"
+
+  path = extract_asset_path(data["crest_image"])
   path && ASSET_REWRITES.fetch(path, path)
 end
 
@@ -259,6 +266,7 @@ def build_sidebar(data)
   return "" if data["public_slug"].to_s.strip == "index"
 
   image_path = sidebar_image(data)
+  crest_path = crest_image(data)
   rows = INFOBOX_FIELDS.map do |key, label|
     rendered = render_value(data[key])
     next if rendered.empty?
@@ -266,7 +274,7 @@ def build_sidebar(data)
     %(<div class="astaria-infobox-row"><dt>#{CGI.escapeHTML(label)}</dt><dd>#{rendered}</dd></div>)
   end.compact
 
-  return "" if image_path.nil? && rows.empty?
+  return "" if image_path.nil? && crest_path.nil? && rows.empty?
 
   image = if image_path
     "#{render_image_tag(image_path, "astaria-sidebar-image")}\n"
@@ -274,9 +282,16 @@ def build_sidebar(data)
     ""
   end
 
+  crest = if crest_path
+    "#{render_image_tag(crest_path, "astaria-crest-image")}\n"
+  else
+    ""
+  end
+
   <<~HTML
     <aside class="astaria-sidebar">
     #{image}
+    #{crest}
     <div class="astaria-infobox">
     <dl>
     #{rows.join("\n")}
@@ -304,7 +319,7 @@ def build_article_footer(route, data)
 end
 
 def cleanup_public_body(body, data)
-  image_paths = [sidebar_image(data), cover_image(data)].compact
+  image_paths = [sidebar_image(data), cover_image(data), crest_image(data)].compact
 
   body = body.gsub(/\r\n?/, "\n")
   body = body.sub(/\A\s*# .+?\n+/, "")

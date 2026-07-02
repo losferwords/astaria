@@ -1,3 +1,360 @@
 @use "./variables.scss" as *;
 
-// put your custom CSS here!
+:root {
+  --astaria-accent: #d80b07;
+  --astaria-accent-dark: #591717;
+  --astaria-ink: #2c241f;
+  --astaria-muted: #6f6258;
+  --astaria-paper: rgba(253, 247, 235, 0.95);
+  --astaria-paper-deep: rgba(239, 224, 194, 0.96);
+  --astaria-border: rgba(89, 23, 23, 0.32);
+}
+
+body {
+  background: #b9b6af;
+  color: var(--astaria-ink);
+}
+
+a {
+  color: #a71916;
+  text-decoration-color: rgba(216, 11, 7, 0.35);
+}
+
+a:hover {
+  color: var(--astaria-accent);
+  text-decoration-color: var(--astaria-accent);
+}
+
+#quartz-root.page,
+#quartz-body {
+  background: transparent;
+}
+
+#quartz-body {
+  position: relative;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.page > #quartz-body {
+  grid-template:
+    "grid-center" 1fr
+    "grid-footer" auto
+    / minmax(0, 1fr);
+  gap: 0;
+}
+
+.center {
+  background:
+    linear-gradient(180deg, rgba(255, 252, 244, 0.38), rgba(253, 247, 235, 0.58)),
+    url("assets/images/bg.jpg") center top / cover;
+  border-left: 1px solid var(--astaria-border);
+  border-right: 1px solid var(--astaria-border);
+  border-bottom: 3px solid var(--astaria-accent);
+  box-shadow: 0 0 38px rgba(0, 0, 0, 0.34);
+  min-height: 100vh;
+}
+
+.page-header {
+  display: none;
+}
+
+.left.sidebar {
+  position: absolute !important;
+  z-index: 5;
+  top: 1.65rem;
+  left: 2.5rem;
+  width: min(260px, 34vw);
+  height: auto !important;
+  padding: 0 !important;
+  background: transparent;
+  border: 0;
+  color: var(--astaria-ink);
+  pointer-events: none;
+}
+
+.right.sidebar {
+  display: none !important;
+}
+
+.left.sidebar .search {
+  width: 100%;
+  pointer-events: auto;
+}
+
+.left.sidebar .flex-component {
+  display: block !important;
+}
+
+.page-title,
+.explorer,
+.darkmode,
+.readermode,
+.spacer {
+  display: none !important;
+}
+
+.search-button {
+  width: 100%;
+  min-height: 2.45rem;
+  background: rgba(255, 252, 244, 0.9);
+  border: 0;
+  border-radius: 4px;
+  box-shadow: 0 8px 22px rgba(27, 20, 16, 0.16);
+  color: #7c746c;
+}
+
+.search-button p {
+  color: #7c746c;
+}
+
+.breadcrumb-container {
+  color: var(--astaria-muted);
+  font-family: "Alegreya SC", serif;
+}
+
+.article-title,
+.astaria-content-title,
+.markdown-rendered h1,
+.markdown-rendered h2,
+.markdown-rendered h3,
+.markdown-rendered h4 {
+  color: var(--astaria-accent-dark);
+  font-family: "Alegreya SC", serif;
+  font-variant: normal;
+  letter-spacing: 0;
+}
+
+.article-title {
+  display: none;
+}
+
+.astaria-content-title {
+  margin: 0 0 1.65rem;
+  text-align: left;
+  font-size: clamp(2.8rem, 4.2vw, 4.35rem);
+  line-height: 1;
+  text-shadow: 0 1px 0 #fff4da;
+}
+
+.article-title::after {
+  content: none;
+}
+
+.markdown-rendered {
+  padding: 0 2rem 3.1rem;
+  font-size: 1.08rem;
+  line-height: 1.62;
+}
+
+.markdown-rendered p {
+  margin: 0 0 1.35rem;
+  max-width: 68ch;
+}
+
+.markdown-rendered img {
+  border-radius: 2px;
+  box-shadow: none;
+}
+
+.markdown-rendered blockquote {
+  border-left-color: var(--astaria-accent);
+  background: rgba(216, 11, 7, 0.06);
+}
+
+.page-footer,
+.note-properties,
+.content-meta,
+.graph,
+.backlinks {
+  display: none !important;
+}
+
+.markdown-rendered a.internal {
+  background: transparent !important;
+  border-radius: 0 !important;
+  color: #ac1e1a;
+  font-weight: 700;
+  line-height: inherit;
+  padding: 0 !important;
+  text-decoration: none;
+}
+
+.markdown-rendered a.internal:hover {
+  color: var(--astaria-accent);
+  text-decoration: underline;
+}
+
+.astaria-cover-image {
+  display: block;
+  width: calc(100% + 4rem);
+  max-height: 640px;
+  margin: 0 -2rem 3.15rem;
+  object-fit: cover;
+  object-position: center;
+}
+
+.astaria-inline-image {
+  display: block;
+  max-width: 100%;
+}
+
+.astaria-sidebar {
+  float: right;
+  width: min(360px, 38%);
+  margin: 0 0 2rem 2.8rem;
+}
+
+.astaria-sidebar-image {
+  display: block;
+  width: 100%;
+  max-height: 650px;
+  object-fit: cover;
+  object-position: top center;
+  border: 0;
+  margin: 0 0 1.35rem;
+}
+
+.astaria-infobox {
+  width: auto;
+  padding: 1rem 1.15rem;
+  background: rgba(255, 250, 237, 0.72);
+  border: 1px solid rgba(89, 23, 23, 0.08);
+  border-radius: 10px;
+  box-shadow: 0 10px 24px rgba(42, 25, 17, 0.08);
+  color: var(--astaria-ink);
+}
+
+.astaria-infobox dl {
+  margin: 0;
+  padding: 0;
+}
+
+.astaria-infobox-row {
+  margin: 0 0 0.85rem;
+}
+
+.astaria-infobox dt {
+  margin: 0 0 0.15rem;
+  color: #503a32;
+  font-family: var(--bodyFont);
+  font-weight: 800;
+}
+
+.astaria-infobox dd {
+  margin: 0;
+  color: #46352e;
+  line-height: 1.38;
+}
+
+.astaria-infobox-reference {
+  color: #a71916;
+}
+
+.astaria-infobox-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.astaria-infobox-list li {
+  margin: 0.05rem 0;
+}
+
+.astaria-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0 2rem;
+}
+
+.astaria-card {
+  display: grid;
+  min-height: 7rem;
+  place-items: center;
+  padding: 1rem;
+  background:
+    linear-gradient(180deg, rgba(255, 247, 225, 0.92), rgba(230, 210, 171, 0.92));
+  border: 1px solid rgba(89, 23, 23, 0.28);
+  box-shadow: 0 10px 24px rgba(38, 24, 17, 0.18);
+  color: var(--astaria-accent-dark);
+  font-family: "Alegreya SC", serif;
+  font-size: 1.45rem;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+}
+
+.astaria-card:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 14px 30px rgba(38, 24, 17, 0.25);
+}
+
+.page-listing {
+  display: none;
+}
+
+.astaria-article-footer {
+  clear: both;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 4rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(89, 23, 23, 0.36);
+  color: #a71916;
+  font-family: "Alegreya SC", serif;
+}
+
+.astaria-article-footer a {
+  color: #a71916;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+body[data-slug="index"] .markdown-rendered > p:first-of-type img {
+  width: 100%;
+  max-height: 420px;
+  object-fit: cover;
+  object-position: center top;
+}
+
+@media (max-width: 900px) {
+  .page > #quartz-body {
+    display: block;
+  }
+
+  .left.sidebar {
+    top: 1rem;
+    left: 1rem;
+    width: min(230px, calc(100vw - 2rem));
+  }
+
+  .center {
+    border: 0;
+  }
+
+  .article-title {
+    padding: 2rem 1rem 1rem;
+    font-size: clamp(2.6rem, 15vw, 4.4rem);
+  }
+
+  .markdown-rendered {
+    padding: 0 1rem 2rem;
+  }
+
+  .astaria-cover-image {
+    width: calc(100% + 2rem);
+    margin: 0 -1rem 2rem;
+  }
+
+  .astaria-sidebar {
+    float: none;
+    width: 100%;
+    margin: 0 0 1.5rem;
+  }
+
+  .astaria-sidebar-image {
+    max-height: none;
+  }
+}

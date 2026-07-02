@@ -1,0 +1,44 @@
+---
+title: "Деревня Вардия - 8fbdae0c"
+aliases:
+  - "Деревня Вардия"
+lang: ru
+type: "settlement"
+category: "Места"
+status: source-empty
+publish: false
+draft: true
+wip: true
+wa_id: "8fbdae0c-7990-411d-aad1-a4578e115f2e"
+wa_url: "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D094D0B5D180D0B5D0B2D0BDD18F-D092D0B0D180D0B4D0B8D18F-settlement"
+wa_slug: "D094D0B5D180D0B5D0B2D0BDD18F-D092D0B0D180D0B4D0B8D18F-settlement"
+wa_cover_id: 6019048
+wa_cover_url: "https://wa-cdn.nyc3.cdn.digitaloceanspaces.com/user-data/production/ae978bc7-ef5e-47d8-8585-f7fae49590a5/uploads/images/2c19ed43f3d50d1add6b562d7a9152a4.jpeg"
+population: "1500"
+parent_location: "[[Хельвандский полуостров]]"
+country: "[[Вактар-Йорден]]"
+tags:
+  - astaria
+---
+
+# Деревня Вардия - 8fbdae0c
+
+## Основной текст
+
+_В исходной статье WorldAnvil основной текст отсутствует._
+
+## Структурные связи
+
+- Страна или организация: [[Вактар-Йорден]]
+- Родительская область: [[Хельвандский полуостров]]
+- Население: 1500
+
+
+## Связи
+
+```dataview
+LIST
+FROM ""
+WHERE contains(file.outlinks, this.file.link)
+SORT title ASC
+```

@@ -21,7 +21,6 @@ Read `.ai/context/astaria-project.md` when a task needs project background.
 ## Local Source Data
 
 - WorldAnvil export: `World-Астария-2fa/`
-- Investigation document: `Obsidian-перенос WorldAnvil - изыскания.md`
 - Existing Obsidian config: `.obsidian/`
 
 Treat `World-Астария-2fa/` as source data. Do not rewrite or reorganize it unless the user explicitly asks.
@@ -36,18 +35,21 @@ For creative brainstorming requests such as `мне нужна идея`, `пр�
 
 `.ai/skills/astaria-idea-workbench/SKILL.md`
 
-By default, save such ideas as private draft Markdown notes in `06 Черновики/Идеи/`, then give the user a short summary and the file link.
+By default, save such ideas as private draft Markdown notes in `Идеи/`, then give the user a short summary and the file link.
 
-Important boundary: `06 Черновики/Идеи/` is the user's private idea workbench, not canon and not a knowledge source. Do not search, read, summarize, reuse, or treat files from this folder as context for lore generation, article writing, campaign continuity, or database answers unless the user explicitly asks to use a specific idea file or says that an idea should be implemented/canonized.
+Important boundary: `Идеи/` is the user's private idea workbench, not canon and not a knowledge source. Do not search, read, summarize, reuse, or treat files from this folder as context for lore generation, article writing, campaign continuity, or database answers unless the user explicitly asks to use a specific idea file or says that an idea should be implemented/canonized.
 
 ## Working Preferences
 
 - Prefer a small pilot import before bulk migration.
 - Preserve WorldAnvil IDs in YAML/frontmatter as `wa_id`.
 - Do not publish all content by default: many exported articles are drafts.
-- Keep player-facing lore and GM/private campaign notes separate.
+- Treat canonical saga prose as literature under `Энциклопедия/Литература/`; do not create visible `Игрокам` or `Мастерское` folders unless explicitly requested.
 - Keep brainstorming files, spoilers, FATE mechanics, and GM-only material private by default.
-- Do not treat `06 Черновики/Идеи/` as source material unless explicitly instructed.
+- Keep `Энциклопедия/Секреты/` as a private GM/context layer. Never copy spoilers or hidden knowledge from that folder into public encyclopedia articles unless the user explicitly asks to reveal a specific secret.
+- Do not treat `Идеи/` as source material unless explicitly instructed.
+- When migrating text from WorldAnvil, correct obvious typos, punctuation, and rough phrasing lightly, but do not change facts, intent, or continuity.
 - Prefer Markdown, YAML properties, Obsidian wikilinks, and scripts for repeatable conversion.
 - Do not link encyclopedia/lore articles to specific saga chapter notes unless the user explicitly asks. Campaign-specific references should usually live in chapter files, campaign indexes, or private notes, because there may be multiple sagas using the same lore.
-- Keep all ordinary character articles together in `02 Энциклопедия/Персонажи/`, including characters currently played by players. Do not make the article body or visible taxonomy distinguish player characters from NPCs unless the user explicitly asks.
+- Keep all ordinary character articles together in `Энциклопедия/Персонажи/`, including characters currently played by players. Do not make the article body or visible taxonomy distinguish player characters from NPCs unless the user explicitly asks.
+- When creating new character articles in `Энциклопедия/Персонажи/`, follow the required character fields and Astaria-year calculation in `.ai/context/astaria-meta-and-fate.md`. Include ethnicity, physical description, birth year, calculated age, birth place, current location, Imitei status if any, prose description, and a private FATE block.

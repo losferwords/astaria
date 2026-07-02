@@ -6,7 +6,7 @@ Source: `meta.json` provided by the user on June 10, 2026. The user may delete t
 
 ## World Meta
 
-- Current in-world year: 105 year of the New Era.
+- Current in-world year: derive from the real calendar year as `real year - 1920`. In 2026, Astaria is in `106 НЭ`; in 2027, it becomes `107 НЭ`, and so on.
 - Main currency: silver.
 - The campaign currently uses `FATE Core System`.
 
@@ -18,6 +18,27 @@ Astaria uses two main eras:
 - `Новая Эра`, abbreviated `НЭ` or `Н.Э.`. This is analogous to CE. It starts at year 0 and continues to the current date.
 
 The transition from the Chthonic Era to the New Era was the catastrophic event known as `Падение Хтона`.
+
+## Encyclopedia Character Requirements
+
+When creating a new character article in `Энциклопедия/Персонажи/`, fill these fields by default. If the user has not provided exact values, make conservative draft assumptions and mark the article `status: draft`, unless the missing value is too important to invent.
+
+- `ethnicity`: the character's people, for example `[[Раджати]]`, `[[Авгарцы]]`, `[[Джу]]`.
+- `eyes`: eye colour.
+- `height`: in compact format such as `1.8м`.
+- `weight`: in compact format such as `54кг`.
+- `skin`: skin tone, for example `светлая`, `смуглая`, `загорелая`.
+- `hair`: hair type and colour, for example `длинные тёмные`, `короткие светлые`.
+- `birth_year`: in era format such as `76 НЭ` or `-115 ХЭ`.
+- `age`: calculated from the current Astaria year.
+- `age_as_of`: the Astaria year used for the age calculation, for example `106 НЭ`.
+- `birth_place`: a location appropriate for the character's ethnicity and biography.
+- `current_location`: the character's current known location.
+- `imitei`: the Imitei role if the character is an Imitei; otherwise use `false`.
+- A readable description in the same style as existing Encyclopedia character profiles.
+- A private `%% FATE / GM ... %%` block with aspects, skills, and stunts appropriate to the character's power level.
+
+For age calculation, treat `НЭ` years as ordinary positive years. For `ХЭ`, calculate age across the era boundary carefully because years count backward toward zero.
 
 ## Cultural Reference Map
 

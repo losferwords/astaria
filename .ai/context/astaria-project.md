@@ -24,13 +24,11 @@ The user does not want to buy an Obsidian subscription yet, because they first w
 ## Existing Files
 
 - `World-Астария-2fa/` contains a WorldAnvil backup/export.
-- `Welcome.md` is the default Obsidian welcome note.
 - `.obsidian/` exists, so this folder is already usable as an Obsidian vault.
-- `Obsidian-перенос WorldAnvil - изыскания.md` contains the first investigation and migration plan.
 - `.ai/context/astaria-meta-and-fate.md` contains service-only world meta, cultural references, correct forms of address, and FATE Core generation rules copied from `meta.json`.
-- `.ai/skills/astaria-idea-workbench/SKILL.md` handles creative brainstorming requests and saves ideas to `06 Черновики/Идеи/`.
-- `06 Черновики/Идеи/` is a private idea workbench only. It is not canon, not a knowledge source, and should not be used for lore generation or database lookup unless the user explicitly asks to use a specific idea or canonize it.
-- As of the investigation, the workspace was not a git repository yet.
+- `.ai/skills/astaria-idea-workbench/SKILL.md` handles creative brainstorming requests and saves ideas to `Идеи/`.
+- `Идеи/` is a private idea workbench only. It is not canon, not a knowledge source, and should not be used for lore generation or database lookup unless the user explicitly asks to use a specific idea or canonize it.
+- The vault is tracked in git and published through Quartz and GitHub Pages.
 
 ## Important Findings From The Export
 
@@ -93,53 +91,31 @@ The repo now contains a Quartz 5 publishing setup under `_quartz/`.
 
 Public content is not edited directly in `_quartz/content/`; it is generated from the vault by `_scripts/sync_quartz_content.rb`. The script only copies Markdown notes with `publish: true` from:
 
-- `01 Мир/`
-- `02 Энциклопедия/`
-- `04 Хронология/`
-- `05 Карты/`
+- `Энциклопедия/`
+- `Хронология/`
+- `Карты/`
 
-It excludes private/service material by default, including `.ai/`, `06 Черновики/`, `World-Астария-2fa/`, campaign notes, templates, and raw imports. Keep GM notes, FATE mechanics, idea drafts, and spoilers out of published notes unless the user explicitly approves them.
+It excludes private/service material by default, including `.ai/`, `Идеи/`, `World-Астария-2fa/`, templates, and raw imports. Keep GM notes, FATE mechanics, idea drafts, and spoilers out of published notes unless the user explicitly approves them.
+
+Public URLs use English category paths and slugs independently from Russian vault names. Examples: `/gods/mercate`, `/countries/talassia`, `/map`, and `/timeline`. Prefer `public_slug` in frontmatter when an explicit canonical English URL is needed; otherwise the publication script may derive a slug from the local article image name.
 
 GitHub Pages deployment is configured in `.github/workflows/deploy-quartz.yml`. The expected public URL is `https://losferwords.github.io/astaria/` after GitHub Pages is set to use `GitHub Actions`.
 
 Large source maps remain in `Assets/Maps/`. Lightweight publication copies live in `Assets/Maps/Web/`, and the sync script rewrites map paths only in the generated Quartz content.
 
-## Recommended Pilot
+## Current Vault Structure
 
-Do not bulk-convert all 858 articles first. Build a small pilot/vitrine:
+The Obsidian trial was successful. The vault is now the primary working knowledge base rather than a temporary pilot.
 
-- `Талассия` from `Organization-Талассия-665.json`
-- `Мерката` from `Person-Мерката-9e8.json`
-- `Основание Талассии` from `HistoricalEntry-Основание Талассии-260.json`
-- `Астария` map page with 5-10 markers
-- one overview page linking the pilot together
-
-The pilot should prove:
-
-- article layout feels good in Obsidian;
-- WorldAnvil links convert into Obsidian wikilinks;
-- images can be embedded;
-- timeline data can be browsed;
-- the high-resolution map can show clickable markers;
-- selected content can later be published.
-
-## Current Pilot State
-
-The first Obsidian pilot has been created.
-
-Entry points:
-
-- `Welcome.md`
-- `00 README/Витрина Астарии.md`
-- `01 Мир/Астария.md`
-- `01 Мир/Астария - карта связей.canvas`
-- `02 Энциклопедия/Страны/Талассия.md`
-- `02 Энциклопедия/Боги/Мерката.md`
-- `04 Хронология/История Астарии.md`
-- `04 Хронология/События/Основание Талассии.md`
-- `05 Карты/Карта Астарии.md`
-
-The pilot also contains stub notes for linked entities so Graph view has a meaningful network. YAML and pilot wikilinks were checked after creation.
+- `Энциклопедия/` is the main canonical lore tree.
+- `Энциклопедия/Бестиарий/` contains species, monsters, anthropomorphs, and other bestiary entries such as nagi, harpies, centaurs, vermins, and vetals.
+- `Энциклопедия/Литература/` contains canonical prose and sagas such as `Ветер Перемен`.
+- `Энциклопедия/Секреты/` contains private GM-only lore and setting revelations. It is context for Codex and the user, not player-facing material, and must stay unpublished.
+- `Хронология/` contains timeline pages and historical events.
+- `Карты/` contains map notes.
+- `Идеи/` is private, non-canonical, and excluded from research by default.
+- `Assets/` contains local art and map assets.
+- `World-Астария-2fa/` remains immutable source material for future imports.
 
 ## Campaign Chapter Format
 
@@ -147,20 +123,25 @@ The user prefers campaign chapters to remain aesthetically close to prose: one c
 
 Current chapter files created from the WorldAnvil saga document:
 
-- `03 Кампании/Ветер Перемен/Главы/Глава 086 - Призыв Шубханкари.md`
-- `03 Кампании/Ветер Перемен/Главы/Глава 087 - Новая Тень.md`
-- `03 Кампании/Ветер Перемен/Главы/Глава 088 - Сон без конца.md`
-- `03 Кампании/Ветер Перемен/Главы/Глава 089 - Дорога в Ванпур.md`
+- `Энциклопедия/Литература/Ветер Перемен/Глава 086 - Призыв Шубханкари.md`
+- `Энциклопедия/Литература/Ветер Перемен/Глава 087 - Новая Тень.md`
+- `Энциклопедия/Литература/Ветер Перемен/Глава 088 - Сон без конца.md`
+- `Энциклопедия/Литература/Ветер Перемен/Глава 089 - Дорога в Ванпур.md`
+- `Энциклопедия/Литература/Ветер Перемен/Глава 090 - Вторая заварка.md`
 
 Supporting files:
 
-- `03 Кампании/Ветер Перемен/Ветер Перемен.md`
-- `03 Кампании/Ветер Перемен/Главы/Главы Ветра Перемен.md`
+- `Энциклопедия/Литература/Ветер Перемен/Ветер Перемен.md`
+- `Энциклопедия/Литература/Ветер Перемен/Главы Ветра Перемен.md`
 - `_templates/Глава Ветер Перемен.md` (currently prepared for chapter 90)
 
-Character articles, including characters currently played by players, should live together under `02 Энциклопедия/Персонажи/` and use the same neutral lore-article style. Do not separate player characters into a visible `Игроки`/`NPC` article taxonomy by default; campaign chapter frontmatter and campaign indexes can identify which characters are players in a specific saga.
+Character articles, including characters currently played by players, should live together under `Энциклопедия/Персонажи/` and use the same neutral lore-article style. Do not separate player characters into a visible `Игроки`/`NPC` article taxonomy by default; chapter frontmatter and literature indexes can identify which characters are central to a specific saga.
 
 Do not link encyclopedia/lore articles to specific saga chapter notes unless the user explicitly asks. Campaign-specific references should usually live in chapter files, campaign indexes, or private notes, because there may be multiple sagas using the same lore.
+
+Never leak facts from `Энциклопедия/Секреты/` into open encyclopedia articles, published Quartz pages, or player-facing summaries unless the user explicitly requests that a specific secret be revealed. Secret notes may be used as private context for consistency, foreshadowing, and GM preparation only.
+
+When importing material from WorldAnvil, lightly polish spelling, punctuation, and obvious rushed phrasing. Preserve the factual content, continuity, and authorial intent.
 
 ## Service Meta And FATE Context
 
@@ -182,12 +163,12 @@ For user requests like `мне нужна идея`, `придумай`, `нак
 
 Default behaviour:
 
-- create a private draft note in `06 Черновики/Идеи/`;
-- update `06 Черновики/Идеи/Идеи.md` with a link;
+- create a private draft note in `Идеи/`;
+- update `Идеи/Идеи.md` with a link;
 - summarize only the highlights in chat;
 - keep spoilers, GM notes, and mechanics out of public articles unless explicitly requested.
 
-Important: do not read or use existing notes in `06 Черновики/Идеи/` as source context for new lore, article writing, continuity decisions, or knowledge search. These notes are only for the user's private review. Use them only when the user explicitly references a specific idea note, asks to continue/use it, or says that an idea should be implemented.
+Important: do not read or use existing notes in `Идеи/` as source context for new lore, article writing, continuity decisions, or knowledge search. These notes are only for the user's private review. Use them only when the user explicitly references a specific idea note, asks to continue/use it, or says that an idea should be implemented.
 
 ## Suradj Ka Ghar Lore Pass
 
@@ -195,32 +176,32 @@ On June 10, 2026, a focused lore pass was made for the `Сурадж Ка Гха
 
 Expanded core articles:
 
-- `02 Энциклопедия/Страны/Сурадж Ка Гхар.md`
-- `02 Энциклопедия/Народы/Раджати.md`
-- `02 Энциклопедия/Боги/Шубханкари.md`
-- `02 Энциклопедия/Имитеи/Жнец.md`
+- `Энциклопедия/Страны/Сурадж Ка Гхар.md`
+- `Энциклопедия/Народы/Раджати.md`
+- `Энциклопедия/Боги/Шубханкари.md`
+- `Энциклопедия/Имитеи/Жнец.md`
 
 Created or expanded published settlements from the backup:
 
-- `02 Энциклопедия/Места/Город Сангалла.md`
-- `02 Энциклопедия/Места/Город Танассар.md`
-- `02 Энциклопедия/Места/Деревня Бадракали.md`
-- `02 Энциклопедия/Места/Деревня Вэйган.md`
-- `02 Энциклопедия/Места/Деревня Тай-Линь.md`
+- `Энциклопедия/Места/Город Сангалла.md`
+- `Энциклопедия/Места/Город Танассар.md`
+- `Энциклопедия/Места/Деревня Бадракали.md`
+- `Энциклопедия/Места/Деревня Вэйган.md`
+- `Энциклопедия/Места/Деревня Тай-Линь.md`
 
 Created or expanded related people:
 
-- `02 Энциклопедия/Персонажи/Индира Раштра.md`
-- `02 Энциклопедия/Персонажи/Анвика Нарай.md`
+- `Энциклопедия/Персонажи/Индира Раштра.md`
+- `Энциклопедия/Персонажи/Анвика Нарай.md`
 - draft-source bridge notes for `Ашрам Виджай`, `Кунал Виджай`, `Амрит Наир`, and `Аджай Верма`
 
 Created supporting geography:
 
-- `02 Энциклопедия/Места/Река Рави.md`
-- `02 Энциклопедия/Места/Джунгли Шанкари.md`
-- `02 Энциклопедия/Места/Джунгли Минь-Тао.md`
-- `02 Энциклопедия/Места/Болота Кхали Дарти.md`
+- `Энциклопедия/Места/Река Рави.md`
+- `Энциклопедия/Места/Джунгли Шанкари.md`
+- `Энциклопедия/Места/Джунгли Минь-Тао.md`
+- `Энциклопедия/Места/Болота Кхали Дарти.md`
 
 Draft-source bridge notes were created for `Город Аштапал`, `Город Равигар`, `Город Награкшаса`, `Джунгли Сундари`, and `Ладвакхара`. Keep these with `publish: false` unless the user explicitly approves publishing draft/private material.
 
-After this pass, YAML validation and vault wikilink validation both passed. The workspace folder still did not appear to be a git repository when checked with `git status`.
+After this pass, YAML validation and vault wikilink validation both passed.

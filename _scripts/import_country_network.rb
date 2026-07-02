@@ -70,6 +70,11 @@ CATEGORY_PRESENTATION_TITLES = Set[
   "Страны",
   "Флора"
 ].freeze
+SPLIT_SAGA_DOCUMENT_TITLES = Set[
+  "Сага \"Ветер Перемен\"",
+  "Сага \"Зов Бури\"",
+  "Сага \"Пока Боги Спят\""
+].freeze
 
 COUNTRY_RELATION_OVERRIDES = {
   "Катахтонос" => {
@@ -133,6 +138,10 @@ def category_presentation_article?(article)
   content.match?(/\[(?:table|toc|timeline|center)\b/i)
 end
 
+def split_saga_document?(article)
+  article["templateType"] == "document" && SPLIT_SAGA_DOCUMENT_TITLES.include?(title_for(article))
+end
+
 def local_asset_for(image)
   return nil unless image.is_a?(Hash)
 
@@ -159,6 +168,7 @@ def normalize_text(text)
       .gsub("\r\n", "\n")
       .gsub("\r", "\n")
       .gsub(" ", " ")
+      .gsub("…", "...")
       .gsub(/[“”]/, "\"")
       .gsub(/[‘’]/, "'")
       .gsub("–", "-")
@@ -227,7 +237,9 @@ def polish_text(text)
 
   replacements.each_with_object(text.dup) { |(from, to), memo| memo.gsub!(from, to) }
               .gsub(/\s+([,.!?;:])/, '\1')
-              .gsub(/([,.!?;:])([^\s\n\)\]"'])/, '\1 \2')
+              .gsub(/([,!?:;]|(?<!\.)\.(?!\.))([^\s\n\)\]"'])/, '\1 \2')
+              .gsub(/\. \.\./, "...")
+              .gsub(/\.{3}([^\s\n\)\]"'])/, '... \1')
               .gsub(/[ \t]+\n/, "\n")
               .gsub(/\n{3,}/, "\n\n")
               .strip
@@ -386,7 +398,9 @@ else
 end
 
 selected_ids.delete(nil)
-selected_articles = selected_ids.map { |id| by_id[id] }.compact.reject { |article| category_presentation_article?(article) }
+selected_articles = selected_ids.map { |id| by_id[id] }.compact.reject do |article|
+  category_presentation_article?(article) || split_saga_document?(article)
+end
 
 written = []
 skipped = []

@@ -20,6 +20,7 @@ PRIVATE_PATH_PREFIXES = [
 ].freeze
 
 CATEGORY_ROUTES = {
+  "Бестиарий" => "bestiary",
   "Боги" => "gods",
   "Знания" => "lore",
   "Имитеи" => "imitei",

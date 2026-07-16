@@ -322,6 +322,7 @@ def cleanup_public_body(body, data)
   image_paths = [sidebar_image(data), cover_image(data), crest_image(data)].compact
 
   body = body.gsub(/\r\n?/, "\n")
+  body = body.gsub(/%%.*?%%\s*/m, "")
   body = body.sub(/\A\s*# .+?\n+/, "")
   body = body.gsub(/^## Основной текст\s*\n+/, "")
   body = body.gsub(/^## Связи\s*\n+```dataview\n.*?```\s*/m, "")

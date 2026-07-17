@@ -3,17 +3,8 @@ title: "Астиаг II"
 lang: ru
 type: "person"
 category: "Персонажи"
-status: imported
-publish: false
-draft: false
-wip: true
-wa_id: "b8c0b90a-8cc0-4f0b-a1c0-854a9b393fd4"
-wa_url: "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D090D181D182D0B8D0B0D0B3-ii-person"
-wa_slug: "D090D181D182D0B8D0B0D0B3-ii-person"
-wa_cover_id: 6019048
-wa_cover_url: "https://wa-cdn.nyc3.cdn.digitaloceanspaces.com/user-data/production/ae978bc7-ef5e-47d8-8585-f7fae49590a5/uploads/images/2c19ed43f3d50d1add6b562d7a9152a4.jpeg"
-wa_portrait_id: 3926638
-wa_portrait_url: "https://www.worldanvil.com/uploads/images/f527c4bb68d1ac877f2b2e6550ef93e7.jpg"
+ready: true
+quartz: false
 portrait_image: "[[Assets/Images/Astiag_II.jpg]]"
 ethnicity: "[[Кадийцы]]"
 eyes: "Карие"
@@ -29,8 +20,10 @@ related:
   - "[[Мститель]]"
   - "[[Варвар]]"
   - "[[Абу Али аль-Хассан]]"
-tags:
-  - astaria
+birth_year: -722
+death_year: -667
+organizations:
+  - "[[Кадир]]"
 ---
 
 # Астиаг II
@@ -67,7 +60,7 @@ consequences:
   mild:
   moderate:
   severe:
-notes: Импортировано из WorldAnvil как заготовка; механика требует ручной вычитки.
+notes: Механика требует ручной вычитки.
 %%
 
 ## Связи

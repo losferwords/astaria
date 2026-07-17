@@ -12,9 +12,9 @@ Use this skill for creative brainstorming in the Astaria setting.
 - Write in Russian by default.
 - Use `.ai/context/astaria-project.md` for project background.
 - Use `.ai/context/astaria-meta-and-fate.md` for cultures, correct demonyms, FATE aspects, skills, and stunts.
-- If the idea touches existing lore, characters, WorldAnvil migration, Obsidian structure, maps, or articles, also use `.ai/skills/astaria-obsidian-migration/SKILL.md`.
+- If the idea touches existing lore, characters, Obsidian structure, maps, or articles, also use `.ai/skills/astaria-obsidian-vault/SKILL.md`.
 - Unless the user explicitly says “только в чат”, “не создавай файл”, or similar, save the generated ideas to a Markdown note in `Идеи/`.
-- Keep idea notes `publish: false` and `private: true`.
+- Keep idea notes `ready: false`, `quartz: false`, and `private: true`.
 - Treat `Идеи/` as output-only by default. Do not read, search, reuse, summarize, or treat existing idea notes as source context unless the user explicitly asks to use a specific note, continue a previous idea, or canonize/implement an idea.
 - Do not put GM-only twists, hidden mechanics, or spoilers into public encyclopedia articles unless explicitly requested.
 
@@ -35,15 +35,12 @@ If a file with that name exists, append `- 2`, `- 3`, etc.
 ---
 title:
 type: idea
-status: draft
 created: YYYY-MM-DD
 campaign: Ветер Перемен
 related: []
-publish: false
+ready: false
+quartz: false
 private: true
-tags:
-  - astaria
-  - idea
 ---
 ```
 
@@ -63,7 +60,7 @@ tags:
 - Make ideas immediately playable.
 - Prefer 3-7 strong options over a long vague list.
 - Tie ideas to existing characters, cultures, gods, conflicts, and places when possible.
-- Use canonical sources for those ties: WorldAnvil backup, `Энциклопедия/`, `Хронология/`, `.ai/context/`, and explicitly requested notes. Do not use `Идеи/` as canon.
+- Use canonical sources for those ties: `Энциклопедия/`, `Хронология/`, `Карты/`, `.ai/context/`, and explicitly requested notes. Do not use `Идеи/` as canon.
 - Give each situation at least one tension, choice, or cost.
 - For FATE, provide aspects in a form that can be invoked and compelled.
 - If the user is preparing a session, include at least one low-prep scene, one complication, and one optional escalation.

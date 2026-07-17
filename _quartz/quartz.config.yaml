@@ -65,7 +65,7 @@ plugins:
       wikilinks: true
       callouts: true
       mermaid: true
-      parseTags: true
+      parseTags: false
       parseArrows: true
       parseBlockReferences: true
       enableInHtmlEmbed: false
@@ -106,8 +106,6 @@ plugins:
     enabled: true
   - source: github:quartz-community/remove-draft
     enabled: true
-  - source: github:quartz-community/explicit-publish
-    enabled: true
   - source: github:quartz-community/alias-redirects
     enabled: true
   - source: github:quartz-community/content-index
@@ -124,8 +122,6 @@ plugins:
   - source: github:quartz-community/content-page
     enabled: true
   - source: github:quartz-community/folder-page
-    enabled: true
-  - source: github:quartz-community/tag-page
     enabled: true
   - source: github:quartz-community/explorer
     enabled: false

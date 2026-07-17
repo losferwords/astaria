@@ -3,17 +3,8 @@ title: "Рамхотеп II"
 lang: ru
 type: "person"
 category: "Персонажи"
-status: imported
-publish: false
-draft: false
-wip: true
-wa_id: "0866dd46-f120-4f5e-8f21-4401c9501126"
-wa_url: "https://www.worldanvil.com/w/D090D181D182D0B0D180D0B8D18F-losfer/a/D0A0D0B0D0BCD185D0BED182D0B5D0BF-ii-person"
-wa_slug: "D0A0D0B0D0BCD185D0BED182D0B5D0BF-ii-person"
-wa_cover_id: 6019048
-wa_cover_url: "https://wa-cdn.nyc3.cdn.digitaloceanspaces.com/user-data/production/ae978bc7-ef5e-47d8-8585-f7fae49590a5/uploads/images/2c19ed43f3d50d1add6b562d7a9152a4.jpeg"
-wa_portrait_id: 1861731
-wa_portrait_url: "https://www.worldanvil.com/uploads/images/847d4098d28981baaaea2501d782f965.jpg"
+ready: true
+quartz: false
 portrait_image: "[[Assets/Images/Ramhotep_II.jpg]]"
 ethnicity: "[[Хефат]]"
 current_location: "[[Город Тиза]]"
@@ -29,8 +20,11 @@ related:
   - "[[Война Жаждущих]]"
   - "[[Хат-Астат]]"
   - "[[Гилас]]"
-tags:
-  - astaria
+birth_year: 60
+organizations:
+  - "[[Амон-Астат]]"
+  - "[[Хат-Астат]]"
+birth_place: "[[Город Тиза]]"
 ---
 
 # Рамхотеп II
@@ -65,7 +59,7 @@ consequences:
   mild:
   moderate:
   severe:
-notes: Импортировано из WorldAnvil как заготовка; механика требует ручной вычитки.
+notes: Механика требует ручной вычитки.
 %%
 
 ## Связи

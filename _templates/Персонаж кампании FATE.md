@@ -3,18 +3,14 @@ title: Имя персонажа
 type: campaign-character
 campaign: Ветер Перемен
 category: Персонажи
-status: draft
 portrait_url:
 origin:
 ethnicity:
 profession:
 current_arc:
 related: []
-publish: false
-draft: true
-tags:
-  - campaign/wind-of-change
-  - character
+ready: false
+quartz: false
 ---
 
 # Имя персонажа

@@ -97,7 +97,7 @@ def publishable_markdown?(path)
   return false if PRIVATE_PATH_PREFIXES.any? { |prefix| path.start_with?("#{prefix}/") }
 
   data, = frontmatter_for(path)
-  data["publish"] == true && data["draft"] != true
+  data["quartz"] == true
 end
 
 def extract_asset_path(value)
@@ -337,11 +337,12 @@ def cleanup_public_body(body, data)
 end
 
 def generated_frontmatter(data)
-  aliases = Array(data["aliases"])
-  aliases << data["title"] if data["title"]
-  data["aliases"] = aliases.compact.map(&:to_s).uniq
+  public_data = data.reject { |key, _value| %w[ready quartz].include?(key) }
+  aliases = Array(public_data["aliases"])
+  aliases << public_data["title"] if public_data["title"]
+  public_data["aliases"] = aliases.compact.map(&:to_s).uniq
 
-  yaml = YAML.dump(data).sub(/\A---\s*\n/, "")
+  yaml = YAML.dump(public_data).sub(/\A---\s*\n/, "")
   "---\n#{yaml}---\n"
 end
 
@@ -415,7 +416,6 @@ def write_category_indexes(entries)
     body = <<~MARKDOWN
       ---
       title: #{category}
-      publish: true
       aliases:
         - #{category}
       ---
@@ -440,7 +440,6 @@ def write_index(entries)
   body = <<~MARKDOWN
     ---
     title: Астария
-    publish: true
     aliases:
       - Астария
     ---

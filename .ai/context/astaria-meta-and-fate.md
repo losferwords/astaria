@@ -21,7 +21,7 @@ The transition from the Chthonic Era to the New Era was the catastrophic event k
 
 ## Encyclopedia Character Requirements
 
-When creating a new character article in `Энциклопедия/Персонажи/`, fill these fields by default. If the user has not provided exact values, make conservative draft assumptions and mark the article `status: draft`, unless the missing value is too important to invent.
+When creating a new character article in `Энциклопедия/Персонажи/`, fill these fields by default. If the user has not provided exact values, make conservative assumptions and keep the article `ready: false`, unless the missing value is too important to invent.
 
 - `ethnicity`: the character's people, for example `[[Раджати]]`, `[[Авгарцы]]`, `[[Джу]]`.
 - `eyes`: eye colour.

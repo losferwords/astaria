@@ -8,6 +8,7 @@
     "strict": true,
     "incremental": true,
     "resolveJsonModule": true,
+    "types": ["@quartz-community/types/globals"],
     "skipLibCheck": true,
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,
@@ -17,7 +18,13 @@
     "jsx": "react-jsx",
     "jsxImportSource": "preact"
   },
-  "include": ["quartz/**/*.ts", "quartz/**/*.tsx", "*.ts", "*.tsx", "./package.json"],
+  "include": [
+    "quartz/**/*.ts",
+    "quartz/**/*.tsx",
+    "*.ts",
+    "*.tsx",
+    "./package.json"
+  ],
   "exclude": [
     "build/**/*.d.ts",
     ".quartz/**/src/**",

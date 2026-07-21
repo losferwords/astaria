@@ -4,7 +4,7 @@ lang: ru
 type: "person"
 category: "Персонажи"
 ready: true
-quartz: false
+quartz: true
 portrait_image: "[[Assets/Images/Telemachus II.jpg]]"
 ethnicity: "[[Талассийцы]]"
 current_location: "[[Город Антал]]"

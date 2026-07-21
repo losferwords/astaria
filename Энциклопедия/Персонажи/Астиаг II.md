@@ -4,7 +4,7 @@ lang: ru
 type: "person"
 category: "Персонажи"
 ready: true
-quartz: false
+quartz: true
 portrait_image: "[[Assets/Images/Astiag_II.jpg]]"
 ethnicity: "[[Кадийцы]]"
 eyes: "Карие"

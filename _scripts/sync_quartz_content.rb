@@ -4,6 +4,7 @@
 require "cgi"
 require "date"
 require "fileutils"
+require "json"
 require "pathname"
 require "yaml"
 
@@ -32,7 +33,8 @@ CATEGORY_ROUTES = {
   "Персонажи" => "characters",
   "Предметы" => "items",
   "События" => "events",
-  "Страны" => "countries"
+  "Страны" => "countries",
+  "Флора" => "flora"
 }.freeze
 
 COUNTRY_ORDER = [
@@ -40,18 +42,18 @@ COUNTRY_ORDER = [
   "Громовые Кланы",
   "Иомар",
   "Катахтонос",
-  "Амон-Астат",
-  "Вактар-Йорден",
-  "Вакумара",
-  "Дикоземье",
   "Империя Ланг-Ан",
-  "Кадир",
   "Лунаар",
-  "Сурадж Ка Гхар",
+  "Амон-Астат",
+  "Кадир",
   "Талассия",
   "Хамоа",
-  "Обитель",
-  "Амато"
+  "Дикоземье",
+  "Вактар-Йорден",
+  "Сурадж Ка Гхар",
+  "Вакумара",
+  "Амато",
+  "Обитель"
 ].freeze
 
 COUNTRY_BY_PEOPLE = {
@@ -59,18 +61,82 @@ COUNTRY_BY_PEOPLE = {
   "Гойдаир" => "Громовые Кланы",
   "Надаир" => "Иомар",
   "Хтониды" => "Катахтонос",
-  "Хефат" => "Амон-Астат",
-  "Вактары" => "Вактар-Йорден",
-  "Ваку" => "Вакумара",
-  "Авгарцы" => "Дикоземье",
   "Джу" => "Империя Ланг-Ан",
-  "Кадийцы" => "Кадир",
   "Лудаир" => "Лунаар",
-  "Раджати" => "Сурадж Ка Гхар",
+  "Хефат" => "Амон-Астат",
+  "Кадийцы" => "Кадир",
   "Талассийцы" => "Талассия",
   "Манаи" => "Хамоа",
-  "Венды" => "Обитель",
-  "Эдзо" => "Амато"
+  "Авгарцы" => "Дикоземье",
+  "Вактары" => "Вактар-Йорден",
+  "Раджати" => "Сурадж Ка Гхар",
+  "Ваку" => "Вакумара",
+  "Эдзо" => "Амато",
+  "Венды" => "Обитель"
+}.freeze
+
+PEOPLE_ORDER = [
+  "Эллийцы",
+  "Гойдаир",
+  "Надаир",
+  "Хтониды",
+  "Джу",
+  "Лудаир",
+  "Хефат",
+  "Кадийцы",
+  "Талассийцы",
+  "Манаи",
+  "Авгарцы",
+  "Вактары",
+  "Раджати",
+  "Ваку",
+  "Эдзо",
+  "Венды"
+].freeze
+
+IMITEI_ORDER = [
+  "Идеал",
+  "Горец",
+  "Друид",
+  "Оракул",
+  "Аватар",
+  "Тень",
+  "Светоносный",
+  "Мститель",
+  "Наварх",
+  "Хранитель",
+  "Варвар",
+  "Вознесённый",
+  "Жнец",
+  "Шаман",
+  "Онмёдзи",
+  "Страж"
+].freeze
+
+GOD_ORDER = [
+  "Гиперион I",
+  "Тарун",
+  "Церунна",
+  "Тиресий",
+  "Дракон Ланг-Ан",
+  "Мерката",
+  "Аст",
+  "Альзаман",
+  "Калипсо",
+  "Икатерра",
+  "Хангор",
+  "Винтра",
+  "Шубханкари",
+  "Руфу",
+  "Ицунэ",
+  "Велисса"
+].freeze
+
+CATEGORY_TITLE_ORDER = {
+  "Страны" => COUNTRY_ORDER,
+  "Народы" => PEOPLE_ORDER,
+  "Имитеи" => IMITEI_ORDER,
+  "Боги" => GOD_ORDER
 }.freeze
 
 CATEGORY_DESCRIPTIONS = {
@@ -85,7 +151,8 @@ CATEGORY_DESCRIPTIONS = {
   "Персонажи" => "Герои, правители, странники и те, чьи решения меняют Астарию.",
   "Предметы" => "Реликвии, оружие и вещи, сохранившие след великих событий.",
   "События" => "Войны, открытия и переломные мгновения истории мира.",
-  "Страны" => "Государства Астарии, их устройство, противоречия и место в мире."
+  "Страны" => "Государства Астарии, их устройство, противоречия и место в мире.",
+  "Флора" => "Растения Астарии, их свойства, происхождение и место в культурах мира."
 }.freeze
 
 SIGNIFICANCE_LABELS = {
@@ -436,6 +503,8 @@ end
 
 def render_infobox_value(key, data, route, lookup)
   if key == "significance"
+    return "" unless data["timeline"] == true || data["type"].to_s == "historical-event"
+
     label = SIGNIFICANCE_LABELS.fetch(data[key].to_i, "Летописное")
     return CGI.escapeHTML("#{label} событие")
   end
@@ -618,6 +687,51 @@ def build_title(route, data)
   HTML
 end
 
+def build_coverless_title(route, data)
+  return "" if data["public_slug"].to_s.strip == "index"
+
+  title = data["title"].to_s
+  escaped_title = CGI.escapeHTML(title)
+  home_href = relative_href(route, "index")
+  category = data["category"].to_s
+  category_route = CATEGORY_ROUTES[category]
+  category_crumb = if category_route
+    %(<span aria-hidden="true">/</span><a href="../#{CGI.escapeHTML(category_route)}/">#{CGI.escapeHTML(display_category(category))}</a>)
+  else
+    ""
+  end
+  kicker = case data["type"].to_s
+  when "chapter", "session" then "Глава летописи"
+  when "campaign", "document" then "Сага Астарии"
+  else display_category(category)
+  end
+  metadata = [
+    data["chapter"] && "Глава #{data["chapter"]}",
+    data["year"] && astaria_year_label(data["year"]),
+    data["season"],
+    display_value(data["region"])
+  ].compact.map(&:to_s).reject(&:empty?).first(3)
+  metadata_html = metadata.map { |value| %(<span>#{CGI.escapeHTML(value)}</span>) }.join
+  initial = title.each_char.find { |char| char.match?(/[[:alpha:]]/) } || "А"
+
+  <<~HTML
+    <header class="astaria-coverless-hero">
+      <nav class="astaria-article-trail" aria-label="Хлебные крошки">
+        <a href="#{CGI.escapeHTML(home_href)}">Астария</a>
+        #{category_crumb}
+      </nav>
+      <div class="astaria-coverless-main">
+        <div>
+          <p class="astaria-coverless-kicker">#{CGI.escapeHTML(kicker)}</p>
+          <h1 class="astaria-content-title">#{escaped_title}</h1>
+          <div class="astaria-coverless-meta">#{metadata_html}</div>
+        </div>
+        <div class="astaria-coverless-sigil" aria-hidden="true"><span>#{CGI.escapeHTML(initial)}</span></div>
+      </div>
+    </header>
+  HTML
+end
+
 def build_sidebar(data, route, lookup)
   return "" if data["public_slug"].to_s.strip == "index"
 
@@ -756,7 +870,10 @@ def build_map_explorer(data, body, route, lookup)
     record = lookup[normalize_reference(marker[:target])]
     href = record ? relative_href(route, record[:route]) : ""
     left = (marker[:x] / width * 100).round(4)
-    top = (marker[:y] / height * 100).round(4)
+    # Leaflet image coordinates use a geographic Y axis: larger geoY values
+    # point north. CSS `top` grows southward, so the vertical position must be
+    # mirrored when the canonical marker is placed over the raster.
+    top = ((height - marker[:y]) / height * 100).round(4)
     %(<button type="button" class="astaria-map-marker astaria-map-marker-#{marker[:kind]}" style="left:#{left}%;top:#{top}%" data-name="#{CGI.escapeHTML(marker[:name])}" data-kind="#{marker[:kind]}" data-x="#{left}" data-y="#{top}" data-href="#{CGI.escapeHTML(href)}" aria-label="Показать: #{CGI.escapeHTML(marker[:name])}"><span></span></button>)
   end.join("\n")
 
@@ -981,6 +1098,7 @@ def cleanup_public_body(body, data)
   body = body.gsub(/^## Основной текст\s*\n+/, "")
   body = body.gsub(/^## Связи\s*\n+```dataview\n.*?```\s*/m, "")
   body = body.gsub(/```dataview\n.*?```\s*/m, "")
+  body = body.gsub(/^## Главы\s*\n*/, "") if saga_landing?(data)
   body = body.gsub(/^> \[!info\] Домены\s*\n(?:>.*\n?)+/i, "") if data["domains"]
   body = body.gsub(/^## Куда отправиться дальше\s*\n.*\z/m, "") if data["featured_entry"]
   body = body.gsub(/^(\s*[-*+] .+)\n(?:\s*\n)+(?=\s*[-*+] )/, "\\1\n") while body.match?(/^(\s*[-*+] .+)\n(?:\s*\n)+(?=\s*[-*+] )/)
@@ -990,6 +1108,76 @@ def cleanup_public_body(body, data)
   end
 
   body.strip
+end
+
+def saga_landing?(data)
+  data["category"] == "Литература" && !Array(data["central_characters"]).empty?
+end
+
+def saga_chapter_records(source)
+  Dir.glob(File.join(File.dirname(source), "*.md")).sort.map do |path|
+    next if path == source || !publishable_markdown?(path)
+
+    data, body = frontmatter_for(path)
+    next unless %w[chapter session].include?(data["type"].to_s)
+
+    { source: path, data: data, body: body, route: public_route(path, data) }
+  end.compact.sort_by { |chapter| [chapter[:data]["chapter"].to_i, chapter[:data]["title"].to_s] }
+end
+
+def build_saga_chapters(source, route, data, lookup)
+  return "" unless saga_landing?(data)
+
+  chapters = saga_chapter_records(source)
+  content = if chapters.empty?
+    character_links = Array(data["central_characters"]).first(4).map do |character|
+      render_value(character, route, lookup)
+    end.join
+    links = if character_links.empty?
+      ""
+    else
+      %(<nav class="astaria-saga-character-links" aria-label="Герои саги">#{character_links}</nav>)
+    end
+    <<~HTML
+      <div class="astaria-saga-empty">
+        <div class="astaria-saga-empty-mark" aria-hidden="true"><span>✦</span></div>
+        <div>
+          <strong>Летопись ещё раскрывается</strong>
+          <p>Главы пока не опубликованы. Начать знакомство с сагой можно с её героев — их судьбы уже вплетены в Энциклопедию.</p>
+          #{links}
+        </div>
+      </div>
+    HTML
+  else
+    cards = chapters.map do |chapter|
+      chapter_data = chapter[:data]
+      number = chapter_data["chapter"].to_i
+      meta = [
+        chapter_data["year"] && astaria_year_label(chapter_data["year"]),
+        chapter_data["season"],
+        display_value(chapter_data["region"])
+      ].compact.map(&:to_s).reject(&:empty?).join(" · ")
+      <<~HTML
+        <a class="astaria-saga-chapter-card" href="#{CGI.escapeHTML(relative_href(route, chapter[:route]))}">
+          <span>#{format("%02d", number)}</span>
+          <div><strong>#{CGI.escapeHTML(chapter_data["title"].to_s.sub(/^Глава\s+\d+\s*[-—:]\s*/i, ""))}</strong><small>#{CGI.escapeHTML(meta)}</small></div>
+          <b aria-hidden="true">→</b>
+        </a>
+      HTML
+    end
+    %(<div class="astaria-saga-chapter-grid">#{cards.join}</div>)
+  end
+
+  count_label = chapters.empty? ? "Главы готовятся к публикации" : "#{chapters.length} #{article_count_label(chapters.length)} доступно"
+  <<~HTML
+    <section class="astaria-saga-chapters" aria-labelledby="astaria-saga-chapters-title">
+      <header>
+        <div><p>Летопись путешествия</p><h2 id="astaria-saga-chapters-title">Главы</h2></div>
+        <span>#{CGI.escapeHTML(count_label)}</span>
+      </header>
+      #{content}
+    </section>
+  HTML
 end
 
 def generated_frontmatter(data, body)
@@ -1008,6 +1196,11 @@ def write_public_article(source, route, data, body, lookup)
   FileUtils.mkdir_p(File.dirname(destination))
   lede = ""
   journey = ""
+  chapters = ""
+  source_category_name = source_category(source)
+  if data["category"].to_s.empty? && CATEGORY_ROUTES.key?(source_category_name)
+    data = data.merge("category" => source_category_name)
+  end
 
   if data["type"] == "map"
     clean_body = build_map_explorer(data, body, route, lookup)
@@ -1024,13 +1217,15 @@ def write_public_article(source, route, data, body, lookup)
     clean_body = render_asset_embeds(clean_body)
     clean_body = render_public_wikilinks(clean_body, route, lookup)
     cover = build_cover(data)
-    title = build_title(route, data)
+    has_visual = !cover.empty? || !sidebar_image(data).nil? || !crest_image(data).nil?
+    title = has_visual ? build_title(route, data) : build_coverless_title(route, data)
     lede = build_featured_lede(data)
     sidebar = build_sidebar(data, route, lookup)
     journey = build_astaria_journey(route, data)
+    chapters = build_saga_chapters(source, route, data, lookup)
   end
   footer = build_article_footer(route, data)
-  sections = [cover, title, lede, sidebar, clean_body, journey, footer].map(&:strip).reject(&:empty?)
+  sections = [cover, title, lede, sidebar, clean_body, chapters, journey, footer].map(&:strip).reject(&:empty?)
   text = "#{generated_frontmatter(data, body)}\n#{sections.join("\n\n")}\n"
   unless data["type"] == "map"
     ASSET_REWRITES.each { |old_path, new_path| text = text.gsub(old_path, new_path) }
@@ -1118,6 +1313,11 @@ end
 
 def entry_sort_key(entry)
   return [-1, entry[:title].downcase] if entry[:data]["featured_entry"]
+  return [COUNTRY_ORDER.length, entry[:title].downcase] if creature_character?(entry)
+
+  title_order = CATEGORY_TITLE_ORDER[entry[:category]]
+  title_index = title_order&.index(entry[:title])
+  return [title_index, entry[:title].downcase] unless title_index.nil?
 
   country = if entry[:category] == "Страны"
     entry[:title]
@@ -1178,8 +1378,17 @@ def category_card(entry, route)
   end
   featured_class = featured ? " astaria-category-card-featured" : ""
   action = featured ? "Начать путешествие" : "Открыть статью"
+  search_value = [
+    entry[:title],
+    entry[:description],
+    entry[:category],
+    entry[:data]["type"],
+    country,
+    display_value(entry[:data]["aliases"])
+  ].compact.join(" ").downcase.tr("ё", "е").gsub(/\s+/, " ").strip
+  meta_rank = entry_sort_key(entry).first
   markdown_safe_html(<<~HTML)
-    <a class="astaria-category-card astaria-category-card-#{variant}#{featured_class}" href="#{CGI.escapeHTML(href)}">
+    <a class="astaria-category-card astaria-category-card-#{variant}#{featured_class}" href="#{CGI.escapeHTML(href)}" data-search="#{CGI.escapeHTML(search_value)}" data-meta-rank="#{meta_rank}">
       #{image}
       <div class="astaria-category-card-copy">
         #{eyebrow}
@@ -1233,6 +1442,25 @@ def write_category_indexes(entries)
       %(<div class="astaria-category-grid">#{cards.join("\n")}</div>)
     end
     category_title = display_category(category)
+    controls = if cards.empty?
+      ""
+    else
+      <<~HTML
+        <div class="astaria-category-tools" role="search" aria-label="Поиск по разделу #{CGI.escapeHTML(category_title)}">
+          <label class="astaria-category-search-label">
+            <svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-4-4"></path></svg>
+            <span class="sr-only">Найти статью в разделе #{CGI.escapeHTML(category_title)}</span>
+            <input class="astaria-category-search" type="search" placeholder="Найти статью в разделе…" autocomplete="off">
+          </label>
+          <p class="astaria-category-count" aria-live="polite">Показано: #{cards.length} из #{cards.length}</p>
+          <button class="astaria-category-clear" type="button" hidden>Сбросить</button>
+        </div>
+        <div class="astaria-category-no-results" hidden>
+          <strong>Ничего не найдено</strong>
+          <span>Попробуйте изменить запрос или открыть другой раздел Энциклопедии.</span>
+        </div>
+      HTML
+    end
     body = <<~MARKDOWN
       ---
       title: #{category_title}
@@ -1248,6 +1476,7 @@ def write_category_indexes(entries)
           <h1 id="astaria-category-title">#{category_title}</h1>
           <div>#{description}</div>
         </header>
+        #{controls}
         #{listing}
       </section>
     MARKDOWN
@@ -1258,7 +1487,48 @@ def write_category_indexes(entries)
   end
 end
 
+DISCOVERY_DOORS = [
+  ["Страны", "Государство", "wide"],
+  ["Боги", "Божество", "portrait"],
+  ["Персонажи", "Личность", "portrait"],
+  ["Места", "Место", "wide"],
+  ["Бестиарий", "Бестиарий", "wide"]
+].freeze
+
+def home_discovery_item(entries, category, label, variant)
+  candidates = entries.select do |entry|
+    entry[:category] == category && entry[:image_path] && !entry[:data]["featured_entry"]
+  end.sort_by { |entry| entry_sort_key(entry) }.map do |entry|
+    {
+      href: entry[:route],
+      image: public_asset_url(entry[:image_path]),
+      title: entry[:title],
+      label: label,
+      variant: variant
+    }
+  end
+  return "" if candidates.empty?
+
+  fallback = candidates.first
+  payload = CGI.escapeHTML(JSON.generate(candidates))
+  <<~HTML
+    <div class="astaria-discovery-item" data-discovery-candidates="#{payload}">
+      <a class="astaria-discovery-card astaria-discovery-#{variant}" href="#{CGI.escapeHTML(fallback[:href])}">
+        <img src="#{CGI.escapeHTML(fallback[:image])}" alt="#{CGI.escapeHTML(fallback[:title])}" loading="lazy">
+        <span><small>#{CGI.escapeHTML(label)}</small><b>#{CGI.escapeHTML(fallback[:title])}</b></span>
+      </a>
+    </div>
+  HTML
+end
+
+def home_discovery_grid(entries)
+  DISCOVERY_DOORS.map do |category, label, variant|
+    home_discovery_item(entries, category, label, variant)
+  end.reject(&:empty?).join("\n")
+end
+
 def write_index(entries)
+  discovery_grid = home_discovery_grid(entries)
   body = <<~MARKDOWN
     ---
     title: Астария
@@ -1304,10 +1574,17 @@ def write_index(entries)
               <nav aria-label="Разделы энциклопедии">
                 <a href="places/">Места</a>
                 <a href="countries/">Страны</a>
+                <a href="peoples/">Народы</a>
                 <a href="characters/">Персонажи</a>
                 <a href="gods/">Боги</a>
                 <a href="bestiary/">Бестиарий</a>
-                <a href="timeline/">События</a>
+                <a href="imitei/">Имитеи</a>
+                <a href="organizations/">Организации</a>
+                <a href="lore/">Знания</a>
+                <a href="items/">Предметы</a>
+                <a href="events/">События</a>
+                <a href="literature/">Литература</a>
+                <a href="flora/">Флора</a>
               </nav>
             </details>
           </div>
@@ -1353,15 +1630,13 @@ def write_index(entries)
             <p class="astaria-portal-kicker">Пять дверей в Астарию</p>
             <h2 id="astaria-discover-title">Куда отправиться дальше?</h2>
           </div>
-          <p>Начните с истории, героя или места — правильного пути здесь не существует.</p>
+          <div class="astaria-discovery-heading-actions">
+            <p>Каждый раз Астария открывает другой путь — через страну, героя, божество, место или существо.</p>
+            <button class="astaria-discovery-shuffle" type="button"><span aria-hidden="true">↻</span> Другие пути</button>
+          </div>
         </div>
-        <div class="astaria-discovery-grid">
-          <div class="astaria-discovery-item"><a class="astaria-discovery-card astaria-discovery-wide" href="countries/talassia"><img src="assets/images/talassia.jpg" alt="Корабли Талассии" loading="lazy"><span><small>Государство</small><b>Талассия</b></span></a></div>
-          <div class="astaria-discovery-item"><a class="astaria-discovery-card astaria-discovery-portrait" href="gods/mercate"><img src="assets/images/mercate.jpg" alt="Богиня Мерката" loading="lazy"><span><small>Божество</small><b>Мерката</b></span></a></div>
-          <div class="astaria-discovery-item"><a class="astaria-discovery-card astaria-discovery-portrait" href="characters/samir-thakur"><img src="assets/images/samir_thakur.jpg" alt="Самир Тхакур" loading="lazy"><span><small>Личность</small><b>Самир Тхакур</b></span></a></div>
-          <div class="astaria-discovery-item"><a class="astaria-discovery-card astaria-discovery-wide" href="places/vanpur"><img src="assets/images/vanpur_city.jpg" alt="Улицы Ванпура" loading="lazy"><span><small>Место</small><b>Ванпур</b></span></a></div>
-          <div class="astaria-discovery-item"><a class="astaria-discovery-card astaria-discovery-wide" href="bestiary/naga"><img src="assets/images/naga.jpg" alt="Нага" loading="lazy"><span><small>Бестиарий</small><b>Наги</b></span></a></div>
-        </div>
+        <div class="astaria-discovery-grid">#{discovery_grid}</div>
+        <p class="astaria-discovery-status sr-only" aria-live="polite"></p>
       </section>
 
       <footer class="astaria-home-footer">

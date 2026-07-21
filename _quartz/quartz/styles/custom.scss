@@ -289,6 +289,8 @@ a:hover {
 
 .search .preview-container .astaria-category-grid,
 .search .preview-container .astaria-category-groups,
+.search .preview-container .astaria-category-tools,
+.search .preview-container .astaria-category-no-results,
 .search .preview-container .astaria-place-next,
 .search .preview-container .astaria-article-footer,
 .search .preview-container .astaria-map-shell,
@@ -485,6 +487,116 @@ a:hover {
 .astaria-cover-frame:hover .astaria-cover-image {
   filter: saturate(1.03) contrast(1.025);
   transform: scale(1.012);
+}
+
+.astaria-coverless-hero {
+  position: relative;
+  overflow: hidden;
+  margin: 0 0 clamp(2.2rem, 5vw, 3.4rem);
+  padding: clamp(1.35rem, 3.5vw, 2.4rem);
+  background:
+    radial-gradient(circle at 86% 24%, rgba(191, 139, 61, 0.2), transparent 24%),
+    linear-gradient(135deg, rgba(255, 252, 242, 0.97), rgba(231, 210, 174, 0.78));
+  border: 1px solid rgba(113, 77, 42, 0.28);
+  border-radius: 7px;
+  box-shadow:
+    0 22px 48px rgba(42, 29, 20, 0.15),
+    inset 0 0 0 5px rgba(255, 250, 232, 0.38);
+  isolation: isolate;
+}
+
+.astaria-coverless-hero::before,
+.astaria-coverless-hero::after {
+  position: absolute;
+  z-index: -1;
+  content: "";
+  pointer-events: none;
+}
+
+.astaria-coverless-hero::before {
+  inset: 0;
+  background-image:
+    linear-gradient(90deg, transparent 49.75%, rgba(103, 61, 39, 0.045) 50%, transparent 50.25%),
+    linear-gradient(transparent 49.75%, rgba(103, 61, 39, 0.035) 50%, transparent 50.25%);
+  background-size: 3.5rem 3.5rem;
+  mask-image: linear-gradient(90deg, transparent, #000 72%);
+}
+
+.astaria-coverless-hero::after {
+  right: -6rem;
+  bottom: -9rem;
+  width: 21rem;
+  height: 21rem;
+  border: 1px solid rgba(107, 54, 40, 0.1);
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 2.2rem rgba(107, 54, 40, 0.025),
+    0 0 0 5rem rgba(107, 54, 40, 0.022);
+}
+
+.astaria-coverless-main {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 2rem;
+}
+
+.astaria-coverless-kicker {
+  margin: 0 0 0.65rem !important;
+  color: #9b6c32;
+  font-family: var(--headerFont);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.astaria-coverless-hero .astaria-content-title {
+  max-width: 15ch;
+  margin: 0;
+  font-size: clamp(2.8rem, 6vw, 5.15rem);
+  line-height: 0.95;
+}
+
+.astaria-coverless-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-top: 1.2rem;
+}
+
+.astaria-coverless-meta span {
+  padding: 0.32rem 0.62rem;
+  background: rgba(255, 251, 238, 0.58);
+  border: 1px solid rgba(89, 23, 23, 0.13);
+  border-radius: 999px;
+  color: #6e5b4c;
+  font-family: var(--headerFont);
+  font-size: 0.74rem;
+}
+
+.astaria-coverless-sigil {
+  display: grid;
+  width: clamp(5rem, 9vw, 7rem);
+  aspect-ratio: 1;
+  place-items: center;
+  border: 1px solid rgba(115, 73, 43, 0.44);
+  color: #7d332a;
+  transform: rotate(45deg);
+}
+
+.astaria-coverless-sigil::before {
+  position: absolute;
+  inset: 0.4rem;
+  border: 1px solid rgba(181, 138, 77, 0.42);
+  content: "";
+}
+
+.astaria-coverless-sigil span {
+  font-family: var(--headerFont);
+  font-size: clamp(2rem, 4vw, 3.15rem);
+  font-weight: 700;
+  transform: rotate(-45deg);
 }
 
 .astaria-inline-image {
@@ -686,6 +798,165 @@ a:hover {
   font-size: clamp(1.2rem, 2.2vw, 1.52rem);
   line-height: 1.42;
   text-wrap: balance;
+}
+
+.astaria-saga-chapters {
+  clear: both;
+  margin-top: clamp(3rem, 7vw, 5rem);
+  padding-top: clamp(1.8rem, 4vw, 2.7rem);
+  border-top: 1px solid rgba(89, 23, 23, 0.2);
+}
+
+.astaria-saga-chapters > header {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.astaria-saga-chapters > header p {
+  margin: 0 0 0.38rem !important;
+  color: #9b6c32;
+  font-family: var(--headerFont);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.astaria-saga-chapters > header h2 {
+  margin: 0;
+  font-size: clamp(2.4rem, 5vw, 3.8rem);
+  line-height: 1;
+}
+
+.astaria-saga-chapters > header > span {
+  padding-bottom: 0.25rem;
+  color: #75655a;
+  font-family: var(--headerFont);
+  font-size: 0.83rem;
+}
+
+.astaria-saga-empty {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(1.25rem, 4vw, 2.4rem);
+  overflow: hidden;
+  padding: clamp(1.5rem, 4vw, 2.35rem);
+  background:
+    radial-gradient(circle at 7% 50%, rgba(187, 137, 65, 0.2), transparent 24%),
+    linear-gradient(140deg, rgba(255, 252, 242, 0.92), rgba(237, 221, 190, 0.72));
+  border: 1px solid rgba(113, 77, 42, 0.24);
+  border-radius: 6px;
+  box-shadow: 0 16px 34px rgba(42, 29, 20, 0.11);
+}
+
+.astaria-saga-empty-mark {
+  display: grid;
+  width: clamp(4.25rem, 9vw, 6rem);
+  aspect-ratio: 1;
+  place-items: center;
+  border: 1px solid rgba(133, 78, 46, 0.35);
+  border-radius: 50%;
+  color: #a4773e;
+  box-shadow: inset 0 0 0 0.45rem rgba(255, 250, 233, 0.45);
+}
+
+.astaria-saga-empty-mark span {
+  font-size: 1.35rem;
+}
+
+.astaria-saga-empty strong {
+  color: #64251f;
+  font-family: var(--headerFont);
+  font-size: clamp(1.35rem, 2.8vw, 1.85rem);
+}
+
+.astaria-saga-empty p {
+  max-width: 60ch;
+  margin: 0.45rem 0 1rem !important;
+  color: #67594e;
+}
+
+.astaria-saga-character-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.markdown-rendered .astaria-saga-character-links a,
+.markdown-rendered .astaria-saga-character-links a.internal {
+  padding: 0.34rem 0.65rem !important;
+  background: rgba(113, 58, 45, 0.07) !important;
+  border: 1px solid rgba(113, 58, 45, 0.12);
+  border-radius: 999px !important;
+  color: #7b352e !important;
+  font-family: var(--headerFont);
+  font-size: 0.78rem;
+  text-decoration: none !important;
+}
+
+.astaria-saga-chapter-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.65rem;
+}
+
+.markdown-rendered .astaria-saga-chapter-card,
+.markdown-rendered .astaria-saga-chapter-card.internal {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.05rem 1.15rem !important;
+  background: rgba(255, 251, 240, 0.76) !important;
+  border: 1px solid rgba(102, 56, 41, 0.16);
+  border-radius: 4px !important;
+  color: inherit !important;
+  text-decoration: none !important;
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.astaria-saga-chapter-card:hover {
+  box-shadow: 0 12px 25px rgba(42, 29, 20, 0.12);
+  transform: translateY(-2px);
+}
+
+.astaria-saga-chapter-card > span {
+  color: #a8783f;
+  font-family: var(--headerFont);
+  font-size: 0.76rem;
+  font-weight: 700;
+}
+
+.astaria-saga-chapter-card > div {
+  display: grid;
+  min-width: 0;
+  gap: 0.15rem;
+}
+
+.astaria-saga-chapter-card strong {
+  overflow: hidden;
+  color: #682721;
+  font-family: var(--headerFont);
+  font-size: 1.08rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.astaria-saga-chapter-card small {
+  overflow: hidden;
+  color: #796a5f;
+  font-size: 0.75rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.astaria-saga-chapter-card > b {
+  color: #8c3730;
 }
 
 body[data-slug="places/astaria"] .astaria-cover-image {
@@ -1004,7 +1275,14 @@ body[data-slug="index"] .search-button::after {
 }
 
 .astaria-home-era span {
+  display: inline-block;
   color: var(--astaria-accent-dark);
+  font-variant-numeric: lining-nums tabular-nums;
+  font-feature-settings:
+    "lnum" 1,
+    "tnum" 1;
+  font-synthesis: none;
+  transform: translateY(-0.035em);
 }
 
 .astaria-home-intro h1 {
@@ -1382,6 +1660,47 @@ body[data-slug="index"] .search-button::after {
   text-align: right;
 }
 
+.astaria-discovery-heading-actions {
+  display: grid;
+  justify-items: end;
+  max-width: 42ch;
+  gap: 0.75rem;
+  text-align: right;
+}
+
+.astaria-discovery-heading-actions p {
+  margin: 0;
+  color: var(--astaria-muted);
+  line-height: 1.45;
+}
+
+.astaria-discovery-shuffle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  min-height: 2.55rem;
+  padding: 0.42rem 0.8rem;
+  background: rgba(255, 251, 239, 0.72);
+  border: 1px solid rgba(89, 23, 23, 0.16);
+  border-radius: 999px;
+  color: #7d302a;
+  font-family: var(--headerFont);
+  font-size: 0.78rem;
+  font-weight: 700;
+  transition: background 180ms ease, border-color 180ms ease, transform 180ms ease;
+}
+
+.astaria-discovery-shuffle:hover {
+  background: rgba(255, 248, 226, 0.96);
+  border-color: rgba(125, 48, 42, 0.34);
+  transform: translateY(-1px);
+}
+
+.astaria-discovery-shuffle span {
+  font-family: sans-serif;
+  font-size: 1rem;
+}
+
 .astaria-discovery-grid {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
@@ -1561,6 +1880,13 @@ body[data-slug="index"] .search-button::after {
     text-align: left;
   }
 
+  .astaria-discovery-heading-actions {
+    justify-items: start;
+    max-width: 48ch;
+    margin-top: 0.8rem;
+    text-align: left;
+  }
+
   .astaria-home-discover {
     width: calc(100% - 2rem);
   }
@@ -1623,6 +1949,25 @@ body[data-slug="index"] .search-button::after {
 
   .astaria-discovery-card {
     aspect-ratio: 3 / 4;
+  }
+
+  .astaria-coverless-main,
+  .astaria-saga-empty {
+    grid-template-columns: 1fr;
+  }
+
+  .astaria-coverless-sigil {
+    display: none;
+  }
+
+  .astaria-saga-chapters > header {
+    align-items: start;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .astaria-saga-chapter-grid {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -1971,6 +2316,125 @@ body:not([data-slug="index"]):not([data-slug="map"]) .markdown-rendered {
   max-width: 44ch;
   color: var(--astaria-muted);
   line-height: 1.52;
+}
+
+.astaria-category-tools {
+  position: sticky;
+  z-index: 3;
+  top: 5.35rem;
+  display: grid;
+  grid-template-columns: minmax(16rem, 1fr) auto auto;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 0 0 1.35rem;
+  padding: 0.75rem;
+  background: rgba(249, 241, 221, 0.9);
+  border: 1px solid rgba(89, 23, 23, 0.16);
+  border-radius: 5px;
+  box-shadow: 0 12px 30px rgba(45, 31, 20, 0.12);
+  backdrop-filter: blur(12px);
+}
+
+.astaria-category-search-label {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  min-height: 3rem;
+  padding: 0 0.9rem;
+  background: rgba(255, 252, 244, 0.94);
+  border: 1px solid rgba(89, 23, 23, 0.17);
+  border-radius: 4px;
+}
+
+.astaria-category-search-label:focus-within {
+  border-color: rgba(137, 55, 43, 0.56);
+  box-shadow: 0 0 0 3px rgba(137, 55, 43, 0.1);
+}
+
+.astaria-category-search-label svg {
+  flex: 0 0 auto;
+  width: 1.25rem;
+  height: 1.25rem;
+  fill: none;
+  stroke: #806f62;
+  stroke-linecap: round;
+  stroke-width: 1.8;
+}
+
+.astaria-category-search {
+  width: 100%;
+  min-width: 0;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  color: var(--astaria-ink);
+  font-family: var(--bodyFont);
+  font-size: 1rem;
+  outline: 0;
+}
+
+.astaria-category-search::placeholder {
+  color: #8a7d71;
+  opacity: 1;
+}
+
+.astaria-category-count {
+  margin: 0 !important;
+  color: #75675d;
+  font-size: 0.8rem;
+  font-variant-numeric: lining-nums tabular-nums;
+  white-space: nowrap;
+}
+
+.astaria-category-clear {
+  min-height: 2.55rem;
+  padding: 0 0.9rem;
+  background: rgba(121, 42, 34, 0.08);
+  border: 1px solid rgba(121, 42, 34, 0.18);
+  border-radius: 4px;
+  color: #7f302a;
+  cursor: pointer;
+  font-family: var(--headerFont);
+  font-size: 0.76rem;
+  font-weight: 700;
+}
+
+.astaria-category-clear:hover {
+  background: rgba(121, 42, 34, 0.14);
+}
+
+.astaria-category-no-results {
+  margin: 0 0 1.35rem;
+  padding: clamp(2rem, 5vw, 3.5rem) 1.5rem;
+  background: rgba(255, 251, 240, 0.54);
+  border: 1px dashed rgba(89, 23, 23, 0.25);
+  text-align: center;
+}
+
+.astaria-category-no-results strong,
+.astaria-category-no-results span {
+  display: block;
+}
+
+.astaria-category-no-results strong {
+  margin-bottom: 0.35rem;
+  color: var(--astaria-accent-dark);
+  font-family: var(--headerFont);
+  font-size: 1.55rem;
+}
+
+.astaria-category-no-results span {
+  color: var(--astaria-muted);
+}
+
+.astaria-category-card[hidden],
+.astaria-category-group[hidden],
+.astaria-category-no-results[hidden],
+.astaria-category-clear[hidden] {
+  display: none !important;
 }
 
 .astaria-category-grid {
@@ -2407,7 +2871,7 @@ body:not([data-slug="index"]):not([data-slug="map"]) .markdown-rendered {
   position: absolute;
   top: 0;
   bottom: 0;
-  left: clamp(7.5rem, 16vw, 11.25rem);
+  left: calc(clamp(7.5rem, 16vw, 11.25rem) + 0.85rem);
   width: 1px;
   background: linear-gradient(
     180deg,
@@ -2436,25 +2900,34 @@ body:not([data-slug="index"]):not([data-slug="map"]) .markdown-rendered {
   position: sticky;
   top: 11.2rem;
   padding-top: 1.35rem;
+  padding-right: 0.85rem;
   color: #774037;
   font-family: var(--headerFont);
   font-size: clamp(0.83rem, 1.8vw, 1rem);
   font-weight: 700;
+  font-variant-numeric: lining-nums tabular-nums;
+  font-feature-settings:
+    "lnum" 1,
+    "tnum" 1;
+  font-synthesis: none;
+  line-height: 1.15;
   text-align: right;
 }
 
 .astaria-timeline-year::after {
   position: absolute;
   top: 1.65rem;
-  right: -0.45rem;
+  right: -1.21rem;
   width: 0.72rem;
   height: 0.72rem;
   background: #e4c27e;
   border: 2px solid #fff6e6;
   border-radius: 50%;
-  box-shadow: 0 0 0 1px rgba(92, 41, 30, 0.55);
+  box-shadow:
+    0 0 0 4px #f4ead5,
+    0 0 0 5px rgba(92, 41, 30, 0.5),
+    0 3px 8px rgba(73, 43, 27, 0.16);
   content: "";
-  transform: translateX(50%);
 }
 
 .astaria-timeline-card {
@@ -3131,6 +3604,15 @@ body[data-slug="map"] .markdown-rendered > * {
     margin-top: 0.8rem !important;
   }
 
+  .astaria-category-tools {
+    position: static;
+    grid-template-columns: 1fr auto;
+  }
+
+  .astaria-category-search-label {
+    grid-column: 1 / -1;
+  }
+
   .astaria-map-toolbar {
     align-items: stretch;
     flex-direction: column;
@@ -3165,6 +3647,7 @@ body[data-slug="map"] .markdown-rendered > * {
     position: relative;
     top: auto;
     padding-top: 0;
+    padding-right: 0;
     text-align: left;
   }
 
@@ -3233,6 +3716,20 @@ body[data-slug="map"] .markdown-rendered > * {
   .astaria-category-header h1,
   .astaria-map-heading h1 {
     font-size: clamp(3rem, 17vw, 4.6rem);
+  }
+
+  .astaria-category-tools {
+    grid-template-columns: 1fr;
+  }
+
+  .astaria-category-search-label,
+  .astaria-category-count,
+  .astaria-category-clear {
+    grid-column: auto;
+  }
+
+  .astaria-category-clear {
+    width: 100%;
   }
 
   .markdown-rendered .astaria-category-card,

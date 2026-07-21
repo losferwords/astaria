@@ -4,7 +4,7 @@ lang: ru
 type: "person"
 category: "Боги"
 ready: true
-quartz: false
+quartz: true
 portrait_image: "[[Assets/Images/Hyperion I.jpg]]"
 current_location: "[[Город Аргос]]"
 eyes: "Карие"
@@ -12,6 +12,10 @@ skin: "Смуглый"
 height: "2.2м"
 weight: "100кг"
 domains: "Война, Мужество, Героизм, Атлетика"
+symbols:
+  - "Копьё"
+  - "Щит"
+  - "Лев"
 related:
   - "[[Гилас]]"
   - "[[Хтониды]]"
@@ -36,13 +40,6 @@ residence: "[[Город Аргос]]"
 Большая часть населения [[Гилас|Гиласа]] считает Гипериона своим божеством, хотя сам царь никогда себя богом не именовал.
 
 
-## Священные символы
-
-- Копьё
-
-- Щит
-
-- Лев
 
 ## Связи
 ```dataview

@@ -375,9 +375,171 @@ function setupAstariaTimeline() {
   filter();
 }
 
+function setupAstariaCategoryFilters() {
+  const pages = document.querySelectorAll<HTMLElement>(
+    ".astaria-category-page",
+  );
+
+  for (const page of pages) {
+    if (page.dataset.ready === "true") continue;
+
+    const search = page.querySelector<HTMLInputElement>(
+      ".astaria-category-search",
+    );
+    const count = page.querySelector<HTMLElement>(".astaria-category-count");
+    const clear = page.querySelector<HTMLButtonElement>(
+      ".astaria-category-clear",
+    );
+    const empty = page.querySelector<HTMLElement>(
+      ".astaria-category-no-results",
+    );
+    const cards = Array.from(
+      page.querySelectorAll<HTMLElement>(".astaria-category-card"),
+    );
+    const groups = Array.from(
+      page.querySelectorAll<HTMLElement>(".astaria-category-group"),
+    );
+    if (!search || !count || !clear || !empty || cards.length === 0) continue;
+
+    page.dataset.ready = "true";
+    const filter = () => {
+      const term = normalizeMapQuery(search.value);
+      let visibleCount = 0;
+
+      for (const card of cards) {
+        const visible =
+          term === "" || (card.dataset.search ?? "").includes(term);
+        card.hidden = !visible;
+        if (visible) visibleCount += 1;
+      }
+
+      for (const group of groups) {
+        group.hidden = !group.querySelector(
+          ".astaria-category-card:not([hidden])",
+        );
+      }
+
+      count.textContent = `Показано: ${visibleCount} из ${cards.length}`;
+      clear.hidden = term === "";
+      empty.hidden = visibleCount !== 0;
+    };
+
+    const reset = () => {
+      search.value = "";
+      filter();
+      search.focus();
+    };
+
+    search.addEventListener("input", filter);
+    search.addEventListener("keydown", (event) => {
+      if (event.key !== "Escape" || search.value === "") return;
+      event.preventDefault();
+      reset();
+    });
+    clear.addEventListener("click", reset);
+    filter();
+  }
+}
+
+type AstariaDiscoveryCandidate = {
+  href: string;
+  image: string;
+  title: string;
+  label: string;
+  variant: "wide" | "portrait";
+};
+
+function setupAstariaDiscovery() {
+  const section = document.querySelector<HTMLElement>(
+    ".astaria-home-discover",
+  );
+  if (!section || section.dataset.ready === "true") return;
+
+  const button = section.querySelector<HTMLButtonElement>(
+    ".astaria-discovery-shuffle",
+  );
+  const status = section.querySelector<HTMLElement>(
+    ".astaria-discovery-status",
+  );
+  const items = Array.from(
+    section.querySelectorAll<HTMLElement>(".astaria-discovery-item"),
+  );
+  if (!button || items.length === 0) return;
+
+  const pools = items.map((item) => {
+    try {
+      return JSON.parse(
+        item.dataset.discoveryCandidates ?? "[]",
+      ) as AstariaDiscoveryCandidate[];
+    } catch {
+      return [];
+    }
+  });
+  if (pools.some((pool) => pool.length === 0)) return;
+
+  const choose = (
+    pool: AstariaDiscoveryCandidate[],
+    currentHref: string,
+  ) => {
+    const alternatives = pool.filter(
+      (candidate) => candidate.href !== currentHref,
+    );
+    const source = alternatives.length > 0 ? alternatives : pool;
+    return source[Math.floor(Math.random() * source.length)];
+  };
+
+  const render = (announce: boolean) => {
+    items.forEach((item, index) => {
+      const card = item.querySelector<HTMLAnchorElement>(
+        ".astaria-discovery-card",
+      );
+      const image = card?.querySelector<HTMLImageElement>("img");
+      const label = card?.querySelector<HTMLElement>("small");
+      const title = card?.querySelector<HTMLElement>("b");
+      if (!card || !image || !label || !title) return;
+
+      const candidate = choose(
+        pools[index],
+        card.getAttribute("href") ?? "",
+      );
+      card.setAttribute("href", candidate.href);
+      card.classList.toggle(
+        "astaria-discovery-portrait",
+        candidate.variant === "portrait",
+      );
+      card.classList.toggle(
+        "astaria-discovery-wide",
+        candidate.variant === "wide",
+      );
+      image.src = candidate.image;
+      image.alt = candidate.title;
+      label.textContent = candidate.label;
+      title.textContent = candidate.title;
+
+      if (announce && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        card.animate(
+          [
+            { opacity: 0.55, transform: "translateY(4px)" },
+            { opacity: 1, transform: "translateY(0)" },
+          ],
+          { duration: 260, easing: "ease-out" },
+        );
+      }
+    });
+
+    if (announce && status) status.textContent = "Подборка маршрутов обновлена.";
+  };
+
+  section.dataset.ready = "true";
+  button.addEventListener("click", () => render(true));
+  render(false);
+}
+
 function setupAstariaExperience() {
   setupAstariaMap();
   setupAstariaTimeline();
+  setupAstariaCategoryFilters();
+  setupAstariaDiscovery();
 }
 
 document.addEventListener("nav", setupAstariaExperience);

@@ -34,6 +34,12 @@ function setupAstariaMap() {
   const markers = Array.from(
     explorer.querySelectorAll<HTMLButtonElement>(".astaria-map-marker"),
   );
+  const layerButtons = Array.from(
+    explorer.querySelectorAll<HTMLButtonElement>(".astaria-map-layer-button"),
+  );
+  const layerImages = Array.from(
+    explorer.querySelectorAll<HTMLImageElement>(".astaria-map-layer"),
+  );
   if (
     !viewport ||
     !stage ||
@@ -55,35 +61,61 @@ function setupAstariaMap() {
     py: 0,
   };
   const minScale = 1;
-  const maxScale = 5;
+  const mapWidth = Number(explorer.dataset.mapWidth ?? 7680);
+  const mapHeight = Number(explorer.dataset.mapHeight ?? 4320);
+  const pixelRatio = window.devicePixelRatio || 1;
   let selected: HTMLButtonElement | null = null;
 
-  const clamp = () => {
-    const maxX = Math.max(
-      0,
-      (viewport.clientWidth * state.scale - viewport.clientWidth) / 2,
+  const baseDimensions = () => {
+    const mapRatio = mapWidth / mapHeight;
+    const viewportRatio = viewport.clientWidth / viewport.clientHeight;
+    if (viewportRatio > mapRatio) {
+      return {
+        width: viewport.clientHeight * mapRatio,
+        height: viewport.clientHeight,
+      };
+    }
+    return {
+      width: viewport.clientWidth,
+      height: viewport.clientWidth / mapRatio,
+    };
+  };
+
+  const maximumUsefulScale = (base = baseDimensions()) =>
+    Math.max(
+      minScale,
+      Math.min(
+        5,
+        mapWidth / (base.width * pixelRatio),
+        mapHeight / (base.height * pixelRatio),
+      ),
     );
-    const maxY = Math.max(
-      0,
-      (viewport.clientHeight * state.scale - viewport.clientHeight) / 2,
-    );
+
+  const clamp = (renderedWidth: number, renderedHeight: number) => {
+    const maxX = Math.max(0, (renderedWidth - viewport.clientWidth) / 2);
+    const maxY = Math.max(0, (renderedHeight - viewport.clientHeight) / 2);
     state.x = Math.max(-maxX, Math.min(maxX, state.x));
     state.y = Math.max(-maxY, Math.min(maxY, state.y));
   };
 
   const renderTransform = () => {
-    clamp();
-    stage.style.transform = `translate3d(${state.x}px, ${state.y}px, 0) scale(${state.scale})`;
-    stage.style.setProperty(
-      "--astaria-map-marker-scale",
-      String(1 / state.scale),
-    );
+    const base = baseDimensions();
+    state.scale = Math.min(state.scale, maximumUsefulScale(base));
+    const renderedWidth = base.width * state.scale;
+    const renderedHeight = base.height * state.scale;
+    clamp(renderedWidth, renderedHeight);
+    stage.style.width = `${renderedWidth}px`;
+    stage.style.height = `${renderedHeight}px`;
+    stage.style.transform = `translate3d(calc(-50% + ${state.x}px), calc(-50% + ${state.y}px), 0)`;
     explorer.dataset.zoomed = state.scale > 1.02 ? "true" : "false";
   };
 
   const zoomAt = (nextScale: number, clientX?: number, clientY?: number) => {
     const oldScale = state.scale;
-    const newScale = Math.max(minScale, Math.min(maxScale, nextScale));
+    const newScale = Math.max(
+      minScale,
+      Math.min(maximumUsefulScale(), nextScale),
+    );
     if (Math.abs(oldScale - newScale) < 0.001) return;
     const rect = viewport.getBoundingClientRect();
     const pointX =
@@ -109,10 +141,12 @@ function setupAstariaMap() {
     selected = marker;
     selected.classList.add("is-selected");
     state.scale = Math.max(state.scale, 2.35);
+    state.scale = Math.min(state.scale, maximumUsefulScale());
+    const base = baseDimensions();
     const x = Number(marker.dataset.x ?? 50) / 100 - 0.5;
     const y = Number(marker.dataset.y ?? 50) / 100 - 0.5;
-    state.x = -x * viewport.clientWidth * state.scale;
-    state.y = -y * viewport.clientHeight * state.scale;
+    state.x = -x * base.width * state.scale;
+    state.y = -y * base.height * state.scale;
     renderTransform();
 
     const name = marker.dataset.name ?? "Неизвестное место";
@@ -202,32 +236,87 @@ function setupAstariaMap() {
     });
   }
 
-  for (const button of explorer.querySelectorAll<HTMLButtonElement>(
-    ".astaria-map-layer-button",
-  )) {
-    button.addEventListener("click", () => {
-      const layer = button.dataset.layer;
-      for (const candidate of explorer.querySelectorAll<HTMLButtonElement>(
-        ".astaria-map-layer-button",
-      )) {
-        const active = candidate === button;
-        candidate.classList.toggle("is-active", active);
-        candidate.setAttribute("aria-pressed", String(active));
+  let requestedLayer =
+    layerImages.find((image) => image.classList.contains("is-active"))?.dataset
+      .layer ?? "states";
+
+  const commitLayer = (layer: string) => {
+    if (requestedLayer !== layer) return;
+    for (const candidate of layerButtons) {
+      const active = candidate.dataset.layer === layer;
+      candidate.classList.toggle("is-active", active);
+      candidate.setAttribute("aria-pressed", String(active));
+    }
+    for (const image of layerImages) {
+      image.classList.toggle("is-active", image.dataset.layer === layer);
+    }
+  };
+
+  const stopLayerLoading = (layer: string) => {
+    const button = layerButtons.find(
+      (candidate) => candidate.dataset.layer === layer,
+    );
+    button?.classList.remove("is-loading");
+    button?.removeAttribute("aria-busy");
+  };
+
+  const loadLayer = (button: HTMLButtonElement) => {
+    const layer = button.dataset.layer;
+    const image = layerImages.find(
+      (candidate) => candidate.dataset.layer === layer,
+    );
+    if (!layer || !image) return;
+    requestedLayer = layer;
+
+    if (image.complete && image.naturalWidth > 0) {
+      commitLayer(layer);
+      return;
+    }
+
+    button.classList.add("is-loading");
+    button.setAttribute("aria-busy", "true");
+    if (image.dataset.loading === "true") return;
+    image.dataset.loading = "true";
+
+    const finish = async () => {
+      delete image.dataset.loading;
+      delete image.dataset.src;
+      try {
+        await image.decode();
+      } catch {
+        // The image is already usable when the load event has fired.
       }
-      for (const image of explorer.querySelectorAll<HTMLElement>(
-        ".astaria-map-layer",
-      )) {
-        if (
-          image.dataset.layer === layer &&
-          image instanceof HTMLImageElement &&
-          image.dataset.src
-        ) {
-          image.src = image.dataset.src;
-          delete image.dataset.src;
-        }
-        image.classList.toggle("is-active", image.dataset.layer === layer);
-      }
-    });
+      stopLayerLoading(layer);
+      commitLayer(layer);
+    };
+    const fail = () => {
+      delete image.dataset.loading;
+      stopLayerLoading(layer);
+      image.removeAttribute("src");
+    };
+    image.addEventListener("load", finish, { once: true });
+    image.addEventListener("error", fail, { once: true });
+    if (image.dataset.src) image.src = image.dataset.src;
+  };
+
+  for (const button of layerButtons) {
+    button.addEventListener("click", () => loadLayer(button));
+  }
+
+  const initialLayer = layerImages.find((image) =>
+    image.classList.contains("is-active"),
+  );
+  const initialButton = layerButtons.find(
+    (button) => button.dataset.layer === initialLayer?.dataset.layer,
+  );
+  if (initialLayer && initialButton && !initialLayer.complete) {
+    initialButton.classList.add("is-loading");
+    initialButton.setAttribute("aria-busy", "true");
+    initialLayer.addEventListener(
+      "load",
+      () => stopLayerLoading(initialLayer.dataset.layer ?? "states"),
+      { once: true },
+    );
   }
 
   viewport.addEventListener(
@@ -450,9 +539,7 @@ type AstariaDiscoveryCandidate = {
 };
 
 function setupAstariaDiscovery() {
-  const section = document.querySelector<HTMLElement>(
-    ".astaria-home-discover",
-  );
+  const section = document.querySelector<HTMLElement>(".astaria-home-discover");
   if (!section || section.dataset.ready === "true") return;
 
   const button = section.querySelector<HTMLButtonElement>(
@@ -477,10 +564,7 @@ function setupAstariaDiscovery() {
   });
   if (pools.some((pool) => pool.length === 0)) return;
 
-  const choose = (
-    pool: AstariaDiscoveryCandidate[],
-    currentHref: string,
-  ) => {
+  const choose = (pool: AstariaDiscoveryCandidate[], currentHref: string) => {
     const alternatives = pool.filter(
       (candidate) => candidate.href !== currentHref,
     );
@@ -498,10 +582,7 @@ function setupAstariaDiscovery() {
       const title = card?.querySelector<HTMLElement>("b");
       if (!card || !image || !label || !title) return;
 
-      const candidate = choose(
-        pools[index],
-        card.getAttribute("href") ?? "",
-      );
+      const candidate = choose(pools[index], card.getAttribute("href") ?? "");
       card.setAttribute("href", candidate.href);
       card.classList.toggle(
         "astaria-discovery-portrait",
@@ -516,7 +597,10 @@ function setupAstariaDiscovery() {
       label.textContent = candidate.label;
       title.textContent = candidate.title;
 
-      if (announce && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      if (
+        announce &&
+        !window.matchMedia("(prefers-reduced-motion: reduce)").matches
+      ) {
         card.animate(
           [
             { opacity: 0.55, transform: "translateY(4px)" },
@@ -527,7 +611,8 @@ function setupAstariaDiscovery() {
       }
     });
 
-    if (announce && status) status.textContent = "Подборка маршрутов обновлена.";
+    if (announce && status)
+      status.textContent = "Подборка маршрутов обновлена.";
   };
 
   section.dataset.ready = "true";

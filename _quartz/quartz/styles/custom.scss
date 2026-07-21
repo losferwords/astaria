@@ -232,6 +232,19 @@ a:hover {
   line-height: 1;
 }
 
+.search .preview-container .astaria-coverless-hero {
+  margin-bottom: 1.35rem;
+  padding: 1.35rem;
+}
+
+.search .preview-container .astaria-coverless-main {
+  display: block;
+}
+
+.search .preview-container .astaria-coverless-sigil {
+  display: none;
+}
+
 .search .preview-container .astaria-article-lede {
   max-width: 50ch !important;
   margin: 0 0 1.35rem !important;
@@ -292,6 +305,8 @@ a:hover {
 .search .preview-container .astaria-category-tools,
 .search .preview-container .astaria-category-no-results,
 .search .preview-container .astaria-place-next,
+.search .preview-container .astaria-saga-chapters,
+.search .preview-container .astaria-chapter-navigation,
 .search .preview-container .astaria-article-footer,
 .search .preview-container .astaria-map-shell,
 .search .preview-container .astaria-map-toolbar,
@@ -495,8 +510,16 @@ a:hover {
   margin: 0 0 clamp(2.2rem, 5vw, 3.4rem);
   padding: clamp(1.35rem, 3.5vw, 2.4rem);
   background:
-    radial-gradient(circle at 86% 24%, rgba(191, 139, 61, 0.2), transparent 24%),
-    linear-gradient(135deg, rgba(255, 252, 242, 0.97), rgba(231, 210, 174, 0.78));
+    radial-gradient(
+      circle at 86% 24%,
+      rgba(191, 139, 61, 0.2),
+      transparent 24%
+    ),
+    linear-gradient(
+      135deg,
+      rgba(255, 252, 242, 0.97),
+      rgba(231, 210, 174, 0.78)
+    );
   border: 1px solid rgba(113, 77, 42, 0.28);
   border-radius: 7px;
   box-shadow:
@@ -516,8 +539,17 @@ a:hover {
 .astaria-coverless-hero::before {
   inset: 0;
   background-image:
-    linear-gradient(90deg, transparent 49.75%, rgba(103, 61, 39, 0.045) 50%, transparent 50.25%),
-    linear-gradient(transparent 49.75%, rgba(103, 61, 39, 0.035) 50%, transparent 50.25%);
+    linear-gradient(
+      90deg,
+      transparent 49.75%,
+      rgba(103, 61, 39, 0.045) 50%,
+      transparent 50.25%
+    ),
+    linear-gradient(
+      transparent 49.75%,
+      rgba(103, 61, 39, 0.035) 50%,
+      transparent 50.25%
+    );
   background-size: 3.5rem 3.5rem;
   mask-image: linear-gradient(90deg, transparent, #000 72%);
 }
@@ -556,6 +588,15 @@ a:hover {
   margin: 0;
   font-size: clamp(2.8rem, 6vw, 5.15rem);
   line-height: 0.95;
+}
+
+.astaria-coverless-subtitle {
+  margin: 0.7rem 0 0 !important;
+  color: #76584b;
+  font-family: var(--headerFont);
+  font-size: clamp(1.05rem, 2vw, 1.32rem);
+  font-style: italic;
+  letter-spacing: 0.025em;
 }
 
 .astaria-coverless-meta {
@@ -848,7 +889,11 @@ a:hover {
   padding: clamp(1.5rem, 4vw, 2.35rem);
   background:
     radial-gradient(circle at 7% 50%, rgba(187, 137, 65, 0.2), transparent 24%),
-    linear-gradient(140deg, rgba(255, 252, 242, 0.92), rgba(237, 221, 190, 0.72));
+    linear-gradient(
+      140deg,
+      rgba(255, 252, 242, 0.92),
+      rgba(237, 221, 190, 0.72)
+    );
   border: 1px solid rgba(113, 77, 42, 0.24);
   border-radius: 6px;
   box-shadow: 0 16px 34px rgba(42, 29, 20, 0.11);
@@ -905,6 +950,42 @@ a:hover {
   gap: 0.65rem;
 }
 
+.astaria-saga-range-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-bottom: 1.7rem;
+}
+
+.markdown-rendered .astaria-saga-range-nav a,
+.markdown-rendered .astaria-saga-range-nav a.internal {
+  padding: 0.42rem 0.72rem !important;
+  background: rgba(255, 251, 240, 0.72) !important;
+  border: 1px solid rgba(102, 56, 41, 0.17);
+  border-radius: 999px !important;
+  color: #73332c !important;
+  font-family: var(--headerFont);
+  font-size: 0.76rem;
+  font-weight: 700;
+  text-decoration: none !important;
+}
+
+.astaria-saga-chapter-range {
+  scroll-margin-top: 7rem;
+}
+
+.astaria-saga-chapter-range + .astaria-saga-chapter-range {
+  margin-top: 2rem;
+}
+
+.astaria-saga-chapter-range > h3 {
+  margin: 0 0 0.75rem;
+  color: #8e6032;
+  font-size: 0.86rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
 .markdown-rendered .astaria-saga-chapter-card,
 .markdown-rendered .astaria-saga-chapter-card.internal {
   display: grid;
@@ -917,7 +998,9 @@ a:hover {
   border-radius: 4px !important;
   color: inherit !important;
   text-decoration: none !important;
-  transition: transform 180ms ease, box-shadow 180ms ease;
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease;
 }
 
 .astaria-saga-chapter-card:hover {
@@ -947,6 +1030,16 @@ a:hover {
   white-space: nowrap;
 }
 
+.astaria-saga-chapter-card em {
+  overflow: hidden;
+  color: #8a6b5c;
+  font-family: var(--headerFont);
+  font-size: 0.8rem;
+  line-height: 1.2;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 .astaria-saga-chapter-card small {
   overflow: hidden;
   color: #796a5f;
@@ -957,6 +1050,65 @@ a:hover {
 
 .astaria-saga-chapter-card > b {
   color: #8c3730;
+}
+
+.astaria-chapter-navigation {
+  clear: both;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  align-items: stretch;
+  gap: 0.65rem;
+  margin-top: clamp(3rem, 7vw, 5rem);
+  padding-top: clamp(1.5rem, 4vw, 2.2rem);
+  border-top: 1px solid rgba(89, 23, 23, 0.2);
+}
+
+.markdown-rendered .astaria-chapter-navigation a,
+.markdown-rendered .astaria-chapter-navigation a.internal {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0.9rem 1rem !important;
+  background: rgba(255, 251, 240, 0.72) !important;
+  border: 1px solid rgba(102, 56, 41, 0.16);
+  border-radius: 5px !important;
+  color: #682721 !important;
+  text-decoration: none !important;
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.markdown-rendered .astaria-chapter-navigation a:hover {
+  box-shadow: 0 12px 25px rgba(42, 29, 20, 0.12);
+  transform: translateY(-2px);
+}
+
+.astaria-chapter-navigation small {
+  margin-bottom: 0.2rem;
+  color: #987042;
+  font-family: var(--headerFont);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.astaria-chapter-navigation strong {
+  overflow: hidden;
+  font-family: var(--headerFont);
+  font-size: 0.95rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.astaria-chapter-nav-saga {
+  text-align: center;
+}
+
+.astaria-chapter-nav-next {
+  text-align: right;
 }
 
 body[data-slug="places/astaria"] .astaria-cover-image {
@@ -1687,7 +1839,10 @@ body[data-slug="index"] .search-button::after {
   font-family: var(--headerFont);
   font-size: 0.78rem;
   font-weight: 700;
-  transition: background 180ms ease, border-color 180ms ease, transform 180ms ease;
+  transition:
+    background 180ms ease,
+    border-color 180ms ease,
+    transform 180ms ease;
 }
 
 .astaria-discovery-shuffle:hover {
@@ -1968,6 +2123,22 @@ body[data-slug="index"] .search-button::after {
 
   .astaria-saga-chapter-grid {
     grid-template-columns: 1fr;
+  }
+
+  .astaria-chapter-navigation {
+    grid-template-columns: 1fr;
+  }
+
+  .astaria-chapter-navigation > span[aria-hidden="true"] {
+    display: none;
+  }
+
+  .astaria-chapter-nav-saga {
+    grid-row: 1;
+  }
+
+  .astaria-chapter-nav-next {
+    text-align: left;
   }
 }
 
@@ -3178,6 +3349,25 @@ body[data-slug="map"] .markdown-rendered > * {
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
 }
 
+.astaria-map-layer-button.is-loading::after {
+  display: inline-block;
+  width: 0.72rem;
+  height: 0.72rem;
+  margin-left: 0.45rem;
+  border: 2px solid currentColor;
+  border-right-color: transparent;
+  border-radius: 50%;
+  content: "";
+  vertical-align: -0.08rem;
+  animation: astaria-map-loading 700ms linear infinite;
+}
+
+@keyframes astaria-map-loading {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
 .astaria-map-shell {
   display: grid;
   grid-template-columns: 17rem minmax(0, 1fr);
@@ -3341,11 +3531,11 @@ body[data-slug="map"] .markdown-rendered > * {
 }
 
 .astaria-map-stage {
-  --astaria-map-marker-scale: 1;
   position: absolute;
-  inset: 0;
-  transform-origin: 50% 50%;
-  will-change: transform;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
 }
 
 .astaria-map-layer {
@@ -3389,7 +3579,7 @@ body[data-slug="map"] .markdown-rendered > * {
   padding: 0;
   background: transparent;
   border: 0;
-  transform: translate(-50%, -50%) scale(var(--astaria-map-marker-scale));
+  transform: translate(-50%, -50%);
   transform-origin: center;
   transition: opacity 160ms ease;
 }
@@ -3404,7 +3594,9 @@ body[data-slug="map"] .markdown-rendered > * {
   box-shadow:
     0 0 0 2px rgba(255, 244, 213, 0.7),
     0 2px 5px rgba(0, 0, 0, 0.5);
+  opacity: 0.64;
   transition:
+    opacity 140ms ease,
     transform 140ms ease,
     box-shadow 140ms ease;
 }
@@ -3419,6 +3611,7 @@ body[data-slug="map"] .markdown-rendered > * {
 .astaria-map-marker:hover > span,
 .astaria-map-marker:focus-visible > span,
 .astaria-map-marker.is-selected > span {
+  opacity: 1;
   box-shadow:
     0 0 0 4px rgba(255, 240, 194, 0.85),
     0 3px 9px rgba(0, 0, 0, 0.62);

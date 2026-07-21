@@ -687,7 +687,7 @@ def build_title(route, data)
   HTML
 end
 
-def build_coverless_title(route, data)
+def build_coverless_title(source, route, data)
   return "" if data["public_slug"].to_s.strip == "index"
 
   title = data["title"].to_s
@@ -697,6 +697,12 @@ def build_coverless_title(route, data)
   category_route = CATEGORY_ROUTES[category]
   category_crumb = if category_route
     %(<span aria-hidden="true">/</span><a href="../#{CGI.escapeHTML(category_route)}/">#{CGI.escapeHTML(display_category(category))}</a>)
+  else
+    ""
+  end
+  saga = saga_landing_record(source, data)
+  saga_crumb = if saga
+    %(<span aria-hidden="true">/</span><a href="#{CGI.escapeHTML(relative_href(route, saga[:route]))}">#{CGI.escapeHTML(saga[:data]["title"].to_s)}</a>)
   else
     ""
   end
@@ -712,6 +718,12 @@ def build_coverless_title(route, data)
     display_value(data["region"])
   ].compact.map(&:to_s).reject(&:empty?).first(3)
   metadata_html = metadata.map { |value| %(<span>#{CGI.escapeHTML(value)}</span>) }.join
+  english_title = data["english_title"].to_s.strip
+  english_title_html = if english_title.empty?
+    ""
+  else
+    %(\n          <p class="astaria-coverless-subtitle" lang="en">#{CGI.escapeHTML(english_title)}</p>)
+  end
   initial = title.each_char.find { |char| char.match?(/[[:alpha:]]/) } || "А"
 
   <<~HTML
@@ -719,11 +731,12 @@ def build_coverless_title(route, data)
       <nav class="astaria-article-trail" aria-label="Хлебные крошки">
         <a href="#{CGI.escapeHTML(home_href)}">Астария</a>
         #{category_crumb}
+        #{saga_crumb}
       </nav>
       <div class="astaria-coverless-main">
         <div>
           <p class="astaria-coverless-kicker">#{CGI.escapeHTML(kicker)}</p>
-          <h1 class="astaria-content-title">#{escaped_title}</h1>
+          <h1 class="astaria-content-title">#{escaped_title}</h1>#{english_title_html}
           <div class="astaria-coverless-meta">#{metadata_html}</div>
         </div>
         <div class="astaria-coverless-sigil" aria-hidden="true"><span>#{CGI.escapeHTML(initial)}</span></div>
@@ -859,7 +872,7 @@ def build_map_explorer(data, body, route, lookup)
   layer_images = layers.map.with_index do |(key, labels, path), index|
     next unless path
     url_attribute = index.zero? ? %(src="#{CGI.escapeHTML(public_asset_url(path))}" fetchpriority="high") : %(data-src="#{CGI.escapeHTML(public_asset_url(path))}")
-    %(<img class="astaria-map-layer#{index.zero? ? " is-active" : ""}" data-layer="#{key}" #{url_attribute} alt="#{CGI.escapeHTML(labels.last)}" draggable="false">)
+    %(<img class="astaria-map-layer#{index.zero? ? " is-active" : ""}" data-layer="#{key}" #{url_attribute} alt="#{CGI.escapeHTML(labels.last)}" decoding="async" draggable="false">)
   end.compact.join("\n")
 
   layer_buttons = layers.map.with_index do |(key, labels, _path), index|
@@ -916,7 +929,7 @@ def build_map_explorer(data, body, route, lookup)
           </aside>
           <div class="astaria-map-viewport" tabindex="0" aria-label="Интерактивная карта. Перемещайте стрелками, приближайте клавишами плюс и минус.">
             <div class="astaria-map-stage">
-              <img class="astaria-map-preview" src="assets/maps/web/states-web.jpg" alt="" aria-hidden="true" draggable="false">
+              <img class="astaria-map-preview" src="assets/maps/web/states-web.jpg" alt="" aria-hidden="true" decoding="async" fetchpriority="high" draggable="false">
               #{layer_images}
               <div class="astaria-map-markers">#{marker_buttons}</div>
             </div>
@@ -1101,6 +1114,10 @@ def cleanup_public_body(body, data)
   body = body.gsub(/^## Главы\s*\n*/, "") if saga_landing?(data)
   body = body.gsub(/^> \[!info\] Домены\s*\n(?:>.*\n?)+/i, "") if data["domains"]
   body = body.gsub(/^## Куда отправиться дальше\s*\n.*\z/m, "") if data["featured_entry"]
+  unless data["english_title"].to_s.strip.empty?
+    english_title = Regexp.escape(data["english_title"].to_s.strip)
+    body = body.sub(/\A\s*\*#{english_title}\*\s*\n+/, "")
+  end
   body = body.gsub(/^(\s*[-*+] .+)\n(?:\s*\n)+(?=\s*[-*+] )/, "\\1\n") while body.match?(/^(\s*[-*+] .+)\n(?:\s*\n)+(?=\s*[-*+] )/)
 
   image_paths.each do |image_path|
@@ -1123,6 +1140,50 @@ def saga_chapter_records(source)
 
     { source: path, data: data, body: body, route: public_route(path, data) }
   end.compact.sort_by { |chapter| [chapter[:data]["chapter"].to_i, chapter[:data]["title"].to_s] }
+end
+
+def saga_landing_record(source, data)
+  return nil unless %w[chapter session].include?(data["type"].to_s)
+
+  expected_title = data["saga"].to_s.strip
+  Dir.glob(File.join(File.dirname(source), "*.md")).sort.each do |candidate|
+    next if candidate == source || !publishable_markdown?(candidate)
+
+    candidate_data, = frontmatter_for(candidate)
+    next unless saga_landing?(candidate_data)
+    next if !expected_title.empty? && candidate_data["title"].to_s != expected_title
+
+    return { source: candidate, data: candidate_data, route: public_route(candidate, candidate_data) }
+  end
+  nil
+end
+
+def chapter_short_title(data)
+  data["title"].to_s.sub(/^Глава\s+\d+\s*[-—:]\s*/i, "")
+end
+
+def saga_chapter_card(chapter, route)
+  chapter_data = chapter[:data]
+  number = chapter_data["chapter"].to_i
+  meta = [
+    chapter_data["year"] && astaria_year_label(chapter_data["year"]),
+    chapter_data["season"],
+    display_value(chapter_data["region"])
+  ].compact.map(&:to_s).reject(&:empty?).join(" · ")
+  english_title = chapter_data["english_title"].to_s.strip
+  english_html = english_title.empty? ? "" : %(<em lang="en">#{CGI.escapeHTML(english_title)}</em>)
+  meta_html = meta.empty? ? "" : %(<small>#{CGI.escapeHTML(meta)}</small>)
+  <<~HTML
+    <a class="astaria-saga-chapter-card" href="#{CGI.escapeHTML(relative_href(route, chapter[:route]))}">
+      <span>#{format("%03d", number)}</span>
+      <div>
+        <strong>#{CGI.escapeHTML(chapter_short_title(chapter_data))}</strong>
+        #{english_html}
+        #{meta_html}
+      </div>
+      <b aria-hidden="true">→</b>
+    </a>
+  HTML
 end
 
 def build_saga_chapters(source, route, data, lookup)
@@ -1149,26 +1210,32 @@ def build_saga_chapters(source, route, data, lookup)
       </div>
     HTML
   else
-    cards = chapters.map do |chapter|
-      chapter_data = chapter[:data]
-      number = chapter_data["chapter"].to_i
-      meta = [
-        chapter_data["year"] && astaria_year_label(chapter_data["year"]),
-        chapter_data["season"],
-        display_value(chapter_data["region"])
-      ].compact.map(&:to_s).reject(&:empty?).join(" · ")
-      <<~HTML
-        <a class="astaria-saga-chapter-card" href="#{CGI.escapeHTML(relative_href(route, chapter[:route]))}">
-          <span>#{format("%02d", number)}</span>
-          <div><strong>#{CGI.escapeHTML(chapter_data["title"].to_s.sub(/^Глава\s+\d+\s*[-—:]\s*/i, ""))}</strong><small>#{CGI.escapeHTML(meta)}</small></div>
-          <b aria-hidden="true">→</b>
-        </a>
-      HTML
+    if chapters.length > 24
+      groups = chapters.each_slice(20).to_a
+      range_links = groups.map do |group|
+        first_number = group.first[:data]["chapter"].to_i
+        last_number = group.last[:data]["chapter"].to_i
+        %(<a href="#chapters-#{first_number}-#{last_number}">#{format("%03d", first_number)}–#{format("%03d", last_number)}</a>)
+      end.join
+      ranges = groups.map do |group|
+        first_number = group.first[:data]["chapter"].to_i
+        last_number = group.last[:data]["chapter"].to_i
+        cards = group.map { |chapter| saga_chapter_card(chapter, route) }.join
+        <<~HTML
+          <section class="astaria-saga-chapter-range" id="chapters-#{first_number}-#{last_number}">
+            <h3>Главы #{format("%03d", first_number)}–#{format("%03d", last_number)}</h3>
+            <div class="astaria-saga-chapter-grid">#{cards}</div>
+          </section>
+        HTML
+      end.join
+      %(<nav class="astaria-saga-range-nav" aria-label="Диапазоны глав">#{range_links}</nav>#{ranges})
+    else
+      cards = chapters.map { |chapter| saga_chapter_card(chapter, route) }.join
+      %(<div class="astaria-saga-chapter-grid">#{cards}</div>)
     end
-    %(<div class="astaria-saga-chapter-grid">#{cards.join}</div>)
   end
 
-  count_label = chapters.empty? ? "Главы готовятся к публикации" : "#{chapters.length} #{article_count_label(chapters.length)} доступно"
+  count_label = chapters.empty? ? "Главы готовятся к публикации" : "Доступно глав: #{chapters.length}"
   <<~HTML
     <section class="astaria-saga-chapters" aria-labelledby="astaria-saga-chapters-title">
       <header>
@@ -1178,6 +1245,37 @@ def build_saga_chapters(source, route, data, lookup)
       #{content}
     </section>
   HTML
+end
+
+def build_chapter_navigation(source, route, data)
+  saga = saga_landing_record(source, data)
+  return "" unless saga
+
+  chapters = saga_chapter_records(saga[:source])
+  current_index = chapters.index { |chapter| File.expand_path(chapter[:source]) == File.expand_path(source) }
+  return "" unless current_index
+
+  previous = current_index.positive? ? chapters[current_index - 1] : nil
+  following = current_index < chapters.length - 1 ? chapters[current_index + 1] : nil
+  previous_link = if previous
+    %(<a class="astaria-chapter-nav-previous" href="#{CGI.escapeHTML(relative_href(route, previous[:route]))}"><small>← Предыдущая глава</small><strong>#{CGI.escapeHTML(chapter_short_title(previous[:data]))}</strong></a>)
+  else
+    %(<span aria-hidden="true"></span>)
+  end
+  following_link = if following
+    %(<a class="astaria-chapter-nav-next" href="#{CGI.escapeHTML(relative_href(route, following[:route]))}"><small>Следующая глава →</small><strong>#{CGI.escapeHTML(chapter_short_title(following[:data]))}</strong></a>)
+  else
+    %(<span aria-hidden="true"></span>)
+  end
+
+  saga_link = %(<a class="astaria-chapter-nav-saga" href="#{CGI.escapeHTML(relative_href(route, saga[:route]))}"><small>Вернуться к саге</small><strong>#{CGI.escapeHTML(saga[:data]["title"].to_s)}</strong></a>)
+  [
+    %(<nav class="astaria-chapter-navigation" aria-label="Навигация по главам">),
+    previous_link,
+    saga_link,
+    following_link,
+    "</nav>"
+  ].join("\n")
 end
 
 def generated_frontmatter(data, body)
@@ -1197,6 +1295,7 @@ def write_public_article(source, route, data, body, lookup)
   lede = ""
   journey = ""
   chapters = ""
+  chapter_navigation = ""
   source_category_name = source_category(source)
   if data["category"].to_s.empty? && CATEGORY_ROUTES.key?(source_category_name)
     data = data.merge("category" => source_category_name)
@@ -1218,14 +1317,15 @@ def write_public_article(source, route, data, body, lookup)
     clean_body = render_public_wikilinks(clean_body, route, lookup)
     cover = build_cover(data)
     has_visual = !cover.empty? || !sidebar_image(data).nil? || !crest_image(data).nil?
-    title = has_visual ? build_title(route, data) : build_coverless_title(route, data)
+    title = has_visual ? build_title(route, data) : build_coverless_title(source, route, data)
     lede = build_featured_lede(data)
     sidebar = build_sidebar(data, route, lookup)
     journey = build_astaria_journey(route, data)
     chapters = build_saga_chapters(source, route, data, lookup)
+    chapter_navigation = build_chapter_navigation(source, route, data)
   end
   footer = build_article_footer(route, data)
-  sections = [cover, title, lede, sidebar, clean_body, chapters, journey, footer].map(&:strip).reject(&:empty?)
+  sections = [cover, title, lede, sidebar, clean_body, chapter_navigation, chapters, journey, footer].map(&:strip).reject(&:empty?)
   text = "#{generated_frontmatter(data, body)}\n#{sections.join("\n\n")}\n"
   unless data["type"] == "map"
     ASSET_REWRITES.each { |old_path, new_path| text = text.gsub(old_path, new_path) }
@@ -1403,7 +1503,9 @@ end
 def write_category_indexes(entries)
   grouped = entries.group_by { |entry| entry[:category] }
   CATEGORY_ROUTES.each do |category, route|
-    category_entries = grouped.fetch(category, [])
+    category_entries = grouped.fetch(category, []).reject do |entry|
+      %w[chapter session].include?(entry[:data]["type"].to_s)
+    end
     route = CATEGORY_ROUTES.fetch(category)
     sorted_entries = category_entries.sort_by { |entry| entry_sort_key(entry) }
     cards = sorted_entries.map { |entry| category_card(entry, route) }

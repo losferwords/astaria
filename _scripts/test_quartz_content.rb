@@ -88,8 +88,11 @@ expect.call(
   "Unexpected ready articles excluded from Quartz: #{unpublished_ready_notes.map { |note| note[:data]["title"] }.join(', ')}"
 )
 published_ready_notes = ready_article_notes.select { |note| note[:data]["quartz"] == true }
+catalog_ready_notes = published_ready_notes.reject do |note|
+  %w[chapter session].include?(note[:data]["type"].to_s)
+end
 
-expected_by_category = published_ready_notes.group_by { |note| note[:data]["category"] }.transform_values(&:length)
+expected_by_category = catalog_ready_notes.group_by { |note| note[:data]["category"] }.transform_values(&:length)
 categories = category_routes.to_h { |category, route| [route, expected_by_category.fetch(category, 0)] }
 
 categories.each do |route, expected|
@@ -251,11 +254,39 @@ expect.call(experience_script.include?("setupAstariaDiscovery"), "Home discovery
 
 wind_of_change = read.call("literature/wind-of-change-saga.html")
 expect.call(wind_of_change.include?("astaria-saga-chapters"), "Wind of Change has no designed chapter section")
-expect.call(wind_of_change.include?("astaria-saga-empty"), "Wind of Change needs a graceful state while chapters are unpublished")
+expect.call(!wind_of_change.include?("astaria-saga-empty"), "Wind of Change still claims its published chapters are unavailable")
+expect.call(wind_of_change.scan("astaria-saga-chapter-card").length == 93, "Wind of Change must publish all 93 chapters")
+expect.call(wind_of_change.include?("astaria-saga-range-nav"), "Long Wind of Change contents need chapter-range navigation")
 expect.call(wind_of_change.scan("astaria-saga-chapters-title").length >= 1, "Wind of Change chapter heading is missing")
 expect.call(!wind_of_change.include?("<h2 id=\"главы\">Главы</h2>"), "Wind of Change still renders the old empty chapter heading")
+thunder_call = read.call("literature/thunder-call-saga.html")
+expect.call(thunder_call.scan("astaria-saga-chapter-card").length == 10, "Call of Thunder must publish all 10 chapters")
+[
+  "Before The Storm", "The Highlander's Soul", "Sailing", "The Island",
+  "The New Paragon", "The Priestess", "No Mercy For Thirsty",
+  "Call of Thunder", "No Way Home", "Lament of the Night"
+].each do |english_title|
+  expect.call(thunder_call.include?(english_title), "Call of Thunder contents are missing #{english_title}")
+end
+sleeping_gods = read.call("literature/poka-bogi-spyat.html")
+expect.call(sleeping_gods.scan("astaria-saga-chapter-card").length == 3, "Poka Bogi Spyat must publish all three chapters")
+chapter_notes = published_ready_notes.select { |note| %w[chapter session].include?(note[:data]["type"].to_s) }
+expect.call(chapter_notes.length == 106, "Expected 106 public saga chapters")
+chapter_notes.each do |note|
+  generated = Dir.glob(File.join(CONTENT, "literature", "*.md")).find do |path|
+    data, = parse_frontmatter.call(path)
+    data["title"] == note[:data]["title"]
+  end
+  expect.call(!generated.nil?, "Published saga chapter has no generated page: #{note[:data]["title"]}")
+end
+highlander_soul = read.call("literature/glava-1-dusha-gortsa.html")
+expect.call(highlander_soul.include?("astaria-coverless-hero"), "Coverless chapters need a designed hero")
+expect.call(highlander_soul.include?("astaria-chapter-navigation"), "Saga chapter has no previous/next navigation")
+expect.call(highlander_soul.include?("astaria-coverless-subtitle"), "Call of Thunder chapter is missing its English title")
+expect.call(highlander_soul.scan("The Highlander's Soul").length == 1, "English chapter title is duplicated in the public article")
 expect.call(journey_styles.include?(".astaria-coverless-hero"), "Articles without a cover have no visual hero template")
 expect.call(journey_styles.include?(".astaria-saga-chapter-card"), "Coverless saga chapters have no card template")
+expect.call(journey_styles.include?(".astaria-chapter-navigation"), "Coverless chapters have no navigation styles")
 generator_source = File.read(File.join(ROOT, "_scripts", "sync_quartz_content.rb"))
 expect.call(generator_source.include?("build_coverless_title"), "Quartz generator does not apply the coverless article template")
 
@@ -287,11 +318,28 @@ meilong = read.call("characters/meilong.html")
   expect.call(meilong.include?(value), "Meilong infobox is missing #{value}")
 end
 expect.call(meilong.include?("astaria-infobox-note"), "Meilong infobox must show the calculated current age")
+expect.call(meilong.include?("assets/images/meilong_adult.jpg"), "Meilong must use the updated adult portrait")
 expect.call(read.call("bestiary/nereid.html").include?("astaria-infobox-link"), "Published infobox references must be clickable")
 content_index = JSON.parse(read.call("static/contentIndex.json"))
 expect.call(content_index.dig("characters/meilong", "content")&.include?("媚龍"), "Search index must include Meilong's native name")
+
+biography_expectations = {
+  "characters/lisandra-macrayne.html" => ["Рождённого под громом", "Призывателя Бурь"],
+  "characters/kenneth-mac-rain.html" => ["Рунштоирму", "первый за пять лет дождь"],
+  "characters/cassia.html" => ["Зов Бури", "Пока Боги Спят", "больше не считает ни одно из них неизбежным"],
+  "characters/rhea-melit.html" => ["Зове Бури", "Пока Боги Спят", "похитила из архивов"],
+  "characters/shani.html" => ["устроил пожар", "пустыню Сехет"],
+  "characters/persephone.html" => ["повторную Танатомахию", "сохранить уцелевших воинов"]
+}
+biography_expectations.each do |relative, moments|
+  html = read.call(relative)
+  moments.each do |moment|
+    expect.call(html.include?(moment), "#{relative}: saga biography is missing #{moment}")
+  end
+end
+
 {
-  "gods/itsune" => "イツネ",
+  "gods/itsune" => "逸音",
   "gods/lang-an-dragon" => "龍安"
 }.each do |route, native_name|
   html = read.call("#{route}.html")
@@ -355,7 +403,8 @@ ready_article_notes.each do |note|
     built_path = File.join(PUBLIC, path.downcase.tr(" ", "-"))
     expect.call(File.file?(built_path), "Ready article image is absent from the build: #{path}")
   end
-  missing_image_notes << note if valid_images.empty?
+  coverless_chapter = %w[chapter session].include?(data["type"].to_s)
+  missing_image_notes << note if valid_images.empty? && !coverless_chapter
 end
 
 missing_image_report = File.join(ROOT, "_quartz", "MISSING_IMAGES.md")
@@ -383,6 +432,16 @@ expect.call(!avenger_source.include?("[[Путь Клинка"), "Avenger articl
 expect.call(read.call("lore/imitey.html").include?("assets/images/imithei.jpg"), "Imitei article does not use its new cover")
 expect.call(read.call("literature/poka-bogi-spyat.html").include?("assets/images/eye_of_calypso.jpg"), "Poka Bogi Spyat does not reuse the Eye of Calypso cover")
 
+{
+  "Горный хребет Шан Фенг.md" => ["Горный хребет Шафар.md", "Горный хребет Шан Фенг"],
+  "Врата Дракона.md" => ["Гарнизон Пасть Дракона.md", "Врата Дракона"],
+  "Озеро Женг.md" => ["Озеро Жень.md", "Озеро Женг"]
+}.each do |retired, (canonical, alias_name)|
+  expect.call(!File.exist?(File.join(ROOT, "Энциклопедия", "Места", retired)), "Retired duplicate place still exists: #{retired}")
+  canonical_source = File.read(File.join(ROOT, "Энциклопедия", "Места", canonical))
+  expect.call(canonical_source.include?(alias_name), "Canonical place does not preserve retired alias: #{alias_name}")
+end
+
 index_payload = content_index.values.map { |entry| [entry["title"], entry["content"]].join(" ") }.join("\n")
 expect.call(!index_payload.include?("FATE / GM"), "Private FATE blocks leaked into public search")
 expect.call(!index_payload.include?("Механика требует ручной вычитки"), "Private FATE notes leaked into public search")
@@ -406,6 +465,15 @@ if File.file?(conflict_report)
   expect.call(conflict_source.include?("обнаружение и освобождение — два разных события"), "Vintre chronology decision is not recorded")
   expect.call(conflict_source.include?("Аксель Хана убил Муспельхег"), "Aksel Khan's killer decision is not recorded")
   expect.call(conflict_source.include?("только внешность Сао"), "Sao Wu's apparent-age decision is not recorded")
+  expect.call(conflict_source.include?("Единственное каноническое имя генерала — **Гуань Ли**"), "Guan Li's canonical name is not recorded")
+  expect.call(conflict_source.include?("ему 803 года"), "Shen Wu's current age is not recorded")
+  expect.call(conflict_source.include?("поток через Маяк всегда направлен с востока на запад"), "Soul Lighthouse direction is not recorded")
+  expect.call(conflict_source.include?("Калипсо]] уснула в 150 году ХЭ"), "Calypso's sleep date is not recorded")
+  expect.call(conflict_source.include?("адресат сигнала — археи"), "Ast's signal addressee is not recorded")
+  expect.call(conflict_source.include?("изначально принадлежала Руфу"), "Rufu's ownership of the scythe is not recorded")
+  expect.call(conflict_source.include?("Ниса]] больше не находится"), "Nisa's current location decision is not recorded")
+  expect.call(conflict_source.include?("опасно даже имитеям"), "Vetal outbreak severity is not recorded")
+  expect.call(conflict_source.include?("Хан не знал"), "Aksel Khan's ignorance of Vintre's plan is not recorded")
 end
 dragon_legacy = File.join(ROOT, "Энциклопедия", "Секреты", "Наследие драконов.md")
 dragon_legacy_source = File.read(dragon_legacy)
@@ -426,6 +494,14 @@ expect.call(!index_payload.include?("Ванпур — заметки для ве
 
 nisa = read.call("characters/nisa-nereid.html")
 expect.call(!nisa.include?("<dt>Значимость</dt>"), "Non-event character Nisa must not display event significance")
+expect.call(nisa.include?("Город Чанг-Ша"), "Nisa's current location must be Chang-Sha")
+expect.call(!nisa.include?("Город Бахара"), "Nisa's public article still presents Bakhara as her current location")
+shen_wu = read.call("characters/shen-wu.html")
+expect.call(shen_wu.include?(%(<span class="astaria-infobox-note">803 года</span>)), "Shen Wu's current age must be 803")
+
+canonical_corpus = Dir.glob(File.join(ROOT, "Энциклопедия", "**", "*.md")).map { |path| File.read(path) }.join("\n")
+expect.call(!canonical_corpus.include?("Ли Шу") && !canonical_corpus.include?("Ли Гуань"), "Retired names for General Guan Li remain in the canonical corpus")
+expect.call(!canonical_corpus.include?("космическая цивилизация, уничтожающая"), "Ast's retired external-civilization idea remains in the canonical corpus")
 
 vanpur = read.call("places/vanpur.html")
 %w[Урист Мусака Гилья].each do |campaign_name|
@@ -554,6 +630,17 @@ expect.call(map.scan("astaria-map-marker astaria-map-marker-").length == 132, "M
   expect.call(File.file?(built), "Built map layer is missing: #{filename}")
   expect.call(File.size(source) == File.size(built), "Built map layer differs from original: #{filename}") if File.file?(built)
 end
+states_layer = map[/<img class="astaria-map-layer[^"]*" data-layer="states"[^>]*>/]
+heightmap_layer = map[/<img class="astaria-map-layer[^"]*" data-layer="heightmap"[^>]*>/]
+biomes_layer = map[/<img class="astaria-map-layer[^"]*" data-layer="biomes"[^>]*>/]
+expect.call(states_layer&.match?(/\ssrc="(?:\.\/)?assets\/maps\/states\.png"/), "Primary states layer must load the original image immediately")
+expect.call(heightmap_layer&.match?(/\sdata-src="assets\/maps\/heightmap\.png"/) && !heightmap_layer.match?(/\ssrc=/), "Heightmap must remain lazy until selected")
+expect.call(biomes_layer&.match?(/\sdata-src="assets\/maps\/biomes\.png"/) && !biomes_layer.match?(/\ssrc=/), "Biomes must remain lazy until selected")
+expect.call(!experience_script.include?("scale(${state.scale})"), "Map zoom must not upscale a rasterized DOM layer")
+expect.call(experience_script.include?("stage.style.width = `${renderedWidth}px`"), "Map zoom must render the original layer at its real target width")
+expect.call(experience_script.include?("maximumUsefulScale"), "Map zoom must stop before exceeding source resolution")
+expect.call(experience_script.include?("window.devicePixelRatio"), "Map zoom limit must account for high-density displays")
+expect.call(experience_script.include?("image.dataset.src"), "Optional map layers are not loaded on demand")
 
 marker_top = lambda do |name|
   match = map.match(/class="astaria-map-marker[^"]*"[^>]*data-name="#{Regexp.escape(name)}"[^>]*data-y="([\d.]+)"/)
@@ -563,6 +650,11 @@ end
 bakhara_top = marker_top.call("Город Бахара")
 anderhan_top = marker_top.call("Город Андерхан")
 expect.call(bakhara_top && anderhan_top && bakhara_top > anderhan_top, "Map Y axis is inverted: Bakhara must appear south of Anderhan")
+expect.call(map.include?('data-name="Гарнизон Пасть Дракона"'), "Map still points to the retired Dragon Gates duplicate")
+expect.call(map.include?('data-name="Горный хребет Шафар"'), "Map still points to the retired Shang Feng duplicate")
+expect.call(map.include?('data-name="Озеро Жень"'), "Map still points to the retired Zheng Lake duplicate")
+expect.call(journey_styles.match?(/\.astaria-map-marker > span\s*\{[^}]*opacity:\s*0\.64/m), "Map markers must be translucent over printed labels")
+expect.call(journey_styles.match?(/\.astaria-map-marker\.is-selected > span\s*\{[^}]*opacity:\s*1/m), "Selected map markers must regain full opacity")
 
 mercate_source = File.read(File.join(CONTENT, "gods", "mercate.md"))
 expect.call(!mercate_source.match?(/^- Луна\n\n- Ворон/m), "Mercate symbol list still contains oversized blank gaps")

@@ -279,6 +279,109 @@ INFOBOX_VALUE_TRANSLATIONS = {
   "Weapon, Melee" => "Оружие ближнего боя"
 }.freeze
 
+# Canonical notes store the relationship on the object that naturally owns it:
+# a person names their country and Imitei path, while a landmark names its parent
+# location. Quartz derives the reverse sidebar collections at build time so that
+# authors do not have to maintain the same fact in two different files.
+AUTO_INVERSE_RELATIONSHIPS = [
+  {
+    source_categories: ["Персонажи"],
+    source_fields: ["imitei"],
+    target_categories: ["Имитеи"],
+    target_field: "known_practitioners"
+  },
+  {
+    source_categories: ["Персонажи"],
+    source_fields: ["country", "origin", "organizations"],
+    target_categories: ["Страны"],
+    target_field: "important_people"
+  },
+  {
+    source_categories: ["Персонажи"],
+    source_fields: ["current_location"],
+    target_categories: ["Места"],
+    target_field: "important_people"
+  },
+  {
+    source_categories: ["Персонажи"],
+    source_fields: ["birth_place"],
+    target_categories: ["Места"],
+    target_field: "notable_people"
+  },
+  {
+    source_categories: ["Персонажи"],
+    source_fields: ["organizations", "aligned_organization"],
+    target_categories: ["Организации"],
+    target_field: "known_members"
+  },
+  {
+    source_categories: ["Персонажи"],
+    source_fields: ["species"],
+    target_categories: ["Бестиарий"],
+    target_field: "known_individuals"
+  },
+  {
+    source_categories: ["Места"],
+    source_fields: ["parent_location"],
+    target_categories: ["Места"],
+    target_field: "child_locations"
+  },
+  {
+    source_categories: ["Места"],
+    source_fields: ["country"],
+    target_categories: ["Страны"],
+    target_field: "controlled_territories"
+  },
+  {
+    source_categories: ["Бестиарий", "Флора"],
+    source_fields: ["habitat"],
+    target_categories: ["Места"],
+    target_field: "inhabiting_species"
+  },
+  {
+    source_categories: ["Имитеи"],
+    source_fields: ["associated_organizations"],
+    target_categories: ["Организации", "Страны"],
+    target_field: "related_professions"
+  },
+  {
+    source_categories: ["Имитеи"],
+    source_fields: ["associated_places"],
+    target_categories: ["Места"],
+    target_field: "related_professions"
+  },
+  {
+    source_categories: ["Боги"],
+    source_fields: ["faiths", "religions", "country"],
+    target_categories: ["Организации", "Страны"],
+    target_field: "deities"
+  },
+  {
+    source_categories: ["Организации", "Страны"],
+    source_fields: ["deities"],
+    target_categories: ["Боги"],
+    target_field: "faiths"
+  },
+  {
+    source_categories: ["Организации"],
+    source_fields: ["headquarters"],
+    target_categories: ["Места"],
+    target_field: "related_organizations"
+  },
+  {
+    source_categories: ["Организации"],
+    source_fields: ["country"],
+    target_categories: ["Страны"],
+    target_field: "associated_organizations"
+  },
+  {
+    source_categories: ["События"],
+    source_fields: ["conflict_location"],
+    target_categories: ["Места"],
+    target_field: "related_conflicts"
+  }
+].freeze
+
 CURRENT_ASTARIAN_YEAR = Date.today.year - 1920
 
 TRANSLITERATION = {
@@ -368,6 +471,62 @@ def build_reference_lookup(records)
     end
   end
   lookup
+end
+
+def record_category(record)
+  record[:data]["category"].to_s.empty? ? source_category(record[:source]).to_s : record[:data]["category"].to_s
+end
+
+def canonical_relationship_records
+  secrets_prefix = File.join(ROOT, "Энциклопедия", "Секреты")
+  Dir.glob(File.join(ROOT, "Энциклопедия", "**", "*.md")).sort.map do |source|
+    next if source.start_with?("#{secrets_prefix}/")
+
+    data, = frontmatter_for(source)
+    next if data["title"].to_s.strip.empty?
+
+    { source: source, data: data }
+  end.compact
+end
+
+def append_unique_reference!(data, field, title)
+  title = title.to_s.strip
+  return if title.empty?
+
+  values = Array(data[field]).compact
+  identities = values.flat_map { |value| reference_names(value) }.map { |value| normalize_reference(value) }
+  return if identities.include?(normalize_reference(title))
+
+  data[field] = values + ["[[#{title}]]"]
+end
+
+def enrich_inverse_relationships!(published_records, canonical_records)
+  published_lookup = build_reference_lookup(published_records)
+  canonical_lookup = build_reference_lookup(canonical_records)
+
+  canonical_records.each do |source_record|
+    source_category_name = record_category(source_record)
+    source_title = source_record[:data]["title"].to_s.strip
+    next if source_title.empty?
+
+    AUTO_INVERSE_RELATIONSHIPS.each do |rule|
+      next unless rule[:source_categories].include?(source_category_name)
+
+      rule[:source_fields].each do |field|
+        reference_names(source_record[:data][field]).each do |target_name|
+          canonical_target = canonical_lookup[normalize_reference(target_name)]
+          next unless canonical_target
+          next unless rule[:target_categories].include?(record_category(canonical_target))
+          next if canonical_target[:source] == source_record[:source]
+
+          published_target = published_lookup[normalize_reference(canonical_target[:data]["title"])]
+          next unless published_target
+
+          append_unique_reference!(published_target[:data], rule[:target_field], source_title)
+        end
+      end
+    end
+  end
 end
 
 def image_slug(data)
@@ -1800,6 +1959,7 @@ PUBLIC_ROOTS.each do |root|
   end
 end
 
+enrich_inverse_relationships!(records, canonical_relationship_records)
 reference_lookup = build_reference_lookup(records)
 records.each do |record|
   entries << write_public_article(

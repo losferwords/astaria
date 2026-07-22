@@ -98,6 +98,12 @@ Skill caps:
 
 When generating NPCs or known-character sheets, treat the cap as a guideline unless the user requests a specific power level.
 
+### Current Campaign Power Tier
+
+By chapter 093 of `Ветер Перемен`, the active protagonists are experienced Imitei whose sheets have grown well beyond the ordinary `+4` baseline. In particular, [[Томас Робинсон|Tom]] is a [[Тень|Shadow]], [[Урист Китин|Urist]] is a [[Мектиг|Mektig]], and [[Мэй Ву|Mei]] is an [[Аватар|Avatar]]. Do not balance late-campaign challenges as if they were beginning Fate Core characters.
+
+For preparation at this tier, use the actual character sheets when available. As a default calibration, `+4` is routine under pressure, `+5` is a meaningful obstacle, `+6` is difficult even for an Imitei, and `+7` is a climactic difficulty that should reward created advantages, teamwork, and invocations. Long-running player characters may exceed the nominal Imitei skill cap through advancement, stunts, aspects, artefacts, and divine abilities.
+
 ## Aspect Structure
 
 Astaria characters use five aspects:

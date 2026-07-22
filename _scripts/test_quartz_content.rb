@@ -183,6 +183,38 @@ catalog_ready_notes = published_ready_notes.reject do |note|
   %w[chapter session].include?(note[:data]["type"].to_s)
 end
 
+inferred_sidebar_expectations = {
+  "countries/iomar.md" => {
+    "important_people" => ["Аластриона Растущая", "Блейн из Руше", "Лиарин Ветреная"]
+  },
+  "imitei/druid.md" => {
+    "known_practitioners" => ["Аластриона Растущая", "Блейн из Руше", "Лиарин Ветреная"]
+  },
+  "imitei/oracle.md" => {
+    "known_practitioners" => ["Кассиопея Атанатос", "Левкос Неритис"]
+  },
+  "places/bahara-city.md" => {
+    "child_locations" => ["Бордель Халык-Бындыр"]
+  },
+  "places/dju-suo.md" => {
+    "child_locations" => ["Бордель Уй-Джан", "Таверна Красный Журавль"]
+  }
+}
+inferred_sidebar_expectations.each do |relative, fields|
+  path = File.join(CONTENT, relative)
+  expect.call(File.file?(path), "Missing generated relationship target: #{relative}")
+  next unless File.file?(path)
+
+  data, = parse_frontmatter.call(path)
+  fields.each do |field, expected_titles|
+    actual_titles = Array(data[field]).map { |value| value.to_s[/\[\[([^|\]]+)/, 1] || value.to_s }
+    expected_titles.each do |title|
+      expect.call(actual_titles.include?(title), "#{relative}: #{field} is missing inferred #{title}")
+    end
+    expect.call(actual_titles.length == actual_titles.uniq.length, "#{relative}: #{field} contains duplicate relationships")
+  end
+end
+
 expected_by_category = catalog_ready_notes.group_by { |note| note[:data]["category"] }.transform_values(&:length)
 categories = category_routes.to_h { |category, route| [route, expected_by_category.fetch(category, 0)] }
 

@@ -181,6 +181,10 @@ INFOBOX_FIELDS = [
   ["birth_year", "Год рождения"],
   ["current_location", "Текущее местоположение"],
   ["birth_place", "Место рождения"],
+  ["parents", "Родители"],
+  ["siblings", "Братья и сёстры"],
+  ["children", "Дети"],
+  ["partner", "Партнёр"],
   ["country", "Страна"],
   ["region", "Регион"],
   ["parent_location", "Часть территории"],
@@ -198,8 +202,8 @@ INFOBOX_FIELDS = [
   ["authors", "Авторы"],
   ["origin", "Происхождение"],
   ["ethnicity", "Народ"],
-  ["profession", "Род занятий"],
-  ["professions", "Занятия"],
+  ["imitei", "Путь Имитея"],
+  ["occupation", "Род занятий"],
   ["organizations", "Организации"],
   ["deities", "Божества"],
   ["faiths", "Верования"],
@@ -502,6 +506,8 @@ def render_value(value, route, lookup)
 end
 
 def render_infobox_value(key, data, route, lookup)
+  return "" if key == "imitei" && (data[key] == false || data[key].to_s.strip.empty?)
+
   if key == "significance"
     return "" unless data["timeline"] == true || data["type"].to_s == "historical-event"
 
@@ -594,7 +600,14 @@ def description_from_body(body, data)
   text = text.gsub(/<[^>]+>/, " ")
   text = text.gsub(/\s+/, " ").strip
   title = data["title"].to_s.strip
-  text = text.delete_prefix(title).strip unless title.empty?
+  if !title.empty? && text.start_with?(title)
+    text = text.delete_prefix(title)
+      .sub(/\A\s*(?:[,;:.!—–-]\s*)+/, "")
+      .strip
+    text = text.sub(/\A([«„“"']*)([а-яё])/u) do
+      "#{Regexp.last_match(1)}#{Regexp.last_match(2).upcase}"
+    end
+  end
   return "Энциклопедия мира Астарии." if text.empty?
 
   return text if text.length <= 180
@@ -690,7 +703,8 @@ end
 def build_coverless_title(source, route, data)
   return "" if data["public_slug"].to_s.strip == "index"
 
-  title = data["title"].to_s
+  chapter_page = %w[chapter session].include?(data["type"].to_s)
+  title = chapter_page ? chapter_short_title(data) : data["title"].to_s
   escaped_title = CGI.escapeHTML(title)
   home_href = relative_href(route, "index")
   category = data["category"].to_s
@@ -707,27 +721,27 @@ def build_coverless_title(source, route, data)
     ""
   end
   kicker = case data["type"].to_s
-  when "chapter", "session" then "Глава летописи"
+  when "chapter", "session" then "Глава #{format("%03d", data["chapter"].to_i)}"
   when "campaign", "document" then "Сага Астарии"
   else display_category(category)
   end
   metadata = [
-    data["chapter"] && "Глава #{data["chapter"]}",
     data["year"] && astaria_year_label(data["year"]),
     data["season"],
     display_value(data["region"])
   ].compact.map(&:to_s).reject(&:empty?).first(3)
   metadata_html = metadata.map { |value| %(<span>#{CGI.escapeHTML(value)}</span>) }.join
+  metadata_block = metadata_html.empty? ? "" : %(\n          <div class="astaria-coverless-meta">#{metadata_html}</div>)
   english_title = data["english_title"].to_s.strip
   english_title_html = if english_title.empty?
     ""
   else
     %(\n          <p class="astaria-coverless-subtitle" lang="en">#{CGI.escapeHTML(english_title)}</p>)
   end
-  initial = title.each_char.find { |char| char.match?(/[[:alpha:]]/) } || "А"
+  hero_class = chapter_page ? "astaria-coverless-hero astaria-coverless-hero-chapter" : "astaria-coverless-hero"
 
   <<~HTML
-    <header class="astaria-coverless-hero">
+    <header class="#{hero_class}">
       <nav class="astaria-article-trail" aria-label="Хлебные крошки">
         <a href="#{CGI.escapeHTML(home_href)}">Астария</a>
         #{category_crumb}
@@ -736,10 +750,9 @@ def build_coverless_title(source, route, data)
       <div class="astaria-coverless-main">
         <div>
           <p class="astaria-coverless-kicker">#{CGI.escapeHTML(kicker)}</p>
-          <h1 class="astaria-content-title">#{escaped_title}</h1>#{english_title_html}
-          <div class="astaria-coverless-meta">#{metadata_html}</div>
+          <h1 class="astaria-content-title">#{escaped_title}</h1>#{english_title_html}#{metadata_block}
         </div>
-        <div class="astaria-coverless-sigil" aria-hidden="true"><span>#{CGI.escapeHTML(initial)}</span></div>
+        <div class="astaria-coverless-ornament" aria-hidden="true"><span></span><i></i></div>
       </div>
     </header>
   HTML
@@ -1173,17 +1186,23 @@ def saga_chapter_card(chapter, route)
   english_title = chapter_data["english_title"].to_s.strip
   english_html = english_title.empty? ? "" : %(<em lang="en">#{CGI.escapeHTML(english_title)}</em>)
   meta_html = meta.empty? ? "" : %(<small>#{CGI.escapeHTML(meta)}</small>)
-  <<~HTML
-    <a class="astaria-saga-chapter-card" href="#{CGI.escapeHTML(relative_href(route, chapter[:route]))}">
-      <span>#{format("%03d", number)}</span>
-      <div>
-        <strong>#{CGI.escapeHTML(chapter_short_title(chapter_data))}</strong>
-        #{english_html}
-        #{meta_html}
-      </div>
-      <b aria-hidden="true">→</b>
-    </a>
-  HTML
+  [
+    %(<a class="astaria-saga-chapter-card" href="#{CGI.escapeHTML(relative_href(route, chapter[:route]))}">),
+    %(<span>#{format("%03d", number)}</span>),
+    "<div>",
+    %(<strong>#{CGI.escapeHTML(chapter_short_title(chapter_data))}</strong>),
+    english_html,
+    meta_html,
+    "</div>",
+    %(<b aria-hidden="true">→</b>),
+    "</a>"
+  ].reject(&:empty?).join("\n")
+end
+
+def saga_chapter_region_groups(chapters)
+  chapters.chunk_while do |left, right|
+    display_value(left[:data]["region"]) == display_value(right[:data]["region"])
+  end.to_a
 end
 
 def build_saga_chapters(source, route, data, lookup)
@@ -1211,24 +1230,30 @@ def build_saga_chapters(source, route, data, lookup)
     HTML
   else
     if chapters.length > 24
-      groups = chapters.each_slice(20).to_a
-      range_links = groups.map do |group|
+      groups = saga_chapter_region_groups(chapters)
+      region_links = groups.each_with_index.map do |group, index|
+        region = display_value(group.first[:data]["region"])
+        region = "Пролог" if region.empty?
         first_number = group.first[:data]["chapter"].to_i
         last_number = group.last[:data]["chapter"].to_i
-        %(<a href="#chapters-#{first_number}-#{last_number}">#{format("%03d", first_number)}–#{format("%03d", last_number)}</a>)
+        range = first_number == last_number ? format("%03d", first_number) : "#{format("%03d", first_number)}–#{format("%03d", last_number)}"
+        %(<a href="#chapters-region-#{index + 1}"><strong>#{CGI.escapeHTML(region)}</strong><small>#{range}</small></a>)
       end.join
-      ranges = groups.map do |group|
+      regions = groups.each_with_index.map do |group, index|
+        region = display_value(group.first[:data]["region"])
+        region = "Пролог" if region.empty?
         first_number = group.first[:data]["chapter"].to_i
         last_number = group.last[:data]["chapter"].to_i
+        range = first_number == last_number ? "Глава #{format("%03d", first_number)}" : "Главы #{format("%03d", first_number)}–#{format("%03d", last_number)}"
         cards = group.map { |chapter| saga_chapter_card(chapter, route) }.join
         <<~HTML
-          <section class="astaria-saga-chapter-range" id="chapters-#{first_number}-#{last_number}">
-            <h3>Главы #{format("%03d", first_number)}–#{format("%03d", last_number)}</h3>
+          <section class="astaria-saga-chapter-range" id="chapters-region-#{index + 1}">
+            <header><p>#{CGI.escapeHTML(range)}</p><h3>#{CGI.escapeHTML(region)}</h3></header>
             <div class="astaria-saga-chapter-grid">#{cards}</div>
           </section>
         HTML
       end.join
-      %(<nav class="astaria-saga-range-nav" aria-label="Диапазоны глав">#{range_links}</nav>#{ranges})
+      %(<nav class="astaria-saga-range-nav" aria-label="Регионы саги">#{region_links}</nav>#{regions})
     else
       cards = chapters.map { |chapter| saga_chapter_card(chapter, route) }.join
       %(<div class="astaria-saga-chapter-grid">#{cards}</div>)
@@ -1279,7 +1304,7 @@ def build_chapter_navigation(source, route, data)
 end
 
 def generated_frontmatter(data, body)
-  public_data = data.reject { |key, _value| %w[ready quartz].include?(key) }
+  public_data = data.reject { |key, _value| %w[ready quartz].include?(key) || key.to_s.start_with?("secret_") }
   aliases = Array(public_data["aliases"])
   aliases << public_data["title"] if public_data["title"]
   public_data["aliases"] = aliases.compact.map(&:to_s).uniq

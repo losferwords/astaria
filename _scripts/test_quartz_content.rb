@@ -4,6 +4,7 @@
 require "pathname"
 require "cgi"
 require "json"
+require "rbconfig"
 require "yaml"
 
 ROOT = File.expand_path("..", __dir__)
@@ -80,6 +81,72 @@ ready_article_notes = Dir.glob(File.join(ROOT, "Энциклопедия", "**",
 
   { path: path, data: data, source: source }
 end.compact
+
+canonical_notes = Dir.glob(File.join(ROOT, "Энциклопедия", "**", "*.md")).sort.map do |path|
+  next if path.include?(File.join("Энциклопедия", "Идеи"))
+
+  data, source = parse_frontmatter.call(path)
+  next if data["title"].to_s.empty?
+
+  { path: path, data: data, source: source }
+end.compact
+canonical_by_title = canonical_notes.to_h { |note| [note[:data]["title"].to_s, note] }
+
+expect.call(
+  system(RbConfig.ruby, File.join(ROOT, "_scripts", "normalize_encyclopedia_russian.rb"), "--check", out: File::NULL),
+  "Encyclopedia language normalization is not idempotent"
+)
+expect.call(canonical_notes.none? { |note| note[:source].match?(/\b(?:синоби|шиноби)\b/i) }, "Obsolete shinobi terminology remains in the encyclopedia")
+expect.call(canonical_notes.none? { |note| note[:data].key?("parent_1") || note[:data].key?("parent_2") }, "Legacy parent_1/parent_2 metadata remains")
+expect.call(
+  canonical_notes.none? { |note| note[:data].key?("profession") || note[:data].key?("professions") },
+  "Legacy profession/professions metadata remains; use imitei and occupation"
+)
+
+%w[Ата Интлан Они Онмёдзи].each do |title|
+  note = canonical_by_title.fetch(title)
+  expect.call(!note[:source].include?("_Описание пока не добавлено._"), "#{title} still has no encyclopedia description")
+end
+
+relation_target = lambda do |value|
+  value.to_s[/\[\[([^|\]]+)/, 1]
+end
+canonical_notes.each do |note|
+  title = note[:data]["title"].to_s
+  {
+    "parents" => "children",
+    "children" => "parents",
+    "siblings" => "siblings",
+    "secret_parents" => "secret_children",
+    "secret_children" => "secret_parents",
+    "secret_siblings" => "secret_siblings"
+  }.each do |source_key, reciprocal_key|
+    Array(note[:data][source_key]).each do |value|
+      target_title = relation_target.call(value)
+      next if target_title.to_s.empty?
+
+      expect.call(target_title != title, "#{title}: #{source_key} relationship points to itself")
+      target = canonical_by_title[target_title]
+      expect.call(!target.nil?, "#{title}: relationship points to missing character #{target_title}")
+      next unless target
+
+      reciprocal_titles = Array(target[:data][reciprocal_key]).map { |item| relation_target.call(item) }.compact
+      expect.call(reciprocal_titles.include?(title), "#{title} ↔ #{target_title}: #{source_key}/#{reciprocal_key} is not reciprocal")
+    end
+  end
+
+  Array(note[:data]["partner"]).each do |value|
+    target_title = relation_target.call(value)
+    next if target_title.to_s.empty?
+
+    target = canonical_by_title[target_title]
+    expect.call(!target.nil?, "#{title}: partner points to missing character #{target_title}")
+    next unless target
+
+    reciprocal_titles = Array(target[:data]["partner"]).map { |item| relation_target.call(item) }.compact
+    expect.call(reciprocal_titles.include?(title), "#{title} ↔ #{target_title}: partner relationship is not reciprocal")
+  end
+end
 expect.call(ready_article_notes.length >= 301, "Expected the complete ready encyclopedia corpus")
 intentionally_unpublished_titles = ["Бордель Уй-Джан", "Город Награкшаса", "Тхаги"]
 unpublished_ready_notes = ready_article_notes.reject { |note| note[:data]["quartz"] == true }
@@ -154,6 +221,16 @@ end
   position = characters.index(">#{title}</h3>")
   expect.call(!position.nil? && position > creature_group, "#{title} must appear in the creature character group")
 end
+
+character_card_descriptions = characters.scan(/<h3>([^<]+)<\/h3>\s*<p>([^<]*)<\/p>/m).to_h do |title, description|
+  [CGI.unescapeHTML(title), CGI.unescapeHTML(description).strip]
+end
+character_card_descriptions.each do |title, description|
+  expect.call(!description.match?(/\A[,;:.—–-]/u), "#{title}: card description starts with orphaned punctuation")
+  expect.call(!description.match?(/\A[а-яё]/u), "#{title}: card description starts with a lowercase letter")
+end
+expect.call(character_card_descriptions["Кион-Чи"]&.start_with?("Известный также"), "Kion-Qi card description is not cleaned up")
+expect.call(character_card_descriptions["Ляо Шень"]&.start_with?("Придворный портной"), "Liao Shen card description is not cleaned up")
 
 peoples = read.call("peoples/index.html")
 people_titles = card_titles.call(peoples)
@@ -257,6 +334,11 @@ expect.call(wind_of_change.include?("astaria-saga-chapters"), "Wind of Change ha
 expect.call(!wind_of_change.include?("astaria-saga-empty"), "Wind of Change still claims its published chapters are unavailable")
 expect.call(wind_of_change.scan("astaria-saga-chapter-card").length == 93, "Wind of Change must publish all 93 chapters")
 expect.call(wind_of_change.include?("astaria-saga-range-nav"), "Long Wind of Change contents need chapter-range navigation")
+expect.call(wind_of_change.scan(/<section class="astaria-saga-chapter-range"/).length == 7, "Wind of Change must be grouped into prologue and six story regions")
+%w[Гилас Амон-Астат Кадир Дикоземье Ланг-Ан Сурадж].each do |region_fragment|
+  expect.call(wind_of_change.include?(region_fragment), "Wind of Change contents are missing the #{region_fragment} region group")
+end
+expect.call(!wind_of_change.include?("&lt;small&gt;"), "Wind of Change chapter metadata is rendered as visible HTML")
 expect.call(wind_of_change.scan("astaria-saga-chapters-title").length >= 1, "Wind of Change chapter heading is missing")
 expect.call(!wind_of_change.include?("<h2 id=\"главы\">Главы</h2>"), "Wind of Change still renders the old empty chapter heading")
 thunder_call = read.call("literature/thunder-call-saga.html")
@@ -281,6 +363,9 @@ chapter_notes.each do |note|
 end
 highlander_soul = read.call("literature/glava-1-dusha-gortsa.html")
 expect.call(highlander_soul.include?("astaria-coverless-hero"), "Coverless chapters need a designed hero")
+expect.call(highlander_soul.include?("astaria-coverless-ornament"), "Coverless chapter hero needs a neutral decorative mark")
+expect.call(!highlander_soul.match?(/astaria-coverless-(?:sigil|ornament)[^>]*>\s*<span>Г<\/span>/), "Coverless chapter hero still displays the ambiguous letter Г")
+expect.call(highlander_soul.include?(%(<h1 class="astaria-content-title">Душа Горца</h1>)), "Chapter hero must keep the chapter number outside the title")
 expect.call(highlander_soul.include?("astaria-chapter-navigation"), "Saga chapter has no previous/next navigation")
 expect.call(highlander_soul.include?("astaria-coverless-subtitle"), "Call of Thunder chapter is missing its English title")
 expect.call(highlander_soul.scan("The Highlander's Soul").length == 1, "English chapter title is duplicated in the public article")
@@ -314,8 +399,32 @@ rich_infoboxes.each do |relative, minimum|
 end
 
 meilong = read.call("characters/meilong.html")
-["媚龍", "Дракон неустановленного вида", "104 НЭ", "Красные", "50см", "13кг"].each do |value|
+["媚龍", "Дракон неустановленного вида", "104 НЭ", "Красные", "50 см", "13 кг"].each do |value|
   expect.call(meilong.include?(value), "Meilong infobox is missing #{value}")
+end
+expect.call(!meilong.include?(">Родители</dt>"), "Meilong's divine parentage must remain hidden")
+
+mei_wu = read.call("characters/mei-wu.html")
+expect.call(mei_wu.include?(">Родители</dt>"), "Mei Wu infobox is missing public parents")
+expect.call(mei_wu.include?(">Дети</dt>"), "Mei Wu infobox is missing public children")
+rhea_melit = read.call("characters/rhea-melit.html")
+expect.call(rhea_melit.include?(">Родители</dt>"), "Rhea Melit infobox is missing her public parent")
+
+selina_elliot = read.call("characters/selina-elliot.html")
+expect.call(selina_elliot.include?(">Братья и сёстры</dt>"), "Selina Elliot infobox is missing her brother")
+expect.call(selina_elliot.include?(">Путь Имитея</dt>"), "Selina Elliot infobox is missing her Imitei path")
+expect.call(selina_elliot.scan(">Тень</a>").length == 1, "Selina Elliot must display the Shadow path only once")
+expect.call(!selina_elliot.include?(">Род занятий</dt>"), "Selina Elliot has a duplicate occupation row")
+
+areta = read.call("characters/areta.html")
+expect.call(areta.include?("Авеста Кронос"), "Areta infobox is missing her public sister")
+expect.call(!areta.include?("Аристея Кронос"), "Areta's secret sister leaked into Quartz")
+aristea = read.call("characters/aristea-kronos.html")
+expect.call(!aristea.include?(">Братья и сёстры</dt>"), "Aristea's secret siblings leaked into Quartz")
+
+Dir.glob(File.join(CONTENT, "**", "*.md")).each do |path|
+  data, = parse_frontmatter.call(path)
+  expect.call(data.keys.none? { |key| key.to_s.start_with?("secret_") }, "Private relationship metadata leaked into #{path.delete_prefix("#{CONTENT}/")}")
 end
 expect.call(meilong.include?("astaria-infobox-note"), "Meilong infobox must show the calculated current age")
 expect.call(meilong.include?("assets/images/meilong_adult.jpg"), "Meilong must use the updated adult portrait")
@@ -462,7 +571,7 @@ if File.file?(conflict_report)
   conflict_source = File.read(conflict_report)
   expect.call(conflict_source.include?("# Противоречия и вопросы канона"), "Canon-conflict report has no structured title")
   expect.call(conflict_source.include?("## Разрешено автором"), "Canon-conflict report does not separate resolved decisions")
-  expect.call(conflict_source.include?("обнаружение и освобождение — два разных события"), "Vintre chronology decision is not recorded")
+  expect.call(conflict_source.include?("Обнаружение и освобождение — два разных события"), "Vintre chronology decision is not recorded")
   expect.call(conflict_source.include?("Аксель Хана убил Муспельхег"), "Aksel Khan's killer decision is not recorded")
   expect.call(conflict_source.include?("только внешность Сао"), "Sao Wu's apparent-age decision is not recorded")
   expect.call(conflict_source.include?("Единственное каноническое имя генерала — **Гуань Ли**"), "Guan Li's canonical name is not recorded")
@@ -472,13 +581,13 @@ if File.file?(conflict_report)
   expect.call(conflict_source.include?("адресат сигнала — археи"), "Ast's signal addressee is not recorded")
   expect.call(conflict_source.include?("изначально принадлежала Руфу"), "Rufu's ownership of the scythe is not recorded")
   expect.call(conflict_source.include?("Ниса]] больше не находится"), "Nisa's current location decision is not recorded")
-  expect.call(conflict_source.include?("опасно даже имитеям"), "Vetal outbreak severity is not recorded")
+  expect.call(conflict_source.include?("опасно даже Имитеям"), "Vetal outbreak severity is not recorded")
   expect.call(conflict_source.include?("Хан не знал"), "Aksel Khan's ignorance of Vintre's plan is not recorded")
 end
 dragon_legacy = File.join(ROOT, "Энциклопедия", "Секреты", "Наследие драконов.md")
 dragon_legacy_source = File.read(dragon_legacy)
 expect.call(dragon_legacy_source.scan(/^- \*\*-?\d+ год (?:ХЭ|НЭ)\./).length == 81, "Dragon legacy chronology lost or duplicated events")
-expect.call(dragon_legacy_source.include?("**-1637 год ХЭ.** Экспедиция друидов обнаруживает тело Винтры"), "Vintre's body discovery must be dated -1637 ХЭ")
+expect.call(dragon_legacy_source.include?("**-1637 год ХЭ.** Экспедиция Друидов обнаруживает тело Винтры"), "Vintre's body discovery must be dated -1637 ХЭ")
 expect.call(dragon_legacy_source.include?("**-1635 год ХЭ.** Друиды извлекают Винтру из ледяного плена"), "Vintre's recovery must be dated -1635 ХЭ")
 expect.call(!dragon_legacy_source.include?("Муспельхегг"), "Muspelheg's name still has the obsolete double-g spelling")
 vaktar_foundation_source = File.read(File.join(ROOT, "Хронология", "События", "Основание Вактар-Йордена.md"))

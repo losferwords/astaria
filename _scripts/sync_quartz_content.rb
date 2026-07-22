@@ -217,6 +217,7 @@ INFOBOX_FIELDS = [
   ["skin", "Кожа / окрас"],
   ["height", "Рост"],
   ["weight", "Вес"],
+  ["distinguishing_features", "Особые приметы"],
   ["dimensions", "Размеры"],
   ["habitat", "Среда обитания"],
   ["average_height", "Средний рост"],

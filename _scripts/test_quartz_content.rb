@@ -108,6 +108,30 @@ expect.call(
   expect.call(!note[:source].include?("_Описание пока не добавлено._"), "#{title} still has no encyclopedia description")
 end
 
+raphael = canonical_by_title.fetch("Рафаил Чалак")
+expect.call(Array(raphael[:data]["aliases"]).include?("Рафаил"), "Raphael Chalak must keep his short name as an alias")
+
+shasha = canonical_by_title.fetch("Шаша")
+{
+  "species" => "[[Нага]]",
+  "birth_year" => "83 НЭ",
+  "eyes" => "Жёлтые, змеиные",
+  "hair" => "Чёрные, густые",
+  "skin" => "Зелёная"
+}.each do |field, value|
+  expect.call(shasha[:data][field] == value, "Shasha metadata is missing #{field}: #{value}")
+end
+
+city_body_issues = []
+canonical_notes.each do |note|
+  next unless note[:data]["type"] == "settlement" && note[:data]["title"].to_s.start_with?("Город ")
+
+  body = note[:source].sub(/\A---\s*\n.*?\n---\s*\n/m, "")
+  city_body_issues << note[:path] if body.match?(/^## Население\s*$/)
+  city_body_issues << note[:path] if body.match?(/\b(?:около|примерно|более|свыше|до)\s+\d[\d\s ]*(?:человек|жител)/i)
+end
+expect.call(city_body_issues.empty?, "City population is duplicated in article bodies: #{city_body_issues.uniq.map { |path| File.basename(path) }.join(', ')}")
+
 relation_target = lambda do |value|
   value.to_s[/\[\[([^|\]]+)/, 1]
 end
@@ -611,6 +635,20 @@ expect.call(shen_wu.include?(%(<span class="astaria-infobox-note">803 года</
 canonical_corpus = Dir.glob(File.join(ROOT, "Энциклопедия", "**", "*.md")).map { |path| File.read(path) }.join("\n")
 expect.call(!canonical_corpus.include?("Ли Шу") && !canonical_corpus.include?("Ли Гуань"), "Retired names for General Guan Li remain in the canonical corpus")
 expect.call(!canonical_corpus.include?("космическая цивилизация, уничтожающая"), "Ast's retired external-civilization idea remains in the canonical corpus")
+
+public_lore_artifacts = []
+public_saga_labels = []
+Dir.glob(File.join(ROOT, "Энциклопедия", "**", "*.md")).sort.each do |path|
+  next if path.include?(File.join("Энциклопедия", "Секреты"))
+  next if path.include?(File.join("Энциклопедия", "Литература"))
+
+  source = File.read(path)
+  public_lore_artifacts << path if source.match?(/^## (?:Внешность|Последние сведения|Персонажи из backup|Поселения из backup)\s*$/)
+  public_lore_artifacts << path if source.match?(/\bbackup\b/i)
+  public_saga_labels << path if source.match?(/геро(?:и|ев|ям) саги|на момент главы/i)
+end
+expect.call(public_lore_artifacts.empty?, "Migration/update artifacts remain in lore articles: #{public_lore_artifacts.uniq.map { |path| File.basename(path) }.join(', ')}")
+expect.call(public_saga_labels.empty?, "Lore articles still describe facts as campaign records: #{public_saga_labels.uniq.map { |path| File.basename(path) }.join(', ')}")
 
 vanpur = read.call("places/vanpur.html")
 %w[Урист Мусака Гилья].each do |campaign_name|

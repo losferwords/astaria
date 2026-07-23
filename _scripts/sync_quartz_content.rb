@@ -744,13 +744,35 @@ def render_public_wikilinks(body, route, lookup)
   end
 end
 
+def remove_markdown_callouts(body)
+  cleaned = []
+  skipping_callout = false
+
+  body.each_line do |line|
+    if line.match?(/^>\s*\[![^\]]+\]/)
+      skipping_callout = true
+      next
+    end
+
+    if skipping_callout && line.start_with?(">")
+      next
+    end
+
+    skipping_callout = false
+    cleaned << line
+  end
+
+  cleaned.join
+end
+
 def description_from_body(body, data)
   explicit = data["description"].to_s.strip
   return explicit unless explicit.empty?
   return "Интерактивная карта Астарии с поиском по местам, масштабированием и слоями границ, рельефа и биомов." if data["type"] == "map"
 
-  main_section = body.match(/^## Основной текст\s*\n+(.*?)(?=^## |\z)/m)
-  text = main_section ? main_section[1] : cleanup_public_body(body, data)
+  body_without_callouts = remove_markdown_callouts(body)
+  main_section = body_without_callouts.match(/^## Основной текст\s*\n+(.*?)(?=^## |\z)/m)
+  text = main_section ? main_section[1] : cleanup_public_body(body_without_callouts, data)
   text = text.gsub(/```.*?```/m, " ")
   text = text.gsub(/%%.*?%%/m, " ")
   text = text.gsub(/!\[\[[^\]]+\]\]/, " ")

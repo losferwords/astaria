@@ -91,6 +91,12 @@ canonical_notes = Dir.glob(File.join(ROOT, "Энциклопедия", "**", "*.
   { path: path, data: data, source: source }
 end.compact
 canonical_by_title = canonical_notes.to_h { |note| [note[:data]["title"].to_s, note] }
+public_canonical_notes = canonical_notes.reject do |note|
+  note[:path].include?(File.join("Энциклопедия", "Секреты")) ||
+    note[:data]["secret"] == true ||
+    note[:data]["private"] == true ||
+    note[:data]["category"].to_s == "Секреты"
+end
 
 expect.call(
   system(RbConfig.ruby, File.join(ROOT, "_scripts", "normalize_encyclopedia_russian.rb"), "--check", out: File::NULL),
@@ -102,11 +108,97 @@ expect.call(
   canonical_notes.none? { |note| note[:data].key?("profession") || note[:data].key?("professions") },
   "Legacy profession/professions metadata remains; use imitei and occupation"
 )
+expect.call(
+  public_canonical_notes.none? { |note| note[:source].match?(/Маяк(?:а|е|у|ом)? Душ/i) },
+  "Public encyclopedia articles must not mention the Soul Lighthouse"
+)
 
-%w[Ата Интлан Они Онмёдзи].each do |title|
+["Ата", "Интлан", "О́ни", "Онмёдзи"].each do |title|
   note = canonical_by_title.fetch(title)
   expect.call(!note[:source].include?("_Описание пока не добавлено._"), "#{title} still has no encyclopedia description")
 end
+
+oni = canonical_by_title.fetch("О́ни")
+expect.call(oni[:data]["native_name"] == "鬼", "Oni article is missing the canonical Ezo name")
+expect.call(Array(oni[:data]["aliases"]).include?("鬼"), "Oni article must keep its kanji as a search alias")
+expect.call(Array(oni[:data]["aliases"]).include?("Они"), "Oni article must keep the unaccented spelling as a search alias")
+expect.call(oni[:source].include?("# О́ни") && oni[:source].include?("**О́ни**"), "Oni article must display the disambiguating stress mark")
+
+amato = canonical_by_title.fetch("Амато")
+expect.call(amato[:data]["ready"] == false && amato[:data]["quartz"] == false, "Amato must remain Obsidian-only until its art is ready")
+expect.call(!amato[:data].key?("cover_image") && !amato[:data].key?("crest_image"), "Amato must not reference missing cover or crest art")
+expect.call(!amato[:source].include?("_Описание пока не добавлено._"), "Amato still has no encyclopedia description")
+["Основной текст", "Острова и море", "Императорский двор", "Вера, души и божественный ветер", "Обычаи эдзо", "Туманный остров и Обитель"].each do |heading|
+  expect.call(amato[:source].include?("## #{heading}"), "Amato article is missing the #{heading} section")
+end
+["阿魔都", "Острова Душ", "[[Они|О́ни]]", "[[Онмёдзи]]", "神風", "[[Ицунэ]]", "[[Туманный остров]]", "[[Обитель|Обителью]]"].each do |fact|
+  expect.call(amato[:source].include?(fact), "Amato article is missing #{fact}")
+end
+amato_body = amato[:source].split(/^# Амато\s*$/, 2).last.to_s
+amato_word_count = amato_body.split.size
+expect.call(amato_word_count.between?(450, 800), "Amato article has an unsuitable country-overview length: #{amato_word_count} words")
+expect.call(
+  !amato[:source].match?(/Кристалл Души|Маяк/i),
+  "Amato public article exposes secret Soul Lighthouse lore"
+)
+
+kaito = canonical_by_title.fetch("Город Кайто")
+expect.call(kaito[:data]["ready"] == false && kaito[:data]["quartz"] == false, "Kaito must remain Obsidian-only until its art is ready")
+expect.call(kaito[:data]["native_name"] == "海都", "Kaito article is missing its canonical Ezo name")
+expect.call(kaito[:data]["settlement_type"] == "Столица", "Kaito settlement type must be written in Russian")
+expect.call(!kaito[:source].include?("_Описание пока не добавлено._"), "Kaito still has no encyclopedia description")
+["[[Амато]]", "[[Остров Ояширо|Ояширо]]", "[[Ицунэ]]", "[[Онмёдзи]]"].each do |fact|
+  expect.call(kaito[:source].include?(fact), "Kaito article is missing #{fact}")
+end
+kaito_body = kaito[:source].split(/^# Город Кайто\s*$/, 2).last.to_s
+kaito_word_count = kaito_body.split.size
+expect.call(kaito_word_count.between?(100, 260), "Kaito article has an unsuitable capital-overview length: #{kaito_word_count} words")
+expect.call(!kaito_body.match?(/\b56[\s ]?000\b/), "Kaito population must remain in the sidebar instead of the article body")
+expect.call(!kaito[:source].match?(/Маяк/i), "Kaito article exposes secret Soul Lighthouse lore")
+
+vends = canonical_by_title.fetch("Венды")
+expect.call(vends[:data]["ready"] == false && vends[:data]["quartz"] == false, "Vends must remain Obsidian-only until their art is ready")
+expect.call(vends[:data]["homeland"] == "[[Обитель]]", "Vends article is missing its homeland")
+expect.call(vends[:data]["deity"] == "[[Велисса]]", "Vends article is missing its patron deity")
+expect.call(Array(vends[:data]["parent_peoples"]).include?("[[Вактары]]"), "Vends article is missing its Vaktar ancestry")
+expect.call(!vends[:source].include?("_Описание пока не добавлено._"), "Vends still have no encyclopedia description")
+["[[Обитель|Обители]]", "[[Велисса|Велиссы]]", "[[Страж|Стражей]]", "[[Веданский лес|Веданского леса]]"].each do |fact|
+  expect.call(vends[:source].include?(fact), "Vends article is missing #{fact}")
+end
+vends_body = vends[:source].split(/^# Венды\s*$/, 2).last.to_s
+vends_word_count = vends_body.split.size
+expect.call(vends_word_count.between?(300, 500), "Vends article has an unsuitable people-overview length: #{vends_word_count} words")
+expect.call(
+  !vends_body.match?(/Росс(?:ия|ии|ию)|Украин|Беларус|Польш|Серб|Хорват|Румын|Литв|богатыр|Коще/i),
+  "Vends public article contains a real-world reference or unwanted folklore cliché"
+)
+
+onmyoji = canonical_by_title.fetch("Онмёдзи")
+["Основной текст", "Способности", "Атрибуты"].each do |heading|
+  expect.call(onmyoji[:source].include?("## #{heading}"), "Onmyoji article is missing the #{heading} section")
+end
+expect.call(!onmyoji[:source].match?(/Маяк Душ|Ветер Душ|Рассветное море/), "Onmyoji public article exposes secret Lighthouse lore")
+expect.call(onmyoji[:source].split.size <= 360, "Onmyoji public article is too detailed for an Imitei overview")
+expect.call(onmyoji[:data]["native_name"] == "陰陽師", "Onmyoji article is missing the canonical Ezo name")
+expect.call(Array(onmyoji[:data]["aliases"]).include?("Охотник на демонов"), "Onmyoji article is missing its Common-tongue name")
+expect.call(!Array(onmyoji[:data]["aliases"]).include?("Призрак"), "Onmyoji article still exposes the retired Ghost name")
+expect.call(!onmyoji[:source].match?(/Призрак/), "Onmyoji public article still uses the retired Ghost name")
+["神風", "божественный ветер", "потоками воздуха", "порывами ветра", "туманом"].each do |fact|
+  expect.call(onmyoji[:source].include?(fact), "Onmyoji article is missing the wind ability: #{fact}")
+end
+["подлинное имя", "кандзи собственного имени", "не назначает платы", "сводят счёты с жизнью"].each do |fact|
+  expect.call(!onmyoji[:source].include?(fact), "Onmyoji public article exposes discoverable detail: #{fact}")
+end
+
+onmyoji_secrets = canonical_by_title.fetch("Тайны Онмёдзи")
+expect.call(onmyoji_secrets[:data]["secret"] == true && onmyoji_secrets[:data]["private"] == true, "Onmyoji secrets must remain private")
+expect.call(onmyoji_secrets[:data]["quartz"] == false, "Onmyoji secrets must never be published")
+["Маяк Душ", "Ветер Душ", "две души", "Кристалл Души", "Привязка души", "Память спасённого", "Последняя мера", "Служение и благодарность", "подлинное имя о́ни", "神風"].each do |fact|
+  expect.call(onmyoji_secrets[:source].include?(fact), "Onmyoji secrets are missing #{fact}")
+end
+expect.call(!canonical_by_title.fetch("Ицунэ")[:source].include?("навсегда теряют зрение"), "Itsune article still claims Onmyoji are blind")
+expect.call(!canonical_by_title.fetch("Ицунэ")[:source].match?(/Призрак/), "Itsune article still uses the retired Onmyoji name")
+expect.call(!canonical_by_title.fetch("Ицунэ")[:source].match?(/кандзи|связывают с ним душу|соединить его с другой душой/), "Itsune article exposes the Onmyoji initiation")
 
 raphael = canonical_by_title.fetch("Рафаил Чалак")
 expect.call(Array(raphael[:data]["aliases"]).include?("Рафаил"), "Raphael Chalak must keep his short name as an alias")
@@ -312,6 +404,18 @@ god_article_paths.each do |path|
   expect.call(!html.match?(/<h[2-6][^>]*>\s*(?:Божественные домены|Священные символы)\s*<\/h[2-6]>/), "#{relative}: god metadata is duplicated in the article body")
 end
 
+event_notes = canonical_notes.select { |note| note[:data]["category"] == "События" }
+event_notes.each do |note|
+  title = note[:data]["title"]
+  expect.call(!note[:data]["description"].to_s.strip.empty?, "#{title}: event card needs an explicit clean description")
+  expect.call(!note[:source].match?(/^>\s*\[!timeline\]/i), "#{title}: obsolete WorldAnvil timeline callout remains")
+  expect.call(!note[:source].match?(/^## Основной текст\s*$/), "#{title}: obsolete short/full article split remains")
+end
+
+events = read.call("events/index.html")
+expect.call(!events.match?(/\[!?timeline\]/i), "Event cards expose timeline markup")
+expect.call(!events.include?("Основной текст"), "Event cards expose the obsolete main-text heading")
+
 imitei_article = File.read(File.join(ROOT, "Энциклопедия", "Знания", "Имитей.md"))
 known_imitei_section = imitei_article.split("## Известные Имитеи:", 2).last.to_s
 imitei_article_positions = meta_imitei_order.map { |title| known_imitei_section.index("[[#{title}") }.compact
@@ -388,7 +492,7 @@ expect.call(experience_script.include?("setupAstariaDiscovery"), "Home discovery
 wind_of_change = read.call("literature/wind-of-change-saga.html")
 expect.call(wind_of_change.include?("astaria-saga-chapters"), "Wind of Change has no designed chapter section")
 expect.call(!wind_of_change.include?("astaria-saga-empty"), "Wind of Change still claims its published chapters are unavailable")
-expect.call(wind_of_change.scan("astaria-saga-chapter-card").length == 93, "Wind of Change must publish all 93 chapters")
+expect.call(wind_of_change.scan("astaria-saga-chapter-card").length == 94, "Wind of Change must publish all 94 chapters")
 expect.call(wind_of_change.include?("astaria-saga-range-nav"), "Long Wind of Change contents need chapter-range navigation")
 expect.call(wind_of_change.scan(/<section class="astaria-saga-chapter-range"/).length == 7, "Wind of Change must be grouped into prologue and six story regions")
 %w[Гилас Амон-Астат Кадир Дикоземье Ланг-Ан Сурадж].each do |region_fragment|
@@ -409,7 +513,7 @@ end
 sleeping_gods = read.call("literature/poka-bogi-spyat.html")
 expect.call(sleeping_gods.scan("astaria-saga-chapter-card").length == 3, "Poka Bogi Spyat must publish all three chapters")
 chapter_notes = published_ready_notes.select { |note| %w[chapter session].include?(note[:data]["type"].to_s) }
-expect.call(chapter_notes.length == 106, "Expected 106 public saga chapters")
+expect.call(chapter_notes.length == 107, "Expected 107 public saga chapters")
 chapter_notes.each do |note|
   generated = Dir.glob(File.join(CONTENT, "literature", "*.md")).find do |path|
     data, = parse_frontmatter.call(path)

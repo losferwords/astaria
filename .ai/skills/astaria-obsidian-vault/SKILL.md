@@ -57,7 +57,7 @@ Correct obvious spelling, punctuation, and rushed phrasing while preserving fact
 - Use `![[Assets/Images/file.jpg]]` in article bodies.
 - Store image properties as wikilinks, for example `cover_image: "[[Assets/Images/file.jpg]]"`.
 - Keep creator attribution in `Assets/Images/credits.csv`.
-- For Imitei art, prefer `_landscape` covers and show male/female variants as a gallery when available.
+- For Imitei art, use paired 9:16 `female_portrait` and `male_portrait` images in the dedicated class-page layout. Do not add or retain `_landscape` covers for Imitei articles.
 
 ## Maps
 

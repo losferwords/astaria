@@ -6,6 +6,7 @@ category: "Боги"
 ready: true
 quartz: true
 portrait_image: "[[Assets/Images/Hyperion I.jpg]]"
+gender: "Мужской"
 current_location: "[[Город Аргос]]"
 eyes: "Карие"
 skin: "Смуглый"

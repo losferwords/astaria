@@ -98,16 +98,16 @@ IMITEI_ORDER = [
   "Идеал",
   "Горец",
   "Друид",
-  "Оракул",
+  "Профитис",
   "Аватар",
   "Тень",
   "Светоносный",
   "Мститель",
   "Наварх",
   "Хранитель",
-  "Варвар",
+  "Мектиг",
   "Вознесённый",
-  "Жнец",
+  "Ракша",
   "Шаман",
   "Онмёдзи",
   "Страж"
@@ -205,6 +205,7 @@ INFOBOX_FIELDS = [
   ["imitei", "Путь Имитея"],
   ["occupation", "Род занятий"],
   ["organizations", "Организации"],
+  ["deity", "Покровитель"],
   ["deities", "Божества"],
   ["faiths", "Верования"],
   ["religions", "Религии"],
@@ -530,7 +531,11 @@ def enrich_inverse_relationships!(published_records, canonical_records)
 end
 
 def image_slug(data)
-  raw = data["portrait_image"] || data["cover_image"] || data["flag_image"]
+  raw = data["portrait_image"] ||
+    data["cover_image"] ||
+    data["female_portrait"] ||
+    data["male_portrait"] ||
+    data["flag_image"]
   path = extract_asset_path(raw)
   return nil unless path
 
@@ -766,7 +771,10 @@ def remove_markdown_callouts(body)
 end
 
 def description_from_body(body, data)
-  explicit = data["description"].to_s.strip
+  explicit = data["description"].to_s
+    .gsub(/\*\*([^*]+)\*\*/, '\1')
+    .gsub(/__([^_]+)__/, '\1')
+    .strip
   return explicit unless explicit.empty?
   return "Интерактивная карта Астарии с поиском по местам, масштабированием и слоями границ, рельефа и биомов." if data["type"] == "map"
 
@@ -778,12 +786,14 @@ def description_from_body(body, data)
   text = text.gsub(/!\[\[[^\]]+\]\]/, " ")
   text = text.gsub(/\[\[([^|\]]+)\|([^\]]+)\]\]/, '\\2')
   text = text.gsub(/\[\[([^\]]+)\]\]/, '\\1')
+  text = text.gsub(/\*\*([^*]+)\*\*/, '\1')
+  text = text.gsub(/__([^_]+)__/, '\1')
   text = text.gsub(/^\s*[#>|*-]+\s*/, "")
   text = text.gsub(/<[^>]+>/, " ")
   text = text.gsub(/\s+/, " ").strip
   title = data["title"].to_s.strip
-  if !title.empty? && text.start_with?(title)
-    text = text.delete_prefix(title)
+  if !title.empty? && text.match?(/\A#{Regexp.escape(title)}(?=\s|[,;:.!—–-]|\z)/u)
+    text = text.sub(/\A#{Regexp.escape(title)}/u, "")
       .sub(/\A\s*(?:[,;:.!—–-]\s*)+/, "")
       .strip
     text = text.sub(/\A([«„“"']*)([а-яё])/u) do
@@ -842,6 +852,51 @@ def cover_image(data)
   path == sidebar_image(data) ? nil : path
 end
 
+def imitei_page?(data)
+  data["category"].to_s == "Имитеи" && data["type"].to_s == "profession"
+end
+
+def imitei_portrait(data, role)
+  raw = data["#{role}_portrait"]
+  path = extract_asset_path(raw)
+  path && ASSET_REWRITES.fetch(path, path)
+end
+
+def imitei_portraits_ready?(data)
+  imitei_page?(data) && imitei_portrait(data, "female") && imitei_portrait(data, "male")
+end
+
+def imitei_portrait_roles(data, lookup)
+  deity_name = reference_names(data["deity"]).first
+  raise "Imitei #{data["title"]}: deity is missing" if deity_name.to_s.empty?
+
+  deity = lookup[normalize_reference(deity_name)]
+  raise "Imitei #{data["title"]}: deity #{deity_name.inspect} is not public" unless deity
+
+  gender = display_value(deity[:data]["gender"]).downcase
+  primary = if gender.match?(/\A(?:женск|female)/)
+    "female"
+  elsif gender.match?(/\A(?:мужск|male)/)
+    "male"
+  else
+    raise "Imitei #{data["title"]}: deity #{deity_name.inspect} has no supported gender"
+  end
+
+  [primary, primary == "female" ? "male" : "female"]
+end
+
+def primary_article_image(data, lookup)
+  if imitei_portraits_ready?(data)
+    primary_role = imitei_portrait_roles(data, lookup).first
+    return imitei_portrait(data, primary_role)
+  end
+
+  sidebar_image(data) ||
+    cover_image(data) ||
+    imitei_portrait(data, "female") ||
+    imitei_portrait(data, "male")
+end
+
 def timeline_image(data)
   raw = data["timeline_image"] || data["cover_image"]
   path = extract_asset_path(raw)
@@ -856,6 +911,91 @@ def build_cover(data)
     <figure class="astaria-cover-frame">
     #{render_image_tag(image_path, "astaria-cover-image", alt_text: data["title"], fetchpriority: "high")}
     </figure>
+  HTML
+end
+
+def build_imitei_hero(route, data, body, lookup)
+  female_portrait = imitei_portrait(data, "female")
+  male_portrait = imitei_portrait(data, "male")
+  return "" unless female_portrait && male_portrait
+
+  title = data["title"].to_s
+  title_size = if title.length >= 10
+    "long"
+  elsif title.length >= 7
+    "medium"
+  else
+    "short"
+  end
+  home_href = relative_href(route, "index")
+  category_route = CATEGORY_ROUTES.fetch("Имитеи")
+  native_name = data["native_name"].to_s.strip
+  native_html = if native_name.empty?
+    ""
+  else
+    %(<p class="astaria-imitei-native" lang="ja">#{CGI.escapeHTML(native_name)}</p>)
+  end
+  description = description_from_body(body, data)
+
+  metadata = [
+    ["Направление", data["profession_type"]],
+    ["Родина пути", data["country"] || Array(data["associated_organizations"]).first],
+    ["Покровитель", data["deity"]],
+    ["Народ", data["people"]]
+  ].map do |label, value|
+    text = display_value(value)
+    next if text.empty?
+
+    <<~HTML
+      <div>
+        <dt>#{CGI.escapeHTML(label)}</dt>
+        <dd>#{CGI.escapeHTML(text)}</dd>
+      </div>
+    HTML
+  end.compact.join
+  metadata_html = metadata.empty? ? "" : %(<dl class="astaria-imitei-hero-meta">#{metadata}</dl>)
+
+  portrait_paths = {
+    "female" => female_portrait,
+    "male" => male_portrait
+  }
+  portrait_labels = {
+    "female" => "Женский образ",
+    "male" => "Мужской образ"
+  }
+  portraits = imitei_portrait_roles(data, lookup).each_with_index.map do |role, index|
+    image_path = portrait_paths.fetch(role)
+    label = portrait_labels.fetch(role)
+    number = format("%02d", index + 1)
+    alt = "#{label} пути «#{title}»"
+    <<~HTML
+      <figure class="astaria-imitei-portrait" data-portrait="#{role}">
+        #{render_image_tag(image_path, "astaria-imitei-portrait-image", alt_text: alt, fetchpriority: "high")}
+        <figcaption><span>#{number}</span>#{CGI.escapeHTML(label)}</figcaption>
+      </figure>
+    HTML
+  end.join
+
+  markdown_safe_html(<<~HTML)
+    <header class="astaria-imitei-hero astaria-imitei-hero-#{title_size}-title">
+      <nav class="astaria-article-trail" aria-label="Хлебные крошки">
+        <a href="#{CGI.escapeHTML(home_href)}">Астария</a>
+        <span aria-hidden="true">/</span>
+        <a href="../#{CGI.escapeHTML(category_route)}/">Имитеи</a>
+      </nav>
+      <div class="astaria-imitei-hero-grid">
+        <div class="astaria-imitei-hero-copy">
+          <p class="astaria-imitei-kicker">Путь Имитея</p>
+          <h1 class="astaria-content-title astaria-imitei-title-#{title_size}">#{CGI.escapeHTML(title)}</h1>
+          #{native_html}
+          <p class="astaria-imitei-lede">#{CGI.escapeHTML(description)}</p>
+          #{metadata_html}
+        </div>
+        <div class="astaria-imitei-hero-media" aria-label="Образы пути «#{CGI.escapeHTML(title)}»">
+          #{portraits}
+        </div>
+      </div>
+    </header>
   HTML
 end
 
@@ -966,12 +1106,13 @@ def build_sidebar(data, route, lookup)
     ""
   end
 
+  heading = imitei_page?(data) ? "Профиль пути" : "Сведения"
   infobox = if rows.empty?
     ""
   else
     <<~HTML
       <div class="astaria-infobox">
-      <p class="astaria-infobox-heading">Сведения</p>
+      <p class="astaria-infobox-heading">#{heading}</p>
       <dl>
       #{rows.join("\n")}
       </dl>
@@ -979,8 +1120,10 @@ def build_sidebar(data, route, lookup)
     HTML
   end
 
+  sidebar_class = imitei_page?(data) ? "astaria-sidebar astaria-imitei-profile" : "astaria-sidebar"
+
   markdown_safe_html(<<~HTML)
-    <aside class="astaria-sidebar" aria-label="Сведения: #{CGI.escapeHTML(data["title"].to_s)}">
+    <aside class="#{sidebar_class}" aria-label="Сведения: #{CGI.escapeHTML(data["title"].to_s)}">
     #{image}
     #{crest}
     #{infobox}
@@ -1298,12 +1441,19 @@ def build_article_footer(route, data)
 end
 
 def cleanup_public_body(body, data)
-  image_paths = [sidebar_image(data), cover_image(data), crest_image(data)].compact
+  image_paths = [
+    sidebar_image(data),
+    cover_image(data),
+    crest_image(data),
+    imitei_portrait(data, "female"),
+    imitei_portrait(data, "male")
+  ].compact
 
   body = body.gsub(/\r\n?/, "\n")
   body = body.gsub(/%%.*?%%\s*/m, "")
   body = body.sub(/\A\s*# .+?\n+/, "")
   body = body.gsub(/^## Основной текст\s*\n+/, "")
+  body = body.gsub(/^## Образы\s*\n+/, "") if imitei_page?(data)
   body = body.gsub(/^## Связи\s*\n+```dataview\n.*?```\s*/m, "")
   body = body.gsub(/```dataview\n.*?```\s*/m, "")
   body = body.gsub(/^## Главы\s*\n*/, "") if saga_landing?(data)
@@ -1518,6 +1668,13 @@ def write_public_article(source, route, data, body, lookup)
     cover = ""
     title = ""
     sidebar = ""
+  elsif imitei_portraits_ready?(data)
+    clean_body = cleanup_public_body(body, data)
+    clean_body = render_asset_embeds(clean_body)
+    clean_body = render_public_wikilinks(clean_body, route, lookup)
+    cover = ""
+    title = build_imitei_hero(route, data, body, lookup)
+    sidebar = build_sidebar(data, route, lookup)
   else
     clean_body = cleanup_public_body(body, data)
     clean_body = render_asset_embeds(clean_body)
@@ -1546,7 +1703,7 @@ def write_public_article(source, route, data, body, lookup)
     title: data["title"].to_s,
     category: source_category(source),
     description: description_from_body(body, data),
-    image_path: sidebar_image(data) || cover_image(data),
+    image_path: primary_article_image(data, lookup),
     cover_path: cover_image(data),
     sidebar_path: sidebar_image(data),
     crest_path: crest_image(data),
@@ -1648,7 +1805,7 @@ def category_card(entry, route)
     "country"
   elsif entry[:category] == "Места"
     "place"
-  elsif %w[Боги Персонажи].include?(entry[:category]) || entry[:sidebar_path]
+  elsif %w[Боги Имитеи Персонажи].include?(entry[:category]) || entry[:sidebar_path]
     "portrait"
   else
     "cover"

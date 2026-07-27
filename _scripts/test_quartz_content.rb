@@ -122,6 +122,22 @@ expect.call(
   public_canonical_notes.none? { |note| note[:source].match?(/Маяк(?:а|е|у|ом)? Душ/i) },
   "Public encyclopedia articles must not mention the Soul Lighthouse"
 )
+public_archaean_spoilers = public_canonical_notes.select do |note|
+  note[:data]["quartz"] == true && note[:source].match?(
+    /люд(?:и|ей|ьми)-колонист|пятистам поселен|археи.{0,100}(?:прибы|создан(?:ы|а|о)? бог)|бог.{0,100}создан(?:ы|а|о)? архе/i
+  )
+end
+expect.call(
+  public_archaean_spoilers.empty?,
+  "Public encyclopedia exposes the hidden science-fiction origin of the Archeans: #{public_archaean_spoilers.map { |note| File.basename(note[:path]) }.join(', ')}"
+)
+%w[Хефат Хтониды].each do |title|
+  note = canonical_by_title.fetch(title)
+  expect.call(
+    !Array(note[:data]["parent_peoples"]).include?("[[Археи]]") && Array(note[:data]["secret_parent_peoples"]).include?("[[Археи]]"),
+    "#{title}: secret Archean ancestry must not be exposed as public metadata"
+  )
+end
 
 ["Ата", "Интлан", "О́ни", "Онмёдзи"].each do |title|
   note = canonical_by_title.fetch(title)
@@ -1680,6 +1696,15 @@ timeline = read.call("timeline/index.html")
 expect.call(timeline.scan("astaria-timeline-event").length == 26, "Timeline must contain all 26 events")
 expect.call(timeline.include?("astaria-timeline-search"), "Timeline search is missing")
 expect.call(timeline.include?("astaria-timeline-category"), "Timeline category filter is missing")
+expect.call(timeline.include?("Первые свидетельства об археях"), "Timeline is missing the public-safe Archean milestone")
+expect.call(
+  !timeline.match?(/Приход Археев|Космическое событие|пятистам поселен|прибывают первые археи/i),
+  "Timeline exposes the hidden science-fiction history of the Archeans"
+)
+expect.call(
+  !home.match?(/Приход Археев|пятистам поселен|прибывают первые археи/i),
+  "Homepage exposes the hidden science-fiction history of the Archeans"
+)
 expect.call(!timeline.include?("[!timeline]"), "Timeline exposes raw Obsidian callout markup")
 expect.call(!timeline.match?(/<pre><code>.*?&lt;(?:article|div|h3|p|span)(?:\s|&gt;)/m), "Timeline event HTML is rendered as visible source code")
 expect.call(timeline.scan(/<article class="astaria-timeline-card[^"]*">\s*<img/m).length == 26, "Every timeline event must have an illustration")

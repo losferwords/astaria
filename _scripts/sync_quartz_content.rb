@@ -2127,7 +2127,7 @@ def write_index(entries)
               <p class="astaria-portal-kicker">Сквозь эпохи</p>
               <h2>Хронология</h2>
               <ol class="astaria-mini-timeline">
-                <li><span>5025 ХЭ</span> Приход Археев</li>
+                <li><span>5025 ХЭ</span> Первые свидетельства об археях</li>
                 <li><span>426 ХЭ</span> Основание Талассии</li>
                 <li><span>106 НЭ</span> Нынешняя эпоха</li>
               </ol>

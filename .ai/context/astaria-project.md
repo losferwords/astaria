@@ -33,6 +33,9 @@ Image creator information is retained in `Assets/Images/credits.csv`.
 ## Lore Boundaries
 
 - `Энциклопедия/Секреты/` may guide internal consistency and foreshadowing, but its facts must not be exposed in public articles without explicit approval.
+- Public lore must preserve Astaria's mythological-fantasy veil. For ordinary readers, humans are one of the world's ordinary humanoid peoples, while the Archeans are only a mysterious, highly developed and vanished ancient civilization of unknown origin.
+- Public articles and timeline summaries must never state or imply that the Archeans arrived from another world, were Earth colonists, created the gods in laboratories, or founded the Chthonid civilization from five hundred human settlers. Such truths belong only in `Энциклопедия/Секреты/`, `secret_*` metadata, and private service context.
+- When a dated event rests on secret history, present it publicly as the earliest known evidence, an archaeological interpretation, a chronicle, or an in-world legend. Preserve uncertainty instead of reporting hidden scientific explanations as objective history.
 - FATE mechanics and GM notes stay private unless the user requests otherwise.
 - `Идеи/` is output-only by default and must not be treated as canon.
 - Canonical notes use explicit `ready` and `quartz` booleans. `ready` records completion; `quartz` alone controls intentional public synchronization.

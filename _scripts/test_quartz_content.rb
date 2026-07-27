@@ -37,6 +37,7 @@ category_routes = {
   "Боги" => "gods",
   "Знания" => "lore",
   "Имитеи" => "imitei",
+  "Кухня" => "cuisine",
   "Литература" => "literature",
   "Места" => "places",
   "Народы" => "peoples",
@@ -915,6 +916,14 @@ canonical_notes.each do |note|
 end
 expect.call(ready_article_notes.length >= 301, "Expected the complete ready encyclopedia corpus")
 intentionally_unpublished_titles = ["Бордель Уй-Джан", "Город Награкшаса", "Тхаги"]
+intentionally_coverless_titles = intentionally_unpublished_titles + [
+  "Вервольф",
+  "О природе чудовищ",
+  "Авгарский самогон",
+  "Настой красного корня",
+  "Нилачхатра",
+  "Ур-Блят"
+]
 unpublished_ready_notes = ready_article_notes.reject { |note| note[:data]["quartz"] == true }
 expect.call(
   unpublished_ready_notes.map { |note| note[:data]["title"] }.sort == intentionally_unpublished_titles.sort,
@@ -1489,11 +1498,11 @@ if File.file?(missing_image_report)
   missing_image_notes.each do |note|
     expect.call(report_source.include?(note[:data]["title"].to_s), "Missing-image report omits #{note[:data]["title"]}")
   end
-  report_rows = report_source.lines.count { |line| line.match?(/^\| (?:Места|Знания|Организации|Литература) \|/) }
+  report_rows = report_source.lines.count { |line| line.match?(/^\| (?:Бестиарий|Знания|Кухня|Места|Организации|Литература) \|/) }
   expect.call(report_rows == missing_image_notes.length, "Missing-image report is stale: expected #{missing_image_notes.length} entries, found #{report_rows}")
 end
 expect.call(
-  missing_image_notes.map { |note| note[:data]["title"] }.sort == intentionally_unpublished_titles.sort,
+  missing_image_notes.map { |note| note[:data]["title"] }.sort == intentionally_coverless_titles.sort,
   "Unexpected ready articles without illustrations: #{missing_image_notes.map { |note| note[:data]["title"] }.join(', ')}"
 )
 

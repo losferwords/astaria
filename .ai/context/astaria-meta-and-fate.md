@@ -46,17 +46,17 @@ Use these analogues as creative reference points for tone, clothing, architectur
 
 | Country or culture | Reference and values |
 | --- | --- |
-| Гилас | Ancient Sparta analogue; values courage and martial valour. |
+| Гилас | Ancient Greek/Spartan analogue; values courage, honour, civic order, hospitality, athletics, philosophy, art, practical science, baths, irrigation, and a warm life worth defending. |
 | Громовые Кланы | Ancient Scotland analogue; worship a thunder god and command weather. |
 | Иомар | Irish Celtic analogue; worship a goddess of hunting and value nature and forest creatures. |
 | Катахтонос | Atlantis analogue; descendants of a once-mighty nation destroyed by its own hunger for knowledge. |
 | Империя Ланг-Ан | Ancient China analogue; worship a real fire dragon and value harmony and spiritual balance. |
 | Лунаар | Medieval England analogue; worship a goddess of Night and dreams; excellent archers. |
 | Амон-Астат | Ancient Egypt analogue; worship a Sun God and bring light and healing. |
-| Кадир | Ancient Persia analogue; especially revere time and can command it like sand in an hourglass. |
+| Кадир | Ancient Persia and the Islamic Golden Age as tonal analogues; values time, trade, medicine, astronomy, algebra, alchemy, and constructive curiosity. Alzaman has no priesthood. |
 | Талассия | Ancient Greece analogue; a seafaring country worshipping a goddess of luck and adventure. |
-| Хамоа | Polynesian peoples analogue; worship a water goddess and are especially skilled at healing and peaceful life. |
-| Дикоземье | Mongol tribes analogue; craftspeople and strong warriors, worship a smith-god and value masculinity. |
+| Хамоа | Polynesian water culture analogue; healing, peaceful life, deep kinship with sea creatures, and bodily closeness to water. The strongest Guardians grow gills. |
+| Дикоземье | Steppe and Mongol cultural analogue; craftspeople and strong warriors who worship a smith-god. Horses are useful, but Avgarians most often travel on foot and are not a horse people. |
 | Вактар-Йорден | Ancient Scandinavian/Viking analogue; worship the queen of dragons and use ice/cold magic. |
 | Сурадж Ка Гхар | Ancient India analogue; followers of a goddess of blood and destruction who periodically becomes a goddess of dance and creation. |
 | Вакумара | African tribes analogue; worship a God of Death and perform mysterious rituals over the body of their deity. |
@@ -72,6 +72,14 @@ Use these analogues as creative reference points for tone, clothing, architectur
 - Талассийский порох остаётся исключительным культурным достижением и не означает общего развития огнестрельного оружия или промышленности в остальных странах.
 - Для гойдаир допустимы осознанные стилистические анахронизмы, включая килты и двуручные мечи, если они поддерживают узнаваемый образ культуры.
 - Там, где современный текст потребовал бы «учёного» или прибора, древняя культура чаще полагается на храмового мудреца, архивариуса, звездочёта, старейшину, ремесленника либо практическое знание ветра, воды, звёзд, животных и растений.
+
+### Ограничения природы мира
+
+- В Астарии нет нежити: мёртвые тела не восстают в виде зомби, скелетов или иных оживших трупов.
+- «Демоны» не являются исчадиями ада. О́ни — одержимые люди, а рогатые сатиры относятся к Первым и обычно безобидны.
+- В Астарии нет ликантропии и волшебной смены формы тела. Друиды не превращаются в зверей. Вервольфы — отдельный вид Первых с постоянными волчьими чертами.
+- Нереиды используют биологическую мимикрию, феромоны и обман восприятия; это не магическое превращение. Они живут среди людей, особенно в портовых городах, но не являются морскими существами.
+- Муспельхег не принимал человеческий облик. При похищении Сердца Огня из Дар Мараата он воспользовался нереидой, замаскированной под Мстителя, и забрал яйцо уже снаружи.
 
 ### Обитель и венды: творческое направление
 

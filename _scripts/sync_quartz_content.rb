@@ -199,6 +199,7 @@ INFOBOX_FIELDS = [
   ["seas", "Моря"],
   ["population", "Население"],
   ["foundation", "Основание"],
+  ["independence", "Независимость"],
   ["capital", "Столица"],
   ["headquarters", "Штаб-квартира"],
   ["ruler", "Глава"],

@@ -72,6 +72,15 @@ meta_god_order = [
 card_titles = lambda do |html|
   html.scan(/<h3>([^<]+)<\/h3>/).flatten.map { |title| CGI.unescapeHTML(title) }
 end
+article_word_count = lambda do |source|
+  body = source
+    .sub(/\A---\s*\n.*?\n---\s*\n/m, "")
+    .gsub(/%%.*?%%/m, "")
+    .gsub(/```.*?```/m, "")
+    .gsub(/^!?\[\[Assets\/.*?\]\]\s*$/, "")
+    .gsub(/^#+.*$/, "")
+  body.scan(/[[:alpha:]А-Яа-яЁё-]+/).length
+end
 
 ready_article_notes = Dir.glob(File.join(ROOT, "Энциклопедия", "**", "*.md")).sort.map do |path|
   next if path.include?(File.join("Энциклопедия", "Секреты"))
@@ -144,7 +153,10 @@ expect.call(
 )
 
 kaito = canonical_by_title.fetch("Город Кайто")
-expect.call(kaito[:data]["ready"] == false && kaito[:data]["quartz"] == false, "Kaito must remain Obsidian-only until its art is ready")
+expect.call(kaito[:data]["ready"] == true && kaito[:data]["quartz"] == true, "Kaito must be published now that its art is ready")
+expect.call(kaito[:data]["public_slug"] == "kaito", "Kaito must use its concise canonical public slug")
+expect.call(kaito[:data]["cover_image"] == "[[Assets/Images/Kaito_City.jpg]]", "Kaito must use its new city art")
+expect.call(File.file?(File.join(ROOT, "Assets", "Images", "Kaito_City.jpg")), "Kaito city art is missing")
 expect.call(kaito[:data]["native_name"] == "海都", "Kaito article is missing its canonical Ezo name")
 expect.call(kaito[:data]["settlement_type"] == "Столица", "Kaito settlement type must be written in Russian")
 expect.call(!kaito[:source].include?("_Описание пока не добавлено._"), "Kaito still has no encyclopedia description")
@@ -156,6 +168,9 @@ kaito_word_count = kaito_body.split.size
 expect.call(kaito_word_count.between?(100, 260), "Kaito article has an unsuitable capital-overview length: #{kaito_word_count} words")
 expect.call(!kaito_body.match?(/\b56[\s ]?000\b/), "Kaito population must remain in the sidebar instead of the article body")
 expect.call(!kaito[:source].match?(/Маяк/i), "Kaito article exposes secret Soul Lighthouse lore")
+kaito_page = read.call("places/kaito.html")
+expect.call(kaito_page.include?("Город Кайто"), "Kaito public page does not render its title")
+expect.call(kaito_page.include?("assets/images/kaito_city.jpg"), "Kaito public page does not render its new city art")
 
 vends = canonical_by_title.fetch("Венды")
 expect.call(vends[:data]["ready"] == false && vends[:data]["quartz"] == false, "Vends must remain Obsidian-only until their art is ready")
@@ -428,6 +443,416 @@ expect.call(
   "Canonical notes still link to Meravi's obsolete short title"
 )
 
+musaka = canonical_by_title.fetch("Мусака")
+expect.call(musaka[:data]["ready"] == false && musaka[:data]["quartz"] == false, "Musaka must remain unpublished until her portrait is ready")
+{
+  "type" => "animal-companion",
+  "species" => "собака",
+  "companion_of" => "[[Томас Робинсон]]",
+  "sex" => "Самка",
+  "birth_place" => "[[Регион Элессия]]",
+  "current_location" => "[[Сурадж Ка Гхар]]"
+}.each do |field, value|
+  expect.call(musaka[:data][field] == value, "Musaka is missing #{field}: #{value}")
+end
+["егерю из [[Регион Элессия|Элессии]]", "[[Город Натшепсут|Натшепсуте]]", "крошечный след укола", "выбрать тебя по собственной воле"].each do |fact|
+  expect.call(musaka[:source].include?(fact), "Musaka article is missing #{fact}")
+end
+expect.call(article_word_count.call(musaka[:source]).between?(220, 430), "Musaka article has an unsuitable length")
+expect.call(!musaka[:source].match?(/\[\[(?:Глава|Ветер Перемен\/)/), "Musaka article must not link back to individual saga chapters")
+
+enriched_article_titles = [
+  "Архея",
+  "Гора Атафет",
+  "Город Атафет",
+  "Арно Эклунд",
+  "Кельн",
+  "Лес Иомар",
+  "Озеро Лок Линделл",
+  "Гойдаир",
+  "Предгорья Битхорн",
+  "Река Изгелуат",
+  "Антра",
+  "Болота Забвения",
+  "Озеро Кафер",
+  "Туманный остров",
+  "Река Эйрафон",
+  "Город Мира",
+  "Город Лефа",
+  "Река Неда",
+  "Остров Хтон",
+  "Рассветное море",
+  "Гилас",
+  "Громовые Кланы",
+  "Амон-Астат",
+  "Катахтонос",
+  "Эллийцы",
+  "Хефат",
+  "Хтониды",
+  "Гиперион I",
+  "Аст",
+  "Тиресий",
+  "Идеал",
+  "Горец",
+  "Светоносный",
+  "Профитис",
+  "Рунштоирм",
+  "Город Аргос",
+  "Город Ахей",
+  "Город Мистрас",
+  "Деревня Теония",
+  "Регион Элессия",
+  "Река Тавропос",
+  "Город Солаис",
+  "Деревня Эрвин",
+  "Горный хребет Грань Тьмы",
+  "Перевал Путь Забытых",
+  "Штормовой залив",
+  "Город Акхетастон",
+  "Город Ксен-Аст",
+  "Город Натшепсут",
+  "Город Сива",
+  "Город Тиза",
+  "Город Уасет",
+  "Город Фибас",
+  "Город Хесус",
+  "Деревня Дабу",
+  "Регион Аментир",
+  "Пустыня Сехет",
+  "Озеро Нехмет",
+  "Река Сатис",
+  "Река Хапи",
+  "Полуостров Таллас",
+  "Город Орион",
+  "Озеро Митра",
+  "Сумеречный пролив",
+  "Река Мвиди",
+  "Закатная долина",
+  "Диомед Ахейский",
+  "Индульф мак Торн",
+  "Элеонора мак Торн",
+  "Рамхотеп II",
+  "Рамат-Хат-Су",
+  "Хонсу-Намун",
+  "Данис ибн Синай",
+  "Телемах II",
+  "Авеста Кронос",
+  "Арета Лефийская",
+  "Кризис веры в Амон-Астате",
+  "Иомар",
+  "Лунаар",
+  "Империя Ланг-Ан",
+  "Кадир",
+  "Надаир",
+  "Лудаир",
+  "Джу",
+  "Кадийцы",
+  "Город Муир",
+  "Даирские луга",
+  "Деревня Руше",
+  "Озеро Сильвиан",
+  "Река Мураин",
+  "Храм Ишнаалар",
+  "Город Эльданас",
+  "Равнина Вайтфилд",
+  "Река Горсафон",
+  "Храм Меркаты",
+  "Аластриона Растущая",
+  "Роберт Бомейн",
+  "Бодивир Бомейн",
+  "Озеро Жень",
+  "Озеро Шуан",
+  "Озеро Чанг",
+  "Долина Гармонии",
+  "Лес Шеньянь",
+  "Река Тяо Хэ",
+  "Долина Кровавого Цветения",
+  "Река Улын-Гол",
+  "Багровый залив",
+  "Гарнизон Пасть Дракона",
+  "Горный хребет Шафар",
+  "Деревня Вэйган",
+  "Деревня Тай-Линь",
+  "Джунгли Минь-Тао",
+  "Джунгли Шанкари",
+  "Сао Ву",
+  "Сунь Ляньши",
+  "Чани Сан",
+  "Озеро Альсалим",
+  "Озеро Джамсар",
+  "Озеро Зураиф",
+  "Озеро Кхарим",
+  "Озеро Рашах",
+  "Озеро Суэйд",
+  "Озеро Шаради",
+  "Город Сераф",
+  "Город Самаан",
+  "Город Кафат",
+  "Залив Фиальсахра",
+  "Река Макаба",
+  "Пустыня Халисат",
+  "Храм Дар Мараат",
+  "Абу Али аль-Хассан",
+  "Амира Аль-Азвар",
+  "Астиаг II",
+  "Малик Аль-Азвар",
+  "Рашаад аль-Сакхар",
+  "Умар ибн Ла-Ахад",
+  "Мерката",
+  "Церунна",
+  "Дракон Ланг-Ан",
+  "Культ Меркаты",
+  "Круг Друидов",
+  "Дерево Ларудан",
+  "Аль-Тахим",
+  "Хангорская долина"
+]
+enriched_article_titles.uniq.each do |title|
+  note = canonical_by_title.fetch(title)
+  words = article_word_count.call(note[:source])
+  expect.call(words >= 120, "#{title}: enriched article is still too short (#{words} words)")
+end
+
+maritime_steppe_north_enriched_titles = [
+  "Талассия",
+  "Хамоа",
+  "Дикоземье",
+  "Вактар-Йорден",
+  "Талассийцы",
+  "Манаи",
+  "Авгарцы",
+  "Вактары",
+  "Калипсо",
+  "Икатерра",
+  "Наварх",
+  "Хранитель",
+  "Город Антал",
+  "Закатное море",
+  "Хтоническое море",
+  "Глаз Калипсо",
+  "Аристея Кронос",
+  "Деревня Хамоа Хо",
+  "Полуостров Туануку",
+  "Перешеек Мост Хранителей",
+  "Вулкан Ротонуи",
+  "Река Мангайа",
+  "Атуа Та'Вай",
+  "Город Даркхан",
+  "Город Андерхан",
+  "Река Айлиз",
+  "Деревня Улехей",
+  "Топор Смертоносец",
+  "Рух",
+  "Нефела",
+  "Армар Саг",
+  "Город Трелла",
+  "Река Нид",
+  "Озеро Хорниндаль",
+  "Озеро Нордавеллир",
+  "Остров Рёст",
+  "Сигрид Дракендоттир"
+]
+maritime_steppe_north_enriched_titles.each do |title|
+  note = canonical_by_title.fetch(title)
+  words = article_word_count.call(note[:source])
+  expect.call(words >= 150, "#{title}: regional article is still too short (#{words} words)")
+end
+
+["Талассия", "Хамоа", "Дикоземье", "Вактар-Йорден"].each do |title|
+  words = article_word_count.call(canonical_by_title.fetch(title)[:source])
+  expect.call(words >= 350, "#{title}: country overview is not yet substantial enough (#{words} words)")
+end
+
+southern_isles_enriched_titles = [
+  "Сурадж Ка Гхар",
+  "Река Рави",
+  "Болота Кхали Дарти",
+  "Деревня Бадракали",
+  "Ветал",
+  "Шаша",
+  "Раджати",
+  "Город Сангалла",
+  "Шубханкари",
+  "Вакумара",
+  "Джунгли Аконда",
+  "Деревня Намибуа",
+  "Кинто Мулунгу",
+  "Рувамба Мати",
+  "Руфу",
+  "Город Кайто",
+  "Кирида Ариса",
+  "Ишикути Макото",
+  "Ишида Рецу",
+  "Ицунэ",
+  "Велисса",
+  "Велимир Сажин",
+  "Хлоя Валаска"
+]
+southern_isles_enriched_titles.each do |title|
+  note = canonical_by_title.fetch(title)
+  words = article_word_count.call(note[:source])
+  minimum = title == "Город Кайто" ? 150 : 180
+  expect.call(words >= minimum, "#{title}: southern/island regional article is still too short (#{words} words)")
+end
+
+["Сурадж Ка Гхар", "Вакумара", "Амато"].each do |title|
+  words = article_word_count.call(canonical_by_title.fetch(title)[:source])
+  expect.call(words >= 400, "#{title}: country overview is not yet substantial enough (#{words} words)")
+end
+
+expect.call(
+  canonical_by_title.fetch("Деревня Намибуа")[:data]["settlement_type"] == "Духовная столица",
+  "Namibua must present its distinctive capital role in Russian"
+)
+expect.call(
+  canonical_by_title.fetch("Город Сангалла")[:data]["settlement_type"] == "Столица",
+  "Sangalla must be identified as a capital in Russian"
+)
+
+talassia = canonical_by_title.fetch("Талассия")
+expect.call(
+  talassia[:source].match?(/компасами.*исключительный инструмент.*Наварх/mu),
+  "Talassia must keep compasses rare and restricted to exceptional mariners"
+)
+expect.call(
+  talassia[:source].include?("В 38 году НЭ") && talassia[:source].include?("пороха"),
+  "Talassia article is missing its exceptional gunpowder chronology"
+)
+
+manai = canonical_by_title.fetch("Манаи")
+expect.call(!manai[:source].match?(/абориген/iu), "Manai are still described with the obsolete reductive 'aborigine' wording")
+
+vaktar_yorden = canonical_by_title.fetch("Вактар-Йорден")
+expect.call(
+  vaktar_yorden[:source].include?("В 1637 году ХЭ") &&
+    vaktar_yorden[:source].include?("в 1635 году ХЭ"),
+  "Vaktar-Yorden must preserve the two-year discovery and recovery chronology of Vintre"
+)
+expect.call(!vaktar_yorden[:source].include?("1632 году ХЭ"), "Vaktar-Yorden restores the obsolete Vintre discovery date")
+
+trella = canonical_by_title.fetch("Город Трелла")
+nid = canonical_by_title.fetch("Река Нид")
+expect.call(trella[:source].include?("у истока [[Река Нид|Нида]]"), "Trella must stand at the source of the Nid")
+expect.call(
+  !trella[:source].match?(/впадени[яе].*Нид.*Хорниндаль/mu),
+  "Trella incorrectly places the Nid flowing into Lake Hornindal"
+)
+expect.call(
+  nid[:source].include?("вытекающая из [[Озеро Хорниндаль|озера Хорниндаль]]"),
+  "Nid article contradicts the corrected Trella and Hornindal geography"
+)
+
+{
+  "Город Антал" => "Столица",
+  "Деревня Хамоа Хо" => "Столица-деревня",
+  "Город Даркхан" => "Столица",
+  "Город Андерхан" => "Город",
+  "Город Трелла" => "Столица"
+}.each do |title, expected_type|
+  expect.call(
+    canonical_by_title.fetch(title)[:data]["settlement_type"] == expected_type,
+    "#{title}: settlement type must be Russian and equal to #{expected_type}"
+  )
+end
+
+deathbringer = canonical_by_title.fetch("Топор Смертоносец")
+expect.call(deathbringer[:data]["creator"] == "[[Хангор]]", "Deathbringer creator metadata contradicts its article")
+
+sunrise_sea = canonical_by_title.fetch("Рассветное море")
+expect.call(
+  !sunrise_sea[:source].match?(/Морской дракон|морские драконы|Тангарот|тангарот/u),
+  "Sunrise Sea presents an extinct species or the secret Tangarot as ordinary fauna"
+)
+expect.call(
+  !Array(sunrise_sea[:data]["inhabiting_species"]).any? { |value| value.match?(/Морской дракон|Тангарот/u) },
+  "Sunrise Sea metadata exposes extinct sea dragons or the secret Tangarot"
+)
+sea_dragon = canonical_by_title.fetch("Морской дракон")
+expect.call(sea_dragon[:source].match?(/Вымерший вид/u), "Sea dragons must remain explicitly extinct")
+tangarot = canonical_by_title.fetch("Тангарот")
+expect.call(
+  tangarot[:path].include?("/Энциклопедия/Секреты/") && tangarot[:data]["quartz"] == false,
+  "Tangarot must remain a private secret rather than a public bestiary species"
+)
+expect.call(tangarot[:data]["habitat"].nil?, "Tangarot's ordinary habitat field can leak the secret into public sidebars")
+
+["Река Тяо Хэ", "Багровый залив"].each do |title|
+  note = canonical_by_title.fetch(title)
+  expect.call(
+    !Array(note[:data]["inhabiting_species"]).include?("[[Морской дракон]]"),
+    "#{title} presents extinct sea dragons as contemporary fauna"
+  )
+end
+
+chang_lake = canonical_by_title.fetch("Озеро Чанг")
+expect.call(!chang_lake[:source].match?(/две столицы/iu), "Lake Chang restores the erroneous claim that Lang-An has two capitals")
+expect.call(
+  chang_lake[:source].include?("столичный [[Город Джу-Суо|Джу-Суо]]") &&
+    chang_lake[:source].include?("[[Город Чанг-Ша|Чанг-Ша]]"),
+  "Lake Chang must distinguish the imperial capital from the important city of Chang-Sha"
+)
+
+shankari = canonical_by_title.fetch("Джунгли Шанкари")
+expect.call(
+  shankari[:source].include?("опасно даже для [[Имитей|Имитеев]]"),
+  "Shankari Jungle no longer reflects the current scale of the vetala disaster"
+)
+expect.call(!shankari[:source].match?(/менад/iu), "Shankari Jungle incorrectly lists menads among its inhabitants")
+
+loch_lindell = canonical_by_title.fetch("Озеро Лок Линделл")
+expect.call(
+  !loch_lindell[:source].match?(/компас|учён/u),
+  "Loch Lindell must use Gromovy Clans' traditional knowledge rather than compasses or modern scientists"
+)
+expect.call(
+  loch_lindell[:source].include?("Старые мудрецы") &&
+    loch_lindell[:source].include?("по волнам, ветру и крикам птиц"),
+  "Loch Lindell is missing culturally appropriate navigation and oral knowledge"
+)
+
+tiresias = canonical_by_title.fetch("Тиресий")
+satyr = canonical_by_title.fetch("Сатир")
+tiresias_secret = canonical_by_title.fetch("Тайны Тиресия")
+expect.call(
+  tiresias[:data]["distinguishing_features"].to_s.include?("Огромные козлиные рога") &&
+    tiresias[:source].match?(/огромными козлиными рогами/u),
+  "Tiresias must have enormous goat horns in his public appearance"
+)
+expect.call(
+  !tiresias[:source].match?(/скрещиван|яйцеклетк|сатир/u),
+  "Tiresias's secret origin leaked into his public god article"
+)
+expect.call(
+  satyr[:source].match?(/чувство опасности/u) &&
+    satyr[:source].match?(/интуиция.*предвидени/mu),
+  "Satyrs are missing their innate danger sense and near-prophetic intuition"
+)
+expect.call(
+  tiresias_secret[:path].include?("/Энциклопедия/Секреты/") &&
+    tiresias_secret[:data]["secret"] == true &&
+    tiresias_secret[:data]["private"] == true &&
+    tiresias_secret[:data]["quartz"] == false,
+  "Tiresias's origin must remain a private secret"
+)
+[
+  /скрещивания \[\[Археи\|архея\]\] и \[\[Сатир\|сатира\]\]/u,
+  /огромные козлиные рога/iu,
+  /Дар предвидения/u
+].each do |fact|
+  expect.call(tiresias_secret[:source].match?(fact), "Tiresias secrets are missing #{fact.inspect}")
+end
+
+keln = canonical_by_title.fetch("Кельн")
+edge_of_darkness = canonical_by_title.fetch("Горный хребет Грань Тьмы")
+highlander = canonical_by_title.fetch("Горец")
+expect.call(keln[:source].include?("На западе Кельна"), "Keln does not place the Edge of Darkness in the west")
+expect.call(
+  edge_of_darkness[:source].include?("[[Болота Забвения]]") && edge_of_darkness[:source].include?("[[Предгорья Битхорн|предгорий Битхорн]]"),
+  "The Edge of Darkness must separate the Marshes of Oblivion from the Bithorn foothills"
+)
+expect.call(!highlander[:source].match?(/северных границ.*Грань Тьмы|за которым начинается.*Антра/mu), "Highlander article restores the obsolete northern geography")
+expect.call(canonical_by_title.fetch("Деревня Дабу")[:source].include?("на западной окраине"), "Dabu must remain on Amon-Astat's western frontier")
+
 shasha = canonical_by_title.fetch("Шаша")
 {
   "species" => "[[Нага]]",
@@ -537,6 +962,7 @@ categories = category_routes.to_h { |category, route| [route, expected_by_catego
 
 categories.each do |route, expected|
   html = read.call("#{route}/index.html")
+  expected += 1 if route == "characters" # Гиперион I правит Гиласом, но хранится в разделе богов.
   cards = html.scan(/class="[^"]*astaria-category-card(?:\s|\")/).length
   expect.call(cards == expected, "#{route}: expected #{expected} ready article cards, found #{cards}")
   expect.call(html.include?("astaria-category-header"), "#{route}: category header is missing")
@@ -605,6 +1031,50 @@ character_card_descriptions.each do |title, description|
 end
 expect.call(character_card_descriptions["Кион-Чи"]&.start_with?("Известный также"), "Kion-Qi card description is not cleaned up")
 expect.call(character_card_descriptions["Ляо Шень"]&.start_with?("Придворный портной"), "Liao Shen card description is not cleaned up")
+
+character_cards_by_group = characters.split('<section class="astaria-category-group">').drop(1).to_h do |section|
+  heading_html = section[/<header><h2>(.*?)<\/h2><\/header>/m, 1].to_s
+  heading = CGI.unescapeHTML(heading_html.gsub(/<[^>]+>/, " ").gsub("↗", "").gsub(/\s+/, " ").strip)
+  [heading, card_titles.call(section)]
+end
+character_rulers = {
+  "Гилас" => "Гиперион I",
+  "Громовые Кланы" => "Индульф мак Торн",
+  "Иомар" => "Аластриона Растущая",
+  "Катахтонос" => "Арета Лефийская",
+  "Империя Ланг-Ан" => "Сунь Ляньши",
+  "Лунаар" => "Роберт Бомейн",
+  "Амон-Астат" => "Рамхотеп II",
+  "Кадир" => "Абу Али аль-Хассан",
+  "Талассия" => "Телемах II",
+  "Хамоа" => "Атуа Та'Вай",
+  "Дикоземье" => "Батар Саг",
+  "Вактар-Йорден" => "Сигрид Дракендоттир",
+  "Сурадж Ка Гхар" => "Индира Раштра",
+  "Вакумара" => "Кинто Мулунгу",
+  "Амато" => "Аматсу Рин"
+}
+character_rulers.each do |country, ruler|
+  titles = character_cards_by_group.fetch(country, [])
+  expect.call(titles.first == ruler, "#{country}: ruler #{ruler} is not the first character card")
+end
+expect.call(
+  characters.match?(/<h2><a [^>]*data-slug="countries\/gilas"[^>]*>.*?<\/h2>.*?<a class="astaria-category-card[^"]*"[^>]*data-slug="gods\/hyperion-i"/m),
+  "Gilas ruler card must link to Hyperion's canonical god article"
+)
+family_name_first_countries = ["Империя Ланг-Ан", "Амато"]
+character_name_key = lambda do |title, country|
+  words = title.split(/\s+/)
+  words.pop while words.length > 1 && words.last.match?(/\A[IVXLCDM]+\z/i)
+  family_name = family_name_first_countries.include?(country) ? words.first : (words.length > 1 ? words.last : title)
+  [family_name.downcase.tr("ё", "е"), title.downcase.tr("ё", "е")]
+end
+character_cards_by_group.each do |country, titles|
+  ruler = character_rulers[country]
+  remaining = titles.reject { |title| title == ruler }
+  expected = remaining.sort_by { |title| character_name_key.call(title, country) }
+  expect.call(remaining == expected, "#{country}: characters are not sorted by family name/alphabet")
+end
 
 peoples = read.call("peoples/index.html")
 people_titles = card_titles.call(peoples)
@@ -719,6 +1189,35 @@ first_regular_place = places.index("astaria-category-card-place", featured_place
 expect.call(!featured_place.nil? && !first_regular_place.nil? && featured_place < first_regular_place, "Astaria must be the first featured place card")
 expect.call(places.include?("Начать путешествие"), "Featured Astaria card is missing its journey call to action")
 
+canonical_place_routes = {
+  "Архея" => {
+    slug: "archea",
+    old_alias: "places/amon-astat-desert-2"
+  },
+  "Гора Атафет" => {
+    slug: "atafet",
+    old_alias: "places/atafet-from-desert"
+  },
+  "Кельн" => {
+    slug: "keln",
+    old_alias: "places/edge-of-darkness-mountains"
+  },
+  "Лес Иомар" => {
+    slug: "iomar-forest",
+    old_alias: "places/iomar-forest-summer"
+  }
+}
+canonical_place_routes.each do |title, expected|
+  note = canonical_by_title.fetch(title)
+  expect.call(note[:data]["public_slug"] == expected[:slug], "#{title}: canonical place slug is wrong")
+  expect.call(Array(note[:data]["aliases"]).include?(expected[:old_alias]), "#{title}: legacy public route alias is missing")
+  canonical_html = read.call("places/#{expected[:slug]}.html")
+  expect.call(canonical_html.include?("<h1 class=\"astaria-content-title\">#{title}</h1>"), "#{title}: canonical route renders the wrong article")
+  redirect = read.call("#{expected[:old_alias]}.html")
+  expect.call(redirect.include?("http-equiv=\"refresh\""), "#{title}: legacy route is not a redirect")
+  expect.call(redirect.include?(expected[:slug]), "#{title}: legacy redirect does not point to the canonical route")
+end
+
 astaria = read.call("places/astaria.html")
 expect.call(astaria.scan("astaria-cover-image").length == 1, "Astaria entry page must have exactly one cover image")
 expect.call(astaria.include?("assets/images/silvian_lake.jpg"), "Astaria entry page must use Silvian Lake")
@@ -733,6 +1232,14 @@ expect.call(!journey_styles.match?(/\.astaria-journey-card > span\s*\{[^}]*margi
 expect.call(journey_styles.include?("padding: 1.25rem !important"), "Astaria journey card padding can be overridden by the generic internal-link rule")
 expect.call(journey_styles.match?(/\.astaria-cover-image\s*\{[^}]*width:\s*100%/m), "Article covers must align with the article content width")
 expect.call(!journey_styles.match?(/\.astaria-cover-image\s*\{[^}]*margin:\s*0\s+-/m), "Article covers still use asymmetric negative margins")
+expect.call(
+  journey_styles.match?(/@media \(max-width: 560px\).*?\.astaria-category-header h1\s*\{[^}]*overflow-wrap:\s*anywhere;[^}]*font-size:\s*clamp\(2\.55rem,\s*13vw,\s*3\.4rem\)/m),
+  "Long category titles are not constrained to the mobile viewport"
+)
+expect.call(
+  journey_styles.match?(/#quartz-body\s*\{[^}]*box-sizing:\s*border-box/m),
+  "Quartz body padding can still create horizontal overflow on mobile"
+)
 expect.call(journey_styles.include?(".search .preview-container .astaria-category-grid"), "Search preview must suppress full category grids")
 expect.call(
   !journey_styles.match?(/\.astaria-sidebar\.astaria-imitei-profile\s*\{[^}]*float:\s*none/m),
@@ -882,6 +1389,12 @@ end
 expect.call(meilong.include?("astaria-infobox-note"), "Meilong infobox must show the calculated current age")
 expect.call(meilong.include?("assets/images/meilong_adult.jpg"), "Meilong must use the updated adult portrait")
 expect.call(read.call("bestiary/nereid.html").include?("astaria-infobox-link"), "Published infobox references must be clickable")
+tiresias_html = read.call("gods/tiresias.html")
+expect.call(tiresias_html.include?("Огромные козлиные рога"), "Tiresias's public infobox is missing his horns")
+expect.call(
+  !tiresias_html.match?(/скрещиван|яйцеклетк|сатир/u),
+  "Tiresias's secret origin leaked into the built public page"
+)
 content_index = JSON.parse(read.call("static/contentIndex.json"))
 expect.call(content_index.dig("characters/meilong", "content")&.include?("媚龍"), "Search index must include Meilong's native name")
 
@@ -1023,23 +1536,47 @@ expect.call(File.file?(conflict_report), "Private canon-conflict report is missi
 if File.file?(conflict_report)
   conflict_source = File.read(conflict_report)
   expect.call(conflict_source.include?("# Противоречия и вопросы канона"), "Canon-conflict report has no structured title")
-  expect.call(conflict_source.include?("## Разрешено автором"), "Canon-conflict report does not separate resolved decisions")
-  expect.call(conflict_source.include?("Обнаружение и освобождение — два разных события"), "Vintre chronology decision is not recorded")
-  expect.call(conflict_source.include?("Аксель Хана убил Муспельхег"), "Aksel Khan's killer decision is not recorded")
-  expect.call(conflict_source.include?("только внешность Сао"), "Sao Wu's apparent-age decision is not recorded")
-  expect.call(conflict_source.include?("Единственное каноническое имя генерала — **Гуань Ли**"), "Guan Li's canonical name is not recorded")
-  expect.call(conflict_source.include?("ему 803 года"), "Shen Wu's current age is not recorded")
-  expect.call(conflict_source.include?("поток через Маяк всегда направлен с востока на запад"), "Soul Lighthouse direction is not recorded")
-  expect.call(conflict_source.include?("Калипсо]] уснула в 150 году ХЭ"), "Calypso's sleep date is not recorded")
-  expect.call(conflict_source.include?("адресат сигнала — археи"), "Ast's signal addressee is not recorded")
-  expect.call(conflict_source.include?("изначально принадлежала Руфу"), "Rufu's ownership of the scythe is not recorded")
-  expect.call(conflict_source.include?("Ниса]] больше не находится"), "Nisa's current location decision is not recorded")
-  expect.call(conflict_source.include?("опасно даже Имитеям"), "Vetal outbreak severity is not recorded")
-  expect.call(conflict_source.include?("Хан не знал"), "Aksel Khan's ignorance of Vintre's plan is not recorded")
+  expect.call(!conflict_source.include?("## Разрешено автором"), "Resolved canon decisions must not remain in the conflict report")
+  [
+    "### Основание Иомара",
+    "### Основание Лунаара",
+    "### Дочери Эвридики",
+    "### Кристаллы Души у нереид",
+    "### Может ли одна душа вытеснить другую"
+  ].each do |resolved_heading|
+    expect.call(!conflict_source.include?(resolved_heading), "Resolved canon issue remains in the conflict report: #{resolved_heading}")
+  end
   expect.call(conflict_source.include?("### Мафка и Чистое Сердце"), "Mafka and Pure Heart canon conflict is not recorded")
   expect.call(conflict_source.include?("был ли этот перенос полным"), "Mafka's unresolved soul transfer is not recorded")
   expect.call(conflict_source.include?("связь между живой Мафкой и нынешним Чёрным Сердцем"), "Mafka's unresolved Black Heart link is not recorded")
 end
+
+iomar_foundation = File.read(File.join(ROOT, "Хронология", "События", "Основание Иомара.md"))
+expect.call(iomar_foundation.include?("year: -1865"), "Iomar foundation event must be dated -1865 ХЭ")
+expect.call(iomar_foundation.include?("Через год после прибытия первых даиров"), "Iomar foundation must remain distinct from the -1866 dairish arrival")
+lunaar_source = File.read(File.join(ROOT, "Энциклопедия", "Страны", "Лунаар.md"))
+eldanas_source = File.read(File.join(ROOT, "Энциклопедия", "Места", "Город Эльданас.md"))
+expect.call(lunaar_source.include?('foundation: "-1457 ХЭ"'), "Lunaar foundation must be dated -1457 ХЭ")
+expect.call(eldanas_source.include?('foundation: "-1457 ХЭ"'), "Eldanas foundation must be dated -1457 ХЭ")
+
+avesta_source = File.read(File.join(ROOT, "Энциклопедия", "Персонажи", "Авеста Кронос.md"))
+aristea_source = File.read(File.join(ROOT, "Энциклопедия", "Персонажи", "Аристея Кронос.md"))
+eurydice_source = File.read(File.join(ROOT, "Энциклопедия", "Персонажи", "Эвридика Лефийская.md"))
+family_secret = File.read(File.join(ROOT, "Энциклопедия", "Секреты", "Происхождение Аристеи Кронос.md"))
+expect.call(avesta_source.include?('secret_parents:') && avesta_source.include?('[[Кеос Кронос]]'), "Avesta's secret father must be Keos Kronos")
+expect.call(aristea_source.include?('secret_parents:') && aristea_source.include?('[[Кеос Кронос]]'), "Aristea's secret father must be Keos Kronos")
+expect.call(family_secret.include?("в 79 году") && family_secret.include?("Кеоса Кроноса"), "Eurydice's corrected marriage and daughters are not recorded")
+expect.call(avesta_source.include?("Всё изменилось в 101 году НЭ") && avesta_source.include?("Двадцатипятилетняя Авеста"), "Avesta's escape must follow Eurydice's death in 101 НЭ")
+expect.call(!eurydice_source.include?('current_location:'), "Deceased Eurydice must not have a current location")
+
+nereid_secret = File.read(File.join(ROOT, "Энциклопедия", "Секреты", "Тайны Нереид.md"))
+crystal_secret = File.read(File.join(ROOT, "Энциклопедия", "Секреты", "Тайны Кристаллов Душ.md"))
+crown_secret = File.read(File.join(ROOT, "Энциклопедия", "Секреты", "Предназначение Короны Душ.md"))
+chapter_019 = File.read(File.join(ROOT, "Энциклопедия", "Литература", "Ветер Перемен", "Глава 019 - Время на исходе.md"))
+expect.call(nereid_secret.include?("Маяк Душ на нереид не действует") && nereid_secret.include?("после смерти исчезают окончательно"), "Nereids' soulless mortality is not recorded")
+expect.call(crystal_secret.include?("не может быть вытеснена") && crystal_secret.include?("стать одержимым"), "Soul Crystal possession rule is incomplete")
+expect.call(crown_secret.include?("сознание и воспоминания прежнего носителя") && crown_secret.include?("Так появляются новые [[Идеал|Идеалы]]"), "Soul Crown transfer and Ideal creation are not recorded")
+expect.call(!chapter_019.include?("может вытеснить слабую") && chapter_019.include?("не способна уничтожить законного носителя"), "Chapter 019 contradicts the canonical soul-possession rule")
 dragon_legacy = File.join(ROOT, "Энциклопедия", "Секреты", "Наследие драконов.md")
 dragon_legacy_source = File.read(dragon_legacy)
 expect.call(dragon_legacy_source.scan(/^- \*\*-?\d+ год (?:ХЭ|НЭ)\./).length == 81, "Dragon legacy chronology lost or duplicated events")

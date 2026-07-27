@@ -62,6 +62,7 @@ a:hover {
 
 #quartz-body {
   position: relative;
+  box-sizing: border-box;
   max-width: 1500px;
   margin: 0 auto;
 }
@@ -4281,7 +4282,13 @@ body[data-slug="map"] .markdown-rendered > * {
     content: "Поиск";
   }
 
-  .astaria-category-header h1,
+  .astaria-category-header h1 {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+    font-size: clamp(2.55rem, 13vw, 3.4rem);
+    letter-spacing: -0.01em;
+  }
+
   .astaria-map-heading h1 {
     font-size: clamp(3rem, 17vw, 4.6rem);
   }

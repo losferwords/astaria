@@ -75,6 +75,11 @@ COUNTRY_BY_PEOPLE = {
   "Венды" => "Обитель"
 }.freeze
 
+FAMILY_NAME_FIRST_COUNTRIES = [
+  "Империя Ланг-Ан",
+  "Амато"
+].freeze
+
 PEOPLE_ORDER = [
   "Эллийцы",
   "Гойдаир",
@@ -436,6 +441,7 @@ def normalize_reference(value)
   value.to_s
     .split("#", 2)
     .first
+    .to_s
     .tr("\\", "/")
     .split("/")
     .last
@@ -1775,6 +1781,32 @@ def character_group_sort_key(group)
   COUNTRY_ORDER.length + 1
 end
 
+def character_name_sort_key(entry, group)
+  title = entry[:title].to_s.strip
+  words = title.split(/\s+/)
+  words.pop while words.length > 1 && words.last.match?(/\A[IVXLCDM]+\z/i)
+
+  family_name = if FAMILY_NAME_FIRST_COUNTRIES.include?(group)
+    words.first
+  elsif words.length > 1
+    words.last
+  else
+    title
+  end
+
+  [family_name.to_s.downcase.tr("ё", "е"), title.downcase.tr("ё", "е")]
+end
+
+def sort_character_group_entries(entries, group, country_entry)
+  ruler = reference_names(country_entry&.dig(:data, "ruler")).first
+  ruler_identity = normalize_reference(ruler)
+
+  entries.sort_by do |entry|
+    ruler_rank = !ruler_identity.empty? && normalize_reference(entry[:title]) == ruler_identity ? 0 : 1
+    [ruler_rank, *character_name_sort_key(entry, group)]
+  end
+end
+
 def entry_sort_key(entry)
   return [-1, entry[:title].downcase] if entry[:data]["featured_entry"]
   return [COUNTRY_ORDER.length, entry[:title].downcase] if creature_character?(entry)
@@ -1873,6 +1905,7 @@ def write_category_indexes(entries)
     route = CATEGORY_ROUTES.fetch(category)
     sorted_entries = category_entries.sort_by { |entry| entry_sort_key(entry) }
     cards = sorted_entries.map { |entry| category_card(entry, route) }
+    displayed_card_count = cards.length
     description = CATEGORY_DESCRIPTIONS.fetch(category, "Статьи энциклопедии Астарии.")
     listing = if cards.empty?
       <<~HTML
@@ -1885,11 +1918,21 @@ def write_category_indexes(entries)
       HTML
     elsif category == "Персонажи"
       country_entries = entries.select { |entry| entry[:category] == "Страны" }.to_h { |entry| [entry[:title], entry] }
+      published_entries = entries.to_h { |entry| [normalize_reference(entry[:title]), entry] }
+      displayed_card_count = 0
       groups = sorted_entries.group_by { |entry| character_group(entry) }
         .sort_by { |group, _group_entries| character_group_sort_key(group) }
         .map do |group, group_entries|
-        group_cards = group_entries.map { |entry| category_card(entry, route) }.join("\n")
         country_entry = country_entries[group]
+        ruler_title = reference_names(country_entry&.dig(:data, "ruler")).first
+        ruler_entry = published_entries[normalize_reference(ruler_title)]
+        ruler_is_external_figure = ruler_entry &&
+          !group_entries.include?(ruler_entry) &&
+          %w[Боги Персонажи].include?(ruler_entry[:category])
+        visible_group_entries = ruler_is_external_figure ? group_entries + [ruler_entry] : group_entries
+        ordered_group_entries = sort_character_group_entries(visible_group_entries, group, country_entry)
+        displayed_card_count += ordered_group_entries.length
+        group_cards = ordered_group_entries.map { |entry| category_card(entry, route) }.join("\n")
         group_heading = if country_entry
           href = "../#{country_entry[:route]}"
           %(<a href="#{CGI.escapeHTML(href)}">#{CGI.escapeHTML(group)} <span aria-hidden="true">↗</span></a>)
@@ -1918,7 +1961,7 @@ def write_category_indexes(entries)
             <span class="sr-only">Найти статью в разделе #{CGI.escapeHTML(category_title)}</span>
             <input class="astaria-category-search" type="search" placeholder="Найти статью в разделе…" autocomplete="off">
           </label>
-          <p class="astaria-category-count" aria-live="polite">Показано: #{cards.length} из #{cards.length}</p>
+          <p class="astaria-category-count" aria-live="polite">Показано: #{displayed_card_count} из #{displayed_card_count}</p>
           <button class="astaria-category-clear" type="button" hidden>Сбросить</button>
         </div>
         <div class="astaria-category-no-results" hidden>

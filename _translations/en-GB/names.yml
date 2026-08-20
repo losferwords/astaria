@@ -1,0 +1,1392 @@
+---
+locale: en-GB
+version: 1
+
+# Keys are canonical Russian titles. `slug` is shared by the RU and EN public
+# versions once the bilingual release is enabled. `native_name` is deliberately
+# not translated and may contain Cyrillic, kanji or hanzi.
+names:
+  Астария:
+    title: Astaria
+    slug: astaria
+
+  Архея:
+    title: Archaea
+    slug: archaea
+  Антра:
+    title: Antra
+    slug: antra
+  Кельн:
+    title: Keln
+    slug: keln
+  Остров Хтон:
+    title: Chthon Island
+    slug: chthon-island
+  Хтоническое море:
+    title: Chthonic Sea
+    slug: chthonic-sea
+  Рассветное море:
+    title: Dawn Sea
+    slug: dawn-sea
+  Закатное море:
+    title: Sunset Sea
+    slug: sunset-sea
+  Сумеречный пролив:
+    title: Twilight Strait
+    slug: twilight-strait
+  Штормовой залив:
+    title: Storm Bay
+    slug: storm-bay
+  Багровый залив:
+    title: Crimson Bay
+    slug: crimson-bay
+  Полуостров Таллас:
+    title: Tallas Peninsula
+    slug: tallas-peninsula
+  Город Солаис:
+    title: Solais
+    slug: solais
+  Остров Рёст:
+    title: Ryost
+    slug: ryost
+  Река Рави:
+    title: Ravi River
+    slug: ravi-river
+  Туманный остров:
+    title: Mist Island
+    slug: mist-island
+    native_name: 霞島
+  Город Сангалла:
+    title: Sangalla
+    slug: sangalla
+  Регион Элессия:
+    title: Elessia
+    slug: elessia
+  Озеро Митра:
+    title: Lake Mitra
+    slug: lake-mitra
+  Река Неда:
+    title: Neda River
+    slug: neda-river
+  Река Тавропос:
+    title: Tavropos River
+    slug: tavropos-river
+  Деревня Теония:
+    title: Theonia
+    slug: theonia
+  Город Аргос:
+    title: Argos
+    slug: argos
+  Город Мистрас:
+    title: Mystras
+    slug: mystras
+  Город Ксен-Аст:
+    title: Ksen-Ast
+    slug: ksen-ast
+  Город Фибас:
+    title: Phibas
+    slug: phibas
+  Регион Аментир:
+    title: Amentir
+    slug: amentir
+  Озеро Нехмет:
+    title: Lake Nekhmet
+    slug: lake-nekhmet
+  Город Тиза:
+    title: Tiza
+    slug: tiza
+  Город Мира:
+    title: Myra
+    slug: myra
+  Пустыня Сехет:
+    title: Sekhet Desert
+    slug: sekhet-desert
+  Река Хапи:
+    title: Hapi River
+    slug: hapi-river
+  Город Уасет:
+    title: Waset
+    slug: waset
+  Город Хесус:
+    title: Khesus
+    slug: khesus
+  Город Сива:
+    title: Siwa
+    slug: siwa
+  Озеро Кафер:
+    title: Lake Kafer
+    slug: lake-kafer
+  Гора Атафет:
+    title: Mount Atafet
+    slug: atafet
+  Город Акхетастон:
+    title: Akhetaston
+    slug: akhetaston
+  Город Атафет:
+    title: Atafet
+    slug: atafet-city
+  Город Натшепсут:
+    title: Natshepsut
+    slug: natshepsut
+  Река Сатис:
+    title: Satis River
+    slug: satis-river
+  Деревня Дабу:
+    title: Dabu
+    slug: dabu
+  Закатная долина:
+    title: Sunset Valley
+    slug: sunset-valley
+  Река Мвиди:
+    title: Mvidi River
+    slug: mvidi-river
+  Амато:
+    title: Amato
+    slug: amato
+    native_name: 阿魔都
+  Амон-Астат:
+    title: Amon-Astat
+    slug: amon-astat
+  Гилас:
+    title: Gilas
+    slug: gilas
+  Громовые Кланы:
+    title: Thunder Clans
+    slug: thunder-clans
+  Иомар:
+    title: Iomar
+    slug: iomar
+  Лунаар:
+    title: Lunaar
+    slug: lunaar
+  Талассия:
+    title: Thalassia
+    slug: thalassia
+  Катахтонос:
+    title: Katachthonos
+    slug: katachthonos
+  Кадир:
+    title: Qadir
+    slug: qadir
+  Пустыня Халисат:
+    title: Khalisat Desert
+    slug: khalisat-desert
+  Залив Фиальсахра:
+    title: Fialsakhra Bay
+    slug: fialsakhra-bay
+  Река Макаба:
+    title: Makaba River
+    slug: makaba-river
+  Озеро Альсалим:
+    title: Lake Alsalim
+    slug: lake-alsalim
+  Озеро Джамсар:
+    title: Lake Jamsar
+    slug: lake-jamsar
+  Озеро Зураиф:
+    title: Lake Zuraif
+    slug: lake-zuraif
+  Озеро Кхарим:
+    title: Lake Kharim
+    slug: lake-kharim
+  Озеро Рашах:
+    title: Lake Rashah
+    slug: lake-rashah
+  Озеро Суэйд:
+    title: Lake Suwayd
+    slug: lake-suwayd
+  Озеро Шаради:
+    title: Lake Sharadi
+    slug: lake-sharadi
+  Город Кафат:
+    title: Kafat
+    slug: kafat
+  Город Самаан:
+    title: Samaan
+    slug: samaan
+  Город Сераф:
+    title: Seraph
+    slug: seraph
+  Храм Дар Мараат:
+    title: Temple of Dar Maraat
+    slug: temple-of-dar-maraat
+  Дикоземье:
+    title: Wildlands
+    slug: wildlands
+  Вактар-Йорден:
+    title: Vaktar-Jorden
+    slug: vaktar-jorden
+  Сурадж Ка Гхар:
+    title: Suraj Ka Ghar
+    slug: suraj-ka-ghar
+  Вакумара:
+    title: Vakumara
+    slug: vakumara
+  Хамоа:
+    title: Hamoa
+    slug: hamoa
+  Обитель:
+    title: Obitelj
+    slug: obitelj
+    native_name: Обитель
+  Велисса:
+    title: Velissa
+    slug: velissa
+    native_name: Велисса
+  Мафка:
+    title: Mavka
+    slug: mavka
+    native_name: Мафка
+  Ивар Свирепый:
+    title: Ivar the Fierce
+    slug: ivar-the-fierce
+    native_name: Ивар Свирепый
+
+  Альзаман:
+    title: Alzaman
+    slug: alzaman
+  Аст:
+    title: Ast
+    slug: ast-god
+  Винтра:
+    title: Wintra
+    slug: wintra
+  Гиперион I:
+    title: Hyperion I
+    slug: hyperion-i
+  Ланг-Ан:
+    title: Lang-An
+    slug: lang-an-dragon
+  Икатерра:
+    title: Ikaterra
+    slug: ikaterra
+  Ицунэ:
+    title: Itsune
+    slug: itsune
+    native_name: 逸音
+  Калипсо:
+    title: Calypso
+    slug: calypso
+  Мерката:
+    title: Mercate
+    slug: mercate
+  Руфу:
+    title: Rufu
+    slug: rufu
+  Тарун:
+    title: Tarun
+    slug: taruhn
+  Тиресий:
+    title: Tiresias
+    slug: tiresias
+  Хангор:
+    title: Khangor
+    slug: khangor
+  Церунна:
+    title: Cerunna
+    slug: cerunna
+  Шубханкари:
+    title: Shubhankari
+    slug: shubhankari
+
+  Венды:
+    title: Wends
+    slug: wends
+    native_name: Венды
+  Археи:
+    title: Archaeans
+    slug: archaeans
+  Авгарцы:
+    title: Avgars
+    slug: avgars
+  Вактары:
+    title: Vaktars
+    slug: vaktars
+  Ваку:
+    title: Vaku
+    slug: vaku
+  Эллийцы:
+    title: Ellians
+    slug: ellians
+  Гойдаир:
+    title: Goidair
+    slug: goidair
+  Кадийцы:
+    title: Qadians
+    slug: qadians
+  Раджати:
+    title: Rajati
+    slug: rajati
+  Джу:
+    title: Dju
+    slug: dju
+    native_name: 朱
+  Хтониды:
+    title: Chthonids
+    slug: chthonids
+  Эдзо:
+    title: Edzo
+    slug: edzo
+    native_name: 蝦夷
+  Хефат:
+    title: Khefat
+    slug: khefat
+  Лудаир:
+    title: Ludair
+    slug: ludair
+  Манаи:
+    title: Manai
+    slug: manai
+  Надаир:
+    title: Nadair
+    slug: nadair
+  Талассийцы:
+    title: Thalassians
+    slug: thalassians
+  Имитей:
+    title: Imithei
+    slug: imithei
+
+  Хтонотема:
+    title: Chthonotema
+    slug: chthonotema
+  О природе чудовищ:
+    title: On the Nature of Monsters
+    slug: on-the-nature-of-monsters
+  Рунштоирм:
+    title: Runstoirm
+    slug: runstoirm
+  Танатомахия:
+    title: Thanatomachia
+    slug: thanatomachia
+
+  Вознесённый:
+    title: Ascended
+    slug: ascended
+  Хранитель:
+    title: Warden
+    slug: warden
+  Страж:
+    title: Guardian
+    slug: guardian
+    native_name: Страж
+  Аватар:
+    title: Avatar
+    slug: avatar
+  Горец:
+    title: Highlander
+    slug: highlander
+  Друид:
+    title: Druid
+    slug: druid
+  Идеал:
+    title: Paragon
+    slug: paragon
+  Мектиг:
+    title: Mektig
+    slug: mektig
+  Мститель:
+    title: Avenger
+    slug: avenger
+  Наварх:
+    title: Navarch
+    slug: navarch
+  Онмёдзи:
+    title: Onmyoji
+    slug: onmyoji
+    native_name: 陰陽師
+  Профитис:
+    title: Profitis
+    slug: profitis
+  Ракша:
+    title: Raksha
+    slug: raksha
+  Светоносный:
+    title: Lightbringer
+    slug: lightbringer
+  Тень:
+    title: Shadow
+    slug: shadow
+  Шаман:
+    title: Shaman
+    slug: shaman
+
+  Зов Бури:
+    title: Call of Thunder
+    slug: call-of-thunder
+  Глава 000 - Перед Бурей (Пролог):
+    title: Chapter 000 — Before the Storm (Prologue)
+    slug: chapter-000-before-the-storm-prologue
+  Глава 1 - Душа Горца:
+    title: Chapter 001 — The Highlander's Soul
+    slug: chapter-001-the-highlanders-soul
+  Глава 2 - Отплытие:
+    title: Chapter 002 — Setting Sail
+    slug: chapter-002-setting-sail
+  Глава 3 - Остров:
+    title: Chapter 003 — The Island
+    slug: chapter-003-the-island
+  Глава 4 - Новый Идеал:
+    title: Chapter 004 — The New Paragon
+    slug: chapter-004-the-new-paragon
+  Глава 5 - Жрица:
+    title: Chapter 005 — The Priestess
+    slug: chapter-005-the-priestess
+  Глава 6 - Нет пощады жаждущим:
+    title: Chapter 006 — No Mercy for the Thirsty
+    slug: chapter-006-no-mercy-for-the-thirsty
+  Глава 7 - Зов Бури:
+    title: Chapter 007 — Call of Thunder
+    slug: chapter-007-call-of-thunder
+  Глава 8 - Нет пути домой:
+    title: Chapter 008 — No Way Home
+    slug: chapter-008-no-way-home
+  Глава 009 - Плач ночи (Эпилог):
+    title: Chapter 009 — Lament of the Night (Epilogue)
+    slug: chapter-009-lament-of-the-night-epilogue
+  Пока Боги Спят:
+    title: While Gods Sleep
+    slug: while-gods-sleep
+  Глава 001 - Счастливая ставка:
+    title: Chapter 001 — The Lucky Wager
+    slug: chapter-001-the-lucky-wager
+  Глава 002 - Штормовой залив:
+    title: Chapter 002 — Storm Bay
+    slug: chapter-002-storm-bay
+  Глава 003 - Голос Мёртвого Бога:
+    title: Chapter 003 — Voice of the Dead God
+    slug: chapter-003-voice-of-the-dead-god
+  Ветер Перемен:
+    title: Wind of Change
+    slug: wind-of-change
+  Глава 000 - Пролог:
+    title: Chapter 000 — Prologue
+    slug: chapter-000-prologue
+  Глава 001 - Ключ от клетки:
+    title: Chapter 001 — The Key to the Cage
+    slug: chapter-001-the-key-to-the-cage
+  Глава 002 - Погоня в Фибасе:
+    title: Chapter 002 — The Chase through Phibas
+    slug: chapter-002-the-chase-through-phibas
+  Глава 003 - Через озеро Митра:
+    title: Chapter 003 — Across Lake Mitra
+    slug: chapter-003-across-lake-mitra
+  Глава 004 - Пламя Елены:
+    title: Chapter 004 — Helena's Flame
+    slug: chapter-004-helenas-flame
+  Глава 005 - Красная река:
+    title: Chapter 005 — The Red River
+    slug: chapter-005-the-red-river
+  Глава 006 - Цена противоядия:
+    title: Chapter 006 — The Price of the Antidote
+    slug: chapter-006-the-price-of-the-antidote
+  Глава 007 - Корабль Персефоны:
+    title: Chapter 007 — Persephone's Ship
+    slug: chapter-007-persephones-ship
+  Глава 008 - Три месяца тишины:
+    title: Chapter 008 — Three Months of Silence
+    slug: chapter-008-three-months-of-silence
+  Глава 009 - Темница фараона:
+    title: Chapter 009 — The Pharaoh's Prison
+    slug: chapter-009-the-pharaohs-prison
+  Глава 010 - Шатёр Рувамбы:
+    title: Chapter 010 — Ruwamba's Tent
+    slug: chapter-010-ruwambas-tent
+  Глава 011 - Перья Солнца и Ночи:
+    title: Chapter 011 — Feathers of Sun and Night
+    slug: chapter-011-feathers-of-sun-and-night
+  Глава 012 - Сердце вулкана:
+    title: Chapter 012 — Heart of the Volcano
+    slug: chapter-012-heart-of-the-volcano
+  Глава 013 - Сделка Ночи:
+    title: Chapter 013 — Night's Bargain
+    slug: chapter-013-nights-bargain
+  Глава 014 - Оазис Малика:
+    title: Chapter 014 — Malik's Oasis
+    slug: chapter-014-maliks-oasis
+  Глава 015 - Чёрная коробка:
+    title: Chapter 015 — The Black Box
+    slug: chapter-015-the-black-box
+  Глава 016 - Монета Ночи:
+    title: Chapter 016 — Night's Coin
+    slug: chapter-016-nights-coin
+  Глава 017 - Письмо Малика:
+    title: Chapter 017 — Malik's Letter
+    slug: chapter-017-maliks-letter
+  Глава 018 - Корона паучихи:
+    title: Chapter 018 — The Spider Queen's Crown
+    slug: chapter-018-the-spider-queens-crown
+  Глава 019 - Время на исходе:
+    title: Chapter 019 — Time Is Running Out
+    slug: chapter-019-time-is-running-out
+  Глава 020 - Изоляция Кафата:
+    title: Chapter 020 — The Isolation of Kafat
+    slug: chapter-020-the-isolation-of-kafat
+  Глава 021 - Кровь в песках:
+    title: Chapter 021 — Blood in the Sands
+    slug: chapter-021-blood-in-the-sands
+  Глава 022 - Молот и Сердце:
+    title: Chapter 022 — Hammer and Heart
+    slug: chapter-022-hammer-and-heart
+  Глава 023 - Плен Нисы:
+    title: Chapter 023 — Nisa Captured
+    slug: chapter-023-nisa-captured
+  Глава 024 - Вилла Унгола:
+    title: Chapter 024 — Ungol's Villa
+    slug: chapter-024-ungols-villa
+  Глава 025 - Суд в Бахаре:
+    title: Chapter 025 — Trial in Bahara
+    slug: chapter-025-trial-in-bahara
+  Глава 026 - Жатва остановилась:
+    title: Chapter 026 — The Harvest Has Stopped
+    slug: chapter-026-the-harvest-has-stopped
+  Глава 027 - Совет адмиралов:
+    title: Chapter 027 — Council of Admirals
+    slug: chapter-027-council-of-admirals
+  Глава 028 - Каньон Руха:
+    title: Chapter 028 — Rukh Canyon
+    slug: chapter-028-rukh-canyon
+  Глава 029 - Гнездо Руха:
+    title: Chapter 029 — The Rukh's Nest
+    slug: chapter-029-the-rukhs-nest
+  Глава 030 - Хлеб Великого Хана:
+    title: Chapter 030 — The Great Khan's Bread
+    slug: chapter-030-the-great-khans-bread
+  Глава 031 - Поединок Смертоносца:
+    title: Chapter 031 — Deathbringer's Duel
+    slug: chapter-031-deathbringers-duel
+  Глава 032 - Великая Кузня:
+    title: Chapter 032 — The Great Forge
+    slug: chapter-032-the-great-forge
+  Глава 033 - Новый хан Бахары:
+    title: Chapter 033 — Bahara's New Khan
+    slug: chapter-033-baharas-new-khan
+  Глава 034 - Утро после Халык-Бындыра:
+    title: Chapter 034 — The Morning after Halyk-Byndir
+    slug: chapter-034-the-morning-after-halyk-byndir
+  Глава 035 - Рактапатр:
+    title: Chapter 035 — Raktapatra
+    slug: chapter-035-raktapatra
+  Глава 036 - Тень Арисы:
+    title: Chapter 036 — Arisa's Shadow
+    slug: chapter-036-arisas-shadow
+  Глава 037 - Пожар на кухне:
+    title: Chapter 037 — Fire in the Kitchen
+    slug: chapter-037-fire-in-the-kitchen
+  Глава 038 - Пасть Дракона:
+    title: Chapter 038 — Dragon's Maw
+    slug: chapter-038-dragons-maw
+  Глава 039 - Два арбата:
+    title: Chapter 039 — Two Arbats
+    slug: chapter-039-two-arbats
+  Глава 040 - Ловушка в долине:
+    title: Chapter 040 — The Valley Trap
+    slug: chapter-040-the-valley-trap
+  Глава 041 - Свадьба в Улехее:
+    title: Chapter 041 — The Wedding at Ulehey
+    slug: chapter-041-the-wedding-at-ulehey
+  Глава 042 - Чёрный ворон:
+    title: Chapter 042 — The Black Raven
+    slug: chapter-042-the-black-raven
+  Глава 043 - Фонарик над вышкой:
+    title: Chapter 043 — The Lantern above the Watchtower
+    slug: chapter-043-the-lantern-above-the-watchtower
+  Глава 044 - Полчища верминов:
+    title: Chapter 044 — Hordes of Vermin
+    slug: chapter-044-hordes-of-vermin
+  Глава 045 - Дорога в Найян:
+    title: Chapter 045 — The Road to Nayan
+    slug: chapter-045-the-road-to-nayan
+  Глава 046 - Кровь на Рактапатре:
+    title: Chapter 046 — Blood upon Raktapatra
+    slug: chapter-046-blood-upon-raktapatra
+  Глава 047 - Смерть Уриста:
+    title: Chapter 047 — The Death of Urist
+    slug: chapter-047-the-death-of-urist
+  Глава 048 - Охота в Шеньяне:
+    title: Chapter 048 — The Hunt in Shenyan
+    slug: chapter-048-the-hunt-in-shenyan
+  Глава 049 - День для Рактапатра:
+    title: Chapter 049 — One More Day for Raktapatra
+    slug: chapter-049-one-more-day-for-raktapatra
+  Глава 050 - Письмо Ли Сан:
+    title: Chapter 050 — Li San's Letter
+    slug: chapter-050-li-sans-letter
+  Глава 051 - Штурм Найяна:
+    title: Chapter 051 — The Assault on Nayan
+    slug: chapter-051-the-assault-on-nayan
+  Глава 052 - Восточные ворота:
+    title: Chapter 052 — The Eastern Gate
+    slug: chapter-052-the-eastern-gate
+  Глава 053 - Смерть Аватара:
+    title: Chapter 053 — The Death of an Avatar
+    slug: chapter-053-the-death-of-an-avatar
+  Глава 054 - Плоты на Тяо Хэ:
+    title: Chapter 054 — Rafts upon the Tiao He
+    slug: chapter-054-rafts-upon-the-tiao-he
+  Глава 055 - Храм Кион-Чи:
+    title: Chapter 055 — The Temple of Qiong-Qi
+    slug: chapter-055-the-temple-of-qiong-qi
+  Глава 056 - Колодец Кион-Чи:
+    title: Chapter 056 — Qiong-Qi's Well
+    slug: chapter-056-qiong-qis-well
+  Глава 057 - Дом семьи Ву:
+    title: Chapter 057 — The House of Wu
+    slug: chapter-057-the-house-of-wu
+  Глава 058 - Тайна Чанг-Ша:
+    title: Chapter 058 — The Secret of Chang-Sha
+    slug: chapter-058-the-secret-of-chang-sha
+  Глава 059 - Армия Батара:
+    title: Chapter 059 — Batar's Army
+    slug: chapter-059-batars-army
+  Глава 060 - Песня против Кион-Чи:
+    title: Chapter 060 — A Song against Qiong-Qi
+    slug: chapter-060-a-song-against-qiong-qi
+  Глава 061 - Ворота Джу-Суо:
+    title: Chapter 061 — The Gates of Dju-Suo
+    slug: chapter-061-the-gates-of-dju-suo
+  Глава 062 - Поддельные пропуска:
+    title: Chapter 062 — Forged Passes
+    slug: chapter-062-forged-passes
+  Глава 063 - Весеннее равноденствие:
+    title: Chapter 063 — The Spring Equinox
+    slug: chapter-063-the-spring-equinox
+  Глава 064 - Ленты Памяти:
+    title: Chapter 064 — The Ribbons of Memory
+    slug: chapter-064-the-ribbons-of-memory
+  Глава 065 - Императрица в плену:
+    title: Chapter 065 — The Captive Empress
+    slug: chapter-065-the-captive-empress
+  Глава 066 - Яд крайта:
+    title: Chapter 066 — Krait Venom
+    slug: chapter-066-krait-venom
+  Глава 067 - Бог войны под шлемом:
+    title: Chapter 067 — The God of War beneath the Helm
+    slug: chapter-067-the-god-of-war-beneath-the-helm
+  Глава 068 - Нефритовый стержень:
+    title: Chapter 068 — The Jade Rod
+    slug: chapter-068-the-jade-rod
+  Глава 069 - У западных ворот:
+    title: Chapter 069 — At the Western Gate
+    slug: chapter-069-at-the-western-gate
+  Глава 070 - Чертоги Дракона:
+    title: Chapter 070 — The Halls of the Dragon
+    slug: chapter-070-the-halls-of-the-dragon
+  Глава 071 - Платье Ао Ву:
+    title: Chapter 071 — Ao Wu's Dress
+    slug: chapter-071-ao-wus-dress
+  Глава 072 - Колодец Огня:
+    title: Chapter 072 — The Well of Fire
+    slug: chapter-072-the-well-of-fire
+  Глава 073 - Память Дракона:
+    title: Chapter 073 — The Dragon's Memory
+    slug: chapter-073-the-dragons-memory
+  Глава 074 - Похищенная кровь:
+    title: Chapter 074 — Stolen Blood
+    slug: chapter-074-stolen-blood
+  Глава 075 - Невидимый хищник:
+    title: Chapter 075 — The Invisible Predator
+    slug: chapter-075-the-invisible-predator
+  Глава 076 - Деревня Вэйган:
+    title: Chapter 076 — Veigan
+    slug: chapter-076-veigan
+  Глава 077 - Мэйлун в озере:
+    title: Chapter 077 — Meilong in the Lake
+    slug: chapter-077-meilong-in-the-lake
+  Глава 078 - Дом Семи Лепестков:
+    title: Chapter 078 — The House of Seven Petals
+    slug: chapter-078-the-house-of-seven-petals
+  Глава 079 - Настой красного корня:
+    title: Chapter 079 — Red Root Infusion
+    slug: chapter-079-red-root-infusion
+  Глава 080 - След к Бадракали:
+    title: Chapter 080 — The Trail to Badrakali
+    slug: chapter-080-the-trail-to-badrakali
+  Глава 081 - Кровь на плите:
+    title: Chapter 081 — Blood upon the Slab
+    slug: chapter-081-blood-upon-the-slab
+  Глава 082 - Лепестки сакуры:
+    title: Chapter 082 — Sakura Petals
+    slug: chapter-082-sakura-petals
+  Глава 083 - Грибы в пещере:
+    title: Chapter 083 — Mushrooms in the Cave
+    slug: chapter-083-mushrooms-in-the-cave
+  Глава 084 - Мёртвая жатва:
+    title: Chapter 084 — The Dead Harvest
+    slug: chapter-084-the-dead-harvest
+  Глава 085 - Королева наг:
+    title: Chapter 085 — Queen of the Nagas
+    slug: chapter-085-queen-of-the-nagas
+  Глава 086 - Призыв Шубханкари:
+    title: Chapter 086 — The Summoning of Shubhankari
+    slug: chapter-086-the-summoning-of-shubhankari
+  Глава 087 - Новая Тень:
+    title: Chapter 087 — A New Shadow
+    slug: chapter-087-a-new-shadow
+  Глава 088 - Сон без конца:
+    title: Chapter 088 — The Endless Sleep
+    slug: chapter-088-the-endless-sleep
+  Глава 089 - Дорога в Ванпур:
+    title: Chapter 089 — The Road to Vanpur
+    slug: chapter-089-the-road-to-vanpur
+  Глава 090 - Вторая заварка:
+    title: Chapter 090 — The Second Infusion
+    slug: chapter-090-the-second-infusion
+  Глава 091 - Чёрный лотос:
+    title: Chapter 091 — Black Lotus
+    slug: chapter-091-black-lotus
+  Глава 092 - Плохая кровь:
+    title: Chapter 092 — Bad Blood
+    slug: chapter-092-bad-blood
+  Глава 093 - Чёрные слёзы:
+    title: Chapter 093 — Black Tears
+    slug: chapter-093-black-tears
+  Война Жаждущих:
+    title: War of the Thirsty
+    slug: war-of-the-thirsty
+  Вторжение Амон-Астата в город Ахей:
+    title: Invasion of Achaeus
+    slug: invasion-of-achaeus
+  Кризис веры в Амон-Астате:
+    title: Crisis of Faith in Amon-Astat
+    slug: crisis-of-faith-in-amon-astat
+  Падение Хтона:
+    title: Fall of Chthon
+    slug: fall-of-chthon
+  Раскол Кадира:
+    title: Schism of Qadir
+    slug: schism-of-qadir
+
+  Город Ахей:
+    title: Achaeus
+    slug: achaeus
+  Пирей Никос:
+    title: Piraeus Nikos
+    slug: piraeus-nikos
+  Неарх Мелит:
+    title: Nearch Melit
+    slug: nearch-melit
+  Кеннет мак Рейн:
+    title: Kenneth mac Rayne
+    slug: kenneth-mac-rayne
+  Вигдис Меткая:
+    title: Vigdis the Unerring
+    slug: vigdis-the-unerring
+  Аксель Хан:
+    title: Axel Khan
+    slug: axel-khan
+  Рамхотеп II:
+    title: Ramhotep II
+    slug: ramhotep-ii
+  Персефона Раптис:
+    title: Persephone Raptis
+    slug: persephone-raptis
+  Малик Аль-Азвар:
+    title: Malik al-Azwar
+    slug: malik-al-azwar
+  Индульф мак Торн:
+    title: Indulf mac Thorn
+    slug: indulf-mac-thorn
+  Лисандра мак Рейн:
+    title: Lisandra mac Rayne
+    slug: lisandra-mac-rayne
+  Эйдан мак Кинсли:
+    title: Aidan mac Kinsley
+    slug: aidan-mac-kinsley
+  Элеонора мак Торн:
+    title: Eleanor mac Thorn
+    slug: eleanor-mac-thorn
+  Абу Али аль-Хассан:
+    title: Abu Ali al-Hassan
+    slug: abu-ali-al-hassan
+  Аластриона Растущая:
+    title: Alastriona the Growing
+    slug: alastriona-the-growing
+  Умар ибн Ла-Ахад:
+    title: Umar ibn La-Ahad
+    slug: umar-ibn-la-ahad
+  Амира Аль-Азвар:
+    title: Amira al-Azwar
+    slug: amira-al-azwar
+  Ао Ву:
+    title: Ao Wu
+    slug: ao-wu
+  Сао Ву:
+    title: Sao Wu
+    slug: sao-wu
+  Шень Ву:
+    title: Shen Wu
+    slug: shen-wu
+  Мэй Ву:
+    title: Mei Wu
+    slug: mei-wu
+  Ли Сан:
+    title: Li San
+    slug: li-san
+  Чани Сан:
+    title: Chani San
+    slug: chani-san
+  Ляо Шень:
+    title: Liao Shen
+    slug: liao-shen
+  Чень Ляньши:
+    title: Chen Lianshi
+    slug: chen-lianshi
+  Сунь Ляньши:
+    title: Sun Lianshi
+    slug: sun-lianshi
+  Сяо Ша:
+    title: Xiao Sha
+    slug: xiao-sha
+  Авеста Кронос:
+    title: Avesta Kronos
+    slug: avesta-kronos
+  Арета Лефийская:
+    title: Areta of Lepha
+    slug: areta-of-lepha
+  Аристея Кронос:
+    title: Aristea Kronos
+    slug: aristea-kronos
+  Кассиопея Атанатос:
+    title: Cassiopeia Athanatos
+    slug: cassiopeia-athanatos
+  Эвридика Лефийская:
+    title: Eurydice of Lepha
+    slug: eurydice-of-lepha
+  Неарх Мелит:
+    title: Nearch Melit
+    slug: nearch-melit
+  Пирей Никос:
+    title: Piraeus Nikos
+    slug: piraeus-nikos
+  Рея Мелит:
+    title: Rhea Melit
+    slug: rhea-melit
+  Телемах II:
+    title: Telemachus II
+    slug: telemachus-ii
+  Айсан Баят:
+    title: Aysan Bayat
+    slug: aysan-bayat
+  Армар Саг:
+    title: Armar Sag
+    slug: armar-sag
+  Арно Эклунд:
+    title: Arno Eklund
+    slug: arno-eklund
+  Батар Саг:
+    title: Batar Sag
+    slug: batar-sag
+  Навчин Урт:
+    title: Navchin Urt
+    slug: navchin-urt
+  Урист Китин:
+    title: Urist Kitin
+    slug: urist-kitin
+  Аль-Тахим:
+    title: Al-Tahim
+    slug: al-tahim
+  Гарпия:
+    title: Harpy
+    slug: harpy
+  Гнолл:
+    title: Gnoll
+    slug: gnoll
+  Кентавр:
+    title: Centaur
+    slug: centaur
+  Менада:
+    title: Maenad
+    slug: maenad
+  Нага:
+    title: Naga
+    slug: naga
+  Нереида:
+    title: Nereid
+    slug: nereid
+  Ракапс:
+    title: Rakaps
+    slug: rakaps
+  Рух:
+    title: Rukh
+    slug: rukh
+  Вермин:
+    title: Vermin
+    slug: vermin
+  Ветал:
+    title: Vetala
+    slug: vetala
+  Вервольф:
+    title: Wolven
+    slug: wolven
+
+  Глаз Калипсо:
+    title: Eye of Calypso
+    slug: eye-of-calypso
+  Книга Анарабет:
+    title: Anarabet
+    slug: anarabet
+  Корона Душ:
+    title: Crown of Souls
+    slug: crown-of-souls
+  Кристалл Души:
+    title: Soul Crystal
+    slug: soul-crystal
+  Меч Де'лаим:
+    title: De'laim Sword
+    slug: de-laim-sword
+  Молот Са-Тар:
+    title: Sa-Tar Hammer
+    slug: sa-tar-hammer
+  Сердце Огня:
+    title: Heart of Fire
+    slug: heart-of-fire
+  Топор Смертоносец:
+    title: Deathbringer
+    slug: deathbringer
+  Чёрный Вестник:
+    title: Black Harbinger
+    slug: black-harbinger
+
+  Жаждущие:
+    title: The Thirsty
+    slug: the-thirsty
+  Круг Друидов:
+    title: Druid Circle
+    slug: druid-circle
+  Культ Меркаты:
+    title: Cult of Mercate
+    slug: cult-of-mercate
+  Хат-Астат:
+    title: Hat-Astat
+    slug: hat-astat
+
+  Дерево Ларудан:
+    title: Larudan Tree
+    slug: larudan-tree
+  Авгарский самогон:
+    title: Avgar Moonshine
+    slug: avgar-moonshine
+  Настой красного корня:
+    title: Red Root Infusion
+    slug: red-root-infusion
+  Нилачхатра:
+    title: Nilachhatra
+    slug: nilachhatra
+  Ур-Блят:
+    title: Ur-Blyat
+    slug: ur-blyat
+
+  Город Син-Юнь:
+    title: Xing-Yun
+    slug: xing-yun
+    native_name: 星云
+  Город Джу-Суо:
+    title: Dju-Suo
+    slug: dju-suo
+    native_name: 朱索
+  Город Чанг-Ша:
+    title: Chang-Sha
+    slug: chang-sha
+  Лес Шеньянь:
+    title: Shenyan
+    slug: shenyan
+  Кион-Чи:
+    title: Qiong-Qi
+    slug: qiong-qi
+    native_name: 窮奇
+  Нуа Си:
+    title: Nuwa Xi
+    slug: nuwa-xi
+    native_name: 女媧 思
+  Бао Си:
+    title: Bao Xi
+    slug: bao-xi
+    native_name: 保 思
+  Империя Ланг-Ан:
+    title: Lang-An Empire
+    slug: lang-an
+  Долина Гармонии:
+    title: He-Dji-Gu
+    slug: he-dji-gu
+    native_name: 和諧谷
+
+  Сребролесье:
+    title: Silverwood
+    slug: silverwood
+    native_name: Сребролесье
+  Триглавское озеро:
+    title: Lake Triglav
+    slug: lake-triglav
+    native_name: Триглавское озеро
+  Горный хребет Северный Венец:
+    title: Northern Crown
+    slug: northern-crown
+    native_name: Северный Венец
+  Город Волчья Пристань:
+    title: Wolfhaven
+    slug: wolfhaven
+    native_name: Волчья Пристань
+  Город Мирград:
+    title: Mirgrad
+    slug: mirgrad
+    native_name: Мирград
+  Река Красивая:
+    title: Krasivaya River
+    slug: krasivaya-river
+    native_name: Река Красивая
+  Хвойничье предгорье:
+    title: Pinewood Foothills
+    slug: pinewood-foothills
+    native_name: Хвойничье предгорье
+  Деревня Мраковица:
+    title: Mrakovitsa
+    slug: mrakovitsa
+    native_name: Мраковица
+  Велимир Сажин:
+    title: Velimir Sazhin
+    slug: velimir-sazhin
+    native_name: Велимир Сажин
+  Хлоя Валаска:
+    title: Chloe Valaska
+    slug: chloe-valaska
+    native_name: Хлоя Валаска
+  Сигрид Дракендоттир:
+    title: Sigrid Drakendottir
+    slug: sigrid-drakendottir
+  Деревня Намибуа:
+    title: Namibua
+    slug: namibua
+  Кинто Мулунгу:
+    title: Kinto Mulungu
+    slug: kinto-mulungu
+  Мулонджи Мати:
+    title: Mulondji Mati
+    slug: mulondji-mati
+  Ошу Мати:
+    title: Oshu Mati
+    slug: oshu-mati
+  Рувамба Мати:
+    title: Ruwamba Mati
+    slug: ruwamba-mati
+  Город Кайто:
+    title: Kaito
+    slug: kaito
+    native_name: 海都
+  Остров Акасака:
+    title: Akasaka
+    slug: akasaka
+    native_name: 赤坂
+  Город Осуми:
+    title: Osumi
+    slug: osumi
+    native_name: 大澄
+  Аматсу Рин:
+    title: Amatsu Rin
+    slug: amatsu-rin
+    native_name: 天津 凛
+  Аматсу Кай:
+    title: Amatsu Kai
+    slug: amatsu-kai
+    native_name: 天津 海
+  Аматсу Ами:
+    title: Amatsu Ami
+    slug: amatsu-ami
+    native_name: 天津 亜美
+  Тацуро Тору:
+    title: Tatsuro Toru
+    slug: tatsuro-toru
+    native_name: 立良 透
+  Ишида Рецу:
+    title: Ishida Retsu
+    slug: ishida-retsu
+    native_name: 石田 烈
+  Ишикути Макото:
+    title: Ishikuchi Makoto
+    slug: ishikuchi-makoto
+    native_name: 石口 誠
+  Кирида Ариса:
+    title: Kirida Arisa
+    slug: kirida-arisa
+    native_name: 霧田 有咲
+  Город Эльданас:
+    title: Eldanas
+    slug: eldanas
+  Река Горсафон:
+    title: Gorsafon
+    slug: gorsafon
+  Болота Забвения:
+    title: Marshes of Oblivion
+    slug: oblivion-marshes
+  Горный хребет Грань Тьмы:
+    title: Edge of Darkness
+    slug: edge-of-darkness
+  Город Муир:
+    title: Muir
+    slug: muir
+  Даирские луга:
+    title: Dair Meadows
+    slug: dair-meadows
+  Деревня Руше:
+    title: Ruche
+    slug: ruche
+  Лес Иомар:
+    title: Iomar Forest
+    slug: iomar-forest
+  Озеро Сильвиан:
+    title: Lake Silvian
+    slug: lake-silvian
+  Перевал Путь Забытых:
+    title: Pass of the Forgotten
+    slug: pass-of-the-forgotten
+  Равнина Вайтфилд:
+    title: Whitefield Plain
+    slug: whitefield-plain
+  Река Мураин:
+    title: Murain River
+    slug: murain-river
+  Река Эйрафон:
+    title: Eirafon River
+    slug: eirafon-river
+  Деревня Эрвин:
+    title: Erwin
+    slug: erwin
+  Озеро Лок Линделл:
+    title: Loch Lindell
+    slug: loch-lindell
+  Озеро Нордавеллир:
+    title: Lake Nordavellir
+    slug: lake-nordavellir
+  Озеро Хорниндаль:
+    title: Lake Hornindal
+    slug: lake-hornindal
+  Предгорья Битхорн:
+    title: Bithorn Foothills
+    slug: bithorn-foothills
+  Река Изгелуат:
+    title: Isgeluat
+    slug: isgeluat
+  Река Нид:
+    title: Nid River
+    slug: nid-river
+  Храм Ишнаалар:
+    title: Temple of Ishnalaar
+    slug: temple-of-ishnalaar
+  Храм Меркаты:
+    title: Temple of Mercate
+    slug: temple-of-mercate
+  Храм Дракона:
+    title: Temple of the Dragon
+    slug: temple-of-the-dragon
+  Город Найян:
+    title: Nayan
+    slug: nayan
+    native_name: 耐陽
+  Деревня Тай-Линь:
+    title: Tai-Lin
+    slug: tai-lin
+    native_name: 太林
+  Озеро Жень:
+    title: Lake Zhen
+    slug: lake-zhen
+    native_name: 润
+  Озеро Чанг:
+    title: Lake Chang
+    slug: lake-chang
+    native_name: 昌
+  Озеро Шуан:
+    title: Lake Shuan
+    slug: lake-shuan
+    native_name: 爽
+  Джунгли Минь-Тао:
+    title: Min-Tao Jungle
+    slug: min-tao-jungle
+  Река Тяо Хэ:
+    title: Tiao He
+    slug: tiao-he
+  Полуостров Туануку:
+    title: Tuanuku Peninsula
+    slug: tuanuku-peninsula
+  Река Мангайа:
+    title: Mangaia River
+    slug: mangaia-river
+  Деревня Хамоа Хо:
+    title: Hamoa Ho
+    slug: hamoa-ho
+  Перешеек Мост Хранителей:
+    title: Warden Bridge
+    slug: warden-bridge
+  Город Антал:
+    title: Antal
+    slug: antal
+  Великая Кузня:
+    title: Great Forge
+    slug: great-forge
+  Гарнизон Пасть Дракона:
+    title: Dragon's Maw Garrison
+    slug: dragons-maw-garrison
+  Горный хребет Шафар:
+    title: Shafar Mountains
+    slug: shafar-mountains
+  Город Андерхан:
+    title: Underkhan
+    slug: underkhan
+  Город Бахара:
+    title: Bahara
+    slug: bahara
+  Город Даркхан:
+    title: Darkhan
+    slug: darkhan
+  Деревня Улехей:
+    title: Ulehey
+    slug: ulehey
+  Долина Кровавого Цветения:
+    title: Blood Blossom Valley
+    slug: blood-blossom-valley
+  Река Айлиз:
+    title: Ayliz River
+    slug: ayliz-river
+  Река Улын-Гол:
+    title: Ulyn-Gol
+    slug: ulyn-gol
+  Хангорская долина:
+    title: Hangor Valley
+    slug: hangor-valley
+  Болота Кхали Дарти:
+    title: Khali Dharti Marshes
+    slug: khali-dharti-marshes
+  Город Ванпур:
+    title: Vanpur
+    slug: vanpur
+  Город Кайто:
+    title: Kaito
+    slug: kaito
+    native_name: 海都
+  Город Танассар:
+    title: Tanassar
+    slug: tanassar
+  Деревня Бадракали:
+    title: Badrakali
+    slug: badrakali
+  Деревня Вэйган:
+    title: Veigan
+    slug: veigan
+    native_name: 卫干
+  Джунгли Шанкари:
+    title: Shankari Jungle
+    slug: shankari-jungle
+  Бордель Халык-Бындыр:
+    title: Halyk-Byndir
+    slug: halyk-byndir
+  Вулкан Ротонуи:
+    title: Rotonui Volcano
+    slug: rotonui-volcano
+  Горный хребет Зверя:
+    title: Beast Range
+    slug: beast-range
+  Горный хребет Спина Археи:
+    title: Spine of Archaea
+    slug: spine-of-archaea
+  Город Лефа:
+    title: Lepha
+    slug: lepha
+  Город Орион:
+    title: Orion
+    slug: orion
+  Город Трелла:
+    title: Trella
+    slug: trella
+  Джунгли Аконда:
+    title: Akonda Jungle
+    slug: akonda-jungle
+  Пепельные земли:
+    title: Ashlands
+    slug: ashlands
+  Пламенные горы:
+    title: Fiery Mountains
+    slug: fiery-mountains
+  Полуостров Таллас:
+    title: Tallas Peninsula
+    slug: tallas-peninsula
+  Река Рави:
+    title: Ravi River
+    slug: ravi-river
+  Артур Бомейн:
+    title: Arthur Beaumain
+    slug: arthur-beaumain
+  Бодивир Бомейн:
+    title: Bodivir Beaumain
+    slug: bodivir-beaumain
+  Роберт Бомейн:
+    title: Robert Beaumain
+    slug: robert-beaumain
+  Селина Эллиот:
+    title: Selina Elliot
+    slug: selina-elliot
+  Рон Эллиот:
+    title: Ron Elliot
+    slug: ron-elliot
+  Томас Робинсон:
+    title: Thomas Robinson
+    slug: thomas-robinson
+  Хонсу-Намун:
+    title: Khonsu-Namun
+    slug: khonsu-namun
+  Шани-Хат-Су:
+    title: Shani-Hat-Su
+    slug: shani-hat-su
+  Рамат-Хат-Су:
+    title: Ramat-Hat-Su
+    slug: ramat-hat-su
+  Астиаг II:
+    title: Astyages II
+    slug: astyages-ii
+  Данис ибн Синай:
+    title: Danis ibn Sinai
+    slug: danis-ibn-sinai
+  Рашаад аль-Сакхар:
+    title: Rashaad al-Sakhar
+    slug: rashaad-al-sakhar
+  Гилья Кангарлавехотри:
+    title: Gilja Kangarlavehotri
+    slug: gilja-kangarlavehotri
+  Индира Раштра:
+    title: Indira Rashtra
+    slug: indira-rashtra
+  Самир Тхакур:
+    title: Samir Thakur
+    slug: samir-thakur
+  Анвика Нарай:
+    title: Anvika Narai
+    slug: anvika-narai
+  Чори Марджари:
+    title: Chori Marjari
+    slug: chori-marjari
+  Шаша:
+    title: Shasha
+    slug: shasha
+  Мэйлун:
+    title: Meilong
+    slug: meilong
+    native_name: 媚龍
+  Ниса:
+    title: Nisa
+    slug: nisa
+  Стикс:
+    title: Styx
+    slug: styx
+  Атуа Та'Вай:
+    title: Atua Ta'Wai
+    slug: atua-ta-wai
+  Блейн из Руше:
+    title: Blaine of Ruche
+    slug: blaine-of-ruche
+  Диомед Ахейский:
+    title: Diomedes the Achaean
+    slug: diomedes-the-achaean
+  Лиарин Ветреная:
+    title: Liarin the Flighty
+    slug: liarin-the-flighty
+  Нефела:
+    title: Nephele
+    slug: nephele

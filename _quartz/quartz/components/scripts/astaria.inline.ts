@@ -1,12 +1,68 @@
-const mapKindLabels: Record<string, string> = {
-  settlement: "Поселение",
-  water: "Воды",
-  terrain: "Ландшафт",
-  realm: "Регион",
-};
+const astariaExperienceEnglish = document.documentElement.lang
+  .toLowerCase()
+  .startsWith("en");
+
+const astariaExperienceUi = astariaExperienceEnglish
+  ? {
+      mapKindLabels: {
+        settlement: "Settlement",
+        water: "Waters",
+        terrain: "Landscape",
+        realm: "Region",
+      } as Record<string, string>,
+      unknownPlace: "Unknown place",
+      place: "Place",
+      featuredPlaces: [
+        "Thalassia",
+        "Antra",
+        "Temple of Mercate",
+        "Sangalla",
+        "Lake Silvian",
+      ],
+      noMapResult: "No place on the map has that name.",
+      chooseMapPoint: "Choose a point on the map.",
+      found: (count: number) => `Found: ${count}`,
+      startHere: "Perhaps begin here",
+      showing: (visible: number, total?: number) =>
+        total === undefined
+          ? `Showing: ${visible}`
+          : `Showing: ${visible} of ${total}`,
+      discoveryUpdated: "A new set of paths has been chosen.",
+    }
+  : {
+      mapKindLabels: {
+        settlement: "Поселение",
+        water: "Воды",
+        terrain: "Ландшафт",
+        realm: "Регион",
+      } as Record<string, string>,
+      unknownPlace: "Неизвестное место",
+      place: "Место",
+      featuredPlaces: [
+        "Талассия",
+        "Антра",
+        "Храм Меркаты",
+        "Город Сангалла",
+        "Озеро Сильвиан",
+      ],
+      noMapResult: "На карте нет места с таким названием.",
+      chooseMapPoint: "Выберите точку на карте.",
+      found: (count: number) => `Найдено: ${count}`,
+      startHere: "Попробуйте начать отсюда",
+      showing: (visible: number, total?: number) =>
+        total === undefined
+          ? `Показано: ${visible}`
+          : `Показано: ${visible} из ${total}`,
+      discoveryUpdated: "Подборка маршрутов обновлена.",
+    };
+
+const mapKindLabels = astariaExperienceUi.mapKindLabels;
 
 const normalizeMapQuery = (value: string) =>
-  value.toLocaleLowerCase("ru-RU").replaceAll("ё", "е").trim();
+  value
+    .toLocaleLowerCase(astariaExperienceEnglish ? "en-GB" : "ru-RU")
+    .replaceAll("ё", "е")
+    .trim();
 
 function setupAstariaMap() {
   const explorer = document.querySelector<HTMLElement>(".astaria-map-explorer");
@@ -149,10 +205,11 @@ function setupAstariaMap() {
     state.y = -y * base.height * state.scale;
     renderTransform();
 
-    const name = marker.dataset.name ?? "Неизвестное место";
+    const name = marker.dataset.name ?? astariaExperienceUi.unknownPlace;
     const kind = marker.dataset.kind ?? "realm";
     const href = marker.dataset.href ?? "";
-    if (detailKind) detailKind.textContent = mapKindLabels[kind] ?? "Место";
+    if (detailKind)
+      detailKind.textContent = mapKindLabels[kind] ?? astariaExperienceUi.place;
     if (detailName) detailName.textContent = name;
     if (detailLink) {
       detailLink.hidden = href === "";
@@ -168,9 +225,11 @@ function setupAstariaMap() {
     button.type = "button";
     button.className = "astaria-map-result";
     const kind = document.createElement("span");
-    kind.textContent = mapKindLabels[marker.dataset.kind ?? "realm"] ?? "Место";
+    kind.textContent =
+      mapKindLabels[marker.dataset.kind ?? "realm"] ??
+      astariaExperienceUi.place;
     const name = document.createElement("strong");
-    name.textContent = marker.dataset.name ?? "Неизвестное место";
+    name.textContent = marker.dataset.name ?? astariaExperienceUi.unknownPlace;
     button.append(kind, name);
     button.addEventListener("click", () => showMarker(marker, true));
     return button;
@@ -183,13 +242,9 @@ function setupAstariaMap() {
           normalizeMapQuery(marker.dataset.name ?? "").includes(term),
         )
       : markers.filter((marker) =>
-          [
-            "Талассия",
-            "Антра",
-            "Храм Меркаты",
-            "Город Сангалла",
-            "Озеро Сильвиан",
-          ].includes(marker.dataset.name ?? ""),
+          astariaExperienceUi.featuredPlaces.includes(
+            marker.dataset.name ?? "",
+          ),
         );
 
     for (const marker of markers) {
@@ -202,8 +257,8 @@ function setupAstariaMap() {
       const empty = document.createElement("p");
       empty.className = "astaria-map-results-empty";
       empty.textContent = term
-        ? "На карте нет места с таким названием."
-        : "Выберите точку на карте.";
+        ? astariaExperienceUi.noMapResult
+        : astariaExperienceUi.chooseMapPoint;
       results.append(empty);
       return;
     }
@@ -211,8 +266,8 @@ function setupAstariaMap() {
     const heading = document.createElement("p");
     heading.className = "astaria-map-results-heading";
     heading.textContent = term
-      ? `Найдено: ${matches.length}`
-      : "Попробуйте начать отсюда";
+      ? astariaExperienceUi.found(matches.length)
+      : astariaExperienceUi.startHere;
     results.append(heading, ...matches.slice(0, 12).map(makeResult));
   };
 
@@ -455,7 +510,7 @@ function setupAstariaTimeline() {
     for (const era of eras) {
       era.hidden = !era.querySelector(".astaria-timeline-event:not([hidden])");
     }
-    count.textContent = `Показано: ${visibleCount}`;
+    count.textContent = astariaExperienceUi.showing(visibleCount);
     empty.hidden = visibleCount !== 0;
   };
 
@@ -508,7 +563,10 @@ function setupAstariaCategoryFilters() {
         );
       }
 
-      count.textContent = `Показано: ${visibleCount} из ${cards.length}`;
+      count.textContent = astariaExperienceUi.showing(
+        visibleCount,
+        cards.length,
+      );
       clear.hidden = term === "";
       empty.hidden = visibleCount !== 0;
     };
@@ -612,7 +670,7 @@ function setupAstariaDiscovery() {
     });
 
     if (announce && status)
-      status.textContent = "Подборка маршрутов обновлена.";
+      status.textContent = astariaExperienceUi.discoveryUpdated;
   };
 
   section.dataset.ready = "true";

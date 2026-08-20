@@ -72,7 +72,12 @@ export function pageResources(
   })
 
   const contentIndexPath = joinSegments(baseDir, "static/contentIndex.json")
-  const contentIndexScript = `const fetchData = fetch("${contentIndexPath}").then(data => data.json())`
+  // Locale switching replaces the current document in place. A lexical
+  // declaration survives document.write(), so declaring `const fetchData`
+  // again in the translated document raises a SyntaxError and leaves search
+  // attached to the previous locale's index. `var` can be redeclared and its
+  // value is refreshed with the translated content index.
+  const contentIndexScript = `var fetchData = fetch("${contentIndexPath}").then(data => data.json())`
 
   const resources: StaticResources = {
     css: [

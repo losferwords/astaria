@@ -7,9 +7,13 @@ require "fileutils"
 require "json"
 require "pathname"
 require "yaml"
+require_relative "astaria_translations"
 
 ROOT = File.expand_path("..", __dir__)
-DEST = File.join(ROOT, "_quartz", "content")
+DEST = ENV.fetch("ASTARIA_QUARTZ_CONTENT", File.join(ROOT, "_quartz", "content"))
+BUILD_LOCALE = AstariaTranslations.locale
+USE_APPROVED_ROUTES = ENV.fetch("ASTARIA_USE_APPROVED_ROUTES", "false") == "true"
+ONLY_TRANSLATED = ENV.fetch("ASTARIA_ONLY_TRANSLATED", "false") == "true"
 
 PUBLIC_ROOTS = [
   "Энциклопедия",
@@ -18,7 +22,8 @@ PUBLIC_ROOTS = [
 ].freeze
 
 PRIVATE_PATH_PREFIXES = [
-  File.join(ROOT, "Энциклопедия", "Секреты")
+  File.join(ROOT, "Энциклопедия", "Секреты"),
+  File.join(ROOT, "Энциклопедия", "Идеи")
 ].freeze
 
 CATEGORY_ROUTES = {
@@ -169,6 +174,13 @@ SIGNIFICANCE_LABELS = {
   3 => "Заметное"
 }.freeze
 
+SIGNIFICANCE_LABELS_EN = {
+  0 => "Epoch-defining",
+  1 => "Transformative",
+  2 => "Major",
+  3 => "Notable"
+}.freeze
+
 ASSET_REWRITES = {
   "Assets/Maps/states.png" => "Assets/Maps/Web/states-web.jpg",
   "Assets/Maps/heightmap.png" => "Assets/Maps/Web/heightmap-web.jpg",
@@ -178,6 +190,7 @@ ASSET_REWRITES = {
 INFOBOX_FIELDS = [
   ["native_name", "Имя на родном языке"],
   ["location_type", "Тип места"],
+  ["settlement_type", "Тип поселения"],
   ["organization_type", "Тип организации"],
   ["item_type", "Тип предмета"],
   ["condition_type", "Тип явления"],
@@ -186,6 +199,7 @@ INFOBOX_FIELDS = [
   ["species", "Вид"],
   ["current_era", "Текущая эпоха"],
   ["birth_year", "Год рождения"],
+  ["death_year", "Год смерти"],
   ["current_location", "Текущее местоположение"],
   ["birth_place", "Место рождения"],
   ["parents", "Родители"],
@@ -195,6 +209,8 @@ INFOBOX_FIELDS = [
   ["country", "Страна"],
   ["region", "Регион"],
   ["parent_location", "Часть территории"],
+  ["water", "Воды"],
+  ["mouth", "Устье"],
   ["continents", "Материки"],
   ["seas", "Моря"],
   ["population", "Население"],
@@ -272,8 +288,114 @@ INFOBOX_FIELDS = [
   ["related_myths", "Связанные предания"],
   ["controlled_territories", "Контролируемые территории"],
   ["contested_territories", "Спорные территории"],
+  ["contested_by", "Претенденты"],
   ["opposes", "Противники"]
 ].freeze
+
+INFOBOX_LABELS_EN = {
+  "native_name" => "Native name",
+  "location_type" => "Location type",
+  "settlement_type" => "Settlement type",
+  "organization_type" => "Organisation type",
+  "item_type" => "Item type",
+  "condition_type" => "Phenomenon type",
+  "profession_type" => "Path",
+  "medium" => "Medium",
+  "species" => "Species",
+  "current_era" => "Current era",
+  "birth_year" => "Year of birth",
+  "death_year" => "Year of death",
+  "current_location" => "Current location",
+  "birth_place" => "Place of birth",
+  "parents" => "Parents",
+  "siblings" => "Siblings",
+  "children" => "Children",
+  "partner" => "Partner",
+  "country" => "Realm",
+  "region" => "Region",
+  "parent_location" => "Part of",
+  "water" => "Adjacent waters",
+  "mouth" => "Mouth",
+  "continents" => "Continents",
+  "seas" => "Seas",
+  "population" => "Population",
+  "foundation" => "Founded",
+  "independence" => "Independence",
+  "capital" => "Capital",
+  "headquarters" => "Headquarters",
+  "ruler" => "Ruler",
+  "founder" => "Founder",
+  "founders" => "Founders",
+  "creator" => "Creator",
+  "creation_date" => "Created",
+  "authors" => "Authors",
+  "origin" => "Origin",
+  "ethnicity" => "People",
+  "imitei" => "Imithei Path",
+  "occupation" => "Occupation",
+  "organizations" => "Organisations",
+  "deity" => "Patron deity",
+  "deities" => "Deities",
+  "faiths" => "Faiths",
+  "religions" => "Religions",
+  "church" => "Faith / cult",
+  "government" => "Government",
+  "domains" => "Domains",
+  "symbols" => "Sacred symbols",
+  "eyes" => "Eyes",
+  "hair" => "Hair",
+  "skin" => "Skin / colouring",
+  "height" => "Height",
+  "weight" => "Weight",
+  "distinguishing_features" => "Distinguishing features",
+  "dimensions" => "Dimensions",
+  "habitat" => "Habitat",
+  "average_height" => "Average height",
+  "average_length" => "Average length",
+  "average_weight" => "Average weight",
+  "lifespan" => "Lifespan",
+  "course" => "Course",
+  "rarity" => "Rarity",
+  "historical_date" => "Date",
+  "starting_date" => "Begins",
+  "ending_date" => "Ends",
+  "year" => "Year",
+  "endingYear" => "Final year",
+  "conflict_location" => "Location",
+  "belligerents" => "Belligerents",
+  "significance" => "Significance",
+  "parent_peoples" => "Kindred peoples",
+  "child_locations" => "Includes",
+  "inhabiting_peoples" => "Peoples",
+  "inhabiting_species" => "Inhabitants",
+  "trade_route" => "Trade links",
+  "associated_places" => "Associated places",
+  "related_places" => "Related places",
+  "related_conflicts" => "Related conflicts",
+  "associated_organizations" => "Associated organisations",
+  "related_organizations" => "Related organisations",
+  "aligned_organization" => "Aligned organisation",
+  "known_practitioners" => "Known practitioners",
+  "known_individuals" => "Known individuals",
+  "historical_figures" => "Historical figures",
+  "notable_people" => "Notable figures",
+  "important_people" => "Important figures",
+  "other_people" => "Other participants",
+  "known_members" => "Known members",
+  "central_characters" => "Central characters",
+  "affected_people" => "People affected",
+  "related_peoples" => "Related peoples",
+  "related_ethnicities" => "Related peoples",
+  "related_species" => "Related species",
+  "associated_peoples" => "Associated peoples",
+  "related_professions" => "Related paths",
+  "related_items" => "Related items",
+  "related_myths" => "Related legends",
+  "controlled_territories" => "Territories",
+  "contested_territories" => "Contested territories",
+  "contested_by" => "Claimed by",
+  "opposes" => "Adversaries"
+}.freeze
 
 INFOBOX_VALUE_TRANSLATIONS = {
   "Military" => "Воинское",
@@ -287,6 +409,215 @@ INFOBOX_VALUE_TRANSLATIONS = {
   "Consumable, Magical" => "Магический расходуемый предмет",
   "Weapon, Melee" => "Оружие ближнего боя"
 }.freeze
+
+# The prose itself lives in `_translations/en-GB/pages`. This table contains
+# only generator-owned interface copy and universally approved proper names.
+# Longer phrases are replaced first so a short label cannot alter a sentence
+# before its complete translation is applied.
+EN_OUTPUT_REPLACEMENTS = {
+  "Мифологическая энциклопедия Астарии — мира богов, героев и древних цивилизаций." => "The mythological encyclopaedia of Astaria — a world of gods, heroes and ancient civilisations.",
+  "Мир древних цивилизаций и опасных богов, где судьбы народов меняют герои, сумевшие превзойти человеческие пределы." => "A world of ancient civilisations and perilous gods, where heroes who have surpassed mortal limits reshape the fate of nations.",
+  "Виды существ, чудовищ и разумных народов, с которыми делят мир смертные и боги." => "Creatures, monsters and sapient peoples who share the world with mortals and gods.",
+  "Пантеоны, культы и бессмертные силы, вмешивающиеся в судьбы народов." => "Pantheons, cults and immortal powers that intervene in the fate of nations.",
+  "Законы мира, ремёсла, магия и открытия древних цивилизаций." => "The laws of the world, its crafts, magic and the discoveries of ancient civilisations.",
+  "Люди, сумевшие превзойти человеческие пределы и изменить ход истории." => "Mortals who surpassed human limits and changed the course of history.",
+  "Блюда, напитки и продукты, через которые раскрываются культуры Астарии." => "Dishes, drinks and ingredients through which the cultures of Astaria reveal themselves.",
+  "Саги, хроники, предания и тексты, которыми Астария помнит своё прошлое." => "Sagas, chronicles, legends and writings through which Astaria remembers its past.",
+  "Города, земли и забытые уголки, где начинаются путешествия." => "Cities, lands and forgotten corners where journeys begin.",
+  "Культуры и традиции народов, населяющих берега Хтонического моря." => "The cultures and traditions of the peoples who inhabit the shores of the Chthonic Sea.",
+  "Ордены, культы, гильдии и тайные союзы со своими целями." => "Orders, cults, guilds and secret alliances pursuing purposes of their own.",
+  "Герои, правители, странники и те, чьи решения меняют Астарию." => "Heroes, rulers, wanderers and all whose choices change Astaria.",
+  "Реликвии, оружие и вещи, сохранившие след великих событий." => "Relics, weapons and objects that still bear the mark of great events.",
+  "Войны, открытия и переломные мгновения истории мира." => "Wars, discoveries and turning points in the history of the world.",
+  "Государства Астарии, их устройство, противоречия и место в мире." => "The realms of Astaria: their societies, conflicts and place in the world.",
+  "Растения Астарии, их свойства, происхождение и место в культурах мира." => "The plants of Astaria, their properties, origins and place among its cultures.",
+  "Летописцы готовят первые материалы. Пока можно продолжить путь по карте или вернуться к оглавлению." => "The chroniclers are preparing the first entries. For now, explore the map or return to the contents.",
+  "Попробуйте изменить запрос или открыть другой раздел Энциклопедии." => "Try a different query or open another part of the Encyclopaedia.",
+  "Народы, страны, личности и существа — всё, из чего соткан живой мир." => "Peoples, realms, figures and creatures — all the threads from which a living world is woven.",
+  "Океаны, государства и забытые уголки на одной интерактивной карте." => "Oceans, realms and forgotten corners gathered upon a single interactive map.",
+  "Каждый раз Астария открывает другой путь — через страну, героя, божество, место или существо." => "Each visit reveals another path through Astaria — a realm, a hero, a deity, a place or a creature.",
+  "Всякая легенда начинается с первого шага." => "Every legend begins with a first step.",
+  "Статья об этом месте пока готовится." => "The entry for this place is still being prepared.",
+  "Статья готовится к публикации" => "This entry is being prepared for publication",
+  "Раздел ещё пополняется" => "This section is still growing",
+  "Ничего не найдено" => "Nothing found",
+  "Пять дверей в Астарию" => "Five Doors into Astaria",
+  "Куда отправиться дальше?" => "Where will you travel next?",
+  "Добро пожаловать в Астарию" => "Welcome to Astaria",
+  "Воин с огненным клинком встречает чудовищ Астарии" => "A warrior with a burning blade faces the monsters of Astaria",
+  "Водопады и озеро Астарии" => "Waterfalls and a lake in Astaria",
+  "Политическая карта Астарии" => "Political map of Astaria",
+  "Древний город во время великого вторжения" => "An ancient city during the great invasion",
+  "Открыть хронологию Астарии" => "Open the history of Astaria",
+  "Исследовать интерактивную карту Астарии" => "Explore the interactive map of Astaria",
+  "Разделы энциклопедии" => "Encyclopaedia sections",
+  "Энциклопедия" => "Encyclopaedia",
+  "Популярные разделы" => "Popular sections",
+  "Основные разделы" => "Main sections",
+  "Оглавление мира" => "A World in Chapters",
+  "Начать путешествие" => "Begin the journey",
+  "Открыть карту" => "Open the map",
+  "Исследовать мир" => "Explore the world",
+  "Сквозь эпохи" => "Across the Ages",
+  "Хронология" => "Timeline",
+  "Первые свидетельства об археях" => "First evidence of the Archaeans",
+  "Основание Талассии" => "Foundation of Thalassia",
+  "Нынешняя эпоха" => "The present age",
+  "Увидеть всю историю" => "See the whole history",
+  "Все разделы" => "All sections",
+  "Другие пути" => "Other paths",
+  "Открыть статью" => "Read the entry",
+  "Отправная точка" => "Starting point",
+  "Герб государства" => "Realm crest",
+  "Герб:" => "Crest:",
+  "Государство Астарии" => "Realm of Astaria",
+  "Государство" => "Realm",
+  "Божество" => "Deity",
+  "Существа" => "Creatures",
+  "Существо" => "Creature",
+  "Другие земли" => "Other lands",
+  "Найти статью в разделе…" => "Find an entry in this section…",
+  "Найти статью в разделе" => "Find an entry in",
+  "Поиск по разделу" => "Search within",
+  "Показано:" => "Showing:",
+  "Сбросить" => "Clear",
+  "На главную" => "Home",
+  "Хлебные крошки" => "Breadcrumbs",
+  "Путь Имитея" => "Imithei Path",
+  "Сведения" => "Details",
+  "Имя на родном языке" => "Native name",
+  "Год рождения" => "Year of birth",
+  "Текущее местоположение" => "Current location",
+  "Место рождения" => "Place of birth",
+  "Братья и сёстры" => "Siblings",
+  "Родители" => "Parents",
+  "Страна" => "Realm",
+  "Народ" => "People",
+  "Рост" => "Height",
+  "Вес" => "Weight",
+  "Глаза" => "Eyes",
+  "Волосы" => "Hair",
+  "Кожа / окрас" => "Skin / colouring",
+  "Среда обитания" => "Habitat",
+  "Средняя длина" => "Average length",
+  "Средний вес" => "Average weight",
+  "Продолжительность жизни" => "Lifespan",
+  "Часть территории" => "Part of",
+  "Включает" => "Includes",
+  "Бестиарий" => "Bestiary",
+  "Боги" => "Gods",
+  "Знания" => "Lore",
+  "Имитеи" => "Imithei",
+  "Кухня" => "Cuisine",
+  "Литература" => "Literature",
+  "Места" => "Places",
+  "Народы" => "Peoples",
+  "Организации" => "Organisations",
+  "Персонажи" => "Characters",
+  "Предметы" => "Items",
+  "События" => "Events",
+  "Страны" => "Realms",
+  "Флора" => "Flora",
+  "Личность" => "Figure",
+  "Место" => "Place",
+  "Астария" => "Astaria",
+  "Архея" => "Archaea",
+  "Археи" => "Archaeans",
+  "Гилас" => "Gilas",
+  "Империя Ланг-Ан" => "Lang-An Empire",
+  "Вактар-Йорден" => "Vaktar-Jorden",
+  "Дикоземье" => "Wildlands",
+  "Громовые Кланы" => "Thunder Clans",
+  "Амон-Астат" => "Amon-Astat",
+  "Джу" => "Dju",
+  "Гойдаир" => "Goidair",
+  "Вактары" => "Vaktars",
+  "Вознесённый" => "Ascended",
+  "Горец" => "Highlander",
+  "Аватар" => "Avatar",
+  "Дракон Ланг-Ан" => "Lang-An",
+  "Нуа Си" => "Nuwa Xi",
+  "Лисандра мак Рейн" => "Lisandra mac Rayne",
+  "Деревня Эрвин" => "Erwin",
+  "Эрвин" => "Erwin",
+  "Зов Бури" => "Call of Thunder",
+  "Война Жаждущих" => "War of the Thirsty",
+  "Долина Кровавого Цветения" => "Valley of Blood-Blossom",
+  "Горный хребет Зверя" => "Beast Mountains",
+  "Хангорская долина" => "Khangorian Valley",
+  "Река Тяо Хэ" => "Tiao He",
+  "Горный хребет Шафар" => "Shafar Mountains",
+  "Рассветное море" => "Dawn Sea",
+  "Город Линфу" => "Linfu",
+  "Деревня Минчуань" => "Minchuan",
+  "Лес Шеньянь" => "Shenyan",
+  "Озеро Чанг" => "Lake Chang",
+  "Озеро Шуан" => "Lake Shuan",
+  "Мэй Ву" => "Mei Wu",
+  "НЭ" => "NE",
+  "ХЭ" => "ChE",
+  "год Новой Эры" => "year of the New Era",
+  "империя ланг-ан" => "lang-an",
+  "громовые кланы" => "thunder clans",
+  "вактар-йорден" => "vaktar-jorden",
+  "дикоземье" => "Wildlands",
+  "народы" => "peoples",
+  "организации" => "organisations",
+  "предметы" => "items",
+  "события" => "events",
+  "страны" => "realms",
+  "литература" => "literature",
+  "знания" => "lore",
+  "имитеи" => "imithei",
+  "кухня" => "cuisine",
+  "боги" => "gods",
+  "флора" => "flora",
+  "персонажи" => "characters",
+  "бестиарий" => "bestiary",
+  "места" => "places",
+  " из " => " of ",
+  "лет" => "years",
+  "места на карте" => "places on the map"
+}.freeze
+
+def localize_output(text)
+  return text unless BUILD_LOCALE == "en-GB"
+
+  protected_links = {}
+  text = text.gsub(/\[\[([^|\]]+)(?:\|([^\]]+))?\]\]/) do
+    target = Regexp.last_match(1).strip
+    label = Regexp.last_match(2)&.strip
+    approved = AstariaTranslations.name_for(target)
+    translated_target = approved&.fetch("title", nil).to_s.strip
+    translated_target = EN_OUTPUT_REPLACEMENTS.fetch(target, "").to_s.strip if translated_target.empty?
+    if translated_target.empty? && label && !label.match?(/[А-Яа-яЁё]/)
+      translated_target = label.gsub(/[*_`]/, "").strip
+    end
+    translated_target = target if translated_target.empty?
+    if label&.match?(/[А-Яа-яЁё]/)
+      label = EN_OUTPUT_REPLACEMENTS
+        .sort_by { |source, _translation| -source.length }
+        .reduce(label) { |result, (source, translation)| result.gsub(source, translation) }
+      label = translated_target if label.match?(/[А-Яа-яЁё]/) && !translated_target.match?(/[А-Яа-яЁё]/)
+    end
+
+    token = "ASTARIAWIKILINK#{protected_links.length}TOKEN"
+    protected_links[token] = "[[#{translated_target}#{label ? "|#{label}" : ""}]]"
+    token
+  end
+
+  localized = EN_OUTPUT_REPLACEMENTS
+    .sort_by { |source, _translation| -source.length }
+    .reduce(text) { |result, (source, translation)| result.gsub(source, translation) }
+    .gsub(/^lang:\s*ru\s*$/, "lang: en-GB")
+  protected_links.reduce(localized) do |result, (token, link)|
+    result.gsub(token, link)
+  end
+end
+
+def write_output(path, text)
+  File.write(path, localize_output(text))
+end
 
 # Canonical notes store the relationship on the object that naturally owns it:
 # a person names their country and Imitei path, while a landmark names its parent
@@ -473,7 +804,12 @@ def build_reference_lookup(records)
   lookup = {}
   records.each do |record|
     data = record[:data]
-    keys = [data["title"], data["public_slug"], File.basename(record[:source], ".md")]
+    keys = [
+      data["title"],
+      data["canonical_title"],
+      data["public_slug"],
+      File.basename(record[:source], ".md")
+    ]
     keys.concat(Array(data["aliases"]))
     keys.compact.each do |key|
       normalized = normalize_reference(key)
@@ -488,15 +824,19 @@ def record_category(record)
 end
 
 def canonical_relationship_records
-  secrets_prefix = File.join(ROOT, "Энциклопедия", "Секреты")
+  excluded_prefixes = PRIVATE_PATH_PREFIXES.map { |prefix| "#{prefix}/" }
   Dir.glob(File.join(ROOT, "Энциклопедия", "**", "*.md")).sort.map do |source|
-    next if source.start_with?("#{secrets_prefix}/")
+    next if excluded_prefixes.any? { |prefix| source.start_with?(prefix) }
 
     data, = frontmatter_for(source)
     next if data["title"].to_s.strip.empty?
 
     { source: source, data: data }
   end.compact
+end
+
+def canonical_reference_lookup
+  @canonical_reference_lookup ||= build_reference_lookup(canonical_relationship_records)
 end
 
 def append_unique_reference!(data, field, title)
@@ -508,6 +848,13 @@ def append_unique_reference!(data, field, title)
   return if identities.include?(normalize_reference(title))
 
   data[field] = values + ["[[#{title}]]"]
+end
+
+def reference_already_listed?(data, fields, title)
+  identity = normalize_reference(title)
+  fields.any? do |field|
+    reference_names(data[field]).any? { |value| normalize_reference(value) == identity }
+  end
 end
 
 def enrich_inverse_relationships!(published_records, canonical_records)
@@ -531,6 +878,16 @@ def enrich_inverse_relationships!(published_records, canonical_records)
 
           published_target = published_lookup[normalize_reference(canonical_target[:data]["title"])]
           next unless published_target
+
+          published_source = published_lookup[normalize_reference(source_title)]
+          next if BUILD_LOCALE == "en-GB" && published_source.nil?
+          if rule[:target_field] == "important_people" && reference_already_listed?(
+            published_target[:data],
+            %w[notable_people historical_figures known_individuals],
+            source_title
+          )
+            next
+          end
 
           append_unique_reference!(published_target[:data], rule[:target_field], source_title)
         end
@@ -563,10 +920,55 @@ def source_category(path)
 end
 
 def article_slug(data)
+  if USE_APPROVED_ROUTES
+    approved = AstariaTranslations.public_slug_for(data)
+    return slugify(approved) unless approved.empty?
+  end
+
   explicit = data["public_slug"].to_s.strip
   return slugify(explicit) unless explicit.empty?
 
   image_slug(data) || slugify(data["title"])
+end
+
+def legacy_article_slug(data)
+  explicit = data["public_slug"].to_s.strip
+  return slugify(explicit) unless explicit.empty?
+
+  image_slug(data) || slugify(data["title"])
+end
+
+def localized_source(source, data, body)
+  return [data, body] unless BUILD_LOCALE == "en-GB"
+
+  translation = AstariaTranslations.translation_for(source)
+  unless translation
+    relative = Pathname.new(source).relative_path_from(Pathname.new(ROOT))
+    raise "Missing en-GB translation: #{relative}"
+  end
+
+  translated_data, translated_body, = translation
+  canonical_title = data["title"].to_s
+  localized_data = data.merge(translated_data)
+  approved = AstariaTranslations.name_for(canonical_title)
+  if approved
+    localized_data["title"] = approved.fetch("title")
+    localized_data["public_slug"] = approved.fetch("slug")
+    localized_data["native_name"] = approved["native_name"] if approved.key?("native_name")
+  end
+  localized_data["aliases"] = Array(translated_data["aliases"])
+  localized_data["aliases"] << localized_data["title"]
+  localized_data["aliases"] = localized_data["aliases"].compact.map(&:to_s).uniq
+  localized_data["lang"] = "en-GB"
+  localized_data["canonical_title"] = canonical_title
+  # Map coordinates remain canonical data. Keeping them in the Russian source
+  # prevents the two language overlays from drifting apart when a marker moves.
+  localized_body = if data["type"] == "map"
+    "#{translated_body}\n#{body}"
+  else
+    translated_body
+  end
+  [localized_data, localized_body]
 end
 
 def public_route(source, data)
@@ -582,6 +984,21 @@ def public_route(source, data)
   category = source_category(source)
   category_route = CATEGORY_ROUTES.fetch(category, slugify(category || "articles"))
   "#{category_route}/#{article_slug(data)}"
+end
+
+def legacy_public_route(source, data)
+  explicit = data["public_slug"].to_s.strip
+  return "index" if explicit == "index"
+  return "map" if source.start_with?(File.join(ROOT, "Карты")) || data["type"] == "map"
+
+  if source.start_with?(File.join(ROOT, "Хронология"))
+    return "timeline/index" if data["type"] == "timeline" || explicit == "timeline"
+    return "timeline/#{legacy_article_slug(data)}"
+  end
+
+  category = source_category(source)
+  category_route = CATEGORY_ROUTES.fetch(category, slugify(category || "articles"))
+  "#{category_route}/#{legacy_article_slug(data)}"
 end
 
 def target_path(route)
@@ -601,7 +1018,19 @@ def display_value(value)
 end
 
 def display_category(category)
-  category
+  return category unless BUILD_LOCALE == "en-GB"
+
+  EN_OUTPUT_REPLACEMENTS.fetch(category, category)
+end
+
+def display_public_title(value)
+  text = value.to_s
+  return text unless BUILD_LOCALE == "en-GB"
+
+  approved = AstariaTranslations.name_for(text)
+  return approved.fetch("title") if approved
+
+  EN_OUTPUT_REPLACEMENTS.fetch(text, text)
 end
 
 def astaria_year_number(value)
@@ -623,6 +1052,8 @@ def astaria_year_label(value)
 end
 
 def age_label(age)
+  return age == 1 ? "year" : "years" if BUILD_LOCALE == "en-GB"
+
   mod100 = age % 100
   mod10 = age % 10
   return "лет" if (11..14).cover?(mod100)
@@ -632,9 +1063,50 @@ def age_label(age)
   "лет"
 end
 
+def english_reference_label(target, explicit_label, lookup)
+  label = explicit_label.to_s.strip
+  return label if !label.empty? && !label.match?(/[А-Яа-яЁё]/)
+
+  record = lookup[normalize_reference(target)]
+  return record[:data]["title"].to_s if record
+
+  approved = AstariaTranslations.name_for(target)
+  return approved.fetch("title") if approved
+
+  replacement = EN_OUTPUT_REPLACEMENTS[target.to_s]
+  return replacement unless replacement.to_s.empty?
+
+  nil
+end
+
+def english_measurement_value(value)
+  text = value.to_s.strip
+  match = text.match(/\A(\d+(?:[.,]\s*\d+)?)\s*(м|кг)\z/i)
+  return text unless match
+
+  number = match[1].gsub(/,\s*/, ".")
+  unit = match[2].downcase == "м" ? "m" : "kg"
+  "#{number} #{unit}"
+end
+
 def render_inline_value(value, route, lookup)
-  raw = INFOBOX_VALUE_TRANSLATIONS.fetch(value.to_s, value.to_s)
+  raw = if BUILD_LOCALE == "en-GB"
+    value.to_s
+  else
+    INFOBOX_VALUE_TRANSLATIONS.fetch(value.to_s, value.to_s)
+  end
   return "" if raw.strip.empty?
+
+  if BUILD_LOCALE == "en-GB" && !raw.include?("[[")
+    raw = english_measurement_value(raw)
+    raw = EN_OUTPUT_REPLACEMENTS
+      .sort_by { |source, _translation| -source.length }
+      .reduce(raw) { |result, (source, translation)| result.gsub(source, translation) }
+    if raw.match?(/[А-Яа-яЁё]/)
+      raw = english_reference_label(value.to_s, nil, lookup).to_s
+      return "" if raw.empty?
+    end
+  end
 
   rendered = +""
   index = 0
@@ -642,8 +1114,13 @@ def render_inline_value(value, route, lookup)
     match = Regexp.last_match
     rendered << CGI.escapeHTML(raw[index...match.begin(0)].to_s)
     target = match[1]
-    label = match[2] || match[1]
     record = lookup[normalize_reference(target)]
+    label = match[2]
+    if BUILD_LOCALE == "en-GB"
+      label = english_reference_label(target, label, lookup)
+      return "" if label.to_s.empty?
+    end
+    label = match[1] if label.to_s.empty?
     rendered << if record && record[:route] != route
       href = relative_href(route, record[:route])
       %(<a class="astaria-infobox-link" href="#{CGI.escapeHTML(href)}">#{CGI.escapeHTML(label)}</a>)
@@ -669,7 +1146,8 @@ def render_value(value, route, lookup)
       visible = items.first(5).map { |item| "<li>#{item}</li>" }.join
       hidden = items.drop(5).map { |item| "<li>#{item}</li>" }.join
       remaining = items.length - 5
-      return %(<ul class="astaria-infobox-list">#{visible}</ul><details class="astaria-infobox-more"><summary>Ещё #{remaining}</summary><ul class="astaria-infobox-list">#{hidden}</ul></details>)
+      more_label = BUILD_LOCALE == "en-GB" ? "#{remaining} more" : "Ещё #{remaining}"
+      return %(<ul class="astaria-infobox-list">#{visible}</ul><details class="astaria-infobox-more"><summary>#{more_label}</summary><ul class="astaria-infobox-list">#{hidden}</ul></details>)
     end
 
     list_items = items.map { |item| "<li>#{item}</li>" }.join
@@ -680,10 +1158,34 @@ def render_value(value, route, lookup)
 end
 
 def render_infobox_value(key, data, route, lookup)
+  if key == "native_name"
+    return CGI.escapeHTML(data[key].to_s.strip)
+  end
+
+  # The Imithei hero already presents these three defining facts. Repeating
+  # them in the adjacent profile made both locales noisier and allowed the two
+  # presentations to drift independently.
+  return "" if imitei_page?(data) && %w[profession_type country people].include?(key)
+
+  # A world's explicit continent list is the meaningful public hierarchy.
+  # The inverse parent-location index derives the same entries as generic
+  # child locations, which would otherwise duplicate them in the sidebar.
+  return "" if key == "child_locations" && !Array(data["continents"]).empty?
+
   return "" if key == "imitei" && (data[key] == false || data[key].to_s.strip.empty?)
+
+  if key == "population" && data[key].to_s.match?(/\A\d+\z/)
+    separator = BUILD_LOCALE == "en-GB" ? "," : "\u202f"
+    return CGI.escapeHTML(data[key].to_s.reverse.scan(/.{1,3}/).join(separator).reverse)
+  end
 
   if key == "significance"
     return "" unless data["timeline"] == true || data["type"].to_s == "historical-event"
+
+    if BUILD_LOCALE == "en-GB"
+      label = SIGNIFICANCE_LABELS_EN.fetch(data[key].to_i, "Chronicle")
+      return CGI.escapeHTML("#{label} event")
+    end
 
     label = SIGNIFICANCE_LABELS.fetch(data[key].to_i, "Летописное")
     return CGI.escapeHTML("#{label} событие")
@@ -693,15 +1195,26 @@ def render_infobox_value(key, data, route, lookup)
     year = astaria_year_number(data[key])
     return render_value(data[key], route, lookup) if year.nil?
 
-    age = CURRENT_ASTARIAN_YEAR - year
-    age_note = age.negative? ? "" : %(<span class="astaria-infobox-note">#{age} #{age_label(age)}</span>)
+    death_year = astaria_year_number(data["death_year"])
+    recorded_age = astaria_year_number(data["age_at_death"])
+    age = if death_year
+      recorded_age || death_year - year
+    else
+      CURRENT_ASTARIAN_YEAR - year
+    end
+    age_text = if death_year
+      BUILD_LOCALE == "en-GB" ? "#{age} #{age_label(age)} at death" : "#{age} #{age_label(age)} на момент смерти"
+    else
+      "#{age} #{age_label(age)}"
+    end
+    age_note = age.negative? ? "" : %(<span class="astaria-infobox-note">#{age_text}</span>)
     return "#{CGI.escapeHTML(astaria_year_label(year))}#{age_note}"
   end
 
   return "" if key == "year" && (data["historical_date"] || data["starting_date"])
   return "" if key == "endingYear" && data["ending_date"]
 
-  if %w[year endingYear].include?(key)
+  if %w[year endingYear death_year].include?(key)
     return CGI.escapeHTML(astaria_year_label(data[key]))
   end
 
@@ -743,8 +1256,11 @@ end
 def render_public_wikilinks(body, route, lookup)
   body.gsub(/(?<!!)\[\[([^\]|#]+)(?:#[^\]|]+)?(?:\|([^\]]+))?\]\]/) do
     target = Regexp.last_match(1).strip
-    label = (Regexp.last_match(2) || File.basename(target)).strip
     record = lookup[normalize_reference(target)]
+    label = Regexp.last_match(2)
+    label = record[:data]["title"] if label.to_s.empty? && BUILD_LOCALE == "en-GB" && record
+    label = File.basename(target) if label.to_s.empty?
+    label = label.strip
     escaped_label = CGI.escapeHTML(label)
 
     if record && record[:route] != route
@@ -788,7 +1304,7 @@ def description_from_body(body, data)
   return "Интерактивная карта Астарии с поиском по местам, масштабированием и слоями границ, рельефа и биомов." if data["type"] == "map"
 
   body_without_callouts = remove_markdown_callouts(body)
-  main_section = body_without_callouts.match(/^## Основной текст\s*\n+(.*?)(?=^## |\z)/m)
+  main_section = body_without_callouts.match(/^## (?:Основной текст|Main text)\s*\n+(.*?)(?=^## |\z)/m)
   text = main_section ? main_section[1] : cleanup_public_body(body_without_callouts, data)
   text = text.gsub(/```.*?```/m, " ")
   text = text.gsub(/%%.*?%%/m, " ")
@@ -809,7 +1325,9 @@ def description_from_body(body, data)
       "#{Regexp.last_match(1)}#{Regexp.last_match(2).upcase}"
     end
   end
-  return "Энциклопедия мира Астарии." if text.empty?
+  if text.empty?
+    return BUILD_LOCALE == "en-GB" ? "Encyclopaedia of Astaria." : "Энциклопедия мира Астарии."
+  end
 
   return text if text.length <= 180
 
@@ -879,8 +1397,8 @@ def imitei_portrait_roles(data, lookup)
   deity_name = reference_names(data["deity"]).first
   raise "Imitei #{data["title"]}: deity is missing" if deity_name.to_s.empty?
 
-  deity = lookup[normalize_reference(deity_name)]
-  raise "Imitei #{data["title"]}: deity #{deity_name.inspect} is not public" unless deity
+  deity = lookup[normalize_reference(deity_name)] || canonical_reference_lookup[normalize_reference(deity_name)]
+  raise "Imitei #{data["title"]}: deity #{deity_name.inspect} has no canonical metadata" unless deity
 
   gender = display_value(deity[:data]["gender"]).downcase
   primary = if gender.match?(/\A(?:женск|female)/)
@@ -942,15 +1460,52 @@ def build_imitei_hero(route, data, body, lookup)
   native_html = if native_name.empty?
     ""
   else
-    %(<p class="astaria-imitei-native" lang="ja">#{CGI.escapeHTML(native_name)}</p>)
+    native_language = if native_name.match?(/[\p{Han}\p{Hiragana}\p{Katakana}]/u)
+      "ja"
+    elsif native_name.match?(/[А-Яа-яЁё]/)
+      "ru"
+    else
+      "und"
+    end
+    %(<p class="astaria-imitei-native" lang="#{native_language}">#{CGI.escapeHTML(native_name)}</p>)
   end
   description = description_from_body(body, data)
 
+  ui = if BUILD_LOCALE == "en-GB"
+    {
+      path: "Path",
+      homeland: "Homeland",
+      patron: "Patron deity",
+      people: "People",
+      female: "Female form",
+      male: "Male form",
+      breadcrumbs: "Breadcrumbs",
+      home: "Astaria",
+      category: "Imithei",
+      kicker: "Imithei Path",
+      portraits: "Forms of the path"
+    }
+  else
+    {
+      path: "Направление",
+      homeland: "Родина пути",
+      patron: "Покровитель",
+      people: "Народ",
+      female: "Женский образ",
+      male: "Мужской образ",
+      breadcrumbs: "Хлебные крошки",
+      home: "Астария",
+      category: "Имитеи",
+      kicker: "Путь Имитея",
+      portraits: "Образы пути"
+    }
+  end
+
   metadata = [
-    ["Направление", data["profession_type"]],
-    ["Родина пути", data["country"] || Array(data["associated_organizations"]).first],
-    ["Покровитель", data["deity"]],
-    ["Народ", data["people"]]
+    [ui[:path], data["profession_type"]],
+    [ui[:homeland], data["country"] || Array(data["associated_organizations"]).first],
+    [ui[:patron], data["deity"]],
+    [ui[:people], data["people"]]
   ].map do |label, value|
     text = display_value(value)
     next if text.empty?
@@ -969,14 +1524,18 @@ def build_imitei_hero(route, data, body, lookup)
     "male" => male_portrait
   }
   portrait_labels = {
-    "female" => "Женский образ",
-    "male" => "Мужской образ"
+    "female" => ui[:female],
+    "male" => ui[:male]
   }
   portraits = imitei_portrait_roles(data, lookup).each_with_index.map do |role, index|
     image_path = portrait_paths.fetch(role)
     label = portrait_labels.fetch(role)
     number = format("%02d", index + 1)
-    alt = "#{label} пути «#{title}»"
+    alt = if BUILD_LOCALE == "en-GB"
+      "#{label} of the “#{title}” path"
+    else
+      "#{label} пути «#{title}»"
+    end
     <<~HTML
       <figure class="astaria-imitei-portrait" data-portrait="#{role}">
         #{render_image_tag(image_path, "astaria-imitei-portrait-image", alt_text: alt, fetchpriority: "high")}
@@ -987,20 +1546,20 @@ def build_imitei_hero(route, data, body, lookup)
 
   markdown_safe_html(<<~HTML)
     <header class="astaria-imitei-hero astaria-imitei-hero-#{title_size}-title">
-      <nav class="astaria-article-trail" aria-label="Хлебные крошки">
-        <a href="#{CGI.escapeHTML(home_href)}">Астария</a>
+      <nav class="astaria-article-trail" aria-label="#{ui[:breadcrumbs]}">
+        <a href="#{CGI.escapeHTML(home_href)}">#{ui[:home]}</a>
         <span aria-hidden="true">/</span>
-        <a href="../#{CGI.escapeHTML(category_route)}/">Имитеи</a>
+        <a href="../#{CGI.escapeHTML(category_route)}/">#{ui[:category]}</a>
       </nav>
       <div class="astaria-imitei-hero-grid">
         <div class="astaria-imitei-hero-copy">
-          <p class="astaria-imitei-kicker">Путь Имитея</p>
+          <p class="astaria-imitei-kicker">#{ui[:kicker]}</p>
           <h1 class="astaria-content-title astaria-imitei-title-#{title_size}">#{CGI.escapeHTML(title)}</h1>
           #{native_html}
           <p class="astaria-imitei-lede">#{CGI.escapeHTML(description)}</p>
           #{metadata_html}
         </div>
-        <div class="astaria-imitei-hero-media" aria-label="Образы пути «#{CGI.escapeHTML(title)}»">
+        <div class="astaria-imitei-hero-media" aria-label="#{ui[:portraits]} “#{CGI.escapeHTML(title)}”">
           #{portraits}
         </div>
       </div>
@@ -1031,7 +1590,7 @@ def build_title(route, data)
   HTML
 end
 
-def build_coverless_title(source, route, data)
+def build_coverless_title(source, route, data, lookup)
   return "" if data["public_slug"].to_s.strip == "index"
 
   chapter_page = %w[chapter session].include?(data["type"].to_s)
@@ -1045,15 +1604,18 @@ def build_coverless_title(source, route, data)
   else
     ""
   end
-  saga = saga_landing_record(source, data)
+  saga = saga_landing_record(source, data, lookup)
   saga_crumb = if saga
     %(<span aria-hidden="true">/</span><a href="#{CGI.escapeHTML(relative_href(route, saga[:route]))}">#{CGI.escapeHTML(saga[:data]["title"].to_s)}</a>)
   else
     ""
   end
   kicker = case data["type"].to_s
-  when "chapter", "session" then "Глава #{format("%03d", data["chapter"].to_i)}"
-  when "campaign", "document" then "Сага Астарии"
+  when "chapter", "session"
+    label = BUILD_LOCALE == "en-GB" ? "Chapter" : "Глава"
+    "#{label} #{format("%03d", data["chapter"].to_i)}"
+  when "campaign", "document"
+    BUILD_LOCALE == "en-GB" ? "An Astaria Saga" : "Сага Астарии"
   else display_category(category)
   end
   metadata = [
@@ -1098,6 +1660,7 @@ def build_sidebar(data, route, lookup)
     rendered = render_infobox_value(key, data, route, lookup)
     next if rendered.empty?
 
+    label = INFOBOX_LABELS_EN.fetch(key, label) if BUILD_LOCALE == "en-GB"
     %(<div class="astaria-infobox-row"><dt>#{CGI.escapeHTML(label)}</dt><dd>#{rendered}</dd></div>)
   end.compact
 
@@ -1115,7 +1678,11 @@ def build_sidebar(data, route, lookup)
     ""
   end
 
-  heading = imitei_page?(data) ? "Профиль пути" : "Сведения"
+  heading = if imitei_page?(data)
+    BUILD_LOCALE == "en-GB" ? "Path profile" : "Профиль пути"
+  else
+    BUILD_LOCALE == "en-GB" ? "Details" : "Сведения"
+  end
   infobox = if rows.empty?
     ""
   else
@@ -1132,7 +1699,7 @@ def build_sidebar(data, route, lookup)
   sidebar_class = imitei_page?(data) ? "astaria-sidebar astaria-imitei-profile" : "astaria-sidebar"
 
   markdown_safe_html(<<~HTML)
-    <aside class="#{sidebar_class}" aria-label="Сведения: #{CGI.escapeHTML(data["title"].to_s)}">
+    <aside class="#{sidebar_class}" aria-label="#{BUILD_LOCALE == "en-GB" ? "Details" : "Сведения"}: #{CGI.escapeHTML(data["title"].to_s)}">
     #{image}
     #{crest}
     #{infobox}
@@ -1155,21 +1722,33 @@ def build_astaria_journey(route, data)
   category_href = lambda do |category_route|
     relative_href(route, "#{category_route}/index").sub(/index\z/, "")
   end
-  destinations = [
-    ["Атлас мира", relative_href(route, "map"), "132 отмеченных места, масштаб и слои карты."],
-    ["Хронология", relative_href(route, "timeline/index"), "События, которые превратили древний мир в нынешний."],
-    ["Страны", category_href.call("countries"), "Государства, их правители, земли и неразрешённые противоречия."],
-    ["Народы", category_href.call("peoples"), "Культуры, обычаи и память тех, кто населяет Астарию."],
-    ["Боги", category_href.call("gods"), "Бессмертные силы, культы и опасные игры с судьбами смертных."],
-    ["Персонажи", category_href.call("characters"), "Герои, странники и существа, чьи решения меняют мир." ]
-  ]
+  destinations = if BUILD_LOCALE == "en-GB"
+    [
+      ["World Atlas", relative_href(route, "map"), "132 marked places, with adjustable scale and map layers."],
+      ["Timeline", relative_href(route, "timeline/index"), "The events that shaped an ancient world into the one known today."],
+      ["Realms", category_href.call("countries"), "States, their rulers, lands and unresolved conflicts."],
+      ["Peoples", category_href.call("peoples"), "The cultures, customs and memories of those who inhabit Astaria."],
+      ["Gods", category_href.call("gods"), "Immortal powers, their cults and dangerous games with mortal fate."],
+      ["Characters", category_href.call("characters"), "Heroes, wanderers and creatures whose choices change the world."]
+    ]
+  else
+    [
+      ["Атлас мира", relative_href(route, "map"), "132 отмеченных места, масштаб и слои карты."],
+      ["Хронология", relative_href(route, "timeline/index"), "События, которые превратили древний мир в нынешний."],
+      ["Страны", category_href.call("countries"), "Государства, их правители, земли и неразрешённые противоречия."],
+      ["Народы", category_href.call("peoples"), "Культуры, обычаи и память тех, кто населяет Астарию."],
+      ["Боги", category_href.call("gods"), "Бессмертные силы, культы и опасные игры с судьбами смертных."],
+      ["Персонажи", category_href.call("characters"), "Герои, странники и существа, чьи решения меняют мир."]
+    ]
+  end
+  action = BUILD_LOCALE == "en-GB" ? "Explore" : "Исследовать"
   cards = destinations.each_with_index.map do |(title, href, description), index|
     <<~HTML
       <a class="astaria-journey-card" href="#{CGI.escapeHTML(href)}">
         <span>#{format("%02d", index + 1)}</span>
         <strong>#{CGI.escapeHTML(title)}</strong>
         <p>#{CGI.escapeHTML(description)}</p>
-        <b>Исследовать <i aria-hidden="true">→</i></b>
+        <b>#{action} <i aria-hidden="true">→</i></b>
       </a>
     HTML
   end
@@ -1177,25 +1756,45 @@ def build_astaria_journey(route, data)
   <<~HTML
     <section class="astaria-place-next" aria-labelledby="astaria-place-next-title">
       <header>
-        <p>Выберите свой путь</p>
-        <h2 id="astaria-place-next-title">Куда отправиться дальше?</h2>
+        <p>#{BUILD_LOCALE == "en-GB" ? "Choose your path" : "Выберите свой путь"}</p>
+        <h2 id="astaria-place-next-title">#{BUILD_LOCALE == "en-GB" ? "Where will you travel next?" : "Куда отправиться дальше?"}</h2>
       </header>
       <div>#{cards.join("\n")}</div>
     </section>
   HTML
 end
 
-def map_markers(body)
+def map_markers(body, lookup)
   markers = []
   body.scan(/^\s*-\s+default,\s*(\d+),\s*(\d+),\s*\[\[([^|\]]+)(?:\|([^\]]+))?\]\]\s*$/) do |y, x, target, label|
-    name = (label || target).strip
-    kind = case name
+    canonical_name = (label || target).strip
+    kind = case canonical_name
     when /(?:Город|Деревня|Храм|Кузня|Обитель)/i then "settlement"
     when /(?:Озеро|Река|море|залив|пролив|перешеек)/i then "water"
     when /(?:Гор|Пустын|Лес|Джунг|Болот|Долин|луг|земл|Вулкан|Предгор)/i then "terrain"
     else "realm"
     end
-    markers << { y: y.to_f, x: x.to_f, target: target.strip, name: name, kind: kind }
+    record = lookup[normalize_reference(target)]
+    translated_marker_name = AstariaTranslations.english_title_for(target.strip)
+    name = if BUILD_LOCALE == "en-GB" && record
+      record[:data]["title"].to_s.strip
+    elsif BUILD_LOCALE == "en-GB" && translated_marker_name
+      translated_marker_name.to_s.strip
+    else
+      canonical_name
+    end
+    if BUILD_LOCALE == "en-GB" && record.nil? && translated_marker_name.nil?
+      next if ONLY_TRANSLATED
+
+      raise "Missing English map marker name: #{target.strip}"
+    end
+    markers << {
+      y: y.to_f,
+      x: x.to_f,
+      target: target.strip,
+      name: name.empty? ? canonical_name : name,
+      kind: kind
+    }
   end
   markers
 end
@@ -1205,14 +1804,85 @@ def build_map_explorer(data, body, route, lookup)
   height = data["map_height"].to_f
   width = 7680.0 if width <= 0
   height = 4320.0 if height <= 0
-  markers = map_markers(body)
+  markers = map_markers(body, lookup)
 
-  layers = {
-    "states" => ["Границы", "Политическая карта"],
-    "heightmap" => ["Рельеф", "Физическая карта"],
-    "biomes" => ["Биомы", "Карта природных зон"]
-  }.map do |key, labels|
-    path = extract_asset_path((data["map_layers"] || {})[key])
+  ui = if BUILD_LOCALE == "en-GB"
+    {
+      layers: {
+        "states" => ["Boundaries", "Political map"],
+        "heightmap" => ["Relief", "Physical map"],
+        "biomes" => ["Biomes", "Natural regions"]
+      },
+      show: "Show",
+      breadcrumbs: "Breadcrumbs",
+      home: "Astaria",
+      trail: "World Atlas",
+      kicker: "Interactive atlas",
+      place_count: ->(count) { count == 1 ? "location" : "locations" },
+      title: "Map of Astaria",
+      description: "Zoom with the mouse wheel, drag with a mouse or touch, and switch layers to explore boundaries, relief and natural regions.",
+      search: "Find a place on the map",
+      search_placeholder: "Find a city, river or region…",
+      layer: "Map layer",
+      results: "Map search results",
+      guide: "Guide",
+      guide_text: "Enter a name or choose a point directly on the map.",
+      legend: "Map legend",
+      settlements: "Settlements",
+      waters: "Waters",
+      landscape: "Landscape",
+      regions: "Regions",
+      viewport: "Interactive map. Move with the arrow keys; zoom with plus and minus.",
+      close: "Close place card",
+      read: "Read the entry",
+      preparing: "The entry for this place is still being prepared.",
+      zoom: "Map zoom",
+      zoom_in: "Zoom in",
+      zoom_out: "Zoom out",
+      reset: "Show the whole map",
+      help: "Mouse wheel — zoom · Drag — pan"
+    }
+  else
+    {
+      layers: {
+        "states" => ["Границы", "Политическая карта"],
+        "heightmap" => ["Рельеф", "Физическая карта"],
+        "biomes" => ["Биомы", "Карта природных зон"]
+      },
+      show: "Показать",
+      breadcrumbs: "Хлебные крошки",
+      home: "Астария",
+      trail: "Атлас мира",
+      kicker: "Интерактивный атлас",
+      place_count: ->(count) { place_count_label(count) },
+      title: "Карта Астарии",
+      description: "Приближайте карту колёсиком, перемещайте её мышью или касанием и переключайте слои, чтобы увидеть границы, рельеф и природные зоны.",
+      search: "Найти место на карте",
+      search_placeholder: "Найти город, реку или регион…",
+      layer: "Слой карты",
+      results: "Результаты поиска по карте",
+      guide: "Путеводитель",
+      guide_text: "Введите название или выберите точку прямо на карте.",
+      legend: "Легенда карты",
+      settlements: "Поселения",
+      waters: "Воды",
+      landscape: "Ландшафт",
+      regions: "Регионы",
+      viewport: "Интерактивная карта. Перемещайте стрелками, приближайте клавишами плюс и минус.",
+      close: "Закрыть карточку места",
+      read: "Читать статью",
+      preparing: "Статья об этом месте пока готовится.",
+      zoom: "Масштаб карты",
+      zoom_in: "Приблизить",
+      zoom_out: "Отдалить",
+      reset: "Показать всю карту",
+      help: "Колёсико — масштаб · Перетаскивание — обзор"
+    }
+  end
+
+  layers = ui[:layers].map do |key, labels|
+    configured_path = extract_asset_path((data["map_layers"] || {})[key])
+    path = BUILD_LOCALE == "en-GB" ? AstariaTranslations.map_layer_for(key) : configured_path
     [key, labels, path]
   end
 
@@ -1234,65 +1904,65 @@ def build_map_explorer(data, body, route, lookup)
     # point north. CSS `top` grows southward, so the vertical position must be
     # mirrored when the canonical marker is placed over the raster.
     top = ((height - marker[:y]) / height * 100).round(4)
-    %(<button type="button" class="astaria-map-marker astaria-map-marker-#{marker[:kind]}" style="left:#{left}%;top:#{top}%" data-name="#{CGI.escapeHTML(marker[:name])}" data-kind="#{marker[:kind]}" data-x="#{left}" data-y="#{top}" data-href="#{CGI.escapeHTML(href)}" aria-label="Показать: #{CGI.escapeHTML(marker[:name])}"><span></span></button>)
+    %(<button type="button" class="astaria-map-marker astaria-map-marker-#{marker[:kind]}" style="left:#{left}%;top:#{top}%" data-name="#{CGI.escapeHTML(marker[:name])}" data-kind="#{marker[:kind]}" data-x="#{left}" data-y="#{top}" data-href="#{CGI.escapeHTML(href)}" aria-label="#{ui[:show]}: #{CGI.escapeHTML(marker[:name])}"><span></span></button>)
   end.join("\n")
 
   home_href = relative_href(route, "index")
   <<~HTML
     <section class="astaria-map-page" aria-labelledby="astaria-map-title">
-      <nav class="astaria-article-trail astaria-map-trail" aria-label="Хлебные крошки"><a href="#{CGI.escapeHTML(home_href)}">Астария</a><span aria-hidden="true">/</span><span>Атлас мира</span></nav>
+      <nav class="astaria-article-trail astaria-map-trail" aria-label="#{ui[:breadcrumbs]}"><a href="#{CGI.escapeHTML(home_href)}">#{ui[:home]}</a><span aria-hidden="true">/</span><span>#{ui[:trail]}</span></nav>
       <header class="astaria-map-heading">
         <div>
-          <p class="astaria-map-kicker">Интерактивный атлас · #{markers.length} #{place_count_label(markers.length)}</p>
-          <h1 id="astaria-map-title">Карта Астарии</h1>
+          <p class="astaria-map-kicker">#{ui[:kicker]} · #{markers.length} #{ui[:place_count].call(markers.length)}</p>
+          <h1 id="astaria-map-title">#{ui[:title]}</h1>
         </div>
-        <p>Приближайте карту колёсиком, перемещайте её мышью или касанием и переключайте слои, чтобы увидеть границы, рельеф и природные зоны.</p>
+        <p>#{ui[:description]}</p>
       </header>
       <div class="astaria-map-explorer" data-map-width="#{width.to_i}" data-map-height="#{height.to_i}">
         <div class="astaria-map-toolbar">
           <label class="astaria-map-search-label">
             <svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-4-4"></path></svg>
-            <span class="sr-only">Найти место на карте</span>
-            <input class="astaria-map-search" type="search" placeholder="Найти город, реку или регион…" autocomplete="off">
+            <span class="sr-only">#{ui[:search]}</span>
+            <input class="astaria-map-search" type="search" placeholder="#{ui[:search_placeholder]}" autocomplete="off">
           </label>
-          <div class="astaria-map-layer-switcher" role="group" aria-label="Слой карты">
+          <div class="astaria-map-layer-switcher" role="group" aria-label="#{ui[:layer]}">
             #{layer_buttons}
           </div>
         </div>
         <div class="astaria-map-shell">
-          <aside class="astaria-map-panel" aria-label="Результаты поиска по карте">
+          <aside class="astaria-map-panel" aria-label="#{ui[:results]}">
             <div class="astaria-map-panel-intro">
-              <span>Путеводитель</span>
-              <strong>#{markers.length} #{place_count_label(markers.length)} на карте</strong>
-              <p>Введите название или выберите точку прямо на карте.</p>
+              <span>#{ui[:guide]}</span>
+              <strong>#{markers.length} #{ui[:place_count].call(markers.length)} #{BUILD_LOCALE == "en-GB" ? "on the map" : "на карте"}</strong>
+              <p>#{ui[:guide_text]}</p>
             </div>
             <div class="astaria-map-results" aria-live="polite"></div>
-            <div class="astaria-map-legend" aria-label="Легенда карты">
-              <span><i class="astaria-map-legend-settlement"></i>Поселения</span>
-              <span><i class="astaria-map-legend-water"></i>Воды</span>
-              <span><i class="astaria-map-legend-terrain"></i>Ландшафт</span>
-              <span><i class="astaria-map-legend-realm"></i>Регионы</span>
+            <div class="astaria-map-legend" aria-label="#{ui[:legend]}">
+              <span><i class="astaria-map-legend-settlement"></i>#{ui[:settlements]}</span>
+              <span><i class="astaria-map-legend-water"></i>#{ui[:waters]}</span>
+              <span><i class="astaria-map-legend-terrain"></i>#{ui[:landscape]}</span>
+              <span><i class="astaria-map-legend-realm"></i>#{ui[:regions]}</span>
             </div>
           </aside>
-          <div class="astaria-map-viewport" tabindex="0" aria-label="Интерактивная карта. Перемещайте стрелками, приближайте клавишами плюс и минус.">
+          <div class="astaria-map-viewport" tabindex="0" aria-label="#{ui[:viewport]}">
             <div class="astaria-map-stage">
-              <img class="astaria-map-preview" src="assets/maps/web/states-web.jpg" alt="" aria-hidden="true" decoding="async" fetchpriority="high" draggable="false">
+              <img class="astaria-map-preview" src="#{CGI.escapeHTML(public_asset_url(AstariaTranslations.map_layer_for("states", variant: "web")))}" alt="" aria-hidden="true" decoding="async" fetchpriority="high" draggable="false">
               #{layer_images}
               <div class="astaria-map-markers">#{marker_buttons}</div>
             </div>
             <div class="astaria-map-detail" hidden>
-              <button type="button" class="astaria-map-detail-close" aria-label="Закрыть карточку места">×</button>
+              <button type="button" class="astaria-map-detail-close" aria-label="#{ui[:close]}">×</button>
               <span class="astaria-map-detail-kind"></span>
               <strong class="astaria-map-detail-name"></strong>
-              <a class="astaria-map-detail-link" href="">Читать статью <span aria-hidden="true">→</span></a>
-              <p class="astaria-map-detail-note">Статья об этом месте пока готовится.</p>
+              <a class="astaria-map-detail-link" href="">#{ui[:read]} <span aria-hidden="true">→</span></a>
+              <p class="astaria-map-detail-note">#{ui[:preparing]}</p>
             </div>
-            <div class="astaria-map-zoom-controls" aria-label="Масштаб карты">
-              <button type="button" data-map-action="zoom-in" aria-label="Приблизить">+</button>
-              <button type="button" data-map-action="zoom-out" aria-label="Отдалить">−</button>
-              <button type="button" data-map-action="reset" aria-label="Показать всю карту">⌂</button>
+            <div class="astaria-map-zoom-controls" aria-label="#{ui[:zoom]}">
+              <button type="button" data-map-action="zoom-in" aria-label="#{ui[:zoom_in]}">+</button>
+              <button type="button" data-map-action="zoom-out" aria-label="#{ui[:zoom_out]}">−</button>
+              <button type="button" data-map-action="reset" aria-label="#{ui[:reset]}">⌂</button>
             </div>
-            <p class="astaria-map-help">Колёсико — масштаб · Перетаскивание — обзор</p>
+            <p class="astaria-map-help">#{ui[:help]}</p>
           </div>
         </div>
       </div>
@@ -1303,7 +1973,11 @@ end
 def timeline_year_label(year, ending_year = nil)
   year = year.to_i
   ending_year = ending_year.to_i unless ending_year.nil? || ending_year.to_s.empty?
-  era = year.negative? ? "ХЭ" : "НЭ"
+  era = if BUILD_LOCALE == "en-GB"
+    year.negative? ? "ChE" : "NE"
+  else
+    year.negative? ? "ХЭ" : "НЭ"
+  end
   start = year.negative? ? year.abs : year
   finish = if ending_year
     ending_year.negative? ? ending_year.abs : ending_year
@@ -1320,6 +1994,11 @@ def timeline_events(lookup)
     data, body = frontmatter_for(path)
     next unless data["timeline"] == true
     next if data["year"].nil?
+    if BUILD_LOCALE == "en-GB"
+      next if ONLY_TRANSLATED && AstariaTranslations.translation_for(path).nil?
+
+      data, body = localized_source(path, data, body)
+    end
 
     title = data["title"].to_s
     published = lookup[normalize_reference(title)]
@@ -1329,7 +2008,11 @@ def timeline_events(lookup)
       ending_year: data["endingYear"],
       category: data["timeline_category"].to_s.strip,
       significance: data["significance"].to_i,
-      significance_label: SIGNIFICANCE_LABELS.fetch(data["significance"].to_i, "Летописное"),
+      significance_label: if BUILD_LOCALE == "en-GB"
+        SIGNIFICANCE_LABELS_EN.fetch(data["significance"].to_i, "Chronicle")
+      else
+        SIGNIFICANCE_LABELS.fetch(data["significance"].to_i, "Летописное")
+      end,
       description: timeline_description(body, data),
       image: timeline_image(data),
       route: published && published[:route]
@@ -1365,10 +2048,60 @@ def build_timeline_page(data, route, lookup)
     %(<option value="#{CGI.escapeHTML(category)}">#{CGI.escapeHTML(category)}</option>)
   end.join("\n")
 
-  era_sections = [
-    ["chthonic", "Хтоническая эра", "До Падения Хтона", events.select { |event| event[:year].negative? }],
-    ["new", "Новая эра", "После Падения Хтона", events.reject { |event| event[:year].negative? }]
-  ].map do |era, title, subtitle, era_events|
+  ui = if BUILD_LOCALE == "en-GB"
+    {
+      eras: [
+        ["chthonic", "Chthonic Era", "Before the Fall of Chthon"],
+        ["new", "New Era", "After the Fall of Chthon"]
+      ],
+      historical_milestone: "Historical milestone",
+      event_count: ->(count) { count == 1 ? "1 event" : "#{count} events" },
+      read: "Read the chronicle",
+      trail: "Timeline",
+      hero_alt: "A city of Astaria during an invasion",
+      hero_meta: "#{events.length} milestones · from 5025 ChE to the present day",
+      title: "History of Astaria",
+      lede: "A chronicle of civilisations, wars, discoveries and falls preserved in the archives of the world.",
+      filters: "Timeline filters",
+      search: "Find an event",
+      search_placeholder: "For example, Thalassia or the Fall of Chthon…",
+      event_type: "Event type",
+      all_events: "All events",
+      showing: "Showing: #{events.length}",
+      empty_title: "No events found",
+      empty_text: "Try a different query or choose another type."
+    }
+  else
+    {
+      eras: [
+        ["chthonic", "Хтоническая эра", "До Падения Хтона"],
+        ["new", "Новая эра", "После Падения Хтона"]
+      ],
+      historical_milestone: "Историческая веха",
+      event_count: ->(count) { "#{count} событий" },
+      read: "Читать летопись",
+      trail: "Хронология",
+      hero_alt: "Город Астарии во время вторжения",
+      hero_meta: "#{events.length} вех · от 5025 года ХЭ до наших дней",
+      title: "История Астарии",
+      lede: "Летопись цивилизаций, войн, открытий и падений, сохранившихся в архивах мира.",
+      filters: "Фильтры хронологии",
+      search: "Поиск события",
+      search_placeholder: "Например, Талассия или Падение Хтона…",
+      event_type: "Тип события",
+      all_events: "Все события",
+      showing: "Показано: #{events.length}",
+      empty_title: "Событий не найдено",
+      empty_text: "Попробуйте изменить запрос или выбрать другой тип."
+    }
+  end
+
+  era_sections = ui[:eras].map do |era, title, subtitle|
+    era_events = if era == "chthonic"
+      events.select { |event| event[:year].negative? }
+    else
+      events.reject { |event| event[:year].negative? }
+    end
     cards = era_events.map do |event|
       event_title = CGI.escapeHTML(event[:title])
       heading = if event[:route]
@@ -1382,7 +2115,7 @@ def build_timeline_page(data, route, lookup)
       else
         ""
       end
-      category = event[:category].empty? ? "Историческая веха" : event[:category]
+      category = event[:category].empty? ? ui[:historical_milestone] : event[:category]
       search_value = [event[:title], category, event[:significance_label], event[:description]].join(" ").downcase.tr("ё", "е")
       markdown_safe_html(<<~HTML)
         <li class="astaria-timeline-event" data-era="#{era}" data-category="#{CGI.escapeHTML(category)}" data-search="#{CGI.escapeHTML(search_value)}">
@@ -1393,7 +2126,7 @@ def build_timeline_page(data, route, lookup)
               <p class="astaria-timeline-meta"><span>#{CGI.escapeHTML(category)}</span><span>#{CGI.escapeHTML(event[:significance_label])}</span></p>
               #{heading}
               <div>#{CGI.escapeHTML(event[:description])}</div>
-              #{event[:route] ? %(<a class="astaria-timeline-read" href="#{CGI.escapeHTML(relative_href(route, event[:route]))}">Читать летопись <span aria-hidden="true">→</span></a>) : ""}
+              #{event[:route] ? %(<a class="astaria-timeline-read" href="#{CGI.escapeHTML(relative_href(route, event[:route]))}">#{ui[:read]} <span aria-hidden="true">→</span></a>) : ""}
             </div>
           </article>
         </li>
@@ -1402,7 +2135,7 @@ def build_timeline_page(data, route, lookup)
 
     <<~HTML
       <section class="astaria-timeline-era" data-timeline-era="#{era}">
-        <header><p>#{CGI.escapeHTML(subtitle)}</p><h2>#{CGI.escapeHTML(title)}</h2><span>#{era_events.length} событий</span></header>
+        <header><p>#{CGI.escapeHTML(subtitle)}</p><h2>#{CGI.escapeHTML(title)}</h2><span>#{ui[:event_count].call(era_events.length)}</span></header>
         <ol class="astaria-timeline-list">#{cards}</ol>
       </section>
     HTML
@@ -1410,22 +2143,22 @@ def build_timeline_page(data, route, lookup)
 
   <<~HTML
     <section class="astaria-timeline-page" aria-labelledby="astaria-timeline-title">
-      <nav class="astaria-article-trail"><a href="#{CGI.escapeHTML(home_href)}">Астария</a><span aria-hidden="true">/</span><span>Хронология</span></nav>
+      <nav class="astaria-article-trail"><a href="#{CGI.escapeHTML(home_href)}">#{BUILD_LOCALE == "en-GB" ? "Astaria" : "Астария"}</a><span aria-hidden="true">/</span><span>#{ui[:trail]}</span></nav>
       <header class="astaria-timeline-hero">
-        <img src="../assets/images/acheus_invasion.jpg" alt="Город Астарии во время вторжения" fetchpriority="high">
+        <img src="../assets/images/acheus_invasion.jpg" alt="#{ui[:hero_alt]}" fetchpriority="high">
         <div class="astaria-timeline-hero-shade"></div>
         <div>
-          <p>#{events.length} вех · от 5025 года ХЭ до наших дней</p>
-          <h1 id="astaria-timeline-title">История Астарии</h1>
-          <span>Летопись цивилизаций, войн, открытий и падений, сохранившихся в архивах мира.</span>
+          <p>#{ui[:hero_meta]}</p>
+          <h1 id="astaria-timeline-title">#{ui[:title]}</h1>
+          <span>#{ui[:lede]}</span>
         </div>
       </header>
-      <div class="astaria-timeline-controls" role="search" aria-label="Фильтры хронологии">
-        <label><span>Поиск события</span><input class="astaria-timeline-search" type="search" placeholder="Например, Талассия или Падение Хтона…" autocomplete="off"></label>
-        <label><span>Тип события</span><select class="astaria-timeline-category"><option value="">Все события</option>#{controls}</select></label>
-        <p class="astaria-timeline-count" aria-live="polite">Показано: #{events.length}</p>
+      <div class="astaria-timeline-controls" role="search" aria-label="#{ui[:filters]}">
+        <label><span>#{ui[:search]}</span><input class="astaria-timeline-search" type="search" placeholder="#{ui[:search_placeholder]}" autocomplete="off"></label>
+        <label><span>#{ui[:event_type]}</span><select class="astaria-timeline-category"><option value="">#{ui[:all_events]}</option>#{controls}</select></label>
+        <p class="astaria-timeline-count" aria-live="polite">#{ui[:showing]}</p>
       </div>
-      <div class="astaria-timeline-empty" hidden><strong>Событий не найдено</strong><span>Попробуйте изменить запрос или выбрать другой тип.</span></div>
+      <div class="astaria-timeline-empty" hidden><strong>#{ui[:empty_title]}</strong><span>#{ui[:empty_text]}</span></div>
       <div class="astaria-timeline-eras">#{era_sections}</div>
     </section>
   HTML
@@ -1461,7 +2194,7 @@ def cleanup_public_body(body, data)
   body = body.gsub(/\r\n?/, "\n")
   body = body.gsub(/%%.*?%%\s*/m, "")
   body = body.sub(/\A\s*# .+?\n+/, "")
-  body = body.gsub(/^## Основной текст\s*\n+/, "")
+  body = body.gsub(/^## (?:Основной текст|Main text)\s*\n+/, "")
   body = body.gsub(/^## Образы\s*\n+/, "") if imitei_page?(data)
   body = body.gsub(/^## Связи\s*\n+```dataview\n.*?```\s*/m, "")
   body = body.gsub(/```dataview\n.*?```\s*/m, "")
@@ -1485,35 +2218,39 @@ def saga_landing?(data)
   data["category"] == "Литература" && !Array(data["central_characters"]).empty?
 end
 
-def saga_chapter_records(source)
-  Dir.glob(File.join(File.dirname(source), "*.md")).sort.map do |path|
-    next if path == source || !publishable_markdown?(path)
-
-    data, body = frontmatter_for(path)
-    next unless %w[chapter session].include?(data["type"].to_s)
-
-    { source: path, data: data, body: body, route: public_route(path, data) }
-  end.compact.sort_by { |chapter| [chapter[:data]["chapter"].to_i, chapter[:data]["title"].to_s] }
+def records_from_lookup(lookup)
+  lookup.values.uniq { |record| record[:source] }
 end
 
-def saga_landing_record(source, data)
+def saga_chapter_records(source, lookup)
+  records_from_lookup(lookup).select do |record|
+    record[:source] != source &&
+      File.dirname(record[:source]) == File.dirname(source) &&
+      %w[chapter session].include?(record[:data]["type"].to_s)
+  end.sort_by { |chapter| [chapter[:data]["chapter"].to_i, chapter[:data]["title"].to_s] }
+end
+
+def saga_landing_record(source, data, lookup)
   return nil unless %w[chapter session].include?(data["type"].to_s)
 
   expected_title = data["saga"].to_s.strip
-  Dir.glob(File.join(File.dirname(source), "*.md")).sort.each do |candidate|
-    next if candidate == source || !publishable_markdown?(candidate)
+  records_from_lookup(lookup).find do |candidate|
+    next false if candidate[:source] == source
+    next false unless File.dirname(candidate[:source]) == File.dirname(source)
+    next false unless saga_landing?(candidate[:data])
+    next true if expected_title.empty?
 
-    candidate_data, = frontmatter_for(candidate)
-    next unless saga_landing?(candidate_data)
-    next if !expected_title.empty? && candidate_data["title"].to_s != expected_title
-
-    return { source: candidate, data: candidate_data, route: public_route(candidate, candidate_data) }
+    candidate_names = [
+      candidate[:data]["title"],
+      candidate[:data]["canonical_title"],
+      *Array(candidate[:data]["aliases"])
+    ].map { |name| normalize_reference(name) }
+    candidate_names.include?(normalize_reference(expected_title))
   end
-  nil
 end
 
 def chapter_short_title(data)
-  data["title"].to_s.sub(/^Глава\s+\d+\s*[-—:]\s*/i, "")
+  data["title"].to_s.sub(/^(?:Глава|Chapter)\s+\d+\s*[-—:]\s*/i, "")
 end
 
 def saga_chapter_card(chapter, route)
@@ -1549,7 +2286,8 @@ end
 def build_saga_chapters(source, route, data, lookup)
   return "" unless saga_landing?(data)
 
-  chapters = saga_chapter_records(source)
+  english = BUILD_LOCALE == "en-GB"
+  chapters = saga_chapter_records(source, lookup)
   content = if chapters.empty?
     character_links = Array(data["central_characters"]).first(4).map do |character|
       render_value(character, route, lookup)
@@ -1557,14 +2295,15 @@ def build_saga_chapters(source, route, data, lookup)
     links = if character_links.empty?
       ""
     else
-      %(<nav class="astaria-saga-character-links" aria-label="Герои саги">#{character_links}</nav>)
+      label = english ? "Saga characters" : "Герои саги"
+      %(<nav class="astaria-saga-character-links" aria-label="#{label}">#{character_links}</nav>)
     end
     <<~HTML
       <div class="astaria-saga-empty">
         <div class="astaria-saga-empty-mark" aria-hidden="true"><span>✦</span></div>
         <div>
-          <strong>Летопись ещё раскрывается</strong>
-          <p>Главы пока не опубликованы. Начать знакомство с сагой можно с её героев — их судьбы уже вплетены в Энциклопедию.</p>
+          <strong>#{english ? "The chronicle is still unfolding" : "Летопись ещё раскрывается"}</strong>
+          <p>#{english ? "No chapters have been published yet. You can begin with the saga’s characters — their fates are already woven into the Encyclopaedia." : "Главы пока не опубликованы. Начать знакомство с сагой можно с её героев — их судьбы уже вплетены в Энциклопедию."}</p>
           #{links}
         </div>
       </div>
@@ -1574,7 +2313,7 @@ def build_saga_chapters(source, route, data, lookup)
       groups = saga_chapter_region_groups(chapters)
       region_links = groups.each_with_index.map do |group, index|
         region = display_value(group.first[:data]["region"])
-        region = "Пролог" if region.empty?
+        region = english ? "Prologue" : "Пролог" if region.empty?
         first_number = group.first[:data]["chapter"].to_i
         last_number = group.last[:data]["chapter"].to_i
         range = first_number == last_number ? format("%03d", first_number) : "#{format("%03d", first_number)}–#{format("%03d", last_number)}"
@@ -1582,10 +2321,12 @@ def build_saga_chapters(source, route, data, lookup)
       end.join
       regions = groups.each_with_index.map do |group, index|
         region = display_value(group.first[:data]["region"])
-        region = "Пролог" if region.empty?
+        region = english ? "Prologue" : "Пролог" if region.empty?
         first_number = group.first[:data]["chapter"].to_i
         last_number = group.last[:data]["chapter"].to_i
-        range = first_number == last_number ? "Глава #{format("%03d", first_number)}" : "Главы #{format("%03d", first_number)}–#{format("%03d", last_number)}"
+        singular = english ? "Chapter" : "Глава"
+        plural = english ? "Chapters" : "Главы"
+        range = first_number == last_number ? "#{singular} #{format("%03d", first_number)}" : "#{plural} #{format("%03d", first_number)}–#{format("%03d", last_number)}"
         cards = group.map { |chapter| saga_chapter_card(chapter, route) }.join
         <<~HTML
           <section class="astaria-saga-chapter-range" id="chapters-region-#{index + 1}">
@@ -1594,18 +2335,25 @@ def build_saga_chapters(source, route, data, lookup)
           </section>
         HTML
       end.join
-      %(<nav class="astaria-saga-range-nav" aria-label="Регионы саги">#{region_links}</nav>#{regions})
+      label = english ? "Saga regions" : "Регионы саги"
+      %(<nav class="astaria-saga-range-nav" aria-label="#{label}">#{region_links}</nav>#{regions})
     else
       cards = chapters.map { |chapter| saga_chapter_card(chapter, route) }.join
       %(<div class="astaria-saga-chapter-grid">#{cards}</div>)
     end
   end
 
-  count_label = chapters.empty? ? "Главы готовятся к публикации" : "Доступно глав: #{chapters.length}"
+  count_label = if english
+    chapters.empty? ? "Chapters are being prepared for publication" : "Chapters available: #{chapters.length}"
+  else
+    chapters.empty? ? "Главы готовятся к публикации" : "Доступно глав: #{chapters.length}"
+  end
+  chronicle_label = english ? "A Journey’s Chronicle" : "Летопись путешествия"
+  chapters_label = english ? "Chapters" : "Главы"
   <<~HTML
     <section class="astaria-saga-chapters" aria-labelledby="astaria-saga-chapters-title">
       <header>
-        <div><p>Летопись путешествия</p><h2 id="astaria-saga-chapters-title">Главы</h2></div>
+        <div><p>#{chronicle_label}</p><h2 id="astaria-saga-chapters-title">#{chapters_label}</h2></div>
         <span>#{CGI.escapeHTML(count_label)}</span>
       </header>
       #{content}
@@ -1613,30 +2361,35 @@ def build_saga_chapters(source, route, data, lookup)
   HTML
 end
 
-def build_chapter_navigation(source, route, data)
-  saga = saga_landing_record(source, data)
+def build_chapter_navigation(source, route, data, lookup)
+  saga = saga_landing_record(source, data, lookup)
   return "" unless saga
 
-  chapters = saga_chapter_records(saga[:source])
+  chapters = saga_chapter_records(saga[:source], lookup)
   current_index = chapters.index { |chapter| File.expand_path(chapter[:source]) == File.expand_path(source) }
   return "" unless current_index
 
   previous = current_index.positive? ? chapters[current_index - 1] : nil
   following = current_index < chapters.length - 1 ? chapters[current_index + 1] : nil
+  english = BUILD_LOCALE == "en-GB"
+  previous_label = english ? "← Previous chapter" : "← Предыдущая глава"
+  following_label = english ? "Next chapter →" : "Следующая глава →"
+  saga_label = english ? "Return to the saga" : "Вернуться к саге"
+  navigation_label = english ? "Chapter navigation" : "Навигация по главам"
   previous_link = if previous
-    %(<a class="astaria-chapter-nav-previous" href="#{CGI.escapeHTML(relative_href(route, previous[:route]))}"><small>← Предыдущая глава</small><strong>#{CGI.escapeHTML(chapter_short_title(previous[:data]))}</strong></a>)
+    %(<a class="astaria-chapter-nav-previous" href="#{CGI.escapeHTML(relative_href(route, previous[:route]))}"><small>#{previous_label}</small><strong>#{CGI.escapeHTML(chapter_short_title(previous[:data]))}</strong></a>)
   else
     %(<span aria-hidden="true"></span>)
   end
   following_link = if following
-    %(<a class="astaria-chapter-nav-next" href="#{CGI.escapeHTML(relative_href(route, following[:route]))}"><small>Следующая глава →</small><strong>#{CGI.escapeHTML(chapter_short_title(following[:data]))}</strong></a>)
+    %(<a class="astaria-chapter-nav-next" href="#{CGI.escapeHTML(relative_href(route, following[:route]))}"><small>#{following_label}</small><strong>#{CGI.escapeHTML(chapter_short_title(following[:data]))}</strong></a>)
   else
     %(<span aria-hidden="true"></span>)
   end
 
-  saga_link = %(<a class="astaria-chapter-nav-saga" href="#{CGI.escapeHTML(relative_href(route, saga[:route]))}"><small>Вернуться к саге</small><strong>#{CGI.escapeHTML(saga[:data]["title"].to_s)}</strong></a>)
+  saga_link = %(<a class="astaria-chapter-nav-saga" href="#{CGI.escapeHTML(relative_href(route, saga[:route]))}"><small>#{saga_label}</small><strong>#{CGI.escapeHTML(saga[:data]["title"].to_s)}</strong></a>)
   [
-    %(<nav class="astaria-chapter-navigation" aria-label="Навигация по главам">),
+    %(<nav class="astaria-chapter-navigation" aria-label="#{navigation_label}">),
     previous_link,
     saga_link,
     following_link,
@@ -1644,12 +2397,51 @@ def build_chapter_navigation(source, route, data)
   ].join("\n")
 end
 
-def generated_frontmatter(data, body)
-  public_data = data.reject { |key, _value| %w[ready quartz].include?(key) || key.to_s.start_with?("secret_") }
+def english_metadata_value(value, lookup, preserve_cyrillic: false)
+  case value
+  when Array
+    value.map { |item| english_metadata_value(item, lookup, preserve_cyrillic: preserve_cyrillic) }.compact
+  when Hash
+    value.each_with_object({}) do |(key, item), result|
+      translated = english_metadata_value(item, lookup, preserve_cyrillic: key.to_s == "native_name")
+      result[key] = translated unless translated.nil? || translated.respond_to?(:empty?) && translated.empty?
+    end
+  when String
+    unresolved = false
+    translated = value.gsub(/\[\[([^|\]]+)(?:\|([^\]]+))?\]\]/) do
+      target = Regexp.last_match(1).strip
+      label = english_reference_label(target, Regexp.last_match(2), lookup)
+      if label.to_s.empty?
+        unresolved = true
+        ""
+      else
+        "[[#{label}]]"
+      end
+    end
+    return nil if unresolved
+
+    translated = EN_OUTPUT_REPLACEMENTS
+      .sort_by { |source, _translation| -source.length }
+      .reduce(translated) { |result, (source, replacement)| result.gsub(source, replacement) }
+    translated = english_measurement_value(translated)
+    return nil if !preserve_cyrillic && translated.match?(/[А-Яа-яЁё]/)
+
+    translated
+  else
+    value
+  end
+end
+
+def generated_frontmatter(data, body, lookup)
+  public_data = data.reject do |key, _value|
+    %w[ready quartz canonical_title legacy_public_route].include?(key) || key.to_s.start_with?("secret_")
+  end
   aliases = Array(public_data["aliases"])
   aliases << public_data["title"] if public_data["title"]
+  aliases << data["legacy_public_route"] if data["legacy_public_route"]
   public_data["aliases"] = aliases.compact.map(&:to_s).uniq
   public_data["description"] = description_from_body(body, data)
+  public_data = english_metadata_value(public_data, lookup) if BUILD_LOCALE == "en-GB"
 
   yaml = YAML.dump(public_data).sub(/\A---\s*\n/, "")
   "---\n#{yaml}---\n"
@@ -1690,20 +2482,20 @@ def write_public_article(source, route, data, body, lookup)
     clean_body = render_public_wikilinks(clean_body, route, lookup)
     cover = build_cover(data)
     has_visual = !cover.empty? || !sidebar_image(data).nil? || !crest_image(data).nil?
-    title = has_visual ? build_title(route, data) : build_coverless_title(source, route, data)
+    title = has_visual ? build_title(route, data) : build_coverless_title(source, route, data, lookup)
     lede = build_featured_lede(data)
     sidebar = build_sidebar(data, route, lookup)
     journey = build_astaria_journey(route, data)
     chapters = build_saga_chapters(source, route, data, lookup)
-    chapter_navigation = build_chapter_navigation(source, route, data)
+    chapter_navigation = build_chapter_navigation(source, route, data, lookup)
   end
   footer = build_article_footer(route, data)
   sections = [cover, title, lede, sidebar, clean_body, chapter_navigation, chapters, journey, footer].map(&:strip).reject(&:empty?)
-  text = "#{generated_frontmatter(data, body)}\n#{sections.join("\n\n")}\n"
+  text = "#{generated_frontmatter(data, body, lookup)}\n#{sections.join("\n\n")}\n"
   unless data["type"] == "map"
     ASSET_REWRITES.each { |old_path, new_path| text = text.gsub(old_path, new_path) }
   end
-  File.write(destination, text)
+  write_output(destination, text)
 
   {
     source: source,
@@ -1752,6 +2544,14 @@ end
 
 def entry_country(entry)
   data = entry[:data]
+  if entry[:category] == "Места"
+    # A related people does not make a continent, island or wilderness part
+    # of that people's present-day realm. Place cards therefore show a realm
+    # only when the canonical relationship names the realm itself.
+    names = [data["country"], data["related"]].flat_map { |value| reference_names(value) }
+    return names.find { |name| COUNTRY_ORDER.include?(name) }
+  end
+
   direct_values = [data["country"], data["origin"], data["organizations"], data["ethnicity"], data["related_ethnicities"], data["related"]]
   names = direct_values.flat_map { |value| reference_names(value) }
   names.each do |name|
@@ -1805,7 +2605,9 @@ def sort_character_group_entries(entries, group, country_entry)
   ruler_identity = normalize_reference(ruler)
 
   entries.sort_by do |entry|
-    ruler_rank = !ruler_identity.empty? && normalize_reference(entry[:title]) == ruler_identity ? 0 : 1
+    canonical_title = entry[:data]["canonical_title"].to_s.strip
+    entry_identity = canonical_title.empty? ? entry[:title] : canonical_title
+    ruler_rank = !ruler_identity.empty? && normalize_reference(entry_identity) == ruler_identity ? 0 : 1
     [ruler_rank, *character_name_sort_key(entry, group)]
   end
 end
@@ -1859,6 +2661,7 @@ def category_card(entry, route)
   end
 
   country = entry_country(entry)
+  country_label = display_public_title(country)
   featured = entry[:data]["featured_entry"]
   eyebrow = if featured
     %(<small>Отправная точка</small>)
@@ -1869,9 +2672,11 @@ def category_card(entry, route)
     %(<small>#{CGI.escapeHTML(subtitle)}</small>)
   elsif creature_character?(entry)
     species = reference_names(entry[:data]["species"]).first || "Существо"
-    %(<small>#{CGI.escapeHTML(species)}</small>)
+    %(<small>#{CGI.escapeHTML(display_public_title(species))}</small>)
+  elsif entry[:category] == "Места" && !entry[:data]["card_subtitle"].to_s.strip.empty?
+    %(<small>#{CGI.escapeHTML(entry[:data]["card_subtitle"].to_s.strip)}</small>)
   elsif country
-    %(<small>#{CGI.escapeHTML(country)}</small>)
+    %(<small>#{CGI.escapeHTML(country_label)}</small>)
   else
     ""
   end
@@ -1882,7 +2687,7 @@ def category_card(entry, route)
     entry[:description],
     entry[:category],
     entry[:data]["type"],
-    country,
+    country_label,
     display_value(entry[:data]["aliases"])
   ].compact.join(" ").downcase.tr("ё", "е").gsub(/\s+/, " ").strip
   meta_rank = entry_sort_key(entry).first
@@ -1920,8 +2725,16 @@ def write_category_indexes(entries)
         </div>
       HTML
     elsif category == "Персонажи"
-      country_entries = entries.select { |entry| entry[:category] == "Страны" }.to_h { |entry| [entry[:title], entry] }
-      published_entries = entries.to_h { |entry| [normalize_reference(entry[:title]), entry] }
+      country_entries = entries.select { |entry| entry[:category] == "Страны" }.each_with_object({}) do |entry, index|
+        index[entry[:title]] = entry
+        canonical_title = entry[:data]["canonical_title"].to_s.strip
+        index[canonical_title] = entry unless canonical_title.empty?
+      end
+      published_entries = entries.each_with_object({}) do |entry, index|
+        index[normalize_reference(entry[:title])] = entry
+        canonical_title = entry[:data]["canonical_title"].to_s.strip
+        index[normalize_reference(canonical_title)] = entry unless canonical_title.empty?
+      end
       displayed_card_count = 0
       groups = sorted_entries.group_by { |entry| character_group(entry) }
         .sort_by { |group, _group_entries| character_group_sort_key(group) }
@@ -1936,11 +2749,12 @@ def write_category_indexes(entries)
         ordered_group_entries = sort_character_group_entries(visible_group_entries, group, country_entry)
         displayed_card_count += ordered_group_entries.length
         group_cards = ordered_group_entries.map { |entry| category_card(entry, route) }.join("\n")
+        group_label = display_public_title(group)
         group_heading = if country_entry
           href = "../#{country_entry[:route]}"
-          %(<a href="#{CGI.escapeHTML(href)}">#{CGI.escapeHTML(group)} <span aria-hidden="true">↗</span></a>)
+          %(<a href="#{CGI.escapeHTML(href)}">#{CGI.escapeHTML(group_label)} <span aria-hidden="true">↗</span></a>)
         else
-          CGI.escapeHTML(group)
+          CGI.escapeHTML(group_label)
         end
         <<~HTML
           <section class="astaria-category-group">
@@ -1975,11 +2789,11 @@ def write_category_indexes(entries)
     end
     body = <<~MARKDOWN
       ---
-      title: #{category_title}
+      title: #{JSON.generate(category_title)}
       lang: ru
-      description: #{description}
+      description: #{JSON.generate(description)}
       aliases:
-        - #{category}
+        - #{JSON.generate(category)}
       ---
 
       <section class="astaria-category-page" aria-labelledby="astaria-category-title">
@@ -1995,7 +2809,7 @@ def write_category_indexes(entries)
 
     destination = File.join(DEST, route, "index.md")
     FileUtils.mkdir_p(File.dirname(destination))
-    File.write(destination, body)
+    write_output(destination, body)
   end
 end
 
@@ -2160,7 +2974,7 @@ def write_index(entries)
     </div>
   MARKDOWN
 
-  File.write(File.join(DEST, "index.md"), body)
+  write_output(File.join(DEST, "index.md"), body)
 end
 
 FileUtils.rm_rf(DEST)
@@ -2173,9 +2987,15 @@ records = []
 PUBLIC_ROOTS.each do |root|
   Dir.glob(File.join(ROOT, root, "**", "*.md")).sort.each do |source|
     next unless publishable_markdown?(source)
+    if BUILD_LOCALE == "en-GB" && ONLY_TRANSLATED
+      next unless AstariaTranslations.translation_for(source)
+    end
 
     data, body = frontmatter_for(source)
+    legacy_route = legacy_public_route(source, data)
+    data, body = localized_source(source, data, body)
     route = public_route(source, data)
+    data["legacy_public_route"] = legacy_route if legacy_route != route
     if routes.key?(route)
       raise "Duplicate public route #{route.inspect}: #{routes[route]} and #{source}"
     end
@@ -2208,12 +3028,17 @@ asset_paths.map! { |relative| ASSET_REWRITES.fetch(relative, relative) }
 asset_paths.concat([
   "Assets/Images/Avatar on north.jpg",
   "Assets/Images/Acheus_Invasion.jpg",
+  "Assets/Images/Silvian_Lake.jpg",
   "Assets/Images/bg.jpg",
   "Assets/Maps/Web/states-web.jpg",
   "Assets/Maps/states.png",
   "Assets/Maps/heightmap.png",
   "Assets/Maps/biomes.png"
 ])
+AstariaTranslations.map_layers.each_key do |key|
+  asset_paths << AstariaTranslations.map_layer_for(key)
+end
+asset_paths << AstariaTranslations.map_layer_for("states", variant: "web")
 asset_paths.uniq.sort.each { |relative| copy_asset(relative) }
 
 puts "Prepared #{entries.size} published notes in #{DEST}"

@@ -66,7 +66,7 @@ meta_imitei_order = [
   "Вознесённый", "Ракша", "Шаман", "Онмёдзи", "Страж"
 ]
 meta_god_order = [
-  "Гиперион I", "Тарун", "Церунна", "Тиресий", "Дракон Ланг-Ан",
+  "Гиперион I", "Тарун", "Церунна", "Тиресий", "Ланг-Ан",
   "Мерката", "Аст", "Альзаман", "Калипсо", "Икатерра", "Хангор",
   "Винтра", "Шубханкари", "Руфу", "Ицунэ", "Велисса"
 ]
@@ -101,6 +101,11 @@ canonical_notes = Dir.glob(File.join(ROOT, "Энциклопедия", "**", "*.
   { path: path, data: data, source: source }
 end.compact
 canonical_by_title = canonical_notes.to_h { |note| [note[:data]["title"].to_s, note] }
+canonical_by_reference = {}
+canonical_notes.each do |note|
+  canonical_by_reference[note[:data]["title"].to_s] = note
+  canonical_by_reference[File.basename(note[:path], ".md")] = note
+end
 public_canonical_notes = canonical_notes.reject do |note|
   note[:path].include?(File.join("Энциклопедия", "Секреты")) ||
     note[:data]["secret"] == true ||
@@ -415,7 +420,7 @@ published_imitei_notes.each do |note|
   title = note[:data]["title"]
   deity = note[:data]["deity"].to_s[/\[\[([^|\]]+)/, 1]
   expect.call(deity == imitei_patrons.fetch(title), "#{title}: patron deity is not canonical")
-  deity_note = canonical_by_title[deity]
+  deity_note = canonical_by_title[deity] || canonical_notes.find { |candidate| File.basename(candidate[:path], ".md") == deity }
   expect.call(!deity_note.nil?, "#{title}: patron deity article is missing")
   gender = deity_note&.dig(:data, "gender")
   expect.call(%w[Женский Мужской].include?(gender), "#{title}: patron deity has no supported gender")
@@ -617,7 +622,7 @@ enriched_article_titles = [
   "Умар ибн Ла-Ахад",
   "Мерката",
   "Церунна",
-  "Дракон Ланг-Ан",
+  "Ланг-Ан",
   "Культ Меркаты",
   "Круг Друидов",
   "Дерево Ларудан",
@@ -909,11 +914,14 @@ canonical_notes.each do |note|
       next if target_title.to_s.empty?
 
       expect.call(target_title != title, "#{title}: #{source_key} relationship points to itself")
-      target = canonical_by_title[target_title]
+      target = canonical_by_reference[target_title]
       expect.call(!target.nil?, "#{title}: relationship points to missing character #{target_title}")
       next unless target
 
-      reciprocal_titles = Array(target[:data][reciprocal_key]).map { |item| relation_target.call(item) }.compact
+      reciprocal_titles = Array(target[:data][reciprocal_key]).map do |item|
+        reference = relation_target.call(item)
+        canonical_by_reference[reference]&.dig(:data, "title") || reference
+      end.compact
       expect.call(reciprocal_titles.include?(title), "#{title} ↔ #{target_title}: #{source_key}/#{reciprocal_key} is not reciprocal")
     end
   end
@@ -922,11 +930,14 @@ canonical_notes.each do |note|
     target_title = relation_target.call(value)
     next if target_title.to_s.empty?
 
-    target = canonical_by_title[target_title]
+    target = canonical_by_reference[target_title]
     expect.call(!target.nil?, "#{title}: partner points to missing character #{target_title}")
     next unless target
 
-    reciprocal_titles = Array(target[:data]["partner"]).map { |item| relation_target.call(item) }.compact
+    reciprocal_titles = Array(target[:data]["partner"]).map do |item|
+      reference = relation_target.call(item)
+      canonical_by_reference[reference]&.dig(:data, "title") || reference
+    end.compact
     expect.call(reciprocal_titles.include?(title), "#{title} ↔ #{target_title}: partner relationship is not reciprocal")
   end
 end
@@ -1626,6 +1637,16 @@ expect.call(!nisa.include?("Город Бахара"), "Nisa's public article st
 shen_wu = read.call("characters/shen-wu.html")
 expect.call(shen_wu.include?(%(<span class="astaria-infobox-note">803 года</span>)), "Shen Wu's current age must be 803")
 
+eleanor_mac_thorn = read.call("characters/eleanor-mac-thorn.html")
+expect.call(
+  eleanor_mac_thorn.include?(%(<span class="astaria-infobox-note">149 лет на момент смерти</span>)),
+  "Eleanor mac Thorn's infobox must use her age at death instead of her current hypothetical age"
+)
+expect.call(
+  eleanor_mac_thorn.include?(%(<dt>Год смерти</dt><dd>73 НЭ</dd>)),
+  "Eleanor mac Thorn's infobox must render her year of death"
+)
+
 canonical_corpus = Dir.glob(File.join(ROOT, "Энциклопедия", "**", "*.md")).map { |path| File.read(path) }.join("\n")
 expect.call(!canonical_corpus.include?("Ли Шу") && !canonical_corpus.include?("Ли Гуань"), "Retired names for General Guan Li remain in the canonical corpus")
 expect.call(!canonical_corpus.include?("космическая цивилизация, уничтожающая"), "Ast's retired external-civilization idea remains in the canonical corpus")
@@ -1654,6 +1675,10 @@ expect.call(!File.exist?(File.join(CONTENT, "secrets")), "Private Secrets direct
 
 render_page_source = File.read(File.join(ROOT, "_quartz", "quartz", "components", "renderPage.tsx"))
 expect.call(render_page_source.include?("componentData.ctx.argv.serve || !cfg.baseUrl"), "Local preview must not add the production /astaria prefix to search results")
+expect.call(
+  render_page_source.include?('contentIndexScript = `var fetchData = fetch(') && !render_page_source.include?('contentIndexScript = `const fetchData = fetch('),
+  "Locale replacement must be able to refresh the search index without redeclaring a lexical fetchData binding"
+)
 
 native_name_notes = []
 missing_native_names = []

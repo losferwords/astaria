@@ -11,6 +11,13 @@
   --astaria-paper: rgba(253, 247, 235, 0.95);
   --astaria-paper-deep: rgba(239, 224, 194, 0.96);
   --astaria-border: rgba(89, 23, 23, 0.32);
+  --astaria-search-label: "Поиск по Астарии";
+  --astaria-search-label-short: "Поиск";
+}
+
+html[lang^="en"] {
+  --astaria-search-label: "Search Astaria";
+  --astaria-search-label-short: "Search";
 }
 
 a[href],
@@ -35,6 +42,10 @@ body {
 html {
   background: #b9b6af;
   scrollbar-gutter: stable;
+}
+
+html.astaria-locale-loading body {
+  visibility: hidden;
 }
 
 html:has(.search-container.active) {
@@ -725,11 +736,7 @@ a:hover {
       rgba(217, 167, 81, 0.18),
       transparent 28%
     ),
-    radial-gradient(
-      circle at 4% 92%,
-      rgba(119, 29, 28, 0.3),
-      transparent 34%
-    ),
+    radial-gradient(circle at 4% 92%, rgba(119, 29, 28, 0.3), transparent 34%),
     linear-gradient(145deg, #171c24 0%, #20252c 54%, #11151b 100%);
   border: 1px solid rgba(218, 177, 101, 0.5);
   border-radius: 9px;
@@ -1623,7 +1630,7 @@ body[data-slug="index"] .search-button p {
 }
 
 body[data-slug="index"] .search-button p::after {
-  content: "Поиск по Астарии";
+  content: var(--astaria-search-label);
   font-size: 1rem;
   letter-spacing: 0.01em;
 }
@@ -2600,6 +2607,41 @@ body[data-slug="index"] .astaria-sitebar {
   text-decoration: none;
 }
 
+.astaria-sitebar-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: clamp(0.85rem, 2vw, 1.5rem);
+}
+
+.astaria-language-switcher {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.28rem;
+  color: rgba(255, 247, 230, 0.52);
+  font-family: var(--headerFont);
+  font-size: 0.76rem;
+  letter-spacing: 0.07em;
+}
+
+.astaria-language-switcher button {
+  padding: 0.32rem 0.18rem;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid transparent;
+  color: rgba(255, 247, 230, 0.65);
+}
+
+.astaria-language-switcher button:hover,
+.astaria-language-switcher button:focus-visible {
+  color: #ffe7b1;
+}
+
+.astaria-language-switcher button.is-active {
+  border-color: #d6b46e;
+  color: #fff7e6;
+}
+
 .astaria-sitebar-brand {
   display: inline-flex;
   align-items: center;
@@ -2687,7 +2729,7 @@ body[data-slug="index"] .search-button p {
 
 .search-button p::after,
 body[data-slug="index"] .search-button p::after {
-  content: "Поиск по Астарии";
+  content: var(--astaria-search-label);
   font-size: 0.98rem;
   line-height: 1;
 }
@@ -2857,6 +2899,10 @@ body:not([data-slug="index"]):not([data-slug="map"]) .markdown-rendered {
   font-size: clamp(3.1rem, 7vw, 5.8rem);
   line-height: 0.96;
   text-wrap: balance;
+}
+
+html[lang^="en"] body[data-slug="organizations/index"] .astaria-category-header h1 {
+  font-size: clamp(3.1rem, 5.5vw, 4.75rem);
 }
 
 .astaria-category-header > div {
@@ -4143,6 +4189,10 @@ body[data-slug="map"] .markdown-rendered > * {
     display: none;
   }
 
+  .astaria-sitebar-actions {
+    gap: 0;
+  }
+
   .left.sidebar,
   body[data-slug="index"] .left.sidebar {
     top: 0.62rem;
@@ -4267,6 +4317,17 @@ body[data-slug="map"] .markdown-rendered > * {
 }
 
 @media (max-width: 560px) {
+  .markdown-rendered h2 {
+    overflow-wrap: anywhere;
+    text-wrap: balance;
+  }
+
+  html[lang^="en"] body[data-slug="characters/gilja-kangarlavehotri"] .astaria-content-title {
+    overflow-wrap: anywhere;
+    font-size: clamp(2.05rem, 10vw, 2.65rem);
+    letter-spacing: -0.015em;
+  }
+
   .astaria-sitebar-brand > span {
     width: 1.9rem;
     height: 1.9rem;
@@ -4274,12 +4335,15 @@ body[data-slug="map"] .markdown-rendered > * {
 
   .left.sidebar,
   body[data-slug="index"] .left.sidebar {
-    width: calc(100% - 6rem);
+    right: 5rem;
+    left: 4.5rem;
+    width: auto;
+    margin: 0;
   }
 
   .search-button p::after,
   body[data-slug="index"] .search-button p::after {
-    content: "Поиск";
+    content: var(--astaria-search-label-short);
   }
 
   .astaria-category-header h1 {
@@ -4287,6 +4351,12 @@ body[data-slug="map"] .markdown-rendered > * {
     overflow-wrap: anywhere;
     font-size: clamp(2.55rem, 13vw, 3.4rem);
     letter-spacing: -0.01em;
+  }
+
+  html[lang^="en"] body[data-slug="organizations/index"] .astaria-category-header h1 {
+    font-size: clamp(1.85rem, 8.8vw, 2.25rem);
+    letter-spacing: -0.025em;
+    white-space: nowrap;
   }
 
   .astaria-map-heading h1 {

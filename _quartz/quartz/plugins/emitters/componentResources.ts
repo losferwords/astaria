@@ -7,6 +7,8 @@ import spaRouterScript from "../../components/scripts/spa.inline";
 // @ts-ignore
 import astariaScript from "../../components/scripts/astaria.inline";
 // @ts-ignore
+import localeScript from "../../components/scripts/locale.inline";
+// @ts-ignore
 import popoverScript from "../../components/scripts/popover.inline";
 import baseStyles from "../../styles/base.scss";
 import customStyles from "../../styles/custom.scss";
@@ -93,6 +95,9 @@ function addGlobalPageResources(
 ) {
   const cfg = ctx.cfg.configuration;
 
+  if (process.env.ASTARIA_MULTILINGUAL === "true") {
+    componentResources.beforeDOMLoaded.unshift(localeScript);
+  }
   componentResources.afterDOMLoaded.push(astariaScript);
 
   // popovers

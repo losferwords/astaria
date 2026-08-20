@@ -6,11 +6,14 @@ require "uri"
 
 ROOT = Pathname.new(File.expand_path("..", __dir__))
 PUBLIC = ROOT.join("_quartz", "public")
+PREVIEW = ARGV.delete("--preview")
+abort "Usage: #{$PROGRAM_NAME} [--preview]" unless ARGV.empty?
 
 abort "Quartz build not found: #{PUBLIC}" unless PUBLIC.directory?
 
 broken = []
 checked = 0
+preview_fallbacks = 0
 
 PUBLIC.glob("**/*.html").each do |html|
   html.read.scan(/(?:href|src|data-src)="([^"]+)"/) do |match|
@@ -32,11 +35,24 @@ PUBLIC.glob("**/*.html").each do |html|
     candidates = [target]
     candidates << Pathname.new("#{target}.html") if target.extname.empty?
     candidates << target.join("index.html") if target.extname.empty? || path.end_with?("/")
-    broken << [html.relative_path_from(PUBLIC).to_s, raw] unless candidates.any?(&:file?)
+    found = candidates.any?(&:file?)
+    if !found && PREVIEW && target.to_s.start_with?(PUBLIC.to_s + File::SEPARATOR)
+      relative = target.relative_path_from(PUBLIC)
+      locale_target = PUBLIC.join("__locales", "ru", relative)
+      locale_candidates = [locale_target]
+      locale_candidates << Pathname.new("#{locale_target}.html") if locale_target.extname.empty?
+      locale_candidates << locale_target.join("index.html") if locale_target.extname.empty? || path.end_with?("/")
+      if locale_candidates.any?(&:file?)
+        found = true
+        preview_fallbacks += 1
+      end
+    end
+    broken << [html.relative_path_from(PUBLIC).to_s, raw] unless found
   end
 end
 
 puts "Checked #{checked} internal links and assets"
+puts "Accepted #{preview_fallbacks} untranslated preview targets" if PREVIEW
 if broken.empty?
   puts "No broken build references found"
   exit 0

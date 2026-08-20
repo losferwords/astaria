@@ -21,6 +21,9 @@
 _quartz/.quartz/
 _quartz/quartz/.quartz-cache/
 _quartz/content/
+_quartz/content-en/
+_quartz/content-ru/
+_quartz/build/
 _quartz/node_modules/
 _quartz/public/
 

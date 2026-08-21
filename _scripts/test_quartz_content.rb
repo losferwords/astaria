@@ -158,6 +158,8 @@ expect.call(oni[:source].include?("# О́ни") && oni[:source].include?("**О́
 amato = canonical_by_title.fetch("Амато")
 expect.call(amato[:data]["ready"] == true && amato[:data]["quartz"] == true, "Amato must be published now that its art is ready")
 expect.call(amato[:data]["cover_image"] == "[[Assets/Images/Amato.jpg]]", "Amato must use its canonical cover art")
+expect.call(amato[:data]["crest_image"] == "[[Assets/Images/Crests/amato_crest_cropped.png]]", "Amato must use its canonical crest")
+expect.call(amato[:data]["foundation"] == "-2695 ХЭ", "Amato must retain its 2695 ChE foundation date")
 expect.call(File.file?(File.join(ROOT, "Assets", "Images", "Amato.jpg")), "Amato cover art is missing")
 expect.call(!amato[:source].include?("_Описание пока не добавлено._"), "Amato still has no encyclopedia description")
 ["Основной текст", "Острова и море", "Императорский двор", "Вера, души и божественный ветер", "Обычаи эдзо", "Туманный остров и Обитель"].each do |heading|
@@ -181,6 +183,7 @@ expect.call(kaito[:data]["cover_image"] == "[[Assets/Images/Kaito_City.jpg]]", "
 expect.call(File.file?(File.join(ROOT, "Assets", "Images", "Kaito_City.jpg")), "Kaito city art is missing")
 expect.call(kaito[:data]["native_name"] == "海都", "Kaito article is missing its canonical Ezo name")
 expect.call(kaito[:data]["settlement_type"] == "Столица", "Kaito settlement type must be written in Russian")
+expect.call(kaito[:data]["foundation"] == "-2695 ХЭ", "Kaito must retain its 2695 ChE foundation date")
 expect.call(!kaito[:source].include?("_Описание пока не добавлено._"), "Kaito still has no encyclopedia description")
 ["[[Амато]]", "[[Остров Ояширо|Ояширо]]", "[[Ицунэ]]", "[[Онмёдзи]]"].each do |fact|
   expect.call(kaito[:source].include?(fact), "Kaito article is missing #{fact}")
@@ -195,24 +198,26 @@ expect.call(kaito_page.include?("Город Кайто"), "Kaito public page doe
 expect.call(kaito_page.include?("assets/images/kaito_city.jpg"), "Kaito public page does not render its new city art")
 
 vends = canonical_by_title.fetch("Венды")
-expect.call(vends[:data]["ready"] == false && vends[:data]["quartz"] == false, "Vends must remain Obsidian-only until their art is ready")
+expect.call(vends[:data]["ready"] == true && vends[:data]["quartz"] == true, "Vends must be published now that their art is ready")
+expect.call(vends[:data]["cover_image"] == "[[Assets/Images/Wends.jpg]]", "Vends must use their canonical cover art")
 expect.call(vends[:data]["homeland"] == "[[Обитель]]", "Vends article is missing its homeland")
 expect.call(vends[:data]["deity"] == "[[Велисса]]", "Vends article is missing its patron deity")
 expect.call(Array(vends[:data]["parent_peoples"]).include?("[[Вактары]]"), "Vends article is missing its Vaktar ancestry")
 expect.call(!vends[:source].include?("_Описание пока не добавлено._"), "Vends still have no encyclopedia description")
-["[[Обитель|Обители]]", "[[Велисса|Велиссы]]", "[[Страж|Стражей]]", "[[Веданский лес|Веданского леса]]"].each do |fact|
+["[[Обитель|Обители]]", "[[Велисса|Велиссы]]", "[[Страж|Стражей]]", "[[Веданский лес|Веданского леса]]", "От ненависти до любви", "Сексуальность", "Девственность", "холодный очаг"].each do |fact|
   expect.call(vends[:source].include?(fact), "Vends article is missing #{fact}")
 end
 vends_body = vends[:source].split(/^# Венды\s*$/, 2).last.to_s
 vends_word_count = vends_body.split.size
-expect.call(vends_word_count.between?(300, 500), "Vends article has an unsuitable people-overview length: #{vends_word_count} words")
+expect.call(vends_word_count.between?(850, 1_100), "Vends article has an unsuitable people-overview length: #{vends_word_count} words")
 expect.call(
   !vends_body.match?(/Росс(?:ия|ии|ию)|Украин|Беларус|Польш|Серб|Хорват|Румын|Литв|богатыр|Коще/i),
   "Vends public article contains a real-world reference or unwanted folklore cliché"
 )
 
 mafka = canonical_by_title.fetch("Мафка")
-expect.call(mafka[:data]["ready"] == false && mafka[:data]["quartz"] == false, "Mafka must remain Obsidian-only until her art is ready")
+expect.call(mafka[:data]["ready"] == true && mafka[:data]["quartz"] == true, "Mafka must be published now that her art is ready")
+expect.call(mafka[:data]["portrait_image"] == "[[Assets/Images/Mafka.jpg]]", "Mafka must use her canonical portrait")
 expect.call(!mafka[:data].key?("birth_year"), "Mafka must not have an invented chronological birth year")
 {
   "occupation" => "Царица Обители",
@@ -231,6 +236,48 @@ expect.call(
   !mafka[:source].match?(/Чистое Сердце|Чёрное Сердце|Кузница Плоти|не взрослеет|нет биологических родителей|душ[ау] вне материнского тела/i),
   "Mafka public article exposes her secret origin"
 )
+
+obitelj = canonical_by_title.fetch("Обитель")
+expect.call(obitelj[:data]["ready"] == true && obitelj[:data]["quartz"] == true, "Obitelj must be published now that its art is ready")
+expect.call(obitelj[:data]["cover_image"] == "[[Assets/Images/Obitelj.jpg]]", "Obitelj must use its canonical cover art")
+expect.call(obitelj[:data]["crest_image"] == "[[Assets/Images/Crests/obitelj_crest_cropped.png]]", "Obitelj must use its canonical crest")
+expect.call(obitelj[:data]["foundation"] == "-1236 ХЭ", "Obitelj must retain its 1236 ChE foundation date")
+["От ненависти до любви", "Земля и достаток", "Мирград и власть", "Велисса и круг года", "Любовь как сила", "Война Ивара и Стражи"].each do |heading|
+  expect.call(obitelj[:source].include?("## #{heading}"), "Obitelj article is missing the #{heading} section")
+end
+[
+  "[[Девичьи Холмы|Девичьих Холмов]]", "[[Сребролесье|Сребролесью]]", "1236 году ХЭ",
+  "взаимное желание", "Сексуальность", "Девственность", "измену", "доверия"
+].each do |fact|
+  expect.call(obitelj[:source].include?(fact), "Obitelj article is missing #{fact}")
+end
+obitelj_words = article_word_count.call(obitelj[:source])
+expect.call(obitelj_words.between?(1_050, 1_350), "Obitelj article has an unsuitable country-overview length: #{obitelj_words} words")
+
+guardian = canonical_by_title.fetch("Страж")
+expect.call(guardian[:data]["ready"] == true && guardian[:data]["quartz"] == true, "Guardian must be published now that both portraits are ready")
+expect.call(guardian[:data]["female_portrait"] == "[[Assets/Images/Guardian_f.jpg]]", "Guardian is missing the female class portrait")
+expect.call(guardian[:data]["male_portrait"] == "[[Assets/Images/Guardian_m.jpg]]", "Guardian is missing the male class portrait")
+["Основной текст", "Избрание и клятва", "Способности", "Сила любви", "Атрибуты"].each do |heading|
+  expect.call(guardian[:source].include?("## #{heading}"), "Guardian article is missing the #{heading} section")
+end
+expect.call(Array(guardian[:data]["domains"]).include?("Любовь и очарование"), "Guardian is missing the love and enchantment domain")
+["неподнятым оружием", "не может поднять оружие", "обет девственности", "соблазнение"].each do |fact|
+  expect.call(guardian[:source].include?(fact), "Guardian article is missing #{fact}")
+end
+
+mirgrad = canonical_by_title.fetch("Город Мирград")
+expect.call(mirgrad[:data]["ready"] == true && mirgrad[:data]["quartz"] == true, "Mirgrad must be published now that its art is ready")
+expect.call(mirgrad[:data]["cover_image"] == "[[Assets/Images/Mirgrad_City.jpg]]", "Mirgrad must use its canonical city art")
+expect.call(mirgrad[:data]["settlement_type"] == "Столица", "Mirgrad must be marked as a capital")
+expect.call(mirgrad[:data]["foundation"] == "-1236 ХЭ", "Mirgrad must retain its 1236 ChE foundation date")
+mirgrad_words = article_word_count.call(mirgrad[:source])
+expect.call(mirgrad_words.between?(200, 320), "Mirgrad article has an unsuitable capital-overview length: #{mirgrad_words} words")
+
+velissa = canonical_by_title.fetch("Велисса")
+["беличьи ушки", "умилительной выдумкой", "Мужчина или женщина", "дар и проклятие", "Берегини и Обережники", "безответную любовь", "умирали от горя"].each do |fact|
+  expect.call(velissa[:source].include?(fact), "Velissa article is missing #{fact}")
+end
 
 flesh_forge = canonical_by_title.fetch("Кузница Плоти")
 expect.call(!flesh_forge[:source].include?("_Описание пока не добавлено._"), "Flesh Forge still has no encyclopedia description")
@@ -342,7 +389,7 @@ all_imitei_notes.each do |note|
 end
 expect.call(
   published_imitei_notes.map { |note| note[:data]["title"] }.sort ==
-    meta_imitei_order.reject { |title| title == "Страж" }.sort,
+    meta_imitei_order.sort,
   "Published Imitei notes do not follow the canonical roster"
 )
 renamed_imitei = {
@@ -413,7 +460,8 @@ imitei_patrons = {
   "Вознесённый" => "Винтра",
   "Ракша" => "Шубханкари",
   "Шаман" => "Руфу",
-  "Онмёдзи" => "Ицунэ"
+  "Онмёдзи" => "Ицунэ",
+  "Страж" => "Велисса"
 }
 imitei_primary_roles = {}
 published_imitei_notes.each do |note|
@@ -1088,7 +1136,8 @@ character_rulers = {
   "Вактар-Йорден" => "Сигрид Дракендоттир",
   "Сурадж Ка Гхар" => "Индира Раштра",
   "Вакумара" => "Кинто Мулунгу",
-  "Амато" => "Аматсу Рин"
+  "Амато" => "Аматсу Рин",
+  "Обитель" => "Мафка"
 }
 character_rulers.each do |country, ruler|
   titles = character_cards_by_group.fetch(country, [])
@@ -1718,7 +1767,7 @@ uy_dzhan_data, = parse_frontmatter.call(File.join(ROOT, "Энциклопеди�
 expect.call(uy_dzhan_data["location_type"] == "Бордель", "Unpublished Uy-Dzhan must retain the Russian place type")
 
 timeline = read.call("timeline/index.html")
-expect.call(timeline.scan("astaria-timeline-event").length == 26, "Timeline must contain all 26 events")
+expect.call(timeline.scan("astaria-timeline-event").length == 28, "Timeline must contain all 28 events")
 expect.call(timeline.include?("astaria-timeline-search"), "Timeline search is missing")
 expect.call(timeline.include?("astaria-timeline-category"), "Timeline category filter is missing")
 expect.call(timeline.include?("Первые свидетельства об археях"), "Timeline is missing the public-safe Archean milestone")
@@ -1732,8 +1781,10 @@ expect.call(
 )
 expect.call(!timeline.include?("[!timeline]"), "Timeline exposes raw Obsidian callout markup")
 expect.call(!timeline.match?(/<pre><code>.*?&lt;(?:article|div|h3|p|span)(?:\s|&gt;)/m), "Timeline event HTML is rendered as visible source code")
-expect.call(timeline.scan(/<article class="astaria-timeline-card[^"]*">\s*<img/m).length == 26, "Every timeline event must have an illustration")
-expect.call(timeline.scan("astaria-timeline-meta").length == 26, "Every timeline event must show a readable significance label")
+expect.call(timeline.scan(/<article class="astaria-timeline-card[^"]*">\s*<img/m).length == 28, "Every timeline event must have an illustration")
+expect.call(timeline.scan("astaria-timeline-meta").length == 28, "Every timeline event must show a readable significance label")
+expect.call(timeline.include?("Основание Амато") && timeline.include?("2695 ХЭ"), "Timeline is missing the foundation of Amato")
+expect.call(timeline.include?("Основание Обители") && timeline.include?("1236 ХЭ"), "Timeline is missing the foundation of Obitelj")
 expect.call(journey_styles.match?(/\.astaria-timeline-year\s*\{[^}]*padding-right:\s*0\.85rem/m), "Timeline date needs breathing room before the rail")
 expect.call(journey_styles.match?(/\.astaria-timeline-year::after\s*\{[^}]*0 0 0 4px/m), "Timeline node needs a paper halo separating it from the rail")
 expect.call(journey_styles.match?(/\.astaria-timeline-year\s*\{[^}]*lining-nums tabular-nums/m), "Timeline dates must use aligned lining numerals")
@@ -1756,6 +1807,8 @@ event_article_pages = %w[
   events/faith-crysis-amon-astat.html
   events/chthonid-fall.html
   events/kad-kharad-disbandment.html
+  timeline/foundation-of-amato.html
+  timeline/foundation-of-obitelj.html
   timeline/foundation-of-talassia.html
 ]
 event_article_pages.each do |relative|
@@ -1783,7 +1836,7 @@ timeline_sources.each do |path, data|
   built_image = File.join(PUBLIC, image_path.downcase.tr(" ", "-"))
   expect.call(File.file?(built_image), "Timeline illustration is not copied into the build: #{image_path}")
 end
-expect.call(timeline_sources.length == 26, "Expected 26 canonical timeline sources")
+expect.call(timeline_sources.length == 28, "Expected 28 canonical timeline sources")
 expect.call(missing_timeline_images.empty?, "Timeline events without a valid image: #{missing_timeline_images.join(', ')}")
 
 country_notes = Dir.glob(File.join(ROOT, "Энциклопедия", "Страны", "*.md")).reject { |path| File.basename(path) == "Культ Меркаты.md" }

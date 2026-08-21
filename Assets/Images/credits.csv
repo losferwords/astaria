@@ -13,6 +13,7 @@ Assets/Images/Amatsu_Rin.jpg,,,,[[Аматсу Рин]]
 Assets/Images/Amentir_Region.jpg,,,,[[Регион Аментир]]
 Assets/Images/Amira_Al-Azwar.jpg,,,,[[Амира Аль-Азвар]]
 Assets/Images/Amato.jpg,,,,[[Амато]]
+Assets/Images/Crests/amato_crest_cropped.png,,,,Герб [[Амато]]
 Assets/Images/Crests/amon-astat_crest_crop.png,,,amon-astat_crest.png,Герб [[Амон-Астат|Амон-Астата]]
 Assets/Images/Amon-Astat_Desert_2.jpg,,,,Великая [[Пустыня Сехет|пустыня Сехет]]
 Assets/Images/Amon-Astat_Drought.jpg,,,Amon-Astat_Drought.jpg,[history:ddef6413-d603-46e3-9745-45d0047bb395]Великая засуха в Амон-Астате[/history]
@@ -112,6 +113,8 @@ Assets/Images/Gnolls.jpg,,,,[[Гнолл]]
 Assets/Images/Goidair.jpg,McLure,https://www.deviantart.com/mclure,,Мужчина народа [[Гойдаир]]
 Assets/Images/Gorsafon.jpg,,,,[[Река Горсафон]]
 Assets/Images/Great_Forge.jpg,,,,[[Великая Кузня]]
+Assets/Images/Guardian_f.jpg,,,,[[Страж]] женщина
+Assets/Images/Guardian_m.jpg,,,,[[Страж]] мужчина
 Assets/Images/Gunpowder.jpg,,,,[[Талассия|Талассийский]] порох
 Assets/Images/Halyk-Byndir.jpg,,,,[[Бордель Халык-Бындыр]]
 Assets/Images/Hamoa.jpg,,,,[[Хамоа]]
@@ -172,6 +175,7 @@ Assets/Images/Lunaar.jpg,Joyce Leonard,https://fineartamerica.com/profiles/joyce
 Assets/Images/Crests/lunaar_crest_crop.png,,,lunaar_crest.png,Герб [[Лунаар|Лунаара]]
 Assets/Images/Maenad.jpg,Atomhawk,https://creativepool.com/atomhawk,,[[Менада]]
 Assets/Images/Makaba_River.jpg,Dandalion Max,https://www.artstation.com/retromax,,[[Река Макаба]]
+Assets/Images/Mafka.jpg,,,,[[Мафка]]
 Assets/Images/Malik_Al-Aswar.jpg,Ashish Nade,https://www.artstation.com/ashishnade,,[[Малик Аль-Азвар]]
 Assets/Images/Manai.jpg,,,,[[Манаи]]
 Assets/Images/Mangaia_River.jpg,,,,[[Река Мангайа]]
@@ -183,6 +187,7 @@ Assets/Images/Mercate.jpg,Anna Helme,an-helme.artstation.com,,Художеств
 Assets/Images/Mercate_Temple.jpg,Weston T Jones,https://www.artstation.com/westontjones,,[[Храм Меркаты]]
 Assets/Images/Merkate_Cult.jpg,KejaBlank,https://www.deviantart.com/kejablank,,[[Тень]] из [[Культ Меркаты|Культа Меркаты]]
 Assets/Images/Min-Tao_Jungle.jpg,,,,[[Джунгли Минь-Тао]]
+Assets/Images/Mirgrad_City.jpg,,,,[[Город Мирград]]
 Assets/Images/Mistras_City.jpg,Tristan Faure,https://www.artstation.com/fauretristan,,[[Город Мистрас]]
 Assets/Images/Mitra_Lake.jpg,Yuri Makarov,http://fotokto.ru/id7911,,[[Озеро Митра]]
 Assets/Images/Muir_City.jpg,Masashi Kageyama,https://www.artstation.com/masashikageyama,Muir_City.jpg,[[Город Муир]]
@@ -205,6 +210,8 @@ Assets/Images/Nid_River.jpg,,,,[[Река Нид]]
 Assets/Images/Nisa_Nereid.jpg,,,,[[Ниса]]
 Assets/Images/Nordavellir_Lake.jpg,,,,[[Озеро Нордавеллир]]
 Assets/Images/Nuwa_Hsi.jpg,,,,[[Нуа Си]]
+Assets/Images/Obitelj.jpg,,,,[[Обитель]]
+Assets/Images/Crests/obitelj_crest_cropped.png,,,,Герб [[Обитель|Обители]]
 Assets/Images/Onmyoji_f.jpg,,,,[[Онмёдзи]] женщина
 Assets/Images/Onmyoji_m.jpg,,,,[[Онмёдзи]] мужчина
 Assets/Images/Oracle_f.jpg,Thedurrrrian,https://thedurrrrian.tumblr.com/,,[[Оракул]] женщина
@@ -318,6 +325,7 @@ Assets/Images/war_of_the_thirsty.jpg,Felix Ortiz,https://www.artstation.com/feli
 Assets/Images/Warden_Bridge_Isthmus.jpg,,,,[[Перешеек Мост Хранителей]]
 Assets/Images/Warden_f.jpg,,,,[[Хранитель]] женщина
 Assets/Images/Warden_m.jpg,,,,[[Хранитель]] мужчина
+Assets/Images/Wends.jpg,,,,[[Венды]]
 Assets/Images/Whitefield_Plains.jpg,Patrick J Endres,https://www.alaskaphotographics.com/,,[[Равнина Вайтфилд]]
 Assets/Images/Wildlands.jpg,,,,[[Дикоземье]]
 Assets/Images/Crests/wildlands_crest.png,,,,Герб [[Дикоземье|Дикоземья]]

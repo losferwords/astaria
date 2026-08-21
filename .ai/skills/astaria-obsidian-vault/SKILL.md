@@ -98,7 +98,7 @@ Before finishing broad changes, verify:
 - wikilinks resolve or intentional stubs are documented;
 - local image embeds point to existing files;
 - map marker count and coordinate order remain correct;
-- all 26 timeline records remain discoverable;
+- all 28 timeline records remain discoverable;
 - canonical notes have explicit boolean `ready` and `quartz` fields;
 - obsolete `status`, `publish`, `draft`, `wip`, and `tags` fields are absent;
 - private notes are not published;

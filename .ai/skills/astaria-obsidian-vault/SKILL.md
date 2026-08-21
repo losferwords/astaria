@@ -61,7 +61,7 @@ Correct obvious spelling, punctuation, and rushed phrasing while preserving fact
 
 ## Maps
 
-Use Obsidian Leaflet with the political `Assets/Maps/states.png` layer as the default. The main map contains 132 markers and uses `geoY, geoX` order in Leaflet marker rows.
+Use Obsidian Leaflet with the political `Assets/Maps/states.png` layer as the default. The main map contains 136 markers and uses `geoY, geoX` order in Leaflet marker rows.
 
 Keep physical and biome layers linked nearby:
 

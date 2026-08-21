@@ -1768,13 +1768,17 @@ def map_markers(body, lookup)
   markers = []
   body.scan(/^\s*-\s+default,\s*(\d+),\s*(\d+),\s*\[\[([^|\]]+)(?:\|([^\]]+))?\]\]\s*$/) do |y, x, target, label|
     canonical_name = (label || target).strip
-    kind = case canonical_name
-    when /(?:Город|Деревня|Храм|Кузня|Обитель)/i then "settlement"
-    when /(?:Озеро|Река|море|залив|пролив|перешеек)/i then "water"
-    when /(?:Гор|Пустын|Лес|Джунг|Болот|Долин|луг|земл|Вулкан|Предгор)/i then "terrain"
-    else "realm"
-    end
     record = lookup[normalize_reference(target)]
+    kind = if record && record[:data]["category"] == "Страны"
+      "realm"
+    else
+      case canonical_name
+      when /(?:Город|Деревня|Храм|Кузня|Обитель)/i then "settlement"
+      when /(?:Озеро|Река|море|залив|пролив|перешеек)/i then "water"
+      when /(?:Гор|Пустын|Лес|Джунг|Болот|Долин|луг|земл|Вулкан|Предгор)/i then "terrain"
+      else "realm"
+      end
+    end
     translated_marker_name = AstariaTranslations.english_title_for(target.strip)
     name = if BUILD_LOCALE == "en-GB" && record
       record[:data]["title"].to_s.strip

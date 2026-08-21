@@ -24,7 +24,7 @@ The Obsidian vault is the primary and self-contained knowledge base. Lore should
 - `Энциклопедия/Страны/` - states and their core relationships.
 - `Энциклопедия/Флора/` - plants.
 - `Хронология/` - 28 dated historical records and the readable timeline.
-- `Карты/` - the interactive map with 132 markers.
+- `Карты/` - the interactive map with 136 markers.
 - `Assets/Images/` and `Assets/Maps/` - local visual assets.
 - `Идеи/` - private non-canonical brainstorming, excluded from research by default.
 

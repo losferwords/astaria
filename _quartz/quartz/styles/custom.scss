@@ -3952,6 +3952,11 @@ body[data-slug="map"] .markdown-rendered > * {
   cursor: grabbing;
 }
 
+.astaria-map-viewport.is-tracking-coordinates,
+.astaria-map-viewport.is-tracking-coordinates.is-dragging {
+  cursor: default;
+}
+
 .astaria-map-stage {
   position: absolute;
   top: 50%;
@@ -4158,6 +4163,28 @@ body[data-slug="map"] .markdown-rendered > * {
   color: rgba(255, 250, 238, 0.78);
   font-size: 0.68rem;
   pointer-events: none;
+}
+
+.astaria-map-coordinate-readout {
+  position: absolute;
+  z-index: 9;
+  bottom: 2.55rem;
+  left: 0.75rem;
+  margin: 0;
+  padding: 0.42rem 0.65rem;
+  background: rgba(12, 15, 18, 0.9);
+  border: 1px solid rgba(219, 163, 79, 0.72);
+  border-radius: 3px;
+  box-shadow: 0 5px 14px rgba(0, 0, 0, 0.35);
+  color: #f7ddb0;
+  font-family: var(--codeFont);
+  font-size: 0.72rem;
+  font-variant-numeric: tabular-nums;
+  pointer-events: none;
+}
+
+.astaria-map-coordinate-readout[hidden] {
+  display: none;
 }
 
 @media (max-width: 1050px) {

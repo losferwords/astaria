@@ -64,6 +64,20 @@ const normalizeMapQuery = (value: string) =>
     .replaceAll("ё", "е")
     .trim();
 
+type AstariaMapCursorSnapshot = {
+  geoY: number;
+  geoX: number;
+  x: number;
+  y: number;
+  zoom: number;
+  marker: string;
+};
+
+type AstariaDebugWindow = typeof window & {
+  trackMapCursor?: boolean;
+  astariaMapCursor?: AstariaMapCursorSnapshot;
+};
+
 function setupAstariaMap() {
   const explorer = document.querySelector<HTMLElement>(".astaria-map-explorer");
   if (!explorer || explorer.dataset.ready === "true") return;
@@ -120,7 +134,18 @@ function setupAstariaMap() {
   const mapWidth = Number(explorer.dataset.mapWidth ?? 7680);
   const mapHeight = Number(explorer.dataset.mapHeight ?? 4320);
   const pixelRatio = window.devicePixelRatio || 1;
+  const debugWindow = window as AstariaDebugWindow;
+  debugWindow.trackMapCursor ??= false;
   let selected: HTMLButtonElement | null = null;
+
+  const coordinateReadout = document.createElement("output");
+  coordinateReadout.className = "astaria-map-coordinate-readout";
+  coordinateReadout.hidden = true;
+  coordinateReadout.setAttribute("aria-hidden", "true");
+  viewport.append(coordinateReadout);
+
+  let pendingCursorSnapshot: AstariaMapCursorSnapshot | null = null;
+  let cursorLogTimer: number | null = null;
 
   const baseDimensions = () => {
     const mapRatio = mapWidth / mapHeight;
@@ -190,6 +215,67 @@ function setupAstariaMap() {
     state.x = 0;
     state.y = 0;
     renderTransform();
+  };
+
+  const mapCoordinatesAt = (
+    clientX: number,
+    clientY: number,
+  ): AstariaMapCursorSnapshot | null => {
+    const rect = stage.getBoundingClientRect();
+    if (rect.width <= 0 || rect.height <= 0) return null;
+
+    const imageX = (clientX - rect.left) / rect.width;
+    const imageY = (clientY - rect.top) / rect.height;
+    if (imageX < 0 || imageX > 1 || imageY < 0 || imageY > 1) return null;
+
+    const geoX = Math.max(0, Math.min(mapWidth, Math.round(imageX * mapWidth)));
+    const geoY = Math.max(
+      0,
+      Math.min(mapHeight, Math.round(mapHeight - imageY * mapHeight)),
+    );
+    return {
+      geoY,
+      geoX,
+      x: geoX,
+      y: geoY,
+      zoom: Number(state.scale.toFixed(3)),
+      marker: `- default, ${geoY}, ${geoX}, [[Название]]`,
+    };
+  };
+
+  const scheduleCursorLog = (snapshot: AstariaMapCursorSnapshot) => {
+    pendingCursorSnapshot = snapshot;
+    if (cursorLogTimer !== null) return;
+    cursorLogTimer = window.setTimeout(() => {
+      const current = pendingCursorSnapshot;
+      pendingCursorSnapshot = null;
+      cursorLogTimer = null;
+      if (!current || debugWindow.trackMapCursor !== true) return;
+      console.info(
+        `[Astaria map] geoY=${current.geoY}, geoX=${current.geoX}\n${current.marker}`,
+      );
+    }, 80);
+  };
+
+  const trackMapPointer = (event: PointerEvent) => {
+    const trackingCoordinates = debugWindow.trackMapCursor === true;
+    viewport.classList.toggle("is-tracking-coordinates", trackingCoordinates);
+    if (!trackingCoordinates) {
+      coordinateReadout.hidden = true;
+      return;
+    }
+
+    const snapshot = mapCoordinatesAt(event.clientX, event.clientY);
+    if (!snapshot) {
+      coordinateReadout.hidden = true;
+      return;
+    }
+
+    debugWindow.astariaMapCursor = snapshot;
+    coordinateReadout.textContent = `geoY ${snapshot.geoY} · geoX ${snapshot.geoX}`;
+    coordinateReadout.title = snapshot.marker;
+    coordinateReadout.hidden = false;
+    scheduleCursorLog(snapshot);
   };
 
   const showMarker = (marker: HTMLButtonElement, focusViewport = false) => {
@@ -397,6 +483,7 @@ function setupAstariaMap() {
     viewport.classList.add("is-dragging");
   });
   viewport.addEventListener("pointermove", (event) => {
+    trackMapPointer(event);
     if (!state.dragging || event.pointerId !== state.pointerId) return;
     state.x += event.clientX - state.px;
     state.y += event.clientY - state.py;

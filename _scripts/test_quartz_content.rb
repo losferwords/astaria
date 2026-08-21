@@ -1850,7 +1850,7 @@ expect.call(country_notes.length >= 16, "Expected all canonical countries in the
 expect.call(missing_country_subtitles.empty?, "Countries without card_subtitle: #{missing_country_subtitles.map { |path| File.basename(path) }.join(', ')}")
 
 map = read.call("map.html")
-expect.call(map.scan("astaria-map-marker astaria-map-marker-").length == 132, "Map must render all 132 canonical markers")
+expect.call(map.scan("astaria-map-marker astaria-map-marker-").length == 136, "Map must render all 136 canonical markers")
 %w[states.png heightmap.png biomes.png].each do |filename|
   expect.call(map.include?("assets/maps/#{filename}"), "Map does not use original layer #{filename}")
   source = File.join(ROOT, "Assets", "Maps", filename)
@@ -1869,6 +1869,14 @@ expect.call(experience_script.include?("stage.style.width = `${renderedWidth}px`
 expect.call(experience_script.include?("maximumUsefulScale"), "Map zoom must stop before exceeding source resolution")
 expect.call(experience_script.include?("window.devicePixelRatio"), "Map zoom limit must account for high-density displays")
 expect.call(experience_script.include?("image.dataset.src"), "Optional map layers are not loaded on demand")
+expect.call(experience_script.include?("trackMapCursor"), "Map cursor debug flag is missing")
+expect.call(experience_script.include?("astariaMapCursor"), "Map does not expose the latest canonical cursor coordinates")
+expect.call(experience_script.include?("Math.round(imageX * mapWidth)"), "Map cursor tracking does not restore canonical geoX")
+expect.call(experience_script.include?("Math.round(mapHeight - imageY * mapHeight)"), "Map cursor tracking does not restore the north-facing geoY axis")
+expect.call(experience_script.include?("- default, ${geoY}, ${geoX}"), "Map cursor tracking does not provide a paste-ready Leaflet marker row")
+expect.call(journey_styles.include?(".astaria-map-coordinate-readout"), "Map cursor coordinate readout is missing its styles")
+expect.call(experience_script.include?('viewport.classList.toggle("is-tracking-coordinates", trackingCoordinates)'), "Map cursor tracking does not switch to a precise pointer mode")
+expect.call(journey_styles.match?(/\.astaria-map-viewport\.is-tracking-coordinates[^\{]*\{\s*cursor:\s*default;/m), "Map cursor tracking must use the default arrow cursor")
 
 marker_top = lambda do |name|
   match = map.match(/class="astaria-map-marker[^"]*"[^>]*data-name="#{Regexp.escape(name)}"[^>]*data-y="([\d.]+)"/)
@@ -1878,7 +1886,20 @@ end
 bakhara_top = marker_top.call("Город Бахара")
 anderhan_top = marker_top.call("Город Андерхан")
 expect.call(bakhara_top && anderhan_top && bakhara_top > anderhan_top, "Map Y axis is inverted: Bakhara must appear south of Anderhan")
+bakhara_marker = map.match(/class="astaria-map-marker[^"]*"[^>]*data-name="Город Бахара"[^>]*data-x="([\d.]+)"[^>]*data-y="([\d.]+)"/)
+expect.call(!bakhara_marker.nil?, "Bakhara marker coordinates are missing")
+if bakhara_marker
+  recovered_geo_x = (bakhara_marker[1].to_f / 100 * 7680).round
+  recovered_geo_y = (4320 - bakhara_marker[2].to_f / 100 * 4320).round
+  expect.call(recovered_geo_y == 2039 && recovered_geo_x == 4167, "Map coordinate conversion must recover Bakhara as geoY 2039, geoX 4167")
+end
 expect.call(map.include?('data-name="Гарнизон Пасть Дракона"'), "Map still points to the retired Dragon Gates duplicate")
+expect.call(map.match?(/data-name="Город Кайто"[^>]*data-x="82\.7214"[^>]*data-y="43\.7963"/), "Kaito marker must render at geoY 2428, geoX 6353")
+expect.call(map.match?(/data-name="Амато"[^>]*data-x="82\.0052"[^>]*data-y="40\.7639"/), "Amato marker must render at geoY 2559, geoX 6298")
+expect.call(map.match?(/data-name="Город Мирград"[^>]*data-x="84\.388"[^>]*data-y="16\.3657"/), "Mirgrad marker must render at geoY 3613, geoX 6481")
+expect.call(map.match?(/data-name="Обитель"[^>]*data-x="87\.0964"[^>]*data-y="9\.9537"/), "Obitelj marker must render at geoY 3890, geoX 6689")
+expect.call(map.match?(/class="astaria-map-marker astaria-map-marker-realm"[^>]*data-name="Амато"/), "Amato must render as a realm marker")
+expect.call(map.match?(/class="astaria-map-marker astaria-map-marker-realm"[^>]*data-name="Обитель"/), "Obitelj must render as a realm marker")
 expect.call(map.include?('data-name="Горный хребет Шафар"'), "Map still points to the retired Shang Feng duplicate")
 expect.call(map.include?('data-name="Озеро Жень"'), "Map still points to the retired Zheng Lake duplicate")
 expect.call(journey_styles.match?(/\.astaria-map-marker > span\s*\{[^}]*opacity:\s*0\.64/m), "Map markers must be translucent over printed labels")

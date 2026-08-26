@@ -5,7 +5,7 @@ type: "person"
 category: "Боги"
 ready: true
 quartz: true
-portrait_image: "[[Assets/Images/Hyperion I.jpg]]"
+portrait_image: "[[Assets/Images/Hyperion.jpg]]"
 gender: "Мужской"
 current_location: "[[Город Аргос]]"
 eyes: "Карие"
@@ -31,7 +31,7 @@ residence: "[[Город Аргос]]"
 
 # Гиперион I
 
-![[Assets/Images/Hyperion I.jpg]]
+![[Assets/Images/Hyperion.jpg]]
 
 ## Основной текст
 

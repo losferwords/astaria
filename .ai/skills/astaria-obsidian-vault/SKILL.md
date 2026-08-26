@@ -56,7 +56,10 @@ Correct obvious spelling, punctuation, and rushed phrasing while preserving fact
 - Render only local files from `Assets/Images/` and `Assets/Maps/`.
 - Use `![[Assets/Images/file.jpg]]` in article bodies.
 - Store image properties as wikilinks, for example `cover_image: "[[Assets/Images/file.jpg]]"`.
-- Keep creator attribution in `Assets/Images/credits.csv`.
+- Treat every new or replacement artwork supplied by the user as their original work unless they explicitly name another creator.
+- Do not add user-created artwork to `Assets/Images/credits.csv`.
+- Keep `Assets/Images/credits.csv` only for externally authored artwork still used by the project. Its exact columns are `file,artist,artist_website`; every row must contain all three values. Do not store article links, alt text, descriptions, or other image metadata there.
+- When an externally authored image is replaced with the user's original artwork, remove its attribution row. The intended end state is to delete `credits.csv` once no externally authored artwork remains.
 - For Imitei art, use paired 9:16 `female_portrait` and `male_portrait` images in the dedicated class-page layout. Do not add or retain `_landscape` covers for Imitei articles.
 
 ## Maps
@@ -97,6 +100,7 @@ Before finishing broad changes, verify:
 - YAML parses;
 - wikilinks resolve or intentional stubs are documented;
 - local image embeds point to existing files;
+- `Assets/Images/credits.csv`, while it exists, contains only complete external-art attribution rows and exactly the three approved columns;
 - map marker count and coordinate order remain correct;
 - all 28 timeline records remain discoverable;
 - canonical notes have explicit boolean `ready` and `quartz` fields;

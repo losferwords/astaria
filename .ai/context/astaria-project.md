@@ -28,7 +28,7 @@ The Obsidian vault is the primary and self-contained knowledge base. Lore should
 - `Assets/Images/` and `Assets/Maps/` - local visual assets.
 - `Идеи/` - private non-canonical brainstorming, excluded from research by default.
 
-Image creator information is retained in `Assets/Images/credits.csv`.
+`Assets/Images/credits.csv` is a temporary attribution register only for externally authored artwork still used by the project. New and replacement artwork supplied by Maksim is presumed to be his original work and is not listed there. The register contains only `file`, `artist`, and `artist_website`; its intended end state is deletion after the last externally authored image has been replaced.
 
 ## Lore Boundaries
 

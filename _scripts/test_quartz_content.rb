@@ -3,6 +3,7 @@
 
 require "pathname"
 require "cgi"
+require "csv"
 require "json"
 require "rbconfig"
 require "yaml"
@@ -117,6 +118,22 @@ expect.call(
   system(RbConfig.ruby, File.join(ROOT, "_scripts", "normalize_encyclopedia_russian.rb"), "--check", out: File::NULL),
   "Encyclopedia language normalization is not idempotent"
 )
+
+credits_path = File.join(ROOT, "Assets", "Images", "credits.csv")
+if File.file?(credits_path)
+  credits = CSV.read(credits_path, headers: true)
+  expect.call(credits.headers == %w[file artist artist_website], "Image credits must contain only file, artist, and artist_website columns")
+  expect.call(!credits.empty?, "Delete the image credits register once no external artwork remains")
+  incomplete_credits = credits.select do |row|
+    %w[file artist artist_website].any? { |field| row[field].to_s.strip.empty? }
+  end
+  expect.call(incomplete_credits.empty?, "Image credits contain rows without a complete external attribution")
+  missing_credited_images = credits.reject { |row| File.file?(File.join(ROOT, row["file"].to_s)) }
+  expect.call(missing_credited_images.empty?, "Image credits reference files that are no longer used by the project")
+  credited_paths = credits.map { |row| row["file"].to_s }
+  expect.call(credited_paths.uniq.length == credited_paths.length, "Image credits contain duplicate file paths")
+end
+
 expect.call(canonical_notes.none? { |note| note[:source].match?(/\b(?:синоби|шиноби)\b/i) }, "Obsolete shinobi terminology remains in the encyclopedia")
 expect.call(canonical_notes.none? { |note| note[:data].key?("parent_1") || note[:data].key?("parent_2") }, "Legacy parent_1/parent_2 metadata remains")
 expect.call(

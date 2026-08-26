@@ -32,9 +32,6 @@ jobs:
           cache: npm
           cache-dependency-path: _quartz/package-lock.json
 
-      - name: Prepare public content
-        run: ruby _scripts/sync_quartz_content.rb
-
       - name: Install dependencies
         working-directory: _quartz
         run: npm ci
@@ -45,11 +42,10 @@ jobs:
           NODE_OPTIONS: --max-old-space-size=8192
         run: node quartz/bootstrap-cli.mjs plugin install --from-config
 
-      - name: Build Quartz
-        working-directory: _quartz
+      - name: Build and validate multilingual Quartz site
         env:
           NODE_OPTIONS: --max-old-space-size=8192
-        run: node quartz/bootstrap-cli.mjs build -d content -o public
+        run: make multilingual-build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

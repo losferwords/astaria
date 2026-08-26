@@ -12,6 +12,7 @@ Use this skill for creative brainstorming in the Astaria setting.
 - Write in Russian by default.
 - Use `.ai/context/astaria-project.md` for project background.
 - Use `.ai/context/astaria-meta-and-fate.md` for cultures, correct demonyms, FATE aspects, skills, and stunts.
+- For FATE characters, NPCs, scenes, scenarios, arcs, conflicts, terminology, or mechanical preparation, also use `.ai/skills/astaria-fate-core/SKILL.md` and its relevant references.
 - If the idea touches existing lore, characters, Obsidian structure, maps, or articles, also use `.ai/skills/astaria-obsidian-vault/SKILL.md`.
 - Unless the user explicitly says “только в чат”, “не создавай файл”, or similar, save the generated ideas to a Markdown note in `Идеи/`.
 - Keep idea notes `ready: false`, `quartz: false`, and `private: true`.
@@ -63,6 +64,7 @@ private: true
 - Use canonical sources for those ties: `Энциклопедия/`, `Хронология/`, `Карты/`, `.ai/context/`, and explicitly requested notes. Do not use `Идеи/` as canon.
 - Give each situation at least one tension, choice, or cost.
 - For FATE, provide aspects in a form that can be invoked and compelled.
+- For FATE scenarios, prepare problems, motives, story questions, stakes, and branching consequences rather than a fixed sequence of mandatory scenes.
 - If the user is preparing a session, include at least one low-prep scene, one complication, and one optional escalation.
 
 ## Chat Response

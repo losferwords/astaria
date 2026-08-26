@@ -21,6 +21,10 @@ For creative brainstorming, session ideas, scenes, encounters, NPC concepts, twi
 
 `.ai/skills/astaria-idea-workbench/SKILL.md`
 
+For Fate Core mechanics, Russian terminology, character or NPC sheets, scenario structure, arcs, conflicts, and GM best practices, also use:
+
+`.ai/skills/astaria-fate-core/SKILL.md`
+
 ## Canonical Sources
 
 - `Энциклопедия/` contains canonical lore and literature.
@@ -40,7 +44,7 @@ For creative brainstorming, session ideas, scenes, encounters, NPC concepts, twi
 - Keep canonical saga prose under `Энциклопедия/Литература/`, one chapter per file.
 - Do not link ordinary lore articles to specific saga chapters unless explicitly requested.
 - Keep all ordinary character articles in `Энциклопедия/Персонажи/`, without a visible player/NPC split.
-- Before creating characters or FATE material, read `.ai/context/astaria-meta-and-fate.md`.
+- Before creating characters or FATE material, read `.ai/context/astaria-meta-and-fate.md` and use `.ai/skills/astaria-fate-core/SKILL.md`.
 - Keep `Энциклопедия/Секреты/`, GM notes, private mechanics, and spoilers unpublished. Never copy secret facts into public lore unless explicitly requested.
 - Every canonical note uses explicit `ready` and `quartz` booleans. Set `ready: true` only when the article is considered complete; a local artwork is the usual, but not mandatory, criterion.
 - Set `quartz: true` only for intentionally public notes. This flag is independent from readiness, although public notes should normally be ready.

@@ -232,6 +232,21 @@ expect.call(
   "Vends public article contains a real-world reference or unwanted folklore cliché"
 )
 
+thuggee = canonical_by_title.fetch("Тхаги")
+expect.call(thuggee[:data]["ready"] == true && thuggee[:data]["quartz"] == true, "Thuggee must be published now that its art is ready")
+expect.call(thuggee[:data]["cover_image"] == "[[Assets/Images/Thuggee.jpg]]", "Thuggee must use its canonical cover art")
+expect.call(File.file?(File.join(ROOT, "Assets", "Images", "Thuggee.jpg")), "Thuggee cover art is missing")
+["чёрного и кроваво-красного", "длинные ухоженные бороды", "многослойные тюрбаны", "Изогнутые сабли", "Память против Цикла"].each do |fact|
+  expect.call(thuggee[:source].include?(fact), "Thuggee public article is missing #{fact}")
+end
+expect.call(!thuggee[:source].include?("Альзаман"), "Thuggee public article exposes Alzaman's secret involvement")
+
+thuggee_secrets = canonical_by_title.fetch("Тайны Тхаги")
+expect.call(thuggee_secrets[:data]["quartz"] == false && thuggee_secrets[:data]["secret"] == true, "Thuggee origin must remain private")
+["[[Альзаман]]", "не желал становиться соперником Шубханкари", "наставником, а не божеством поклонения"].each do |fact|
+  expect.call(thuggee_secrets[:source].include?(fact), "Thuggee secret note is missing #{fact}")
+end
+
 mafka = canonical_by_title.fetch("Мафка")
 expect.call(mafka[:data]["ready"] == true && mafka[:data]["quartz"] == true, "Mafka must be published now that her art is ready")
 expect.call(mafka[:data]["portrait_image"] == "[[Assets/Images/Mafka.jpg]]", "Mafka must use her canonical portrait")
@@ -1007,7 +1022,7 @@ canonical_notes.each do |note|
   end
 end
 expect.call(ready_article_notes.length >= 301, "Expected the complete ready encyclopedia corpus")
-intentionally_unpublished_titles = ["Бордель Уй-Джан", "Город Награкшаса", "Тхаги"]
+intentionally_unpublished_titles = ["Бордель Уй-Джан", "Город Награкшаса"]
 intentionally_coverless_titles = intentionally_unpublished_titles + [
   "Вервольф",
   "Авгарский самогон",

@@ -5,6 +5,7 @@ type: "person"
 category: "Боги"
 ready: true
 quartz: true
+public_slug: "hyperion-i"
 portrait_image: "[[Assets/Images/Hyperion.jpg]]"
 gender: "Мужской"
 current_location: "[[Город Аргос]]"

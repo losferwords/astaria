@@ -4,6 +4,8 @@ This file contains service context for Codex/Violet. It is not player-facing lor
 
 Source: `meta.json` provided by the user on June 10, 2026. The user may delete that JSON later; this Markdown file is the retained working reference.
 
+Detailed retained Fate Core rules, Russian terminology, character and NPC design, scenario construction, and GM practices are stored in `.ai/skills/astaria-fate-core/`. That skill is self-contained and does not depend on the temporary source folder `Fate Core/` remaining in the vault.
+
 ## World Meta
 
 - Current in-world year: derive from the real calendar year as `real year - 1920`. In 2026, Astaria is in `106 НЭ`; in 2027, it becomes `107 НЭ`, and so on.

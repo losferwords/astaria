@@ -350,9 +350,6 @@ names:
   Хтонотема:
     title: Chthonotema
     slug: chthonotema
-  О природе чудовищ:
-    title: On the Nature of Monsters
-    slug: on-the-nature-of-monsters
   Рунштоирм:
     title: Runstoirm
     slug: runstoirm
@@ -892,9 +889,6 @@ names:
   Гнолл:
     title: Gnoll
     slug: gnoll
-  Кентавр:
-    title: Centaur
-    slug: centaur
   Менада:
     title: Maenad
     slug: maenad

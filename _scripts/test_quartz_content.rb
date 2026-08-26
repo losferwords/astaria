@@ -993,7 +993,6 @@ expect.call(ready_article_notes.length >= 301, "Expected the complete ready ency
 intentionally_unpublished_titles = ["Бордель Уй-Джан", "Город Награкшаса", "Тхаги"]
 intentionally_coverless_titles = intentionally_unpublished_titles + [
   "Вервольф",
-  "О природе чудовищ",
   "Авгарский самогон",
   "Настой красного корня",
   "Нилачхатра",
@@ -1262,6 +1261,9 @@ expect.call(imitei_article_positions == imitei_article_positions.sort, "Known Im
 
 bestiary = read.call("bestiary/index.html")
 expect.call(bestiary.include?(">Бестиарий</h1>"), "Bestiary must keep its canonical name")
+expect.call(!canonical_by_title.key?("Кентавр"), "Centaurs must be removed from canonical lore")
+expect.call(!bestiary.include?(">Кентавр</h3>"), "Centaur must not appear in the public bestiary")
+expect.call(!File.exist?(File.join(PUBLIC, "bestiary", "centaur.html")), "Retired Centaur public page is still present")
 ["Ниса", "Мэйлун", "Стикс"].each do |title|
   expect.call(!bestiary.include?(">#{title}</h3>"), "#{title} is an individual and must not appear in Bestiary")
 end
@@ -1448,6 +1450,29 @@ meilong = read.call("characters/meilong.html")
   expect.call(meilong.include?(value), "Meilong infobox is missing #{value}")
 end
 expect.call(!meilong.include?(">Родители</dt>"), "Meilong's divine parentage must remain hidden")
+expect.call(meilong.include?("четыре когтистые лапы"), "Meilong's four legs are missing")
+expect.call(meilong.include?("широкая пара крыльев"), "Meilong's inherited wings are missing")
+expect.call(meilong.include?("продолжительное планирование"), "Meilong's aquatic launch and gliding locomotion are missing")
+expect.call(!meilong.include?("лабораторн"), "Meilong's laboratory origin leaked into the public page")
+expect.call(!meilong.match?(/тетрапод|гексапод|шестиконеч/i), "Meilong's public page uses modern scientific limb terminology")
+
+expect.call(!File.exist?(File.join(PUBLIC, "lore", "o-prirode-chudovishch.html")), "Private laws of nature must not have a public route")
+
+cerunna_page = read.call("gods/cerunna.html")
+wintra_page = read.call("gods/wintra.html")
+qiong_qi_page = read.call("characters/quiong-qi.html")
+harpy_page = read.call("bestiary/harpy.html")
+mercate_page = read.call("gods/mercate.html")
+rufu_page = read.call("gods/rufu.html")
+ast_page = read.call("gods/ast-god.html")
+expect.call(cerunna_page.include?("парой стройных оленьих ног"), "Cerunna must have two deer-like legs rather than a deer's lower body")
+expect.call(!cerunna_page.include?("обычный для позвоночных план"), "Cerunna's public description sounds too scientific")
+expect.call(wintra_page.include?("четыре когтистые лапы") && wintra_page.include?("отдельная пара"), "Wintra must have four legs and biological wings")
+expect.call(qiong_qi_page.include?("четырёх мощных лапах") && qiong_qi_page.include?("отдельная пара"), "Qiong-Qi must have four legs and biological wings")
+expect.call(harpy_page.include?("сохраняют кисти и длинные цепкие пальцы"), "Harpy wing-hands are missing")
+expect.call(mercate_page.include?("настоящей частью её тела") && mercate_page.include?("совершенной иллюзией"), "Mercate's biological wings and concealment illusion are missing")
+expect.call(rufu_page.include?("настоящие кожистые крылья"), "Rufu's biological wings are missing")
+expect.call(ast_page.include?("настоящей частью тела бога"), "Ast's biological wings are missing")
 
 mei_wu = read.call("characters/mei-wu.html")
 expect.call(mei_wu.include?(">Родители</dt>"), "Mei Wu infobox is missing public parents")

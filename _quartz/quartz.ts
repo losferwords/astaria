@@ -92,7 +92,7 @@ ExternalPlugin.Explorer({
 });
 
 ExternalPlugin.Search({
-  enablePreview: process.env.ASTARIA_MULTILINGUAL !== "true",
+  enablePreview: true,
 });
 
 const config = await loadQuartzConfig({

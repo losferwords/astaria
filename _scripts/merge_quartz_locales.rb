@@ -27,12 +27,20 @@ FileUtils.cp_r(File.join(RUSSIAN, "."), RUSSIAN_PUBLIC)
 # loader. It deliberately has no independent SEO surface or public URL scheme.
 Dir.glob(File.join(RUSSIAN_PUBLIC, "**", "*.html")).each do |path|
   html = File.read(path)
-  next if html.include?('name="robots"')
+  unless html.include?('name="robots"')
+    html = html.sub(
+      "<head>",
+      '<head><meta name="robots" content="noindex, nofollow">'
+    )
+  end
 
-  html = html.sub(
-    "<head>",
-    '<head><meta name="robots" content="noindex, nofollow">'
-  )
+  # Search result links are created at runtime from body[data-basepath]. Keep
+  # those links inside the Russian tree so preview fetches Russian HTML. The
+  # locale loader canonicalises the URL when a visitor follows the result.
+  html = html.sub(/data-basepath="([^"]*)"/) do
+    basepath = Regexp.last_match(1).sub(%r{/\z}, "")
+    %(data-basepath="#{basepath}/__locales/ru")
+  end
   File.write(path, html)
 end
 FileUtils.rm_f(File.join(RUSSIAN_PUBLIC, "sitemap.xml"))

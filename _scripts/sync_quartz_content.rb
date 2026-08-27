@@ -2440,6 +2440,9 @@ def generated_frontmatter(data, body, lookup)
   public_data = data.reject do |key, _value|
     %w[ready quartz canonical_title legacy_public_route].include?(key) || key.to_s.start_with?("secret_")
   end
+  # The generated tree has one authoritative locale. Do not let a missing or
+  # stale per-note value leak into document chrome or client-side behaviour.
+  public_data["lang"] = BUILD_LOCALE == "en-GB" ? "en-GB" : "ru"
   aliases = Array(public_data["aliases"])
   aliases << public_data["title"] if public_data["title"]
   aliases << data["legacy_public_route"] if data["legacy_public_route"]

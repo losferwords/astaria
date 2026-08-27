@@ -8,11 +8,13 @@ import { FullSlug, resolveRelative } from "../util/path";
 const Body: QuartzComponent = ({
   children,
   fileData,
+  cfg,
 }: QuartzComponentProps) => {
   const current = fileData.slug!;
-  const isRussian =
-    fileData.frontmatter?.lang?.toString().toLowerCase().startsWith("ru") ??
-    false;
+  // Navigation belongs to the site build, not to an individual article.
+  // Older notes do not all declare `lang`, so using frontmatter here could
+  // render an English header around otherwise Russian generated content.
+  const isRussian = cfg.locale.toLowerCase().startsWith("ru");
   const multilingual = process.env.ASTARIA_MULTILINGUAL === "true";
   const homeHref = resolveRelative(current, "index" as FullSlug);
   const mapHref = resolveRelative(current, "map" as FullSlug);

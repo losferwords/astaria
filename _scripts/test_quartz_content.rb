@@ -1527,6 +1527,7 @@ expect.call(!aristea.include?(">Братья и сёстры</dt>"), "Aristea's 
 Dir.glob(File.join(CONTENT, "**", "*.md")).each do |path|
   data, = parse_frontmatter.call(path)
   expect.call(data.keys.none? { |key| key.to_s.start_with?("secret_") }, "Private relationship metadata leaked into #{path.delete_prefix("#{CONTENT}/")}")
+  expect.call(data["lang"] == "ru", "Generated Russian content has the wrong locale: #{path.delete_prefix("#{CONTENT}/")}")
 end
 expect.call(meilong.include?("astaria-infobox-note"), "Meilong infobox must show the calculated current age")
 expect.call(meilong.include?("assets/images/meilong_adult.jpg"), "Meilong must use the updated adult portrait")
@@ -1784,6 +1785,12 @@ expect.call(render_page_source.include?("componentData.ctx.argv.serve || !cfg.ba
 expect.call(
   render_page_source.include?('contentIndexScript = `var fetchData = fetch(') && !render_page_source.include?('contentIndexScript = `const fetchData = fetch('),
   "Locale replacement must be able to refresh the search index without redeclaring a lexical fetchData binding"
+)
+body_source = File.read(File.join(ROOT, "_quartz", "quartz", "components", "Body.tsx"))
+expect.call(
+  body_source.include?('const isRussian = cfg.locale.toLowerCase().startsWith("ru")') &&
+    !body_source.include?("fileData.frontmatter?.lang"),
+  "Site navigation locale must come from the build configuration instead of article frontmatter"
 )
 
 native_name_notes = []

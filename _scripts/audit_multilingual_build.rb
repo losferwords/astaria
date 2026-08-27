@@ -34,12 +34,15 @@ if english_index.file?
   expect.call(html.match?(/<html[^>]+lang="en-GB"/), "English home page has the wrong lang attribute")
   expect.call(html.include?('data-astaria-language="en"'), "English home page has no EN language control")
   expect.call(html.include?('data-astaria-language="ru"'), "English home page has no RU language control")
+  expect.call(html.include?('data-preview="true"'), "English search preview is disabled")
 end
 
 if russian_index.file?
   html = russian_index.read
   expect.call(html.match?(/<html[^>]+lang="ru"/), "Russian home page has the wrong lang attribute")
   expect.call(html.include?('name="robots" content="noindex, nofollow"'), "Russian locale is not marked noindex")
+  expect.call(html.include?('data-basepath="/astaria/__locales/ru"'), "Russian search does not resolve pages inside the Russian locale tree")
+  expect.call(html.include?('data-preview="true"'), "Russian search preview is disabled")
 end
 
 russian_html = PUBLIC.join("__locales", "ru").glob("**/*.html")
@@ -49,6 +52,14 @@ russian_html.each do |path|
     html.match?(/<meta[^>]+name="robots"[^>]+content="[^"]*noindex/i),
     "Hidden Russian page is indexable: #{path.relative_path_from(PUBLIC)}"
   )
+  # Alias redirects contain no body or search UI. Full rendered pages must
+  # resolve runtime-generated search links inside the hidden locale tree.
+  if html.include?('data-basepath=')
+    expect.call(
+      html.include?('data-basepath="/astaria/__locales/ru"'),
+      "Hidden Russian page has the canonical search base path: #{path.relative_path_from(PUBLIC)}"
+    )
+  end
 end
 expect.call(!PUBLIC.join("__locales", "ru", "sitemap.xml").exist?, "Hidden Russian sitemap must not be published")
 expect.call(!PUBLIC.join("__locales", "ru", "index.xml").exist?, "Hidden Russian RSS feed must not be published")
@@ -121,6 +132,14 @@ end
   expect.call(english_path.file?, "Approved English route is missing: /#{relative}")
   expect.call(russian_path.file?, "Matching Russian route is missing: /#{relative}")
   expect.call(english_path.read.include?(title), "English page does not render #{title}") if english_path.file?
+end
+
+russian_chori = PUBLIC.join("__locales", "ru", "characters", "chori-marjari.html")
+if russian_chori.file?
+  html = russian_chori.read
+  expect.call(html.include?("<strong>Астария</strong>"), "Russian Chori page renders an English site brand")
+  expect.call(html.include?(">Карта</a>"), "Russian Chori page renders an English map link")
+  expect.call(html.include?(">Хронология</a>"), "Russian Chori page renders an English timeline link")
 end
 
 puts "Checked #{checks} multilingual build invariants"

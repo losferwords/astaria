@@ -28,6 +28,10 @@ const astariaExperienceUi = astariaExperienceEnglish
           ? `Showing: ${visible}`
           : `Showing: ${visible} of ${total}`,
       discoveryUpdated: "A new set of paths has been chosen.",
+      noSearchResults: "No results.",
+      tryAnotherSearchTerm: "Try another search term?",
+      searchResultsLabel: "Search results",
+      tagSuggestionsLabel: "Tag suggestions",
     }
   : {
       mapKindLabels: {
@@ -54,6 +58,10 @@ const astariaExperienceUi = astariaExperienceEnglish
           ? `Показано: ${visible}`
           : `Показано: ${visible} из ${total}`,
       discoveryUpdated: "Подборка маршрутов обновлена.",
+      noSearchResults: "Ничего не найдено.",
+      tryAnotherSearchTerm: "Попробуйте изменить поисковый запрос.",
+      searchResultsLabel: "Результаты поиска",
+      tagSuggestionsLabel: "Подсказки тегов",
     };
 
 const mapKindLabels = astariaExperienceUi.mapKindLabels;
@@ -765,11 +773,48 @@ function setupAstariaDiscovery() {
   render(false);
 }
 
+function setupAstariaSearchTranslations() {
+  const spaces = document.querySelectorAll<HTMLElement>(
+    ".search .search-space",
+  );
+
+  const translate = (space: HTMLElement) => {
+    const noMatch = space.querySelector<HTMLElement>(".result-card.no-match");
+    const title = noMatch?.querySelector<HTMLElement>("h3");
+    const hint = noMatch?.querySelector<HTMLElement>("p");
+    if (title && title.textContent !== astariaExperienceUi.noSearchResults) {
+      title.textContent = astariaExperienceUi.noSearchResults;
+    }
+    if (hint && hint.textContent !== astariaExperienceUi.tryAnotherSearchTerm) {
+      hint.textContent = astariaExperienceUi.tryAnotherSearchTerm;
+    }
+
+    const results = space.querySelector<HTMLElement>(".results-container");
+    const suggestions = space.querySelector<HTMLElement>(".tag-suggestions");
+    results?.setAttribute("aria-label", astariaExperienceUi.searchResultsLabel);
+    suggestions?.setAttribute(
+      "aria-label",
+      astariaExperienceUi.tagSuggestionsLabel,
+    );
+  };
+
+  for (const space of spaces) {
+    if (space.dataset.astariaI18nReady === "true") continue;
+    space.dataset.astariaI18nReady = "true";
+    translate(space);
+    new MutationObserver(() => translate(space)).observe(space, {
+      childList: true,
+      subtree: true,
+    });
+  }
+}
+
 function setupAstariaExperience() {
   setupAstariaMap();
   setupAstariaTimeline();
   setupAstariaCategoryFilters();
   setupAstariaDiscovery();
+  setupAstariaSearchTranslations();
 }
 
 document.addEventListener("nav", setupAstariaExperience);

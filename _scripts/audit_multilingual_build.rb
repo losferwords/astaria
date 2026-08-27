@@ -64,6 +64,22 @@ end
 expect.call(!PUBLIC.join("__locales", "ru", "sitemap.xml").exist?, "Hidden Russian sitemap must not be published")
 expect.call(!PUBLIC.join("__locales", "ru", "index.xml").exist?, "Hidden Russian RSS feed must not be published")
 
+client_javascript = (
+  PUBLIC.glob("postscript-*.js") + PUBLIC.glob("static/scripts/*.js")
+).map(&:read).join("\n")
+javascript_fragment = lambda do |text|
+  text.codepoints.map { |codepoint| codepoint < 128 ? codepoint.chr : "\\u#{codepoint.to_s(16).rjust(4, "0")}" }.join
+end
+bundle_includes = lambda do |text|
+  client_javascript.include?(text) ||
+    client_javascript.downcase.include?(javascript_fragment.call(text).downcase)
+end
+expect.call(bundle_includes.call("Ничего не найдено."), "Russian empty-search title is missing from the client bundle")
+expect.call(
+  bundle_includes.call("Попробуйте изменить поисковый запрос."),
+  "Russian empty-search hint is missing from the client bundle"
+)
+
 allowed_native_names = AstariaTranslations.names.values.map do |entry|
   entry.is_a?(Hash) ? entry["native_name"].to_s : ""
 end.reject(&:empty?).uniq

@@ -1792,6 +1792,13 @@ expect.call(
     !body_source.include?("fileData.frontmatter?.lang"),
   "Site navigation locale must come from the build configuration instead of article frontmatter"
 )
+astaria_script_source = File.read(File.join(ROOT, "_quartz", "quartz", "components", "scripts", "astaria.inline.ts"))
+expect.call(
+  astaria_script_source.include?('noSearchResults: "Ничего не найдено."') &&
+    astaria_script_source.include?('tryAnotherSearchTerm: "Попробуйте изменить поисковый запрос."') &&
+    astaria_script_source.include?("new MutationObserver(() => translate(space))"),
+  "Dynamic empty-search results must be localised after the search plugin renders them"
+)
 
 native_name_notes = []
 missing_native_names = []

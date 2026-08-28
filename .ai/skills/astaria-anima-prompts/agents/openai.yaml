@@ -1,0 +1,4 @@
+interface:
+  display_name: "Astaria Anima Prompts"
+  short_description: "Промты Anima для иллюстраций Астарии"
+  default_prompt: "Используй $astaria-anima-prompts, чтобы создать positive и negative промты для иллюстрации статьи Астарии."

@@ -25,6 +25,10 @@ For Fate Core mechanics, Russian terminology, character or NPC sheets, scenario 
 
 `.ai/skills/astaria-fate-core/SKILL.md`
 
+For Anima or DaSiWa-Anima illustration prompts, coordinated country visual families, prompt revision, or prompt/art review, use:
+
+`.ai/skills/astaria-anima-prompts/SKILL.md`
+
 ## Canonical Sources
 
 - `Энциклопедия/` contains canonical lore and literature.

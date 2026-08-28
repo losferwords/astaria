@@ -43,13 +43,16 @@ function preferredAstariaLanguage(): AstariaLanguage {
     : "en";
 }
 
-function rememberAstariaLanguage(language: AstariaLanguage) {
+function rememberAstariaLanguage(
+  language: AstariaLanguage,
+  canonicalRoot: string,
+) {
   try {
     window.localStorage.setItem(ASTARIA_LANGUAGE_KEY, language);
   } catch {
     // A cookie is still written when localStorage is unavailable.
   }
-  const siteRoot = canonicalSiteRoot(scriptAssetRoot()) || "/";
+  const siteRoot = canonicalRoot || "/";
   document.cookie = `${ASTARIA_LANGUAGE_COOKIE}=${language}; Max-Age=34560000; Path=${siteRoot}; SameSite=Lax`;
 }
 
@@ -144,7 +147,7 @@ async function replaceWithAstariaLocale(
   document.close();
 }
 
-function setupAstariaLanguageControls() {
+function setupAstariaLanguageControls(canonicalRoot: string) {
   const current = preferredAstariaLanguage();
   document.documentElement.dataset.astariaLanguage = current;
 
@@ -158,7 +161,7 @@ function setupAstariaLanguageControls() {
     button.setAttribute("aria-pressed", String(active));
     button.addEventListener("click", () => {
       if (language === current) return;
-      rememberAstariaLanguage(language);
+      rememberAstariaLanguage(language, canonicalRoot);
       window.location.reload();
     });
   }
@@ -174,10 +177,7 @@ function setupAstariaLanguageControls() {
       if (!url.pathname.includes(ASTARIA_LOCALE_SEGMENT)) return;
       event.preventDefault();
       window.location.assign(
-        canonicaliseLocaleUrl(
-          url,
-          canonicalSiteRoot(scriptAssetRoot()),
-        ).toString(),
+        canonicaliseLocaleUrl(url, canonicalRoot).toString(),
       );
     },
     { capture: true },
@@ -215,9 +215,11 @@ if (isLocaleDocument) {
 }
 
 if (document.readyState === "loading") {
-  document.addEventListener("DOMContentLoaded", setupAstariaLanguageControls, {
-    once: true,
-  });
+  document.addEventListener(
+    "DOMContentLoaded",
+    () => setupAstariaLanguageControls(astariaCanonicalRoot),
+    { once: true },
+  );
 } else {
-  setupAstariaLanguageControls();
+  setupAstariaLanguageControls(astariaCanonicalRoot);
 }

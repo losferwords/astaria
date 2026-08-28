@@ -80,6 +80,15 @@ expect.call(
   "Russian empty-search hint is missing from the client bundle"
 )
 
+locale_script_source = ROOT.join("_quartz", "quartz", "components", "scripts", "locale.inline.ts").read
+expect.call(
+  locale_script_source.include?("function setupAstariaLanguageControls(canonicalRoot: string)") &&
+    locale_script_source.include?("rememberAstariaLanguage(language, canonicalRoot)") &&
+    locale_script_source.include?("canonicaliseLocaleUrl(url, canonicalRoot)") &&
+    !locale_script_source.include?("canonicalSiteRoot(scriptAssetRoot())"),
+  "Delayed locale controls must preserve the production /astaria site root"
+)
+
 allowed_native_names = AstariaTranslations.names.values.map do |entry|
   entry.is_a?(Hash) ? entry["native_name"].to_s : ""
 end.reject(&:empty?).uniq

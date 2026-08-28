@@ -1799,6 +1799,14 @@ expect.call(
     astaria_script_source.include?("new MutationObserver(() => translate(space))"),
   "Dynamic empty-search results must be localised after the search plugin renders them"
 )
+locale_script_source = File.read(File.join(ROOT, "_quartz", "quartz", "components", "scripts", "locale.inline.ts"))
+expect.call(
+  locale_script_source.include?("function setupAstariaLanguageControls(canonicalRoot: string)") &&
+    locale_script_source.include?("rememberAstariaLanguage(language, canonicalRoot)") &&
+    locale_script_source.include?("canonicaliseLocaleUrl(url, canonicalRoot)") &&
+    !locale_script_source.include?("canonicalSiteRoot(scriptAssetRoot())"),
+  "Delayed locale controls must preserve the production /astaria site root"
+)
 
 native_name_notes = []
 missing_native_names = []

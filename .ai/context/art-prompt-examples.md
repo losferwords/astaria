@@ -1,3 +1,9 @@
+# Правила формата
+
+- Positive и Negative используют только обычные невзвешенные теги и фразы. Конструкции весов и синтаксического усиления вроде `(tag:1.4)`, `(tag)`, `[tag]` и их аналогов запрещены: они могут смещать цветовой баланс, композицию и общий визуальный характер DaSiWa-Anima.
+- Positive можно делить пустыми строками на смысловые блоки, как в примерах ниже.
+- Negative оформляется одним непрерывным перечислением через запятую, без тематических разделов, отдельных абзацев и переносов внутри промта.
+
 # Велисса
 ## positive
 masterpiece, best quality, score_9, score_8, 1girl, solo, 18yo, squirrel girl, red floral wreath, very long brown hair, voluminous hair strands hang down along the cheeks, green eyes, slim build, medium breast, warm proud smile expression, nude, naked, very long white ribbons with a red Slavic pattern, hair over breasts, hair censorship, ribbon over her pussy, perfect body, perfect face, absolute beauty, squirrel ears, kemonomimi.

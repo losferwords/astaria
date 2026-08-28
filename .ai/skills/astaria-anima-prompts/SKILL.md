@@ -14,6 +14,7 @@ Create an image concept that expresses the target article, then translate it int
 - Do not generate or edit an image merely because this skill is active. Use an image-generation skill only when the user separately asks for an image.
 - Never add style steering such as `anime`, `realistic`, `photorealistic`, `semi-realistic`, `cinematic`, `3d`, `render`, `painterly`, `concept art`, an artist name, or a franchise style. Replace such labels with concrete framing, light, materials, atmosphere, and depth.
 - Treat the user's existing quality prefix and negative baseline as tested checkpoint conventions. Do not silently replace them with generic advice from the base Anima model card.
+- Never use prompt weights or emphasis syntax in either Positive or Negative. This includes `(tag:1.4)`, `(tag)`, `[tag]`, and equivalent weighted forms. Write plain unweighted tags and clauses; weighting can shift the checkpoint's established color balance, composition, and overall visual character.
 - Keep minors fully clothed and plainly non-sexualized. Describe age, childlike proportions, activity, expression, and clothing; omit breast, body-beauty, erotic pose, and glamour language.
 
 ## Research the target economically
@@ -118,6 +119,7 @@ Begin from the user's tested technical baseline, then adapt it:
 score_1, score_2, score_3, lowres, bad anatomy, bad hands, text, error, missing fingers, extra digit, fewer digits, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, artist name, deformed, ugly, mutilated, extra limbs, bad proportions, gross proportions, duplicate, morbid, mutated hands, poorly drawn hands, mutation, disfigured
 ```
 
+- Keep the entire Negative prompt as one continuous comma-separated list inside a single code block. Do not divide it into thematic sections, labeled groups, separate paragraphs, or separate lines.
 - Add `cropped, out of frame` for a required full-body or whole-object composition; omit them for an intentional close-up or partial crop.
 - Add only likely contextual failures: wrong gender or age, human ears on a kemonomimi, visible eyes under a blindfold, modern objects, wrong historical armor, unwanted nudity, duplicate weapons, empty city, or repeated architecture.
 - For weapons, consider `bent spear, broken weapon, warped blade, duplicated weapon, floating weapon, merged hand and weapon` rather than adding more heroic adjectives to Positive.
@@ -142,5 +144,6 @@ Before answering, verify:
 - colors are attached to objects and the family anchors are present without copying a sibling image;
 - a city has visible life and three depth layers; a male portrait has role and facial specificity without glamour-token stacking;
 - no forbidden style steering or unrequested workflow advice appears;
+- neither prompt contains weights or emphasis syntax, and Negative is one continuous comma-separated list;
 - Positive and Negative do not contradict each other;
 - no secret or non-canonical fact entered the image concept.

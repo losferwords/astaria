@@ -92,7 +92,7 @@ Use a deity's motifs to connect the family when relevant, but do not turn every 
 
 ## Write Positive
 
-Use comma-separated English tags and compact natural-language clauses. Separate logical blocks with blank lines. The user's established default order is:
+Use comma-separated English tags and compact natural-language clauses. Inside each logical thought, join tags and clauses with commas; end the completed thought with a full stop. Separate larger logical blocks with blank lines. Do not turn the entire Positive prompt into one comma splice. The usual block contains one to three short sentences, and every block ends with a full stop. The user's established default order is:
 
 1. `masterpiece, best quality, score_9, score_8,` followed by exact subject count and gender when applicable;
 2. identity, species, age, build, face, hair, expression, and anatomy;
@@ -101,6 +101,8 @@ Use comma-separated English tags and compact natural-language clauses. Separate 
 5. foreground, middle ground, background, architecture or terrain, weather, light, motion, and atmosphere.
 
 Use lowercase for ordinary tag-like phrases where practical; score tags keep underscores. Natural-language clauses may use normal English capitalization and punctuation.
+
+Punctuation is structural rather than decorative. A full stop marks a change in what the model should resolve: for example, subject identity may form one sentence, clothing and equipment another, and pose or interaction a third. Commas continue describing the same visual decision. Preserve this sentence rhythm even when each sentence is mostly tags.
 
 - Replace Astaria-only names with drawable descriptions inside the prompt. Keep the entity name as the response heading, not as an unsupported tag.
 - Translate culture through a small number of legible analogues such as `ancient slavic`, `ancient japanese`, or `ancient greek`, then add Astaria-specific motifs from canon.
@@ -144,6 +146,7 @@ Before answering, verify:
 - colors are attached to objects and the family anchors are present without copying a sibling image;
 - a city has visible life and three depth layers; a male portrait has role and facial specificity without glamour-token stacking;
 - no forbidden style steering or unrequested workflow advice appears;
+- Positive uses commas within a logical thought, full stops between completed thoughts, and a full stop at the end of every block;
 - neither prompt contains weights or emphasis syntax, and Negative is one continuous comma-separated list;
 - Positive and Negative do not contradict each other;
 - no secret or non-canonical fact entered the image concept.

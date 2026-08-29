@@ -1278,6 +1278,10 @@ names:
   Бордель Халык-Бындыр:
     title: Halyk-Byndir
     slug: halyk-byndir
+  Бордель Уй-Джан:
+    title: Ui-Djan
+    slug: ui-djan
+    native_name: 玉杖
   Вулкан Ротонуи:
     title: Rotonui Volcano
     slug: rotonui-volcano

@@ -1022,7 +1022,7 @@ canonical_notes.each do |note|
   end
 end
 expect.call(ready_article_notes.length >= 301, "Expected the complete ready encyclopedia corpus")
-intentionally_unpublished_titles = ["Бордель Уй-Джан", "Город Награкшаса"]
+intentionally_unpublished_titles = ["Город Награкшаса"]
 intentionally_coverless_titles = intentionally_unpublished_titles + [
   "Вервольф",
   "Авгарский самогон",
@@ -1568,6 +1568,9 @@ end
 
 halyk_byndir = read.call("places/halyk-byndir.html")
 expect.call(halyk_byndir.match?(/<dt>Тип места<\/dt><dd>\s*Бордель\s*<\/dd>/), "Halyk-Byndir must use the Russian place type")
+ui_djan = read.call("places/ui-djan.html")
+expect.call(ui_djan.match?(/<dt>Тип места<\/dt><dd>\s*Бордель\s*<\/dd>/), "Ui-Djan must use the Russian place type")
+expect.call(ui_djan.include?("ui-djan_brothel.jpg"), "Ui-Djan must render its local cover artwork")
 dragon_temple = read.call("places/dragon-temple.html")
 expect.call(dragon_temple.match?(/<dt>Тип места<\/dt><dd>\s*Храмовый комплекс\s*<\/dd>/), "Dragon Temple must use the Russian place type")
 ["Страна", "Часть территории", "Основание"].each do |label|
@@ -1842,9 +1845,6 @@ expect.call(missing_native_names.empty?, "CJK aliases without native_name: #{mis
 expect.call(english_visible_metadata.empty?, "English values remain in public-facing metadata: #{english_visible_metadata.join('; ')}")
 expect.call(structural_body_notes.empty?, "Structural metadata is duplicated in article bodies: #{structural_body_notes.map { |path| File.basename(path) }.join(', ')}")
 expect.call(legacy_founded_notes.empty?, "Legacy founded fields are not rendered by the infobox: #{legacy_founded_notes.map { |path| File.basename(path) }.join(', ')}")
-uy_dzhan_data, = parse_frontmatter.call(File.join(ROOT, "Энциклопедия", "Места", "Бордель Уй-Джан.md"))
-expect.call(uy_dzhan_data["location_type"] == "Бордель", "Unpublished Uy-Dzhan must retain the Russian place type")
-
 timeline = read.call("timeline/index.html")
 expect.call(timeline.scan("astaria-timeline-event").length == 28, "Timeline must contain all 28 events")
 expect.call(timeline.include?("astaria-timeline-search"), "Timeline search is missing")

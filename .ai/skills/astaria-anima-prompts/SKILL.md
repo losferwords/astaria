@@ -113,6 +113,12 @@ Punctuation is structural rather than decorative. A full stop marks a change in 
 
 Length follows complexity, not a quota. A city or ensemble normally needs more scene information than a close portrait, but every clause must change a visible decision.
 
+For a single-character illustration, begin with the compact rhythm established by the successful examples: one identity sentence, one clothing or equipment sentence, one composition sentence, and one setting sentence. Add detail only when it changes a necessary visible decision. Preserve room for the checkpoint to solve secondary ornament, folds, light, and incidental scenery on its own.
+
+- After a failed generation, do not keep appending corrective clauses to the previous prompt. Identify the two or three failed anchors and rewrite the prompt cleanly; accumulated corrections can overconstrain pose, symmetry, crop, and background.
+- Keep framing and camera angle syntactically separate. Use forms such as `full body view, three-quarter view, low angle view`; avoid ambiguous phrases such as `three-quarter body view`, which can be interpreted as a partial-body crop rather than a three-quarter camera angle.
+- For an unusual accessory or magical effect, use one direct object label followed by two or three concrete structural cues. Exhaustively describing every edge, gap, attachment, and exclusion can turn an organic effect into a rigid emblem or force the camera to expose its construction.
+
 ## Write Negative
 
 Begin from the user's tested technical baseline, then adapt it:
@@ -127,6 +133,7 @@ score_1, score_2, score_3, lowres, bad anatomy, bad hands, text, error, missing 
 - For weapons, consider `bent spear, broken weapon, warped blade, duplicated weapon, floating weapon, merged hand and weapon` rather than adding more heroic adjectives to Positive.
 - Never negate something explicitly requested in Positive. Check count, gender, indoors/outdoors, daylight, visibility, weapon state, body crop, ears, and clothing coverage.
 - Do not expand Negative with unrelated fears. A shorter targeted exclusion is more useful than an indiscriminate blacklist.
+- When rebuilding a prompt after several iterations, discard obsolete contextual exclusions from earlier attempts. Keep only the failure modes that remain plausible for the rewritten Positive.
 
 ## Output contract
 

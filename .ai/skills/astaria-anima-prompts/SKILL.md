@@ -104,7 +104,7 @@ Use lowercase for ordinary tag-like phrases where practical; score tags keep und
 
 Punctuation is structural rather than decorative. A full stop marks a change in what the model should resolve: for example, subject identity may form one sentence, clothing and equipment another, and pose or interaction a third. Commas continue describing the same visual decision. Preserve this sentence rhythm even when each sentence is mostly tags.
 
-- Replace Astaria-only names with drawable descriptions inside the prompt. Keep the entity name as the response heading, not as an unsupported tag.
+- Never place a standalone Astaria proper name such as a person, city, country, organization, deity, profession, or named object in Positive or Negative. The checkpoint has no knowledge of Astaria, so an unsupported name consumes attention without defining anything visible. Keep lore names in the Russian heading and concept note only; translate them into concrete anatomy, clothing, architecture, terrain, object, action, or atmosphere inside the prompt, then omit the original name rather than appending it to the description.
 - Translate culture through a small number of legible analogues such as `ancient slavic`, `ancient japanese`, or `ancient greek`, then add Astaria-specific motifs from canon.
 - Bind colors to objects: `crimson sash`, `white linen tunic with green embroidery`, `black lacquered scabbard`.
 - Translate abstractions into evidence. Instead of only `protective`, show the character shielding someone, repairing a bridge, or standing between danger and a home.
@@ -124,11 +124,13 @@ For a single-character illustration, begin with the compact rhythm established b
 Begin from the user's tested technical baseline, then adapt it:
 
 ```text
-score_1, score_2, score_3, lowres, bad anatomy, bad hands, text, error, missing fingers, extra digit, fewer digits, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, artist name, deformed, ugly, mutilated, extra limbs, bad proportions, gross proportions, duplicate, morbid, mutated hands, poorly drawn hands, mutation, disfigured
+score_1, score_2, score_3, lowres, bad anatomy, bad hands, text, error, missing fingers, extra digit, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, artist name, deformed, ugly, mutilated, out of frame, extra limbs, bad proportions, gross proportions, duplicate, morbid, mutated hands, poorly drawn hands, mutation, disfigured
 ```
 
 - Keep the entire Negative prompt as one continuous comma-separated list inside a single code block. Do not divide it into thematic sections, labeled groups, separate paragraphs, or separate lines.
-- Add `cropped, out of frame` for a required full-body or whole-object composition; omit them for an intentional close-up or partial crop.
+- Treat Positive as the primary constraint. Do not mechanically negate every alternative to an already explicit attribute: `1man` and `silver-gray hair` do not by themselves justify lists such as `1woman, blonde hair, black hair, brown hair`. Add a competing gender, color, age, costume, or setting only when the checkpoint has actually drifted toward it, the requested feature is unusually fragile, or that error would destroy the concept.
+- Start with the technical baseline and the smallest useful contextual tail. Prefer one observed exclusion such as `perfect beard` over a speculative catalogue of everything the image should not contain. A long contextual Negative is justified only by genuinely complex anatomy, crowded scenes, fragile equipment, or repeated generation failures.
+- The technical baseline retains `cropped, out of frame` as the user's established default. Omit them only when an intentional close-up or partial crop is being suppressed by those tokens.
 - Add only likely contextual failures: wrong gender or age, human ears on a kemonomimi, visible eyes under a blindfold, modern objects, wrong historical armor, unwanted nudity, duplicate weapons, empty city, or repeated architecture.
 - For weapons, consider `bent spear, broken weapon, warped blade, duplicated weapon, floating weapon, merged hand and weapon` rather than adding more heroic adjectives to Positive.
 - Never negate something explicitly requested in Positive. Check count, gender, indoors/outdoors, daylight, visibility, weapon state, body crop, ears, and clothing coverage.
@@ -153,7 +155,9 @@ Before answering, verify:
 - colors are attached to objects and the family anchors are present without copying a sibling image;
 - a city has visible life and three depth layers; a male portrait has role and facial specificity without glamour-token stacking;
 - no forbidden style steering or unrequested workflow advice appears;
+- no unsupported Astaria proper name appears in Positive or Negative; every lore-specific element has been translated into something drawable;
 - Positive uses commas within a logical thought, full stops between completed thoughts, and a full stop at the end of every block;
 - neither prompt contains weights or emphasis syntax, and Negative is one continuous comma-separated list;
+- contextual Negative additions address observed or strongly plausible failures instead of mirroring every Positive attribute with its opposite;
 - Positive and Negative do not contradict each other;
 - no secret or non-canonical fact entered the image concept.

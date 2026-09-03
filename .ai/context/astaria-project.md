@@ -43,7 +43,7 @@ The Obsidian vault is the primary and self-contained knowledge base. Lore should
 
 ## Campaign Chapters
 
-Campaign chapters are continuous narrative retellings with YAML metadata. Keep one chapter per Markdown file and avoid forced internal scene headings unless requested.
+Campaign chapters are continuous third-person narrative retellings with YAML metadata. Keep one chapter per Markdown file, prefer indirect speech over reconstructed quotations, and avoid forced internal scene headings unless requested. Attribute discoveries and theories to the characters who made them, and never present a character's assumption as an established fact. End on the last meaningful event that occurred during play; do not append an authorial summary, repeated list of clues, thematic conclusion, or artificial cliffhanger unless the user explicitly requests one.
 
 Current saga folders:
 

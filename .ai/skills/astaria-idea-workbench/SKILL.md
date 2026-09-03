@@ -13,6 +13,7 @@ Use this skill for creative brainstorming in the Astaria setting.
 - Use `.ai/context/astaria-project.md` for project background.
 - Use `.ai/context/astaria-meta-and-fate.md` for cultures, correct demonyms, FATE aspects, skills, and stunts.
 - For FATE characters, NPCs, scenes, scenarios, arcs, conflicts, terminology, or mechanical preparation, also use `.ai/skills/astaria-fate-core/SKILL.md` and its relevant references.
+- For FATE session preparation, select incremental scene cards or a full module using `.ai/skills/astaria-fate-core/references/preparation-modes.md`. Ongoing campaigns default to incremental scene cards.
 - If the idea touches existing lore, characters, Obsidian structure, maps, or articles, also use `.ai/skills/astaria-obsidian-vault/SKILL.md`.
 - Unless the user explicitly says “только в чат”, “не создавай файл”, or similar, save the generated ideas to a Markdown note in `Идеи/`.
 - Keep idea notes `ready: false`, `quartz: false`, and `private: true`.
@@ -29,6 +30,8 @@ Use this skill for creative brainstorming in the Astaria setting.
 ```
 
 If a file with that name exists, append `- 2`, `- 3`, etc.
+
+For incremental preparation of the same campaign chapter, keep one live chapter note instead of creating a new numbered file for every scene. When a scene has been played or the user has chosen a direction, collapse the old option batch to a brief factual result and add only the next batch. Do not accumulate rejected branches unless the user asks to preserve them.
 
 3. Use this frontmatter:
 
@@ -59,7 +62,9 @@ private: true
 ## Creative Style
 
 - Make ideas immediately playable.
+- Write all read-aloud artistic descriptions of unfolding GM scenes in the present tense. Use past tense only for established backstory, prior events, and canonical session retellings.
 - Prefer 3-7 strong options over a long vague list.
+- In incremental scene-card mode, prepare only the nearest scene and stop; do not anticipate the rest of the session.
 - Tie ideas to existing characters, cultures, gods, conflicts, and places when possible.
 - Use canonical sources for those ties: `Энциклопедия/`, `Хронология/`, `Карты/`, `.ai/context/`, and explicitly requested notes. Do not use `Идеи/` as canon.
 - Give each situation at least one tension, choice, or cost.

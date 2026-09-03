@@ -111,8 +111,10 @@ The country covers demonstrate a useful concession to a character-focused checkp
 - Fix grammar and pronouns. Examples contain `covering his eyes` in a female prompt, repeated `look aside`, and misspellings such as `poaint`; these add noise without value.
 - Do not request `over-the-shoulder`, `back to viewer`, and detailed frontal facial expression at the same time.
 - Do not describe a sword as in its scabbard, drawing from the scabbard, and an exposed perfect blade simultaneously. Choose one state.
-- Use `cropped, out of frame` only when the whole body or whole object must be visible. They conflict with intentional portraits and close-ups.
+- Preserve the user's baseline `cropped, out of frame` by default. If an intentional close-up or partial portrait is repeatedly pushed toward a wider composition, those are the first baseline tokens to test omitting because they can resist the requested crop.
 - Contextual negatives are most valuable when tied to an observed prior: human ears for kemonomimi, visible eyes for blindfolds, Roman armor for a specific Greek silhouette, exposed belly for full female armor, modern objects for historical cities, duplicate long weapons, or empty streets.
+- Do not mirror an unambiguous Positive with a catalogue of opposites. Subject count, gender, and hair color usually hold without separately banning every other gender and color; reserve those exclusions for observed drift. The revised Indulf portrait also showed the narrower pattern clearly: `shaggy braided beard` in Positive and the single observed failure `perfect beard` in Negative were more useful than a broad facial-hair blacklist.
+- Astaria proper names are not visual instructions. A token such as `Solais` must be omitted after it has been translated into known architecture, weather, geography, and activity; leaving the untranslated name in the prompt adds noise and cannot teach the checkpoint the setting.
 - Abstract praise such as `epic`, `noble`, `legendary`, `dramatic`, and `beautiful` may support a prompt but cannot carry identity. Each must be backed by pose, action, object, environment, or light.
 - A restrained recurring palette creates family resemblance, but every color should belong to an object. Free-floating color lists often bleed across unrelated details.
 

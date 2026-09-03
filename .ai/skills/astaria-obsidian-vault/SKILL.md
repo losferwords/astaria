@@ -44,6 +44,13 @@ Do not add generic or workflow tags. Use folders, `type`, `category`, dedicated 
 
 Correct obvious spelling, punctuation, and rushed phrasing while preserving facts, continuity, and authorial intent.
 
+## Campaign Retellings
+
+- Write played-session chapters as continuous third-person, past-tense narratives unless the user requests another form. Prefer indirect speech over reconstructed quotations.
+- Preserve attribution precisely: state who examined an object, reached a conclusion, proposed a theory, or made a decision. Never turn a character's guess, skill result, or interpretation into an objective fact.
+- Distinguish established discoveries from suspicions and incomplete theories in the prose itself.
+- Do not add a concluding summary, moral, recap of clues, thematic coda, or artificial cliffhanger. The GM reads these chapters aloud before the next session, so end with the last meaningful action, decision, or discovery that actually occurred in play unless the user explicitly requests a literary finale.
+
 ## Links
 
 - Use Obsidian wikilinks: `[[Target]]` or `[[Target|visible text]]`.

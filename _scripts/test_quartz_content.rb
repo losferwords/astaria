@@ -1040,7 +1040,17 @@ catalog_ready_notes = published_ready_notes.reject do |note|
   %w[chapter session].include?(note[:data]["type"].to_s)
 end
 
+canonical_relationship_titles = {}
+canonical_notes.each do |note|
+  canonical_title = note[:data]["title"].to_s
+  references = [canonical_title, File.basename(note[:path], ".md"), *Array(note[:data]["aliases"])]
+  references.each { |reference| canonical_relationship_titles[reference.to_s] ||= canonical_title }
+end
+
 inferred_sidebar_expectations = {
+  "countries/lang-an-empire.md" => {
+    "deities" => ["Ланг-Ан"]
+  },
   "countries/iomar.md" => {
     "important_people" => ["Аластриона Растущая", "Блейн из Руше", "Лиарин Ветреная"]
   },
@@ -1065,6 +1075,7 @@ inferred_sidebar_expectations.each do |relative, fields|
   data, = parse_frontmatter.call(path)
   fields.each do |field, expected_titles|
     actual_titles = Array(data[field]).map { |value| value.to_s[/\[\[([^|\]]+)/, 1] || value.to_s }
+    actual_titles.map! { |title| canonical_relationship_titles.fetch(title, title) }
     expected_titles.each do |title|
       expect.call(actual_titles.include?(title), "#{relative}: #{field} is missing inferred #{title}")
     end

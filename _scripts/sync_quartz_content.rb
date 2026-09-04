@@ -836,7 +836,22 @@ def canonical_relationship_records
 end
 
 def canonical_reference_lookup
-  @canonical_reference_lookup ||= build_reference_lookup(canonical_relationship_records)
+  @canonical_reference_lookup ||= begin
+    records = canonical_relationship_records
+    lookup = build_reference_lookup(records)
+    records.each do |record|
+      english_title = AstariaTranslations.english_title_for(record[:data]["title"])
+      normalized = normalize_reference(english_title)
+      lookup[normalized] ||= record unless normalized.empty?
+    end
+    lookup
+  end
+end
+
+def canonical_reference_identity(value)
+  normalized = normalize_reference(value)
+  record = canonical_reference_lookup[normalized]
+  normalize_reference(record ? record[:data]["title"] : value)
 end
 
 def append_unique_reference!(data, field, title)
@@ -844,16 +859,16 @@ def append_unique_reference!(data, field, title)
   return if title.empty?
 
   values = Array(data[field]).compact
-  identities = values.flat_map { |value| reference_names(value) }.map { |value| normalize_reference(value) }
-  return if identities.include?(normalize_reference(title))
+  identities = values.flat_map { |value| reference_names(value) }.map { |value| canonical_reference_identity(value) }
+  return if identities.include?(canonical_reference_identity(title))
 
   data[field] = values + ["[[#{title}]]"]
 end
 
 def reference_already_listed?(data, fields, title)
-  identity = normalize_reference(title)
+  identity = canonical_reference_identity(title)
   fields.any? do |field|
-    reference_names(data[field]).any? { |value| normalize_reference(value) == identity }
+    reference_names(data[field]).any? { |value| canonical_reference_identity(value) == identity }
   end
 end
 

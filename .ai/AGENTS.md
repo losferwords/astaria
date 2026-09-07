@@ -25,7 +25,13 @@ For Fate Core mechanics, Russian terminology, character or NPC sheets, scenario 
 
 `.ai/skills/astaria-fate-core/SKILL.md`
 
-For Anima or DaSiWa-Anima illustration prompts, coordinated country visual families, prompt revision, or prompt/art review, use:
+For Sora still-image prompts (including `сделай промт для Sora`), landscape and city panoramas, and revision or review of those prompts, use:
+
+`.ai/skills/astaria-sora-prompts/SKILL.md`
+
+The user's default division is Sora for places, cities, and macro-scale natural landscapes, and Anima for characters. Honor an explicitly named tool or the active iteration's tool over these defaults. Sora requests here mean still illustrations, normally 16:9, not video unless explicitly requested.
+
+For Anima or DaSiWa-Anima illustration prompts, character art, coordinated country visual families, and revision or review of Anima prompts, use:
 
 `.ai/skills/astaria-anima-prompts/SKILL.md`
 

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Astaria Sora Prompts"
+  short_description: "Промты Sora для городов и ландшафтов Астарии"
+  default_prompt: "Используй $astaria-sora-prompts, чтобы составить промт для статичной иллюстрации места Астарии в Sora."

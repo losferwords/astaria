@@ -6,6 +6,9 @@ version: 1
 # versions once the bilingual release is enabled. `native_name` is deliberately
 # not translated and may contain Cyrillic, kanji or hanzi.
 names:
+  Чёрный Лотос:
+    title: Black Lotus
+    slug: black-lotus
   Астария:
     title: Astaria
     slug: astaria

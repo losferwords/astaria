@@ -445,7 +445,7 @@ EN_OUTPUT_REPLACEMENTS = {
   "Куда отправиться дальше?" => "Where will you travel next?",
   "Добро пожаловать в Астарию" => "Welcome to Astaria",
   "Аватар и Вознесённый сражаются среди снега и огненных всполохов" => "An Avatar and an Ascended warrior clash amid snow and bursts of flame",
-  "Водопады и озеро Астарии" => "Waterfalls and a lake in Astaria",
+  "Солнечная дорога через поля к приморским городам Астарии" => "A sunlit road through fields towards Astaria's coastal towns",
   "Политическая карта Астарии" => "Political map of Astaria",
   "Древний город во время великого вторжения" => "An ancient city during the great invasion",
   "Открыть хронологию Астарии" => "Open the history of Astaria",
@@ -1283,6 +1283,10 @@ def render_public_wikilinks(body, route, lookup)
       %(<a class="astaria-inline-link" href="#{CGI.escapeHTML(href)}">#{escaped_label}</a>)
     elsif record
       %(<span class="astaria-self-reference">#{escaped_label}</span>)
+    elsif CATEGORY_ROUTES.key?(target)
+      # Category galleries are generated, not duplicate listing notes in the vault.
+      href = relative_href(route, "#{CATEGORY_ROUTES.fetch(target)}/index")
+      %(<a class="astaria-inline-link astaria-category-link" href="#{CGI.escapeHTML(href)}">#{escaped_label}</a>)
     else
       %(<span class="astaria-unpublished-reference" title="Статья готовится к публикации">#{escaped_label}</span>)
     end
@@ -1739,21 +1743,21 @@ def build_astaria_journey(route, data)
   end
   destinations = if BUILD_LOCALE == "en-GB"
     [
-      ["World Atlas", relative_href(route, "map"), "132 marked places, with adjustable scale and map layers."],
+      ["World Atlas", relative_href(route, "map"), "Choose a shore, follow a river and discover what lies beyond the mountains."],
       ["Timeline", relative_href(route, "timeline/index"), "The events that shaped an ancient world into the one known today."],
       ["Realms", category_href.call("countries"), "States, their rulers, lands and unresolved conflicts."],
-      ["Peoples", category_href.call("peoples"), "The cultures, customs and memories of those who inhabit Astaria."],
-      ["Gods", category_href.call("gods"), "Immortal powers, their cults and dangerous games with mortal fate."],
-      ["Characters", category_href.call("characters"), "Heroes, wanderers and creatures whose choices change the world."]
+      ["Imithei", category_href.call("imitei"), "Discover the paths by which ordinary mortals attain extraordinary power."],
+      ["Lore", category_href.call("lore"), "Beliefs, rituals and wonders that shape everyday life."],
+      ["Sagas", category_href.call("literature"), "Explore the world through its travellers, their choices and their trials."]
     ]
   else
     [
-      ["Атлас мира", relative_href(route, "map"), "132 отмеченных места, масштаб и слои карты."],
+      ["Атлас мира", relative_href(route, "map"), "Выберите берег, проследите реку и узнайте, что лежит за горами."],
       ["Хронология", relative_href(route, "timeline/index"), "События, которые превратили древний мир в нынешний."],
       ["Страны", category_href.call("countries"), "Государства, их правители, земли и неразрешённые противоречия."],
-      ["Народы", category_href.call("peoples"), "Культуры, обычаи и память тех, кто населяет Астарию."],
-      ["Боги", category_href.call("gods"), "Бессмертные силы, культы и опасные игры с судьбами смертных."],
-      ["Персонажи", category_href.call("characters"), "Герои, странники и существа, чьи решения меняют мир."]
+      ["Имитеи", category_href.call("imitei"), "Пути, которыми обычные смертные приходят к необычайной силе."],
+      ["Знания о мире", category_href.call("lore"), "Верования, обряды и чудеса, из которых складывается повседневная жизнь."],
+      ["Саги", category_href.call("literature"), "Мир глазами путешественников: их выбор, спутники и испытания."]
     ]
   end
   action = BUILD_LOCALE == "en-GB" ? "Explore" : "Исследовать"
@@ -2906,7 +2910,7 @@ def write_index(entries)
       <section class="astaria-home-portals" aria-label="Основные разделы">
         <article class="astaria-portal astaria-portal-visual astaria-portal-encyclopedia">
           <div class="astaria-portal-image">
-            <img src="assets/images/silvian_lake.jpg" alt="Водопады и озеро Астарии" loading="lazy">
+            <img src="assets/images/astaria.jpg" alt="Солнечная дорога через поля к приморским городам Астарии" loading="lazy">
           </div>
           <div class="astaria-portal-copy">
             <p class="astaria-portal-kicker">Оглавление мира</p>
@@ -3050,7 +3054,7 @@ asset_paths.map! { |relative| ASSET_REWRITES.fetch(relative, relative) }
 asset_paths.concat([
   "Assets/Images/Avatar_vs_Ascended.jpg",
   "Assets/Images/Acheus_Invasion.jpg",
-  "Assets/Images/Silvian_Lake.jpg",
+  "Assets/Images/Astaria.jpg",
   "Assets/Images/bg.jpg",
   "Assets/Maps/Web/states-web.jpg",
   "Assets/Maps/states.png",

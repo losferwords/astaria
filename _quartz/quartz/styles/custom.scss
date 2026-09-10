@@ -1474,7 +1474,7 @@ a:hover {
 
 body[data-slug="places/astaria"] .astaria-cover-image {
   max-height: none;
-  aspect-ratio: 16 / 7.6;
+  aspect-ratio: 16 / 9;
   object-fit: cover;
   object-position: center 48%;
 }
@@ -1485,6 +1485,84 @@ body[data-slug="places/astaria"] .astaria-cover-frame {
 
 body[data-slug="places/astaria"] .astaria-content-title {
   font-size: clamp(3.8rem, 8vw, 6.4rem);
+}
+
+// Keep saga teasers readable as ordinary Obsidian callouts in the source,
+// while presenting them as compact illustrated reading invitations here.
+body[data-slug="places/astaria"] .callout[data-callout="tip"],
+body:is([data-slug="lore/imithei"], [data-slug="lore/imitey"]) .callout[data-callout="tip"] {
+  --color: #79522b;
+  background: rgba(255, 249, 235, 0.75);
+  border-color: rgba(155, 108, 50, 0.3);
+}
+
+// Prose lists share the paragraph measure, including their indentation.
+body:is([data-slug="places/astaria"], [data-slug="lore/imithei"], [data-slug="lore/imitey"]) .markdown-rendered > :is(ul, ol),
+body:is([data-slug="lore/imithei"], [data-slug="lore/imitey"]) .callout[data-callout="tip"] {
+  box-sizing: border-box;
+  max-width: 68ch;
+}
+
+.markdown-rendered .callout .astaria-category-link {
+  display: inline-block;
+  padding: 0.65rem 0.9rem !important;
+  border: 1px solid rgba(155, 108, 50, 0.4);
+  border-radius: 3px !important;
+  background: rgba(255, 249, 235, 0.9) !important;
+}
+
+body[data-slug="places/astaria"] .callout[data-callout="example"] {
+  clear: both;
+  padding: 1.2rem;
+  margin: 1.25rem 0;
+  background: rgba(255, 249, 235, 0.75);
+  border-color: rgba(155, 108, 50, 0.3);
+  --color: #7b3529;
+
+  .callout-title {
+    margin-bottom: 0.9rem;
+    font-family: var(--headerFont);
+    font-size: 1.35rem;
+  }
+
+  .callout-icon {
+    display: none;
+  }
+
+  .callout-content {
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.4fr);
+    gap: 0.6rem 1.2rem;
+    align-items: start;
+  }
+
+  .callout-content > p {
+    margin: 0 !important;
+  }
+
+  .callout-content > .astaria-inline-image {
+    grid-row: span 2;
+  }
+
+  .astaria-inline-image {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    margin: 0;
+    border-radius: 3px;
+  }
+}
+
+@media (max-width: 600px) {
+  body[data-slug="places/astaria"] .callout[data-callout="example"] {
+    .callout-content {
+      grid-template-columns: minmax(0, 1fr);
+    }
+
+    .callout-content > .astaria-inline-image {
+      grid-row: auto;
+    }
+  }
 }
 
 .astaria-place-next {
@@ -4537,7 +4615,7 @@ body[data-slug="map"] .markdown-rendered > * {
 
 @media (max-width: 600px) {
   body[data-slug="places/astaria"] .astaria-cover-image {
-    aspect-ratio: 4 / 3;
+    aspect-ratio: 16 / 9;
   }
 
   .astaria-place-next h2 {

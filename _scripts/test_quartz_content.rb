@@ -1313,7 +1313,7 @@ end
 
 places = read.call("places/index.html")
 expect.call(places.scan("astaria-category-card-place").length >= 5, "Place cards must use the landscape place layout")
-expect.call(places.include?("assets/images/silvian_lake.jpg"), "Astaria place card must use Silvian Lake")
+expect.call(places.include?("assets/images/astaria.jpg"), "Astaria place card must use the new world artwork")
 featured_place = places.index("astaria-category-card-featured")
 first_regular_place = places.index("astaria-category-card-place", featured_place.to_i + 1)
 expect.call(!featured_place.nil? && !first_regular_place.nil? && featured_place < first_regular_place, "Astaria must be the first featured place card")
@@ -1350,7 +1350,9 @@ end
 
 astaria = read.call("places/astaria.html")
 expect.call(astaria.scan("astaria-cover-image").length == 1, "Astaria entry page must have exactly one cover image")
-expect.call(astaria.include?("assets/images/silvian_lake.jpg"), "Astaria entry page must use Silvian Lake")
+expect.call(astaria.include?("assets/images/astaria.jpg"), "Astaria entry page must use its dedicated world artwork")
+expect.call(!astaria.include?("assets/images/silvian_lake.jpg"), "Astaria entry page still uses the old lake artwork")
+expect.call(astaria.scan('data-callout="example"').length == 2, "Astaria must offer two main illustrated saga teasers")
 expect.call(!astaria.include?("avatar-on-north"), "Astaria entry page still contains the retired home artwork")
 expect.call(astaria.include?("astaria-article-lede"), "Astaria entry page is missing its introductory lede")
 expect.call(astaria.scan("astaria-journey-card").length == 6, "Astaria entry page must offer six exploration paths")
@@ -1382,7 +1384,7 @@ expect.call(
 
 home = read.call("index.html")
 expect.call(home.scan("astaria-portal-image").length >= 3, "All three main portals must use the same visual card structure")
-expect.call(home.include?("assets/images/silvian_lake.jpg"), "Encyclopedia portal must use the Astaria article cover")
+expect.call(home.include?("assets/images/astaria.jpg"), "Encyclopedia portal must use the Astaria article cover")
 {
   "places/" => "Места",
   "countries/" => "Страны",

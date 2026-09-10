@@ -444,7 +444,7 @@ EN_OUTPUT_REPLACEMENTS = {
   "Пять дверей в Астарию" => "Five Doors into Astaria",
   "Куда отправиться дальше?" => "Where will you travel next?",
   "Добро пожаловать в Астарию" => "Welcome to Astaria",
-  "Воин с огненным клинком встречает чудовищ Астарии" => "A warrior with a burning blade faces the monsters of Astaria",
+  "Аватар и Вознесённый сражаются среди снега и огненных всполохов" => "An Avatar and an Ascended warrior clash amid snow and bursts of flame",
   "Водопады и озеро Астарии" => "Waterfalls and a lake in Astaria",
   "Политическая карта Астарии" => "Political map of Astaria",
   "Древний город во время великого вторжения" => "An ancient city during the great invasion",
@@ -2888,7 +2888,7 @@ def write_index(entries)
 
     <div class="astaria-home">
       <section class="astaria-home-hero" aria-label="Добро пожаловать в Астарию">
-        <img src="assets/images/avatar-on-north.jpg" alt="Воин с огненным клинком встречает чудовищ Астарии" fetchpriority="high">
+        <img src="assets/images/avatar_vs_ascended.jpg" alt="Аватар и Вознесённый сражаются среди снега и огненных всполохов" fetchpriority="high">
         <div class="astaria-home-hero-shade"></div>
       </section>
 
@@ -3048,7 +3048,7 @@ end
 asset_paths.concat(timeline_events(reference_lookup).map { |event| event[:image] }.compact)
 asset_paths.map! { |relative| ASSET_REWRITES.fetch(relative, relative) }
 asset_paths.concat([
-  "Assets/Images/Avatar on north.jpg",
+  "Assets/Images/Avatar_vs_Ascended.jpg",
   "Assets/Images/Acheus_Invasion.jpg",
   "Assets/Images/Silvian_Lake.jpg",
   "Assets/Images/bg.jpg",

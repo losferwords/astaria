@@ -1663,7 +1663,7 @@ avenger_source = File.read(File.join(ROOT, "Энциклопедия", "Имит
 expect.call(avenger_source.include?("## Путь Клинка"), "Path of the Blade lore was not merged into Avenger")
 expect.call(avenger_source.include?("650 году ХЭ"), "Avenger article lost the founding date of the Path of the Blade")
 expect.call(!avenger_source.include?("[[Путь Клинка"), "Avenger article still links to the retired Path of the Blade note")
-expect.call(read.call("lore/imitey.html").include?("assets/images/imithei.jpg"), "Imitei article does not use its new cover")
+expect.call(read.call("lore/imitey.html").include?("assets/images/avatar_vs_ascended.jpg"), "Imitei article does not use the Avatar versus Ascended cover")
 expect.call(read.call("literature/poka-bogi-spyat.html").include?("assets/images/eye_of_calypso.jpg"), "Poka Bogi Spyat does not reuse the Eye of Calypso cover")
 
 {

@@ -17,6 +17,8 @@ Read `.ai/context/astaria-project.md` when project background is needed. For vau
 
 `.ai/skills/astaria-obsidian-vault/SKILL.md`
 
+Before working on Losfy, Losfer, Misty, Lyubov, or the Dream of Mirrors, read `.ai/context/losfy-losfer-misty.md` and `.ai/context/authorial-meta.md`. These are the author's most personal characters. Preserve their deliberately modest public profiles, private truths, and room for future imagination; do not reconstruct withheld names or fill every biographical gap.
+
 For creative brainstorming, session ideas, scenes, encounters, NPC concepts, twists, or FATE preparation, use:
 
 `.ai/skills/astaria-idea-workbench/SKILL.md`

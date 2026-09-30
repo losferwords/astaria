@@ -2592,7 +2592,7 @@ def creature_character?(entry)
   return false unless entry[:category] == "Персонажи"
 
   data = entry[:data]
-  return true if display_value(data["character_group"]) == "Существа"
+  return true if ["Существа", "Creatures"].include?(display_value(data["character_group"]))
 
   reference_names(data["species"]).any?
 end

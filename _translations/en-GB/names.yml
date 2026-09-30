@@ -395,6 +395,21 @@ names:
     title: Onmyoji
     slug: onmyoji
     native_name: 陰陽師
+  О́ни:
+    title: Oni
+    slug: oni
+    native_name: 鬼
+  Лосфер:
+    title: Losfer
+    slug: losfer
+    native_name: 露栖封流
+  Лосфи:
+    title: Losfy
+    slug: losfy
+    native_name: 露栖緋
+  Мисти:
+    title: Misty
+    slug: misty
   Профитис:
     title: Profitis
     slug: profitis

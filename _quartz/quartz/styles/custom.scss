@@ -718,11 +718,24 @@ a:hover {
 
 .astaria-inline-image {
   display: block;
-  max-width: 100%;
-  margin: 1.8rem auto 2.2rem;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 68ch;
+  height: auto;
+  margin: 1.8rem 0 2.2rem;
   border: 1px solid rgba(113, 77, 42, 0.24);
   border-radius: 6px !important;
   box-shadow: 0 16px 34px rgba(42, 29, 20, 0.16) !important;
+}
+
+body[data-slug="literature/the-demon-to-hunt"] .markdown-rendered {
+  > p {
+    margin-bottom: 0.72rem;
+  }
+
+  > .astaria-inline-image {
+    margin: 1.25rem 0 1.4rem;
+  }
 }
 
 .astaria-imitei-hero {

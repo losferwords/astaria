@@ -1,26 +1,23 @@
 ---
-# English rasters are intentionally allowed to fall back to Russian until the
-# replacement artwork is supplied. The EN build validator reports that fallback
-# as the sole visual exception to the no-Cyrillic rule.
 layers:
   states:
     ru:
       source: Assets/Maps/states.png
       web: Assets/Maps/Web/states-web.jpg
     en-GB:
-      source: Assets/Maps/states-en.png
-      web: Assets/Maps/Web/states-en-web.jpg
+      source: Assets/Maps/en/states.png
+      web: Assets/Maps/en/Web/states-web.jpg
   heightmap:
     ru:
       source: Assets/Maps/heightmap.png
       web: Assets/Maps/Web/heightmap-web.jpg
     en-GB:
-      source: Assets/Maps/heightmap-en.png
-      web: Assets/Maps/Web/heightmap-en-web.jpg
+      source: Assets/Maps/en/heightmap.png
+      web: Assets/Maps/en/Web/heightmap-web.jpg
   biomes:
     ru:
       source: Assets/Maps/biomes.png
       web: Assets/Maps/Web/biomes-web.jpg
     en-GB:
-      source: Assets/Maps/biomes-en.png
-      web: Assets/Maps/Web/biomes-en-web.jpg
+      source: Assets/Maps/en/biomes.png
+      web: Assets/Maps/en/Web/biomes-web.jpg

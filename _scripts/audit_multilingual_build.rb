@@ -159,6 +159,36 @@ end
   expect.call(english_path.read.include?(title), "English page does not render #{title}") if english_path.file?
 end
 
+english_map = PUBLIC.join("map.html")
+russian_map = PUBLIC.join("__locales", "ru", "map.html")
+if english_map.file?
+  html = english_map.read
+  %w[states heightmap biomes].each do |layer|
+    expect.call(
+      html.include?("assets/maps/en/#{layer}.png"),
+      "English map does not use the English #{layer} layer"
+    )
+  end
+  expect.call(
+    html.include?("assets/maps/en/web/states-web.jpg"),
+    "English map does not use the English preview layer"
+  )
+end
+
+if russian_map.file?
+  html = russian_map.read
+  %w[states heightmap biomes].each do |layer|
+    expect.call(
+      html.include?("assets/maps/#{layer}.png") && !html.include?("assets/maps/en/#{layer}.png"),
+      "Russian map does not use the Russian #{layer} layer"
+    )
+  end
+  expect.call(
+    html.include?("assets/maps/web/states-web.jpg") && !html.include?("assets/maps/en/web/states-web.jpg"),
+    "Russian map does not use the Russian preview layer"
+  )
+end
+
 russian_chori = PUBLIC.join("__locales", "ru", "characters", "chori-marjari.html")
 if russian_chori.file?
   html = russian_chori.read

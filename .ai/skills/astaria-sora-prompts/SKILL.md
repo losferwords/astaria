@@ -5,7 +5,7 @@ description: "Write or revise Sora still-image prompts for Astaria cities, place
 
 # Astaria Sora Prompts
 
-Write a ready-to-paste English prompt for the user's Sora workflow in ChatGPT. Discuss the concept in Russian. The user successfully tested the Solais prompt and prefers Sora for macro-scale environments; characters remain primarily an Anima workflow. These are project preferences and observed results, not universal claims about model capabilities.
+Write a ready-to-paste English prompt for the user's Sora workflow in ChatGPT. Discuss the concept in Russian. The user prefers Sora for macro-scale environments and approved modern anime 2.5D as the default Astaria Sora style after the Chthonic Sea illustration; characters remain primarily an Anima workflow. These are project preferences and observed results, not universal claims about model capabilities.
 
 ## Routing and scope
 
@@ -20,21 +20,37 @@ Write a ready-to-paste English prompt for the user's Sora workflow in ChatGPT. D
 - Do not read `Идеи/` or `Энциклопедия/Секреты/` unless explicitly requested. Do not invent canonical landmarks to fill a composition.
 - Inspect the target's existing artwork and the user's supplied results when revising. For a new style match, inspect relevant local references rather than claiming to remember their current appearance.
 - Read [references/solais-approved.md](references/solais-approved.md) for Solais requests, comparisons to the successful experiment, or when establishing the series style for the first time. Its scene is an example, not a universal template.
+- Read [references/chthonic-sea-approved.md](references/chthonic-sea-approved.md) when establishing or matching the current default style, or when a result drifts towards flat storybook rendering. Inspect `Assets/Images/Chtonic_Sea.png` as the primary visual reference. The reference's sea, sunlight and palette are scene-specific.
 
 ## Established artistic direction
 
 Unlike the Anima skill, **explicitly describe the artistic style**. Do not import Anima's prohibition on style steering or its Positive/Negative output contract.
 
-The initial style references are:
+The current primary style reference is `Assets/Images/Chtonic_Sea.png`, approved by the user on 2026-10-02. Default to **premium modern anime 2.5D environment illustration** unless the user requests another style. Keep natural environmental proportions and a visibly illustrated finish.
+
+Translate this direction into concrete rendering decisions:
+
+- confident silhouettes and expressive selective contours with varied edge strength, rather than thin uniform outlines around every object;
+- convincing volume in terrain, architecture, foliage and clouds through sculpted light and shadow, layered shading, reflected light and material-specific highlights;
+- rich colors attached to materials, luminous accents and substantial colored shadows, with quieter distant layers for atmospheric depth;
+- abundant but organized detail, readable focal areas and simpler distant forms instead of equal sharpness and contrast everywhere.
+
+A reusable art-direction paragraph, adapted to the place's weather and mood:
+
+> Premium modern anime 2.5D environment illustration, with strong dimensional depth, expressive selective contours, sculpted light and shadow, richly layered shading, and detailed natural materials. Confident shape design, rich material colors, luminous highlights and atmospheric perspective. Forms have convincing volume while retaining a distinctly illustrated anime finish.
+
+For observed style drift, briefly exclude thin uniform outlines, flat color fills and pastel storybook or watercolor rendering. Avoid photorealism and glossy CGI. Do not rely on a studio name alone to define or exclude the style.
+
+Earlier supporting references remain useful for composition and cultural continuity:
 
 - `Assets/Images/Kaito_City.jpg`: clearly drawn roof silhouettes, layered coastal space, readable materials and painted clouds.
 - `Assets/Images/Argos_City.jpg`: coherent architectural perspective, civic scale, small inhabitants, clear visual hierarchy and water-led composition.
 - `Assets/Images/Gilas.jpg`: selective crisp contours, stylized figures, convincing volume and materials.
 - `Assets/Images/Amato.jpg`: atmospheric distance, layered shorelines, controlled color and local warm accents.
 
-Their shared direction is polished fantasy digital illustration with anime-background clarity, semi-realistic environmental proportions, selective crisp contours, softly painted depth, nuanced materials, and organized light and shadow. Preserve an illustrated finish without defaulting to photography, glossy 3D, heavy impasto, or flat cel shading.
+Use these earlier references for perspective, scale, visual hierarchy and cultural materials; the Chthonic Sea reference takes precedence for the current rendering direction. Preserve nuanced materials and organized light and shadow without defaulting to heavy impasto or flat cel shading.
 
-Transfer rendering and depth, not Greek/Japanese architecture, sunny weather, or the large foreground figures of the country covers. Color, season, and cultural forms belong to the requested place. When recommending attached references, explicitly distinguish **style references** from **content/composition references**; never assume the user's Sora session has access to local files.
+Transfer rendering and depth, not Mediterranean geography, Greek/Japanese architecture, sunny weather, or the large foreground figures of the country covers. Rich color does not require every scene to be sunny or uniformly saturated: adapt local colors, contrast and light to rain, night, snow, desert or forest while preserving volume and selective contours. Color, season, and cultural forms belong to the requested place. When recommending attached references, explicitly distinguish **style references** from **content/composition references**; never assume the user's Sora session has access to local files.
 
 ## Compose at the appropriate scale
 

@@ -2945,7 +2945,7 @@ def write_index(entries)
         <article class="astaria-portal astaria-portal-visual astaria-portal-map">
           <a class="astaria-portal-hit" href="map" aria-label="Исследовать интерактивную карту Астарии">
             <div class="astaria-portal-image">
-              <img src="assets/maps/web/states-web.jpg" alt="Политическая карта Астарии" loading="lazy">
+              <img src="#{CGI.escapeHTML(public_asset_url(AstariaTranslations.map_layer_for("states", variant: "web")))}" alt="Политическая карта Астарии" loading="lazy">
               <span class="astaria-map-pin astaria-map-pin-one" aria-hidden="true"></span>
               <span class="astaria-map-pin astaria-map-pin-two" aria-hidden="true"></span>
               <span class="astaria-map-pin astaria-map-pin-three" aria-hidden="true"></span>

@@ -300,7 +300,7 @@ end
 
 mirgrad = canonical_by_title.fetch("Город Мирград")
 expect.call(mirgrad[:data]["ready"] == true && mirgrad[:data]["quartz"] == true, "Mirgrad must be published now that its art is ready")
-expect.call(mirgrad[:data]["cover_image"] == "[[Assets/Images/Mirgrad_City.jpg]]", "Mirgrad must use its canonical city art")
+expect.call(mirgrad[:data]["cover_image"] == "[[Assets/Images/Mirgrad_City.png]]", "Mirgrad must use its canonical city art")
 expect.call(mirgrad[:data]["settlement_type"] == "Столица", "Mirgrad must be marked as a capital")
 expect.call(mirgrad[:data]["foundation"] == "-1236 ХЭ", "Mirgrad must retain its 1236 ChE foundation date")
 mirgrad_words = article_word_count.call(mirgrad[:source])

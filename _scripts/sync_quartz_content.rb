@@ -2910,7 +2910,7 @@ def write_index(entries)
       <section class="astaria-home-portals" aria-label="Основные разделы">
         <article class="astaria-portal astaria-portal-visual astaria-portal-encyclopedia">
           <div class="astaria-portal-image">
-            <img src="assets/images/astaria.jpg" alt="Солнечная дорога через поля к приморским городам Астарии" loading="lazy">
+            <img src="assets/images/astaria.png" alt="Солнечная дорога через поля к приморским городам Астарии" loading="lazy">
           </div>
           <div class="astaria-portal-copy">
             <p class="astaria-portal-kicker">Оглавление мира</p>
@@ -3054,7 +3054,7 @@ asset_paths.map! { |relative| ASSET_REWRITES.fetch(relative, relative) }
 asset_paths.concat([
   "Assets/Images/Avatar_vs_Ascended.jpg",
   "Assets/Images/Acheus_Invasion.jpg",
-  "Assets/Images/Astaria.jpg",
+  "Assets/Images/Astaria.png",
   "Assets/Images/bg.jpg",
   "Assets/Maps/Web/states-web.jpg",
   "Assets/Maps/states.png",

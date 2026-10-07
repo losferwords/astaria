@@ -1686,7 +1686,12 @@ def build_sidebar(data, route, lookup)
   return "" if image_path.nil? && crest_path.nil? && rows.empty?
 
   image = if image_path
-    "#{render_image_tag(image_path, "astaria-sidebar-image", alt_text: data["title"])}\n"
+    image_tag = render_image_tag(image_path, "astaria-sidebar-image", alt_text: data["title"])
+    if %w[Персонажи Боги].include?(data["category"])
+      %(<div class="astaria-character-portrait">#{image_tag}</div>\n)
+    else
+      "#{image_tag}\n"
+    end
   else
     ""
   end

@@ -294,14 +294,16 @@ a:hover {
 }
 
 .search .preview-container .astaria-cover-frame {
-  margin-bottom: 1.5rem;
+  width: 100%;
+  max-width: calc(19rem * 16 / 9);
+  margin: 0 auto 1.5rem;
   border-radius: 5px;
   box-shadow: 0 12px 28px rgba(43, 30, 21, 0.16);
 }
 
 .search .preview-container .astaria-cover-image {
-  max-height: 19rem;
-  aspect-ratio: 16 / 7.5;
+  max-height: none;
+  aspect-ratio: 16 / 9;
 }
 
 .search .preview-container .astaria-sidebar {
@@ -482,6 +484,7 @@ a:hover {
 
 .astaria-cover-frame {
   position: relative;
+  box-sizing: border-box;
   margin: 0 0 3.15rem;
   overflow: hidden;
   background: #1d211f;
@@ -528,10 +531,10 @@ a:hover {
 .astaria-cover-image {
   display: block;
   width: 100%;
-  max-height: 640px;
-  aspect-ratio: 16 / 7.5;
+  max-height: none;
+  aspect-ratio: 16 / 9;
   margin: 0;
-  object-fit: cover;
+  object-fit: contain;
   object-position: center;
   border-radius: 0 !important;
   box-shadow: none !important;
@@ -1015,6 +1018,37 @@ body[data-slug="literature/the-demon-to-hunt"] .markdown-rendered {
   box-shadow: 0 16px 34px rgba(42, 29, 20, 0.2) !important;
 }
 
+.astaria-character-portrait {
+  width: fit-content;
+  max-width: 100%;
+  margin: 0 auto 1.35rem;
+  overflow: hidden;
+  border: 1px solid rgba(113, 77, 42, 0.3);
+  border-radius: 6px;
+  box-shadow: 0 16px 34px rgba(42, 29, 20, 0.2);
+  line-height: 0;
+}
+
+.astaria-character-portrait .astaria-sidebar-image {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: min(650px, max(12rem, calc(100svh - 13rem)));
+  margin: 0;
+  border: 0;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  object-fit: contain;
+  transition:
+    filter 350ms ease,
+    transform 650ms ease;
+}
+
+.astaria-character-portrait:hover .astaria-sidebar-image {
+  filter: saturate(1.03) contrast(1.025);
+  transform: scale(1.012);
+}
+
 .astaria-crest-image {
   display: block;
   width: min(14.5rem, 78%);
@@ -1483,17 +1517,6 @@ body[data-slug="literature/the-demon-to-hunt"] .markdown-rendered {
 
 .astaria-chapter-nav-next {
   text-align: right;
-}
-
-body[data-slug="places/astaria"] .astaria-cover-image {
-  max-height: none;
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
-  object-position: center 48%;
-}
-
-body[data-slug="places/astaria"] .astaria-cover-frame {
-  margin-bottom: clamp(2.4rem, 5vw, 3.6rem);
 }
 
 body[data-slug="places/astaria"] .astaria-content-title {
@@ -2897,6 +2920,47 @@ body:not([data-slug="index"]):not([data-slug="map"]) .markdown-rendered {
   max-width: 19ch;
   margin-bottom: 2rem;
   text-wrap: balance;
+}
+
+// Only illustrated articles need to recover the space added by a full 16:9 cover.
+body:not([data-slug="index"]):not([data-slug="map"])
+  .center
+  > article
+  > .markdown-rendered:has(> .astaria-cover-frame) {
+  padding-top: 1.5svh;
+
+  > .astaria-cover-frame {
+    margin: 0 0 1.5svh;
+  }
+
+  > .astaria-article-trail {
+    margin-bottom: 0.5rem;
+  }
+
+  > .astaria-content-title {
+    max-width: none;
+    margin-bottom: 1rem;
+  }
+}
+
+// Keep names and portraits close to the navigation for characters and gods.
+body:is([data-slug^="characters/"], [data-slug^="gods/"])
+  .center
+  > article
+  > .markdown-rendered:has(> .astaria-sidebar > .astaria-character-portrait) {
+  padding-top: 1.5svh;
+
+  > .astaria-article-trail {
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+  }
+
+  > .astaria-content-title {
+    max-width: none;
+    margin-bottom: 1rem;
+    font-size: clamp(2rem, 4.2vw, 4.35rem);
+    overflow-wrap: anywhere;
+  }
 }
 
 .markdown-rendered p,

@@ -47,6 +47,14 @@ For Anima or DaSiWa-Anima illustration prompts, character art, coordinated count
 
 `Идеи/` is a private, non-canonical workbench. Do not read, search, summarize, or reuse it unless the user explicitly names a specific idea or asks to canonize it.
 
+## Git Checks
+
+- For ordinary edits, run `git diff --check -- <edited tracked paths>` once after the final changes. Repeat only after further edits or to verify a fix for a reported error. Skip this check for read-only tasks.
+- If the task includes staged changes, check the relevant paths with `git diff --cached --check -- <paths>` too. Before an explicitly requested commit, check the entire staged diff once.
+- Batch independent final checks in one tool call. Use a short initial command wait (about 1000 ms) and a bounded subprocess timeout (about 10 seconds) for whitespace checks. If a check times out, report it as incomplete and diagnose the delay before retrying; never suppress errors or treat a timeout as success.
+- A normal `git diff --check` does not check untracked files. Validate newly created text files separately when needed, without staging them solely for validation.
+- Do not expand `.gitignore` or remove tracked assets merely to speed up whitespace checks. Quartz output and dependencies are already ignored; measure a slow command before changing Git settings.
+
 ## Working Rules
 
 - Correct obvious typos, punctuation, and rough phrasing without changing facts, continuity, or intent.

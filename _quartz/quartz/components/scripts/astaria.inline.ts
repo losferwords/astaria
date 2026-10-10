@@ -109,6 +109,12 @@ function setupAstariaMap() {
   const detailNote = detail?.querySelector<HTMLElement>(
     ".astaria-map-detail-note",
   );
+  const detailArt = detail?.querySelector<HTMLElement>(
+    ".astaria-map-detail-art",
+  );
+  const detailImage = detail?.querySelector<HTMLImageElement>(
+    ".astaria-map-detail-image",
+  );
   const markers = Array.from(
     explorer.querySelectorAll<HTMLButtonElement>(".astaria-map-marker"),
   );
@@ -145,6 +151,10 @@ function setupAstariaMap() {
   const debugWindow = window as AstariaDebugWindow;
   debugWindow.trackMapCursor ??= false;
   let selected: HTMLButtonElement | null = null;
+
+  detailImage?.addEventListener("error", () => {
+    if (detailArt) detailArt.hidden = true;
+  });
 
   const coordinateReadout = document.createElement("output");
   coordinateReadout.className = "astaria-map-coordinate-readout";
@@ -302,12 +312,19 @@ function setupAstariaMap() {
     const name = marker.dataset.name ?? astariaExperienceUi.unknownPlace;
     const kind = marker.dataset.kind ?? "realm";
     const href = marker.dataset.href ?? "";
+    if (detailArt && detailImage) {
+      const imageSrc = marker.dataset.imageSrc ?? "";
+      detailArt.hidden = imageSrc === "";
+      detailImage.alt = imageSrc ? name : "";
+      if (imageSrc) detailImage.src = imageSrc;
+      else detailImage.removeAttribute("src");
+    }
     if (detailKind)
       detailKind.textContent = mapKindLabels[kind] ?? astariaExperienceUi.place;
     if (detailName) detailName.textContent = name;
     if (detailLink) {
       detailLink.hidden = href === "";
-      if (href !== "") detailLink.href = href;
+      if (href !== "") detailLink.href = new URL(href, window.location.href).href;
     }
     if (detailNote) detailNote.hidden = href !== "";
     detail.hidden = false;

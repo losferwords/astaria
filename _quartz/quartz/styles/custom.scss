@@ -11,6 +11,8 @@
   --astaria-paper: rgba(253, 247, 235, 0.95);
   --astaria-paper-deep: rgba(239, 224, 194, 0.96);
   --astaria-border: rgba(89, 23, 23, 0.32);
+  --astaria-prose-width: 72ch;
+  --astaria-sidebar-gap: 1.5rem;
   --astaria-search-label: "Поиск по Астарии";
   --astaria-search-label-short: "Поиск";
 }
@@ -446,7 +448,33 @@ a:hover {
 
 .markdown-rendered p {
   margin: 0 0 1.35rem;
-  max-width: 68ch;
+  max-width: var(--astaria-prose-width);
+}
+
+// Include borders and indentation in the same measure as the article's prose.
+body:not([data-slug="index"]):not([data-slug="map"])
+  .center
+  > article
+  > .markdown-rendered
+  > :is(ul, ol, blockquote:not([data-callout="example"]), .table-container) {
+  box-sizing: border-box;
+  max-width: var(--astaria-prose-width);
+}
+
+body:not([data-slug="index"]):not([data-slug="map"])
+  .center
+  > article
+  > .markdown-rendered
+  > :is(ul, ol, blockquote:not(.callout)) {
+  display: flow-root;
+}
+
+.markdown-rendered > :is(ul, ol) {
+  padding-inline-start: 1.5rem;
+
+  :is(ul, ol) {
+    padding-inline-start: 1.5rem;
+  }
 }
 
 .markdown-rendered img {
@@ -482,7 +510,8 @@ a:hover {
   text-decoration: underline;
 }
 
-.astaria-cover-frame {
+.astaria-cover-frame,
+.astaria-inline-frame {
   position: relative;
   box-sizing: border-box;
   margin: 0 0 3.15rem;
@@ -497,7 +526,8 @@ a:hover {
   isolation: isolate;
 }
 
-.astaria-cover-frame::before {
+.astaria-cover-frame::before,
+.astaria-inline-frame::before {
   content: "";
   position: absolute;
   z-index: 2;
@@ -510,7 +540,8 @@ a:hover {
   pointer-events: none;
 }
 
-.astaria-cover-frame::after {
+.astaria-cover-frame::after,
+.astaria-inline-frame::after {
   content: "";
   position: absolute;
   z-index: 3;
@@ -719,16 +750,30 @@ a:hover {
   height: 70%;
 }
 
-.astaria-inline-image {
+.astaria-inline-frame {
   display: block;
-  box-sizing: border-box;
-  width: 100%;
-  max-width: 68ch;
-  height: auto;
+  max-width: var(--astaria-prose-width);
   margin: 1.8rem 0 2.2rem;
-  border: 1px solid rgba(113, 77, 42, 0.24);
-  border-radius: 6px !important;
-  box-shadow: 0 16px 34px rgba(42, 29, 20, 0.16) !important;
+}
+
+.astaria-inline-frame .astaria-inline-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  content-visibility: visible;
+  margin: 0;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  object-fit: contain;
+  filter: saturate(0.96) contrast(1.02);
+  transition:
+    filter 350ms ease,
+    transform 650ms ease;
+}
+
+.astaria-inline-frame:hover .astaria-inline-image {
+  filter: saturate(1.03) contrast(1.025);
+  transform: scale(1.012);
 }
 
 body[data-slug="literature/the-demon-to-hunt"] .markdown-rendered {
@@ -736,7 +781,7 @@ body[data-slug="literature/the-demon-to-hunt"] .markdown-rendered {
     margin-bottom: 0.72rem;
   }
 
-  > .astaria-inline-image {
+  > .astaria-inline-frame {
     margin: 1.25rem 0 1.4rem;
   }
 }
@@ -1003,7 +1048,7 @@ body[data-slug="literature/the-demon-to-hunt"] .markdown-rendered {
 .astaria-sidebar {
   float: right;
   width: min(360px, 38%);
-  margin: 0 0 2rem 2.8rem;
+  margin: 0 0 2rem var(--astaria-sidebar-gap);
 }
 
 .astaria-sidebar-image {
@@ -1536,7 +1581,7 @@ body:is([data-slug="lore/imithei"], [data-slug="lore/imitey"]) .callout[data-cal
 body:is([data-slug="places/astaria"], [data-slug="lore/imithei"], [data-slug="lore/imitey"]) .markdown-rendered > :is(ul, ol),
 body:is([data-slug="lore/imithei"], [data-slug="lore/imitey"]) .callout[data-callout="tip"] {
   box-sizing: border-box;
-  max-width: 68ch;
+  max-width: var(--astaria-prose-width);
 }
 
 .markdown-rendered .callout .astaria-category-link {
@@ -1576,8 +1621,12 @@ body[data-slug="places/astaria"] .callout[data-callout="example"] {
     margin: 0 !important;
   }
 
-  .callout-content > .astaria-inline-image {
+  .callout-content > .astaria-inline-frame {
     grid-row: span 2;
+    min-width: 0;
+    max-width: none;
+    margin: 0;
+    border-radius: 3px;
   }
 
   .astaria-inline-image {
@@ -1595,7 +1644,7 @@ body[data-slug="places/astaria"] .callout[data-callout="example"] {
       grid-template-columns: minmax(0, 1fr);
     }
 
-    .callout-content > .astaria-inline-image {
+    .callout-content > .astaria-inline-frame {
       grid-row: auto;
     }
   }
@@ -3798,7 +3847,7 @@ html[lang^="en"] body[data-slug="organizations/index"] .astaria-category-header 
 /* Interactive atlas */
 
 body[data-slug="map"] .markdown-rendered {
-  padding: clamp(1.6rem, 3.5vw, 3rem) clamp(1rem, 3vw, 2.4rem) 3rem;
+  padding: 1.5svh clamp(1rem, 3vw, 2.4rem) 3rem;
 }
 
 body[data-slug="map"] .markdown-rendered > * {
@@ -3810,12 +3859,16 @@ body[data-slug="map"] .markdown-rendered > * {
   box-sizing: border-box;
 }
 
+.astaria-map-trail {
+  margin-bottom: 0.5rem;
+}
+
 .astaria-map-heading {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(19rem, 0.72fr);
   align-items: end;
   gap: 2rem;
-  margin-bottom: 1.7rem;
+  margin-bottom: 1.5svh;
 }
 
 .astaria-map-kicker {
@@ -3830,7 +3883,7 @@ body[data-slug="map"] .markdown-rendered > * {
 
 .astaria-map-heading h1 {
   margin: 0;
-  font-size: clamp(3.2rem, 7vw, 6rem);
+  font-size: clamp(3.2rem, 7vw, 4rem);
   line-height: 0.94;
   text-wrap: balance;
 }
@@ -4225,6 +4278,46 @@ body[data-slug="map"] .markdown-rendered > * {
   display: none;
 }
 
+.astaria-map-detail:has(> .astaria-map-detail-art:not([hidden])) {
+  grid-template-columns: 6rem minmax(0, 1fr);
+  gap: 0.75rem;
+  width: min(22rem, calc(100% - 2.2rem));
+  padding: 0.85rem 2.4rem 0.85rem 0.85rem;
+
+  .astaria-map-detail-name {
+    font-size: 1.25rem;
+  }
+}
+
+.astaria-map-detail-art {
+  align-self: center;
+  aspect-ratio: 16 / 9;
+  margin: 0;
+  overflow: hidden;
+  background: rgba(89, 23, 23, 0.06);
+  border: 1px solid rgba(113, 77, 42, 0.38);
+  border-radius: 3px;
+  box-shadow: 0 3px 8px rgba(42, 29, 20, 0.16);
+}
+
+.astaria-map-detail-art[hidden] {
+  display: none;
+}
+
+.astaria-map-detail-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  content-visibility: visible;
+  margin: 0;
+  object-fit: contain;
+}
+
+.astaria-map-detail-content {
+  display: grid;
+  min-width: 0;
+}
+
 .astaria-map-detail-close {
   position: absolute;
   top: 0.35rem;
@@ -4340,6 +4433,30 @@ body[data-slug="map"] .markdown-rendered > * {
 
 .astaria-map-coordinate-readout[hidden] {
   display: none;
+}
+
+// Leave 1.5svh above and below the desktop atlas, after the 4.85rem site header.
+@media (min-width: 801px) {
+  .astaria-map-page {
+    display: grid;
+    grid-template-rows: auto auto minmax(0, 1fr);
+    height: max(36rem, calc(97svh - 4.85rem));
+  }
+
+  .astaria-map-explorer {
+    display: grid;
+    grid-template-rows: auto minmax(0, 1fr);
+  }
+
+  .astaria-map-shell,
+  .astaria-map-viewport {
+    min-height: 0;
+  }
+
+  .astaria-map-panel,
+  .astaria-map-viewport {
+    max-height: none;
+  }
 }
 
 @media (max-width: 1050px) {
@@ -4640,6 +4757,16 @@ body[data-slug="map"] .markdown-rendered > * {
 
   .astaria-map-help {
     display: none;
+  }
+
+  .astaria-map-detail:has(> .astaria-map-detail-art:not([hidden])) {
+    grid-template-columns: 5rem minmax(0, 1fr);
+    gap: 0.55rem;
+    padding: 0.75rem 2.4rem 0.75rem 0.75rem;
+
+    .astaria-map-detail-name {
+      font-size: 1.1rem;
+    }
   }
 
   .astaria-timeline-hero {

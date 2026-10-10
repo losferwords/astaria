@@ -1264,7 +1264,7 @@ def render_asset_embeds(body)
     end
 
     asset_path = ASSET_REWRITES.fetch(raw_path, raw_path)
-    render_image_tag(asset_path, "astaria-inline-image")
+    %(<figure class="astaria-inline-frame">#{render_image_tag(asset_path, "astaria-inline-image")}</figure>)
   end
 end
 
@@ -1927,12 +1927,14 @@ def build_map_explorer(data, body, route, lookup)
   marker_buttons = markers.map do |marker|
     record = lookup[normalize_reference(marker[:target])]
     href = record ? relative_href(route, record[:route]) : ""
+    image_path = record && cover_image(record[:data])
+    image_src = image_path ? public_asset_url(image_path) : ""
     left = (marker[:x] / width * 100).round(4)
     # Leaflet image coordinates use a geographic Y axis: larger geoY values
     # point north. CSS `top` grows southward, so the vertical position must be
     # mirrored when the canonical marker is placed over the raster.
     top = ((height - marker[:y]) / height * 100).round(4)
-    %(<button type="button" class="astaria-map-marker astaria-map-marker-#{marker[:kind]}" style="left:#{left}%;top:#{top}%" data-name="#{CGI.escapeHTML(marker[:name])}" data-kind="#{marker[:kind]}" data-x="#{left}" data-y="#{top}" data-href="#{CGI.escapeHTML(href)}" aria-label="#{ui[:show]}: #{CGI.escapeHTML(marker[:name])}"><span></span></button>)
+    %(<button type="button" class="astaria-map-marker astaria-map-marker-#{marker[:kind]}" style="left:#{left}%;top:#{top}%" data-name="#{CGI.escapeHTML(marker[:name])}" data-kind="#{marker[:kind]}" data-x="#{left}" data-y="#{top}" data-href="#{CGI.escapeHTML(href)}" data-image-src="#{CGI.escapeHTML(image_src)}" aria-label="#{ui[:show]}: #{CGI.escapeHTML(marker[:name])}"><span></span></button>)
   end.join("\n")
 
   home_href = relative_href(route, "index")
@@ -1980,10 +1982,13 @@ def build_map_explorer(data, body, route, lookup)
             </div>
             <div class="astaria-map-detail" hidden>
               <button type="button" class="astaria-map-detail-close" aria-label="#{ui[:close]}">×</button>
-              <span class="astaria-map-detail-kind"></span>
-              <strong class="astaria-map-detail-name"></strong>
-              <a class="astaria-map-detail-link" href="">#{ui[:read]} <span aria-hidden="true">→</span></a>
-              <p class="astaria-map-detail-note">#{ui[:preparing]}</p>
+              <figure class="astaria-map-detail-art" hidden><img class="astaria-map-detail-image" alt="" decoding="async"></figure>
+              <div class="astaria-map-detail-content">
+                <span class="astaria-map-detail-kind"></span>
+                <strong class="astaria-map-detail-name"></strong>
+                <a class="astaria-map-detail-link" href="" target="_blank" rel="noopener noreferrer" data-router-ignore>#{ui[:read]} <span aria-hidden="true">→</span></a>
+                <p class="astaria-map-detail-note">#{ui[:preparing]}</p>
+              </div>
             </div>
             <div class="astaria-map-zoom-controls" aria-label="#{ui[:zoom]}">
               <button type="button" data-map-action="zoom-in" aria-label="#{ui[:zoom_in]}">+</button>

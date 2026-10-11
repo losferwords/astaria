@@ -1,0 +1,601 @@
+// Losfy's graphite and crimson palette. All overrides are scoped to the saved theme.
+:root[saved-theme="dark"] {
+  color-scheme: dark;
+  --astaria-accent: #e03131;
+  --astaria-accent-dark: #fefefe;
+  --astaria-gold: #fa5252;
+  --astaria-gold-light: #ffa8a8;
+  --astaria-night: #141517;
+  --astaria-ink: #fefefe;
+  --astaria-muted: #c1c2c5;
+  --astaria-paper: #25262b;
+  --astaria-paper-deep: #2c2e33;
+  --astaria-border: #3b3d43;
+  --astaria-link: #ff6b6b;
+  --astaria-link-hover: #ffa8a8;
+  background: #141517;
+  scrollbar-color: #5c5f66 #1a1b1e;
+
+  body {
+    background: #141517;
+    color: var(--astaria-ink);
+  }
+
+  .center {
+    background: #1a1b1e;
+    border-color: var(--astaria-border);
+    box-shadow: 0 0 38px rgba(0, 0, 0, 0.4);
+  }
+
+  ::selection {
+    background: #9c2424;
+    color: #fefefe;
+  }
+
+  a,
+  .markdown-rendered a.internal {
+    color: var(--astaria-link);
+    text-decoration-color: rgba(255, 107, 107, 0.5);
+  }
+
+  a:hover,
+  .markdown-rendered a.internal:hover {
+    color: var(--astaria-link-hover);
+  }
+
+  :is(button, a, input, select, summary):focus-visible {
+    outline-color: var(--astaria-link);
+  }
+
+  .astaria-content-title,
+  .astaria-home-intro h1 {
+    color: var(--astaria-ink);
+    text-shadow: none;
+  }
+
+  .astaria-sitebar,
+  body[data-slug="index"] .astaria-sitebar {
+    background: rgba(20, 21, 23, 0.96);
+    border-bottom: 1px solid var(--astaria-border);
+    color: var(--astaria-ink);
+  }
+
+  .astaria-sitebar-brand,
+  .astaria-sitebar-nav a {
+    color: var(--astaria-ink);
+  }
+
+  .astaria-sitebar-brand > span {
+    border-color: var(--astaria-accent);
+    color: var(--astaria-link);
+  }
+
+  .astaria-sitebar-nav a:hover,
+  .astaria-language-switcher button.is-active {
+    border-color: var(--astaria-accent);
+    color: var(--astaria-ink);
+  }
+
+  .astaria-language-switcher,
+  .astaria-language-switcher button {
+    color: var(--astaria-muted);
+  }
+
+  .astaria-language-switcher button:hover,
+  .astaria-language-switcher button:focus-visible {
+    color: var(--astaria-link-hover);
+  }
+
+  .astaria-theme-toggle {
+    background: #25262b;
+    border-color: #5b3033;
+    color: var(--astaria-link);
+  }
+
+  .astaria-theme-toggle:hover {
+    background: #3b2529;
+    border-color: var(--astaria-accent);
+  }
+
+  .search-button,
+  body[data-slug="index"] .search-button {
+    background: #25262b;
+    border-color: var(--astaria-border);
+    color: var(--astaria-muted);
+
+    p {
+      color: var(--astaria-muted);
+    }
+
+    &::after {
+      border-color: #5c5f66;
+      color: var(--astaria-muted);
+    }
+  }
+
+  .search > .search-container.active {
+    background: rgba(10, 10, 12, 0.8);
+  }
+
+  .search > .search-container > .search-space > input.search-bar {
+    background: #25262b;
+    border-color: #5c5f66;
+    color: var(--astaria-ink);
+  }
+
+  .search .search-layout,
+  .search .search-layout .results-container,
+  .search .search-layout .preview-container {
+    background: #1a1b1e !important;
+    border-color: var(--astaria-border) !important;
+  }
+
+  .search .result-card {
+    background: transparent;
+    border-color: var(--astaria-border);
+
+    h3 {
+      color: var(--astaria-ink);
+    }
+    > p {
+      color: var(--astaria-muted) !important;
+    }
+    &:is(.focus, :focus, :hover) {
+      background: #2c2e33 !important;
+    }
+  }
+
+  .search .highlight,
+  .search-scroll-target {
+    background: rgba(224, 49, 49, 0.2);
+    color: var(--astaria-ink);
+  }
+
+  input::placeholder,
+  .astaria-category-search::placeholder {
+    color: var(--astaria-muted);
+    opacity: 1;
+  }
+
+  .astaria-article-trail {
+    color: var(--astaria-muted);
+  }
+
+  .markdown-rendered .astaria-article-trail a,
+  .markdown-rendered .astaria-imitei-hero .astaria-article-trail a {
+    color: var(--astaria-link) !important;
+  }
+
+  .markdown-rendered
+    :is(
+      .astaria-inline-link,
+      .astaria-infobox-link,
+      .astaria-map-detail-link,
+      .astaria-timeline-read,
+      .astaria-home-directory a,
+      .astaria-saga-character-links a,
+      .astaria-saga-range-nav a
+    ) {
+    color: var(--astaria-link) !important;
+    text-decoration-color: rgba(255, 107, 107, 0.5);
+
+    &:hover {
+      color: var(--astaria-link-hover) !important;
+    }
+  }
+
+  .astaria-unpublished-reference,
+  .astaria-infobox-reference {
+    color: var(--astaria-muted);
+    text-decoration-color: #868e96;
+  }
+
+  .markdown-rendered blockquote {
+    background: #25262b;
+    border-left-color: var(--astaria-accent);
+  }
+
+  .markdown-rendered .callout {
+    --color: #ff8787;
+    --border: #5b3033;
+    --bg: #25262b;
+    background: var(--bg);
+    border-color: var(--border);
+  }
+
+  .callout[data-callout="info"],
+  .callout[data-callout="note"] {
+    --color: #74c0fc;
+    --border: #30475b;
+  }
+
+  .markdown-rendered .callout .callout-title,
+  .markdown-rendered .callout .callout-title p {
+    color: var(--color);
+  }
+
+  .astaria-cover-frame,
+  .astaria-inline-frame,
+  .astaria-character-portrait,
+  .astaria-sidebar-image,
+  .astaria-imitei-portrait,
+  .astaria-timeline-hero {
+    border-color: #5c5f66;
+    box-shadow: 0 16px 34px rgba(0, 0, 0, 0.3);
+  }
+
+  .astaria-cover-frame::before,
+  .astaria-inline-frame::before {
+    border-color: rgba(255, 255, 255, 0.14);
+    box-shadow: inset 0 0 0 5px rgba(0, 0, 0, 0.08);
+  }
+
+  .astaria-cover-frame::after,
+  .astaria-inline-frame::after {
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(250, 82, 82, 0.45),
+      transparent
+    );
+  }
+
+  .astaria-home-intro,
+  .astaria-infobox,
+  .astaria-coverless-hero,
+  .astaria-saga-empty,
+  .astaria-category-tools,
+  .astaria-category-search-label,
+  .astaria-category-no-results,
+  .astaria-category-empty,
+  .astaria-timeline-controls,
+  .astaria-timeline-card,
+  .astaria-timeline-empty,
+  .astaria-map-detail,
+  .astaria-map-zoom-controls {
+    background: var(--astaria-paper);
+    border-color: var(--astaria-border);
+    color: var(--astaria-ink);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.2);
+  }
+
+  .astaria-infobox dt,
+  .astaria-infobox dd,
+  .astaria-saga-empty strong,
+  .astaria-saga-chapter-card strong,
+  .astaria-journey-card > strong,
+  .astaria-home-era span,
+  .astaria-home-directory summary,
+  .astaria-timeline-empty strong,
+  .astaria-map-panel-intro strong,
+  .astaria-map-detail-name,
+  .astaria-saga-chapter-range > header h3 {
+    color: var(--astaria-ink);
+  }
+
+  .astaria-infobox-note,
+  .astaria-article-lede,
+  .astaria-coverless-subtitle,
+  .astaria-coverless-meta span,
+  .astaria-saga-empty p,
+  .astaria-saga-chapters > header > span,
+  .astaria-saga-range-nav small,
+  .astaria-saga-chapter-card em,
+  .astaria-saga-chapter-card small,
+  .astaria-journey-card > p,
+  .astaria-home-era,
+  .astaria-home-lede,
+  .astaria-mini-timeline li,
+  .astaria-home-footer p,
+  .astaria-category-count,
+  .astaria-timeline-count,
+  .astaria-timeline-meta span + span,
+  .astaria-map-layer-button,
+  .astaria-map-panel-intro p,
+  .astaria-map-results-heading,
+  .astaria-map-results-empty,
+  .astaria-map-legend span,
+  .astaria-map-detail-close,
+  .astaria-map-detail-note {
+    color: var(--astaria-muted);
+  }
+
+  .astaria-infobox-heading,
+  .astaria-infobox-more summary,
+  .astaria-coverless-kicker,
+  .astaria-saga-chapters > header p,
+  .astaria-saga-empty-mark,
+  .astaria-saga-chapter-range > header p,
+  .astaria-saga-chapter-card > span,
+  .astaria-saga-chapter-card > b,
+  .astaria-chapter-navigation small,
+  .astaria-place-next > header > p,
+  .astaria-journey-card > span,
+  .astaria-journey-card > b,
+  .astaria-portal-kicker,
+  .astaria-portal-link,
+  .astaria-mini-timeline span,
+  .astaria-home-footer,
+  .astaria-category-header > p,
+  .astaria-category-card-copy small,
+  .astaria-category-card-copy > span,
+  .astaria-category-group > header p,
+  .astaria-category-group > header h2 a span,
+  .astaria-timeline-era > header p,
+  .astaria-timeline-year,
+  .astaria-timeline-card .astaria-timeline-meta,
+  .astaria-map-kicker,
+  .astaria-map-panel-intro > span,
+  .astaria-map-result span,
+  .astaria-map-detail-kind {
+    color: var(--astaria-link);
+  }
+
+  .astaria-article-footer,
+  .astaria-article-footer a {
+    border-color: var(--astaria-border);
+    color: var(--astaria-link);
+  }
+
+  .astaria-infobox-heading,
+  .astaria-saga-chapters,
+  .astaria-saga-chapter-range > header,
+  .astaria-chapter-navigation,
+  .astaria-place-next,
+  .astaria-home-directory,
+  .astaria-home-section-heading,
+  .astaria-category-header,
+  .astaria-category-group > header,
+  .astaria-timeline-era > header {
+    border-color: var(--astaria-border);
+  }
+
+  .markdown-rendered
+    :is(
+      .astaria-card,
+      .astaria-portal,
+      .astaria-journey-card,
+      .astaria-category-card,
+      .astaria-saga-chapter-card,
+      .astaria-chapter-navigation a,
+      .astaria-home-button-quiet,
+      .astaria-topic-links a,
+      .astaria-saga-range-nav a,
+      .astaria-saga-character-links a,
+      .callout .astaria-category-link
+    ) {
+    background: var(--astaria-paper) !important;
+    border-color: var(--astaria-border);
+    color: var(--astaria-ink) !important;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.2);
+
+    &:hover {
+      background: var(--astaria-paper-deep) !important;
+      border-color: #7e3d40;
+    }
+  }
+
+  .markdown-rendered .astaria-home-button-primary {
+    background: #c92a2a !important;
+    border-color: #e03131;
+    color: #fefefe !important;
+
+    &:hover {
+      background: #d12b2b !important;
+    }
+  }
+
+  .astaria-category-card-placeholder,
+  .astaria-home-footer {
+    background: #202125;
+    border-color: var(--astaria-border);
+  }
+
+  .astaria-category-card-image .astaria-category-card-crest {
+    background: #2c2e33;
+    border-color: #5c5f66;
+  }
+
+  .astaria-discovery-card {
+    border-color: #5c5f66;
+
+    b {
+      color: #fefefe;
+    }
+    small {
+      color: #ffa8a8;
+    }
+  }
+
+  .astaria-coverless-meta span,
+  .astaria-category-clear,
+  .astaria-discovery-shuffle {
+    background: #2c2e33;
+    border-color: #5c5f66;
+    color: var(--astaria-link);
+  }
+
+  .astaria-category-clear:hover,
+  .astaria-discovery-shuffle:hover {
+    background: #3b2529;
+    border-color: var(--astaria-accent);
+  }
+
+  .astaria-coverless-hero::before,
+  .astaria-imitei-hero::before {
+    opacity: 0.3;
+  }
+
+  .astaria-coverless-hero::after,
+  .astaria-imitei-hero::after,
+  .astaria-home-intro::before,
+  .astaria-home-intro::after {
+    border-color: rgba(250, 82, 82, 0.3);
+    box-shadow: none;
+  }
+
+  .astaria-coverless-ornament,
+  .astaria-coverless-ornament::before,
+  .astaria-saga-empty-mark {
+    border-color: #7e3d40;
+    box-shadow: none;
+  }
+
+  .astaria-coverless-ornament::after,
+  .astaria-coverless-ornament span,
+  .astaria-coverless-ornament i {
+    background: var(--astaria-accent);
+  }
+
+  .astaria-imitei-hero {
+    background: linear-gradient(145deg, #25262b, #1a1b1e);
+    border-color: #7e3d40;
+    color: var(--astaria-ink);
+
+    .astaria-content-title {
+      color: var(--astaria-ink);
+      text-shadow: none;
+    }
+  }
+
+  .astaria-imitei-kicker,
+  .astaria-imitei-native,
+  .astaria-imitei-portrait figcaption span {
+    color: var(--astaria-link);
+  }
+
+  .astaria-imitei-lede,
+  .astaria-imitei-hero-meta dt {
+    color: var(--astaria-muted);
+  }
+
+  .astaria-imitei-hero-meta {
+    border-color: var(--astaria-border);
+    dd {
+      color: var(--astaria-ink);
+    }
+  }
+
+  .astaria-imitei-portrait figcaption {
+    color: var(--astaria-ink);
+  }
+
+  .astaria-imitei-portrait::after {
+    background: linear-gradient(180deg, transparent 62%, rgba(7, 9, 13, 0.9));
+    box-shadow: none;
+  }
+
+  .astaria-mini-timeline::before,
+  .astaria-timeline-list::before {
+    background: #5b3033;
+  }
+
+  .astaria-mini-timeline li::before,
+  .astaria-timeline-year::after {
+    background: var(--astaria-accent);
+    border-color: #1a1b1e;
+    box-shadow:
+      0 0 0 3px #1a1b1e,
+      0 0 0 4px #7e3d40;
+  }
+
+  .astaria-timeline-hero p {
+    color: #ffa8a8;
+  }
+  .astaria-timeline-hero h1 {
+    color: #fefefe;
+  }
+  .astaria-timeline-hero > div:last-child > span {
+    color: #fefefe;
+  }
+
+  .markdown-rendered .astaria-timeline-card h3 a {
+    color: var(--astaria-ink) !important;
+  }
+
+  .astaria-timeline-card {
+    border-left-color: #7e3d40;
+  }
+
+  .astaria-timeline-significance-0 {
+    border-left-color: var(--astaria-accent);
+  }
+
+  .astaria-category-search-label svg,
+  .astaria-map-search-label svg {
+    stroke: var(--astaria-muted);
+  }
+
+  .astaria-timeline-controls label > span {
+    color: var(--astaria-muted);
+  }
+
+  .astaria-timeline-controls :is(input, select),
+  .astaria-map-search {
+    background: #1a1b1e;
+    border-color: #5c5f66;
+    color: var(--astaria-ink);
+  }
+
+  .astaria-timeline-controls :is(input, select):focus,
+  .astaria-map-search:focus,
+  .astaria-category-search-label:focus-within {
+    border-color: var(--astaria-accent);
+    outline-color: var(--astaria-link);
+    box-shadow: 0 0 0 3px rgba(224, 49, 49, 0.16);
+  }
+
+  .astaria-map-explorer {
+    border-color: var(--astaria-border);
+  }
+  .astaria-map-toolbar,
+  .astaria-map-panel {
+    background: #25262b;
+    color: var(--astaria-ink);
+  }
+  .astaria-map-layer-switcher {
+    background: #1a1b1e;
+  }
+  .astaria-map-layer-button:hover {
+    color: var(--astaria-ink);
+  }
+
+  .astaria-map-layer-button.is-active {
+    background: #c92a2a;
+    border-color: var(--astaria-accent);
+    color: var(--astaria-ink);
+  }
+
+  .astaria-map-result {
+    background: #2c2e33;
+    border-color: var(--astaria-border);
+    color: var(--astaria-ink);
+
+    &:hover,
+    &:focus-visible {
+      background: #3b2529;
+      border-color: var(--astaria-accent);
+    }
+  }
+
+  .astaria-map-detail-art {
+    background: #1a1b1e;
+    border-color: #5c5f66;
+  }
+
+  .astaria-map-zoom-controls button {
+    border-color: var(--astaria-border);
+    color: var(--astaria-ink);
+    &:hover {
+      background: #3b2529;
+    }
+  }
+
+  .astaria-map-viewport:focus-visible {
+    outline-color: var(--astaria-link);
+  }
+  .astaria-map-coordinate-readout {
+    border-color: var(--astaria-accent);
+    color: #fefefe;
+  }
+}

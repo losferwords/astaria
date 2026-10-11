@@ -9,9 +9,12 @@ import astariaScript from "../../components/scripts/astaria.inline";
 // @ts-ignore
 import localeScript from "../../components/scripts/locale.inline";
 // @ts-ignore
+import themeScript from "../../components/scripts/theme.inline";
+// @ts-ignore
 import popoverScript from "../../components/scripts/popover.inline";
 import baseStyles from "../../styles/base.scss";
 import customStyles from "../../styles/custom.scss";
+import darkStyles from "../../styles/dark.scss";
 import popoverStyle from "../../components/styles/popover.scss";
 import { BuildCtx } from "../../util/ctx";
 import { QuartzComponent } from "../../components/types";
@@ -98,6 +101,7 @@ function addGlobalPageResources(
   if (process.env.ASTARIA_MULTILINGUAL === "true") {
     componentResources.beforeDOMLoaded.unshift(localeScript);
   }
+  componentResources.beforeDOMLoaded.unshift(themeScript);
   componentResources.afterDOMLoaded.push(astariaScript);
 
   // popovers
@@ -280,8 +284,10 @@ function addGlobalPageResources(
     componentResources.afterDOMLoaded.push(`
       window.spaNavigate = (url, _) => window.location.assign(url)
       window.addCleanup = () => {}
-      const event = new CustomEvent("nav", { detail: { url: document.body.dataset.slug } })
-      document.dispatchEvent(event)
+      if (document.body) {
+        const event = new CustomEvent("nav", { detail: { url: document.body.dataset.slug } })
+        document.dispatchEvent(event)
+      }
     `);
   }
 }
@@ -367,7 +373,7 @@ export const ComponentResources: QuartzEmitterPlugin = () => {
         ...globalCss,
         baseStyles,
       );
-      const stylesheet = `@layer quartz-base {\n${quartzBase}\n}\n${customStyles}`;
+      const stylesheet = `@layer quartz-base {\n${quartzBase}\n}\n${customStyles}\n${darkStyles}`;
 
       const prescript = await joinScripts(componentResources.beforeDOMLoaded);
 

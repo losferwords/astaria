@@ -2777,6 +2777,48 @@ body[data-slug="index"] .astaria-sitebar {
   gap: clamp(0.85rem, 2vw, 1.5rem);
 }
 
+.astaria-theme-toggle {
+  display: grid;
+  flex: 0 0 auto;
+  width: 2.25rem;
+  height: 2.25rem;
+  place-items: center;
+  padding: 0;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 247, 230, 0.25);
+  border-radius: 6px;
+  color: #fff7e6;
+}
+
+.astaria-theme-toggle:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.astaria-theme-toggle:focus-visible {
+  outline: 3px solid var(--astaria-gold-light);
+  outline-offset: 3px;
+}
+
+.astaria-theme-toggle svg {
+  grid-area: 1 / 1;
+  width: 1.15rem;
+  height: 1.15rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.astaria-theme-toggle .astaria-theme-sun,
+:root[saved-theme="dark"] .astaria-theme-toggle .astaria-theme-moon {
+  display: none;
+}
+
+:root[saved-theme="dark"] .astaria-theme-toggle .astaria-theme-sun {
+  display: block;
+}
+
 .astaria-language-switcher {
   display: inline-flex;
   align-items: center;
@@ -2861,7 +2903,7 @@ body[data-slug="index"] .left.sidebar {
   top: 0.88rem;
   right: 0;
   left: 0;
-  width: min(520px, calc(100% - 31rem));
+  width: min(520px, calc(100% - 45rem));
   margin: 0 auto;
   transform: none;
 }
@@ -4462,7 +4504,17 @@ body[data-slug="map"] .markdown-rendered > * {
 @media (max-width: 1050px) {
   .left.sidebar,
   body[data-slug="index"] .left.sidebar {
-    width: min(430px, calc(100% - 24rem));
+    width: min(430px, calc(100% - 45rem));
+  }
+
+  .search-button p::after,
+  body[data-slug="index"] .search-button p::after {
+    content: var(--astaria-search-label-short);
+  }
+
+  .search-button::after,
+  body[data-slug="index"] .search-button::after {
+    display: none;
   }
 
   .astaria-category-grid {
@@ -4489,13 +4541,16 @@ body[data-slug="map"] .markdown-rendered > * {
   }
 
   .astaria-sitebar-actions {
-    gap: 0;
+    gap: 0.6rem;
   }
 
   .left.sidebar,
   body[data-slug="index"] .left.sidebar {
     top: 0.62rem;
-    width: min(560px, calc(100% - 7.5rem));
+    right: 9rem;
+    left: 4.5rem;
+    width: auto;
+    margin: 0;
   }
 
   .search-button,
@@ -4634,7 +4689,7 @@ body[data-slug="map"] .markdown-rendered > * {
 
   .left.sidebar,
   body[data-slug="index"] .left.sidebar {
-    right: 5rem;
+    right: 9rem;
     left: 4.5rem;
     width: auto;
     margin: 0;
@@ -4643,6 +4698,11 @@ body[data-slug="map"] .markdown-rendered > * {
   .search-button p::after,
   body[data-slug="index"] .search-button p::after {
     content: var(--astaria-search-label-short);
+  }
+
+  .search-button,
+  body[data-slug="index"] .search-button {
+    padding-inline: 0.65rem;
   }
 
   .astaria-category-header h1 {

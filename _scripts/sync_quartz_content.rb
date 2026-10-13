@@ -292,7 +292,21 @@ INFOBOX_FIELDS = [
   ["opposes", "Противники"]
 ].freeze
 
+STORY_INFOBOX_FIELDS = [
+  ["narrator", "Голос песни"],
+  ["characters", "Действующие лица"],
+  ["story_locations", "Место"],
+  ["year", "Год"],
+  ["season", "Сезон"],
+  ["authors", "Авторы"],
+  ["medium", "Форма / носитель"]
+].freeze
+
 INFOBOX_LABELS_EN = {
+  "narrator" => "Narrator",
+  "characters" => "Characters",
+  "story_locations" => "Location",
+  "season" => "Season",
   "native_name" => "Native name",
   "location_type" => "Location type",
   "settlement_type" => "Settlement type",
@@ -1078,6 +1092,30 @@ def age_label(age)
   "лет"
 end
 
+def story_sidebar?(data)
+  %w[chapter session document campaign].include?(data["type"].to_s) &&
+    !Array(data["story_locations"]).empty?
+end
+
+def story_year_label(data)
+  first_year = astaria_year_number(data["year"])
+  return "" if first_year.nil?
+
+  last_year = astaria_year_number(data["endingYear"])
+  label = astaria_year_label(first_year)
+  if last_year && last_year != first_year
+    label = if first_year.negative? == last_year.negative?
+      "#{first_year.abs}–#{astaria_year_label(last_year)}"
+    else
+      "#{label} – #{astaria_year_label(last_year)}"
+    end
+  end
+  if data["year_precision"] == "open_end"
+    label += BUILD_LOCALE == "en-GB" ? " and later" : " и позднее"
+  end
+  label
+end
+
 def english_reference_label(target, explicit_label, lookup)
   label = explicit_label.to_s.strip
   return label if !label.empty? && !label.match?(/[А-Яа-яЁё]/)
@@ -1173,6 +1211,9 @@ def render_value(value, route, lookup)
 end
 
 def render_infobox_value(key, data, route, lookup)
+  if key == "year" && story_sidebar?(data)
+    return CGI.escapeHTML(story_year_label(data))
+  end
   if key == "native_name"
     return CGI.escapeHTML(data[key].to_s.strip)
   end
@@ -1638,8 +1679,8 @@ def build_coverless_title(source, route, data, lookup)
   else display_category(category)
   end
   metadata = [
-    data["year"] && astaria_year_label(data["year"]),
-    data["season"],
+    data["year"] && !story_sidebar?(data) ? astaria_year_label(data["year"]) : nil,
+    story_sidebar?(data) ? nil : data["season"],
     display_value(data["region"])
   ].compact.map(&:to_s).reject(&:empty?).first(3)
   metadata_html = metadata.map { |value| %(<span>#{CGI.escapeHTML(value)}</span>) }.join
@@ -1675,7 +1716,12 @@ def build_sidebar(data, route, lookup)
 
   image_path = sidebar_image(data)
   crest_path = crest_image(data)
-  rows = INFOBOX_FIELDS.map do |key, label|
+  story_profile = story_sidebar?(data)
+  if story_profile && !data.key?("characters")
+    data = data.merge("characters" => data["central_characters"])
+  end
+  fields = story_profile ? STORY_INFOBOX_FIELDS : INFOBOX_FIELDS
+  rows = fields.map do |key, label|
     rendered = render_infobox_value(key, data, route, lookup)
     next if rendered.empty?
 
@@ -1702,7 +1748,13 @@ def build_sidebar(data, route, lookup)
     ""
   end
 
-  heading = if imitei_page?(data)
+  heading = if story_profile
+    if %w[chapter session].include?(data["type"].to_s)
+      BUILD_LOCALE == "en-GB" ? "About this chapter" : "О главе"
+    else
+      BUILD_LOCALE == "en-GB" ? "About the saga" : "О саге"
+    end
+  elsif imitei_page?(data)
     BUILD_LOCALE == "en-GB" ? "Path profile" : "Профиль пути"
   else
     BUILD_LOCALE == "en-GB" ? "Details" : "Сведения"
@@ -1721,6 +1773,7 @@ def build_sidebar(data, route, lookup)
   end
 
   sidebar_class = imitei_page?(data) ? "astaria-sidebar astaria-imitei-profile" : "astaria-sidebar"
+  sidebar_class += " astaria-story-profile" if story_profile
 
   markdown_safe_html(<<~HTML)
     <aside class="#{sidebar_class}" aria-label="#{BUILD_LOCALE == "en-GB" ? "Details" : "Сведения"}: #{CGI.escapeHTML(data["title"].to_s)}">
@@ -2362,7 +2415,7 @@ def saga_chapter_card(chapter, route)
   chapter_data = chapter[:data]
   number = chapter_data["chapter"].to_i
   meta = [
-    chapter_data["year"] && astaria_year_label(chapter_data["year"]),
+    story_sidebar?(chapter_data) ? story_year_label(chapter_data) : (chapter_data["year"] && astaria_year_label(chapter_data["year"])),
     chapter_data["season"],
     display_value(chapter_data["region"])
   ].compact.map(&:to_s).reject(&:empty?).join(" · ")
@@ -2602,7 +2655,7 @@ def write_public_article(source, route, data, body, lookup)
     chapter_navigation = build_chapter_navigation(source, route, data, lookup)
   end
   footer = build_article_footer(route, data)
-  sections = [cover, title, lede, sidebar, song_jump, clean_body, chapter_navigation, chapters, journey, footer].map(&:strip).reject(&:empty?)
+  sections = [cover, title, lede, song_jump, sidebar, clean_body, chapter_navigation, chapters, journey, footer].map(&:strip).reject(&:empty?)
   text = "#{generated_frontmatter(data, body, lookup)}\n#{sections.join("\n\n")}\n"
   unless data["type"] == "map"
     ASSET_REWRITES.each { |old_path, new_path| text = text.gsub(old_path, new_path) }

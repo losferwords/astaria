@@ -63,6 +63,7 @@ For Anima or DaSiWa-Anima illustration prompts, character art, coordinated count
 - Keep file names portable across Windows and macOS; avoid reserved filename characters.
 - Do not create category presentation pages whose only purpose is listing other notes; use folders, links, or Dataview instead.
 - Keep canonical saga prose under `Энциклопедия/Литература/`, one chapter per file.
+- Write the song chapters of `Зов Бури` in immersive third-person present tense in both Russian and English, with events unfolding alongside Kenneth's journey. Apply this to future song chapters too; preserve the supplied lyrics verbatim. Played-session retellings in other campaigns retain their own tense rules.
 - Do not link ordinary lore articles to specific saga chapters unless explicitly requested.
 - Keep all ordinary character articles in `Энциклопедия/Персонажи/`, without a visible player/NPC split.
 - Before creating characters or FATE material, read `.ai/context/astaria-meta-and-fate.md` and use `.ai/skills/astaria-fate-core/SKILL.md`.

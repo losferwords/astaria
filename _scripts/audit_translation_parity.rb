@@ -39,7 +39,7 @@ PARITY_FIELDS = %w[
   central_characters affected_people related_peoples related_ethnicities
   related_species associated_peoples related_professions related_items
   related_myths controlled_territories contested_territories contested_by
-  opposes
+  opposes characters narrator story_locations year_precision season
 ].freeze
 
 NUMERIC_FACT_FIELDS = %w[
@@ -179,6 +179,12 @@ TRANSLATIONS.glob("**/*.md").sort.each do |english_path|
       expect.call(
         numeric_facts.call(russian_value) == numeric_facts.call(english_value),
         "#{relative}: #{field} contains different numeric facts in RU and EN"
+      )
+    end
+    if field == "year_precision"
+      expect.call(
+        russian_value == english_value,
+        "#{relative}: year_precision differs between RU and EN"
       )
     end
 

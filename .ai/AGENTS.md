@@ -58,6 +58,7 @@ For Anima or DaSiWa-Anima illustration prompts, character art, coordinated count
 ## Working Rules
 
 - Correct obvious typos, punctuation, and rough phrasing without changing facts, continuity, or intent.
+- In Russian prose, introduce the indeclinable peoples `гойдаир`, `надаир`, and `лудаир` through the word `народ` where a bare ethnonym sounds awkward: write `Он рос среди народа гойдаир`, rather than `Он рос среди гойдаир`. Apply the same rule to надаир and лудаир; agree dependent words with `народ` when it is the grammatical head.
 - Prefer Markdown, YAML properties, Obsidian wikilinks, and local image embeds.
 - Keep file names portable across Windows and macOS; avoid reserved filename characters.
 - Do not create category presentation pages whose only purpose is listing other notes; use folders, links, or Dataview instead.

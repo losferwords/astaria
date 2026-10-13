@@ -1645,7 +1645,7 @@ def build_coverless_title(source, route, data, lookup)
   metadata_html = metadata.map { |value| %(<span>#{CGI.escapeHTML(value)}</span>) }.join
   metadata_block = metadata_html.empty? ? "" : %(\n          <div class="astaria-coverless-meta">#{metadata_html}</div>)
   english_title = data["english_title"].to_s.strip
-  english_title_html = if english_title.empty?
+  english_title_html = if english_title.empty? || normalize_reference(english_title) == normalize_reference(title)
     ""
   else
     %(\n          <p class="astaria-coverless-subtitle" lang="en">#{CGI.escapeHTML(english_title)}</p>)
@@ -2231,7 +2231,7 @@ def cleanup_public_body(body, data)
   body = body.gsub(/^## Образы\s*\n+/, "") if imitei_page?(data)
   body = body.gsub(/^## Связи\s*\n+```dataview\n.*?```\s*/m, "")
   body = body.gsub(/```dataview\n.*?```\s*/m, "")
-  body = body.gsub(/^## Главы\s*\n*/, "") if saga_landing?(data)
+  body = body.gsub(/^## (?:Главы|Chapters)\s*\n*/, "") if saga_landing?(data)
   body = body.gsub(/^> \[!info\] Домены\s*\n(?:>.*\n?)+/i, "") if data["domains"]
   body = body.gsub(/^## Куда отправиться дальше\s*\n.*\z/m, "") if data["featured_entry"]
   unless data["english_title"].to_s.strip.empty?
@@ -2247,8 +2247,80 @@ def cleanup_public_body(body, data)
   body.strip
 end
 
+def render_song_lyrics(body)
+  body = body.sub(/^## (?:Текст песни|Lyrics)\n+(?=> \[!lyrics\])/, "")
+  body.gsub(/^> \[!lyrics\] ([^\n]+)\n((?:>[^\n]*(?:\n|\z))+)/) do
+    song_title = Regexp.last_match(1).strip
+    lyrics = Regexp.last_match(2)
+    parts = []
+    lyrics.lines.each do |quoted_line|
+      line = quoted_line.chomp.delete_prefix(">").delete_prefix(" ")
+      if line.start_with?("### ")
+        label = line.delete_prefix("### ")
+        parts << { label: label, stanzas: [[]] }
+      elsif line.empty?
+        parts.last[:stanzas] << [] if parts.any? && !parts.last[:stanzas].last.empty?
+      else
+        raise "Lyrics for #{song_title} need a section heading before the first line" if parts.empty?
+
+        parts.last[:stanzas].last << line.sub(/<br\s*\/?>\z/i, "")
+      end
+    end
+    raise "Lyrics for #{song_title} contain no sections" if parts.empty?
+
+    english = BUILD_LOCALE == "en-GB"
+    repeats = parts.each_with_object(Hash.new(0)) { |part, counts| counts[part[:label]] += 1 }
+    occurrences = Hash.new(0)
+    navigation = []
+    verses = parts.each_with_index.map do |part, index|
+      label = part[:label]
+      occurrences[label] += 1
+      nav_label = repeats[label] > 1 ? "#{label} #{occurrences[label]}" : label
+      anchor = "lyrics-part-#{index + 1}"
+      number = format("%02d", index + 1)
+      navigation << %(<a href="##{anchor}">#{CGI.escapeHTML(nav_label)}</a>)
+      kind = case label.downcase
+      when "chorus" then "chorus"
+      when "outro" then "outro"
+      else "verse"
+      end
+      stanzas = part[:stanzas].reject(&:empty?).map do |stanza|
+        lines = stanza.map { |line| %(<span class="astaria-lyric-line">#{CGI.escapeHTML(line)}</span>) }.join
+        %(<p class="astaria-lyrics-stanza">#{lines}</p>)
+      end.join
+      <<~HTML
+        <section class="astaria-lyrics-part astaria-lyrics-#{kind}" id="#{anchor}" aria-labelledby="#{anchor}-title">
+          <h3 id="#{anchor}-title"><span aria-hidden="true">#{number}</span>#{CGI.escapeHTML(label)}</h3>
+          #{stanzas}
+        </section>
+      HTML
+    end.join
+
+    <<~HTML
+      <section class="astaria-lyrics" id="song-lyrics" lang="en" aria-labelledby="song-lyrics-title">
+        <header class="astaria-lyrics-header">
+          <h2 id="song-lyrics-title">#{CGI.escapeHTML(song_title)}</h2>
+        </header>
+        <div class="astaria-lyrics-toolbar" lang="#{english ? "en" : "ru"}">
+          <span>#{english ? "Follow the song, verse by verse" : "Следуйте за песней, куплет за куплетом"}</span>
+          <button type="button" class="astaria-lyrics-sing" aria-pressed="false" data-open-label="#{english ? "Sing along" : "Подпевать"}" data-close-label="#{english ? "Back to chapter" : "Вернуться к главе"}" hidden>#{english ? "Sing along" : "Подпевать"}</button>
+        </div>
+        <nav class="astaria-lyrics-nav" aria-label="#{english ? "Song sections" : "Части песни"}">#{navigation.join}</nav>
+        <div class="astaria-lyrics-parts">#{verses}</div>
+      </section>
+    HTML
+  end
+end
+
+def build_song_jump(body)
+  return "" unless body.include?('class="astaria-lyrics"')
+
+  label = BUILD_LOCALE == "en-GB" ? "Jump to lyrics" : "Перейти к тексту песни"
+  %(<div class="astaria-song-entry"><a href="#song-lyrics">#{label} <span aria-hidden="true">↓</span></a></div>)
+end
+
 def saga_landing?(data)
-  data["category"] == "Литература" && !Array(data["central_characters"]).empty?
+  %w[Литература Literature].include?(data["category"]) && !Array(data["central_characters"]).empty?
 end
 
 def records_from_lookup(lookup)
@@ -2490,6 +2562,7 @@ def write_public_article(source, route, data, body, lookup)
   journey = ""
   chapters = ""
   chapter_navigation = ""
+  song_jump = ""
   source_category_name = source_category(source)
   if data["category"].to_s.empty? && CATEGORY_ROUTES.key?(source_category_name)
     data = data.merge("category" => source_category_name)
@@ -2507,6 +2580,7 @@ def write_public_article(source, route, data, body, lookup)
     sidebar = ""
   elsif imitei_portraits_ready?(data)
     clean_body = cleanup_public_body(body, data)
+    clean_body = render_song_lyrics(clean_body)
     clean_body = render_asset_embeds(clean_body)
     clean_body = render_public_wikilinks(clean_body, route, lookup)
     cover = ""
@@ -2514,6 +2588,8 @@ def write_public_article(source, route, data, body, lookup)
     sidebar = build_sidebar(data, route, lookup)
   else
     clean_body = cleanup_public_body(body, data)
+    clean_body = render_song_lyrics(clean_body)
+    song_jump = build_song_jump(clean_body)
     clean_body = render_asset_embeds(clean_body)
     clean_body = render_public_wikilinks(clean_body, route, lookup)
     cover = build_cover(data)
@@ -2526,7 +2602,7 @@ def write_public_article(source, route, data, body, lookup)
     chapter_navigation = build_chapter_navigation(source, route, data, lookup)
   end
   footer = build_article_footer(route, data)
-  sections = [cover, title, lede, sidebar, clean_body, chapter_navigation, chapters, journey, footer].map(&:strip).reject(&:empty?)
+  sections = [cover, title, lede, sidebar, song_jump, clean_body, chapter_navigation, chapters, journey, footer].map(&:strip).reject(&:empty?)
   text = "#{generated_frontmatter(data, body, lookup)}\n#{sections.join("\n\n")}\n"
   unless data["type"] == "map"
     ASSET_REWRITES.each { |old_path, new_path| text = text.gsub(old_path, new_path) }

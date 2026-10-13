@@ -324,7 +324,8 @@ function setupAstariaMap() {
     if (detailName) detailName.textContent = name;
     if (detailLink) {
       detailLink.hidden = href === "";
-      if (href !== "") detailLink.href = new URL(href, window.location.href).href;
+      if (href !== "")
+        detailLink.href = new URL(href, window.location.href).href;
     }
     if (detailNote) detailNote.hidden = href !== "";
     detail.hidden = false;
@@ -826,12 +827,70 @@ function setupAstariaSearchTranslations() {
   }
 }
 
+function setupAstariaLyrics() {
+  for (const reader of document.querySelectorAll<HTMLElement>(
+    ".astaria-lyrics",
+  )) {
+    const toggle = reader.querySelector<HTMLButtonElement>(
+      ".astaria-lyrics-sing",
+    );
+    if (!toggle || reader.dataset.singReady === "true") continue;
+    reader.dataset.singReady = "true";
+    toggle.hidden = false;
+
+    let dialog: HTMLDialogElement | undefined;
+    let placeholder: Comment | undefined;
+    let previousOverflow = "";
+
+    const restore = () => {
+      if (!placeholder) return;
+      placeholder.replaceWith(reader);
+      placeholder = undefined;
+      document.body.style.overflow = previousOverflow;
+      toggle.textContent = toggle.dataset.openLabel ?? "Sing along";
+      toggle.setAttribute("aria-pressed", "false");
+      dialog?.remove();
+      dialog = undefined;
+      toggle.focus({ preventScroll: true });
+    };
+
+    const onToggle = () => {
+      if (dialog?.open) {
+        dialog.close();
+        return;
+      }
+      placeholder = document.createComment("song reader");
+      reader.before(placeholder);
+      dialog = document.createElement("dialog");
+      dialog.className = "astaria-singalong markdown-rendered";
+      dialog.setAttribute("aria-labelledby", "song-lyrics-title");
+      dialog.append(reader);
+      document.body.append(dialog);
+      previousOverflow = document.body.style.overflow;
+      document.body.style.overflow = "hidden";
+      toggle.textContent = toggle.dataset.closeLabel ?? "Back to chapter";
+      toggle.setAttribute("aria-pressed", "true");
+      dialog.addEventListener("close", restore, { once: true });
+      dialog.showModal();
+    };
+
+    toggle.addEventListener("click", onToggle);
+    window.addCleanup?.(() => {
+      if (dialog?.open) dialog.close();
+      restore();
+      toggle.removeEventListener("click", onToggle);
+      delete reader.dataset.singReady;
+    });
+  }
+}
+
 function setupAstariaExperience() {
   setupAstariaMap();
   setupAstariaTimeline();
   setupAstariaCategoryFilters();
   setupAstariaDiscovery();
   setupAstariaSearchTranslations();
+  setupAstariaLyrics();
 }
 
 document.addEventListener("nav", setupAstariaExperience);

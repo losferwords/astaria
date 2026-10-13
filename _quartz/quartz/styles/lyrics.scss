@@ -1,0 +1,250 @@
+.astaria-song-entry {
+  margin: -0.5rem 0 2rem;
+
+  a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    min-height: 44px;
+    font-weight: 600;
+  }
+}
+
+.astaria-lyrics {
+  --lyrics-panel: #fcf7ed;
+  --lyrics-chorus: #f2e5cc;
+  --lyrics-rule: #c4ab7e;
+  --lyrics-label: #76562e;
+  box-sizing: border-box;
+  max-width: 54rem;
+  margin: 3rem 0;
+  overflow: clip;
+  border: 1px solid var(--lyrics-rule);
+  border-radius: 0.5rem;
+  background: var(--lyrics-panel);
+  color: var(--astaria-ink);
+  scroll-margin-top: 5rem;
+}
+
+.astaria-lyrics-header {
+  padding: 2.25rem 2.5rem 1.5rem;
+  border-top: 3px solid var(--astaria-gold);
+
+  .markdown-rendered & h2 {
+    margin: 0;
+    color: var(--astaria-ink);
+    font-size: clamp(1.9rem, 4vw, 2.8rem);
+    line-height: 1.1;
+  }
+}
+
+.astaria-lyrics-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.75rem 2.5rem;
+  border-block: 1px solid var(--lyrics-rule);
+  background: var(--lyrics-panel);
+
+  > span {
+    color: var(--astaria-muted);
+    font-size: 0.95rem;
+  }
+
+  button {
+    flex-shrink: 0;
+    min-height: 44px;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--lyrics-rule);
+    border-radius: 0.25rem;
+    background: var(--lyrics-chorus);
+    color: var(--astaria-ink);
+    font: 600 1rem var(--bodyFont);
+  }
+
+  button[hidden] {
+    display: none;
+  }
+}
+
+.astaria-lyrics-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 0.5rem;
+  padding: 1rem 2.5rem;
+
+  .markdown-rendered & a,
+  .markdown-rendered & a.internal {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    padding: 0 0.75rem !important;
+    border: 1px solid var(--lyrics-rule);
+    border-radius: 2rem !important;
+    color: var(--lyrics-label) !important;
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-decoration: none;
+  }
+}
+
+.astaria-lyrics-parts {
+  padding: 0.5rem 2.5rem 2.5rem;
+}
+
+.astaria-lyrics-part {
+  padding: 1.75rem 0;
+  border-top: 1px solid var(--lyrics-rule);
+  scroll-margin-top: 5rem;
+
+  h3 {
+    display: flex;
+    align-items: baseline;
+    gap: 0.7rem;
+    margin: 0 0 1rem;
+    color: var(--lyrics-label);
+    font-family: var(--codeFont);
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+
+    span {
+      opacity: 0.6;
+      font-size: 0.65rem;
+    }
+  }
+
+  .astaria-lyrics-stanza {
+    margin: 0 0 1.3rem;
+    max-width: none;
+    font-size: clamp(1.15rem, 2.2vw, 1.4rem);
+    line-height: 1.65;
+  }
+
+  .astaria-lyrics-stanza:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.astaria-lyric-line {
+  display: block;
+  padding-inline-start: 1.1em;
+  text-indent: -1.1em;
+  overflow-wrap: break-word;
+}
+
+.astaria-lyrics-chorus {
+  margin: 0.5rem -1rem;
+  padding: 1.5rem 1rem;
+  border: 1px solid var(--lyrics-rule);
+  border-inline-start: 3px solid var(--astaria-gold);
+  border-radius: 0.25rem;
+  background: var(--lyrics-chorus);
+
+  .astaria-lyrics-stanza {
+    font-weight: 600;
+  }
+}
+
+.astaria-lyrics-outro .astaria-lyrics-stanza {
+  font-style: italic;
+}
+
+.astaria-singalong.markdown-rendered {
+  box-sizing: border-box;
+  width: min(54rem, 100%);
+  height: 100dvh;
+  max-width: 100%;
+  max-height: 100dvh;
+  margin: auto;
+  padding: 0 !important;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  border: 0;
+  background: var(--astaria-paper);
+  scrollbar-gutter: stable;
+
+  &::backdrop {
+    background: rgba(10, 12, 17, 0.85);
+  }
+
+  .astaria-lyrics {
+    margin: 0;
+    overflow: visible;
+    border: 0;
+    border-radius: 0;
+  }
+
+  .astaria-lyrics-toolbar {
+    position: sticky;
+    z-index: 1;
+    top: 0;
+  }
+
+  .astaria-lyrics-stanza {
+    font-size: clamp(1.3rem, 3vw, 1.7rem);
+    line-height: 1.75;
+  }
+
+  .astaria-lyrics-part {
+    scroll-margin-top: 6rem;
+  }
+}
+
+:root[saved-theme="dark"] .astaria-lyrics {
+  --lyrics-panel: #1e2025;
+  --lyrics-chorus: #302329;
+  --lyrics-rule: #654047;
+  --lyrics-label: #ffa8a8;
+}
+
+@media (max-width: 600px) {
+  .astaria-singalong .astaria-lyrics-toolbar {
+    justify-content: flex-end;
+
+    > span {
+      display: none;
+    }
+  }
+
+  .astaria-lyrics-header {
+    padding: 1.5rem 1.15rem 1.25rem;
+  }
+
+  .astaria-lyrics-toolbar {
+    gap: 0.5rem;
+    padding: 0.65rem 1.15rem;
+
+    > span {
+      max-width: 12ch;
+      font-size: 0.8rem;
+    }
+  }
+
+  .astaria-lyrics-nav {
+    padding: 0.75rem 1.15rem;
+  }
+
+  .astaria-lyrics-parts {
+    padding: 0.25rem 1.15rem 1.5rem;
+  }
+
+  .astaria-lyrics-chorus {
+    margin-inline: -0.4rem;
+    padding-inline: 0.4rem;
+  }
+}
+
+@media print {
+  .astaria-song-entry,
+  .astaria-lyrics-toolbar,
+  .astaria-lyrics-nav {
+    display: none;
+  }
+
+  .astaria-lyrics-part {
+    break-inside: avoid;
+  }
+}

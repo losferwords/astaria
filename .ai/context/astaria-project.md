@@ -53,6 +53,8 @@ Current saga folders:
 
 Chapter notes may link to relevant lore. Ordinary encyclopedia articles should not link back to particular chapters by default.
 
+`Зов Бури` is also the debut album of Maksim's power-metal band **Astarian**. Its chapters correspond to the album's songs. The opening song is **The Highlander's Soul** (chapter 1); the former chapter 0, `Before the Storm`, has been folded into its story. Preserve supplied English lyrics verbatim, including repetitions, punctuation, and casing; never translate them into Russian. In these lyrics, **Named** means **Названные**. Introduce each song through engaging, canon-consistent storytelling for readers unfamiliar with Astaria, rather than a list of lore facts or a plot synopsis. The reusable `[!lyrics]` callout keeps lyrics readable in Obsidian and becomes a mobile-friendly song reader in Quartz.
+
 ## Publishing
 
 Quartz lives in `_quartz/`. `_scripts/sync_quartz_content.rb` copies only intentionally published notes from `Энциклопедия/`, `Хронология/`, and `Карты/`, together with their referenced local assets.

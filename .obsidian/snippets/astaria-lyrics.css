@@ -1,0 +1,35 @@
+/* Original song lyrics: keep the same readable structure in the vault. */
+.callout[data-callout="lyrics"] {
+  --callout-color: 185, 138, 61;
+  --callout-icon: lucide-music-2;
+  padding: 1.25rem 1.5rem;
+  border: 1px solid rgba(var(--callout-color), 0.4);
+  border-radius: 0.5rem;
+}
+
+.callout[data-callout="lyrics"] .callout-title {
+  margin-bottom: 1rem;
+  font-size: 1.35rem;
+}
+
+.callout[data-callout="lyrics"] .callout-content h3 {
+  margin-top: 1.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid rgba(var(--callout-color), 0.3);
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.callout[data-callout="lyrics"] .callout-content p {
+  font-size: 1.1rem;
+  line-height: 1.75;
+  overflow-wrap: break-word;
+}
+
+@media (max-width: 600px) {
+  .callout[data-callout="lyrics"] {
+    padding: 1rem;
+  }
+}

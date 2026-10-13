@@ -1433,9 +1433,11 @@ expect.call(!wind_of_change.include?("&lt;small&gt;"), "Wind of Change chapter m
 expect.call(wind_of_change.scan("astaria-saga-chapters-title").length >= 1, "Wind of Change chapter heading is missing")
 expect.call(!wind_of_change.include?("<h2 id=\"главы\">Главы</h2>"), "Wind of Change still renders the old empty chapter heading")
 thunder_call = read.call("literature/thunder-call-saga.html")
-expect.call(thunder_call.scan("astaria-saga-chapter-card").length == 10, "Call of Thunder must publish all 10 chapters")
+expect.call(thunder_call.scan("astaria-saga-chapter-card").length == 9, "Call of Thunder must begin with its first song and publish nine chapters")
+expect.call(!thunder_call.include?("Before The Storm"), "The former standalone prologue must be folded into chapter 1")
+expect.call(thunder_call.include?("Astarian"), "Call of Thunder must identify the band behind the album")
 [
-  "Before The Storm", "The Highlander's Soul", "Sailing", "The Island",
+  "The Highlander's Soul", "Sailing", "The Island",
   "The New Paragon", "The Priestess", "No Mercy For Thirsty",
   "Call of Thunder", "No Way Home", "Lament of the Night"
 ].each do |english_title|
@@ -1444,7 +1446,8 @@ end
 sleeping_gods = read.call("literature/poka-bogi-spyat.html")
 expect.call(sleeping_gods.scan("astaria-saga-chapter-card").length == 3, "Poka Bogi Spyat must publish all three chapters")
 chapter_notes = published_ready_notes.select { |note| %w[chapter session].include?(note[:data]["type"].to_s) }
-expect.call(chapter_notes.length == 107, "Expected 107 public saga chapters")
+thunder_chapter_notes = chapter_notes.select { |note| note[:data]["saga"] == "Зов Бури" }
+expect.call(thunder_chapter_notes.length == 9, "Expected nine Call of Thunder chapters after merging its prologue")
 chapter_notes.each do |note|
   generated = Dir.glob(File.join(CONTENT, "literature", "*.md")).find do |path|
     data, = parse_frontmatter.call(path)
@@ -1460,6 +1463,18 @@ expect.call(highlander_soul.include?(%(<h1 class="astaria-content-title">Душ�
 expect.call(highlander_soul.include?("astaria-chapter-navigation"), "Saga chapter has no previous/next navigation")
 expect.call(highlander_soul.include?("astaria-coverless-subtitle"), "Call of Thunder chapter is missing its English title")
 expect.call(highlander_soul.scan("The Highlander's Soul").length == 1, "English chapter title is duplicated in the public article")
+lyrics_source_path = "Энциклопедия/Литература/Зов Бури/Глава 001 - Душа Горца.md"
+lyrics_source = File.read(File.join(ROOT, lyrics_source_path)).split("> [!lyrics]", 2).last
+lyrics_lines = lyrics_source.lines.select { |line| line.start_with?("> ") && !line.start_with?("> ### ") }
+  .map { |line| line.chomp.delete_prefix("> ").sub(/<br>\z/, "") }
+built_lyrics_lines = highlander_soul.scan(/<span class="astaria-lyric-line">([^<]*)<\/span>/).flatten.map { |line| CGI.unescapeHTML(line) }
+expect.call(lyrics_lines.length == 40 && built_lyrics_lines == lyrics_lines, "The song reader must preserve all 40 lyric lines verbatim and in order")
+english_lyrics_source = File.read(File.join(ROOT, "_translations/en-GB/pages", lyrics_source_path)).split("> [!lyrics]", 2).last
+expect.call(english_lyrics_source == lyrics_source, "Russian and English chapters must share identical original lyrics")
+expect.call(highlander_soul.scan('class="astaria-lyrics-part astaria-lyrics-chorus"').length == 3, "The song reader must retain all three choruses")
+expect.call(highlander_soul.include?('href="#song-lyrics"'), "The opening chapter must offer a direct jump to its lyrics")
+expect.call(highlander_soul.include?("astaria-lyrics-sing"), "The lyrics reader must offer sing-along mode")
+expect.call(highlander_soul.include?("Il la ba far noelly") && highlander_soul.include?("Названными"), "Chapter 1 must preserve the prologue's lullaby and explain the Named")
 expect.call(journey_styles.include?(".astaria-coverless-hero"), "Articles without a cover have no visual hero template")
 expect.call(journey_styles.include?(".astaria-saga-chapter-card"), "Coverless saga chapters have no card template")
 expect.call(journey_styles.include?(".astaria-chapter-navigation"), "Coverless chapters have no navigation styles")

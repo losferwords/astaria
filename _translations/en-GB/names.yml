@@ -65,6 +65,9 @@ names:
   Город Сангалла:
     title: Sangalla
     slug: sangalla
+  Город Награкшаса:
+    title: Nagrakshasa
+    slug: nagrakshasa
   Регион Элессия:
     title: Elessia
     slug: elessia
@@ -1387,6 +1390,12 @@ names:
   Джевахар Ашма:
     title: Djevahar Ashma
     slug: djevahar-ashma
+  Вивек Ашма:
+    title: Vivek Ashma
+    slug: vivek-ashma
+  Шанта Ашма:
+    title: Shanta Ashma
+    slug: shanta-ashma
   Анвика Нарай:
     title: Anvika Narai
     slug: anvika-narai

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Астария — управление предприятиями"
+  short_description: "Письма, выбор проблем и Fate для предприятий Астарии"
+  default_prompt: "Используй $astaria-business-management: предложи ребятам четыре проблемы их предприятий на выбор для игры по Fate."

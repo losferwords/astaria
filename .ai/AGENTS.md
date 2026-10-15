@@ -19,7 +19,19 @@ Read `.ai/context/astaria-project.md` when project background is needed. For vau
 
 Before working on Losfy, Losfer, Misty, Lyubov, or the Dream of Mirrors, read `.ai/context/losfy-losfer-misty.md` and `.ai/context/authorial-meta.md`. These are the author's most personal characters. Preserve their deliberately modest public profiles, private truths, and room for future imagination; do not reconstruct withheld names or fill every biographical gap.
 
-For creative brainstorming, session ideas, scenes, encounters, NPC concepts, twists, or FATE preparation, use:
+For interactive management of Halyk-Byndir, Ui-Djan, and Ulehey metallurgy in `Ветер Перемен` — including natural requests like `дай ребятам проблемы с их борделями`, selected problems, letters, and outcomes — use:
+
+`.ai/skills/astaria-business-management/SKILL.md`
+
+This specific workflow runs in chat and keeps confirmed campaign state in `.ai/context/wind-of-change-brothels.md`; it takes precedence over the general idea-workbench file-saving default for these business scenes. Do not create a separate idea note for every menu. Use `astaria-fate-core` for the mechanics.
+
+For preparation of a tabletop session or campaign chapter — including natural requests like `давай подготовимся к игре`, `спланируем следующую главу`, and continuing step-by-step preparation — use by default:
+
+`.ai/skills/astaria-session-prep/SKILL.md`
+
+Ask one interactive question at a time with suggested answers and room for the user's own version. Build the chosen material progressively into one playable note in `Идеи/`: artistic scene descriptions, NPC voices, and compact `Для Мастера` blocks with relevant Fate challenges. Keep the document useful at the table rather than a transcript of choices. An explicit request for a full module or only a finished text overrides the interactive default. The business-management workflow above retains precedence for its specific scope.
+
+For other creative brainstorming, standalone scene ideas, encounters, NPC concepts, twists, or FATE preparation outside this session-preparation workflow, use:
 
 `.ai/skills/astaria-idea-workbench/SKILL.md`
 

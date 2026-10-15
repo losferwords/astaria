@@ -1022,7 +1022,7 @@ canonical_notes.each do |note|
   end
 end
 expect.call(ready_article_notes.length >= 301, "Expected the complete ready encyclopedia corpus")
-intentionally_unpublished_titles = ["Город Награкшаса"]
+intentionally_unpublished_titles = []
 intentionally_coverless_titles = intentionally_unpublished_titles + [
   "Вервольф",
   "Авгарский самогон",
@@ -1957,7 +1957,7 @@ expect.call(country_notes.length >= 16, "Expected all canonical countries in the
 expect.call(missing_country_subtitles.empty?, "Countries without card_subtitle: #{missing_country_subtitles.map { |path| File.basename(path) }.join(', ')}")
 
 map = read.call("map.html")
-expect.call(map.scan("astaria-map-marker astaria-map-marker-").length == 136, "Map must render all 136 canonical markers")
+expect.call(map.scan("astaria-map-marker astaria-map-marker-").length == 139, "Map must render all 139 canonical markers")
 %w[states.png heightmap.png biomes.png].each do |filename|
   expect.call(map.include?("assets/maps/#{filename}"), "Map does not use original layer #{filename}")
   source = File.join(ROOT, "Assets", "Maps", filename)
@@ -2005,6 +2005,9 @@ expect.call(map.match?(/data-name="Город Кайто"[^>]*data-x="82\.7214"[
 expect.call(map.match?(/data-name="Амато"[^>]*data-x="82\.0052"[^>]*data-y="40\.7639"/), "Amato marker must render at geoY 2559, geoX 6298")
 expect.call(map.match?(/data-name="Город Мирград"[^>]*data-x="84\.388"[^>]*data-y="16\.3657"/), "Mirgrad marker must render at geoY 3613, geoX 6481")
 expect.call(map.match?(/data-name="Обитель"[^>]*data-x="87\.0964"[^>]*data-y="9\.9537"/), "Obitelj marker must render at geoY 3890, geoX 6689")
+expect.call(map.match?(/data-name="Город Награкшаса"[^>]*data-x="73\.8281"[^>]*data-y="86\.8519"/), "Nagrakshasa marker must render at geoY 568, geoX 5670")
+expect.call(map.match?(/data-name="Деревня Бадракали"[^>]*data-x="74\.1406"[^>]*data-y="83\.7269"/), "Badrakali marker must render at geoY 703, geoX 5694")
+expect.call(map.match?(/data-name="Город Ванпур"[^>]*data-x="75\.3906"[^>]*data-y="85\.9028"/), "Vanpur marker must render at geoY 609, geoX 5790")
 expect.call(map.match?(/class="astaria-map-marker astaria-map-marker-realm"[^>]*data-name="Амато"/), "Amato must render as a realm marker")
 expect.call(map.match?(/class="astaria-map-marker astaria-map-marker-realm"[^>]*data-name="Обитель"/), "Obitelj must render as a realm marker")
 expect.call(map.include?('data-name="Горный хребет Шафар"'), "Map still points to the retired Shang Feng duplicate")

@@ -1,6 +1,6 @@
 ---
 name: astaria-idea-workbench
-description: "Use when the user asks for Astaria creative ideas, brainstorming, chapter ideas, scenes, encounters, NPC concepts, twists, situations, complications, session prep, or prompts like 'мне нужна идея', 'придумай', 'накидай', 'что может произойти', 'помоги придумать'. Save the result as a browsable draft Markdown note unless the user explicitly asks to answer only in chat."
+description: "Use when the user asks for Astaria creative ideas, brainstorming, standalone scenes, encounters, NPC concepts, twists, situations, complications, or prompts like 'мне нужна идея', 'придумай', 'накидай', 'что может произойти', 'помоги придумать'. Save a browsable draft Markdown note unless the user asks for chat only. For step-by-step preparation of a session or chapter, use astaria-session-prep; for interactive business management, use astaria-business-management."
 ---
 
 # Astaria Idea Workbench
@@ -13,7 +13,7 @@ Use this skill for creative brainstorming in the Astaria setting.
 - Use `.ai/context/astaria-project.md` for project background.
 - Use `.ai/context/astaria-meta-and-fate.md` for cultures, correct demonyms, FATE aspects, skills, and stunts.
 - For FATE characters, NPCs, scenes, scenarios, arcs, conflicts, terminology, or mechanical preparation, also use `.ai/skills/astaria-fate-core/SKILL.md` and its relevant references.
-- For FATE session preparation, select incremental scene cards or a full module using `.ai/skills/astaria-fate-core/references/preparation-modes.md`. Ongoing campaigns default to incremental scene cards.
+- For preparation of a session or chapter, use `.ai/skills/astaria-session-prep/SKILL.md`: one interactive question at a time and progressive creation of playable prose with `Для Мастера` blocks. That skill takes precedence for the conversation and document format. Standalone requests for a batch of scene ideas can still use incremental scene cards; explicit full-module requests follow `.ai/skills/astaria-fate-core/references/preparation-modes.md`.
 - If the idea touches existing lore, characters, Obsidian structure, maps, or articles, also use `.ai/skills/astaria-obsidian-vault/SKILL.md`.
 - Unless the user explicitly says “только в чат”, “не создавай файл”, or similar, save the generated ideas to a Markdown note in `Идеи/`.
 - Keep idea notes `ready: false`, `quartz: false`, and `private: true`.
@@ -31,7 +31,7 @@ Use this skill for creative brainstorming in the Astaria setting.
 
 If a file with that name exists, append `- 2`, `- 3`, etc.
 
-For incremental preparation of the same campaign chapter, keep one live chapter note instead of creating a new numbered file for every scene. When a scene has been played or the user has chosen a direction, collapse the old option batch to a brief factual result and add only the next batch. Do not accumulate rejected branches unless the user asks to preserve them.
+For preparation of the same campaign chapter, keep one live chapter note instead of creating a new numbered file for every scene. After a choice, replace the option batch with the selected playable material under `astaria-session-prep`; preserve approved prose rather than reducing it to a decision log. Distinguish reported play from future intentions. Do not accumulate rejected branches unless the user asks to preserve them.
 
 3. Use this frontmatter:
 
@@ -70,9 +70,11 @@ private: true
 - Give each situation at least one tension, choice, or cost.
 - For FATE, provide aspects in a form that can be invoked and compelled.
 - For FATE scenarios, prepare problems, motives, story questions, stakes, and branching consequences rather than a fixed sequence of mandatory scenes.
-- If the user is preparing a session, include at least one low-prep scene, one complication, and one optional escalation.
+- Let the current preparation step determine scope; do not add extra scenes or an escalation to every interactive answer. A requested standalone batch may include a low-prep scene, a complication, and an optional escalation.
 
 ## Chat Response
+
+In interactive session preparation, follow `astaria-session-prep`: focus on the current choice and do not repeat file summaries after every answer.
 
 After creating the note, answer briefly:
 

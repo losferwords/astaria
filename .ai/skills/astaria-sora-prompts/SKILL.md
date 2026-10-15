@@ -75,13 +75,13 @@ Transfer rendering and depth, not Mediterranean geography, Greek/Japanese archit
 Use connected natural-language paragraphs with full stops. Start with still-image intent, aspect ratio, and main subject; include a compact art-direction paragraph, composition and geography, defining content, and light or atmosphere. The order may change when it improves clarity.
 
 - Omit Anima quality/score tags, weights, and its technical negative baseline.
-- Translate setting names into visible information. Keep the lore name in the Russian introduction; do not rely on an unexplained fictional name to supply architecture or geography.
+- Do not include Astaria-specific proper names in the English image prompt: this applies to the world itself, places, peoples, organizations, deities, named buildings and artifacts. Keep those names in the Russian explanation and internal lore grounding only. Replace them with concrete visual descriptions and familiar cultural terms, such as `a fantasy world`, `an ancient Indian-inspired market town` or `a welcoming tea house`. Real-world cultural and geographic references remain useful. Include a fictional name only if the user explicitly asks for that name to appear as a readable inscription in the image.
 - Bind colors to materials. Replace abstract poverty, antiquity, grandeur, and beauty with visible evidence where it matters.
 - Describe only details that change the image. Avoid piling on synonyms, exact counts for incidental crowds, and exhaustive microgeometry. The approved city example is a useful level of detail, not a mandatory length.
 - Integrate a short final exclusion sentence only for important observed risks. Do not recreate a giant Negative list. Prefer specifying the intended road surface or vessel construction over banning entire eras.
 - Keep constraints internally consistent: light and weather, viewing distance and people, ship size and harbor clearance, cultural materials and requested technology.
 
-Default output: one to three Russian sentences explaining the visual choice, then **one English code block**. Add an optional reference-attachment sentence only when useful; do not provide several competing prompt variants unless requested.
+Always deliver a **complete, self-contained, ready-to-paste English prompt in one code block**, including on every revision, however small the correction. Incorporate changes into the full prompt; never provide replacement snippets, isolated paragraphs, diffs, or instructions to merge text with an earlier prompt. Precede it with one to three Russian sentences explaining the visual choice. Add an optional reference-attachment sentence only when useful; do not provide several competing prompt variants unless requested.
 
 ## Iterate without losing the successful image
 

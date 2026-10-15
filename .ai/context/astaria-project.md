@@ -84,3 +84,5 @@ NODE_OPTIONS=--max-old-space-size=8192 node quartz/bootstrap-cli.mjs build -d co
 ## Service Context
 
 `.ai/context/astaria-meta-and-fate.md` contains cultural references, forms of address, era rules, and FATE generation guidance. Read it before creating culture-sensitive lore, characters, names, demonyms, dialogue, aspects, skills, stunts, or character sheets.
+
+`.ai/context/wind-of-change-brothels.md` records the players' decisions about remote management of Halyk-Byndir, Ui-Djan, and Ulehey metallurgy, including letter verification and the current stage of the enterprises. Read it when continuing those business scenes. `.ai/skills/astaria-business-management/SKILL.md` provides the interactive play workflow and a focused reference for their people and setting.

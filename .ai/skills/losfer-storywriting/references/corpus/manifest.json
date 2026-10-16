@@ -1,0 +1,114 @@
+{
+  "source": ".ai/sources/losfer-storywriting/Losfer_stories.docx",
+  "source_sha256": "384161911eae3bdfad713cbf14a7cc83e4241d4166e515261c775a15c5db857e",
+  "extraction": "Visible w:t text, tabs and line breaks; nonempty paragraphs numbered in document order. Word styling and images omitted. Layout-only whitespace normalized; wording not edited.",
+  "story_count": 13,
+  "paragraph_count": 1917,
+  "word_count": 20733,
+  "stories": [
+    {
+      "id": 1,
+      "title": "Infinite Dreams: How to Feed Your Dragon",
+      "file": "how-to-feed-your-dragon.md",
+      "first_paragraph": 1,
+      "last_paragraph": 49,
+      "word_count": 785
+    },
+    {
+      "id": 2,
+      "title": "Astaria: The Demon to Hunt",
+      "file": "the-demon-to-hunt.md",
+      "first_paragraph": 50,
+      "last_paragraph": 223,
+      "word_count": 2083
+    },
+    {
+      "id": 3,
+      "title": "Infinite Dreams: The Sleeping Sun",
+      "file": "the-sleeping-sun.md",
+      "first_paragraph": 224,
+      "last_paragraph": 583,
+      "word_count": 3306
+    },
+    {
+      "id": 4,
+      "title": "OC: Losfy and Maisie - Sweet Beneath the Mud 🖤🧡",
+      "file": "losfy-and-maisie-sweet-beneath-the-mud.md",
+      "first_paragraph": 584,
+      "last_paragraph": 636,
+      "word_count": 490
+    },
+    {
+      "id": 5,
+      "title": "Infinite Dreams: Twelve Thousand Shadows",
+      "file": "twelve-thousand-shadows.md",
+      "first_paragraph": 637,
+      "last_paragraph": 1017,
+      "word_count": 4527
+    },
+    {
+      "id": 6,
+      "title": "OC: Losfy x Tria Cordisanguis 🖤❤️",
+      "file": "losfy-x-tria-cordisanguis.md",
+      "first_paragraph": 1018,
+      "last_paragraph": 1054,
+      "word_count": 761
+    },
+    {
+      "id": 7,
+      "title": "OC: Losfy - Bleeding Epitaph",
+      "file": "losfy-bleeding-epitaph.md",
+      "first_paragraph": 1055,
+      "last_paragraph": 1129,
+      "word_count": 1366
+    },
+    {
+      "id": 8,
+      "title": "OC: Krestia x Obsidia x Obsessia - Obsidian Archive Temptation 💚💙💗",
+      "file": "krestia-x-obsidia-x-obsessia-obsidian-archive-temptation.md",
+      "first_paragraph": 1130,
+      "last_paragraph": 1151,
+      "word_count": 1442
+    },
+    {
+      "id": 9,
+      "title": "OC: Losfy - Seven Nights, Zero Panties 🖤",
+      "file": "losfy-seven-nights-zero-panties.md",
+      "first_paragraph": 1152,
+      "last_paragraph": 1425,
+      "word_count": 1984
+    },
+    {
+      "id": 10,
+      "title": "OC: Misty - Forbidden Harvest",
+      "file": "misty-forbidden-harvest.md",
+      "first_paragraph": 1426,
+      "last_paragraph": 1429,
+      "word_count": 98
+    },
+    {
+      "id": 11,
+      "title": "OC: Misty - The Wettest Spring Morning 🐰💗💦",
+      "file": "misty-the-wettest-spring-morning.md",
+      "first_paragraph": 1430,
+      "last_paragraph": 1456,
+      "word_count": 791
+    },
+    {
+      "id": 12,
+      "title": "OC: Misty - Basket Full of Bad Ideas 🧺🥕🥕🥕",
+      "file": "misty-basket-full-of-bad-ideas.md",
+      "first_paragraph": 1457,
+      "last_paragraph": 1504,
+      "word_count": 742
+    },
+    {
+      "id": 13,
+      "title": "OC: Misty - Dressed for Trouble 🎀😳🏰",
+      "file": "misty-dressed-for-trouble.md",
+      "first_paragraph": 1505,
+      "last_paragraph": 1917,
+      "word_count": 2358
+    }
+  ]
+}

@@ -2297,6 +2297,10 @@ def cleanup_public_body(body, data)
     body = body.gsub(/^\s*!\[\[#{Regexp.escape(image_path)}(?:\|[^\]]+)?\]\]\s*\n+/, "")
   end
 
+  body = body.gsub(/^> \[!scene\][ \t]+([^\n]+)$/) do
+    %(<p class="astaria-story-setting">#{Regexp.last_match(1)}</p>)
+  end
+
   body.strip
 end
 

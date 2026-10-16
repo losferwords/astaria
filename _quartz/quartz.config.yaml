@@ -16,7 +16,10 @@ configuration:
     cdnCaching: true
     typography:
       header: Alegreya SC
-      body: Alegreya
+      body:
+        name: Segoe UI
+        source: local
+        fallbacks: 'Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji"'
       code: IBM Plex Mono
     colors:
       lightMode:

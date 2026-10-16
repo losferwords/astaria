@@ -19,6 +19,14 @@ Read `.ai/context/astaria-project.md` when project background is needed. For vau
 
 Before working on Losfy, Losfer, Misty, Lyubov, or the Dream of Mirrors, read `.ai/context/losfy-losfer-misty.md` and `.ai/context/authorial-meta.md`. These are the author's most personal characters. Preserve their deliberately modest public profiles, private truths, and room for future imagination; do not reconstruct withheld names or fill every biographical gap.
 
+For literary stories, continuations, story editing, dream crossovers, and Misty's diaries about Losfy, Losfer, or Misty, use:
+
+`.ai/skills/losfer-storywriting/SKILL.md`
+
+Read `.ai/context/losfer-storywriting.md` for the literary source hierarchy and canon caveats, then select relevant stories through the skill's corpus index. This workflow defaults to prose in chat and takes precedence over the general idea-workbench file-saving default for these stories. It does not automatically create an idea note, canonize a story, or publish it. Discussion defaults to Russian, new story prose to English; follow an explicit language request. Ordinary chat, short RP replies, illustration prompts, and tabletop session preparation retain their own workflows.
+
+The original literary inputs are in `.ai/sources/losfer-storywriting/`. The standalone ChatGPT project instruction and short project prompt are in `.ai/exports/chatgpt/losfer-storywriting/`; keep the original 1.4 brief as source history rather than overwriting it with the export.
+
 For interactive management of Halyk-Byndir, Ui-Djan, and Ulehey metallurgy in `Ветер Перемен` — including natural requests like `дай ребятам проблемы с их борделями`, selected problems, letters, and outcomes — use:
 
 `.ai/skills/astaria-business-management/SKILL.md`

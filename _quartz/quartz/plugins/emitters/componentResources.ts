@@ -17,9 +17,13 @@ import customStyles from "../../styles/custom.scss";
 import darkStyles from "../../styles/dark.scss";
 import popoverStyle from "../../components/styles/popover.scss";
 import { BuildCtx } from "../../util/ctx";
-import { QuartzComponent } from "../../components/types";
+import {
+  QuartzComponent,
+  QuartzComponentConstructor,
+} from "../../components/types";
 import { normalizeResource } from "../../util/resources";
 import { componentRegistry } from "../../components/registry";
+import { resolveSearchPreviewUrl } from "../../util/searchPreview";
 import {
   googleFontHref,
   googleFontSubsetHref,
@@ -55,6 +59,16 @@ function getComponentResources(ctx: BuildCtx): ComponentResources {
     allComponents.add(component);
   }
 
+  const search = componentRegistry.get("Search");
+  const searchComponent =
+    search &&
+    (typeof search.component === "function"
+      ? (search.component as QuartzComponentConstructor)(undefined)
+      : search.component);
+  const searchScripts = new Set(
+    normalizeResource(searchComponent?.afterDOMLoaded),
+  );
+
   const componentResources = {
     css: new Set<string>(),
     beforeDOMLoaded: new Set<string>(),
@@ -66,8 +80,22 @@ function getComponentResources(ctx: BuildCtx): ComponentResources {
     for (const c of normalizeResource(css)) componentResources.css.add(c);
     for (const b of normalizeResource(beforeDOMLoaded))
       componentResources.beforeDOMLoaded.add(b);
-    for (const a of normalizeResource(afterDOMLoaded))
-      componentResources.afterDOMLoaded.add(a);
+    for (const a of normalizeResource(afterDOMLoaded)) {
+      // Scope locale-aware fetching to search; other components keep native fetch.
+      const script =
+        process.env.ASTARIA_MULTILINGUAL === "true" && searchScripts.has(a)
+          ? `
+        (function (fetch) { ${a} })(function (target, init) {
+          const url = (${resolveSearchPreviewUrl.toString()})(
+            target, window.location.href, document.baseURI,
+            document.body.dataset.basepath || "", document.documentElement.lang
+          );
+          return window.fetch(url, init);
+        });
+      `
+          : a;
+      componentResources.afterDOMLoaded.add(script);
+    }
   }
 
   return {

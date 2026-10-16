@@ -12,8 +12,9 @@
   --astaria-paper: rgba(253, 247, 235, 0.95);
   --astaria-paper-deep: rgba(239, 224, 194, 0.96);
   --astaria-border: rgba(89, 23, 23, 0.32);
-  --astaria-prose-width: 72ch;
+  --astaria-prose-width: 68ch;
   --astaria-sidebar-gap: 1.5rem;
+  --astaria-emphasis-style: italic;
   --astaria-search-label: "Поиск по Астарии";
   --astaria-search-label-short: "Поиск";
 }
@@ -42,6 +43,12 @@ body {
   color: var(--astaria-ink);
 }
 
+// Keep emphasis in the same family as the surrounding text.
+em,
+i {
+  font-style: var(--astaria-emphasis-style);
+}
+
 html {
   background: #b9b6af;
   scrollbar-gutter: stable;
@@ -61,12 +68,12 @@ body:has(.search-container.active) {
 
 a {
   color: #a71916;
-  text-decoration-color: rgba(216, 11, 7, 0.35);
+  text-decoration: none;
 }
 
 a:hover {
   color: var(--astaria-accent);
-  text-decoration-color: var(--astaria-accent);
+  text-decoration: none;
 }
 
 #quartz-root.page,
@@ -443,13 +450,37 @@ a:hover {
 
 .markdown-rendered {
   padding: 0 2rem 3.1rem;
-  font-size: 1.08rem;
-  line-height: 1.62;
+  font-size: 1.125rem;
+  line-height: 1.65;
 }
 
 .markdown-rendered p {
-  margin: 0 0 1.35rem;
+  margin: 0 0 1em;
   max-width: var(--astaria-prose-width);
+  line-height: inherit;
+}
+
+.markdown-rendered li {
+  line-height: inherit;
+}
+
+.markdown-rendered .astaria-story-setting {
+  display: flow-root;
+  box-sizing: border-box;
+  width: fit-content;
+  max-width: 100%;
+  margin: 0.25rem 0 1.65rem;
+  padding: 0.6rem 0.9rem;
+  border-inline-start: 2px solid var(--astaria-gold);
+  background: var(--astaria-paper);
+  color: var(--astaria-muted);
+  font-size: 0.9em;
+  line-height: 1.5;
+}
+
+.markdown-rendered .astaria-dialogue-translation {
+  color: var(--astaria-muted);
+  font-size: 0.94em;
 }
 
 // Include borders and indentation in the same measure as the article's prose.
@@ -508,7 +539,7 @@ body:not([data-slug="index"]):not([data-slug="map"])
 
 .markdown-rendered a.internal:hover {
   color: var(--astaria-accent);
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .astaria-cover-frame,
@@ -679,7 +710,7 @@ body:not([data-slug="index"]):not([data-slug="map"])
   color: #76584b;
   font-family: var(--headerFont);
   font-size: clamp(1.05rem, 2vw, 1.32rem);
-  font-style: italic;
+  font-style: var(--astaria-emphasis-style);
   letter-spacing: 0.025em;
 }
 
@@ -778,7 +809,7 @@ body:not([data-slug="index"]):not([data-slug="map"])
 }
 
 body[data-slug="literature/the-demon-to-hunt"] .markdown-rendered {
-  > p {
+  > p:not(.astaria-story-setting) {
     margin-bottom: 0.72rem;
   }
 
@@ -1171,16 +1202,12 @@ body[data-slug="literature/the-demon-to-hunt"] .markdown-rendered {
 .markdown-rendered .astaria-infobox-link.internal {
   color: #9f211d !important;
   font-weight: 700;
-  text-decoration: underline;
-  text-decoration-color: rgba(159, 33, 29, 0.25);
-  text-decoration-thickness: 1px;
-  text-underline-offset: 0.14em;
+  text-decoration: none;
 }
 
 .markdown-rendered .astaria-infobox-link:hover,
 .markdown-rendered .astaria-infobox-link.internal:hover {
   color: #d80b07 !important;
-  text-decoration-color: currentColor;
 }
 
 .astaria-infobox-list {
@@ -2895,11 +2922,9 @@ body[data-slug="index"] .astaria-sitebar {
 
 .astaria-sitebar-nav a {
   padding: 0.45rem 0;
-  border-bottom: 1px solid transparent;
 }
 
 .astaria-sitebar-nav a:hover {
-  border-color: #d6b46e;
   color: #ffe7b1;
 }
 
@@ -3068,23 +3093,18 @@ body:is([data-slug^="characters/"], [data-slug^="gods/"])
 .markdown-rendered a.astaria-inline-link.internal {
   color: #9f211d !important;
   font-weight: 700;
-  text-decoration: underline;
-  text-decoration-color: rgba(159, 33, 29, 0.28);
-  text-decoration-thickness: 1px;
-  text-underline-offset: 0.14em;
+  text-decoration: none;
 }
 
 .astaria-unpublished-reference {
   color: #51453d;
-  text-decoration: underline dotted rgba(102, 81, 67, 0.48);
-  text-underline-offset: 0.16em;
+  text-decoration: none;
   cursor: help;
 }
 
 .astaria-infobox-reference {
   color: #57483f;
-  text-decoration: underline dotted rgba(102, 81, 67, 0.46);
-  text-underline-offset: 0.15em;
+  text-decoration: none;
 }
 
 .astaria-self-reference {

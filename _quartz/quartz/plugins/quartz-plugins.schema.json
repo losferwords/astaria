@@ -62,8 +62,25 @@
                   "description": "Font family for headers"
                 },
                 "body": {
-                  "type": "string",
-                  "description": "Font family for body text"
+                  "description": "Font family for body text",
+                  "oneOf": [
+                    { "type": "string" },
+                    {
+                      "type": "object",
+                      "required": ["name"],
+                      "additionalProperties": false,
+                      "properties": {
+                        "name": { "type": "string" },
+                        "weights": {
+                          "type": "array",
+                          "items": { "type": "number" }
+                        },
+                        "includeItalic": { "type": "boolean" },
+                        "source": { "const": "local" },
+                        "fallbacks": { "type": "string" }
+                      }
+                    }
+                  ]
                 },
                 "code": {
                   "type": "string",

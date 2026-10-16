@@ -1,0 +1,4 @@
+interface:
+  display_name: "Losfer Storywriting"
+  short_description: "Рассказы о Лосфи, Лосфере и Мисти в авторской манере"
+  default_prompt: "Используй $losfer-storywriting, чтобы написать рассказ о Лосфи, Лосфере или Мисти по моему замыслу, с их голосами и согласованным каноном."

@@ -1674,8 +1674,10 @@ def build_coverless_title(source, route, data, lookup)
   when "chapter", "session"
     label = BUILD_LOCALE == "en-GB" ? "Chapter" : "Глава"
     "#{label} #{format("%03d", data["chapter"].to_i)}"
-  when "campaign", "document"
+  when "campaign"
     BUILD_LOCALE == "en-GB" ? "An Astaria Saga" : "Сага Астарии"
+  when "document"
+    BUILD_LOCALE == "en-GB" ? "An Astaria Story" : "Рассказ Астарии"
   else display_category(category)
   end
   metadata = [
@@ -1751,6 +1753,8 @@ def build_sidebar(data, route, lookup)
   heading = if story_profile
     if %w[chapter session].include?(data["type"].to_s)
       BUILD_LOCALE == "en-GB" ? "About this chapter" : "О главе"
+    elsif data["type"].to_s == "document"
+      BUILD_LOCALE == "en-GB" ? "About the story" : "О рассказе"
     else
       BUILD_LOCALE == "en-GB" ? "About the saga" : "О саге"
     end
@@ -2298,7 +2302,7 @@ def cleanup_public_body(body, data)
   end
 
   body = body.gsub(/^> \[!scene\][ \t]+([^\n]+)$/) do
-    %(<p class="astaria-story-setting">#{Regexp.last_match(1)}</p>)
+    %(<p class="astaria-story-setting">#{Regexp.last_match(1)}</p>\n)
   end
 
   body.strip

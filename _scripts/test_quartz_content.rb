@@ -196,8 +196,8 @@ expect.call(
 kaito = canonical_by_title.fetch("Город Кайто")
 expect.call(kaito[:data]["ready"] == true && kaito[:data]["quartz"] == true, "Kaito must be published now that its art is ready")
 expect.call(kaito[:data]["public_slug"] == "kaito", "Kaito must use its concise canonical public slug")
-expect.call(kaito[:data]["cover_image"] == "[[Assets/Images/Kaito_City.jpg]]", "Kaito must use its new city art")
-expect.call(File.file?(File.join(ROOT, "Assets", "Images", "Kaito_City.jpg")), "Kaito city art is missing")
+expect.call(kaito[:data]["cover_image"] == "[[Assets/Images/Kaito_City.png]]", "Kaito must use its new city art")
+expect.call(File.file?(File.join(ROOT, "Assets", "Images", "Kaito_City.png")), "Kaito city art is missing")
 expect.call(kaito[:data]["native_name"] == "海都", "Kaito article is missing its canonical Ezo name")
 expect.call(kaito[:data]["settlement_type"] == "Столица", "Kaito settlement type must be written in Russian")
 expect.call(kaito[:data]["foundation"] == "-2695 ХЭ", "Kaito must retain its 2695 ChE foundation date")
@@ -212,7 +212,7 @@ expect.call(!kaito_body.match?(/\b56[\s ]?000\b/), "Kaito population must remai
 expect.call(!kaito[:source].match?(/Маяк/i), "Kaito article exposes secret Soul Lighthouse lore")
 kaito_page = read.call("places/kaito.html")
 expect.call(kaito_page.include?("Город Кайто"), "Kaito public page does not render its title")
-expect.call(kaito_page.include?("assets/images/kaito_city.jpg"), "Kaito public page does not render its new city art")
+expect.call(kaito_page.include?("assets/images/kaito_city.png"), "Kaito public page does not render its new city art")
 
 vends = canonical_by_title.fetch("Венды")
 expect.call(vends[:data]["ready"] == true && vends[:data]["quartz"] == true, "Vends must be published now that their art is ready")
@@ -1899,7 +1899,7 @@ expect.call(journey_styles.match?(/\.astaria-timeline-year\s*\{[^}]*lining-nums 
   expect.call(timeline.include?(label), "Timeline is missing the significance level: #{label}")
 end
 [
-  "amon-astat_drought.jpg",
+  "amon-astat_drought.png",
   "gunpowder.jpg",
   "archaeans.jpg",
   "orion_city.jpg",
@@ -1957,7 +1957,7 @@ expect.call(country_notes.length >= 16, "Expected all canonical countries in the
 expect.call(missing_country_subtitles.empty?, "Countries without card_subtitle: #{missing_country_subtitles.map { |path| File.basename(path) }.join(', ')}")
 
 map = read.call("map.html")
-expect.call(map.scan("astaria-map-marker astaria-map-marker-").length == 139, "Map must render all 139 canonical markers")
+expect.call(map.scan("astaria-map-marker astaria-map-marker-").length == 142, "Map must render all 142 canonical markers")
 %w[states.png heightmap.png biomes.png].each do |filename|
   expect.call(map.include?("assets/maps/#{filename}"), "Map does not use original layer #{filename}")
   source = File.join(ROOT, "Assets", "Maps", filename)

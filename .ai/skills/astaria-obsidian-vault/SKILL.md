@@ -78,6 +78,16 @@ Keep physical and biome layers linked nearby:
 - `Assets/Maps/heightmap.png`
 - `Assets/Maps/biomes.png`
 
+### Geography For Lore And Travel
+
+Use map positions when describing places, livelihoods, journeys, and scenes. Read `geoX` and `geoY` from place notes when available, and consult the markers in `Карты/Карта Астарии.md`. Match positions to coastlines, roads, rivers, relief, and biomes across the map layers. Use `parent_location`, `country`, territorial articles, and the political layer for regional and state relationships; proximity to a country's label does not establish ownership. A region's marker is an anchor, not its boundary.
+
+The author's scale is **10 canonical coordinate units = 1 km**. `geoX` increases eastward and `geoY` northward. Compute straight-line distance as `sqrt((x2 - x1)^2 + (y2 - y1)^2) / 10` km. A difference of 40 units on one axis is 4 km along that axis; include both axes for the full distance. Mistras and Theonia are approximately 12 km apart.
+
+Distinguish straight-line distance from a road or sea route. Estimate route length from its visible course and account for terrain, crossings, and transport before inferring travel time. Treat the map as schematic: do not infer exact elevations, navigable water, or a large harbour merely from a coastal marker. Separate visible features and author-confirmed biomes from proposed explanations for them.
+
+Crops or screenshots of map regions are allowed for geographic checks. Establish their bounds and scale first. Canonical coordinates use the **7680 × 4320** map space, while the current `heightmap.png` and `biomes.png` rasters are **5760 × 3240**. Check actual image dimensions rather than assuming equal sizes. For a layer of width `W` and height `H`, convert to top-left raster coordinates with `pixelX = geoX * W / 7680` and `pixelY = (4320 - geoY) * H / 4320`. Preserve that conversion when cropping or resizing; screenshot pixels are not canonical map units. Local map analysis may use ordinary raster cropping tools without generating or repainting geography.
+
 ## Chronology
 
 Historical notes use numeric `year` and optional `endingYear`, plus:
@@ -99,6 +109,8 @@ Keep all ordinary characters in `Энциклопедия/Персонажи/`. 
 `_scripts/sync_quartz_content.rb` generates `_quartz/content/` from notes with `quartz: true`. Never edit generated content as the source of truth.
 
 Keep secrets, private mechanics, brainstorming, and notes with `quartz: false` out of the public build. The Secrets directory is denied even if a note is marked `quartz: true` by mistake.
+
+Site typography is self-hosted: keep `fontOrigin: local` and the bundled Alegreya SC / IBM Plex Mono files and licenses in `_quartz/quartz/static/fonts/`. Use `1rem` for the article body and preserve the author's `--astaria-prose-width: 82ch` when changing fonts. Keep `82ch` as a maximum, not a minimum requirement for displaying the sidebar. Keep the article container at `1170px`, as requested by the author, independently of the prose measure. Above the existing `900px` mobile breakpoint, the text uses the available space up to the sidebar's left margin and keeps that same width below the sidebar. Do not reintroduce a container query that stacks metadata merely because the full maximum prose measure does not fit. On mobile and in search previews, place metadata above the prose. This applies to countries, characters and other lore as well as stories.
 
 ## Validation
 

@@ -62,6 +62,32 @@ names:
     title: Mist Island
     slug: mist-island
     native_name: 霞島
+  Луга Тамано:
+    title: Tamano Meadows
+    slug: tamano-meadows
+    native_name: 魂野
+  Остров Рюгу:
+    title: Ryugu Island
+    slug: ryugu-island
+    native_name: 竜宮
+  Остров Фурудэ:
+    title: Furude Island
+    slug: furude-island
+    native_name: 古手
+  Город Рэйкацу:
+    title: Reikatsu
+    slug: reikatsu
+    native_name: 霊霞津
+  Город Кири:
+    title: Kiri
+    slug: kiri
+    native_name: 霧
+  Город Акуно:
+    title: Akuno
+    slug: akuno
+  Город Шиори:
+    title: Shiori
+    slug: shiori
   Город Сангалла:
     title: Sangalla
     slug: sangalla
@@ -451,7 +477,7 @@ names:
     title: Chapter 005 — The Priestess
     slug: chapter-005-the-priestess
   Глава 6 - Нет пощады жаждущим:
-    title: Chapter 006 — No Mercy for the Thirsty
+    title: Chapter 006 — No Mercy for Thirsty
     slug: chapter-006-no-mercy-for-the-thirsty
   Глава 7 - Зов Бури:
     title: Chapter 007 — Call of Thunder
@@ -460,7 +486,7 @@ names:
     title: Chapter 008 — No Way Home
     slug: chapter-008-no-way-home
   Глава 009 - Плач ночи (Эпилог):
-    title: Chapter 009 — Lament of the Night (Epilogue)
+    title: Chapter 009 — Lament of The Night (Epilogue)
     slug: chapter-009-lament-of-the-night-epilogue
   Пока Боги Спят:
     title: While Gods Sleep

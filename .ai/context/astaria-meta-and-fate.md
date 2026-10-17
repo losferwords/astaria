@@ -62,8 +62,19 @@ Use these analogues as creative reference points for tone, clothing, architectur
 | Вактар-Йорден | Ancient Scandinavian/Viking analogue; worship the queen of dragons and use ice/cold magic. |
 | Сурадж Ка Гхар | Ancient India analogue; followers of a goddess of blood and destruction who periodically becomes a goddess of dance and creation. |
 | Вакумара | African tribes analogue; worship a God of Death and perform mysterious rituals over the body of their deity. |
-| Амато | Ancient Japan analogue; worship a wind goddess who carries souls from the living realm to the dead realm. |
+| Амато | Japanese analogue, with strict political institutions inspired by the Edo period; worship a wind goddess who carries souls from the living realm to the dead realm. |
 | Обитель | Ancient south-western Slavic analogue; worship a goddess of beauty, love, and earth. |
+
+### Амато: сёгун, бакуфу и даймё
+
+Авторское уточнение от 16 октября 2026 года; развёрнутое описание находится в `Энциклопедия/Страны/Амато.md`.
+
+- Аматсу Рин одновременно является императрицей и сёгуном; в её руках сосредоточена абсолютная верховная власть. Не разделять эти функции между разными действующими правителями по внешнему историческому образцу.
+- Бакуфу — правительство при сёгуне, включающее совет и чиновников.
+- Островными и городскими владениями Амато управляют даймё. Все даймё — самураи и подчиняются сёгуну; их местная самостоятельность существует внутри строгой государственной иерархии.
+- Самураи — военное и служилое сословие. Верность, дисциплина и долг важны для их общественного положения и власти.
+- Политический ориентир — период Эдо. Он относится к устройству власти и не переносит автоматически в Амато все технологии и учреждения исторической Японии.
+- Рэйкацу удерживает от превращения в пиратскую вольницу прежде всего власть его даймё. Дурная слава порта совместима с суровыми порядками Амато; не приравнивать самостоятельность местных дельцов к свободе авгарских ханов.
 
 ### Технологический уровень и культурные исключения
 

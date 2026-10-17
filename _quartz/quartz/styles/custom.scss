@@ -1,5 +1,6 @@
 @use "./variables.scss" as *;
 @use "./lyrics.scss";
+@use "./fonts.scss";
 
 :root {
   --astaria-accent: #d80b07;
@@ -12,7 +13,7 @@
   --astaria-paper: rgba(253, 247, 235, 0.95);
   --astaria-paper-deep: rgba(239, 224, 194, 0.96);
   --astaria-border: rgba(89, 23, 23, 0.32);
-  --astaria-prose-width: 68ch;
+  --astaria-prose-width: 82ch;
   --astaria-sidebar-gap: 1.5rem;
   --astaria-emphasis-style: italic;
   --astaria-search-label: "Поиск по Астарии";
@@ -450,7 +451,7 @@ a:hover {
 
 .markdown-rendered {
   padding: 0 2rem 3.1rem;
-  font-size: 1.125rem;
+  font-size: 1rem;
   line-height: 1.65;
 }
 
@@ -1159,6 +1160,60 @@ body[data-slug="literature/the-demon-to-hunt"] .markdown-rendered {
 
 .astaria-story-profile .astaria-infobox {
   border-top: 3px solid var(--astaria-gold);
+}
+
+// The prose measure is a maximum. Reserve the sidebar's actual width for
+// the whole article, so the text does not widen when the sidebar ends.
+.markdown-rendered:has(> .astaria-sidebar) {
+  container: article-body / inline-size;
+  --astaria-sidebar-width: min(360px, 38cqw);
+  --astaria-reading-width: min(
+    var(--astaria-prose-width),
+    calc(100cqw - var(--astaria-sidebar-width) - var(--astaria-sidebar-gap))
+  );
+}
+
+.markdown-rendered:has(> .astaria-story-profile) {
+  --astaria-sidebar-width: min(300px, 32cqw);
+}
+
+body:not([data-slug="index"]):not([data-slug="map"])
+  .center
+  > article
+  > .markdown-rendered:has(> .astaria-sidebar)
+  > :is(p, h2, h3, h4, h5, h6, ul, ol, blockquote, pre, .table-container, .astaria-inline-frame) {
+  box-sizing: border-box;
+  max-width: var(--astaria-reading-width);
+}
+
+.astaria-story-profile {
+  width: min(300px, 32%);
+}
+
+@mixin stacked-article-sidebar {
+  float: none;
+  width: 100%;
+  max-width: var(--astaria-prose-width);
+  margin: 0 0 1.5rem;
+
+  .astaria-infobox dl {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(14rem, 100%), 1fr));
+    gap: 1rem;
+  }
+
+  .astaria-infobox-row {
+    margin: 0;
+  }
+}
+
+// Search previews have their own narrow reading surface.
+.search .preview-container .markdown-rendered {
+  --astaria-reading-width: var(--astaria-prose-width);
+}
+
+.search .preview-container .astaria-sidebar {
+  @include stacked-article-sidebar;
 }
 
 .astaria-infobox dl {
@@ -2574,10 +2629,12 @@ body[data-slug="index"] .search-button::after {
     grid-template-columns: repeat(2, minmax(0, 16rem));
   }
 
+  .markdown-rendered:has(> .astaria-sidebar) {
+    --astaria-reading-width: var(--astaria-prose-width);
+  }
+
   .astaria-sidebar {
-    float: none;
-    width: 100%;
-    margin: 0 0 1.5rem;
+    @include stacked-article-sidebar;
   }
 
   .astaria-sidebar-image {

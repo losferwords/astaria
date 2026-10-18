@@ -164,7 +164,7 @@ CATEGORY_DESCRIPTIONS = {
   "Предметы" => "Реликвии, оружие и вещи, сохранившие след великих событий.",
   "События" => "Войны, открытия и переломные мгновения истории мира.",
   "Страны" => "Государства Астарии, их устройство, противоречия и место в мире.",
-  "Флора" => "Растения Астарии, их свойства, происхождение и место в культурах мира."
+  "Флора" => "Растения и грибы Астарии, их свойства, происхождение и место в культурах мира."
 }.freeze
 
 SIGNIFICANCE_LABELS = {
@@ -444,7 +444,7 @@ EN_OUTPUT_REPLACEMENTS = {
   "Реликвии, оружие и вещи, сохранившие след великих событий." => "Relics, weapons and objects that still bear the mark of great events.",
   "Войны, открытия и переломные мгновения истории мира." => "Wars, discoveries and turning points in the history of the world.",
   "Государства Астарии, их устройство, противоречия и место в мире." => "The realms of Astaria: their societies, conflicts and place in the world.",
-  "Растения Астарии, их свойства, происхождение и место в культурах мира." => "The plants of Astaria, their properties, origins and place among its cultures.",
+  "Растения и грибы Астарии, их свойства, происхождение и место в культурах мира." => "The plants and fungi of Astaria, their properties, origins and place among its cultures.",
   "Летописцы готовят первые материалы. Пока можно продолжить путь по карте или вернуться к оглавлению." => "The chroniclers are preparing the first entries. For now, explore the map or return to the contents.",
   "Попробуйте изменить запрос или открыть другой раздел Энциклопедии." => "Try a different query or open another part of the Encyclopaedia.",
   "Народы, страны, личности и существа — всё, из чего соткан живой мир." => "Peoples, realms, figures and creatures — all the threads from which a living world is woven.",
@@ -2091,7 +2091,8 @@ def timeline_events(lookup)
     end
 
     title = data["title"].to_s
-    published = lookup[normalize_reference(title)]
+    target = reference_names(data["timeline_target"]).first || title
+    published = lookup[normalize_reference(target)]
     {
       title: title,
       year: data["year"].to_i,
@@ -2105,6 +2106,7 @@ def timeline_events(lookup)
       end,
       description: timeline_description(body, data),
       image: timeline_image(data),
+      country_target: !data["timeline_target"].to_s.empty?,
       route: published && published[:route]
     }
   end.compact.sort_by { |event| [event[:year], event[:title]] }
@@ -2147,6 +2149,7 @@ def build_timeline_page(data, route, lookup)
       historical_milestone: "Historical milestone",
       event_count: ->(count) { count == 1 ? "1 event" : "#{count} events" },
       read: "Read the chronicle",
+      read_country: "Explore the country",
       trail: "Timeline",
       hero_alt: "A city of Astaria during an invasion",
       hero_meta: "#{events.length} milestones · from 5025 ChE to the present day",
@@ -2170,6 +2173,7 @@ def build_timeline_page(data, route, lookup)
       historical_milestone: "Историческая веха",
       event_count: ->(count) { "#{count} событий" },
       read: "Читать летопись",
+      read_country: "О стране",
       trail: "Хронология",
       hero_alt: "Город Астарии во время вторжения",
       hero_meta: "#{events.length} вех · от 5025 года ХЭ до наших дней",
@@ -2216,7 +2220,7 @@ def build_timeline_page(data, route, lookup)
               <p class="astaria-timeline-meta"><span>#{CGI.escapeHTML(category)}</span><span>#{CGI.escapeHTML(event[:significance_label])}</span></p>
               #{heading}
               <div>#{CGI.escapeHTML(event[:description])}</div>
-              #{event[:route] ? %(<a class="astaria-timeline-read" href="#{CGI.escapeHTML(relative_href(route, event[:route]))}">#{ui[:read]} <span aria-hidden="true">→</span></a>) : ""}
+              #{event[:route] ? %(<a class="astaria-timeline-read" href="#{CGI.escapeHTML(relative_href(route, event[:route]))}">#{event[:country_target] ? ui[:read_country] : ui[:read]} <span aria-hidden="true">→</span></a>) : ""}
             </div>
           </article>
         </li>
@@ -2786,6 +2790,14 @@ def sort_character_group_entries(entries, group, country_entry)
 end
 
 def entry_sort_key(entry)
+  if entry[:category] == "События"
+    data = entry[:data]
+    year = astaria_year_number(data["year"])
+    title = data["canonical_title"].to_s.strip
+    title = entry[:title] if title.empty?
+    return [year || Float::INFINITY, data["month"].to_i, data["day"].to_i, title.downcase]
+  end
+
   return [-1, entry[:title].downcase] if entry[:data]["featured_entry"]
   return [COUNTRY_ORDER.length, entry[:title].downcase] if creature_character?(entry)
 
@@ -2835,9 +2847,14 @@ def category_card(entry, route)
 
   country = entry_country(entry)
   country_label = display_public_title(country)
+  event_year = astaria_year_number(entry[:data]["year"]) if entry[:category] == "События"
+  event_date = timeline_year_label(event_year, entry[:data]["endingYear"]) unless event_year.nil?
   featured = entry[:data]["featured_entry"]
   eyebrow = if featured
     %(<small>Отправная точка</small>)
+  elsif entry[:category] == "События"
+    labels = [event_date, country_label].reject { |value| value.to_s.empty? }
+    labels.empty? ? "" : %(<small>#{CGI.escapeHTML(labels.join(" · "))}</small>)
   elsif entry[:category] == "Страны"
     subtitle = entry[:data]["card_subtitle"].to_s.strip
     subtitle = Array(entry[:data]["aliases"]).find { |value| value.to_s.match?(/[А-Яа-яЁё]/) }.to_s if subtitle.empty?
@@ -2861,6 +2878,7 @@ def category_card(entry, route)
     entry[:category],
     entry[:data]["type"],
     country_label,
+    event_date,
     display_value(entry[:data]["aliases"])
   ].compact.join(" ").downcase.tr("ё", "е").gsub(/\s+/, " ").strip
   meta_rank = entry_sort_key(entry).first

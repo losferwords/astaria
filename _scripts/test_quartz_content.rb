@@ -1914,14 +1914,55 @@ event_article_pages = %w[
   events/faith-crysis-amon-astat.html
   events/chthonid-fall.html
   events/kad-kharad-disbandment.html
-  timeline/foundation-of-amato.html
-  timeline/foundation-of-obitelj.html
-  timeline/foundation-of-talassia.html
+  events/great-drought-of-amon-astat.html
+  events/conquest-of-katachthonos.html
+  events/birth-of-druidism.html
+  events/dawn-of-chthonid-civilisation.html
+  events/founding-of-the-cult-of-mercate.html
+  events/thalassian-discovery-of-gunpowder.html
+  events/first-evidence-of-the-archaeans.html
 ]
 event_article_pages.each do |relative|
   html = read.call(relative)
   expect.call(!html.match?(/<dt>Значимость<\/dt><dd>\s*\d/), "#{relative}: raw significance number is still visible")
   expect.call(html.match?(/<dt>Значимость<\/dt><dd>(?:Эпохальное|Переломное|Важное|Заметное) событие<\/dd>/), "#{relative}: readable significance label is missing")
+end
+
+timeline_cards = timeline.scan(/<article class="astaria-timeline-card[^\"]*">.*?<\/article>/m)
+country_timeline_targets = {
+  "Основание Амато" => "amato",
+  "Основание Амон-Астата" => "amon-astat",
+  "Основание Вактар-Йордена" => "vaktar-yorden",
+  "Основание Вакумара" => "wakumara",
+  "Основание Гиласа" => "gilas",
+  "Основание Дикоземья" => "wildlands",
+  "Основание Империи Ланг-Ан" => "lang-an-empire",
+  "Основание Иомара" => "iomar",
+  "Основание Кадира" => "qadir",
+  "Основание Катахтоноса" => "katachthonos",
+  "Основание Лунаара" => "lunaar",
+  "Основание Обители" => "obitelj",
+  "Основание Сурадж Ка Гхара" => "suradj-ka-ghar",
+  "Основание Талассии" => "talassia",
+  "Появление первых Громовых Кланов" => "thunder-clans",
+  "Пришествие Хамоа" => "hamoa"
+}
+expect.call(timeline_cards.length == 28, "Timeline must retain all 28 cards")
+timeline_cards.each do |card|
+  links = card.scan(/href="([^\"]+)"/).flatten
+  expect.call(links.length == 2 && links.uniq.length == 1, "Every timeline heading and read link must point to the same published article")
+end
+country_timeline_targets.each do |title, slug|
+  card = timeline_cards.find { |entry| entry.include?(CGI.escapeHTML(title)) }.to_s
+  destinations = card.scan(/href="([^\"]+)"/).flatten.map do |href|
+    Pathname.new(File.join("timeline", href)).cleanpath.to_s.sub(/\.html\z/, "")
+  end
+  expect.call(destinations == ["countries/#{slug}"] * 2, "#{title}: timeline must link directly to the country")
+  expect.call(card.include?("О стране"), "#{title}: timeline link must describe the country destination")
+end
+%w[amato obitelj talassia].each do |slug|
+  redirect = read.call("timeline/foundation-of-#{slug}.html")
+  expect.call(redirect.include?("http-equiv=\"refresh\"") && redirect.include?("countries/#{slug}"), "Foundation of #{slug}: old URL must redirect to the country")
 end
 
 timeline_source_paths = Dir.glob(File.join(ROOT, "Хронология", "События", "*.md")) + Dir.glob(File.join(ROOT, "Энциклопедия", "События", "*.md"))

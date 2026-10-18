@@ -94,13 +94,13 @@ Use a deity's motifs to connect the family when relevant, but do not turn every 
 
 Use comma-separated English tags and compact natural-language clauses. Inside each logical thought, join tags and clauses with commas; end the completed thought with a full stop. Separate larger logical blocks with blank lines. Do not turn the entire Positive prompt into one comma splice. The usual block contains one to three short sentences, and every block ends with a full stop. The user's established default order is:
 
-1. `masterpiece, best quality, score_9, score_8,` followed by exact subject count and gender when applicable;
+1. `Masterpiece, best quality, score_9, score_8,` followed by exact subject count and gender when applicable;
 2. identity, species, age, build, face, hair, expression, and anatomy;
 3. clothing layers, materials, attached colors, equipment, and signature motif;
 4. shot size, viewpoint, placement, pose, action, gaze, and interaction;
 5. foreground, middle ground, background, architecture or terrain, weather, light, motion, and atmosphere.
 
-Use lowercase for ordinary tag-like phrases where practical; score tags keep underscores. Natural-language clauses may use normal English capitalization and punctuation.
+Begin every sentence in Positive with a capital letter, including the opening `Masterpiece`. Keep ordinary tag-like phrases lowercase within sentences where practical; score tags keep their underscores and spelling. Negative remains a continuous tag list rather than sentence-form prose.
 
 Punctuation is structural rather than decorative. A full stop marks a change in what the model should resolve: for example, subject identity may form one sentence, clothing and equipment another, and pose or interaction a third. Commas continue describing the same visual decision. Preserve this sentence rhythm even when each sentence is mostly tags.
 
@@ -156,7 +156,7 @@ Before answering, verify:
 - a city has visible life and three depth layers; a male portrait has role and facial specificity without glamour-token stacking;
 - no forbidden style steering or unrequested workflow advice appears;
 - no unsupported Astaria proper name appears in Positive or Negative; every lore-specific element has been translated into something drawable;
-- Positive uses commas within a logical thought, full stops between completed thoughts, and a full stop at the end of every block;
+- Positive begins every sentence with a capital letter, uses commas within a logical thought, full stops between completed thoughts, and a full stop at the end of every block;
 - neither prompt contains weights or emphasis syntax, and Negative is one continuous comma-separated list;
 - contextual Negative additions address observed or strongly plausible failures instead of mirroring every Positive attribute with its opposite;
 - Positive and Negative do not contradict each other;

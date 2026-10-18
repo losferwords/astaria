@@ -1,0 +1,6 @@
+# Historical inputs and standalone exports are opened explicitly.
+/exports/
+/sources/
+/skills/losfer-storywriting/references/corpus/
+/skills/losfer-storywriting/references/RustyFidgetSpinner.md
+/skills/astaria-anima-prompts/references/prompt-examples.md

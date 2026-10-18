@@ -2,7 +2,7 @@
 
 Read this reference when revising an existing prompt or artwork, matching one of the established visual families, designing a male character or city, or explaining why an Anima result succeeded or failed.
 
-The source corpus is `.ai/context/art-prompt-examples.md`: 28 Positive/Negative prompt pairs with the user's own result notes. The corresponding local images were inspected under `Assets/Images/` on 2026-08-27.
+The source corpus is [prompt-examples.md](prompt-examples.md): 28 historical Positive/Negative pairs with the user's result notes. The corresponding images were inspected on 2026-08-27. Filenames below identify those historical examples; some art has since been replaced or changed extension. Resolve the current artwork through the canonical note before evaluating it. Old sample punctuation and casing do not override the current SKILL.md contract. Read the original prompt pairs only to inspect a specific example.
 
 ## What the corpus establishes
 

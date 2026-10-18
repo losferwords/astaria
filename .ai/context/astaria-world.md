@@ -1,10 +1,6 @@
-# Astaria Meta And FATE Reference
+# Astaria: world and cultures
 
-This file contains service context for Codex/Violet. It is not player-facing lore and should not be copied into public articles unless the user explicitly asks.
-
-Source: `meta.json` provided by the user on June 10, 2026. The user may delete that JSON later; this Markdown file is the retained working reference.
-
-Detailed retained Fate Core rules, Russian terminology, character and NPC design, scenario construction, and GM practices are stored in `.ai/skills/astaria-fate-core/`. That skill is self-contained and does not depend on the temporary source folder `Fate Core/` remaining in the vault.
+Private working reference. The initial author-supplied source was `meta.json` (10 June 2026); later author decisions are incorporated below. Canonical articles hold the detailed lore. Read only the sections relevant to the task. Local game rules are in [Astaria house rules](../skills/astaria-fate-core/references/astaria-house-rules.md); character article fields are in [the vault reference](../skills/astaria-obsidian-vault/references/characters.md).
 
 ## World Meta
 
@@ -20,27 +16,6 @@ Astaria uses two main eras:
 - `Новая Эра`, abbreviated `НЭ` or `Н.Э.`. This is analogous to CE. It starts at year 0 and continues to the current date.
 
 The transition from the Chthonic Era to the New Era was the catastrophic event known as `Падение Хтона`.
-
-## Encyclopedia Character Requirements
-
-When creating a new character article in `Энциклопедия/Персонажи/`, fill these fields by default. If the user has not provided exact values, make conservative assumptions and keep the article `ready: false`, unless the missing value is too important to invent.
-
-- `ethnicity`: the character's people, for example `[[Раджати]]`, `[[Авгарцы]]`, `[[Джу]]`.
-- `eyes`: eye colour.
-- `height`: in compact format such as `1.8м`.
-- `weight`: in compact format such as `54кг`.
-- `skin`: skin tone, for example `светлая`, `смуглая`, `загорелая`.
-- `hair`: hair type and colour, for example `длинные тёмные`, `короткие светлые`.
-- `birth_year`: in era format such as `76 НЭ` or `-115 ХЭ`.
-- `age`: calculated from the current Astaria year.
-- `age_as_of`: the Astaria year used for the age calculation, for example `106 НЭ`.
-- `birth_place`: a location appropriate for the character's ethnicity and biography.
-- `current_location`: the character's current known location.
-- `imitei`: the Imitei role if the character is an Imitei; otherwise use `false`.
-- A readable description in the same style as existing Encyclopedia character profiles.
-- A private `%% FATE / GM ... %%` block with aspects, skills, and stunts appropriate to the character's power level.
-
-For age calculation, treat `НЭ` years as ordinary positive years. For `ХЭ`, calculate age across the era boundary carefully because years count backward toward zero.
 
 ## Cultural Reference Map
 
@@ -63,7 +38,7 @@ Use these analogues as creative reference points for tone, clothing, architectur
 | Сурадж Ка Гхар | Ancient India analogue; followers of a goddess of blood and destruction who periodically becomes a goddess of dance and creation. |
 | Вакумара | African tribes analogue; worship a God of Death and perform mysterious rituals over the body of their deity. |
 | Амато | Japanese analogue, with strict political institutions inspired by the Edo period; worship a wind goddess who carries souls from the living realm to the dead realm. |
-| Обитель | Ancient south-western Slavic analogue; worship a goddess of beauty, love, and earth. |
+| Обитель | Composite ancient Slavic, Baltic and Balkan references; worship a goddess of beauty, love, and earth. See the author’s cultural direction below. |
 
 ### Амато: сёгун, бакуфу и даймё
 
@@ -117,6 +92,8 @@ Use these analogues as creative reference points for tone, clothing, architectur
 
 Use the following forms when writing lore, dialogue, summaries, and FATE aspects. Avoid the forbidden forms unless the user explicitly asks for an in-world mistake, insult, or foreigner error.
 
+In Russian prose introduce the indeclinable `гойдаир`, `надаир` and `лудаир` through `народ` when a bare ethnonym is awkward: `Он рос среди народа гойдаир`. Agree dependent words with `народ` when it is the grammatical head.
+
 | Country or culture | Avoid | Prefer |
 | --- | --- | --- |
 | Гилас | гиласец | житель Гиласа; эллиец; эллийка |
@@ -135,107 +112,3 @@ Use the following forms when writing lore, dialogue, summaries, and FATE aspects
 | Вакумара | вакумарец | житель Вакумара; ваку, not declined |
 | Амато | аматец | житель Амато; эдзо, not declined |
 | Обитель | обителец | житель Обители; венд; венда |
-
-## FATE Core In Astaria
-
-Astaria character sheets use `FATE Core System`.
-
-Skill caps:
-
-- Ordinary characters: maximum skill level `+4`.
-- Imitei: maximum skill level `+5`.
-- Gods: maximum skill level `+6`.
-
-When generating NPCs or known-character sheets, treat the cap as a guideline unless the user requests a specific power level.
-
-### Current Campaign Power Tier
-
-By chapter 093 of `Ветер Перемен`, the active protagonists are experienced Imitei whose sheets have grown well beyond the ordinary `+4` baseline. In particular, [[Томас Робинсон|Tom]] is a [[Тень|Shadow]], [[Урист Китин|Urist]] is a [[Мектиг|Mektig]], and [[Мэй Ву|Mei]] is an [[Аватар|Avatar]]. Do not balance late-campaign challenges as if they were beginning Fate Core characters.
-
-For preparation at this tier, use the actual character sheets when available. As a default calibration, `+4` is routine under pressure, `+5` is a meaningful obstacle, `+6` is difficult even for an Imitei, and `+7` is a climactic difficulty that should reward created advantages, teamwork, and invocations. Long-running player characters may exceed the nominal Imitei skill cap through advancement, stunts, aspects, artefacts, and divine abilities.
-
-## Aspect Structure
-
-Astaria characters use five aspects:
-
-1. `Концепция`: the most important broad character aspect. It says who the character is, what they do, why they get up in the morning, and what duty/status/calling follows them.
-2. `Проблема`: what complicates the character's life. It should generate interesting chaos, should not be easy to ignore, should not completely paralyse the character, and should not simply repeat the concept.
-3. `Зов Крови`: the character's connection to one Astaria people/country. For an Imitei, this describes where they are on the path to becoming an Imitei, or what kind of Imitei they already are: divine helper, free wanderer, etc. It reflects gradual transformation into an Imitei of their culture.
-4. `Свободный аспект`: any additional aspect that reveals the character.
-5. `Свободный аспект`: any additional aspect that reveals the character.
-
-Good Astaria aspects should be:
-
-- specific enough to invoke in play;
-- double-edged enough to compel;
-- culturally grounded when the aspect is about origin, faith, duty, bloodline, divine calling, or homeland;
-- phrased as a vivid short statement, not as a dry tag.
-
-## Skills
-
-| Skill | Meaning |
-| --- | --- |
-| Атлетика | Physical conditioning and body control. A nimble character relies on Атлетика. |
-| Бой | All melee combat in the same zone, armed or unarmed. |
-| Внимательность | Perception, noticing details, searching for clues, observation. |
-| Воля | Mental endurance, analogous to Телосложение for the mind. |
-| Врачевание | First aid and long-term treatment of physical consequences. |
-| Выживание | Surviving in the wilderness, tracking, understanding animals. |
-| Знания | Education, scholarship, and general informedness. |
-| Ловкость рук | Stealing, entering inaccessible places, sleight of hand, tricks. |
-| Обман | Misleading and deceiving people. |
-| Провокация | Producing negative emotions: command, fear, shame. |
-| Ремесло | Making objects, weapons, armour, mechanisms, and knowing their properties. |
-| Скрытность | Avoiding detection while still or moving. |
-| Стрельба | Ranged weapon use in conflict and against ordinary targets. |
-| Телосложение | Natural physical power, strength, endurance. A strong character relies on Телосложение. |
-| Харизма | Producing positive emotions: being liked, trusted, and building relationships. |
-| Эмпатия | Reading and interpreting changes in mood and behaviour. |
-
-## Stunt Generation
-
-The JSON did not include custom Astaria stunt rules, so use standard Fate Core style unless the user adds a house rule later.
-
-Useful Russian stunt templates:
-
-- `Поскольку я [особая подготовка/происхождение/дар], я получаю +2 к [навык], когда [действие] в ситуации [условие].`
-- `Поскольку я [роль/традиция], один раз за сцену я могу [эффект], если [ограничение].`
-- `Когда я [триггер], я могу использовать [навык A] вместо [навык B], чтобы [действие], если [условие].`
-
-Prefer stunts that:
-
-- attach to one skill;
-- have a clear trigger and limit;
-- feel rooted in culture, profession, divine patronage, or personal history;
-- are useful in play without becoming always-on bonuses to everything.
-
-## Suggested Private FATE Block For Character Notes
-
-Use this block in private or GM-facing character notes. If a note may later be published to players, keep this inside an Obsidian comment or move it to a separate GM note.
-
-```markdown
-%% FATE / GM
-aspects:
-  concept:
-  trouble:
-  call_of_blood:
-  free_1:
-  free_2:
-skills:
-  +4:
-  +3:
-  +2:
-  +1:
-stunts:
-  - name:
-    text:
-stress:
-  physical:
-  mental:
-consequences:
-  mild:
-  moderate:
-  severe:
-notes:
-%%
-```

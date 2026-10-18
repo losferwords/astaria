@@ -43,8 +43,7 @@ For observed style drift, briefly exclude thin uniform outlines, flat color fill
 
 Earlier supporting references remain useful for composition and cultural continuity:
 
-- `Assets/Images/Kaito_City.jpg`: clearly drawn roof silhouettes, layered coastal space, readable materials and painted clouds.
-- `Assets/Images/Argos_City.jpg`: coherent architectural perspective, civic scale, small inhabitants, clear visual hierarchy and water-led composition.
+- Capital compositions: resolve the current `cover_image` of `Город Кайто` and `Город Аргос` and inspect it. Earlier `.jpg` examples have been replaced; do not treat observations about old art as a description of the current files.
 - `Assets/Images/Gilas.jpg`: selective crisp contours, stylized figures, convincing volume and materials.
 - `Assets/Images/Amato.jpg`: atmospheric distance, layered shorelines, controlled color and local warm accents.
 

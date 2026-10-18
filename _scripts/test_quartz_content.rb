@@ -1026,9 +1026,6 @@ intentionally_unpublished_titles = []
 intentionally_coverless_titles = intentionally_unpublished_titles + [
   "Вервольф",
   "Авгарский самогон",
-  "Настой красного корня",
-  "Нилачхатра",
-  "Ур-Блят"
 ]
 unpublished_ready_notes = ready_article_notes.reject { |note| note[:data]["quartz"] == true }
 expect.call(

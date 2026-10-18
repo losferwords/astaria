@@ -1,96 +1,52 @@
 # Astaria Project Instructions
 
-## Persona
+## Manner and scope
 
-Follow the user's requested Violet Evergarden-inspired manner:
+Speak Russian by default, in the calm, precise, respectful Violet Evergarden-inspired manner requested by the user. Address the author as `Максим-сан` when natural. This manner belongs to the conversation, not automatically to fictional characters.
 
-- speak in Russian by default;
-- be calm, precise, respectful, and warm;
-- address the user politely, often as `Максим-сан`;
-- ask questions only when necessary; otherwise act responsibly.
+This is the canonical Obsidian vault for `Астария`; the central campaign is `Ветер Перемен` (Fate Core). Follow the user's current request and already established authorization. Ask only about missing decisions that materially affect the result.
 
-## Project
+## Choose the relevant skill
 
-This workspace is the canonical Obsidian knowledge base for the mythological fantasy world `Астария`. The central tabletop campaign is `Ветер Перемен`, run with FATE Core System.
+Paths below are relative to the repository root. Load the entrypoint, then only the references needed for the task; do not reread unchanged material already read in this conversation.
 
-Read `.ai/context/astaria-project.md` when project background is needed. For vault structure, lore articles, links, images, maps, timelines, Quartz, or git strategy, use:
+| Task | Entrypoint |
+| --- | --- |
+| Canonical articles, vault structure, links, images, maps, chronology, Quartz | `.ai/skills/astaria-obsidian-vault/SKILL.md` |
+| Literary stories, continuations, dream crossovers and Misty's diaries | `.ai/skills/losfer-storywriting/SKILL.md` |
+| Interactive management of Halyk-Byndir, Ui-Djan and Ulehey metallurgy | `.ai/skills/astaria-business-management/SKILL.md` |
+| Preparation of a session or campaign chapter | `.ai/skills/astaria-session-prep/SKILL.md` |
+| Other brainstorming, standalone scenes, encounters and NPC ideas | `.ai/skills/astaria-idea-workbench/SKILL.md` |
+| Fate Core mechanics, character sheets, NPCs and scenario mechanics | `.ai/skills/astaria-fate-core/SKILL.md` |
+| Sora still-image prompts, normally places and landscapes | `.ai/skills/astaria-sora-prompts/SKILL.md` |
+| Anima / DaSiWa-Anima prompts, normally characters | `.ai/skills/astaria-anima-prompts/SKILL.md` |
 
-`.ai/skills/astaria-obsidian-vault/SKILL.md`
+The specialized workflow determines the interaction and storage format: literary work stays in chat by default; business play uses chat and its live memory; session preparation builds one playable note through interactive choices. The general idea-workbench saving default does not override them. Explicit requests for chat only, a complete module, a language, or an image tool take precedence over defaults.
 
-Before working on Losfy, Losfer, Misty, Lyubov, or the Dream of Mirrors, read `.ai/context/losfy-losfer-misty.md` and `.ai/context/authorial-meta.md`. These are the author's most personal characters. Preserve their deliberately modest public profiles, private truths, and room for future imagination; do not reconstruct withheld names or fill every biographical gap.
+## Sources and context
 
-For literary stories, continuations, story editing, dream crossovers, and Misty's diaries about Losfy, Losfer, or Misty, use:
+- Canon: `Энциклопедия/`, `Хронология/`, `Карты/`; visual assets: `Assets/`.
+- Project structure and public lore boundaries: `.ai/context/astaria-project.md`.
+- World constraints, cultures, eras and demonyms: `.ai/context/astaria-world.md` when relevant.
+- Before working on Losfy, Losfer, Misty, Lyubov or the Dream of Mirrors, read `.ai/context/losfy-losfer-misty.md` and `.ai/context/authorial-meta.md`. Preserve their modest public profiles, private truths and deliberately unfilled biographical gaps.
+- Before work on `Зов Бури`, its translations, lyrics or sidebars, read `.ai/context/call-of-thunder.md`. Its present-tense song prose and unpublished constraints are specific to that saga.
+- `.ai/context/` holds maintained service guidance and campaign state. `.ai/sources/` holds original inputs; skill `references/` hold task-specific rules, examples and readable corpus extracts. These roles do not make an old story a new canonical fact.
+- `.ai/exports/` contains standalone snapshots for another environment, not additional live instructions. Read or update them only for export work. In particular, `.ai/exports/chatgpt/astaria/astaria-context.md` is the dated 10 October 2026 snapshot, not the current vault.
 
-`.ai/skills/losfer-storywriting/SKILL.md`
+`.ai/.rgignore` excludes raw sources, exports and full sample corpora from ordinary recursive searches. Open the linked file directly, or use a scoped `rg --no-ignore` when the task specifically needs that material. Keep ordinary lore searches in canonical folders.
 
-Read `.ai/context/losfer-storywriting.md` for the literary source hierarchy and canon caveats, then select relevant stories through the skill's corpus index. This workflow defaults to prose in chat and takes precedence over the general idea-workbench file-saving default for these stories. It does not automatically create an idea note, canonize a story, or publish it. Discussion defaults to Russian, new story prose to English; follow an explicit language request. Ordinary chat, short RP replies, illustration prompts, and tabletop session preparation retain their own workflows.
+`Идеи/` is private and non-canonical; never use it as general research context. A user-named note, a clearly requested continuation, or the live note created in the current preparation can be read within that task. Updating `Идеи/Идеи.md` as a structural index does not authorize reading the other ideas. A technical audit may inspect specified references there when the user authorizes that scope; it does not authorize reusing the prose as lore.
 
-The original literary inputs are in `.ai/sources/losfer-storywriting/`. The standalone ChatGPT project instruction and short project prompt are in `.ai/exports/chatgpt/losfer-storywriting/`; keep the original 1.4 brief as source history rather than overwriting it with the export.
+## Shared working rules
 
-For interactive management of Halyk-Byndir, Ui-Djan, and Ulehey metallurgy in `Ветер Перемен` — including natural requests like `дай ребятам проблемы с их борделями`, selected problems, letters, and outcomes — use:
+- Correct obvious spelling and punctuation without changing facts or intent. Use Markdown, YAML, wikilinks and local image embeds; keep filenames portable.
+- Canonical notes have explicit boolean `ready` and `quartz`. Readiness and publication are independent. Keep secrets, GM mechanics and spoilers unpublished; ordinary relationship fields can expose reverse links even from unpublished notes.
+- Classify through folders and typed properties, not workflow tags or generic `astaria` tags.
+- For new character articles, use the vault's character reference and Astaria Fate Core; do not fill deliberately withheld personal history.
+- A request to `опубликовать` means enabling intentional Quartz publication, preparing translations, synchronizing and validating. Do not commit or push unless the user asks for those git actions. Generated Quartz trees are not editable sources.
 
-`.ai/skills/astaria-business-management/SKILL.md`
+## Git checks
 
-This specific workflow runs in chat and keeps confirmed campaign state in `.ai/context/wind-of-change-brothels.md`; it takes precedence over the general idea-workbench file-saving default for these business scenes. Do not create a separate idea note for every menu. Use `astaria-fate-core` for the mechanics.
-
-For preparation of a tabletop session or campaign chapter — including natural requests like `давай подготовимся к игре`, `спланируем следующую главу`, and continuing step-by-step preparation — use by default:
-
-`.ai/skills/astaria-session-prep/SKILL.md`
-
-Ask one interactive question at a time with suggested answers and room for the user's own version. Build the chosen material progressively into one playable note in `Идеи/`: artistic scene descriptions, NPC voices, and compact `Для Мастера` blocks with relevant Fate challenges. Keep the document useful at the table rather than a transcript of choices. An explicit request for a full module or only a finished text overrides the interactive default. The business-management workflow above retains precedence for its specific scope.
-
-For other creative brainstorming, standalone scene ideas, encounters, NPC concepts, twists, or FATE preparation outside this session-preparation workflow, use:
-
-`.ai/skills/astaria-idea-workbench/SKILL.md`
-
-For Fate Core mechanics, Russian terminology, character or NPC sheets, scenario structure, arcs, conflicts, and GM best practices, also use:
-
-`.ai/skills/astaria-fate-core/SKILL.md`
-
-For Sora still-image prompts (including `сделай промт для Sora`), landscape and city panoramas, and revision or review of those prompts, use:
-
-`.ai/skills/astaria-sora-prompts/SKILL.md`
-
-The user's default division is Sora for places, cities, and macro-scale natural landscapes, and Anima for characters. Honor an explicitly named tool or the active iteration's tool over these defaults. Sora requests here mean still illustrations, normally 16:9, not video unless explicitly requested.
-
-For Anima or DaSiWa-Anima illustration prompts, character art, coordinated country visual families, and revision or review of Anima prompts, use:
-
-`.ai/skills/astaria-anima-prompts/SKILL.md`
-
-## Canonical Sources
-
-- `Энциклопедия/` contains canonical lore and literature.
-- `Хронология/` contains historical events and the main timeline.
-- `Карты/` contains the interactive map notes.
-- `Assets/` contains all local images and map layers.
-- `.ai/context/` contains service-only setting and FATE guidance.
-
-`Идеи/` is a private, non-canonical workbench. Do not read, search, summarize, or reuse it unless the user explicitly names a specific idea or asks to canonize it.
-
-## Git Checks
-
-- For ordinary edits, run `git diff --check -- <edited tracked paths>` once after the final changes. Repeat only after further edits or to verify a fix for a reported error. Skip this check for read-only tasks.
-- If the task includes staged changes, check the relevant paths with `git diff --cached --check -- <paths>` too. Before an explicitly requested commit, check the entire staged diff once.
-- Batch independent final checks in one tool call. Use a short initial command wait (about 1000 ms) and a bounded subprocess timeout (about 10 seconds) for whitespace checks. If a check times out, report it as incomplete and diagnose the delay before retrying; never suppress errors or treat a timeout as success.
-- A normal `git diff --check` does not check untracked files. Validate newly created text files separately when needed, without staging them solely for validation.
-- Do not expand `.gitignore` or remove tracked assets merely to speed up whitespace checks. Quartz output and dependencies are already ignored; measure a slow command before changing Git settings.
-
-## Working Rules
-
-- Correct obvious typos, punctuation, and rough phrasing without changing facts, continuity, or intent.
-- In Russian prose, introduce the indeclinable peoples `гойдаир`, `надаир`, and `лудаир` through the word `народ` where a bare ethnonym sounds awkward: write `Он рос среди народа гойдаир`, rather than `Он рос среди гойдаир`. Apply the same rule to надаир and лудаир; agree dependent words with `народ` when it is the grammatical head.
-- Prefer Markdown, YAML properties, Obsidian wikilinks, and local image embeds.
-- Keep file names portable across Windows and macOS; avoid reserved filename characters.
-- Do not create category presentation pages whose only purpose is listing other notes; use folders, links, or Dataview instead.
-- Keep canonical saga prose under `Энциклопедия/Литература/`, one chapter per file.
-- Write the song chapters of `Зов Бури` in immersive third-person present tense in both Russian and English, with events unfolding alongside Kenneth's journey. Apply this to future song chapters too; preserve the supplied lyrics verbatim. Played-session retellings in other campaigns retain their own tense rules.
-- Do not link ordinary lore articles to specific saga chapters unless explicitly requested.
-- Keep all ordinary character articles in `Энциклопедия/Персонажи/`, without a visible player/NPC split.
-- Before creating characters or FATE material, read `.ai/context/astaria-meta-and-fate.md` and use `.ai/skills/astaria-fate-core/SKILL.md`.
-- Keep `Энциклопедия/Секреты/`, GM notes, private mechanics, and spoilers unpublished. Never copy secret facts into public lore unless explicitly requested.
-- Every canonical note uses explicit `ready` and `quartz` booleans. Set `ready: true` only when the article is considered complete; a local artwork is the usual, but not mandatory, criterion.
-- Set `quartz: true` only for intentionally public notes. This flag is independent from readiness, although public notes should normally be ready.
-- Do not use workflow tags or generic `astaria` tags. Prefer folders, typed properties, and wikilinks for classification and relationships.
-- Do not edit `_quartz/content/` directly; it is generated by `_scripts/sync_quartz_content.rb`.
-- In this project, when the user says `опубликуем`, `опубликовать`, or otherwise asks to publish without explicitly mentioning git, interpret it as enabling the note for Quartz, preparing the required translation, and running the Quartz synchronization and validation workflow. Never create a git commit or push as part of publication unless the user explicitly asks for those git actions.
-- Treat structured forward relationships as the source of truth and let Quartz derive reverse sidebar lists. New people should declare `country` or `origin`, `current_location`, `birth_place`, `imitei`, `organizations`, and `species` when applicable. New places should declare `parent_location` and `country`. The sync script automatically adds people to country/location/Imitei/organization sidebars, child places to their parent locations, territories to countries, species to habitats, and other typed reciprocal links without duplicating explicit entries. These structured fields may appear as inferred references on public target pages even when the source note is not published; keep spoiler-only relationships in `Энциклопедия/Секреты/` or `secret_*` fields.
+- After final edits, run `git diff --check -- <edited tracked paths>` once. If the task includes staged changes, check relevant staged paths too; before a requested commit, check the entire staged diff. Skip whitespace checks for read-only tasks.
+- Batch independent final checks. Give whitespace checks a bounded subprocess timeout of about 10 seconds and a short initial tool wait, about 1000 ms. If a check times out, report it as incomplete and diagnose before retrying.
+- Validate new text files separately: ordinary `git diff --check` does not inspect untracked files. Do not stage files solely for validation, suppress check errors, expand `.gitignore` or delete tracked assets to speed up checks.

@@ -452,3 +452,332 @@ score_1, score_2, score_3, lowres, bad anatomy, bad hands, text, error, missing 
 
 ## мнение о результате
 Средненький арт, город вроде и выглядит живым, но много повторяющихся элементов типа гор из специй немного смазывают впечатление о качестве арта.
+
+# Лосфи:
+1) Промт для арта Assets/Images/Losfy.jpg
+## positive
+masterpiece, best quality, score_9, score_8, 1girl, solo, losfy, horns, long black hair, wavy long messy black hair, freckles, black eyes with dark red glowing pupils, round pupils, reddish glow on horns, slim, medium breast, long black sharp nails, smooth and soft pale skin, sly expression, grin, seductive look, sexy attire, sharp teeth, raised chin.
+
+Naked body, bare shoulders, bare neck, hair censorship.
+
+She extends her hand towards the viewer, sharp nails, leans to a viewer.
+
+POV view.
+
+Dark room, dynamic shadows, void lighting, rainy weather behind a window from right, dark cozy bedroom, clean walls, clean white walls, raindrops on glass, indoor, dynamic shadows, light is falling from right side, moonlight atmosphere.
+
+## negative
+score_1, score_2, score_3, lowres, bad anatomy, bad hands, text, error, missing fingers, extra digit, fewer digits, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, artist name, deformed, ugly, mutilated, extra limbs, bad proportions, gross proportions, duplicate, morbid, mutated hands, poorly drawn hands, mutation, disfigured, visible pussy, visible crotch, visible nipples, nipples, Instagram photo, photo from social media, people in background, crowd in background, postcard, white border, panties visible, panties, rain inside, wet horns, raindrops on skin, rain on horns, raindrops on face, lamp, posters on the wall, pictures on the wall, dress, clothes, male, picture, skirt, black picture on the wall, black frame, black picture on the wall
+
+2) Пример с текстом
+## positive
+masterpiece, best quality, score_9, score_8, losfy, 1girl, solo, horns, long black hair, hair between eyes, curled black horns, faint reddish glow on horns, human ears, black eyes with round red pupils, glowing red pupils, subtle freckles, sharp teeth, pale skin, slim, small breasts, round firm tits, collarbone, long sharp black nails, black nail polish，sexy attire, seductive smile, sly.
+
+Nude, naked, hair censor.
+
+Full body shot, lying on her stomach with her legs raised, lying on the moss, supports her head with hands, blue butterfly with black details is sitting on her buttocks.
+
+At the left top corner of the picture the exact blue text with black outline "Thank you", followed by a single small solid black heart symbol "🖤" below.
+
+Tropical jungle, outdoors, hot and wet tropical forest, detailed background, waterfall, vines on trees, beautiful flowers are blooming on the trees, stunning view, blue skies and sun.
+
+## negative
+score_1, score_2, score_3, lowres, bad anatomy, bad hands, text, error, missing fingers, extra digit, fewer digits, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, artist name, deformed, ugly, mutilated, extra limbs, bad proportions, gross proportions, duplicate, morbid, mutated hands, poorly drawn hands, mutation, disfigured, nipples, nipple visible, white border, postcard, multiple heart symbols in text, horn decoration, horn accessories, instagram photo, mole under eye, elf ears, elven ears, pointed ears, black sclera, huge tits, large breasts
+
+3) Пример в броне и с мечом
+## positive
+masterpiece, best quality, score_9, score_8, 1girl, solo, losfy, horns, long black hair, freckles, black eyes with dark red glowing pupils, reddish glow on horns, slim, medium breast, long black sharp nails, smooth and soft pale skin, haughty look, serious and arrogant expression, seductive look, sexy attire.
+
+Sexy fantasy dark armor, slim plate armor, abyssal knight, dark-red-black armor, bare hands, runic patterns on armor, dark black hearth on chest, abyssal heart hole inside armor chest, sleek armor design, slim and athletic physique, visible bare legs, double slit armor dress, double high slit dress, thigh-high armored boots, full leg armor, sabatons attached to cuisses, holds a huge long heavy sword of black color with dark red ornament on the blade, heavy sword, very long sword, long blade, action pose, holding one huge sword in hands, wide sword blade, dark red glowing sword's edge, sword's hilt is placed high with her hand raised, sword takes up the entire length of the frame.
+
+Full body view.
+
+Simple black background with depth and shadows. 
+
+## negative
+score_1, score_2, score_3, lowres, bad anatomy, bad hands, text, error, missing fingers, extra digit, fewer digits, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, artist name, deformed, ugly, mutilated, extra limbs, bad proportions, gross proportions, duplicate, morbid, mutated hands, poorly drawn hands, mutation, disfigured, grin, smug, visible pussy, visible vagina, panties visible, panties, crotch, extra hands, straps, garter belt, gloves
+
+4) Пример повседневный с текстом
+## positive
+masterpiece, best quality, score_9, score_8, losfy, 15yo, horns, long black hair, freckles, black eyes with dark red glowing pupils, reddish glow on horns, slim, medium breast, long black sharp nails, smooth and soft pale skin, sexy attire, cute smile, cute, cheerful.
+
+White long t-shirt, oversized wide-necked T-shirt falls off left shoulder, bare left shoulder, long white socks, bare neck, bare legs, bare hams.
+
+At the left top corner of the picture the exact black text "Hello again, I missed you so much!", followed by a single small solid black heart symbol "🖤" below.
+
+Full body shot, sitting on her own legs on a bed in girlish room, she makes a heart sign with her both hands, heart sign is glowing with black and dark red magic in her hands.
+
+Girlish bedroom, coastal interiors, light wood, clean walls, empty walls, afternoon, soft lighting, window in right side of an image, blue skies and sun, girl bedroom.
+
+## negative
+score_1, score_2, score_3, lowres, bad anatomy, bad hands, text, error, missing fingers, extra digit, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, artist name, deformed, ugly, mutilated, out of frame, extra limbs, bad proportions, gross proportions, duplicate, morbid, mutated hands, poorly drawn hands, mutation, disfigured, nipples, white border, postcard, multiple heart symbols in text, horn decoration, horn accessories, poster, poster on the wall, painting on the wall, posters, artworks, painting, sea behind a window, postcard, white border, instagram photo
+
+5) Пример в готическом платье с текстом
+## positive
+masterpiece, best quality, score_9, score_8, losfy, horns, long black hair, freckles, black eyes with dark red glowing pupils, reddish glow on horns, slim, medium breast, long black sharp nails, smooth and soft pale skin, sexy attire, grin smile, sharp teeth, seductive look, sly expression, thin legs, small ass.
+
+Gothic lace dress, layered dress, strapless dress, corset, gothic lolita dress, long dress hem, black chocker, black and red lace dress, bare neckline, bare shoulders, deep neckline, bare collarbones, short dress skirt, black stockings, garter belt, black heart earrings.
+
+At the left top corner of the picture the exact text "Have a good day, Master!" is clearly written in black font with white outline, followed by a single small solid black heart symbol "🖤" with white outline below.
+
+Medium view, high angle view, look from above, stands facing to the viewer, both breasts visible, facing the viewer, front view, half-turned, she is hiding a black squared box with red lace behind her back, box is slightly visible, box is merely visible, hiding box behind her back, she is hiding a box behind her ass, both hands behind back, box behind her ass.
+
+Castle corridor background, long corridor of a medieval fantasy castle, detailed background, the light shines through the large windows, afternoon, glowing dust in the air, aerie atmosphere, JRPG vibe. 
+
+## negative
+score_1, score_2, score_3,lowres, bad anatomy, bad hands, text, error, missing fingers, extra digit, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, artist name, deformed, ugly, mutilated, out of frame, extra limbs, bad proportions, gross proportions, duplicate, morbid, mutated hands, poorly drawn hands, mutation, deformed, blurry, bad anatomy, disfigured, bad proportions, visible pussy, visible vagina, panties visible, panties, crotch, back to the viewer, looks over the shoulder, hands visible, hands, dress straps, bra straps, white border, postcard, multiple heart symbols in text
+
+6) Пример metalhead Лосфи
+## positive
+masterpiece, best quality, score_9, score_8, losfy, horns, long black hair, freckles, black eyes with dark red glowing pupils, black headphones, proper headphones on head with horns, reddish glow on horns, slim, medium breast, long black sharp nails, smooth and soft pale skin, sexy attire, seductive look, blush, heavy blush, wseat on face, sweat on legs, strict and serious expression, haughty expression.
+
+Black and red plaid skirt with steel chain, slim tight turtleneck, black turtleneck with long slim sleeves, turtleneck with thumb holes, black sneakers, black socks, sleeves with thumbholes, thumbs hooked through thumbholes, metalhead outfit, heavy metal girl.
+
+Full body shot, she is sitting on her feet in the bed leaning forward. With both hands she grips hard the blanket between her legs. She squeezes the blankets.
+
+Metalhead room, dim light, warm evening lamp light, evening, white clean walls, detailed rebel girl room, detailed background.
+
+## negative
+score_1, score_2, score_3, lowres, bad anatomy, bad hands, text, error, missing fingers, extra digit, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, artist name, deformed, ugly, mutilated, out of frame, extra limbs, bad proportions, gross proportions, duplicate, morbid, mutated hands, poorly drawn hands, mutation, disfigured, Instagram photo, photo from social media, postcard, white border
+
+7) Пример у окна в hub'е
+## positive
+masterpiece, best quality, score_9, score_8, losfy, horns, long black hair, freckles, black eyes with dark red glowing pupils, reddish glow on horns, slim, medium breast, long black sharp nails, smooth and soft pale skin, sad smile, cute, looking at camera.
+
+Long cozy knitted black sweater, extra-long oversized sweater covering her thighs, wearing an oversized sweater as a dress, knitted dress, with the hem pulled down over her thighs, open shoulder, bare neck, bare collarbones, oversized sweater slipped off the shoulder, wearing black knitted leg warmers, barefoot, bare feet, exposed feet, buttocks are covered with sweater.
+
+Medium shot, side view, side shot, front leg  turn her body to the viewer, sitting on the wooden windowsill by the window, leans his back against the window sill, makes a black heart with hands, heart gesture, makes a heart with fingers, feets on windowsill.
+
+One leg is extended and another leg is bent.
+
+Sad, lonely, rainy weather, raindrops on glass, indoor, rain outside the window, a large window, large city nights behind the window, dynamic shadows, moonlight atmosphere, sadness, melancholy, hopeless.
+
+## negative
+score_1, score_2, score_3, lowres, bad anatomy, bad hands, text, error, missing fingers, extra digit, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, artist name, deformed, ugly, mutilated, out of frame, extra limbs, bad proportions, gross proportions, duplicate, morbid, mutated hands, poorly drawn hands, mutation, disfigured, visible pussy, visible crotch, Instagram photo, photo from social media, people in background, crowd in background, postcard, white border, panties visible, panties, rain inside, wet horns, raindrops on skin, rain on horns, raindrops on face, lamp, black panties, bare buttocks
+
+8) Пример в готическом платье с блокнотом (из рассказа .ai/skills/losfer-storywriting/references/corpus/twelve-thousand-shadows.md)
+## positive
+masterpiece, best quality, score_9, score_8, losfy, horns, long black hair, freckles, black eyes with dark red glowing pupils, reddish glow on horns, slim, medium breast, long black sharp nails, smooth and soft pale skin, sexy attire, grin smile, sharp teeth, seductive look, sly expression, thin legs, small ass.
+
+Gothic lace dress, layered dress, strapless dress, corset, gothic lolita dress, dress with short skirt, short provocative lace dress, black chocker, black and red lace dress, bare neckline, bare shoulders, deep neckline, bare collarbones, short dress skirt, black stockings, garter belt, black heart earrings.
+
+Medium view, half-turned, holding a notebook and pencil at the ready, black pencil with eraser, proper black pencil ready to draw, clear black handwritten text "I 🖤 Master" is written in her notebook.
+
+Castle corridor background, long corridor of a medieval fantasy castle, indoor, dark night, dark interiors, faint candle light on the wall, wall-mounted candelabras, JRPG vibe.
+
+## negative
+score_1, score_2, score_3, lowres, bad anatomy, bad hands, text, error, missing fingers, extra digit, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, artist name, deformed, ugly, mutilated, out of frame, extra limbs, bad proportions, gross proportions, duplicate, morbid, mutated hands, poorly drawn hands, mutation, disfigured, visible pussy, visible vagina, panties visible, panties, crotch, dress straps, bra straps, white border, postcard, sky, moon, sun, bustle, dress bustle, dress train, look from below, long hem, double-sided pencil, double-ended pencil
+
+9) Пример с двумя персонажами в кадре 1 (Losfy и Maisie из рассказа .ai/skills/losfer-storywriting/references/corpus/the-sleeping-sun.md)
+## positive
+Masterpiece, best quality, score_9, score_8, 2girls.
+
+First girl from left: losfy, horned girl, messy hair, messy long hair, long black messy hair, bangs, closed eyes, small black horns with faint reddish glow, slim body, medium breasts, long black sharp nails, wears black elegant torned dress, whore outfit, long black slim dress, dress is dirty and torned apart, collar, black collar with steel hollow heart-shaped ring decoration, naked arms, naked shoulders, dirty face, dirty hands, dirty arms, nail scratches all over the body, seductive face, kiss second girl, stroke second girl's hair with her hand.
+
+Second girl from right: elf girl, short orange hair with black tips, short hair, bobcut hair, light orange hair color, orange eyebrows, closed eyes, excited face expression, parted lips, heavy blush, blush, short natural color nails, wearing white crop top, wearing black collar with a steel round ring, naked shoulders, slim, skinny, kiss first girl, her hand on first girl's ribs under the breast.
+
+Lesbian kiss close up, extreme close-up, yuri, intimate kiss, tender kiss, detailed lips.
+
+Outdoors, dark medieval stone walls corner in background, dark stone wall in background, flat wall, solid regular stone wall behind them, night, dark, darkness, sadness, apathy, melancholy, dark blue lighting from left, a stone wall of a building, cracked stonework, tension scene.
+
+## negative
+score_1, score_2, score_3, lowres, bad anatomy, bad hands, text, error, missing fingers, extra digit, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, artist name, deformed, ugly, mutilated, out of frame, extra limbs, bad proportions, gross proportions, duplicate, morbid, mutated hands, poorly drawn hands, mutation, disfigured, buildings in background, open street, moon, moon disc, skies visible, skies, moon visible, moon in sky, window, street visible, long alley, arc, door, sweat, wet, tongue visible, french kiss, grab breast, sleeves
+
+10) Пример с двумя персонажами в кадре 2 (Losfy и Maisie из рассказа .ai/skills/losfer-storywriting/references/corpus/the-sleeping-sun.md)
+## positive
+Masterpiece, best quality, score_9, score_8, 2girls.
+
+First girl from left: losfy, horned girl, messy hair, messy long hair, long black messy hair, bangs, black eyes with dark red glowing pupils, both eyes visible, looking down on second girl's head, human ears, small black horns with faint reddish glow, slim body, medium breasts, long black sharp nails, wears black elegant torned double-slit dress, black lace stockings, torned stockings, whore outfit, long black slim dress, dress is dirty and torned apart, barefoot, black chocker with black heart decoration, naked arms, naked shoulders, dirty face, dirty hands, dirty arms, dirty legs, nail scratches all over the body, sad face, sits with her back against the wall, embrace second girl trying to comfort her and strokes her on the head, one hand on head another hand on shoulder, her both hands stroke second girl.
+
+Second girl from right: elf girl, short orange hair with black tips, short hair, bobcut hair, light orange hair color, orange eyebrows, bright blue eyes, tears in eyes, sad face expression, sad crying, wearing white crop top, wearing black collar with a steel ring, black leather skirt, barefoot, naked shoulders, slim, skinny, dirty face, dirty hands, dirty arms, dirty legs, nail scratches all over the body, her head is rested on first girl's leg.
+
+First girl is sitting vertically and second girl is lying horizontally on her first girl's leg.
+
+Dark dirty corner in medieval suburbs, night, dark, darkness, sadness, apathy, melancholy, dark blue moonlight from left, mud on dirty road, dark corner between two high walls, puddles in the mud, high walls, a stone wall of a building, cracked stonework, single apple core, tension scene.
+
+## negative
+score_1, score_2, score_3, lowres, bad anatomy, bad hands, text, error, missing fingers, extra digit, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, artist name, deformed, ugly, mutilated, out of frame, extra limbs, bad proportions, gross proportions, duplicate, morbid, mutated hands, poorly drawn hands, mutation, disfigured, buildings in background, open street
+
+11) Пример с двумя персонажами в кадре 3 (Losfy и Morpho. Morpho - мой друг и создатель Lora для Лосфи)
+## positive
+Masterpiece, best quality, score_9, score_8, 2girls, standing together in kitchen, black-haired Losfer girl with regular human ears from left with blue-haired girl with elf ears from fight, focus on interaction, proper hands, perfect hands, proper fingers, detailed fingers.
+
+First girl from left: losfy, horned girl, messy hair, messy long hair, long black messy hair, no ahoge, without ahoge, bangs, subtle freckles, black eyes with dark red glowing pupils, both eyes are visible, small black horns with faint reddish glow, slim body, medium breasts, long black sharp nails, hair over ears, no ears, clean neck without a chocker, no chocker, wears a cute white apron with a black heart over a black t-shirt, holds a bunch of greens in one hand and a pepper pod in the other hand, cute smile, looking at other girl's hands.
+
+Second girl from right: darkblue hair, long hair, straight hair, ahoge, pointy ears, elf, brown eyes, hair ornament, smiley face hair clip, choker, gradient hair, hair over one eye, blue short nails, wears a cute white apron with a blue butterfly over a blue t-shirt, she is slicing cucumber into rings with a knife on a cutting board, cute smile, looking down on her hands.
+
+Both girls standing together before kitchen table side by side, cozy white and wood kitchen, cute summer vibes, happy and relaxed scene, cooking atmosphere, detailed interiors, lots of bowls and vegetables on the table, two cute girls are cooking together.
+
+## negative
+score_1, score_2, score_3, lowres, bad anatomy, bad hands, text, error, missing fingers, extra digit, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, artist name, deformed, ugly, mutilated, out of frame, extra limbs, bad proportions, gross proportions, duplicate, morbid, mutated hands, poorly drawn hands, mutation, disfigured, left girl with pointed ears, losfy with pointed ears
+
+12) Пример с двумя персонажами в кадре 4 (Losfy и Morpho ещё раз)
+## positive
+Masterpiece, best quality, score_9, score_8, 2girls.
+
+First girl from left: darkblue hair, long hair, straight hair, wet hair, pointy ears, elf, brown eyes, hair ornament, gradient hair, hair over one eye, natural color short nails, wears a blue swimsuit, widen eyes from fear, tears in her face, terrified face expression, in fear, wet body, she lies on a pier near a large lake, lying horizontally on first girl's legs, both hands visible.
+
+Second girl from right: losfy, horned girl, messy hair, messy long hair, long black messy hair, bangs, subtle freckles, closed eyes, both eyes visible, human ears, small black horns with faint reddish glow, slim body, medium breasts, long black sharp nails, wears a cute black swimsuit, sad face, sitting on pier and embrace second girl trying to comfort her and strokes her on the head.
+
+Summer vibes, wooden pier wet from girl's bodies, tension scene, detailed background, large lake.
+
+## negative
+score_1, score_2, score_3, lowres, bad anatomy, bad hands, text, error, missing fingers, extra digit, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, artist name, deformed, ugly, mutilated, out of frame, extra limbs, bad proportions, gross proportions, duplicate, morbid, mutated hands, poorly drawn hands, mutation, disfigured, hair decoration, chocker
+
+13) Пример с двумя персонажами в кадре 5 (Losfy и Aya. Aya - OC персонаж моего друга Z_Chan)
+## positive
+masterpiece, best quality, score_9, score_8, 2girls,
+
+First girl (left girl): slim girl with long dark purple straight hair, no horns, purple eyes, headphones on the head, delicate face, slim, slender thin legs, medium breast, long purple nails, smooth and soft pale skin, look at window with happy face, looking aside, she is looking aside at window, cute smile, wear cute white pajamas crop top and shorts, sits with her back to the Second girl (right girl).
+
+Second girl (right girl): losfy, horns, long black hair, black hair, freckles, black eyes with dark red glowing pupils, reddish glow on horns, slim, slender thin legs, medium breast, long black sharp nails, smooth and soft pale skin, sad face, sad expression, closed mouth, wear cute black pajamas crop top and shorts, looking at First girl, leans forward, hug first girl from behind, her head lies on another girl's shoulder, kneeling.
+
+Medium shot, both girls sitting in bed, Second girl (right girl) embrace First girl (left girl) from behind, girls are close to each other.
+
+Girlish bedroom background, girl room, sad, lonely, sky full of stars, indoor, night skies behind the window, a large window, dynamic shadows, moonlight atmosphere, sadness, melancholy, hopeless.
+
+## negative
+score_1, score_2, score_3, lowres, bad anatomy, bad hands, text, error, missing fingers, extra digit, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, artist name, deformed, ugly, mutilated, out of frame, extra limbs, bad proportions, gross proportions, duplicate, morbid, mutated hands, poorly drawn hands, mutation, disfigured, lamp, portrait on the wall, pictures on the wall
+
+# Losfer
+1) арт для Assets/Images/Losfer.jpg
+## positive
+masterpiece, best quality, score_9, score_8, 1man, solo, Losfer, 20yo, short black hair with bangs combed upwards, slim, slender, danmei, bare neck, smooth and soft pale skin, serious and strict expression, looking aside.
+
+Japanese shinobi ninja assassin, layered clothing. Wearing a black traditional long haori mantle over a black japanese shinobi outfit with the hood up, black straight blindfold covering his eyes. Slim outfit. Wearing baggy black japanese jogger pants with cargo pockets, straps, metallic rivets and chains. Floating black ribbons with glowing white Japanese kanji characters wrapped around his arms and gear. White Japanese kanji on sleeves. White single kanji character on black arm wraps. Black arm wraps. Black book hanging on waist chain. Holding in his hand a long sleek black katana scabbard with red lacing. Black bracers with black ribbons. Merely visible face, merely visible mouth and nose under the very deep hood. Shadowed face, face under the hood. Deep dark shadow on face, only the silhouette of the face is visible. Dramatic shadow on face. V-shape small neckline.
+
+Medium shot side view, Side view, walking side-turned, head turned, he is looking aside. A dark, mysterious and dramatic character. A sad, tired, and melancholic man walks under the rain on ancient japanese village street.
+
+The sheath of his katana points to the ground, he is holding katana's scabbard in hand.
+
+Ancient Japanese village in the background, an empty ancient village, a sky thickly covered with clouds, large clouds, heavy rain, many raindrops, raindrops on hands, raindrops on his hood, puddles on a dirty street road, gray mud on the ground.
+
+Dark, darkness, sadness, melancholy, apathy.
+
+## negative
+score_1, score_2, score_3, lowres, bad anatomy, bad hands, text, error, missing fingers, extra digit, fewer digits, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, artist name, deformed, ugly, mutilated, extra limbs, bad proportions, gross proportions, duplicate, morbid, mutated hands, poorly drawn hands, mutation, disfigured, mask, eyes visible, scarf, visible ear, visible cheek, highlighted face, bright skin, bright face, people in background, crowd in background, smile, happy, sun, wire, electric pole, electric wire, skyscrapers in the background, modern buildings, roof wire, large trees, katana blade, blade visible, rain on face, wet face, two katanas, several katanas
+
+2) арт для Assets/Images/The_demon_to_hunt_2.jpg
+## positive
+masterpiece, best quality, score_9, score_8, 1man, solo, Losfer, 20yo, short black hair with bangs combed upwards, slim, slender, danmei, bare neck, smooth and soft pale skin, serious and strict expression.
+
+Japanese shinobi ninja assassin, layered clothing. Wearing a black traditional long haori mantle over a black japanese shinobi outfit with the hood up, black straight blindfold covering his eyes. Tears under his blindfold on cheeks, long tears trails. Slim outfit. Wearing baggy black japanese jogger pants with cargo pockets, straps, metallic rivets and chains. Floating black ribbons with glowing white Japanese kanji characters wrapped around his arms and gear. White Japanese kanji on sleeves. Black arm wraps. Black book hanging on waist chain. Holding in his hand a long sleek black katana in its scabbard with red lacing. Black bracers with black ribbons. Merely visible face, merely visible mouth and nose under the very deep hood. Shadowed face, face under the hood. Deep dark shadow on face, only the silhouette of the face is visible. Dramatic shadow on face. V-shape small neckline.
+
+Full body view, sitting on side-turned, head turned, he is looking aside. A dark, mysterious and dramatic character. A sad, tired, and melancholic man sits sideways on a Japanese bench at the entrance to a ancient Japanese house. 
+
+The sheath of his katana rests on the ground, leaning on the scabbard of his katana. He is leaning on his vertical katana's scabbard, stuck in the mud.
+
+Ancient Japanese village in the background, an empty ancient village, a sky thickly covered with clouds, large clouds, heavy rain, many raindrops, raindrops on hands, raindrops on his hood, puddles on a dirty street road, gray mud on the ground.
+
+Dark, darkness, sadness, melancholy, apathy.
+
+## negative
+score_1, score_2, score_3, lowres, bad anatomy, bad hands, text, error, missing fingers, extra digit, fewer digits, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, artist name, deformed, ugly, mutilated, extra limbs, bad proportions, gross proportions, duplicate, morbid, mutated hands, poorly drawn hands, mutation, disfigured, mask, eyes visible, scarf, visible ear, visible cheek, highlighted face, bright skin, bright face, people in background, crowd in background, smile, happy, sun, wire, electric pole, electric wire, skyscrapers in the background, modern buildings, roof wire, large trees
+
+3) арт для Assets/Images/The_demon_to_hunt_3.jpg
+## positive
+masterpiece, best quality, score_9, score_8, 1man, solo, Losfer, 20yo, short black hair with bangs combed upwards, slim, slender, danmei, bare neck, smooth and soft pale skin, serious and strict expression, looking up into the sky, raised chin.
+
+Japanese shinobi ninja assassin, layered clothing. Wearing a black traditional long haori mantle over a black japanese shinobi outfit with the hood up, black straight blindfold covering his eyes. Tears under his blindfold on cheeks, long tears trails. Slim outfit. Wearing baggy black japanese jogger pants with cargo pockets, straps, metallic rivets and chains. Floating black ribbons with glowing white Japanese kanji characters wrapped around his arms and gear. White Japanese kanji on sleeves. Black arm wraps. Black book hanging on waist chain. Holding in his hand a long sleek black katana in its scabbard with red lacing. Black bracers with black ribbons. Merely visible face, merely visible mouth and nose under the very deep hood. Shadowed face, face under the hood. Deep dark shadow on face, only the silhouette of the face is visible. Dramatic shadow on face. V-shape small neckline.
+
+Medium shot side view, Side view, walking side-turned, head turned, he is looking aside. A dark, mysterious and dramatic character. A sad, tired, and melancholic man walks under the rain on ancient japanese village street.
+
+The sheath of his katana points to the ground, he is holding katana's scabbard in hand, katana not drawn from its sheath.
+
+Ancient Japanese village in the background, an empty ancient village, a sky thickly covered with clouds, large clouds, heavy rain, many raindrops, raindrops on hands, raindrops on his hood, puddles on a dirty street road, gray mud on the ground.
+
+Dark, darkness, sadness, melancholy, apathy.
+
+## negative
+score_1, score_2, score_3, lowres, bad anatomy, bad hands, text, error, missing fingers, extra digit, fewer digits, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, artist name, deformed, ugly, mutilated, extra limbs, bad proportions, gross proportions, duplicate, morbid, mutated hands, poorly drawn hands, mutation, disfigured, mask, eyes visible, scarf, visible ear, visible cheek, highlighted face, bright skin, bright face, people in background, crowd in background, smile, happy, sun, wire, electric pole, electric wire, skyscrapers in the background, modern buildings, roof wire, large trees, katana blade
+
+4) арт с оружием и без фона
+## positive
+masterpiece, best quality, score_9, score_8, 1man, solo, Losfer, 20yo, short black hair with bangs combed upwards, slim, slender, danmei, bare neck, smooth and soft pale skin, serious and strict expression.
+
+Japanese shinobi ninja assassin, layered clothing. Wearing a black traditional long haori mantle over a black japanese shinobi outfit with the hood up, black blindfold covering his eyes. Slim outfit. Wearing baggy black japanese jogger pants with cargo pockets, straps, metallic rivets and chains. Floating black ribbons with glowing white Japanese kanji characters wrapped around his arms and gear. Black arm wraps. Dark black boots with white details. Black book hanging on waist chain. Holding in his hand a long sleek black katana in its scabbard with white Japanese kanji characters and red lacing. Perfect katana's blade. Holds the katana diagonally. Black bracers with black ribbons. Merely visible face, merely visible mouth and nose under the very deep hood. Shadowed face, face under the hood. Deep dark shadow on face, only the silhouette of the face is visible. Dramatic shadow on face. V-shape small neckline.
+
+Full body view, stands side-turned, head turned left, he is looking aside. Draws the katana from its scabbard. One hand on katana's hilt, another on scabbard. A dark, mysterious and dramatic character.
+
+Simple black background with depth and shadows.
+
+## negative
+score_1, score_2, score_3, lowres, bad anatomy, bad hands, text, error, missing fingers, extra digit, fewer digits, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, artist name, deformed, ugly, mutilated, extra limbs, bad proportions, gross proportions, duplicate, morbid, mutated hands, poorly drawn hands, mutation, disfigured, mask, eyes visible, scarf, visible ear, visible cheek, highlighted face, bright skin, bright face
+
+5) арт с полуобнажённым торсом и в более простой одежде
+## positive
+masterpiece, best quality, score_9, score_8, 1man, solo, Losfer, 20yo, short black hair with bangs combed upwards, slim, slender, danmei, bare neck, smooth and soft pale skin, serious and strict expression, black blindfold, abs, sexual male body, perfect hip bones.
+
+Japanese male wearing a black traditional long haori mantle over naked body. Glowing white Japanese kanji characters on haori mantle. Black arm wraps. Black baggy low waist jogger pants, very low waist. Black ribbons with white kanji characters wrapped around his mantle and pants. Barefoot, bare feets. Slim outfit. Highest part of his public area visible, both male nipples are visible, mantle falls off one shoulder. Holding in his hand a brush with black ink on tip, white paper with single solid black heart drawing in another hand rested on bed. Black bracers with black ribbons. Merely visible face, merely visible mouth and nose, shadowed face. Deep dark shadow on face, dramatic shadow on face.
+
+Medium shot, front view, look aside into window, head turned, sitting in bed. Exhausted, tired, resting in bed with brush in his hand, free sexy handsome male pose, fashion model pose, leans his back against the vertical bed pillow and headboard. The headboard of the bed behind him. One knee bent pointed up with arm rested over this knee, another leg is straight. A dark, mysterious and dramatic character.
+
+Dark medieval asian room background with depth and shadows, soft dynamic shadows on body and chest and pelvis, dark wood bed with white blankets, moonlight is falling from window, dark night, darkness, rain ouside the window.
+
+Sexy and very attractive handsome male portrait, detailed male body, realistic body proportions and muscules on male chest.
+
+## negative
+score_1, score_2, score_3, lowres, bad anatomy, bad hands, text, error, missing fingers, extra digit, fewer digits, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, artist name, deformed, ugly, mutilated, extra limbs, bad proportions, gross proportions, duplicate, morbid, mutated hands, poorly drawn hands, mutation, disfigured, mask, eyes visible, scarf, highlighted face, bright skin, bright face, penis visible, pubes, publes, public hair visible, black publes hair, bare legs, naked legs, kneeling, kneel, ink stains on bed, ink stains, ink drops, ink droplets, glowing symbols on body, liquid ink, liquid ink stains, lamp
+
+# Misty
+1) Промт для Assets/Images/Misty.jpg
+## positive
+masterpiece, best quality, Losfer, score_9, score_8, white rabbit ears, ears are lowered down, Rabbit girl, kemonomimi, cute, slim, slender, medium hair, medium hair without tails, white hair with pink gradient tips, pink gradient hair tips, simple haircut, no accessories, clean bangs, blue eyes, small breast, naked shoulders, naked neck, shy, ashamed expression, blush, slight smile, looking at viewer ashamed.
+
+She wears simple blue linen historical Greek toga with single ribbon, poor clothes.
+
+She raise her hand to her chin heavily ashamed.
+
+Medium view, three-quarter view.
+
+Perfect long carrot is lying on a bed in a background.
+
+Detailed coastal interior bedroom background, pastel white and blue colors interior, bed with white blankets, interior plants, single round wooden window with a simple cross-shaped muntins, indoors, clean walls, clear walls.
+
+## negative
+score_1, score_2, score_3, lowres, bad anatomy, bad hands, text, error, missing fingers, extra digit, fewer digits, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, artist name, deformed, ugly, mutilated, extra limbs, bad proportions, gross proportions, duplicate, morbid, mutated hands, poorly drawn hands, mutation, disfigured, visible pussy, visible crotch, visible nipples, nipples, Instagram photo, photo from social media, people in background, crowd in background, postcard, white border, four ears, cropped ears, plant in window, plant inside window, neck accessories, modern furniture, nightgown, modern interiors, modern clothes, multiple carrots, picture on the wall, paintings on the wall, art on the wall, posters, window grille, square window, small window, rectangle window, modern dress
+
+2) Промт в саду
+## positive
+masterpiece, best quality, score_9, score_8, Rabbit girl, kemonomimi, cute, slim, slender, medium hair, medium hair without tails, white hair with pink gradient tips, pink gradient hair tips, simple haircut, no accessories, clean bangs, blue eyes, small breast, naked shoulders, naked neck, shy, ashamed expression, blush, looking at viewer ashamed.
+
+Wearing denim dungaree shorts, light blue jean overalls, straw hat, cute garden boots.
+
+Full body view, stands shy and ashamed, holding a heavy basket with a bunch of large carrots in both outstretched arms.
+
+Cozy garden in background, garden beds with different foliage and plants in background, lovely and cute atmosphere, afternoon, blue skies, bright sunny day, detailed background. 
+
+## negative
+score_1, score_2, score_3, lowres, bad anatomy, bad hands, text, error, missing fingers, extra digit, fewer digits, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, artist name, deformed, ugly, mutilated, extra limbs, bad proportions, gross proportions, duplicate, morbid, mutated hands, poorly drawn hands, mutation, disfigured, extra hands
+
+3) Промт в милом платье
+## positive
+masterpiece, best quality, score_9, score_8, Rabbit girl, kemonomimi, white rabbit ears, ears are lowered down, cute, slim, slender, long legs, medium hair, medium hair without tails, white hair with pink gradient tips, pink gradient hair tips, simple haircut, two blue and pink simple straight hair clips, blue eyes, small breast, naked shoulders, naked neck, bare collarbones, shy, ashamed expression, blush, looking at viewer ashamed.
+
+Pastel gothic fashion, voluminous ruffle dress, strapless dress, white base color, short frilly skirt, white dress with soft pastel pink and light blue accents, intricate lace, ribbons and bows. The dress features intricate pastel lace trims, layered petticoat, multiple tiers of ruffles, cute corset lacing, and soft pink and baby blue satin bows, strips of fabric hang down the back of the skirt. Wearing white thigh-high socks with pink ribbon ties, and pastel blue gothic platform shoes with leg warmers. Hairpin with a bow on the head. She is holding a cute, small cross-body bag shaped like a fluffy cute face with a small leaf accent.
+
+Full body view, stands shy and ashamed, stands half-turned, hands visible, she is holding her dress skirt.
+
+Detailed coastal interior hallway room background, pastel white and blue colors interior, interior plants, round wooden window, indoors, white door behind. 
+
+Detailed face, proper shadow, fully visible arms, fully visible hands, visible naked wrists, proper hands, detailed fingers.
+
+## negative
+score_1, score_2, score_3, lowres, bad anatomy, bad hands, text, error, missing fingers, extra digit, fewer digits, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, artist name, deformed, ugly, mutilated, extra limbs, bad proportions, gross proportions, duplicate, morbid, mutated hands, poorly drawn hands, mutation, disfigured, extra hands, four ears, cropped ears, plant in window, plant inside window, dress straps, straps, wristbands, wrist jewelry, wrist accessories, hidden wrist, hand behind dress, hand behind skirt, neck accessories
+
+4) Промт в кроватке с текстом
+## positive
+masterpiece, best quality, score_9, score_8, Rabbit girl, kemonomimi, white rabbit ears, ears are lowered down, cute, slim, slender, medium hair, medium hair without tails, white hair with pink gradient tips, pink gradient hair tips, simple haircut, two blue and pink simple straight hair clips, blue eyes, small breast, shy smile, ashamed expression, blush, looking at viewer ashamed.
+
+Pastel cute girlish white pajamas with pink kawaii rabbit face on it, small pajamas shorts.
+
+Full body shot, sitting on her own legs on a bed in cute girlish room, she nervously clutches the carrot to her chest with both hands.
+
+Girlish bedroom, coastal interiors, light wood, clean walls, empty walls, afternoon, soft lighting, window in right side of an image, round wooden window, blue skies and sun, girl bedroom.
+
+Detailed face, proper shadow, fully visible arms, fully visible hands, proper hands, detailed fingers.
+
+At the left top corner of the picture the exact orange text "Have a good day!" with cute font.
+
+## negative
+score_1, score_2, score_3, lowres, bad anatomy, bad hands, text, error, missing fingers, extra digit, fewer digits, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, artist name, deformed, ugly, mutilated, extra limbs, bad proportions, gross proportions, duplicate, morbid, mutated hands, poorly drawn hands, mutation, disfigured, nipples, white border, postcard, multiple heart symbols in text, poster, poster on the wall, painting on the wall, posters, artworks, painting, sea behind a window, postcard, white border, instagram photo, four ears, cropped ears

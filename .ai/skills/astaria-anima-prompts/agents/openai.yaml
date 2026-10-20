@@ -1,4 +1,4 @@
 interface:
   display_name: "Astaria Anima Prompts"
-  short_description: "Промты Anima для иллюстраций Астарии"
-  default_prompt: "Используй $astaria-anima-prompts, чтобы создать positive и negative промты для иллюстрации статьи Астарии."
+  short_description: "Промты Anima для Астарии: герои, рассказы и лор"
+  default_prompt: "Используй $astaria-anima-prompts, чтобы создать Positive и Negative для иллюстрации Астарии: портрета Лосфи, Лосфера или Мисти, сцены рассказа с другими героями либо статьи лора."

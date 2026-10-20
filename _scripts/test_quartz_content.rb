@@ -1897,7 +1897,7 @@ expect.call(journey_styles.match?(/\.astaria-timeline-year\s*\{[^}]*lining-nums 
 end
 [
   "amon-astat_drought.png",
-  "gunpowder.jpg",
+  "thalassian_gunpowder.png",
   "archaeans.jpg",
   "orion_city.jpg",
   "katachthonos_colony.jpg"

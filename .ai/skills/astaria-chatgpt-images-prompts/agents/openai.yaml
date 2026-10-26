@@ -1,0 +1,4 @@
+interface:
+  display_name: "Astaria ChatGPT Images Prompts"
+  short_description: "Промты ChatGPT Images для мест и пейзажей Астарии"
+  default_prompt: "Используй $astaria-chatgpt-images-prompts, чтобы составить промт для статичной иллюстрации места Астарии в ChatGPT Images."

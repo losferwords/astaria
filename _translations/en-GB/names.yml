@@ -62,10 +62,25 @@ names:
     title: Mist Island
     slug: mist-island
     native_name: 霞島
+  Призрачные горы:
+    title: Ghost Mountains
+    slug: ghost-mountains
+  Дымовая Чаща:
+    title: Smoke Thicket
+    slug: smoke-thicket
+    native_name: 霞の森
   Луга Тамано:
     title: Tamano Meadows
     slug: tamano-meadows
     native_name: 魂野
+  Река Кумокава:
+    title: Kumokawa River
+    slug: kumokawa-river
+    native_name: 雲川
+  Озеро Шинда:
+    title: Lake Shinda
+    slug: lake-shinda
+    native_name: 信田
   Остров Рюгу:
     title: Ryugu Island
     slug: ryugu-island

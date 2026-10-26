@@ -1,12 +1,12 @@
-# Solais: user-approved Sora experiment
+# Solais: user-approved ChatGPT Images experiment
 
-The user reported «Получилось замечательно!» after testing the prompt below, then requested this separate skill. The generated Sora image was not attached at that point: success is user-reported, not an independent visual inspection. This is a tested creative brief, not documentation of Sora internals or guaranteed behavior.
+The user reported «Получилось замечательно!» after testing the prompt below, then requested this separate skill. The generated ChatGPT image was not attached at that point: success is user-reported, not an independent visual inspection. The product name was corrected on 2026-10-26; do not infer the earlier backend version. This is a tested creative brief, not documentation of model internals or guaranteed behavior.
 
 The brief uses the illustration language of Kaito, Argos, Gilas, and Amato while retaining Solais's own Celtic culture and rainy cliff-bound harbor. The local reference paths and transferable style features are listed in SKILL.md.
 
 ## Scene-specific lessons
 
-Earlier Anima iterations repeatedly lost city scale and harbor life, produced identical boats or oversized people, turned stone quays into wooden piers, and introduced modern road lighting. These motivated the brief's functional architecture, distributed work groups, varied vessels, modest foreground framing, and selective illumination. They are not established Sora failure modes.
+Earlier Anima iterations repeatedly lost city scale and harbor life, produced identical boats or oversized people, turned stone quays into wooden piers, and introduced modern road lighting. These motivated the brief's functional architecture, distributed work groups, varied vessels, modest foreground framing, and selective illumination. They are not established ChatGPT Images failure modes.
 
 Preserve for Solais: a large inhabited port, deep sheltered bay between rocky shores, extensive stone-and-timber neighborhoods, substantial stone piers, archaic Celtic visual culture, and coherent overcast daylight. Do not transplant these features wholesale into other locations.
 
@@ -34,4 +34,4 @@ Optional sentence when the user actually attaches style references:
 
 > Use the attached images as references for illustration style, depth, and rendering only. Follow the Celtic architecture, geography, and weather described in this prompt.
 
-Adapt that sentence to the current location. Do not imply local project images have automatically been uploaded to Sora.
+Adapt that sentence to the current location. Do not imply local project images have automatically been uploaded to ChatGPT.

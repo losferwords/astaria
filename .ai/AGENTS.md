@@ -18,7 +18,7 @@ Paths below are relative to the repository root. Load the entrypoint, then only 
 | Preparation of a session or campaign chapter | `.ai/skills/astaria-session-prep/SKILL.md` |
 | Other brainstorming, standalone scenes, encounters and NPC ideas | `.ai/skills/astaria-idea-workbench/SKILL.md` |
 | Fate Core mechanics, character sheets, NPCs and scenario mechanics | `.ai/skills/astaria-fate-core/SKILL.md` |
-| Sora still-image prompts, normally places and landscapes | `.ai/skills/astaria-sora-prompts/SKILL.md` |
+| ChatGPT Images still-image prompts, normally places and landscapes | `.ai/skills/astaria-chatgpt-images-prompts/SKILL.md` |
 | Anima / DaSiWa-Anima prompts, normally characters | `.ai/skills/astaria-anima-prompts/SKILL.md` |
 
 The specialized workflow determines the interaction and storage format: literary work stays in chat by default; business play uses chat and its live memory; session preparation builds one playable note through interactive choices. The general idea-workbench saving default does not override them. Explicit requests for chat only, a complete module, a language, or an image tool take precedence over defaults.

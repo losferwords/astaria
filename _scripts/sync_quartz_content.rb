@@ -1856,7 +1856,7 @@ def map_markers(body, lookup)
       case canonical_name
       when /(?:Город|Деревня|Храм|Кузня|Обитель)/i then "settlement"
       when /(?:Озеро|Река|море|залив|пролив|перешеек)/i then "water"
-      when /(?:Гор|Пустын|Лес|Джунг|Болот|Долин|луг|земл|Вулкан|Предгор)/i then "terrain"
+      when /(?:Гор|Пустын|Лес|Чащ|Джунг|Болот|Долин|луг|земл|Вулкан|Предгор)/i then "terrain"
       else "realm"
       end
     end

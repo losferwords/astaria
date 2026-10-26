@@ -1,6 +1,6 @@
 # Chthonic Sea: approved modern anime 2.5D reference
 
-On 2026-10-02 the user approved the result of the prompt below, supplied `Assets/Images/Chtonic_Sea.png`, and explicitly requested this rendering direction as the default for future Astaria Sora images. The local image was inspected: this is a visual reference as well as a user-reported success.
+On 2026-10-02 the user approved the result of the prompt below, supplied `Assets/Images/Chtonic_Sea.png`, and explicitly requested this rendering direction as the default for future Astaria ChatGPT Images illustrations. The local image was inspected: this is a visual reference as well as a user-reported success. The workflow's product name was corrected on 2026-10-26; the exact backend version of that earlier generation is not established here.
 
 ## Transferable rendering
 
@@ -26,8 +26,8 @@ Bright late-morning sunlight, crisp warm highlights on limestone, deep blue-viol
 Avoid thin uniform outlines, flat color fills, pastel storybook rendering, watercolor textures, photorealism, glossy CGI, modern vessels and buildings. No text or watermark.
 ```
 
-If the user actually attaches the image to Sora, an optional reference sentence is:
+If the user actually attaches the image in ChatGPT, an optional reference sentence is:
 
 > Use the attached image as a reference for modern anime 2.5D rendering, selective contours, material volume and atmospheric depth. Follow the geography, culture, weather and lighting described in this prompt.
 
-Do not imply that Sora has access to the local reference without an attachment.
+Do not imply that ChatGPT Images has access to the local reference without an attachment.

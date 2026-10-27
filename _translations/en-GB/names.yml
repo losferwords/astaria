@@ -85,6 +85,10 @@ names:
     title: Amanohama
     slug: amanohama
     native_name: 天浜
+  Город Касумито:
+    title: Kasumito
+    slug: kasumito
+    native_name: 霞都
   Остров Рюгу:
     title: Ryugu Island
     slug: ryugu-island
@@ -1051,6 +1055,10 @@ names:
   Ур-Блят:
     title: Ur-Blyat
     slug: ur-blyat
+  Касуми-дон:
+    title: Kasumi-don
+    slug: kasumi-don
+    native_name: 霞丼
 
   Город Син-Юнь:
     title: Xing-Yun

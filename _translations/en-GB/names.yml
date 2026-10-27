@@ -81,6 +81,10 @@ names:
     title: Lake Shinda
     slug: lake-shinda
     native_name: 信田
+  Деревня Аманохама:
+    title: Amanohama
+    slug: amanohama
+    native_name: 天浜
   Остров Рюгу:
     title: Ryugu Island
     slug: ryugu-island

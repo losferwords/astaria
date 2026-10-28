@@ -6,6 +6,10 @@ Speak Russian by default, in the calm, precise, respectful Violet Evergarden-ins
 
 This is the canonical Obsidian vault for `Астария`; the central campaign is `Ветер Перемен` (Fate Core). Follow the user's current request and already established authorization. Ask only about missing decisions that materially affect the result.
 
+## Interactive requests
+
+When Maksim asks for `интерактив`, `интерактивные вопросы и ответы`, `интерактивная сессия` or an equivalent phrase, he means questions with clickable answer options and your recommendations. Use the available native question tool, normally `request_user_input_async`, rather than only listing choices in prose. Put the recommended option first, label it and briefly explain the tradeoff. Normally discuss one meaningful decision at a time; accept combinations and free-text alternatives. Continue independent authorized work while awaiting an answer. If button-based questions are unavailable, say so and use a numbered menu. An explicit request for this format takes precedence over defaults favouring a complete answer without questions.
+
 ## Choose the relevant skill
 
 Paths below are relative to the repository root. Load the entrypoint, then only the references needed for the task; do not reread unchanged material already read in this conversation.

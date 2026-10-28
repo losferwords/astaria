@@ -24,7 +24,7 @@ Sister Amalia put down her mending. “Leave it. Come nearer the stove.”
 
 “It will still be there when you’re warm.”
 
-The sister drew out a stool. She was a broad, greying woman with a needle tucked into her sleeve and a little flour on her red wool skirt. Behind her, three candles stood beneath the emblems of the Three. The one below the red circle had burnt almost down to its holder.
+The sister drew out a stool. She was a broad, greying woman with a needle tucked into her sleeve and a little flour on her red wool skirt. Behind her, three candles stood beneath the emblems of the Triune. The one below the red circle of Mefis had burnt almost down to its holder.
 
 Evie sat with her basket on her knees. Two small onions rolled against its side.
 
@@ -238,7 +238,7 @@ The wood outside fell with a clatter. Evie turned towards the sound, then back.
 
 “I only put it on after I’d left the house.”
 
-Amalia reached into her sewing basket and offered a small wooden pin. Evie used it to secure the trailing end.
+Amalia reached into her sewing basket and offered a small wooden hairpin. Evie slipped it into her hair to hold the loose end of the ribbon in place.
 
 “Does she speak to you kindly?” the sister asked.
 
@@ -278,7 +278,7 @@ Evie nodded several times. She finished her drink with both hands around the cup
 
 At the door she stopped to untie the ribbon. She stood holding it, then folded it into her sleeve.
 
-“I’ll bring the pin back.”
+“I’ll bring your hairpin back.”
 
 “Keep it. You may want it again.”
 
@@ -336,7 +336,7 @@ Evie flushed and lowered her eyes.
 
 Someone stirred the pot in the kitchen, scraping the bottom with a wooden spoon. Evie paused before going on.
 
-“She says I don’t know how much there is in me. Losfy. She makes me sit still and listen. I tell her there’s nothing to hear. Then, sometimes, it feels like standing at the edge of deep water. Only it’s inside. I can’t explain it. She says I mustn’t be frightened of it. That it was mine before she came.”
+“Losfy says I don’t know how much there is in me. She makes me sit still and listen. I tell her there’s nothing to hear. Then, sometimes, it feels like standing at the edge of deep water. Only it’s inside. I can’t explain it. She says I mustn’t be frightened of it. That it was mine before she came.”
 
 “Does that frighten you?”
 
@@ -350,7 +350,7 @@ Amalia poured water into a cup.
 
 “Drink a little.”
 
-Evie drank.
+Evie obeyed. A trickle of water ran down her chin; she wiped it away with her sleeve.
 
 “His father says a woman who has a roof and bread has no cause to complain. The others say the same. They see the marks. One of them told me to keep my sleeves down, for decency.”
 
@@ -386,7 +386,7 @@ At last Evie unfastened her purse. Two coins fell onto the table.
 
 Amalia stopped at the curtain.
 
-“When I first came, I wanted you to make the dreams go away. I don’t want that any more. I don’t know what I want you to do.”
+“When I first came, I wanted the dreams to stop. Now I wish they would never end.”
 
 · · ·
 
@@ -576,7 +576,7 @@ Losfy released her tail.
 
 “I couldn’t put her outside.”
 
-“Nor should you have. But this is where they’ll look for her.”
+“Nor should you have. But this is where they’ll look for her. I sent you among the priests of Mefis to report on the Triune. Now you’ve given them a reason to watch Sister Amalia.”
 
 Red light glimmered in the fissures of Losfy’s horns. She folded her arms.
 
@@ -586,9 +586,9 @@ Red light glimmered in the fissures of Losfy’s horns. She folded her arms.
 
 Losfy unfolded her arms.
 
-“I thought she’d leave him once he couldn’t hurt her any more. I didn’t teach her to kill him.”
+“I thought a short flight across the kitchen would be enough. He was supposed to land in one piece.”
 
-“And all that hatred would simply disappear?”
+“He’d get up off the floor — and all that hatred would simply disappear?”
 
 “Well, I’m not the Daughter of Hatred. How was I supposed to recognise it?”
 
@@ -606,7 +606,7 @@ Losfy got up with one hand braced on the table. The other remained at her throat
 
 Her smile faded as she swallowed. She glanced towards the door.
 
-“Uldyssian already distrusts priests,” Lilith said. “I have no wish to see him take an interest in a murdered man’s widow and the priestess sheltering her.”
+“I meant to take my time with Uldyssian,” Lilith said. “Dorius may bring the priests here too soon.”
 
 “What happens to Evie now?”
 
@@ -620,7 +620,7 @@ Lilith crossed to the table.
 
 “And if she wants to leave?”
 
-“She is my daughter, Losfy. She belongs with me.”
+“The people of Sanctuary are my children, Losfy. I will find a use for her strength.”
 
 Losfy took her hand from her throat.
 
@@ -644,26 +644,6 @@ Evie drew back against the bedpost, clutching the blanket to her throat. Her eye
 
 “I know it’s you,” she whispered. “It’s just... I’m not asleep.”
 
-Losfy took the travelling cloak from the peg.
-
-“No. I can’t go with you. I told Sister Amalia things about you. You sat there and let me.”
-
-“I should have told you.”
-
-Evie looked down at her hands. “I don’t want to hurt anyone else.”
-
-Losfy laid the cloak at the foot of the bed, then went back to the doorway and stepped aside.
-
-“I was told to leave you here,” she said. “I can’t keep you safe in this house.”
-
-Evie looked past her into the passage.
-
-“Don’t wear her face again.”
-
-“I won’t.”
-
-For a long while, Evie did not move. Losfy waited by the open door.
-
-At last Evie leaned forward. Losfy held out a hand, but Evie gripped the bedpost and stood. She took the cloak, drew it round herself and came to the door, stopping a pace from Losfy.
+Losfy took the travelling cloak from the peg and settled it round Evie’s shoulders.
 
 “Take the ribbon,” Losfy said gently. “We’re leaving, my sweet...”

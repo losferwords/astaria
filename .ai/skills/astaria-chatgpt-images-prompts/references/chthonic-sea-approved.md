@@ -2,6 +2,8 @@
 
 On 2026-10-02 the user approved the result of the prompt below, supplied `Assets/Images/Chtonic_Sea.png`, and explicitly requested this rendering direction as the default for future Astaria ChatGPT Images illustrations. The local image was inspected: this is a visual reference as well as a user-reported success. The workflow's product name was corrected on 2026-10-26; the exact backend version of that earlier generation is not established here.
 
+After the 2026-10-28 expansion to all article categories, this remains the primary environment reference. For prominent figures and creatures, also use [the approved figure gallery](figure-style-and-references.md); a seascape alone does not specify facial or anatomical stylization.
+
 ## Transferable rendering
 
 The image has confident silhouettes and selective contours, substantial light-and-shadow volume in pale cliffs and cloud masses, layered foliage, detailed translucent shallows, and a deep blue sea. Warm rock highlights contrast with cooler shadows; distant islands soften into blue atmospheric haze. Fine surface detail supports large readable forms rather than replacing them.

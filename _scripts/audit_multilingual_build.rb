@@ -1,8 +1,10 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
 
+require "cgi"
 require "json"
 require "pathname"
+require "uri"
 require_relative "astaria_translations"
 
 ROOT = Pathname.new(File.expand_path("..", __dir__))
@@ -132,6 +134,100 @@ else
   missing_en = russian_routes - english_routes
   expect.call(missing_ru.empty?, "English routes without Russian counterparts: #{missing_ru.join(', ')}")
   expect.call(missing_en.empty?, "Russian routes without English counterparts: #{missing_en.join(', ')}")
+end
+
+# Check the static HTML that link-preview crawlers read, including the hidden
+# Russian tree. No JavaScript or remembered language should affect sharing.
+social_metadata = {}
+english_routes.each do |route|
+  relative = "#{route}.html"
+  english_path = PUBLIC.join(relative)
+  next unless english_path.file?
+
+  english_title = CGI.unescapeHTML(english_path.read[/<title>(.*?)<\/title>/m, 1].to_s)
+  [english_path, PUBLIC.join("__locales", "ru", relative)].each do |path|
+    next unless path.file?
+
+    label = path.relative_path_from(PUBLIC).to_s
+    metadata = Hash.new { |hash, key| hash[key] = [] }
+    path.read.split("</head>", 2).first.scan(/<meta\b[^>]*>/).each do |tag|
+      attributes = tag.scan(/([\w:-]+)="([^"]*)"/).to_h
+      key = attributes["property"] || attributes["name"]
+      metadata[key] << CGI.unescapeHTML(attributes["content"].to_s) if key
+    end
+    social_metadata[label] = metadata
+
+    %w[og:title twitter:title].each do |key|
+      expect.call(metadata[key] == [english_title], "#{label}: #{key} must contain the English article title")
+    end
+    image = metadata["og:image"].first.to_s
+    %w[og:image og:image:url twitter:image].each do |key|
+      expect.call(metadata[key] == [image] && !image.empty?, "#{label}: #{key} must identify one shared artwork")
+    end
+    expect.call(metadata["twitter:card"] == ["summary_large_image"], "#{label}: large-image social card is missing")
+    expect.call(!image.include?("static/og-image.png"), "#{label}: sharing still uses the Quartz placeholder")
+    image_uri = URI.parse(image)
+    expect.call(
+      image_uri.scheme == "https" && image_uri.host == "losferwords.github.io" && image_uri.path.start_with?("/astaria/assets/"),
+      "#{label}: social artwork must have an absolute production asset URL"
+    )
+    image_file = PUBLIC.join(URI::DEFAULT_PARSER.unescape(image_uri.path.delete_prefix("/astaria/")))
+    expect.call(image_file.file?, "#{label}: social artwork is missing from the build: #{image}")
+    extension = File.extname(image_uri.path).delete_prefix(".")
+    mime_type = "image/#{extension == 'jpg' ? 'jpeg' : extension}"
+    expect.call(metadata["og:image:type"] == [mime_type], "#{label}: social artwork has the wrong MIME type")
+  end
+  english_image = social_metadata.dig(relative, "og:image")
+  russian_image = social_metadata.dig("__locales/ru/#{relative}", "og:image")
+  expect.call(english_image == russian_image, "#{relative}: locales must share the same artwork") if russian_image
+end
+
+# Cards and shared links must point to the very same artwork, including both
+# male-led and female-led Imithei paths and pages with multiple image fields.
+category_artwork_checks = 0
+english_routes.grep(%r{/index\z}).each do |route|
+  category_path = PUBLIC.join("#{route}.html")
+  next unless category_path.file?
+
+  page_url = "https://losferwords.github.io/astaria/#{route}.html"
+  category_path.read.scan(/<a class="astaria-category-card [^"]+" href="([^"]+)"[^>]*>(.*?)<\/a>/m).each do |href, card|
+    artwork = card[/<div class="astaria-category-card-image"><img src="([^"]+)"/, 1]
+    next unless artwork
+
+    relative = URI.join(page_url, CGI.unescapeHTML(href)).path.delete_prefix("/astaria/")
+    relative += "index" if relative.end_with?("/")
+    relative += ".html"
+    image_url = URI.join(page_url, CGI.unescapeHTML(artwork)).to_s
+    category_artwork_checks += 1
+    expect.call(
+      social_metadata.dig(relative, "og:image") == [image_url],
+      "#{relative}: social artwork differs from its category card"
+    )
+  end
+end
+expect.call(category_artwork_checks.positive?, "No category-card artwork was checked against sharing metadata")
+
+{
+  "places/astaria.html" => "astaria.png",
+  "imitei/paragon.html" => "paragon_m.jpg",
+  "imitei/navarch.html" => "navarch_female.jpg"
+}.each do |relative, filename|
+  expect.call(
+    social_metadata.dig(relative, "og:image") == ["https://losferwords.github.io/astaria/assets/images/#{filename}"],
+    "#{relative}: sharing selected the wrong main artwork"
+  )
+end
+
+{
+  "literature/chapter-001-the-highlanders-soul.html" => "literature/call-of-thunder.html",
+  "literature/chapter-003-voice-of-the-dead-god.html" => "literature/while-gods-sleep.html",
+  "literature/chapter-097-unseen-consequences.html" => "literature/wind-of-change.html"
+}.each do |chapter, saga|
+  saga_artwork = social_metadata.dig(saga, "og:image")
+  expect.call(
+    saga_artwork && social_metadata.dig(chapter, "og:image") == saga_artwork,
+    "#{chapter}: coverless chapter must inherit its saga's artwork"
+  )
 end
 
 {

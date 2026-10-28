@@ -1,9 +1,12 @@
 import { i18n } from "../i18n";
 import {
+  FilePath,
   FullSlug,
   getFileExtension,
+  isAbsoluteURL,
   joinSegments,
   pathToRoot,
+  slugifyFilePath,
 } from "../util/path";
 import {
   CSSResourceToStyleElement,
@@ -28,6 +31,7 @@ export default (() => {
     const title =
       (fileData.frontmatter?.title ?? i18n(cfg.locale).propertyDefaults.title) +
       titleSuffix;
+    const socialTitle = String(fileData.frontmatter?.socialTitle ?? title);
     const description =
       fileData.frontmatter?.socialDescription ??
       fileData.frontmatter?.description ??
@@ -55,7 +59,20 @@ export default (() => {
     const usesCustomOgImage = ctx.cfg.plugins.emitters.some(
       (e) => e.name === CustomOgImagesEmitterName,
     );
-    const ogImageDefaultPath = `https://${cfg.baseUrl}/static/og-image.png`;
+    const socialImage =
+      fileData.frontmatter?.socialImage ?? "Assets/Images/Astaria.png";
+    const ogImagePath = new URL(
+      isAbsoluteURL(socialImage)
+        ? socialImage
+        : slugifyFilePath(socialImage as FilePath),
+      siteRoot,
+    ).href;
+    const imageExtension = (
+      getFileExtension(new URL(ogImagePath).pathname) ?? ".png"
+    )
+      .slice(1)
+      .toLowerCase();
+    const ogImageMimeType = `image/${imageExtension === "jpg" ? "jpeg" : imageExtension}`;
 
     const coreStylesheet = css[0]?.content;
     const coreScript = js.find(
@@ -94,23 +111,21 @@ export default (() => {
         <meta name="theme-color" content="#fbfaf7" />
 
         <meta property="og:site_name" content={cfg.pageTitle}></meta>
-        <meta property="og:title" content={title} />
+        <meta property="og:title" content={socialTitle} />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={title} />
+        <meta name="twitter:title" content={socialTitle} />
         <meta name="twitter:description" content={description} />
         <meta property="og:description" content={description} />
-        <meta property="og:image:alt" content={description} />
+        <meta property="og:image:alt" content={socialTitle} />
+        <meta name="twitter:image:alt" content={socialTitle} />
 
         {!usesCustomOgImage && (
           <>
-            <meta property="og:image" content={ogImageDefaultPath} />
-            <meta property="og:image:url" content={ogImageDefaultPath} />
-            <meta name="twitter:image" content={ogImageDefaultPath} />
-            <meta
-              property="og:image:type"
-              content={`image/${(getFileExtension(ogImageDefaultPath) ?? "png").replace(/^\./, "")}`}
-            />
+            <meta property="og:image" content={ogImagePath} />
+            <meta property="og:image:url" content={ogImagePath} />
+            <meta name="twitter:image" content={ogImagePath} />
+            <meta property="og:image:type" content={ogImageMimeType} />
           </>
         )}
 

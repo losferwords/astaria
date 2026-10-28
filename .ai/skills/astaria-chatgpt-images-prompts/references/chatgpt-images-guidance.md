@@ -26,8 +26,8 @@ Keep these as author preferences, not claims that OpenAI requires them:
 
 - One complete English **new-generation** prompt in one code block after a short Russian concept; every revision remains complete. English is the agreed delivery language, not a special rendering parameter.
 - No fictional proper names inside the image brief unless the author explicitly wants a readable inscription. Translate the lore into familiar visual terms.
-- Explicit modern anime 2.5D art direction, clean grouped forms, selective detail and consistent volume across scenery and readable inhabitants.
-- A few situated activity groups in populated scenes, with people secondary and no forced foreground portraits.
+- Explicit modern anime 2.5D environment direction; for figures, the approved Anima references and [figure guidance](figure-style-and-references.md). Both use clean grouped forms, selective detail and consistent volume.
+- In settlement illustrations, a few situated activity groups with people secondary and no forced foreground portraits. Peoples, organizations and character scenes have their own focal hierarchy in [article composition](article-composition.md).
 
 Official examples sometimes use short follow-up edits. Do not replace the author's full-prompt preference with those snippets. Change a focused aspect while re-delivering the full scene; switch to an editing brief only on explicit request.
 

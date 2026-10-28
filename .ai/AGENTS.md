@@ -22,7 +22,7 @@ Paths below are relative to the repository root. Load the entrypoint, then only 
 | Preparation of a session or campaign chapter | `.ai/skills/astaria-session-prep/SKILL.md` |
 | Other brainstorming, standalone scenes, encounters and NPC ideas | `.ai/skills/astaria-idea-workbench/SKILL.md` |
 | Fate Core mechanics, character sheets, NPCs and scenario mechanics | `.ai/skills/astaria-fate-core/SKILL.md` |
-| ChatGPT Images still-image prompts, normally places and landscapes | `.ai/skills/astaria-chatgpt-images-prompts/SKILL.md` |
+| ChatGPT Images still-image prompts across article categories, including matching approved Anima art | `.ai/skills/astaria-chatgpt-images-prompts/SKILL.md` |
 | Anima / DaSiWa-Anima prompts, normally characters | `.ai/skills/astaria-anima-prompts/SKILL.md` |
 
 The specialized workflow determines the interaction and storage format: literary work stays in chat by default; business play uses chat and its live memory; session preparation builds one playable note through interactive choices. The general idea-workbench saving default does not override them. Explicit requests for chat only, a complete module, a language, or an image tool take precedence over defaults.
@@ -47,6 +47,7 @@ The specialized workflow determines the interaction and storage format: literary
 - Canonical notes have explicit boolean `ready` and `quartz`. Readiness and publication are independent. Keep secrets, GM mechanics and spoilers unpublished; ordinary relationship fields can expose reverse links even from unpublished notes.
 - Classify through folders and typed properties, not workflow tags or generic `astaria` tags.
 - For new character articles, use the vault's character reference and Astaria Fate Core; do not fill deliberately withheld personal history.
+- When creating, renaming or deleting a character, changing their public Imitei affiliation, or changing whether that affiliation is secret, update the `affected_people` sidebar list in `Энциклопедия/Знания/Имитей.md` and its English overlay when affected. Follow the [public-register rules](skills/astaria-obsidian-vault/references/characters.md#public-imitei-register); check affected characters rather than rescanning the vault in unrelated tasks.
 - A request to `опубликовать` means enabling intentional Quartz publication, preparing translations, synchronizing and validating. Do not commit or push unless the user asks for those git actions. Generated Quartz trees are not editable sources.
 
 ## Git checks

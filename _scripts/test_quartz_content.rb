@@ -1294,10 +1294,16 @@ events = read.call("events/index.html")
 expect.call(!events.match?(/\[!?timeline\]/i), "Event cards expose timeline markup")
 expect.call(!events.include?("Основной текст"), "Event cards expose the obsolete main-text heading")
 
-imitei_article = File.read(File.join(ROOT, "Энциклопедия", "Знания", "Имитей.md"))
-known_imitei_section = imitei_article.split("## Известные Имитеи:", 2).last.to_s
-imitei_article_positions = meta_imitei_order.map { |title| known_imitei_section.index("[[#{title}") }.compact
-expect.call(imitei_article_positions == imitei_article_positions.sort, "Known Imitei list is not in canonical meta order")
+imitei_data, = parse_frontmatter.call(File.join(ROOT, "Энциклопедия", "Знания", "Имитей.md"))
+imitei_path_positions = Array(imitei_data["affected_people"]).map do |person|
+  title = person.to_s[/\[\[([^|\]]+)/, 1]
+  path = canonical_by_reference.dig(title, :data, "imitei").to_s[/\[\[([^|\]]+)/, 1]
+  meta_imitei_order.index(path)
+end
+expect.call(
+  imitei_path_positions.none?(&:nil?) && imitei_path_positions == imitei_path_positions.compact.sort,
+  "Imitei sidebar list is not in canonical meta order"
+)
 
 bestiary = read.call("bestiary/index.html")
 expect.call(bestiary.include?(">Бестиарий</h1>"), "Bestiary must keep its canonical name")

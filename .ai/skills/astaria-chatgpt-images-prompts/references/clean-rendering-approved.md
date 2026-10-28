@@ -4,7 +4,7 @@
 
 On 2026-10-20 the user reported that the focused rendering revision worked well, supplied `Assets/Images/Namibua_Village.png`, and requested that its successful techniques become part of the ChatGPT Images skill. The supplied local image was inspected: the village layout, skull-painted pillars, warm lights and background rock-cut necropolis remain recognizable, while rock planes, roof materials and foliage read as cleaner, more coherent illustrated forms. The workflow's product name was corrected on 2026-10-26; this does not establish the exact backend version of each earlier image.
 
-Use this as a supporting reference for clean rendering, including night scenes. The Chthonic Sea remains the primary series reference. Do not transfer Namibua's jungle, African-inspired architecture, skull ornament, necropolis or night palette into unrelated subjects.
+Use this as a supporting reference for clean rendering, including night scenes. The Chthonic Sea remains the primary environment reference; [figure guidance](figure-style-and-references.md) covers prominent figures and living materials. Do not transfer Namibua's jungle, African-inspired architecture, skull ornament, necropolis or night palette into unrelated subjects.
 
 This is a user-approved result, not a controlled comparison or a guarantee that identical wording removes grain in every generation. A preview alone may not distinguish actual noise, excessive fine texture and compression artifacts. Describe visible evidence before suggesting a cause.
 

@@ -2602,7 +2602,7 @@ def english_metadata_value(value, lookup, preserve_cyrillic: false)
   end
 end
 
-def generated_frontmatter(data, body, lookup)
+def generated_frontmatter(source, data, body, lookup)
   public_data = data.reject do |key, _value|
     %w[ready quartz canonical_title legacy_public_route].include?(key) || key.to_s.start_with?("secret_")
   end
@@ -2615,6 +2615,19 @@ def generated_frontmatter(data, body, lookup)
   public_data["aliases"] = aliases.compact.map(&:to_s).uniq
   public_data["description"] = description_from_body(body, data)
   public_data = english_metadata_value(public_data, lookup) if BUILD_LOCALE == "en-GB"
+  # Sharing uses the same art as category cards. Coverless chapters inherit
+  # their saga's art; social titles stay English in both locale trees.
+  public_data["socialTitle"] = if BUILD_LOCALE == "en-GB"
+    data["title"]
+  else
+    AstariaTranslations.english_title_for(data["title"]) || data["title"]
+  end
+  image = primary_article_image(data, lookup)
+  unless image
+    saga = saga_landing_record(source, data, lookup)
+    image = primary_article_image(saga[:data], lookup) if saga
+  end
+  public_data["socialImage"] = image if image
 
   yaml = YAML.dump(public_data).sub(/\A---\s*\n/, "")
   "---\n#{yaml}---\n"
@@ -2668,7 +2681,7 @@ def write_public_article(source, route, data, body, lookup)
   end
   footer = build_article_footer(route, data)
   sections = [cover, title, lede, song_jump, sidebar, clean_body, chapter_navigation, chapters, journey, footer].map(&:strip).reject(&:empty?)
-  text = "#{generated_frontmatter(data, body, lookup)}\n#{sections.join("\n\n")}\n"
+  text = "#{generated_frontmatter(source, data, body, lookup)}\n#{sections.join("\n\n")}\n"
   unless data["type"] == "map"
     ASSET_REWRITES.each { |old_path, new_path| text = text.gsub(old_path, new_path) }
   end
@@ -2981,6 +2994,7 @@ def write_category_indexes(entries)
     body = <<~MARKDOWN
       ---
       title: #{JSON.generate(category_title)}
+      socialTitle: #{JSON.generate(EN_OUTPUT_REPLACEMENTS.fetch(category))}
       lang: ru
       description: #{JSON.generate(description)}
       aliases:
@@ -3049,6 +3063,8 @@ def write_index(entries)
   body = <<~MARKDOWN
     ---
     title: Астария
+    socialTitle: Astaria
+    socialImage: Assets/Images/Avatar_vs_Ascended.jpg
     lang: ru
     description: Мифологическая энциклопедия Астарии — мира богов, героев и древних цивилизаций.
     aliases:

@@ -1,6 +1,6 @@
 ---
 name: astaria-obsidian-vault
-description: Maintain Astaria canonical articles, Obsidian links and metadata, local images, maps, chronology and bilingual Quartz publication.
+description: Maintain Astaria canonical articles, Obsidian links and metadata, local images, maps, chronology, bilingual Quartz publication, site layout and local browser checks.
 ---
 
 # Astaria Obsidian Vault
@@ -52,7 +52,7 @@ Timeline records use numeric `year`, optional `endingYear`, `timeline: true`, `t
 
 ## Quartz
 
-For publication, public relationship changes or site layout, read [quartz.md](references/quartz.md). It owns multilingual commands, generated-tree boundaries, derived reverse relationships and the author’s typography constraints. Keep ordinary lore edits in canonical source notes.
+For publication, public relationship changes, site layout or local browser checks, read [quartz.md](references/quartz.md). It owns multilingual commands, generated-tree boundaries, derived reverse relationships, typography constraints and the standalone Playwright workflow for Codex in VS Code. Keep ordinary lore edits in canonical source notes.
 
 ## Validation
 

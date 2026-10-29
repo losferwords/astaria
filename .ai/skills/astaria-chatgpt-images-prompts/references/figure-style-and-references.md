@@ -33,6 +33,10 @@ For future sunlit briefs, use luminous clear daylight and moderately richer loca
 
 The author suggested `modern anime 2.5D` as a possible reinforcement. It is now the preferred style label in figure briefs, coupled with the same dimensional rendering instructions. The label and brighter-color wording were **not** the wording of the approved generation and have not been isolated in a comparison; do not claim they caused this result or are guaranteed controls. For creatures, use the appropriate subject noun instead of mechanically calling every image a character illustration.
 
+For an approved **night portrait**, use the final `Assets/Images/Tara_Sarkar.png`, accepted later on 2026-10-28 after reducing conspicuous warm illumination and surface emphasis. Read [its lighting and rendering findings](clean-rendering-approved.md#subdued-night-scenes-tara-approved). The daylight color preference from Vivek does not call for brighter illumination in Tara-like night scenes.
+
+The author's later framing feedback on **2026-10-28** establishes **medium shot or bust shot as the portrait default**: the generated cowboy shots made faces too small and sometimes suggested elongated proportions. Earlier approval of rendering, lighting or a character design does not make that image's wider crop the preferred composition. Use the gallery for those successful qualities while following the current closer framing; cowboy shot and full body require an explicit request.
+
 ## Skin, age, gaze and organic materials
 
 **Skin:** model broad cheek, brow, nose and mouth forms through soft transitions and subtle color variation. Keep small, purposeful highlights on lips, nose or a lit shoulder when appropriate. The successful art includes luminous skin; the disliked effect is a uniformly polished or waxy surface that erases structure. `Matte everywhere`, `perfect porcelain skin`, `photorealistic pores` and heavy subsurface-scattering terminology are poor blanket substitutes for the intended drawing treatment.

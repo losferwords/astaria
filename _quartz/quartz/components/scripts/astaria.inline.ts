@@ -92,6 +92,15 @@ function setupAstariaMap() {
 
   const viewport = explorer.querySelector<HTMLElement>(".astaria-map-viewport");
   const stage = explorer.querySelector<HTMLElement>(".astaria-map-stage");
+  const markerGroup = explorer.querySelector<HTMLElement>(
+    ".astaria-map-markers",
+  );
+  const markerToggle = explorer.querySelector<HTMLInputElement>(
+    ".astaria-map-marker-toggle input",
+  );
+  const expandButton = explorer.querySelector<HTMLButtonElement>(
+    '[data-map-action="expand"]',
+  );
   const search = explorer.querySelector<HTMLInputElement>(
     ".astaria-map-search",
   );
@@ -184,9 +193,10 @@ function setupAstariaMap() {
     Math.max(
       minScale,
       Math.min(
-        5,
-        mapWidth / (base.width * pixelRatio),
-        mapHeight / (base.height * pixelRatio),
+        20,
+        // Allow four times the source resolution for closer inspection.
+        (mapWidth * 4) / (base.width * pixelRatio),
+        (mapHeight * 4) / (base.height * pixelRatio),
       ),
     );
 
@@ -297,6 +307,10 @@ function setupAstariaMap() {
   };
 
   const showMarker = (marker: HTMLButtonElement, focusViewport = false) => {
+    if (markerToggle && markerGroup) {
+      markerToggle.checked = true;
+      markerGroup.hidden = false;
+    }
     selected?.classList.remove("is-selected");
     selected = marker;
     selected.classList.add("is-selected");
@@ -384,6 +398,14 @@ function setupAstariaMap() {
   };
 
   search.addEventListener("input", renderResults);
+  markerToggle?.addEventListener("change", () => {
+    if (markerGroup) markerGroup.hidden = !markerToggle.checked;
+    if (!markerToggle.checked) {
+      detail.hidden = true;
+      selected?.classList.remove("is-selected");
+      selected = null;
+    }
+  });
   search.addEventListener("keydown", (event) => {
     if (event.key === "Enter") {
       const first = results.querySelector<HTMLButtonElement>(
@@ -500,7 +522,7 @@ function setupAstariaMap() {
   );
 
   viewport.addEventListener("pointerdown", (event) => {
-    if ((event.target as Element).closest("button, a")) return;
+    if ((event.target as Element).closest("button, a, input, label")) return;
     state.dragging = true;
     state.pointerId = event.pointerId;
     state.px = event.clientX;
@@ -572,12 +594,67 @@ function setupAstariaMap() {
       selected = null;
     });
 
-  const observer = new ResizeObserver(renderTransform);
+  // A modal dialog keeps the map above the site header and confines keyboard
+  // focus to its controls without requesting the browser's fullscreen mode.
+  const expandedView = document.createElement("dialog");
+  expandedView.className = "astaria-map-expanded";
+  expandedView.setAttribute("aria-label", explorer.dataset.expandedLabel ?? "");
+  const placeholder = document.createComment("Astaria map position");
+  const updateExpandButton = (expanded: boolean) => {
+    if (!expandButton) return;
+    const label = expanded
+      ? expandButton.dataset.collapseLabel
+      : expandButton.dataset.expandLabel;
+    expandButton.setAttribute("aria-pressed", String(expanded));
+    expandButton.setAttribute("aria-label", label ?? "");
+    expandButton.title = label ?? "";
+  };
+  const restoreMap = () => {
+    if (expandedView.open || !expandedView.contains(explorer)) return;
+    placeholder.replaceWith(explorer);
+    document.documentElement.classList.remove("astaria-map-expanded-open");
+    updateExpandButton(false);
+    expandButton?.focus({ preventScroll: true });
+  };
+  expandedView.addEventListener("close", restoreMap);
+  expandButton?.addEventListener("click", () => {
+    if (expandedView.open) {
+      expandedView.close();
+      return;
+    }
+    explorer.before(placeholder);
+    expandedView.append(explorer);
+    document.body.append(expandedView);
+    document.documentElement.classList.add("astaria-map-expanded-open");
+    updateExpandButton(true);
+    expandedView.showModal();
+    expandButton.focus({ preventScroll: true });
+  });
+
+  let previousBase = baseDimensions();
+  const observer = new ResizeObserver(() => {
+    const base = baseDimensions();
+    // Preserve the geographic centre when expanding or resizing the map.
+    if (previousBase.width > 0 && previousBase.height > 0) {
+      state.x *= base.width / previousBase.width;
+      state.y *= base.height / previousBase.height;
+    }
+    previousBase = base;
+    renderTransform();
+  });
   observer.observe(viewport);
   const quartzWindow = window as Window & {
     addCleanup?: (fn: () => void) => void;
   };
-  quartzWindow.addCleanup?.(() => observer.disconnect());
+  quartzWindow.addCleanup?.(() => {
+    observer.disconnect();
+    if (cursorLogTimer !== null) window.clearTimeout(cursorLogTimer);
+    expandedView.removeEventListener("close", restoreMap);
+    if (expandedView.open) expandedView.close();
+    if (expandedView.contains(explorer)) placeholder.replaceWith(explorer);
+    expandedView.remove();
+    document.documentElement.classList.remove("astaria-map-expanded-open");
+  });
   renderResults();
   renderTransform();
 }
@@ -884,7 +961,40 @@ function setupAstariaLyrics() {
   }
 }
 
+function setupAstariaBackToTop() {
+  const button = document.querySelector<HTMLButtonElement>(
+    ".astaria-back-to-top",
+  );
+  if (!button || button.dataset.backToTopReady === "true") return;
+  button.dataset.backToTopReady = "true";
+
+  const updateVisibility = () => {
+    button.hidden = window.scrollY <= 300;
+  };
+  const scrollToTop = () => {
+    document
+      .querySelector<HTMLAnchorElement>(".astaria-sitebar-brand")
+      ?.focus({ preventScroll: true });
+    window.scrollTo({
+      top: 0,
+      behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches
+        ? "instant"
+        : "smooth",
+    });
+  };
+
+  updateVisibility();
+  window.addEventListener("scroll", updateVisibility, { passive: true });
+  button.addEventListener("click", scrollToTop);
+  window.addCleanup?.(() => {
+    window.removeEventListener("scroll", updateVisibility);
+    button.removeEventListener("click", scrollToTop);
+    delete button.dataset.backToTopReady;
+  });
+}
+
 function setupAstariaExperience() {
+  setupAstariaBackToTop();
   setupAstariaMap();
   setupAstariaTimeline();
   setupAstariaCategoryFilters();

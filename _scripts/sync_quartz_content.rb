@@ -1925,6 +1925,9 @@ def build_map_explorer(data, body, route, lookup)
       zoom_in: "Zoom in",
       zoom_out: "Zoom out",
       reset: "Show the whole map",
+      expand: "Expand map",
+      collapse: "Exit expanded map",
+      markers: "Markers",
       help: "Mouse wheel — zoom · Drag — pan"
     }
   else
@@ -1961,6 +1964,9 @@ def build_map_explorer(data, body, route, lookup)
       zoom_in: "Приблизить",
       zoom_out: "Отдалить",
       reset: "Показать всю карту",
+      expand: "На всё окно",
+      collapse: "Вернуться к странице",
+      markers: "Маркеры",
       help: "Колёсико — масштаб · Перетаскивание — обзор"
     }
   end
@@ -2005,15 +2011,21 @@ def build_map_explorer(data, body, route, lookup)
         </div>
         <p>#{ui[:description]}</p>
       </header>
-      <div class="astaria-map-explorer" data-map-width="#{width.to_i}" data-map-height="#{height.to_i}">
+      <div class="astaria-map-explorer" data-map-width="#{width.to_i}" data-map-height="#{height.to_i}" data-expanded-label="#{ui[:title]}">
         <div class="astaria-map-toolbar">
           <label class="astaria-map-search-label">
             <svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-4-4"></path></svg>
             <span class="sr-only">#{ui[:search]}</span>
             <input class="astaria-map-search" type="search" placeholder="#{ui[:search_placeholder]}" autocomplete="off">
           </label>
-          <div class="astaria-map-layer-switcher" role="group" aria-label="#{ui[:layer]}">
-            #{layer_buttons}
+          <div class="astaria-map-controls">
+            <label class="astaria-map-marker-toggle">
+              <input type="checkbox" role="switch" checked>
+              <span>#{ui[:markers]}</span>
+            </label>
+            <div class="astaria-map-layer-switcher" role="group" aria-label="#{ui[:layer]}">
+              #{layer_buttons}
+            </div>
           </div>
         </div>
         <div class="astaria-map-shell">
@@ -2048,6 +2060,10 @@ def build_map_explorer(data, body, route, lookup)
               </div>
             </div>
             <div class="astaria-map-zoom-controls" aria-label="#{ui[:zoom]}">
+              <button type="button" data-map-action="expand" data-expand-label="#{ui[:expand]}" data-collapse-label="#{ui[:collapse]}" aria-label="#{ui[:expand]}" title="#{ui[:expand]}" aria-pressed="false">
+                <svg class="astaria-map-expand-icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5"></path></svg>
+                <svg class="astaria-map-collapse-icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M3 8h5V3m8 0v5h5M8 21v-5H3m18 0h-5v5"></path></svg>
+              </button>
               <button type="button" data-map-action="zoom-in" aria-label="#{ui[:zoom_in]}">+</button>
               <button type="button" data-map-action="zoom-out" aria-label="#{ui[:zoom_out]}">−</button>
               <button type="button" data-map-action="reset" aria-label="#{ui[:reset]}">⌂</button>

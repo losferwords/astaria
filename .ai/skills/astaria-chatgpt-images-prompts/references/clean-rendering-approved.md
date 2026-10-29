@@ -45,3 +45,24 @@ On 2026-10-26 the author flagged the Amanohama result for grain-like surface cha
 For similar results, keep most wet surfaces dark and calmly shaded, concentrating broad reflections near actual lights. Group tile courses and foliage rather than tracing every tile and leaf; depict rain selectively, not as equally sharp marks over the whole image. Do not polish the entire lane into a mirror or blur the whole image to hide texture.
 
 Clean rendering must preserve volume in people as well as scenery. Use the figure-scale guidance in [inhabited-scenes.md](inhabited-scenes.md); do not interpret a request for anime styling as a requirement for flat two-tone characters. These are project-specific corrections to observed outputs, not guaranteed model controls.
+
+## Subdued night scenes: Tara approved
+
+On **2026-10-28**, the author approved the darker final version of `Assets/Images/Tara_Sarkar.png` as correct and smoother, and asked to preserve the approach especially for night scenes. The local final image was inspected: the bright foreground lantern is gone, the doorway and black garments sit in substantial shadow, the alley recedes through cooler dark layers, and warm lights are small distant accents. The eyes, skin, braid and costume remain readable without the earlier strong amber wash. Some garment texture and embroidery remain; the approved result does not require featureless fabric or complete removal of detail.
+
+The preceding iterations had an intrusive foreground lantern, bright amber illumination on the figure and wall, repeated fine marks across fabric and architecture, and sparkling paving. A first cleanup improved the surface treatment, but the author still found the warm illumination too conspicuous. The successful full-generation revision combined quieter lighting with broad shadow masses, smooth tonal transitions and reduced surface emphasis. Do not attribute the outcome to darkness alone, a backend change or a single style token.
+
+Transfer these decisions to new night briefs:
+
+- Establish the low light early. Faint diffuse night-sky illumination can reveal the essential face, hands and silhouette through gentle tonal separation. Keep natural skin color within the low illumination and avoid an electric-blue contour around every edge.
+- Let shadows remain deep and coherent. Hidden folds, distant carving and incidental masonry can merge into larger forms. Do not request visibility of every detail or lift all dark regions into textured grey.
+- Place practical lights according to the scene. For a quiet or concealed figure, small shielded lights farther away can provide atmosphere without washing the foreground in amber. Describe their limited reach; merely calling a large nearby lantern `dim` may leave it visually dominant.
+- Keep cloth volume in large folds and overlapping layers. Use selected seams, trim and ornaments for identity, with calmer surfaces between them. Preserve subtle skin modeling and material differences rather than applying blur or flattening everything into two-tone fills.
+- Keep paving mostly dark and matte where appropriate, with a few broad subdued light patches. Avoid turning the whole street into a glittering or mirror-like surface unless that is explicitly the requested subject.
+- Concentrate crispness on the eyes, a meaningful gesture and a few defining edges. Shadowed architecture and background forms can have softer edges without photographic blur.
+
+A reusable lighting vocabulary, adapted to the setting:
+
+> Subdued diffuse night lighting, faint neutral-cool sky light, deep coherent charcoal shadows and soft reflected tones. Reveal only the essential facial forms, hands and broad garment folds. Small distant practical lights remain muted and do not illuminate the foreground. Allow minor details to disappear naturally into shadow, preserving depth through overlapping shapes and subtle tonal separation.
+
+This is an author-tested preference for restrained night scenes, not a ban on warm light. A hearth gathering, ritual, festival or explicitly requested lantern-lit portrait may need a nearby warm source. Keep its visual hierarchy and surface treatment deliberate rather than imposing Tara's alley, costume, palette or exact light count on every image. Preserve the complete new-generation prompt contract during revisions.

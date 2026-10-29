@@ -99,6 +99,17 @@ const Body: QuartzComponent = ({
         </div>
       </header>
       {children}
+      <button
+        type="button"
+        class="astaria-back-to-top"
+        aria-label={isRussian ? "Наверх" : "Back to top"}
+        title={isRussian ? "Наверх" : "Back to top"}
+        hidden
+      >
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="m5 12 7-7 7 7M12 5v15" />
+        </svg>
+      </button>
     </div>
   );
 };

@@ -566,6 +566,10 @@
     color: var(--astaria-ink);
   }
 
+  .astaria-map-marker-toggle input:checked {
+    background: #c92a2a;
+  }
+
   .astaria-map-result {
     background: #2c2e33;
     border-color: var(--astaria-border);

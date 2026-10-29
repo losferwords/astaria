@@ -16,7 +16,7 @@ Paths below are relative to the repository root. Load the entrypoint, then only 
 
 | Task | Entrypoint |
 | --- | --- |
-| Canonical articles, vault structure, links, images, maps, chronology, Quartz | `.ai/skills/astaria-obsidian-vault/SKILL.md` |
+| Canonical articles, vault structure, links, images, maps, chronology, Quartz and local browser checks | `.ai/skills/astaria-obsidian-vault/SKILL.md` |
 | Literary stories, continuations, dream crossovers and Misty's diaries | `.ai/skills/losfer-storywriting/SKILL.md` |
 | Interactive management of Halyk-Byndir, Ui-Djan and Ulehey metallurgy | `.ai/skills/astaria-business-management/SKILL.md` |
 | Preparation of a session or campaign chapter | `.ai/skills/astaria-session-prep/SKILL.md` |
@@ -26,6 +26,8 @@ Paths below are relative to the repository root. Load the entrypoint, then only 
 | Anima / DaSiWa-Anima prompts, normally characters | `.ai/skills/astaria-anima-prompts/SKILL.md` |
 
 The specialized workflow determines the interaction and storage format: literary work stays in chat by default; business play uses chat and its live memory; session preparation builds one playable note through interactive choices. The general idea-workbench saving default does not override them. Explicit requests for chat only, a complete module, a language, or an image tool take precedence over defaults.
+
+Maksim works through the Codex extension in VS Code. For local Quartz screenshots and interactive checks, use the standalone Playwright workflow and standing local-server authorization in [the Quartz reference](skills/astaria-obsidian-vault/references/quartz.md#local-preview-and-browser-checks). This workflow can run from the terminal without a connected Browser plugin session.
 
 ## Sources and context
 

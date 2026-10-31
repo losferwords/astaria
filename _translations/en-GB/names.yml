@@ -77,10 +77,10 @@ names:
     title: Kumokawa River
     slug: kumokawa-river
     native_name: 雲川
-  Озеро Шинда:
-    title: Lake Shinda
-    slug: lake-shinda
-    native_name: 信田
+  Озеро Минамо:
+    title: Lake Minamo
+    slug: lake-minamo
+    native_name: 水面
   Деревня Аманохама:
     title: Amanohama
     slug: amanohama
@@ -105,9 +105,10 @@ names:
     title: Kiri
     slug: kiri
     native_name: 霧
-  Город Акуно:
-    title: Akuno
-    slug: akuno
+  Город Асагири:
+    title: Asagiri
+    slug: asagiri
+    native_name: 朝霧
   Город Шиори:
     title: Shiori
     slug: shiori
@@ -201,7 +202,7 @@ names:
   Амато:
     title: Amato
     slug: amato
-    native_name: 阿魔都
+    native_name: 天渡
   Амон-Астат:
     title: Amon-Astat
     slug: amon-astat
@@ -385,7 +386,7 @@ names:
   Эдзо:
     title: Edzo
     slug: edzo
-    native_name: 蝦夷
+    native_name: 恵祖
   Хефат:
     title: Khefat
     slug: khefat
@@ -662,7 +663,7 @@ names:
     title: Chapter 044 — Hordes of Vermin
     slug: chapter-044-hordes-of-vermin
   Глава 045 - Дорога в Найян:
-    title: Chapter 045 — The Road to Nayan
+    title: Chapter 045 — The Road to Naiyang
     slug: chapter-045-the-road-to-nayan
   Глава 046 - Кровь на Рактапатре:
     title: Chapter 046 — Blood upon Raktapatra
@@ -680,7 +681,7 @@ names:
     title: Chapter 050 — Li San's Letter
     slug: chapter-050-li-sans-letter
   Глава 051 - Штурм Найяна:
-    title: Chapter 051 — The Assault on Nayan
+    title: Chapter 051 — The Assault on Naiyang
     slug: chapter-051-the-assault-on-nayan
   Глава 052 - Восточные ворота:
     title: Chapter 052 — The Eastern Gate
@@ -905,6 +906,10 @@ names:
   Ли Сан:
     title: Li San
     slug: li-san
+  Дзин Сан:
+    title: Jin San
+    slug: jin-san
+    native_name: 瑾散
   Чани Сан:
     title: Chani San
     slug: chani-san
@@ -914,6 +919,10 @@ names:
   Чень Ляньши:
     title: Chen Lianshi
     slug: chen-lianshi
+  Ксан Ляньши:
+    title: Xan Lianshi
+    slug: xan-lianshi
+    native_name: "克燦憐世"
   Сунь Ляньши:
     title: Sun Lianshi
     slug: sun-lianshi
@@ -1067,10 +1076,18 @@ names:
     title: Xing-Yun
     slug: xing-yun
     native_name: 星云
+  Город Лан-Цзы:
+    title: Lan-Zi
+    slug: lan-zi
+    native_name: 瀾滋
+  Город Цин-Ха:
+    title: Qing-Ha
+    slug: qing-ha
+    native_name: 青荷
   Город Джу-Суо:
     title: Dju-Suo
     slug: dju-suo
-    native_name: 朱索
+    native_name: 朱所
   Город Чанг-Ша:
     title: Chang-Sha
     slug: chang-sha
@@ -1084,18 +1101,26 @@ names:
   Нуа Си:
     title: Nuwa Xi
     slug: nuwa-xi
-    native_name: 女媧 思
+    native_name: 諾婉席
+  Чинь Си:
+    title: Qin Xi
+    slug: qin-xi
+    native_name: 親席
   Бао Си:
     title: Bao Xi
     slug: bao-xi
-    native_name: 保 思
+    native_name: 保席
   Империя Ланг-Ан:
     title: Lang-An Empire
     slug: lang-an
   Долина Гармонии:
-    title: He-Dji-Gu
+    title: Harmony Valley
     slug: he-dji-gu
     native_name: 和諧谷
+    aliases:
+      - He-Dji-Gu
+      - Hexie Gu
+      - Héxié Gǔ
 
   Сребролесье:
     title: Silverwood
@@ -1179,10 +1204,10 @@ names:
     title: Amatsu Ami
     slug: amatsu-ami
     native_name: 天津 亜美
-  Тацуро Тору:
-    title: Tatsuro Toru
-    slug: tatsuro-toru
-    native_name: 立良 透
+  Тацуми Тору:
+    title: Tatsumi Toru
+    slug: tatsumi-toru
+    native_name: 立見 透
   Ишида Рецу:
     title: Ishida Retsu
     slug: ishida-retsu
@@ -1194,7 +1219,7 @@ names:
   Кирида Ариса:
     title: Kirida Arisa
     slug: kirida-arisa
-    native_name: 霧田 有咲
+    native_name: 切田 有咲
   Город Эльданас:
     title: Eldanas
     slug: eldanas
@@ -1265,17 +1290,21 @@ names:
     title: Temple of the Dragon
     slug: temple-of-the-dragon
   Город Найян:
-    title: Nayan
+    title: Naiyang
     slug: nayan
     native_name: 耐陽
   Деревня Тай-Линь:
     title: Tai-Lin
     slug: tai-lin
     native_name: 太林
+  Равнина Аксай-Джин:
+    title: Aksai-Jin Plain
+    slug: aksai-jin-plain
+    native_name: 阿克塞金
   Озеро Жень:
     title: Lake Zhen
     slug: lake-zhen
-    native_name: 润
+    native_name: 珍湖
   Озеро Чанг:
     title: Lake Chang
     slug: lake-chang

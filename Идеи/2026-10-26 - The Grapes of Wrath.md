@@ -1,5 +1,5 @@
 ---
-title: The Silent Fall of Evie
+title: The Grapes of Wrath
 type: idea
 created: 2026-10-26
 lang: en-GB
@@ -12,7 +12,7 @@ quartz: false
 private: true
 ---
 
-# The Silent Fall of Evie
+# The Grapes of Wrath
 
 “I’ve brought mud in.”
 
@@ -550,9 +550,7 @@ Amalia sat a little closer.
 
 “You already have, darling.” Amalia reached to brush the damp hair from Evie’s cheek, and the candlelight slid over long black claws.
 
----
-
-## Epilogue — for the separate art post
+· · ·
 
 “She is awake,” Losfy said.
 

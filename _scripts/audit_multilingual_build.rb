@@ -243,7 +243,7 @@ end
   "peoples/dju.html" => "Dju",
   "places/chang-sha.html" => "Chang-Sha",
   "places/dju-suo.html" => "Dju-Suo",
-  "places/he-dji-gu.html" => "He-Dji-Gu",
+  "places/he-dji-gu.html" => "Harmony Valley",
   "places/shenyan.html" => "Shenyan",
   "bestiary/rukh.html" => "Rukh",
   "timeline/index.html" => "History of Astaria"

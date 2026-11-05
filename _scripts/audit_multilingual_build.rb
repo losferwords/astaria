@@ -118,6 +118,47 @@ ENGLISH_CONTENT.glob("**/*.md").each do |path|
   )
 end
 
+# Native spellings and readings are sidebar facts, not part of a lore lede.
+# Inspect both the generated Markdown and actual HTML so a field cannot be
+# present in metadata while disappearing or moving elsewhere on the page.
+[
+  [RUSSIAN_CONTENT, PUBLIC.join("__locales", "ru"), "Имя на родном языке", "Чтение"],
+  [ENGLISH_CONTENT, PUBLIC, "Native name", "Reading"]
+].each do |content_root, html_root, native_label, reading_label|
+  content_root.glob("**/*.md").each do |path|
+    _before, yaml, body = path.read.split(/^---\s*$/, 3)
+    data = YAML.safe_load(yaml.to_s, permitted_classes: [Date, Time], aliases: true) || {}
+    next unless data["native_name"].to_s.match?(/[\p{Han}\p{Hiragana}\p{Katakana}]/u)
+
+    relative = path.relative_path_from(content_root).to_s
+    # Foreign dialogue in stories belongs to the story itself.
+    next if relative.start_with?("literature/")
+
+    prose = body.to_s.gsub(/<aside\b.*?<\/aside>/m, "")
+    expect.call(
+      !prose.match?(/[\p{Han}\p{Hiragana}\p{Katakana}]|мандаринск|Mandarin|external form|внешн.{0,12}форм/u),
+      "#{content_root.basename}/#{relative}: native-name commentary remains outside the sidebar"
+    )
+    next if data["native_reading"].to_s.empty?
+
+    reading = data["native_reading"].to_s
+    if content_root == ENGLISH_CONTENT
+      expect.call(!reading.match?(/[А-Яа-яЁё]/), "#{relative}: English reading contains Russian transcription")
+    end
+    html_path = html_root.join(relative.sub(/\.md\z/, ".html"))
+    expect.call(html_path.file?, "#{relative}: built native-name page is missing")
+    next unless html_path.file?
+
+    sidebar = html_path.read[/<aside\b[^>]*class="astaria-sidebar[^>]*>.*?<\/aside>/m].to_s
+    rows = sidebar.scan(/<div class="astaria-infobox-row"><dt>(.*?)<\/dt><dd>(.*?)<\/dd><\/div>/m)
+    native_index = rows.index { |label, _value| label == native_label }
+    expect.call(
+      native_index && rows[native_index + 1] == [reading_label, CGI.escapeHTML(reading)],
+      "#{html_root.basename}/#{relative}: reading must appear immediately after the native name"
+    )
+  end
+end
+
 markdown_routes = lambda do |root|
   root.glob("**/*.md").map do |path|
     path.relative_path_from(root).to_s.sub(/\.md\z/, "")

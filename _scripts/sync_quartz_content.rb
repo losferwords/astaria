@@ -189,6 +189,8 @@ ASSET_REWRITES = {
 
 INFOBOX_FIELDS = [
   ["native_name", "Имя на родном языке"],
+  ["native_reading", "Чтение"],
+  ["name_meaning", "Толкование имени"],
   ["location_type", "Тип места"],
   ["settlement_type", "Тип поселения"],
   ["organization_type", "Тип организации"],
@@ -237,6 +239,7 @@ INFOBOX_FIELDS = [
   ["government", "Форма правления"],
   ["domains", "Сферы влияния"],
   ["symbols", "Священные символы"],
+  ["powers", "Силы и дары"],
   ["eyes", "Глаза"],
   ["hair", "Волосы"],
   ["skin", "Кожа / окрас"],
@@ -308,6 +311,9 @@ INFOBOX_LABELS_EN = {
   "story_locations" => "Location",
   "season" => "Season",
   "native_name" => "Native name",
+  "native_reading" => "Reading",
+  "name_meaning" => "Name meaning",
+  "powers" => "Powers and gifts",
   "location_type" => "Location type",
   "settlement_type" => "Settlement type",
   "organization_type" => "Organisation type",
@@ -566,7 +572,7 @@ EN_OUTPUT_REPLACEMENTS = {
   "Деревня Минчуань" => "Minchuan",
   "Лес Шеньянь" => "Shenyan",
   "Озеро Чанг" => "Lake Chang",
-  "Озеро Шуан" => "Lake Shuan",
+  "Озеро Шуан" => "Lake Shuang",
   "Мэй Ву" => "Mei Wu",
   "НЭ" => "NE",
   "ХЭ" => "ChE",
@@ -979,6 +985,12 @@ def localized_source(source, data, body)
   translated_data, translated_body, = translation
   canonical_title = data["title"].to_s
   localized_data = data.merge(translated_data)
+  # Name annotations belong to the sidebar and are localised explicitly.
+  # Never inherit a Russian transcription or explanation into English prose
+  # or sidebar rows when an overlay has not supplied its own value.
+  %w[native_reading name_meaning powers].each do |key|
+    localized_data.delete(key) unless translated_data.key?(key)
+  end
   approved = AstariaTranslations.name_for(canonical_title)
   if approved
     localized_data["title"] = approved.fetch("title")
@@ -1516,19 +1528,6 @@ def build_imitei_hero(route, data, body, lookup)
   end
   home_href = relative_href(route, "index")
   category_route = CATEGORY_ROUTES.fetch("Имитеи")
-  native_name = data["native_name"].to_s.strip
-  native_html = if native_name.empty?
-    ""
-  else
-    native_language = if native_name.match?(/[\p{Han}\p{Hiragana}\p{Katakana}]/u)
-      "ja"
-    elsif native_name.match?(/[А-Яа-яЁё]/)
-      "ru"
-    else
-      "und"
-    end
-    %(<p class="astaria-imitei-native" lang="#{native_language}">#{CGI.escapeHTML(native_name)}</p>)
-  end
   description = description_from_body(body, data)
 
   ui = if BUILD_LOCALE == "en-GB"
@@ -1615,7 +1614,6 @@ def build_imitei_hero(route, data, body, lookup)
         <div class="astaria-imitei-hero-copy">
           <p class="astaria-imitei-kicker">#{ui[:kicker]}</p>
           <h1 class="astaria-content-title astaria-imitei-title-#{title_size}">#{CGI.escapeHTML(title)}</h1>
-          #{native_html}
           <p class="astaria-imitei-lede">#{CGI.escapeHTML(description)}</p>
           #{metadata_html}
         </div>

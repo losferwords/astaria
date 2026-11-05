@@ -8,6 +8,10 @@ Keep secrets, private mechanics, brainstorming, and notes with `quartz: false` o
 
 Site typography is self-hosted: keep `fontOrigin: local` and the bundled Alegreya SC / IBM Plex Mono files and licenses in `_quartz/quartz/static/fonts/`. Use `1rem` for the article body and preserve the author's `--astaria-prose-width: 82ch` when changing fonts. Keep `82ch` as a maximum, not a minimum requirement for displaying the sidebar. Keep the article container at `1170px`, as requested by the author, independently of the prose measure. Above the existing `900px` mobile breakpoint, the text uses the available space up to the sidebar's left margin and keeps that same width below the sidebar. Do not reintroduce a container query that stacks metadata merely because the full maximum prose measure does not fit. On mobile and in search previews, place metadata above the prose. This applies to countries, characters and other lore as well as stories.
 
+## Name details in sidebars
+
+For Lang-An and Amato, keep the opening definition in the article's language without parallel names, CJK parentheses or real-world linguistic commentary. Use `native_name` for the approved script, `native_reading` for its reading and `name_meaning` for an optional interpretation. The sidebar places Reading immediately after Native name, followed by Name meaning. English overlays supply their own annotation values; these fields do not fall back to Russian. Do not introduce labels such as Mandarin or Pinyin into the lore. Preserve in-world history and customs, meaningful local spoken names and foreign-language dialogue in literary works.
+
 ## Publication workflow
 
 - Generate from canonical sources and approved `_translations/en-GB/` overlays. Do not edit `_quartz/content/`, `_quartz/content-ru/`, `_quartz/content-en/`, `_quartz/build/` or `_quartz/public/` as sources.

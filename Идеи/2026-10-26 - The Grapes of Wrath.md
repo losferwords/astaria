@@ -16,535 +16,305 @@ private: true
 
 “I’ve brought mud in.”
 
-Evie stood just inside the door, scraping mud from one boot with the other. A cabbage leaf had caught beneath her heel. She stooped to pick it up, lost her balance and caught the doorpost with a stifled gasp.
+Evie stood just inside the door, scraping mud from one boot with the other. Loose fair hair framed her pale, fine-boned face; her blue eyes stayed on the mess at her feet. A cabbage leaf had caught beneath her heel. She stooped to pick it up, lost her balance and caught the doorpost with a stifled gasp.
 
-Sister Amalia put down her mending. “Leave it. Come nearer the stove.”
+Sister Amalia put down her mending and reached towards her. “Leave it, my dear. Come and sit by the stove.”
 
 “I can clean it first.”
 
-“It will still be there when you’re warm.”
+“You can get warm first,” Amalia said firmly. “The floor won’t mind waiting.”
 
 The sister drew out a stool. She was a broad, greying woman with a needle tucked into her sleeve and a little flour on her red wool skirt. Behind her, three candles stood beneath the emblems of the Triune. The one below the red circle of Mefis had burnt almost down to its holder.
 
-Evie sat with her basket on her knees. Two small onions rolled against its side.
+Evie sat with her basket on her knees. Two small onions rolled against its side. “For the kitchen,” she said.
 
-“For the kitchen,” she said.
-
-“Thank you. Have you eaten?”
+“Thank you, child. Those will do nicely in the soup. Have you eaten?”
 
 “I had the heel of the loaf.”
 
-Amalia cut bread from a round loaf beside the stove. Evie took the piece in both hands but did not bite it.
-
-“How is your wrist?”
+Amalia cut bread from a round loaf beside the stove. Evie took the piece in both hands but did not bite it. “How is your wrist?” Amalia asked, watching her hold the bread.
 
 The young woman pulled her cuff down. “Better.”
 
-“May I see?”
+“Let me have a look, if you don’t mind.” Amalia held out her hand and waited.
 
-After a moment, she held it out. Amalia turned the hand gently. Yellow bruising spread beneath the pale skin; nearer the thumb, a darker mark remained.
+After a moment, Evie offered hers. The sister turned it gently. Yellow bruising spread beneath the pale skin; nearer the thumb, a darker mark remained.
 
 “He says I make him do it. I answer too slowly, or I answer when he hasn’t asked me anything. Yesterday he said I looked at him as though he were a stranger. I was only tired.”
 
-Amalia lowered Evie’s hand to the table.
+Amalia kept Evie’s hand between her own for a moment. “He’s wrong, Evie. He could have kept his hands to himself, whatever you said.” She lowered it gently to the table. “There’s ointment left. I’ll give you some.”
 
-“There’s ointment left. Take it with you.”
+“Dorius says I must learn what a husband needs. He says his son could have married a woman with land.” She worked the cuff over the last of the bruising. “Cain says being his wife means I can’t refuse him. Even when I ask him to leave me alone. After my parents died, Dorius took me in. Everyone remembers that. They remember it whenever I ask for anything.”
 
-“Dorius says I must learn what a husband needs. He says his son could have married a woman with land.”
+Outside, a cart jolted over the ruts. A man called to his mule. Evie waited until the wheels had passed. “There’s something else. I have dreams.”
 
-She worked the cuff over the last of the bruising.
-
-“Cain says being his wife means I can’t refuse him. Even when I ask him to leave me alone. After my parents died, Dorius took me in. Everyone remembers that. They remember it whenever I ask for anything.”
-
-Outside, a cart jolted over the ruts. A man called to his mule. Evie waited until the wheels had passed.
-
-“There’s something else.”
-
-Amalia settled her mending in her lap.
-
-“I have dreams.”
-
-“Bad ones?”
+“Bad ones, my dear?” Amalia asked.
 
 “They must be.”
 
-The needle stopped above the cloth.
+The sister drew her stool a little nearer. “Tell me what happens.”
 
-“Tell me what happens.”
+“There’s a woman. At least, she looks like a woman at first. Her hair is black and very long. And then I see the horns. They curl over her head, and there are red cracks in them, as though something is burning inside.” Evie set the bread down. “Her hands are black. Shiny, with claws. She has teeth like a hunting animal, and a tail with spines all along it. When she smiles, you can see the teeth. All of them.”
 
-“There’s a woman. At least, she looks like a woman at first. Her hair is black and very long. And then I see the horns. They curl over her head, and there are red cracks in them, as though something is burning inside.”
-
-Evie set the bread down.
-
-“Her hands are black. Shiny, with claws. She has teeth like a hunting animal, and a tail with spines all along it. When she smiles, you can see the teeth. All of them.”
-
-“Does she threaten you?”
+“Does she threaten you?” Amalia asked with concern.
 
 “No. She asks why I’m standing so far away.”
 
-A log shifted in the stove. Evie straightened sharply.
+A log shifted in the stove. Evie straightened sharply. “You can move farther back if you’re too hot, my dear,” Amalia said, making room beside her.
 
-“You can have the stool a little farther back,” Amalia said.
+“No, Sister. It’s good here.” She stretched her fingers towards the warmth. “The room in the dream is warm too. The walls are made of boards, but there are no draughts. She sits on the bed as if she’s been waiting. I tell her she ought to go. She says she can, if I want.”
 
-“No, Sister. It’s good here.”
+“What do you tell her?” the sister asked gently.
 
-She stretched her fingers towards the warmth.
+Evie bent over the basket. “I wake up.” The onions clicked together. “Is dreaming such a thing a sin?”
 
-“The room in the dream is warm too. The walls are made of boards, but there are no draughts. She sits on the bed as if she’s been waiting. I tell her she ought to go.”
-
-“And does she?”
-
-“She says she can, if I want.”
-
-“What do you tell her?”
-
-Evie bent over the basket. “I wake up.”
-
-The onions clicked together.
-
-“Is dreaming such a thing a sin?”
-
-“A dream can frighten you without making you wicked.”
+“You’ve enough to worry about when you’re awake, my dear. I won’t scold you for a dream.”
 
 “I didn’t call her. I wouldn’t know how.”
 
-“Then don’t torment yourself over that.”
+“Then don’t torment yourself over that. Eat a little. You’ve hardly touched your bread.”
 
 “She knows my name.”
 
-Amalia drew the thread through the cloth. “Did she give you hers?”
+“Did she give you hers?” Amalia asked.
 
-“Losfy.”
+“Losfy.” Evie said it again, more quietly, looking at the stove. “She has freckles. Across her nose. It’s a foolish thing to notice. I don’t know why I told you.”
 
-Evie said it again, more quietly, looking at the stove.
+“I’m glad you told me,” Amalia said. “You needn’t leave things out because you think I’ll find them silly.”
 
-“She has freckles. Across her nose. It’s a foolish thing to notice. I don’t know why I told you.”
+Evie picked up the bread and finally ate. When the bells from the meeting house sounded, she brushed the crumbs into her palm. “I must go. He’ll want his supper.”
 
-“You were telling me what she looks like.”
+Amalia lifted the onions from the basket and replaced them with a small jar wrapped in cloth. “Come again, my dear. You needn’t bring anything. There’s always a place by the stove for you.”
 
-“Yes.”
-
-Evie picked up the bread and finally ate.
-
-When the bells from the meeting house sounded, she brushed the crumbs into her palm.
-
-“I must go. He’ll want his supper.”
-
-Amalia lifted the onions from the basket and replaced them with a small jar wrapped in cloth.
-
-“Come again if you wish to talk.”
-
-Evie rose, then looked down at the cabbage leaf beside the door.
-
-“Leave that to me,” the sister said.
+Evie rose, then looked down at the cabbage leaf beside the door. “Leave that to me,” the sister said. “Mind your wrist.”
 
 · · ·
 
-The ointment jar came back wrapped in clean linen.
-
-“There’s still some in it,” Amalia said.
+The ointment jar came back wrapped in clean linen. “There’s still some in it,” Amalia said.
 
 “I thought someone else might need it.”
 
+“Well, I made enough for them too. Keep it, my dear.” She put the jar beside Evie’s basket.
+
 Evie had combed her fair hair and fastened it with a narrow blue ribbon. A loose end brushed her cheek whenever she moved. She tucked it away, and it fell again.
 
-“How have you been sleeping?”
+“Have you been sleeping any better?” Amalia asked.
 
-“Badly.”
+“Badly. She’s come back. More than once. I’ve tried sleeping with the shutters open. I thought the cold might keep the dreams away. Cain made me close them. Then I tried not sleeping at all, but I fell asleep over the washing, and he said if I had strength to sit idle I had strength to finish. When I did sleep, she was there, in the same room. She asked if I wanted to be alone. I said there was no need for her to go. So she stayed. She laughs at things. Little things. The way I keep saying ‘if you please’. Once I apologised for sitting on her tail. She put it there on purpose.” A brief laugh escaped her. She looked down and pressed her lips together.
 
-Amalia put the jar on the shelf.
+Amalia brought her a cup. “Is she beautiful?” she asked with a gentle smile.
 
-“She’s come back. More than once. I’ve tried sleeping with the shutters open. I thought the cold might keep the dreams away. Cain made me close them. Then I tried not sleeping at all, but I fell asleep over the washing, and he said if I had strength to sit idle I had strength to finish.”
+“No.” The answer came before the cup had stopped moving. “No, Sister. I told you what she is. The horns, and her mouth... You wouldn’t call that beautiful.”
 
-“And when you did sleep?”
+“I haven’t seen her, my dear. That’s why I’m asking.”
 
-“She was there, in the same room. She asked if I wanted to be alone. I said there was no need for her to go. So she stayed. She laughs at things. Little things. The way I keep saying ‘if you please’. Once I apologised for sitting on her tail.”
+“Of course.” Evie lifted the cup, found it too hot and set it down. “There’s a red glow in her eyes when she looks straight at you. And those dreadful hands. I don’t know how she can touch anything without breaking it.”
 
-“Did you hurt her?”
+“Has she broken anything?” Amalia asked.
 
-“No. She put it there on purpose.”
+“No. She’s very careful.” The ribbon slipped loose. Evie left it hanging. “With me, I mean. There was a little scratch once. I moved before she’d taken her hand away. She stopped straight away. She was upset. I told her it was nothing.”
 
-A brief laugh escaped her. She looked down and pressed her lips together.
+“Was there a mark when you woke?” the sister asked.
 
-Amalia set a cup beside her.
+“No. I looked. That’s what frightens me. How quickly I said it didn’t matter. I didn’t want her to leave.” Amalia waited while she drank. “She kissed me,” Evie added at last. The cup clicked against the saucer.
 
-“Is she beautiful?”
-
-“No.”
-
-The answer came before the cup had stopped moving.
-
-“No, Sister. I told you what she is. The horns, and her mouth... You wouldn’t call that beautiful.”
-
-“I haven’t seen her.”
-
-“Of course.”
-
-Evie lifted the cup, found it too hot and set it down.
-
-“There’s a red glow in her eyes when she looks straight at you. And those dreadful hands. I don’t know how she can touch anything without breaking it.”
-
-“Has she broken anything?”
-
-“No. She’s very careful.”
-
-The ribbon slipped loose. Evie left it hanging.
-
-“With me, I mean. There was a little scratch once. I moved before she’d taken her hand away. She stopped straight away. She was upset. I told her it was nothing.”
-
-“Was there a mark when you woke?”
-
-“No. I looked. That’s what frightens me. How quickly I said it didn’t matter. I didn’t want her to leave.”
-
-Amalia waited while she drank.
-
-“She kissed me.”
-
-The cup clicked against the saucer.
-
-“Did you want her to?”
+“And you wanted her to do that?” Amalia asked, surprised.
 
 “I didn’t know what to do. She waited. I said something foolish. I asked about her teeth.”
 
-“You were afraid she’d hurt you.”
+“I’d have wondered about the teeth too,” Amalia said.
 
-“She said I could find out without putting my whole head in her mouth.”
+“She said I could find out without putting my whole head in her mouth.” Evie covered her face. When she lowered her hands, she was smiling. “It sounds wicked when I repeat it.”
 
-Evie covered her face. When she lowered her hands, she was smiling.
+“You can tell me,” Amalia said kindly. “I’d rather hear it than have you worrying alone.”
 
-“It sounds wicked when I repeat it.”
+Evie looked at the door. Beyond it, someone was stacking firewood beneath the eaves. “Then I kissed her. And... that wasn’t all. But I don’t enjoy it,” she added quickly. “Being there. Lying beside her. Any of it. Please don’t think I came to boast of such things.”
 
-“And then?”
-
-She looked at the door. Beyond it, someone was stacking firewood beneath the eaves.
-
-“Then I kissed her. And... that wasn’t all.”
-
-“But I don’t enjoy it,” Evie added quickly. “Being there. Lying beside her. Any of it. Please don’t think I came to boast of such things.”
-
-“What troubles you most about it?”
+“Oh, Evie, I don’t think you came to boast. What are you most afraid of?”
 
 “That I let her stay. And that I know she’ll be there again. When I’m laying the fire, or shaking out the bedding, sometimes I... It’s only that there’s so much time to think while your hands are busy. I don’t sit about dreaming.”
 
-“I don’t think you do.”
+“I know how hard you work, my dear. You needn’t explain that to me.”
 
 “Cain does. If he catches me looking out of the window.”
 
-The wood outside fell with a clatter. Evie turned towards the sound, then back.
+The wood outside fell with a clatter. Evie turned towards the sound, then back. “He doesn’t like me wearing this ribbon. Says I must have somebody to please. It was my mother’s. I found it in the bottom of my box.”
 
-“He doesn’t like me wearing this ribbon. Says I must have somebody to please. It was my mother’s. I found it in the bottom of my box.”
-
-“Your mother’s? It’s a lovely colour on you.”
+“Your mother’s? Well, I’m glad you found it. It’s a lovely colour on you.”
 
 “I only put it on after I’d left the house.”
 
-Amalia reached into her sewing basket and offered a small wooden hairpin. Evie slipped it into her hair to hold the loose end of the ribbon in place.
+“I have a pin for that,” Amalia said. She reached into her sewing basket and offered a small wooden hairpin. Evie slipped it into her hair to hold the loose end of the ribbon in place.
 
-“Does she speak to you kindly?” the sister asked.
+“And does she speak to you kindly?” the sister asked. “You’ve had enough harsh words.”
 
 “She has such a young voice. Soft... sweet as honey. She takes her time over the words. Even across the room, it sounds as though she’s whispering right into my ear. She calls me darling.”
 
-For a while, the only sound was the man gathering his scattered wood.
+For a while, the only sound was the man gathering his scattered wood. “I know such creatures can deceive,” Evie said. “I’ve heard the stories. Something can sound kind and still be wicked. Tell me I can stop it.”
 
-“I know such creatures can deceive,” Evie said. “I’ve heard the stories. Something can sound kind and still be wicked.”
+“You said she would leave if you wished it,” Amalia said. “Have you asked her since that first night?”
 
-“How can I help?”
+Evie opened her mouth, then looked down into the cup. “No. Only the first time.”
 
-“Tell me I can stop it.”
-
-“You said you told her to go.”
-
-Evie opened her mouth, then looked down into the cup.
-
-“The first time.”
-
-“Have you asked her since?”
-
-“No.”
-
-“Why?”
+“What stops you, my dear?”
 
 “She might.”
 
-The man outside called a farewell. Amalia answered him through the door, then returned to her stool.
-
-“You won’t be turned away for telling me something difficult, Evie.”
+The man outside called a farewell. Amalia answered him through the door, then returned to her stool. “You can come back even if the dream does,” Amalia told her. “I’m not going to shut my door on you.”
 
 “You must be disappointed.”
 
-“No, Evie. I’m glad you came.”
+“No, Evie. I’m glad you came. Sit a little longer, if you can.”
 
 Evie nodded several times. She finished her drink with both hands around the cup.
 
-At the door she stopped to untie the ribbon. She stood holding it, then folded it into her sleeve.
+At the door she stopped to untie the ribbon. She stood holding it, then folded it into her sleeve. “I’ll bring your hairpin back.”
 
-“I’ll bring your hairpin back.”
-
-“Keep it. You may want it again.”
+“Keep it, my dear. I’ve another.”
 
 · · ·
 
 “I hate the sound of his spoon.”
 
-Amalia looked up from the beans she was sorting.
-
 Evie stood before the table without her basket. Her hair was pinned neatly back. She had not taken off her cloak.
 
-“Sit down.”
+Amalia pushed the bowl of beans aside. “Come and sit down, my dear. The beans can wait.”
 
 “He scrapes it against his teeth. Every mouthful. I can hear it from the yard. Yesterday I stood with the pail in my hands and waited for him to finish. The water was freezing. I couldn’t make myself go inside.”
 
-She sat and took off her cloak, folding it over her knees. Amalia pushed the bowl of unsorted beans aside.
+She sat and took off her cloak, folding it over her knees. “His father saw me. He’d come to look at the roof. He asked why the hearth was smoking, and I told him Cain hadn’t cleared the flue. Cain told him I hadn’t laid the fire properly. So Dorius showed me how. Very patiently. As though I hadn’t lit that hearth every morning since he put me in the house. Cain sat eating, and his father told me I should be grateful to have someone willing to teach me.” Her thumbnail moved along a seam in the wool. “I thanked him. I heard myself do it.”
 
-“His father saw me. He’d come to look at the roof. He asked why the hearth was smoking, and I told him Cain hadn’t cleared the flue. Cain told him I hadn’t laid the fire properly. So Dorius showed me how. Very patiently. As though I hadn’t lit that hearth every morning since he put me in the house. Cain sat eating, and his father told me I should be grateful to have someone willing to teach me.”
+“I’m sure you know how to light your own hearth,” Amalia said. “You’ve had practice enough.”
 
-Her thumbnail moved along a seam in the wool.
+Amalia drew the curtain across the narrow doorway to the kitchen. Voices continued on the other side: a woman asking for meal, a child reciting the names of the Three. “I’m here, child,” she said as she sat down again. “Take the time you need.”
 
-“I thanked him. I heard myself do it.”
+“I have to be quick. I told Cain I was fetching salt.” Evie drew a little purse from her sleeve and put it on the table. “I used to think if the house were clean enough, or his food came at the right time, there would be an evening when he wouldn’t find anything. Now I can do everything properly and watch him looking for it. Something to put his finger on. A spot on a cup. A hair. Yesterday he found nothing. So he asked why I looked pleased with myself.”
 
-Amalia drew the curtain across the narrow doorway to the kitchen. Voices continued on the other side: a woman asking for meal, a child reciting the names of the Three.
-
-“There’s no hurry,” she said, returning.
-
-“I have to be quick. I told Cain I was fetching salt.”
-
-Evie drew a little purse from her sleeve and put it on the table.
-
-“I used to think if the house were clean enough, or his food came at the right time, there would be an evening when he wouldn’t find anything. Now I can do everything properly and watch him looking for it. Something to put his finger on. A spot on a cup. A hair. Yesterday he found nothing. So he asked why I looked pleased with myself.”
-
-“Were you?” Amalia asked.
+“Were you?” Amalia asked with a small smile. “I’d be glad to hear it.”
 
 “I’d slept well. It’s not as though I spend the day longing for her. There’s work. Sometimes I finish it early so... Well, so Cain can’t say I’ve neglected anything. That’s all.”
 
-“Has the dream changed?”
+“Has the dream changed?” Amalia asked after a moment.
 
-“There are different dreams. Sometimes we stand at the window. Just looking at the rain. There’s nothing wrong with looking at rain. Once she opened the window. The wind blew the rain in and wet her hair. I said she was a poor sort of demon if she couldn’t keep the rain out. She said I was welcome to find a better one.”
+“There are different dreams. Sometimes we stand at the window. Just looking at the rain. There’s nothing wrong with looking at rain. Once she opened the window. The wind blew the rain in and wet her hair. I said she was a poor sort of demon if she couldn’t keep the rain out. She said I was welcome to find a better one.” She glanced towards the curtain. “We’ve been... close. Again. We... stroke each other. In the dream.”
 
-She glanced towards the curtain.
+“Tenderly? For comfort?” the sister asked kindly.
 
-“We’ve been... close. Again. We... stroke each other. In the dream.”
+Evie flushed and lowered her eyes. “Yes... you could put it that way. I know I ought to be ashamed to say it. I am ashamed. But you asked whether it had changed. I stayed until morning. I asked to. When I woke, Cain told me to get up. That was all. He wanted the fire.”
 
-“Tenderly? For comfort?”
+Someone stirred the pot in the kitchen, scraping the bottom with a wooden spoon. Evie paused before going on. “Losfy says I don’t know how much there is in me. She makes me sit still and listen. I tell her there’s nothing to hear. Then, sometimes, it feels like standing at the edge of deep water. Only it’s inside. I can’t explain it. She says I mustn’t be frightened of it. That it was mine before she came.”
 
-Evie flushed and lowered her eyes.
+“Does it frighten you, feeling something like that?” Amalia asked with concern.
 
-“Yes... you could put it that way. I know I ought to be ashamed to say it. I am ashamed. But you asked whether it had changed. I stayed until morning. I asked to.”
+“When I wake up. In the dream I can do as she asks. I can hold still. Here, everything wants something. The hens, the fire, his father, him. I can’t hear myself at all.” She caught the edge of her cloak in both fists. “I tried praying. I began with what I was supposed to say, but then I could only say I wanted it to stop. I kept saying it. I didn’t even know who I was asking.”
 
-“What happened when you woke?”
+Amalia poured water into a cup and put it into her hands. “Here, my dear. Drink a little.”
 
-“Cain told me to get up. That was all. He wanted the fire.”
-
-Someone stirred the pot in the kitchen, scraping the bottom with a wooden spoon. Evie paused before going on.
-
-“Losfy says I don’t know how much there is in me. She makes me sit still and listen. I tell her there’s nothing to hear. Then, sometimes, it feels like standing at the edge of deep water. Only it’s inside. I can’t explain it. She says I mustn’t be frightened of it. That it was mine before she came.”
-
-“Does that frighten you?”
-
-“When I wake up. In the dream I can do as she asks. I can hold still. Here, everything wants something. The hens, the fire, his father, him. I can’t hear myself at all.”
-
-She caught the edge of her cloak in both fists.
-
-“I tried praying. I began with what I was supposed to say, but then I could only say I wanted it to stop. I kept saying it. I didn’t even know who I was asking.”
-
-Amalia poured water into a cup.
-
-“Drink a little.”
-
-Evie obeyed. A trickle of water ran down her chin; she wiped it away with her sleeve.
-
-“His father says a woman who has a roof and bread has no cause to complain. The others say the same. They see the marks. One of them told me to keep my sleeves down, for decency.”
-
-Her voice rose.
-
-“For decency.”
+Evie obeyed. A trickle of water ran down her chin; she wiped it away with her sleeve. “His father says a woman who has a roof and bread has no cause to complain. The others say the same. They see the marks. One of them told me to keep my sleeves down, for decency.” Her voice rose. “For decency.”
 
 The stirring in the kitchen ceased.
 
-Evie lowered her head.
+Evie lowered her head. “I hate them too. Is that very wicked?”
 
-“I hate them too. Is that very wicked?”
+“I should be angry with them too,” Amalia said. “They ought to have helped you.”
 
-“What have you wanted to tell them?”
+“I hate walking past their doors. I hate having to answer when they wish me a good morning. Sometimes I want to ask what they think a good morning is.” She looked towards the altar. “Do you suppose they would still say I’m fortunate if I told them everything?”
 
-“I hate walking past their doors. I hate having to answer when they wish me a good morning. Sometimes I want to ask what they think a good morning is.”
-
-She looked towards the altar.
-
-“Do you suppose they would still say I’m fortunate if I told them everything?”
-
-“I don’t know what they would say.”
+“I believe you, my dear. If any of them ask me, I’ll say so.”
 
 “They’d ask what I’d done to him.”
 
-At last Evie unfastened her purse. Two coins fell onto the table.
+At last Evie unfastened her purse. Two coins fell onto the table. “I still need the salt.”
 
-“I still need the salt.”
+Amalia nudged the coins back towards her. “I’ll fetch some from the kitchen. Keep these for another day.”
 
-“I’ll fetch you some from the kitchen.”
-
-“Sister?”
-
-Amalia stopped at the curtain.
-
-“When I first came, I wanted the dreams to stop. Now I wish they would never end.”
+“Sister?” Evie asked as Amalia reached the curtain. “When I first came, I wanted the dreams to stop. Now I wish they would never end.”
 
 · · ·
 
-The knocking rattled the latch.
+The knocking rattled the latch. Amalia came through the kitchen with a candle cupped in her hand. She drew the bolt. Evie stumbled over the threshold, and the sister caught her by the shoulders. “What is it, child?”
 
-Amalia came through the kitchen with a candle cupped in her hand. She drew the bolt. Evie stumbled over the threshold, and the sister caught her by the shoulders.
+Evie’s mouth moved. No sound came out. There was blood on the doorpost where she had steadied herself. Both her hands were red. One sleeve clung darkly to her wrist; the other had been pushed up to the elbow.
 
-“What has happened?”
-
-Evie’s mouth moved. No sound came out.
-
-There was blood on the doorpost where she had steadied herself. Both her hands were red. One sleeve clung darkly to her wrist; the other had been pushed up to the elbow.
-
-“Are you hurt?”
-
-Evie shook her head.
-
-“Come inside.”
-
-Amalia shut the door and set down the candle. Evie stood where she had been left, holding her hands away from her skirt.
+“Are you hurt?” Amalia asked. When Evie shook her head, she shut the door and set down the candle. “Come nearer the stove, my dear.” Evie stayed where she was, holding her hands away from her skirt.
 
 “Cain,” she said.
 
-The sister drew out the stool.
+“What has happened to Cain?” Amalia asked, drawing out the stool.
 
-“What has happened to Cain?”
+“He’s dead.” Amalia’s hand remained on the stool. The candle flame bent in the draught beneath the door.
 
-“He’s dead.”
+“Sit down, Evie. You’re trembling.”
 
-Amalia’s hand remained on the stool. The candle flame bent in the draught beneath the door.
+“I did it.” Evie sat. She looked at the red marks her fingers had left on Amalia’s sleeves. “I’m sorry.”
 
-“Sit down, Evie.”
+Amalia went to the kitchen. The pitcher struck the rim of the basin as she filled it with cold water. When she returned, she set the basin down with a piece of soap and a folded cloth. “Try to tell me.”
 
-“I did it.”
+“He’d been at his father’s. I had his supper ready. There was nothing wrong with it. He said I’d been out, and I said I’d come here. He asked what I told you.” Evie rubbed her thumb against her forefinger. The skin made a tacky sound. “I said I came to pray. He asked what I had to pray about. Then he said it must be him. That I went about complaining, making people think he’d married a saint and couldn’t keep her happy.” She stopped, breathing through her mouth.
 
-Evie sat. She looked at the red marks her fingers had left on Amalia’s sleeves.
+“Breathe. There’s no hurry,” Amalia said.
 
-“I’m sorry.”
+“He pushed the bowl away. He wasn’t even angry at first. He was laughing. Said I ought to have a little more to confess, if I was going to spend so much time here.” Evie stared at the water. “I told him no.”
 
-Amalia went to the kitchen. A pitcher knocked against the rim of a basin. When she returned, she put the basin on the table, followed by a piece of soap and a folded cloth.
+Her lips parted over the word again, without sound. “He asked what I said, and I said it again. Then he came round the table.”
 
-“Tell me.”
+Amalia sat opposite her. “He caught my arm,” Evie went on. “Both hands. He couldn’t move me.”
 
-“He’d been at his father’s. I had his supper ready. There was nothing wrong with it. He said I’d been out, and I said I’d come here. He asked what I told you.”
+Evie looked down at herself, at her narrow wrists and the blood stiffening her cuffs. “I couldn’t lift a sack of grain for his father this morning. I had to drag it. But he couldn’t move me.” Her teeth began to chatter. “That feeling... There was so much of it. I wasn’t reaching for it like in the dream. It was there. I said I hated him, and he looked at me. Properly. I don’t think he’d ever done that before.”
 
-Evie rubbed her thumb against her forefinger. The skin made a tacky sound.
+Evie opened her hand. The ribbon clung to her bloodied palm. One end was still blue. “It was on the table. I’d taken it out of my hair. I put it round his neck. I wanted to strangle him. I wanted...”
 
-“I said I came to pray. He asked what I had to pray about. Then he said it must be him. That I went about complaining, making people think he’d married a saint and couldn’t keep her happy.”
+Her fingers closed over the blue cloth again. “I pulled. The ribbon should have broken. You saw how thin it was.”
 
-She stopped, breathing through her mouth.
+She tried to draw breath. “His head...”
 
-“Take your time.”
+Evie bent forward, struggling for air. “Easy, child,” Amalia murmured, steadying her by the elbow. “Hold on to me.”
 
-“He pushed the bowl away. He wasn’t even angry at first. He was laughing. Said I ought to have a little more to confess, if I was going to spend so much time here.”
+“It was by the door. But he was still there. At the table.” She shook her head. “I didn’t know I could do that. With a ribbon. My mother’s ribbon. I knew he couldn’t get up. I knew. But I kept listening for him. It was always worse if he thought I’d made him look foolish. I stood by the table... waiting for him to get up.”
 
-Evie stared at the water.
+She drew a breath that caught halfway in. “He didn’t.”
 
-“I told him no.”
+Amalia lowered her head. “Oh, child...” For a little while she sat without speaking, her hands closed on the folded cloth.
 
-Her lips parted over the word again, without sound.
-
-“He asked what I said, and I said it again. Then he came round the table.”
-
-Amalia sat opposite her.
-
-“He caught my arm. Both hands. He couldn’t move me.”
-
-Evie looked down at herself, at her narrow wrists and the blood stiffening her cuffs.
-
-“I couldn’t lift a sack of grain for his father this morning. I had to drag it. But he couldn’t move me.”
-
-Her teeth began to chatter.
-
-“That feeling... There was so much of it. I wasn’t reaching for it like in the dream. It was there. I said I hated him, and he looked at me. Properly. I don’t think he’d ever done that before.”
-
-Evie opened her hand. The ribbon clung to her bloodied palm. One end was still blue.
-
-“It was on the table. I’d taken it out of my hair. I put it round his neck. I wanted to strangle him. I wanted...”
-
-Her fingers closed over the blue cloth again.
-
-“I pulled. The ribbon should have broken. You saw how thin it was.”
-
-She tried to draw breath.
-
-“His head...”
-
-Evie bent forward, struggling for air. Amalia steadied her by the elbow.
-
-“It was by the door. But he was still there. At the table.”
-
-She shook her head.
-
-“I didn’t know I could do that. With a ribbon. My mother’s ribbon. I knew he couldn’t get up. I knew. But I kept listening for him. It was always worse if he thought I’d made him look foolish. I stood by the table... waiting for him to get up.”
-
-She drew a breath that caught halfway in.
-
-“He didn’t.”
-
-Amalia unfolded the cloth.
-
-“Did anyone see you coming here?”
+“Did anyone see you coming here?” she asked at last.
 
 “I went through the orchard. I don’t think so. His father’s dog barked. I walked until it stopped, and then I ran.”
 
-“Is anyone else hurt?”
+“And there’s nobody else hurt? I need you to tell me, Evie.”
 
 “No. Only him.”
 
-Evie rubbed at a dark patch on the ribbon. Amalia moved the basin within reach.
+Evie rubbed at a dark patch on the ribbon. Amalia moved the basin within reach. “Let it soak, my dear. Cold water will help.”
 
-“It will loosen in warm water.”
+“I tried at home. I couldn’t stay there. His supper’s still on the floor. I nearly picked it up. Isn’t that a dreadful thing? I stood there and nearly fetched a rag.” Her face crumpled. She put the back of her wrist against her mouth. “Dorius will come. He’ll find him. He’ll come here.”
 
-“I tried at home. I couldn’t stay there. His supper’s still on the floor. I nearly picked it up. Isn’t that a dreadful thing? I stood there and nearly fetched a rag.”
-
-Her face crumpled. She put the back of her wrist against her mouth.
-
-“Dorius will come. He’ll find him. He’ll come here.”
-
-“You’re staying inside tonight.”
+“You’re staying with me tonight, whatever Dorius has to say about it.”
 
 “You can’t let me. They’ll say you knew.”
 
-“You have only just told me.”
+“Then they can ask me. You needed help, and you came to my door.”
 
 “Will you send for someone?”
 
-“First, let us get you warm.”
+“Not tonight, my dear. First, let us get you warm.” Amalia took a blanket from the chest beside the stove. Evie flinched when it touched her shoulders, then clutched it to her throat.
 
-Amalia took a blanket from the chest beside the stove. Evie flinched when it touched her shoulders, then clutched it to her throat.
+“I ought to be praying. I ought to be asking for something. Forgiveness. I know the words.” She shut her eyes. Her lips moved, stopped, moved again. “But I keep thinking I won’t have to go back. I won’t hear him on the path. I won’t have to guess whether he’s been drinking. I won’t have to wake up before he does. And then I remember why, and I’m sick, and then I think it again. What does that make me?”
 
-“I ought to be praying. I ought to be asking for something. Forgiveness. I know the words.”
-
-She shut her eyes. Her lips moved, stopped, moved again.
-
-“But I keep thinking I won’t have to go back. I won’t hear him on the path. I won’t have to guess whether he’s been drinking. I won’t have to wake up before he does. And then I remember why, and I’m sick, and then I think it again. What does that make me?”
-
-“Oh, Evie. I don’t know what to say to you tonight.”
+“Of course you’re glad he can’t hurt you, my dear,” Amalia said, her voice unsteady. “But I can’t tell you it was right to kill him. Oh, Evie... I’m so sorry it came to this.”
 
 “But you’ll let me stay?”
 
-“Yes.”
+“Yes, my dear. I’ll make up the bed behind the kitchen.”
 
 Evie bent over her knees. Amalia put a hand between her shoulders and left it there while the young woman wept.
 
 The stove ticked as it cooled. Beyond the shutter, a dog barked once and fell quiet.
 
-At last Evie lifted her face.
+At last Evie lifted her face. “I don’t want to sleep.”
 
-“I don’t want to sleep.”
+“Then stay here with me a little longer,” Amalia said gently.
 
-“You needn’t yet.”
-
-“What if she’s there?”
-
-Her hands closed on the blanket, trapping the ribbon against the wool.
-
-“She said I could be free. She was so pleased when I began to understand. I don’t know how to tell her about Cain.”
+“What if she’s there?” Her hands closed on the blanket, trapping the ribbon against the wool. “She said I could be free. She was so pleased when I began to understand. I don’t know how to tell her about Cain.”
 
 Amalia sat a little closer.
 

@@ -756,7 +756,7 @@ names:
     title: Chapter 075 — The Invisible Predator
     slug: chapter-075-the-invisible-predator
   Глава 076 - Деревня Вэйган:
-    title: Chapter 076 — Veigan
+    title: Chapter 076 — Weigan
     slug: chapter-076-veigan
   Глава 077 - Мэйлун в озере:
     title: Chapter 077 — Meilong in the Lake
@@ -1026,6 +1026,10 @@ names:
   Молот Са-Тар:
     title: Sa-Tar Hammer
     slug: sa-tar-hammer
+  Наручи Ичжи:
+    title: Yizhi Bracers
+    slug: yizhi-bracers
+    native_name: 抑制
   Сердце Огня:
     title: Heart of Fire
     slug: heart-of-fire
@@ -1075,7 +1079,7 @@ names:
   Город Син-Юнь:
     title: Xing-Yun
     slug: xing-yun
-    native_name: 星云
+    native_name: 星雲
   Город Лан-Цзы:
     title: Lan-Zi
     slug: lan-zi
@@ -1084,6 +1088,18 @@ names:
     title: Qing-Ha
     slug: qing-ha
     native_name: 青荷
+  Город Лунь-Хай:
+    title: Longhai
+    slug: longhai
+    native_name: 龍海
+  Город Цинь-Фан:
+    title: Qingfang
+    slug: qingfang
+    native_name: 青坊
+  Город Цинь-Яо:
+    title: Qinyao
+    slug: qinyao
+    native_name: 琴瑤
   Город Джу-Суо:
     title: Dju-Suo
     slug: dju-suo
@@ -1091,6 +1107,11 @@ names:
   Город Чанг-Ша:
     title: Chang-Sha
     slug: chang-sha
+    native_name: 長紗
+  Лес Синьшу:
+    title: Xinshu Forest
+    slug: xinshu-forest
+    native_name: 心樹林
   Лес Шеньянь:
     title: Shenyan
     slug: shenyan
@@ -1297,6 +1318,14 @@ names:
     title: Tai-Lin
     slug: tai-lin
     native_name: 太林
+  Деревня Дзинь-Сяо:
+    title: Jinxiao
+    slug: jinxiao
+    native_name: 金霄
+  Деревня Чень-Ю:
+    title: Chenyu
+    slug: chenyu
+    native_name: 晨羽
   Равнина Аксай-Джин:
     title: Aksai-Jin Plain
     slug: aksai-jin-plain
@@ -1305,12 +1334,16 @@ names:
     title: Lake Zhen
     slug: lake-zhen
     native_name: 珍湖
+  Озеро Сю Ху:
+    title: Lake Xiu
+    slug: lake-xiu
+    native_name: 秀湖
   Озеро Чанг:
     title: Lake Chang
     slug: lake-chang
     native_name: 昌
   Озеро Шуан:
-    title: Lake Shuan
+    title: Lake Shuang
     slug: lake-shuan
     native_name: 爽
   Джунгли Минь-Тао:
@@ -1319,6 +1352,7 @@ names:
   Река Тяо Хэ:
     title: Tiao He
     slug: tiao-he
+    native_name: 迢河
   Полуостров Туануку:
     title: Tuanuku Peninsula
     slug: tuanuku-peninsula
@@ -1384,9 +1418,9 @@ names:
     title: Badrakali
     slug: badrakali
   Деревня Вэйган:
-    title: Veigan
+    title: Weigan
     slug: veigan
-    native_name: 卫干
+    native_name: 衛干
   Джунгли Шанкари:
     title: Shankari Jungle
     slug: shankari-jungle

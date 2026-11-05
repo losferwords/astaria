@@ -21,7 +21,7 @@ TRANSLATION_ONLY_FIELDS = %w[
 # Russian canonical note. English files may translate their labels and scalar
 # values, but must not add or silently lose the underlying information.
 PARITY_FIELDS = %w[
-  native_name location_type settlement_type organization_type item_type
+  native_name native_reading name_meaning powers location_type settlement_type organization_type item_type
   condition_type profession_type medium species current_era birth_year
   death_year current_location birth_place parents siblings children partner
   country region parent_location water mouth continents seas population

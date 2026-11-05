@@ -182,7 +182,7 @@ expect.call(!amato[:source].include?("_Описание пока не добав
 ["Основной текст", "Острова и море", "Императорский двор", "Вера, души и божественный ветер", "Обычаи эдзо", "Туманный остров и Обитель"].each do |heading|
   expect.call(amato[:source].include?("## #{heading}"), "Amato article is missing the #{heading} section")
 end
-["天渡", "Острова Душ", "[[Они|О́ни]]", "[[Онмёдзи]]", "神風", "[[Ицунэ]]", "[[Туманный остров]]", "[[Обитель|Обителью]]"].each do |fact|
+["天渡", "Острова Душ", "[[Они|О́ни]]", "[[Онмёдзи]]", "божественным ветром Ицунэ", "[[Ицунэ]]", "[[Туманный остров]]", "[[Обитель|Обителью]]"].each do |fact|
   expect.call(amato[:source].include?(fact), "Amato article is missing #{fact}")
 end
 amato_body = amato[:source].split(/^# Амато\s*$/, 2).last.to_s

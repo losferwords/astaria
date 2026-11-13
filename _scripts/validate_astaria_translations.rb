@@ -85,7 +85,7 @@ end
 
 map_sources = Dir.glob(File.join(AstariaTranslations::ROOT, "Карты", "**", "*.md"))
 map_sources.each do |path|
-  File.read(path).scan(/^\s*-\s+default,\s*\d+,\s*\d+,\s*\[\[([^|\]]+)(?:\|[^\]]+)?\]\]\s*$/) do |match|
+  File.read(path).scan(/^\s*-\s+default,\s*\d+(?:\.\d+)?,\s*\d+(?:\.\d+)?,\s*\[\[([^|\]]+)(?:\|[^\]]+)?\]\]\s*$/) do |match|
     target = match.first.strip
     missing_map_markers << target if AstariaTranslations.english_title_for(target).to_s.empty?
   end
@@ -123,7 +123,7 @@ if failures.empty?
   puts "Astaria translation registry is valid (#{names.size} approved names)"
   puts "Completed published page translations: #{completed}/#{published_relatives.uniq.size}"
   total_markers = map_sources.sum do |path|
-    File.read(path).scan(/^\s*-\s+default,\s*\d+,\s*\d+,\s*\[\[/).size
+    File.read(path).scan(/^\s*-\s+default,\s*\d+(?:\.\d+)?,\s*\d+(?:\.\d+)?,\s*\[\[/).size
   end
   puts "Approved English map marker names: #{total_markers - missing_map_markers.size}/#{total_markers}"
   puts "English map fallbacks: #{map_fallbacks.join(', ')}" unless map_fallbacks.empty?

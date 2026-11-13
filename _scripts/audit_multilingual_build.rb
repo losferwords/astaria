@@ -6,6 +6,7 @@ require "json"
 require "pathname"
 require "uri"
 require_relative "astaria_translations"
+require_relative "astaria_map_coordinates"
 
 ROOT = Pathname.new(File.expand_path("..", __dir__))
 PUBLIC = ROOT.join("_quartz", "public")
@@ -298,10 +299,32 @@ end
 
 english_map = PUBLIC.join("map.html")
 russian_map = PUBLIC.join("__locales", "ru", "map.html")
+canonical_map = AstariaMapCoordinates.read_note(ROOT.join("Карты", "Карта Астарии.md"))
+canonical_markers = canonical_map[:text].scan(/^\s*-\s+default,\s*(\d+(?:\.\d+)?),\s*(\d+(?:\.\d+)?),\s*\[\[([^|\]]+)(?:\|([^\]]+))?\]\]\s*$/)
 { "en-GB" => english_map, "ru" => russian_map }.each do |locale, path|
   next unless path.file?
 
   html = path.read
+  rendered_markers = html.scan(/<button\b[^>]*class="astaria-map-marker [^"]*"[^>]*>/).map do |tag|
+    tag.scan(/([\w-]+)="([^"]*)"/).to_h.transform_values { |value| CGI.unescapeHTML(value) }
+  end
+  expected_markers = canonical_markers.map do |y, x, target, label|
+    name = locale == "ru" ? (label || target) : AstariaTranslations.english_title_for(target)
+    next if name.nil? && PREVIEW
+    [name, x.to_f, y.to_f]
+  end.compact
+  expect.call(rendered_markers.size == expected_markers.size, "#{locale} map lost canonical markers (including decimal coordinates)")
+  expected_markers.each do |name, x, y|
+    marker = rendered_markers.find { |attributes| attributes["data-name"] == name }
+    expect.call(!marker.nil?, "#{locale} map marker is missing: #{name}")
+    next unless marker
+    width = canonical_map[:data].fetch("map_width").to_f
+    height = canonical_map[:data].fetch("map_height").to_f
+    actual_x = marker.fetch("data-x").to_f / 100 * width
+    actual_y = height - marker.fetch("data-y").to_f / 100 * height
+    expect.call((actual_x - x).abs < 0.000001 && (actual_y - y).abs < 0.000001,
+      "#{locale} map rounded or inverted marker coordinates: #{name}")
+  end
   %w[states heightmap biomes].each do |layer|
     config = AstariaTranslations.map_layers.fetch(layer)
     expected = config.fetch(locale).fetch("source").downcase

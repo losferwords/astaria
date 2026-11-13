@@ -2043,21 +2043,19 @@ end
 bakhara_top = marker_top.call("Город Бахара")
 anderhan_top = marker_top.call("Город Андерхан")
 expect.call(bakhara_top && anderhan_top && bakhara_top > anderhan_top, "Map Y axis is inverted: Bakhara must appear south of Anderhan")
-bakhara_marker = map.match(/class="astaria-map-marker[^"]*"[^>]*data-name="Город Бахара"[^>]*data-x="([\d.]+)"[^>]*data-y="([\d.]+)"/)
-expect.call(!bakhara_marker.nil?, "Bakhara marker coordinates are missing")
-if bakhara_marker
-  recovered_geo_x = (bakhara_marker[1].to_f / 100 * 7680).round
-  recovered_geo_y = (4320 - bakhara_marker[2].to_f / 100 * 4320).round
-  expect.call(recovered_geo_y == 2039 && recovered_geo_x == 4167, "Map coordinate conversion must recover Bakhara as geoY 2039, geoX 4167")
+canonical_map = File.read(File.join(ROOT, "Карты", "Карта Астарии.md"))
+canonical_map.scan(/^\s*-\s+default,\s*(\d+(?:\.\d+)?),\s*(\d+(?:\.\d+)?),\s*\[\[([^|\]]+)(?:\|([^\]]+))?\]\]\s*$/) do |y, x, target, label|
+  name = label || target
+  marker = map.match(/class="astaria-map-marker[^"]*"[^>]*data-name="#{Regexp.escape(CGI.escapeHTML(name))}"[^>]*data-x="([\d.]+)"[^>]*data-y="([\d.]+)"/)
+  expect.call(!marker.nil?, "Canonical map marker missing from HTML: #{name}")
+  next unless marker
+
+  recovered_x = marker[1].to_f / 100 * 7680
+  recovered_y = 4320 - marker[2].to_f / 100 * 4320
+  expect.call((recovered_x - x.to_f).abs < 0.000001 && (recovered_y - y.to_f).abs < 0.000001,
+    "Map must preserve fractional canonical coordinates: #{name}")
 end
 expect.call(map.include?('data-name="Гарнизон Пасть Дракона"'), "Map still points to the retired Dragon Gates duplicate")
-expect.call(map.match?(/data-name="Город Кайто"[^>]*data-x="82\.7083"[^>]*data-y="43\.7269"/), "Kaito marker must render at geoY 2431, geoX 6352")
-expect.call(map.match?(/data-name="Амато"[^>]*data-x="82\.0052"[^>]*data-y="40\.9259"/), "Amato marker must render at geoY 2552, geoX 6298")
-expect.call(map.match?(/data-name="Город Мирград"[^>]*data-x="84\.362"[^>]*data-y="16\.2963"/), "Mirgrad marker must render at geoY 3616, geoX 6479")
-expect.call(map.match?(/data-name="Обитель"[^>]*data-x="87\.0833"[^>]*data-y="9\.838"/), "Obitelj marker must render at geoY 3895, geoX 6688")
-expect.call(map.match?(/data-name="Город Награкшаса"[^>]*data-x="73\.776"[^>]*data-y="86\.7824"/), "Nagrakshasa marker must render at geoY 571, geoX 5666")
-expect.call(map.match?(/data-name="Деревня Бадракали"[^>]*data-x="74\.0755"[^>]*data-y="83\.6806"/), "Badrakali marker must render at geoY 705, geoX 5689")
-expect.call(map.match?(/data-name="Город Ванпур"[^>]*data-x="75\.3516"[^>]*data-y="85\.8333"/), "Vanpur marker must render at geoY 612, geoX 5787")
 expect.call(map.match?(/class="astaria-map-marker astaria-map-marker-realm"[^>]*data-name="Амато"/), "Amato must render as a realm marker")
 expect.call(map.match?(/class="astaria-map-marker astaria-map-marker-realm"[^>]*data-name="Обитель"/), "Obitelj must render as a realm marker")
 expect.call(map.include?('data-name="Горный хребет Шафар"'), "Map still points to the retired Shang Feng duplicate")

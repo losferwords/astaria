@@ -1845,7 +1845,7 @@ end
 
 def map_markers(body, lookup)
   markers = []
-  body.scan(/^\s*-\s+default,\s*(\d+),\s*(\d+),\s*\[\[([^|\]]+)(?:\|([^\]]+))?\]\]\s*$/) do |y, x, target, label|
+  body.scan(/^\s*-\s+default,\s*(\d+(?:\.\d+)?),\s*(\d+(?:\.\d+)?),\s*\[\[([^|\]]+)(?:\|([^\]]+))?\]\]\s*$/) do |y, x, target, label|
     canonical_name = (label || target).strip
     record = lookup[normalize_reference(target)]
     kind = if record && record[:data]["category"] == "Страны"
@@ -1990,11 +1990,11 @@ def build_map_explorer(data, body, route, lookup)
     href = record ? relative_href(route, record[:route]) : ""
     image_path = record && cover_image(record[:data])
     image_src = image_path ? public_asset_url(image_path) : ""
-    left = (marker[:x] / width * 100).round(4)
+    left = (marker[:x] / width * 100).round(8)
     # Leaflet image coordinates use a geographic Y axis: larger geoY values
     # point north. CSS `top` grows southward, so the vertical position must be
     # mirrored when the canonical marker is placed over the raster.
-    top = ((height - marker[:y]) / height * 100).round(4)
+    top = ((height - marker[:y]) / height * 100).round(8)
     %(<button type="button" class="astaria-map-marker astaria-map-marker-#{marker[:kind]}" style="left:#{left}%;top:#{top}%" data-name="#{CGI.escapeHTML(marker[:name])}" data-kind="#{marker[:kind]}" data-x="#{left}" data-y="#{top}" data-href="#{CGI.escapeHTML(href)}" data-image-src="#{CGI.escapeHTML(image_src)}" aria-label="#{ui[:show]}: #{CGI.escapeHTML(marker[:name])}"><span></span></button>)
   end.join("\n")
 

@@ -298,32 +298,22 @@ end
 
 english_map = PUBLIC.join("map.html")
 russian_map = PUBLIC.join("__locales", "ru", "map.html")
-if english_map.file?
-  html = english_map.read
-  %w[states heightmap biomes].each do |layer|
-    expect.call(
-      html.include?("assets/maps/en/#{layer}.png"),
-      "English map does not use the English #{layer} layer"
-    )
-  end
-  expect.call(
-    html.include?("assets/maps/en/web/states-web.jpg"),
-    "English map does not use the English preview layer"
-  )
-end
+{ "en-GB" => english_map, "ru" => russian_map }.each do |locale, path|
+  next unless path.file?
 
-if russian_map.file?
-  html = russian_map.read
+  html = path.read
   %w[states heightmap biomes].each do |layer|
-    expect.call(
-      html.include?("assets/maps/#{layer}.png") && !html.include?("assets/maps/en/#{layer}.png"),
-      "Russian map does not use the Russian #{layer} layer"
-    )
+    config = AstariaTranslations.map_layers.fetch(layer)
+    expected = config.fetch(locale).fetch("source").downcase
+    other_locale = locale == "ru" ? "en-GB" : "ru"
+    unwanted = config.fetch(other_locale).fetch("source").downcase
+    expect.call(html.include?(expected), "#{locale} map does not use #{layer}: #{expected}")
+    expect.call(!html.include?(unwanted), "#{locale} map includes another language's #{layer} layer")
+    asset_root = locale == "ru" ? PUBLIC.join("__locales", "ru") : PUBLIC
+    expect.call(asset_root.join(expected).file?, "Map asset is missing for #{locale}: #{expected}")
   end
-  expect.call(
-    html.include?("assets/maps/web/states-web.jpg") && !html.include?("assets/maps/en/web/states-web.jpg"),
-    "Russian map does not use the Russian preview layer"
-  )
+  preview = AstariaTranslations.map_layers.fetch("states").fetch(locale).fetch("web").downcase
+  expect.call(html.include?(preview), "#{locale} map preview uses the wrong locale")
 end
 
 russian_chori = PUBLIC.join("__locales", "ru", "characters", "chori-marjari.html")

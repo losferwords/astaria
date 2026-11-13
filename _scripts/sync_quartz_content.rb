@@ -181,11 +181,11 @@ SIGNIFICANCE_LABELS_EN = {
   3 => "Notable"
 }.freeze
 
-ASSET_REWRITES = {
-  "Assets/Maps/states.png" => "Assets/Maps/Web/states-web.jpg",
-  "Assets/Maps/heightmap.png" => "Assets/Maps/Web/heightmap-web.jpg",
-  "Assets/Maps/biomes.png" => "Assets/Maps/Web/biomes-web.jpg"
-}.freeze
+# Keep map cards and embeds in the page's locale. Source and preview may
+# intentionally share one asset; no parallel Web/en directory is required.
+ASSET_REWRITES = AstariaTranslations.map_layers.to_h do |key, locales|
+  [locales.fetch("ru").fetch("source"), AstariaTranslations.map_layer_for(key, variant: "web")]
+end.freeze
 
 INFOBOX_FIELDS = [
   ["native_name", "Имя на родном языке"],
@@ -3250,11 +3250,7 @@ asset_paths.concat([
   "Assets/Images/Avatar_vs_Ascended.png",
   "Assets/Images/Acheus_Invasion.jpg",
   "Assets/Images/Astaria.png",
-  "Assets/Images/bg.jpg",
-  "Assets/Maps/Web/states-web.jpg",
-  "Assets/Maps/states.png",
-  "Assets/Maps/heightmap.png",
-  "Assets/Maps/biomes.png"
+  "Assets/Images/bg.jpg"
 ])
 AstariaTranslations.map_layers.each_key do |key|
   asset_paths << AstariaTranslations.map_layer_for(key)

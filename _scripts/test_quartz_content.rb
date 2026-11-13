@@ -2001,20 +2001,26 @@ expect.call(country_notes.length >= 16, "Expected all canonical countries in the
 expect.call(missing_country_subtitles.empty?, "Countries without card_subtitle: #{missing_country_subtitles.map { |path| File.basename(path) }.join(', ')}")
 
 map = read.call("map.html")
-expect.call(map.scan("astaria-map-marker astaria-map-marker-").length == 142, "Map must render all 142 canonical markers")
-%w[states.png heightmap.png biomes.png].each do |filename|
-  expect.call(map.include?("assets/maps/#{filename}"), "Map does not use original layer #{filename}")
-  source = File.join(ROOT, "Assets", "Maps", filename)
-  built = File.join(PUBLIC, "assets", "maps", filename)
-  expect.call(File.file?(built), "Built map layer is missing: #{filename}")
-  expect.call(File.size(source) == File.size(built), "Built map layer differs from original: #{filename}") if File.file?(built)
+canonical_marker_count = File.read(File.join(ROOT, "Карты", "Карта Астарии.md")).scan(/^  - default,/).length
+expect.call(map.scan("astaria-map-marker astaria-map-marker-").length == canonical_marker_count, "Map must render all canonical markers")
+map_manifest = YAML.safe_load(File.read(File.join(ROOT, "_translations", "map-layers.yml"))).fetch("layers")
+map_locale = map.include?('lang="en-GB"') ? "en-GB" : "ru"
+%w[states heightmap biomes].each do |key|
+  relative = map_manifest.fetch(key).fetch(map_locale).fetch("source")
+  url = relative.downcase
+  expect.call(map.include?(url), "Map does not use original layer #{relative}")
+  source = File.join(ROOT, relative)
+  built = File.join(PUBLIC, url)
+  expect.call(File.file?(built), "Built map layer is missing: #{relative}")
+  expect.call(File.size(source) == File.size(built), "Built map layer differs from original: #{relative}") if File.file?(built)
 end
-states_layer = map[/<img class="astaria-map-layer[^"]*" data-layer="states"[^>]*>/]
-heightmap_layer = map[/<img class="astaria-map-layer[^"]*" data-layer="heightmap"[^>]*>/]
-biomes_layer = map[/<img class="astaria-map-layer[^"]*" data-layer="biomes"[^>]*>/]
-expect.call(states_layer&.match?(/\ssrc="(?:\.\/)?assets\/maps\/states\.png"/), "Primary states layer must load the original image immediately")
-expect.call(heightmap_layer&.match?(/\sdata-src="assets\/maps\/heightmap\.png"/) && !heightmap_layer.match?(/\ssrc=/), "Heightmap must remain lazy until selected")
-expect.call(biomes_layer&.match?(/\sdata-src="assets\/maps\/biomes\.png"/) && !biomes_layer.match?(/\ssrc=/), "Biomes must remain lazy until selected")
+states_layer = map[/<img class="astaria-map-layer[^\"]*" data-layer="states"[^>]*>/]
+heightmap_layer = map[/<img class="astaria-map-layer[^\"]*" data-layer="heightmap"[^>]*>/]
+biomes_layer = map[/<img class="astaria-map-layer[^\"]*" data-layer="biomes"[^>]*>/]
+layer_url = ->(key) { map_manifest.fetch(key).fetch(map_locale).fetch("source").downcase }
+expect.call(states_layer&.include?(%(src="#{layer_url.call("states")}")), "Primary states layer must load the original image immediately")
+expect.call(heightmap_layer&.include?(%(data-src="#{layer_url.call("heightmap")}")) && !heightmap_layer.match?(/\ssrc=/), "Heightmap must remain lazy until selected")
+expect.call(biomes_layer&.include?(%(data-src="#{layer_url.call("biomes")}")) && !biomes_layer.match?(/\ssrc=/), "Biomes must remain lazy until selected")
 expect.call(!experience_script.include?("scale(${state.scale})"), "Map zoom must not upscale a rasterized DOM layer")
 expect.call(experience_script.include?("stage.style.width = `${renderedWidth}px`"), "Map zoom must render the original layer at its real target width")
 expect.call(experience_script.include?("maximumUsefulScale"), "Map zoom must remain bounded when inspecting the map closely")

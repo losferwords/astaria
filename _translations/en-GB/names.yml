@@ -1627,3 +1627,29 @@ names:
   Первые свидетельства об археях:
     title: First Evidence of the Archaeans
     slug: first-evidence-of-the-archaeans
+
+  # Settlement follow-up, 13 November 2026
+  Город Кумокадо:
+    title: Kumokado
+    slug: kumokado
+  Город Линь-Чжоу:
+    title: Lin-Zhou
+    slug: lin-zhou
+  Город Ночная бухта:
+    title: Night Bay
+    slug: night-bay
+  Город Эшвик:
+    title: Ashwick
+    slug: ashwick
+  Деревня Сольвик:
+    title: Solvik
+    slug: solvik
+  Деревня Вардия:
+    title: Vardia
+    slug: vardia
+  Деревня Сарика:
+    title: Sarika
+    slug: sarika
+  Деревня Банхати:
+    title: Bankhati
+    slug: bankhati

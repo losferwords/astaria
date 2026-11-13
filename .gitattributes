@@ -13,3 +13,6 @@
 *.gif binary
 *.pdf binary
 *.zip binary
+
+# Azgaar separates records with CRLF; the embedded SVG also contains LF.
+Assets/Maps/*.map -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol

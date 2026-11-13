@@ -2,22 +2,22 @@
 layers:
   states:
     ru:
-      source: Assets/Maps/states.png
-      web: Assets/Maps/Web/states-web.jpg
+      source: Assets/Maps/states_ru.png
+      web: Assets/Maps/states_ru.png
     en-GB:
-      source: Assets/Maps/en/states.png
-      web: Assets/Maps/en/Web/states-web.jpg
+      source: Assets/Maps/states_en.png
+      web: Assets/Maps/states_en.png
   heightmap:
     ru:
-      source: Assets/Maps/heightmap.png
-      web: Assets/Maps/Web/heightmap-web.jpg
+      source: Assets/Maps/heightmap_ru.png
+      web: Assets/Maps/heightmap_ru.png
     en-GB:
-      source: Assets/Maps/en/heightmap.png
-      web: Assets/Maps/en/Web/heightmap-web.jpg
+      source: Assets/Maps/heightmap_en.png
+      web: Assets/Maps/heightmap_en.png
   biomes:
     ru:
-      source: Assets/Maps/biomes.png
-      web: Assets/Maps/Web/biomes-web.jpg
+      source: Assets/Maps/biomes_ru.png
+      web: Assets/Maps/biomes_ru.png
     en-GB:
-      source: Assets/Maps/en/biomes.png
-      web: Assets/Maps/en/Web/biomes-web.jpg
+      source: Assets/Maps/biomes_en.png
+      web: Assets/Maps/biomes_en.png

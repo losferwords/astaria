@@ -174,10 +174,10 @@ expect.call(oni[:source].include?("# О́ни") && oni[:source].include?("**О́
 
 amato = canonical_by_title.fetch("Амато")
 expect.call(amato[:data]["ready"] == true && amato[:data]["quartz"] == true, "Amato must be published now that its art is ready")
-expect.call(amato[:data]["cover_image"] == "[[Assets/Images/Amato.jpg]]", "Amato must use its canonical cover art")
+expect.call(amato[:data]["cover_image"] == "[[Assets/Images/Amato.png]]", "Amato must use its canonical cover art")
 expect.call(amato[:data]["crest_image"] == "[[Assets/Images/Crests/amato_crest_cropped.png]]", "Amato must use its canonical crest")
 expect.call(amato[:data]["foundation"] == "-2695 ХЭ", "Amato must retain its 2695 ChE foundation date")
-expect.call(File.file?(File.join(ROOT, "Assets", "Images", "Amato.jpg")), "Amato cover art is missing")
+expect.call(File.file?(File.join(ROOT, "Assets", "Images", "Amato.png")), "Amato cover art is missing")
 expect.call(!amato[:source].include?("_Описание пока не добавлено._"), "Amato still has no encyclopedia description")
 ["Основной текст", "Острова и море", "Императорский двор", "Вера, души и божественный ветер", "Обычаи эдзо", "Туманный остров и Обитель"].each do |heading|
   expect.call(amato[:source].include?("## #{heading}"), "Amato article is missing the #{heading} section")
@@ -216,7 +216,7 @@ expect.call(kaito_page.include?("assets/images/kaito_city.png"), "Kaito public p
 
 vends = canonical_by_title.fetch("Венды")
 expect.call(vends[:data]["ready"] == true && vends[:data]["quartz"] == true, "Vends must be published now that their art is ready")
-expect.call(vends[:data]["cover_image"] == "[[Assets/Images/Wends.jpg]]", "Vends must use their canonical cover art")
+expect.call(vends[:data]["cover_image"] == "[[Assets/Images/Wends.png]]", "Vends must use their canonical cover art")
 expect.call(vends[:data]["homeland"] == "[[Обитель]]", "Vends article is missing its homeland")
 expect.call(vends[:data]["deity"] == "[[Велисса]]", "Vends article is missing its patron deity")
 expect.call(Array(vends[:data]["parent_peoples"]).include?("[[Вактары]]"), "Vends article is missing its Vaktar ancestry")
@@ -234,8 +234,8 @@ expect.call(
 
 thuggee = canonical_by_title.fetch("Тхаги")
 expect.call(thuggee[:data]["ready"] == true && thuggee[:data]["quartz"] == true, "Thuggee must be published now that its art is ready")
-expect.call(thuggee[:data]["cover_image"] == "[[Assets/Images/Thuggee.jpg]]", "Thuggee must use its canonical cover art")
-expect.call(File.file?(File.join(ROOT, "Assets", "Images", "Thuggee.jpg")), "Thuggee cover art is missing")
+expect.call(thuggee[:data]["cover_image"] == "[[Assets/Images/Thuggee.png]]", "Thuggee must use its canonical cover art")
+expect.call(File.file?(File.join(ROOT, "Assets", "Images", "Thuggee.png")), "Thuggee cover art is missing")
 ["чёрного и кроваво-красного", "длинные ухоженные бороды", "многослойные тюрбаны", "Изогнутые сабли", "Память против Цикла"].each do |fact|
   expect.call(thuggee[:source].include?(fact), "Thuggee public article is missing #{fact}")
 end
@@ -249,7 +249,7 @@ end
 
 mafka = canonical_by_title.fetch("Мафка")
 expect.call(mafka[:data]["ready"] == true && mafka[:data]["quartz"] == true, "Mafka must be published now that her art is ready")
-expect.call(mafka[:data]["portrait_image"] == "[[Assets/Images/Mafka.jpg]]", "Mafka must use her canonical portrait")
+expect.call(mafka[:data]["portrait_image"] == "[[Assets/Images/Mafka.png]]", "Mafka must use her canonical portrait")
 expect.call(!mafka[:data].key?("birth_year"), "Mafka must not have an invented chronological birth year")
 {
   "occupation" => "Царица Обители",
@@ -271,7 +271,7 @@ expect.call(
 
 obitelj = canonical_by_title.fetch("Обитель")
 expect.call(obitelj[:data]["ready"] == true && obitelj[:data]["quartz"] == true, "Obitelj must be published now that its art is ready")
-expect.call(obitelj[:data]["cover_image"] == "[[Assets/Images/Obitelj.jpg]]", "Obitelj must use its canonical cover art")
+expect.call(obitelj[:data]["cover_image"] == "[[Assets/Images/Obitelj.png]]", "Obitelj must use its canonical cover art")
 expect.call(obitelj[:data]["crest_image"] == "[[Assets/Images/Crests/obitelj_crest_cropped.png]]", "Obitelj must use its canonical crest")
 expect.call(obitelj[:data]["foundation"] == "-1236 ХЭ", "Obitelj must retain its 1236 ChE foundation date")
 ["От ненависти до любви", "Земля и достаток", "Мирград и власть", "Велисса и круг года", "Любовь как сила", "Война Ивара и Стражи"].each do |heading|
@@ -288,8 +288,8 @@ expect.call(obitelj_words.between?(1_050, 1_350), "Obitelj article has an unsuit
 
 guardian = canonical_by_title.fetch("Страж")
 expect.call(guardian[:data]["ready"] == true && guardian[:data]["quartz"] == true, "Guardian must be published now that both portraits are ready")
-expect.call(guardian[:data]["female_portrait"] == "[[Assets/Images/Guardian_f.jpg]]", "Guardian is missing the female class portrait")
-expect.call(guardian[:data]["male_portrait"] == "[[Assets/Images/Guardian_m.jpg]]", "Guardian is missing the male class portrait")
+expect.call(guardian[:data]["female_portrait"] == "[[Assets/Images/Guardian_f.png]]", "Guardian is missing the female class portrait")
+expect.call(guardian[:data]["male_portrait"] == "[[Assets/Images/Guardian_m.png]]", "Guardian is missing the male class portrait")
 ["Основной текст", "Избрание и клятва", "Способности", "Сила любви", "Атрибуты"].each do |heading|
   expect.call(guardian[:source].include?("## #{heading}"), "Guardian article is missing the #{heading} section")
 end
@@ -379,8 +379,8 @@ end
 
 onmyoji = canonical_by_title.fetch("Онмёдзи")
 expect.call(onmyoji[:data]["ready"] == true && onmyoji[:data]["quartz"] == true, "Onmyoji must be published now that both portraits are ready")
-expect.call(onmyoji[:data]["female_portrait"] == "[[Assets/Images/Onmyoji_f.jpg]]", "Onmyoji is missing the female class portrait")
-expect.call(onmyoji[:data]["male_portrait"] == "[[Assets/Images/Onmyoji_m.jpg]]", "Onmyoji is missing the male class portrait")
+expect.call(onmyoji[:data]["female_portrait"] == "[[Assets/Images/Onmyoji_f.png]]", "Onmyoji is missing the female class portrait")
+expect.call(onmyoji[:data]["male_portrait"] == "[[Assets/Images/Onmyoji_m.png]]", "Onmyoji is missing the male class portrait")
 ["Основной текст", "Способности", "Атрибуты"].each do |heading|
   expect.call(onmyoji[:source].include?("## #{heading}"), "Onmyoji article is missing the #{heading} section")
 end
@@ -683,7 +683,7 @@ enriched_article_titles = [
   "Озеро Альсалим",
   "Озеро Джамсар",
   "Озеро Зураиф",
-  "Озеро Кхарим",
+  "Озеро Насим",
   "Озеро Рашах",
   "Озеро Суэйд",
   "Озеро Шаради",
@@ -1265,7 +1265,7 @@ expect.call(onmyoji_html.include?("astaria-imitei-title-medium"), "Onmyoji title
 end
 
 amato_html = read.call("countries/amato.html")
-expect.call(amato_html.include?("assets/images/amato.jpg"), "Published Amato page does not render its cover")
+expect.call(amato_html.include?("assets/images/amato.png"), "Published Amato page does not render its cover")
 expect.call(amato_html.include?("astaria-cover-frame"), "Published Amato page is missing the country cover treatment")
 
 gods = read.call("gods/index.html")
@@ -1601,7 +1601,7 @@ halyk_byndir = read.call("places/halyk-byndir.html")
 expect.call(halyk_byndir.match?(/<dt>Тип места<\/dt><dd>\s*Бордель\s*<\/dd>/), "Halyk-Byndir must use the Russian place type")
 ui_djan = read.call("places/ui-djan.html")
 expect.call(ui_djan.match?(/<dt>Тип места<\/dt><dd>\s*Бордель\s*<\/dd>/), "Ui-Djan must use the Russian place type")
-expect.call(ui_djan.include?("ui-djan_brothel.jpg"), "Ui-Djan must render its local cover artwork")
+expect.call(ui_djan.include?("ui-djan_brothel.png"), "Ui-Djan must render its local cover artwork")
 dragon_temple = read.call("places/dragon-temple.html")
 expect.call(dragon_temple.match?(/<dt>Тип места<\/dt><dd>\s*Храмовый комплекс\s*<\/dd>/), "Dragon Temple must use the Russian place type")
 ["Страна", "Часть территории", "Основание"].each do |label|
@@ -1681,7 +1681,7 @@ avenger_source = File.read(File.join(ROOT, "Энциклопедия", "Имит
 expect.call(avenger_source.include?("## Путь Клинка"), "Path of the Blade lore was not merged into Avenger")
 expect.call(avenger_source.include?("650 году ХЭ"), "Avenger article lost the founding date of the Path of the Blade")
 expect.call(!avenger_source.include?("[[Путь Клинка"), "Avenger article still links to the retired Path of the Blade note")
-expect.call(read.call("lore/imitey.html").include?("assets/images/avatar_vs_ascended.jpg"), "Imitei article does not use the Avatar versus Ascended cover")
+expect.call(read.call("lore/imitey.html").include?("assets/images/avatar_vs_ascended.png"), "Imitei article does not use the Avatar versus Ascended cover")
 expect.call(read.call("literature/poka-bogi-spyat.html").include?("assets/images/eye_of_calypso.jpg"), "Poka Bogi Spyat does not reuse the Eye of Calypso cover")
 
 {

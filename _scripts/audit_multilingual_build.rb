@@ -250,7 +250,7 @@ expect.call(category_artwork_checks.positive?, "No category-card artwork was che
 
 {
   "places/astaria.html" => "astaria.png",
-  "imitei/paragon.html" => "paragon_m.jpg",
+  "imitei/paragon.html" => "paragon_m.png",
   "imitei/navarch.html" => "navarch_female.jpg"
 }.each do |relative, filename|
   expect.call(

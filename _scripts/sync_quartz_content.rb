@@ -3078,7 +3078,7 @@ def write_index(entries)
     ---
     title: Астария
     socialTitle: Astaria
-    socialImage: Assets/Images/Avatar_vs_Ascended.jpg
+    socialImage: Assets/Images/Avatar_vs_Ascended.png
     lang: ru
     description: Мифологическая энциклопедия Астарии — мира богов, героев и древних цивилизаций.
     aliases:
@@ -3087,7 +3087,7 @@ def write_index(entries)
 
     <div class="astaria-home">
       <section class="astaria-home-hero" aria-label="Добро пожаловать в Астарию">
-        <img src="assets/images/avatar_vs_ascended.jpg" alt="Аватар и Вознесённый сражаются среди снега и огненных всполохов" fetchpriority="high">
+        <img src="assets/images/avatar_vs_ascended.png" alt="Аватар и Вознесённый сражаются среди снега и огненных всполохов" fetchpriority="high">
         <div class="astaria-home-hero-shade"></div>
       </section>
 
@@ -3247,7 +3247,7 @@ end
 asset_paths.concat(timeline_events(reference_lookup).map { |event| event[:image] }.compact)
 asset_paths.map! { |relative| ASSET_REWRITES.fetch(relative, relative) }
 asset_paths.concat([
-  "Assets/Images/Avatar_vs_Ascended.jpg",
+  "Assets/Images/Avatar_vs_Ascended.png",
   "Assets/Images/Acheus_Invasion.jpg",
   "Assets/Images/Astaria.png",
   "Assets/Images/bg.jpg",

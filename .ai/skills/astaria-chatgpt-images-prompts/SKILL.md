@@ -59,8 +59,8 @@ For observed style drift, briefly exclude thin uniform outlines, flat color fill
 Earlier supporting references remain useful for composition and cultural continuity:
 
 - Capital compositions: resolve the current `cover_image` of `Город Кайто` and `Город Аргос` and inspect it. Earlier `.jpg` examples have been replaced; do not treat observations about old art as a description of the current files.
-- `Assets/Images/Gilas.jpg`: selective crisp contours, stylized figures, convincing volume and materials.
-- `Assets/Images/Amato.jpg`: atmospheric distance, layered shorelines, controlled color and local warm accents.
+- `Assets/Images/Gilas.png`: selective crisp contours, stylized figures, convincing volume and materials.
+- `Assets/Images/Amato.png`: atmospheric distance, layered shorelines, controlled color and local warm accents.
 
 Use these earlier environment references for perspective, scale, visual hierarchy and cultural materials; the Chthonic Sea reference takes precedence for environment rendering. The figure reference governs faces, anatomy and figure materials, including prominent people in a country cover. Preserve nuanced materials and organized light and shadow without defaulting to heavy impasto or flat cel shading.
 

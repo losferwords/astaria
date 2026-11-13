@@ -6,7 +6,7 @@ category: "Боги"
 ready: true
 quartz: true
 public_slug: "hyperion-i"
-portrait_image: "[[Assets/Images/Hyperion.jpg]]"
+portrait_image: "[[Assets/Images/Hyperion.png]]"
 gender: "Мужской"
 current_location: "[[Город Аргос]]"
 eyes: "Золотые"
@@ -32,7 +32,7 @@ residence: "[[Город Аргос]]"
 
 # Гиперион I
 
-![[Assets/Images/Hyperion.jpg]]
+![[Assets/Images/Hyperion.png]]
 
 ## Основной текст
 

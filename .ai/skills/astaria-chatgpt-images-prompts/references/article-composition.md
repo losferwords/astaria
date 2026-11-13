@@ -33,7 +33,7 @@ Show coordinated work, distinct roles and an institutional setting. A scholar wi
 
 Usually two or three readable participants are sufficient; larger organizations do not require large foreground crowds. Assign each a position, action, partner or handled object, and plausible gaze. Preserve common insignia or materials without cloning faces, poses and costumes. Use exact heraldry only when supported by the note or supplied reference. An emblem-only design is appropriate when requested, not the default article cover.
 
-In a working interior, allow architecture, equipment and background activity to explain the institution. `Ui-Djan_Brothel.jpg` is useful for spatial hierarchy; its intimate foreground scene is not a template for unrelated organizations.
+In a working interior, allow architecture, equipment and background activity to explain the institution. `Ui-Djan_Brothel.png` is useful for spatial hierarchy; its intimate foreground scene is not a template for unrelated organizations.
 
 ## Peoples
 

@@ -28,6 +28,8 @@ quartz: false
 
 Use `[[Target]]` or `[[Target|visible text]]`; qualify the path only for duplicate titles. Do not create category pages merely to list other notes; use folders, links or Dataview. Do not add saga-chapter backlinks to ordinary lore articles unless requested.
 
+Native-language name forms are currently authorised only for Obitelj, Amato and the Lang-An Empire. For Qadir and other cultures, do not add `native_name`, `native_reading` or prototype-language aliases to canonical notes, English overlays or the name registry. Keep approved Russian and English forms; an approved `name_meaning` can remain. See the [world naming rules](../../context/astaria-world.md#местная-запись-и-оформление-собственных-имён).
+
 ## Canonical prose and characters
 
 Played-session retellings use continuous third-person past-tense prose, with indirect speech where appropriate. Attribute observations, guesses and discoveries to whoever made them. Do not turn a character's inference into established truth or add a recap, moral, explanation of the song, or invented cliffhanger after the last meaningful action. Avoid scene headings that the retelling does not need.

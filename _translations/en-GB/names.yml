@@ -133,6 +133,16 @@ names:
   Деревня Теония:
     title: Theonia
     slug: theonia
+  Город Алкион:
+    title: Alkyon
+    slug: alkyon
+    aliases:
+      - Phalcon
+  Город Блэкшор:
+    title: Blackshore
+    slug: blackshore
+    aliases:
+      - Blacksea Shore
   Город Аргос:
     title: Argos
     slug: argos
@@ -245,9 +255,12 @@ names:
   Озеро Зураиф:
     title: Lake Zuraif
     slug: lake-zuraif
-  Озеро Кхарим:
-    title: Lake Kharim
-    slug: lake-kharim
+  Озеро Насим:
+    title: Lake Nasim
+    slug: lake-nasim
+    aliases:
+      - Lake Kharim
+      - Kharim
   Озеро Рашах:
     title: Lake Rashah
     slug: lake-rashah
@@ -293,9 +306,11 @@ names:
     slug: velissa
     native_name: Велисса
   Мафка:
-    title: Mavka
-    slug: mavka
+    title: Mafka
+    slug: mafka
     native_name: Мафка
+    aliases:
+      - Mavka
   Ивар Свирепый:
     title: Ivar the Fierce
     slug: ivar-the-fierce
@@ -883,8 +898,10 @@ names:
     title: Abu Ali al-Hassan
     slug: abu-ali-al-hassan
   Аластриона Растущая:
-    title: Alastriona the Growing
-    slug: alastriona-the-growing
+    title: Alastriona the Flourishing
+    slug: alastriona-the-flourishing
+    aliases:
+      - Alastriona the Growing
   Умар ибн Ла-Ахад:
     title: Umar ibn La-Ahad
     slug: umar-ibn-la-ahad
@@ -1298,6 +1315,12 @@ names:
   Река Изгелуат:
     title: Isgeluat
     slug: isgeluat
+  Река Хаву:
+    title: Havu River
+    slug: havu-river
+    aliases:
+      - Joki River
+      - Yoki River
   Река Нид:
     title: Nid River
     slug: nid-river
@@ -1378,8 +1401,11 @@ names:
     title: Shafar Mountains
     slug: shafar-mountains
   Город Андерхан:
-    title: Underkhan
-    slug: underkhan
+    title: Anderkhan
+    slug: anderkhan
+    aliases:
+      - Underkhan
+      - City of Underkhan
   Город Бахара:
     title: Bahara
     slug: bahara
@@ -1417,6 +1443,9 @@ names:
   Деревня Бадракали:
     title: Badrakali
     slug: badrakali
+  Храм Ситы:
+    title: Temple of Sita
+    slug: temple-of-sita
   Деревня Вэйган:
     title: Weigan
     slug: veigan
@@ -1501,8 +1530,10 @@ names:
     title: Rashaad al-Sakhar
     slug: rashaad-al-sakhar
   Гилья Кангарлавехотри:
-    title: Gilja Kangarlavehotri
-    slug: gilja-kangarlavehotri
+    title: Gilya Kangarlavehotri
+    slug: gilya-kangarlavehotri
+    aliases:
+      - Gilja Kangarlavehotri
   Индира Раштра:
     title: Indira Rashtra
     slug: indira-rashtra
@@ -1524,12 +1555,20 @@ names:
   Тара Саркар:
     title: Tara Sarkar
     slug: tara-sarkar
+  Ашвин Виджай:
+    title: Ashvin Vijay
+    slug: ashvin-vijay
+    aliases:
+      - Ashram Vijay
   Амрит Наир:
     title: Amrit Nair
     slug: amrit-nair
   Анвика Нарай:
     title: Anvika Narai
     slug: anvika-narai
+  Сита:
+    title: Sita
+    slug: sita
   Чори Марджари:
     title: Chori Marjari
     slug: chori-marjari

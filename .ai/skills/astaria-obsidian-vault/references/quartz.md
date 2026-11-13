@@ -10,6 +10,8 @@ Site typography is self-hosted: keep `fontOrigin: local` and the bundled Alegrey
 
 ## Name details in sidebars
 
+Only Obitelj, Amato and the Lang-An Empire currently use native-language name forms. Do not author `native_name`, `native_reading` or prototype-language aliases for Qadir or other cultures in source notes, English overlays or the registry. An approved `name_meaning` can remain without these fields. Keep scholarly spellings and readings in the private audit rather than public metadata.
+
 For Lang-An and Amato, keep the opening definition in the article's language without parallel names, CJK parentheses or real-world linguistic commentary. Use `native_name` for the approved script, `native_reading` for its reading and `name_meaning` for an optional interpretation. The sidebar places Reading immediately after Native name, followed by Name meaning. English overlays supply their own annotation values; these fields do not fall back to Russian. Do not introduce labels such as Mandarin or Pinyin into the lore. Preserve in-world history and customs, meaningful local spoken names and foreign-language dialogue in literary works.
 
 ## Publication workflow

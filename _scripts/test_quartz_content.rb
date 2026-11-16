@@ -2006,7 +2006,7 @@ expect.call(map.scan("astaria-map-marker astaria-map-marker-").length == canonic
 map_manifest = YAML.safe_load(File.read(File.join(ROOT, "_translations", "map-layers.yml"))).fetch("layers")
 map_locale = map.include?('lang="en-GB"') ? "en-GB" : "ru"
 %w[states heightmap biomes].each do |key|
-  relative = map_manifest.fetch(key).fetch(map_locale).fetch("source")
+  relative = map_manifest.fetch(key).fetch(map_locale).fetch("web")
   url = relative.downcase
   expect.call(map.include?(url), "Map does not use original layer #{relative}")
   source = File.join(ROOT, relative)
@@ -2017,8 +2017,8 @@ end
 states_layer = map[/<img class="astaria-map-layer[^\"]*" data-layer="states"[^>]*>/]
 heightmap_layer = map[/<img class="astaria-map-layer[^\"]*" data-layer="heightmap"[^>]*>/]
 biomes_layer = map[/<img class="astaria-map-layer[^\"]*" data-layer="biomes"[^>]*>/]
-layer_url = ->(key) { map_manifest.fetch(key).fetch(map_locale).fetch("source").downcase }
-expect.call(states_layer&.include?(%(src="#{layer_url.call("states")}")), "Primary states layer must load the original image immediately")
+layer_url = ->(key) { map_manifest.fetch(key).fetch(map_locale).fetch("web").downcase }
+expect.call(states_layer&.include?(%(data-src="#{layer_url.call("states")}")) && !states_layer.match?(/\ssrc=/), "Primary detailed layer must wait for zoom")
 expect.call(heightmap_layer&.include?(%(data-src="#{layer_url.call("heightmap")}")) && !heightmap_layer.match?(/\ssrc=/), "Heightmap must remain lazy until selected")
 expect.call(biomes_layer&.include?(%(data-src="#{layer_url.call("biomes")}")) && !biomes_layer.match?(/\ssrc=/), "Biomes must remain lazy until selected")
 expect.call(!experience_script.include?("scale(${state.scale})"), "Map zoom must not upscale a rasterized DOM layer")

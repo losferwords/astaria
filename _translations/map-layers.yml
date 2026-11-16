@@ -3,21 +3,33 @@ layers:
   states:
     ru:
       source: Assets/Maps/states_ru.png
-      web: Assets/Maps/states_ru.png
+      web: Assets/Maps/Web/states_ru.webp
+      preview: Assets/Maps/Web/states_ru-preview.webp
+      tiles: Assets/Maps/Web/states_ru-tiles/tiles.json
     en-GB:
       source: Assets/Maps/states_en.png
-      web: Assets/Maps/states_en.png
+      web: Assets/Maps/Web/states_en.webp
+      preview: Assets/Maps/Web/states_en-preview.webp
+      tiles: Assets/Maps/Web/states_en-tiles/tiles.json
   heightmap:
     ru:
       source: Assets/Maps/heightmap_ru.png
-      web: Assets/Maps/heightmap_ru.png
+      web: Assets/Maps/Web/heightmap_ru.webp
+      preview: Assets/Maps/Web/heightmap_ru-preview.webp
+      tiles: Assets/Maps/Web/heightmap_ru-tiles/tiles.json
     en-GB:
       source: Assets/Maps/heightmap_en.png
-      web: Assets/Maps/heightmap_en.png
+      web: Assets/Maps/Web/heightmap_en.webp
+      preview: Assets/Maps/Web/heightmap_en-preview.webp
+      tiles: Assets/Maps/Web/heightmap_en-tiles/tiles.json
   biomes:
     ru:
       source: Assets/Maps/biomes_ru.png
-      web: Assets/Maps/biomes_ru.png
+      web: Assets/Maps/Web/biomes_ru.webp
+      preview: Assets/Maps/Web/biomes_ru-preview.webp
+      tiles: Assets/Maps/Web/biomes_ru-tiles/tiles.json
     en-GB:
       source: Assets/Maps/biomes_en.png
-      web: Assets/Maps/biomes_en.png
+      web: Assets/Maps/Web/biomes_en.webp
+      preview: Assets/Maps/Web/biomes_en-preview.webp
+      tiles: Assets/Maps/Web/biomes_en-tiles/tiles.json

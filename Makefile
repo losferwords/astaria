@@ -1,7 +1,11 @@
-.PHONY: quartz-sync quartz-build quartz-serve site serve translations-check translations-complete-check multilingual-build multilingual-preview multilingual-preview-serve multilingual-serve map-coordinates-sync map-coordinates-check
+.PHONY: quartz-sync quartz-build quartz-serve site serve translations-check translations-complete-check multilingual-build multilingual-preview multilingual-preview-serve multilingual-serve map-coordinates-sync map-coordinates-check map-assets
 
 PORT ?= 8080
 WSPORT ?= 3001
+
+map-assets:
+	node _scripts/optimize_map_layers.mjs
+	node _scripts/test_map_tiles.mjs
 
 map-coordinates-sync:
 	ruby _scripts/sync_azgaar_coordinates.rb --write
@@ -9,7 +13,7 @@ map-coordinates-sync:
 map-coordinates-check:
 	ruby _scripts/sync_azgaar_coordinates.rb --check
 
-quartz-sync: map-coordinates-check
+quartz-sync: map-coordinates-check map-assets
 	ruby _scripts/sync_quartz_content.rb
 
 quartz-build: quartz-sync
@@ -22,13 +26,13 @@ site: quartz-build
 
 serve: quartz-serve
 
-translations-check:
+translations-check: map-assets
 	ruby _scripts/validate_astaria_translations.rb
 
-translations-complete-check:
+translations-complete-check: map-assets
 	ruby _scripts/validate_astaria_translations.rb --complete
 
-multilingual-build: translations-complete-check map-coordinates-check
+multilingual-build: map-assets translations-complete-check map-coordinates-check
 	ASTARIA_LOCALE=ru ASTARIA_USE_APPROVED_ROUTES=true ASTARIA_QUARTZ_CONTENT=_quartz/content-ru ruby _scripts/sync_quartz_content.rb
 	cd _quartz && ASTARIA_LOCALE=ru ASTARIA_MULTILINGUAL=true NODE_OPTIONS=--max-old-space-size=8192 node quartz/bootstrap-cli.mjs build -d content-ru -o build/ru
 	ASTARIA_LOCALE=en-GB ASTARIA_USE_APPROVED_ROUTES=true ASTARIA_QUARTZ_CONTENT=_quartz/content-en ruby _scripts/sync_quartz_content.rb
@@ -38,7 +42,7 @@ multilingual-build: translations-complete-check map-coordinates-check
 	ruby _scripts/audit_translation_parity.rb
 	ruby _scripts/audit_quartz_build.rb
 
-multilingual-preview: translations-check map-coordinates-check
+multilingual-preview: map-assets translations-check map-coordinates-check
 	ASTARIA_LOCALE=ru ASTARIA_USE_APPROVED_ROUTES=true ASTARIA_QUARTZ_CONTENT=_quartz/content-ru ruby _scripts/sync_quartz_content.rb
 	cd _quartz && ASTARIA_LOCALE=ru ASTARIA_MULTILINGUAL=true NODE_OPTIONS=--max-old-space-size=8192 node quartz/bootstrap-cli.mjs build -d content-ru -o build/ru
 	ASTARIA_LOCALE=en-GB ASTARIA_ONLY_TRANSLATED=true ASTARIA_USE_APPROVED_ROUTES=true ASTARIA_QUARTZ_CONTENT=_quartz/content-en ruby _scripts/sync_quartz_content.rb

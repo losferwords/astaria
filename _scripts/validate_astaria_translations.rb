@@ -70,7 +70,7 @@ AstariaTranslations.map_layers.each do |key, locales|
       next
     end
 
-    %w[source web].each do |variant|
+    %w[source web preview tiles].each do |variant|
       relative = locales[locale][variant].to_s
       if relative.empty?
         failures << "Map layer #{key}: missing #{locale} #{variant} path"

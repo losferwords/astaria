@@ -5220,3 +5220,28 @@ dialog.astaria-map-expanded {
     min-height: 11.5rem;
   }
 }
+
+// Empty detailed layers leave the small map preview visible.
+.astaria-map-layer:not([src]) {
+  visibility: hidden;
+}
+
+.astaria-map-tiles {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.astaria-map-tiles > img {
+  position: absolute;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  opacity: 0;
+}
+
+.astaria-map-tiles > img.is-ready {
+  opacity: 1;
+}

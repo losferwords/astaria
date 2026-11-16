@@ -327,15 +327,34 @@ canonical_markers = canonical_map[:text].scan(/^\s*-\s+default,\s*(\d+(?:\.\d+)?
   end
   %w[states heightmap biomes].each do |layer|
     config = AstariaTranslations.map_layers.fetch(layer)
-    expected = config.fetch(locale).fetch("source").downcase
+    expected = config.fetch(locale).fetch("web").downcase
     other_locale = locale == "ru" ? "en-GB" : "ru"
-    unwanted = config.fetch(other_locale).fetch("source").downcase
+    unwanted = config.fetch(other_locale).fetch("web").downcase
     expect.call(html.include?(expected), "#{locale} map does not use #{layer}: #{expected}")
     expect.call(!html.include?(unwanted), "#{locale} map includes another language's #{layer} layer")
     asset_root = locale == "ru" ? PUBLIC.join("__locales", "ru") : PUBLIC
     expect.call(asset_root.join(expected).file?, "Map asset is missing for #{locale}: #{expected}")
+    tile_path = config.fetch(locale).fetch("tiles").downcase
+    expect.call(html.include?(tile_path), "#{locale} map lacks #{layer} HD tile metadata")
+    descriptor_path = asset_root.join(tile_path)
+    expect.call(descriptor_path.file?, "Missing HD tile descriptor: #{tile_path}")
+    if descriptor_path.file?
+      descriptor = JSON.parse(descriptor_path.read)
+      expect.call(descriptor.values_at("width", "height") == [11520, 6480], "HD tiles must preserve original dimensions")
+      descriptor.fetch("grids").each do |grid|
+        grid.fetch("rows").times do |y|
+          grid.fetch("columns").times do |x|
+            tile = descriptor_path.dirname.join(grid.fetch("id"), "#{x}-#{y}.webp")
+            expect.call(tile.file?, "Missing HD tile: #{tile}")
+          end
+        end
+      end
+    end
   end
-  preview = AstariaTranslations.map_layers.fetch("states").fetch(locale).fetch("web").downcase
+  expect.call(!html.match?(/assets\/maps\/[^"<>]*\.png/i), "#{locale} map must not download original PNG layers")
+  states_tag = html[/<img class="astaria-map-layer[^"]*" data-layer="states"[^>]*>/]
+  expect.call(states_tag && !states_tag.match?(/\ssrc=/), "#{locale} map must defer detail until zoom")
+  preview = AstariaTranslations.map_layers.fetch("states").fetch(locale).fetch("preview").downcase
   expect.call(html.include?(preview), "#{locale} map preview uses the wrong locale")
 end
 

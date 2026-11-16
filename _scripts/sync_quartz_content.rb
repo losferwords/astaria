@@ -181,11 +181,10 @@ SIGNIFICANCE_LABELS_EN = {
   3 => "Notable"
 }.freeze
 
-# Keep map cards and embeds in the page's locale. Source and preview may
-# intentionally share one asset; no parallel Web/en directory is required.
-ASSET_REWRITES = AstariaTranslations.map_layers.to_h do |key, locales|
-  [locales.fetch("ru").fetch("source"), AstariaTranslations.map_layer_for(key, variant: "web")]
-end.freeze
+# Public cards and embeds use small previews; full layers load only on demand.
+ASSET_REWRITES = AstariaTranslations.map_layers.flat_map do |key, locales|
+  locales.values.map { |config| [config.fetch("source"), AstariaTranslations.map_layer_for(key, variant: "preview")] }
+end.to_h.freeze
 
 INFOBOX_FIELDS = [
   ["native_name", "Имя на родном языке"],
@@ -1853,8 +1852,8 @@ def map_markers(body, lookup)
     else
       case canonical_name
       when /(?:Город|Деревня|Храм|Кузня|Обитель)/i then "settlement"
-      when /(?:Озеро|Река|море|залив|пролив|перешеек)/i then "water"
-      when /(?:Гор|Пустын|Лес|Чащ|Джунг|Болот|Долин|луг|земл|Вулкан|Предгор)/i then "terrain"
+      when /(?:Озеро|Река|море|залив|пролив)/i then "water"
+      when /(?:Гор|Пустын|Лес|Чащ|Джунг|Болот|Долин|луг|земл|Вулкан|Предгор|перешеек)/i then "terrain"
       else "realm"
       end
     end
@@ -1970,14 +1969,13 @@ def build_map_explorer(data, body, route, lookup)
   end
 
   layers = ui[:layers].map do |key, labels|
-    configured_path = extract_asset_path((data["map_layers"] || {})[key])
-    path = BUILD_LOCALE == "en-GB" ? AstariaTranslations.map_layer_for(key) : configured_path
+    path = AstariaTranslations.map_layer_for(key, variant: "web")
     [key, labels, path]
   end
 
   layer_images = layers.map.with_index do |(key, labels, path), index|
     next unless path
-    url_attribute = index.zero? ? %(src="#{CGI.escapeHTML(public_asset_url(path))}" fetchpriority="high") : %(data-src="#{CGI.escapeHTML(public_asset_url(path))}")
+    url_attribute = %(data-src="#{CGI.escapeHTML(public_asset_url(path))}" data-tiles-src="#{CGI.escapeHTML(public_asset_url(AstariaTranslations.map_layer_for(key, variant: "tiles")))}")
     %(<img class="astaria-map-layer#{index.zero? ? " is-active" : ""}" data-layer="#{key}" #{url_attribute} alt="#{CGI.escapeHTML(labels.last)}" decoding="async" draggable="false">)
   end.compact.join("\n")
 
@@ -2043,8 +2041,9 @@ def build_map_explorer(data, body, route, lookup)
           </aside>
           <div class="astaria-map-viewport" tabindex="0" aria-label="#{ui[:viewport]}">
             <div class="astaria-map-stage">
-              <img class="astaria-map-preview" src="#{CGI.escapeHTML(public_asset_url(AstariaTranslations.map_layer_for("states", variant: "web")))}" alt="" aria-hidden="true" decoding="async" fetchpriority="high" draggable="false">
+              <img class="astaria-map-preview" src="#{CGI.escapeHTML(public_asset_url(AstariaTranslations.map_layer_for("states", variant: "preview")))}" alt="" aria-hidden="true" decoding="async" fetchpriority="high" draggable="false">
               #{layer_images}
+              <div class="astaria-map-tiles" aria-hidden="true"></div>
               <div class="astaria-map-markers">#{marker_buttons}</div>
             </div>
             <div class="astaria-map-detail" hidden>
@@ -3140,7 +3139,7 @@ def write_index(entries)
         <article class="astaria-portal astaria-portal-visual astaria-portal-map">
           <a class="astaria-portal-hit" href="map" aria-label="Исследовать интерактивную карту Астарии">
             <div class="astaria-portal-image">
-              <img src="#{CGI.escapeHTML(public_asset_url(AstariaTranslations.map_layer_for("states", variant: "web")))}" alt="Политическая карта Астарии" loading="lazy">
+              <img src="#{CGI.escapeHTML(public_asset_url(AstariaTranslations.map_layer_for("states", variant: "preview")))}" alt="Политическая карта Астарии" loading="lazy">
               <span class="astaria-map-pin astaria-map-pin-one" aria-hidden="true"></span>
               <span class="astaria-map-pin astaria-map-pin-two" aria-hidden="true"></span>
               <span class="astaria-map-pin astaria-map-pin-three" aria-hidden="true"></span>
@@ -3253,9 +3252,19 @@ asset_paths.concat([
   "Assets/Images/bg.jpg"
 ])
 AstariaTranslations.map_layers.each_key do |key|
-  asset_paths << AstariaTranslations.map_layer_for(key)
+  asset_paths << AstariaTranslations.map_layer_for(key, variant: "web")
+  tile_manifest = AstariaTranslations.map_layer_for(key, variant: "tiles")
+  asset_paths << tile_manifest
+  tile_data = JSON.parse(File.read(File.join(ROOT, tile_manifest)))
+  tile_data.fetch("grids").each do |grid|
+    grid.fetch("rows").times do |y|
+      grid.fetch("columns").times do |x|
+        asset_paths << File.join(File.dirname(tile_manifest), grid.fetch("id"), "#{x}-#{y}.webp")
+      end
+    end
+  end
 end
-asset_paths << AstariaTranslations.map_layer_for("states", variant: "web")
+asset_paths << AstariaTranslations.map_layer_for("states", variant: "preview")
 asset_paths.uniq.sort.each { |relative| copy_asset(relative) }
 
 puts "Prepared #{entries.size} published notes in #{DEST}"

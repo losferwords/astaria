@@ -1,3 +1,5 @@
+import { createMapTileRenderer } from "./astaria-map-tiles";
+
 const astariaExperienceEnglish = document.documentElement.lang
   .toLowerCase()
   .startsWith("en");
@@ -189,14 +191,17 @@ function setupAstariaMap() {
     };
   };
 
+  let requestDetail = () => {};
+  let syncTiles = () => {};
+
   const maximumUsefulScale = (base = baseDimensions()) =>
     Math.max(
       minScale,
       Math.min(
-        20,
-        // Allow four times the source resolution for closer inspection.
-        (mapWidth * 4) / (base.width * pixelRatio),
-        (mapHeight * 4) / (base.height * pixelRatio),
+        15,
+        // Bound magnification and GPU surface size on high-density displays.
+        (mapWidth * 3) / (base.width * pixelRatio),
+        (mapHeight * 3) / (base.height * pixelRatio),
       ),
     );
 
@@ -217,6 +222,8 @@ function setupAstariaMap() {
     stage.style.height = `${renderedHeight}px`;
     stage.style.transform = `translate3d(calc(-50% + ${state.x}px), calc(-50% + ${state.y}px), 0)`;
     explorer.dataset.zoomed = state.scale > 1.02 ? "true" : "false";
+    requestDetail();
+    syncTiles();
   };
 
   const zoomAt = (nextScale: number, clientX?: number, clientY?: number) => {
@@ -438,7 +445,11 @@ function setupAstariaMap() {
     }
     for (const image of layerImages) {
       image.classList.toggle("is-active", image.dataset.layer === layer);
+      if (image.dataset.layer !== layer && image.complete && image.naturalWidth > 0) {
+        image.removeAttribute("src");
+      }
     }
+    syncTiles();
   };
 
   const stopLayerLoading = (layer: string) => {
@@ -469,14 +480,14 @@ function setupAstariaMap() {
 
     const finish = async () => {
       delete image.dataset.loading;
-      delete image.dataset.src;
       try {
         await image.decode();
       } catch {
         // The image is already usable when the load event has fired.
       }
       stopLayerLoading(layer);
-      commitLayer(layer);
+      if (requestedLayer === layer) commitLayer(layer);
+      else image.removeAttribute("src");
     };
     const fail = () => {
       delete image.dataset.loading;
@@ -492,21 +503,20 @@ function setupAstariaMap() {
     button.addEventListener("click", () => loadLayer(button));
   }
 
-  const initialLayer = layerImages.find((image) =>
-    image.classList.contains("is-active"),
-  );
-  const initialButton = layerButtons.find(
-    (button) => button.dataset.layer === initialLayer?.dataset.layer,
-  );
-  if (initialLayer && initialButton && !initialLayer.complete) {
-    initialButton.classList.add("is-loading");
-    initialButton.setAttribute("aria-busy", "true");
-    initialLayer.addEventListener(
-      "load",
-      () => stopLayerLoading(initialLayer.dataset.layer ?? "states"),
-      { once: true },
-    );
-  }
+  // Overview uses the small preview. Fetch detail only after zooming or selection.
+  requestDetail = () => {
+    if (state.scale <= 1.25) return;
+    const button = layerButtons.find(button => button.dataset.layer === requestedLayer);
+    if (button) loadLayer(button);
+  };
+
+  const tileRenderer = createMapTileRenderer(viewport, stage, layerImages);
+  syncTiles = () => {
+    const active = layerImages.find(image => image.classList.contains("is-active"));
+    const nearMaximum = state.scale >= maximumUsefulScale() * 0.95;
+    tileRenderer.update(active?.dataset.layer ?? "states",
+      state.scale > 1.25 && (nearMaximum || stage.clientWidth * pixelRatio > 7680));
+  };
 
   viewport.addEventListener(
     "wheel",
@@ -647,6 +657,7 @@ function setupAstariaMap() {
     addCleanup?: (fn: () => void) => void;
   };
   quartzWindow.addCleanup?.(() => {
+    tileRenderer.destroy();
     observer.disconnect();
     if (cursorLogTimer !== null) window.clearTimeout(cursorLogTimer);
     expandedView.removeEventListener("close", restoreMap);

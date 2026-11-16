@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "width": 11520,
+  "height": 6480,
+  "sourceSha256": "0fd3d48cc4bbc4387aee91c13ea8cdd84bd97b3a3e941b9a097f363c4ae696db",
+  "grids": [
+    {
+      "id": "detail",
+      "tileWidth": 3072,
+      "tileHeight": 2048,
+      "columns": 4,
+      "rows": 4
+    },
+    {
+      "id": "wide",
+      "tileWidth": 5760,
+      "tileHeight": 3240,
+      "columns": 2,
+      "rows": 2
+    }
+  ]
+}

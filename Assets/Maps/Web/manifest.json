@@ -1,0 +1,434 @@
+{
+  "states/ru": {
+    "sha256": "f384b56eab189a9a764111474d56c983855d2cfde9e8017de10b8bb4e23e0bf7",
+    "outputs": {
+      "web": {
+        "settings": {
+          "path": "Assets/Maps/Web/states_ru.webp",
+          "width": 7680,
+          "quality": 90,
+          "format": "webp",
+          "effort": 5
+        },
+        "bytes": 5266094
+      },
+      "preview": {
+        "settings": {
+          "path": "Assets/Maps/Web/states_ru-preview.webp",
+          "width": 1920,
+          "quality": 82,
+          "format": "webp",
+          "effort": 5
+        },
+        "bytes": 417936
+      }
+    },
+    "tiles": {
+      "sha256": "f384b56eab189a9a764111474d56c983855d2cfde9e8017de10b8bb4e23e0bf7",
+      "settings": {
+        "version": 1,
+        "lossless": true,
+        "effort": 0,
+        "grids": [
+          {
+            "id": "detail",
+            "tileWidth": 3072,
+            "tileHeight": 2048,
+            "columns": 4,
+            "rows": 4
+          },
+          {
+            "id": "wide",
+            "tileWidth": 5760,
+            "tileHeight": 3240,
+            "columns": 2,
+            "rows": 2
+          }
+        ]
+      },
+      "bytes": 80116454,
+      "paths": [
+        "detail/0-0.webp",
+        "detail/1-0.webp",
+        "detail/2-0.webp",
+        "detail/3-0.webp",
+        "detail/0-1.webp",
+        "detail/1-1.webp",
+        "detail/2-1.webp",
+        "detail/3-1.webp",
+        "detail/0-2.webp",
+        "detail/1-2.webp",
+        "detail/2-2.webp",
+        "detail/3-2.webp",
+        "detail/0-3.webp",
+        "detail/1-3.webp",
+        "detail/2-3.webp",
+        "detail/3-3.webp",
+        "wide/0-0.webp",
+        "wide/1-0.webp",
+        "wide/0-1.webp",
+        "wide/1-1.webp"
+      ]
+    }
+  },
+  "states/en-GB": {
+    "sha256": "0fd3d48cc4bbc4387aee91c13ea8cdd84bd97b3a3e941b9a097f363c4ae696db",
+    "outputs": {
+      "web": {
+        "settings": {
+          "path": "Assets/Maps/Web/states_en.webp",
+          "width": 7680,
+          "quality": 90,
+          "format": "webp",
+          "effort": 5
+        },
+        "bytes": 5077478
+      },
+      "preview": {
+        "settings": {
+          "path": "Assets/Maps/Web/states_en-preview.webp",
+          "width": 1920,
+          "quality": 82,
+          "format": "webp",
+          "effort": 5
+        },
+        "bytes": 406354
+      }
+    },
+    "tiles": {
+      "sha256": "0fd3d48cc4bbc4387aee91c13ea8cdd84bd97b3a3e941b9a097f363c4ae696db",
+      "settings": {
+        "version": 1,
+        "lossless": true,
+        "effort": 0,
+        "grids": [
+          {
+            "id": "detail",
+            "tileWidth": 3072,
+            "tileHeight": 2048,
+            "columns": 4,
+            "rows": 4
+          },
+          {
+            "id": "wide",
+            "tileWidth": 5760,
+            "tileHeight": 3240,
+            "columns": 2,
+            "rows": 2
+          }
+        ]
+      },
+      "bytes": 76202418,
+      "paths": [
+        "detail/0-0.webp",
+        "detail/1-0.webp",
+        "detail/2-0.webp",
+        "detail/3-0.webp",
+        "detail/0-1.webp",
+        "detail/1-1.webp",
+        "detail/2-1.webp",
+        "detail/3-1.webp",
+        "detail/0-2.webp",
+        "detail/1-2.webp",
+        "detail/2-2.webp",
+        "detail/3-2.webp",
+        "detail/0-3.webp",
+        "detail/1-3.webp",
+        "detail/2-3.webp",
+        "detail/3-3.webp",
+        "wide/0-0.webp",
+        "wide/1-0.webp",
+        "wide/0-1.webp",
+        "wide/1-1.webp"
+      ]
+    }
+  },
+  "heightmap/ru": {
+    "sha256": "873267cf432453005ca015b6b871d932db1dc9a5f74bec04920735b43a184a12",
+    "outputs": {
+      "web": {
+        "settings": {
+          "path": "Assets/Maps/Web/heightmap_ru.webp",
+          "width": 7680,
+          "quality": 90,
+          "format": "webp",
+          "effort": 5
+        },
+        "bytes": 5092258
+      },
+      "preview": {
+        "settings": {
+          "path": "Assets/Maps/Web/heightmap_ru-preview.webp",
+          "width": 1920,
+          "quality": 82,
+          "format": "webp",
+          "effort": 5
+        },
+        "bytes": 479716
+      }
+    },
+    "tiles": {
+      "sha256": "873267cf432453005ca015b6b871d932db1dc9a5f74bec04920735b43a184a12",
+      "settings": {
+        "version": 1,
+        "lossless": true,
+        "effort": 0,
+        "grids": [
+          {
+            "id": "detail",
+            "tileWidth": 3072,
+            "tileHeight": 2048,
+            "columns": 4,
+            "rows": 4
+          },
+          {
+            "id": "wide",
+            "tileWidth": 5760,
+            "tileHeight": 3240,
+            "columns": 2,
+            "rows": 2
+          }
+        ]
+      },
+      "bytes": 43956356,
+      "paths": [
+        "detail/0-0.webp",
+        "detail/1-0.webp",
+        "detail/2-0.webp",
+        "detail/3-0.webp",
+        "detail/0-1.webp",
+        "detail/1-1.webp",
+        "detail/2-1.webp",
+        "detail/3-1.webp",
+        "detail/0-2.webp",
+        "detail/1-2.webp",
+        "detail/2-2.webp",
+        "detail/3-2.webp",
+        "detail/0-3.webp",
+        "detail/1-3.webp",
+        "detail/2-3.webp",
+        "detail/3-3.webp",
+        "wide/0-0.webp",
+        "wide/1-0.webp",
+        "wide/0-1.webp",
+        "wide/1-1.webp"
+      ]
+    }
+  },
+  "heightmap/en-GB": {
+    "sha256": "5df5b3150dfcbe76e1a67c355db5250d52cdafb9ba1add0cbe7fa3b5127120b0",
+    "outputs": {
+      "web": {
+        "settings": {
+          "path": "Assets/Maps/Web/heightmap_en.webp",
+          "width": 7680,
+          "quality": 90,
+          "format": "webp",
+          "effort": 5
+        },
+        "bytes": 4930886
+      },
+      "preview": {
+        "settings": {
+          "path": "Assets/Maps/Web/heightmap_en-preview.webp",
+          "width": 1920,
+          "quality": 82,
+          "format": "webp",
+          "effort": 5
+        },
+        "bytes": 466572
+      }
+    },
+    "tiles": {
+      "sha256": "5df5b3150dfcbe76e1a67c355db5250d52cdafb9ba1add0cbe7fa3b5127120b0",
+      "settings": {
+        "version": 1,
+        "lossless": true,
+        "effort": 0,
+        "grids": [
+          {
+            "id": "detail",
+            "tileWidth": 3072,
+            "tileHeight": 2048,
+            "columns": 4,
+            "rows": 4
+          },
+          {
+            "id": "wide",
+            "tileWidth": 5760,
+            "tileHeight": 3240,
+            "columns": 2,
+            "rows": 2
+          }
+        ]
+      },
+      "bytes": 39333026,
+      "paths": [
+        "detail/0-0.webp",
+        "detail/1-0.webp",
+        "detail/2-0.webp",
+        "detail/3-0.webp",
+        "detail/0-1.webp",
+        "detail/1-1.webp",
+        "detail/2-1.webp",
+        "detail/3-1.webp",
+        "detail/0-2.webp",
+        "detail/1-2.webp",
+        "detail/2-2.webp",
+        "detail/3-2.webp",
+        "detail/0-3.webp",
+        "detail/1-3.webp",
+        "detail/2-3.webp",
+        "detail/3-3.webp",
+        "wide/0-0.webp",
+        "wide/1-0.webp",
+        "wide/0-1.webp",
+        "wide/1-1.webp"
+      ]
+    }
+  },
+  "biomes/ru": {
+    "sha256": "f72eca676bd407f25e052b3f1b20e41deacfb6139e5a330bf318ba46cba591e8",
+    "outputs": {
+      "web": {
+        "settings": {
+          "path": "Assets/Maps/Web/biomes_ru.webp",
+          "width": 7680,
+          "quality": 90,
+          "format": "webp",
+          "effort": 5
+        },
+        "bytes": 4836882
+      },
+      "preview": {
+        "settings": {
+          "path": "Assets/Maps/Web/biomes_ru-preview.webp",
+          "width": 1920,
+          "quality": 82,
+          "format": "webp",
+          "effort": 5
+        },
+        "bytes": 452664
+      }
+    },
+    "tiles": {
+      "sha256": "f72eca676bd407f25e052b3f1b20e41deacfb6139e5a330bf318ba46cba591e8",
+      "settings": {
+        "version": 1,
+        "lossless": true,
+        "effort": 0,
+        "grids": [
+          {
+            "id": "detail",
+            "tileWidth": 3072,
+            "tileHeight": 2048,
+            "columns": 4,
+            "rows": 4
+          },
+          {
+            "id": "wide",
+            "tileWidth": 5760,
+            "tileHeight": 3240,
+            "columns": 2,
+            "rows": 2
+          }
+        ]
+      },
+      "bytes": 42794028,
+      "paths": [
+        "detail/0-0.webp",
+        "detail/1-0.webp",
+        "detail/2-0.webp",
+        "detail/3-0.webp",
+        "detail/0-1.webp",
+        "detail/1-1.webp",
+        "detail/2-1.webp",
+        "detail/3-1.webp",
+        "detail/0-2.webp",
+        "detail/1-2.webp",
+        "detail/2-2.webp",
+        "detail/3-2.webp",
+        "detail/0-3.webp",
+        "detail/1-3.webp",
+        "detail/2-3.webp",
+        "detail/3-3.webp",
+        "wide/0-0.webp",
+        "wide/1-0.webp",
+        "wide/0-1.webp",
+        "wide/1-1.webp"
+      ]
+    }
+  },
+  "biomes/en-GB": {
+    "sha256": "68202d231878624737d08f4d225ba2e458039fff178535d2f289b18c9e4f932c",
+    "outputs": {
+      "web": {
+        "settings": {
+          "path": "Assets/Maps/Web/biomes_en.webp",
+          "width": 7680,
+          "quality": 90,
+          "format": "webp",
+          "effort": 5
+        },
+        "bytes": 4652426
+      },
+      "preview": {
+        "settings": {
+          "path": "Assets/Maps/Web/biomes_en-preview.webp",
+          "width": 1920,
+          "quality": 82,
+          "format": "webp",
+          "effort": 5
+        },
+        "bytes": 438366
+      }
+    },
+    "tiles": {
+      "sha256": "68202d231878624737d08f4d225ba2e458039fff178535d2f289b18c9e4f932c",
+      "settings": {
+        "version": 1,
+        "lossless": true,
+        "effort": 0,
+        "grids": [
+          {
+            "id": "detail",
+            "tileWidth": 3072,
+            "tileHeight": 2048,
+            "columns": 4,
+            "rows": 4
+          },
+          {
+            "id": "wide",
+            "tileWidth": 5760,
+            "tileHeight": 3240,
+            "columns": 2,
+            "rows": 2
+          }
+        ]
+      },
+      "bytes": 38176276,
+      "paths": [
+        "detail/0-0.webp",
+        "detail/1-0.webp",
+        "detail/2-0.webp",
+        "detail/3-0.webp",
+        "detail/0-1.webp",
+        "detail/1-1.webp",
+        "detail/2-1.webp",
+        "detail/3-1.webp",
+        "detail/0-2.webp",
+        "detail/1-2.webp",
+        "detail/2-2.webp",
+        "detail/3-2.webp",
+        "detail/0-3.webp",
+        "detail/1-3.webp",
+        "detail/2-3.webp",
+        "detail/3-3.webp",
+        "wide/0-0.webp",
+        "wide/1-0.webp",
+        "wide/0-1.webp",
+        "wide/1-1.webp"
+      ]
+    }
+  }
+}

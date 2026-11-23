@@ -5,14 +5,14 @@ description: "Create or revise English Positive and Negative prompts for Astaria
 
 # Astaria Anima Prompts
 
-Create an image concept that expresses the target article, then translate it into an efficient English prompt for the user's DaSiWa-Anima checkpoint. Preserve the stable, unlabelled visual character of the model instead of naming an art style.
+Create an image concept that expresses the target article, then translate it into an efficient English prompt for the user's DaSiWa-Anima checkpoint. Preserve its established character while favoring the author's preferred soft skin treatment and material separation.
 
 ## Scope and boundaries
 
 - Write discussion and the short concept note in Russian; write `Positive` and `Negative` in English.
 - Return prompts, not ComfyUI, CFG, step, sampler, scheduler, LoRA configuration, resolution, or post-processing advice unless the user explicitly asks for those subjects. The established identity triggers `losfy` and `losfer` belong in Positive when depicting their respective characters; this does not require a settings discussion.
 - Do not generate or edit an image merely because this skill is active. Use an image-generation skill only when the user separately asks for an image.
-- Never add style steering such as `anime`, `realistic`, `photorealistic`, `semi-realistic`, `cinematic`, `3d`, `render`, `painterly`, `concept art`, an artist name, or a franchise style. Replace such labels with concrete framing, light, materials, atmosphere, and depth.
+- Prefer concrete framing, light and material descriptions over broad style labels. The author's requested `modern 2.5D anime` direction is an allowed, optional reinforcement for character rendering; pair it with the skin guidance below rather than relying on the label alone. Do not add unrelated photographic, CGI, cinematic, painterly, artist or franchise steering. This narrow preference replaces the earlier blanket prohibition on style labels.
 - Treat the user's existing quality prefix and negative baseline as tested checkpoint conventions. Do not silently replace them with generic advice from the base Anima model card.
 - Never use prompt weights or emphasis syntax in either Positive or Negative. This includes `(tag:1.4)`, `(tag)`, `[tag]`, and equivalent weighted forms. Write plain unweighted tags and clauses; weighting can shift the checkpoint's established color balance, composition, and overall visual character.
 - Keep minors fully clothed and plainly non-sexualized. Describe age, childlike proportions, activity, expression, and clothing; omit breast, body-beauty, erotic pose, and glamour language.
@@ -47,6 +47,14 @@ Keep identity stable while adapting expression, costume, action and setting to t
 Read the relevant section of [references/composition.md](references/composition.md) for characters, male portraits, cities, peoples, creatures, objects or coordinated country families. Do not load the other composition modes for a simple portrait.
 
 ## Write Positive
+
+### Skin and material treatment
+
+For prominent human or human-like skin, default to soft, mostly matte skin, an even underlying complexion and softly blended light-to-shadow transitions with clear facial volume. This applies equally to men and women and to every skin tone. Keep age, facial structure, scars and intentional markings; soften surface shading rather than changing identity. Read [references/skin-rendering.md](references/skin-rendering.md) for the inspected examples, compact Positive/Negative wording and darker-skin, male-face or lighting corrections. These are preferred directions to test, not a generation-validated Anima formula.
+
+Keep the skin instruction short and attach it to the subject's appearance. Preserve natural small highlights where appropriate and stronger reflections on metal, eyes or wet objects. Avoid global `matte`/`no highlights`, bleaching darker skin, facial blur, photographic pores and `perfect porcelain skin`. Adapt light to the scene; soft skin does not require removing sunlight or making every scene overcast.
+
+### Syntax and order
 
 Use comma-separated English tags and compact natural-language clauses. Inside each logical thought, join tags and clauses with commas; end the completed thought with a full stop. Separate larger logical blocks with blank lines. Do not turn the entire Positive prompt into one comma splice. The usual block contains one to three short sentences, and every block ends with a full stop. The user's established default order is:
 
@@ -86,6 +94,7 @@ score_1, score_2, score_3, lowres, bad anatomy, bad hands, text, error, missing 
 - Keep the entire Negative prompt as one continuous comma-separated list inside a single code block. Do not divide it into thematic sections, labeled groups, separate paragraphs, or separate lines.
 - Treat Positive as the primary constraint. Do not mechanically negate every alternative to an already explicit attribute: `1man` and `silver-gray hair` do not by themselves justify lists such as `1woman, blonde hair, black hair, brown hair`. Add a competing gender, color, age, costume, or setting only when the checkpoint has actually drifted toward it, the requested feature is unusually fragile, or that error would destroy the concept.
 - Start with the technical baseline and the smallest useful contextual tail. Prefer one observed exclusion such as `perfect beard` over a speculative catalogue of everything the image should not contain. A long contextual Negative is justified only by genuinely complex anatomy, crowded scenes, fragile equipment, or repeated generation failures.
+- For prominent skin, the author's observed gloss problem justifies a short skin-specific tail such as `glossy skin, oily skin, waxy skin, plastic skin`, adapted to the scene. Keep it scoped to skin rather than banning shine on every material; Positive must still define soft dimensional shading. See the skin reference for intentionally wet skin.
 - The technical baseline retains `cropped, out of frame` as the user's established default. Omit them only when an intentional close-up or partial crop is being suppressed by those tokens.
 - Add only likely contextual failures: wrong gender or age, human ears on a kemonomimi, visible eyes under a blindfold, modern objects, wrong historical armor, unwanted nudity, duplicate weapons, empty city, or repeated architecture.
 - In shared scenes, check each contextual exclusion against every character. Scope fragile traits to their owner, such as `human ears on the white-haired hare woman` or `visible eyes on the blindfolded man`; a global `human ears` or `eyes visible` can suppress another character's correct anatomy. See the character reference for mixed-cast examples.
@@ -105,4 +114,4 @@ Do not append generation settings. Mention one concise risk only when it materia
 
 ## Final audit
 
-Check the image’s article- or story-specific identity, focal hierarchy and consistency of anatomy, count, clothing, light and framing. For the recurring trio, check trigger ownership, each character's separate features, and whether a second visible body belongs in this moment. Verify the Positive/Negative and output contracts above; remove contradictions, unsupported lore names and obsolete corrections. Preserve the user’s tested conventions.
+Check the image’s article- or story-specific identity, focal hierarchy and consistency of anatomy, count, clothing, light and framing. For prominent skin, check soft tonal transitions, restrained skin highlights, preserved skin color/age and distinct treatment of reflective materials. For the recurring trio, check trigger ownership, each character's separate features, and whether a second visible body belongs in this moment. Verify the Positive/Negative and output contracts above; remove contradictions, unsupported lore names and obsolete corrections. Preserve the user’s tested conventions.

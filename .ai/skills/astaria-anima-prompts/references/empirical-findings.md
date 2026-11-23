@@ -74,7 +74,7 @@ Observed results:
 - `Thuggee.png` is the clearest organization image. The old scholar and young assistant have distinct roles and gazes, share a manuscript task, and sit inside an archive whose lamps, shelves, scrolls, and darkness all reinforce the article. This also produces one of the strongest older men in the corpus.
 - `Vanpur_City.jpg` proves that Anima can produce a lively city from a human-height street view with merchants and pedestrians. Repeated pyramids of spices and similar stalls show why population alone is insufficient; foreground objects and shop types must vary.
 - `Musaka.png` is exceptionally clean because count, species, posture, collar symbol, expression, and forest habitat are unambiguous. The prompt does not burden the subject with lore names the model cannot know.
-- `Chori_Mardjari.png` succeeds through a specific face, dirt mark, hood, restrained palette, and narrow poor-city lane. The background supports occupation and class without competing for attention.
+- `Chori_Mardjari.png` succeeds through a specific face, dirt mark, hood, restrained palette, and narrow poor-city lane. The background supports occupation and class without competing for attention. The author's later skin critique below takes precedence for its surface treatment; this is not a preferred skin reference.
 - `Shasha.png` uses a close crop to avoid the checkpoint's likely failure on six arms. This is a valid composition-level workaround, provided the article does not require the full anatomy to be shown.
 - `Liarin_Windy.png` has clear horns, freckles, braids, green clothing, and forest context, but `stupid smile` is needlessly demeaning and visually vague. Prefer the intended visible emotion, such as `unguarded cheerful smile`.
 
@@ -118,8 +118,12 @@ The country covers demonstrate a useful concession to a character-focused checkp
 - Abstract praise such as `epic`, `noble`, `legendary`, `dramatic`, and `beautiful` may support a prompt but cannot carry identity. Each must be backed by pose, action, object, environment, or light.
 - A restrained recurring palette creates family resemblance, but every color should belong to an object. Free-floating color lists often bleed across unrelated details.
 
+## Later skin preference
+
+On 2026-11-18 the author identified `Vivek_Ashma.png`, `Shani-Hat-Su.png` and `Losfer.png` as preferred soft-skin references, and `Kiran_Varma.png`, `Samir_Thakur.jpg` and `Chori_Mardjari.png` as overly glossy. All six current files were inspected. Follow [skin-rendering.md](skin-rendering.md) for the observations and proposed Anima wording. Historical praise for identity or composition does not approve every material, and these comparisons do not isolate a causal token. The author now permits a narrow `modern 2.5D anime` reinforcement alongside concrete skin shading; this supersedes the old blanket style-label ban.
+
 ## Model facts used cautiously
 
 The [official Anima model card](https://huggingface.co/circlestone-labs/Anima) says the base model was trained on both Danbooru/Gelbooru-like tags and natural-language captions, supports mixing them, prefers lowercase tag forms with spaces, and benefits from descriptive natural language rather than extremely short prompts. It also says tag dropout means every possible tag need not be listed.
 
-The user's DaSiWa-Anima checkpoint is a derivative with its own learned behavior, and the local examples are more relevant than generic base-model recipes. The user's explicit project rule against style labels and artist steering takes precedence over the base model's available style mechanisms.
+The user's DaSiWa-Anima checkpoint is a derivative with its own learned behavior, and the local examples are more relevant than generic base-model recipes. Follow the current SKILL.md for its limited style-label allowance and continued avoidance of artist/franchise steering; generic base-model recipes do not override the author's preferences.

@@ -37,6 +37,7 @@ Use a deity's motifs to connect the family when relevant, but do not turn every 
 - Anchor masculinity with `1man, solo, adult male` or an exact mature age, then use specific structure: jaw, nose, brow, beard pattern, hairline, build, posture, and lived-in expression.
 - Avoid stacking `handsome`, `perfect face`, `perfect skin`, `absolute beauty`, `mysterious aura`, and red eyes. That combination produced glossy bishounen or vampire drift in the examples.
 - For older men, show age through grey distribution, tired or deep-set eyes, restrained age lines, posture, and occupation. Do not make wrinkles the entire description.
+- Preserve masculine facial structure while using the shared [soft skin treatment](skin-rendering.md). Strong cheekbones, a defined jaw or mature skin do not require polished planes, harsh wrinkle grooves or photographic surface detail; do not soften them by changing age or skin color.
 - Prefer three-quarter medium shots and role-bearing actions when a close glamour portrait would expose the checkpoint's weak male-face prior.
 - Add `1girl, woman, feminine face, breasts` to Negative only when gender drift is plausible or already observed.
 

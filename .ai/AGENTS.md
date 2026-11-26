@@ -33,6 +33,7 @@ Maksim works through the Codex extension in VS Code. For local Quartz screenshot
 
 - Canon: `Энциклопедия/`, `Хронология/`, `Карты/`; visual assets: `Assets/`.
 - Project structure and public lore boundaries: `.ai/context/astaria-project.md`.
+- Для подготовки «Ветра Перемен», ретроспектив и шуток за игровым столом используй [мемы и бинго кампании](context/wind-of-change-table.md). Это частный контекст игроков.
 - World constraints, cultures, eras and demonyms: `.ai/context/astaria-world.md` when relevant.
 - Before working on Losfy, Losfer, Misty, Lyubov or the Dream of Mirrors, read `.ai/context/losfy-losfer-misty.md` and `.ai/context/authorial-meta.md`. Preserve their modest public profiles, private truths and deliberately unfilled biographical gaps.
 - Before work on `Зов Бури`, its translations, lyrics or sidebars, read `.ai/context/call-of-thunder.md`. Its present-tense song prose and unpublished constraints are specific to that saga.

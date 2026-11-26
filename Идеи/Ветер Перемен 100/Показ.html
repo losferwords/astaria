@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Сто партий «Ветра Перемен»</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; min-height: 100dvh; background: #101827; color: #fff2d6;
+      font-family: system-ui, sans-serif;
+    }
+    main { display: grid; grid-template-rows: minmax(0, 1fr) auto; height: 100dvh; }
+    figure { margin: 0; min-height: 0; display: grid; place-items: center; container-type: size; }
+    .slide-frame {
+      width: min(100cqw, 177.77778cqh); aspect-ratio: 16 / 9;
+      position: relative; container-type: inline-size;
+    }
+    img { width: 100%; height: 100%; object-fit: contain; display: block; }
+    .party-options {
+      position: absolute; left: 5%; right: 5%; top: 33.333333%; height: 48.666667%;
+      display: grid; grid-template-columns: repeat(4, 1fr); grid-template-rows: repeat(4, 1fr);
+      column-gap: 1.25%; row-gap: 4.109589%;
+    }
+    .party-options[hidden] { display: none; }
+    .party-options button {
+      position: relative; min-width: 0; min-height: 0; padding: 0;
+      border: 0; background: transparent; cursor: pointer;
+    }
+    .party-options button:focus-visible { outline: 2px solid #ffd18a; outline-offset: 2px; }
+    .party-options button[aria-pressed="true"] {
+      box-shadow: inset 0 0 0 2px #8bdece; background: #8bdece1f;
+    }
+    .party-options button[aria-pressed="true"]::after {
+      content: '✓'; position: absolute; left: 5%; top: 50%; transform: translateY(-50%);
+      color: #8bdece; font: 700 clamp(7px, 1.5cqw, 26px)/1 system-ui, sans-serif;
+    }
+    nav {
+      display: flex; align-items: center; justify-content: center;
+      flex-wrap: wrap; gap: 10px; padding: 12px;
+    }
+    button, a { color: inherit; font: inherit; }
+    button {
+      border: 1px solid #758392; border-radius: 5px; background: #1b2637;
+      min-height: 40px; padding: 5px 12px;
+    }
+    button:disabled { opacity: .45; }
+    a { padding: 6px; }
+    [aria-live] { min-width: 65px; text-align: center; }
+  </style>
+</head>
+<body>
+  <main>
+    <figure>
+      <div class="slide-frame">
+        <img id="slide" src="Слайды/01-start.webp" alt="Сто партий «Ветра Перемен»">
+        <div id="party-options" class="party-options" role="group" aria-label="Выберите несколько вариантов вечеринки" hidden></div>
+      </div>
+    </figure>
+    <nav aria-label="Управление показом">
+      <button id="previous" type="button">← Назад</button>
+      <span id="position" aria-live="polite">1 / 33</span>
+      <button id="next" type="button">Дальше →</button>
+      <button type="button" data-start="01-start">Статистика</button>
+      <button type="button" data-start="02-route">Маршрут</button>
+      <button type="button" data-start="quiz-01">Квиз</button>
+      <button id="fullscreen" type="button">На весь экран</button>
+      <a id="native-map" href="route.webp" target="_blank" rel="noopener" hidden>Карта в полном разрешении</a>
+    </nav>
+  </main>
+  <script>
+    const slides = [
+      ["01-start", "Сто партий «Ветра Перемен»"],
+      ["11-world", "Астария в цифрах. 1 047 статей и глав, 1 202 238 знаков текста, 126 персонажей и 2 спутника, 212 городов, 190 деревень, 375 изображений, 16 стран и 18 богов."],
+      ["12-saga", "Ветер Перемен как книга. 265 040 знаков прозы, 40 498 слов и около 203 минут чтения. Самая длинная глава — 097, Незримые последствия."],
+      ["09-years", "За столом и в Астарии"],
+      ["06-cities", "Где задержались дольше"],
+      ["07-bahara", "Время возвращаться в Бахару!"],
+      ["08-companions", "Как мы встретили спутников"],
+      ["05-distance", "От Нижнего до Балтики"],
+      ["02-route", "Дорога от Ахея до Ванпура"],
+      ["quiz-01", "1. Где был спрятан ключ от клетки в Ахее? Варианты. В рукояти молота, В пайке, В мотке верёвки, Под соломой в камере."],
+      ["quiz-02", "2. Сколько бамбуковых плотов построили для беженцев из Найяна? Варианты. Четыре, Восемь, Шесть, Десять."],
+      ["quiz-03", "3. Сколько перьев Меркаты Чори украла у Тома? Варианты. Два, Одно, Четыре, Три."],
+      ["quiz-04", "4. Сколько детей у Чани Сан? Варианты. Трое, Двое, Четверо, Пятеро."],
+      ["quiz-05", "5. Почему Том спас лошадей в Чанг-Ша? Варианты. Чтобы продать их в столице, По просьбе Шэня Ву, Просто так, Так велела Мерката."],
+      ["quiz-06", "6. Какое у Гильи самое слабое место? Варианты. Его кошелёк, Сломанная рука, Место под Чёрной Меткой, Дырка задница."],
+      ["quiz-07", "7. Сколько раз в летописи ворон Меркаты звал Тома за собой? Варианты. Четыре, Пять, Шесть, Семь."],
+      ["quiz-08", "8. Сколько жетонов Урист был готов отдать ради скидки за тигриную накидку? Варианты. 6, 7, 8, Всё что есть."],
+      ["quiz-09", "9. Как звали отца Мэй Ву? Варианты. Кальян, Ксан Ляньши, Чень Ляньши, Шень Ву."],
+      ["quiz-10", "10. Какой аспект вы бы дали Нуа Си? Варианты. Сестра года, Катастрофа, Дело семейное, Обязательно держать под присмотром."],
+      ["quiz-11", "11. Какой город Астарии самый лучший? Варианты. Бахара, Бахара, Бахара, Бахара."],
+      ["quiz-12", "12. Как переводится «Уй-Джан» на всеобщий язык? Варианты. Нефритовый стержень, Нефритовый дракон, Дом алых фонарей, Шёлковый жезл."],
+      ["quiz-13", "13. Сколько у Уриста детей? Варианты. Один, Четверо, Трое, Двое."],
+      ["quiz-14", "14. Сколько раз Том переспал с Меркатой по летописи? Варианты. Один раз, Три раза, Два раза, Четыре раза."],
+      ["quiz-15", "15. Как звали Мэй, когда она работала на Жаждущих? Варианты. Огонёчек, Искра, Ли Сан, Елена."],
+      ["quiz-16", "16. Сколько раз Гилья усомнился в Шубханкари? Варианты. 0, Богохульство!, Настало время Жатвы, раз пошли такие вопросы, Не усомнился даже когда она лежала пьяная в таверне Бахары!"],
+      ["quiz-17", "17. Кто самая хорошая девочка? Варианты. Нуа Си, Вигдис Меткая, Мусака, Мерката."],
+      ["quiz-18", "18. Как звали крылатого тигра из леса Шеньянь? Варианты. Кимчи, Ки-Ончи, Ки! Мчи!, Кион-Чи."],
+      ["quiz-19", "19. Как Урист и Том выбрались из червя Аль-Тахима? Варианты. Не ваше дело, Мы всё ещё там…, Как всегда… через…, Этого не было."],
+      ["quiz-20", "20. Каким было первое слово Мэйлуна? Варианты. Огонь, Мама, Мэй, Кушать."],
+      ["quiz-21", "21. Опишите свою лучшую вечеринку. Можно выбрать несколько вариантов.", ["Халык-Бындыр", "Авгарский самогон", "Настой Красного Корня", "Нилачхатра", "нереиды", "Чень Ляньши", "Лиарин Ветренная", "Велимир Сажин", "Неарх Мелит", "Самовоспламенение Мэй", "Сундук серебра", "Ночь с Меркатой", "Порошок Гильи для Праздника", "Мэйлун в шапочке", "Мусака", "Богини-алкоголицы"]],
+      ["quiz-22", "22. Сколько партий вы ещё готовы провести в Астарии? Варианты. Пока живы — будем играть, Все, Да!, Пока не скупим все бордели."],
+      ["21-reward", "Новый аспект мира. Четыре бесплатных призыва на всю партию. Дайте ему имя. Например «Мы столько раз вытаскивали друг друга»."],
+      ["22-thanks", "Спасибо вам, друзья! Урист, Мэй, Том и Гилья празднуют в Халык-Бындыре. У их ног лежит Мусака."],
+    ];
+    const slide = document.getElementById('slide');
+    const position = document.getElementById('position');
+    const previous = document.getElementById('previous');
+    const next = document.getElementById('next');
+    const fullscreen = document.getElementById('fullscreen');
+    const nativeMap = document.getElementById('native-map');
+    const partyOptions = document.getElementById('party-options');
+    const partySlide = slides.find(([, , options]) => options);
+    for (const name of partySlide[2]) {
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.setAttribute('aria-label', name);
+      button.setAttribute('aria-pressed', 'false');
+      button.addEventListener('click', () => {
+        button.setAttribute('aria-pressed', String(button.getAttribute('aria-pressed') === 'false'));
+      });
+      partyOptions.append(button);
+    }
+    let index = 0;
+
+    function show(number) {
+      index = Math.min(Math.max(number, 0), slides.length - 1);
+      const [file, title, options] = slides[index];
+      partyOptions.hidden = !options;
+      slide.src = 'Слайды/' + file + '.webp';
+      slide.alt = title;
+      position.textContent = (index + 1) + ' / ' + slides.length;
+      previous.disabled = index === 0;
+      next.disabled = index === slides.length - 1;
+      nativeMap.hidden = file !== '02-route';
+      if (index < slides.length - 1) {
+        const preload = new Image();
+        preload.src = 'Слайды/' + slides[index + 1][0] + '.webp';
+      }
+    }
+
+    document.querySelectorAll('[data-start]').forEach(button => {
+      button.addEventListener('click', () => show(slides.findIndex(([file]) => file === button.dataset.start)));
+    });
+    previous.addEventListener('click', () => show(index - 1));
+    next.addEventListener('click', () => show(index + 1));
+    fullscreen.hidden = !document.fullscreenEnabled;
+    fullscreen.addEventListener('click', async () => {
+      try {
+        if (document.fullscreenElement) await document.exitFullscreen();
+        else await document.documentElement.requestFullscreen();
+      } catch {
+        fullscreen.hidden = true;
+      }
+    });
+    document.addEventListener('fullscreenchange', () => {
+      fullscreen.textContent = document.fullscreenElement ? 'Выйти из полного экрана' : 'На весь экран';
+    });
+    document.addEventListener('keydown', event => {
+      if (event.altKey || event.metaKey || event.ctrlKey) return;
+      if (event.key === 'ArrowRight') show(index + 1);
+      else if (event.key === 'ArrowLeft') show(index - 1);
+      else if (event.key === 'Home') show(0);
+      else if (event.key === 'End') show(slides.length - 1);
+      else return;
+      event.preventDefault();
+    });
+    show(0);
+  </script>
+</body>
+</html>
